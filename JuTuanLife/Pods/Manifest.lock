@@ -1,23 +1,4 @@
 PODS:
-  - WCBaseUIKit (0.1.1):
-    - WCBaseUIKit/Controller (= 0.1.1)
-    - WCBaseUIKit/Entity (= 0.1.1)
-    - WCBaseUIKit/Util (= 0.1.1)
-    - WCBaseUIKit/View (= 0.1.1)
-  - WCBaseUIKit/Controller (0.1.1):
-    - WCBaseUIKit/View
-    - WCModel
-    - WCNetKit
-  - WCBaseUIKit/Entity (0.1.1):
-    - WCCategory
-    - WCModel/Entity
-  - WCBaseUIKit/Util (0.1.1):
-    - WCCategory
-    - WCPlugin/MBProgressHUD
-  - WCBaseUIKit/View (0.1.1):
-    - WCBaseUIKit/Entity
-    - WCBaseUIKit/Util
-    - WCPlugin
   - WCCategory (0.1.4):
     - WCCategory/Define (= 0.1.4)
     - WCCategory/Foundation (= 0.1.4)
@@ -68,11 +49,12 @@ PODS:
   - WCPlugin/MBProgressHUD (0.1.3)
 
 DEPENDENCIES:
-  - WCBaseUIKit
+  - WCModel
+  - WCNetKit
+  - WCPlugin
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - WCBaseUIKit
     - WCCategory
     - WCEncrypt
     - WCModel
@@ -81,7 +63,6 @@ SPEC REPOS:
     - WCPlugin
 
 SPEC CHECKSUMS:
-  WCBaseUIKit: 8ff8d85b88bd44f8fe58b4864e7b83c99dd67bbc
   WCCategory: 5dddb6a3ce3d5ec6931358b1bdea7b30afe6be01
   WCEncrypt: b86d93453f6a4bbf1a09dc922082b2d2d6699978
   WCModel: 9d8bee0cff43028eea166b7d946290d6d02da245
@@ -89,6 +70,6 @@ SPEC CHECKSUMS:
   WCNetKit: 486a3602eccc0ad6f631bee8856cbd9c24e445d0
   WCPlugin: 46a39341f494bcc8dccffd1a9749addfa62885c5
 
-PODFILE CHECKSUM: 2e54f458da2c3d2cd0b385adc2bb5e654cfaafbc
+PODFILE CHECKSUM: 88793ef26009af0720f5a1f0e24b05b2a5e492e9
 
 COCOAPODS: 1.7.5

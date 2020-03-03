@@ -21,5 +21,6 @@
 
 #import "JTCoreUtil.h"
 
+#import "WCBaseUIKit.h"
 
 #endif /* JuTuanLife_Prefix_pch */

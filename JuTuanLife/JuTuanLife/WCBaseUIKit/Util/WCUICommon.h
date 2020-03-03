@@ -29,6 +29,7 @@
 #import "WCAppStyleUtil.h"
 #import "WCControllerUtil.h"
 #import "WCBarItemUtil.h"
+#import "CWStaticImageManager.h"
 
 #define APP_CONST_BLACK_STRING               @"3f3f3f"
 #define APP_CONST_BLACK_COLOR                [UIColor colorWithHexString:APP_CONST_BLACK_STRING]     //黑色

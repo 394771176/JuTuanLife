@@ -161,7 +161,6 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/WCBaseUIKit/WCBaseUIKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/WCCategory/WCCategory.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/WCEncrypt/WCEncrypt.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/WCModel/WCModel.framework"
@@ -170,7 +169,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/WCPlugin/WCPlugin.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/WCBaseUIKit/WCBaseUIKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/WCCategory/WCCategory.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/WCEncrypt/WCEncrypt.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/WCModel/WCModel.framework"

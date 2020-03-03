@@ -11,13 +11,59 @@
 		6001C780240EB6C4006092BB /* JTUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001C77F240EB6C4006092BB /* JTUserManager.m */; };
 		6001C784240EB6FD006092BB /* JTCoreUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001C783240EB6FD006092BB /* JTCoreUtil.m */; };
 		6001C788240EB738006092BB /* JTCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001C787240EB738006092BB /* JTCommon.m */; };
+		60E2B0FD240ED5D800E4EA52 /* CCCommentStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B09F240ED5D800E4EA52 /* CCCommentStarView.m */; };
+		60E2B0FE240ED5D800E4EA52 /* BPOnePixLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0A2240ED5D800E4EA52 /* BPOnePixLineView.m */; };
+		60E2B0FF240ED5D800E4EA52 /* DTLoadMoreCommonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0A5240ED5D800E4EA52 /* DTLoadMoreCommonCell.m */; };
+		60E2B100240ED5D800E4EA52 /* DTTableButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0A9240ED5D800E4EA52 /* DTTableButtonCell.m */; };
+		60E2B101240ED5D800E4EA52 /* DTDrivingLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0AA240ED5D800E4EA52 /* DTDrivingLoadingView.m */; };
+		60E2B102240ED5D800E4EA52 /* DTControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0AC240ED5D800E4EA52 /* DTControl.m */; };
+		60E2B103240ED5D800E4EA52 /* CLDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0AE240ED5D800E4EA52 /* CLDatePickerView.m */; };
+		60E2B104240ED5D800E4EA52 /* DTUISegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0AF240ED5D800E4EA52 /* DTUISegmentView.m */; };
+		60E2B105240ED5D800E4EA52 /* CLTitleTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0B0240ED5D800E4EA52 /* CLTitleTabView.m */; };
+		60E2B106240ED5D800E4EA52 /* CLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0B1240ED5D800E4EA52 /* CLAlertView.m */; };
+		60E2B107240ED5D800E4EA52 /* DTControllerListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0B2240ED5D800E4EA52 /* DTControllerListView.m */; };
+		60E2B108240ED5D800E4EA52 /* DTStrokeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0B5240ED5D800E4EA52 /* DTStrokeLabel.m */; };
+		60E2B109240ED5D800E4EA52 /* DTScrollListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0B8240ED5D800E4EA52 /* DTScrollListViewCell.m */; };
+		60E2B10A240ED5D800E4EA52 /* DTBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0B9240ED5D800E4EA52 /* DTBadgeView.m */; };
+		60E2B10B240ED5D800E4EA52 /* DTButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0BB240ED5D800E4EA52 /* DTButton.m */; };
+		60E2B10C240ED5D800E4EA52 /* DTEnrollProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0BC240ED5D800E4EA52 /* DTEnrollProgressView.m */; };
+		60E2B10D240ED5D800E4EA52 /* DTGradientLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0BE240ED5D800E4EA52 /* DTGradientLabel.m */; };
+		60E2B10E240ED5D800E4EA52 /* DTNoDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0BF240ED5D800E4EA52 /* DTNoDataView.m */; };
+		60E2B10F240ED5D800E4EA52 /* DTScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0C0240ED5D800E4EA52 /* DTScrollLabel.m */; };
+		60E2B110240ED5D800E4EA52 /* DTPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0C2240ED5D800E4EA52 /* DTPickerView.m */; };
+		60E2B111240ED5D800E4EA52 /* DTTabScorllContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0C5240ED5D800E4EA52 /* DTTabScorllContentCell.m */; };
+		60E2B112240ED5D800E4EA52 /* DTTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0C6240ED5D800E4EA52 /* DTTabBarView.m */; };
+		60E2B113240ED5D800E4EA52 /* DTTableCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0C7240ED5D800E4EA52 /* DTTableCustomCell.m */; };
+		60E2B114240ED5D800E4EA52 /* DTScrollTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0CA240ED5D800E4EA52 /* DTScrollTabView.m */; };
+		60E2B115240ED5D800E4EA52 /* DTHorizontalScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0CB240ED5D800E4EA52 /* DTHorizontalScrollView.m */; };
+		60E2B116240ED5D800E4EA52 /* DTPullRefreshHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0CD240ED5D800E4EA52 /* DTPullRefreshHeadView.m */; };
+		60E2B117240ED5D800E4EA52 /* DTTagLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0D0240ED5D800E4EA52 /* DTTagLabel.m */; };
+		60E2B118240ED5D800E4EA52 /* DTTabItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0D5240ED5D800E4EA52 /* DTTabItem.m */; };
+		60E2B119240ED5D800E4EA52 /* DTTitleIconItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0D6240ED5D800E4EA52 /* DTTitleIconItem.m */; };
+		60E2B11A240ED5D800E4EA52 /* DTHttpRefreshLoadMoreTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0D9240ED5D800E4EA52 /* DTHttpRefreshLoadMoreTableController.m */; };
+		60E2B11B240ED5D800E4EA52 /* DTHttpRefreshTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0DF240ED5D800E4EA52 /* DTHttpRefreshTableController.m */; };
+		60E2B11C240ED5D800E4EA52 /* DTTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0E0240ED5D800E4EA52 /* DTTabViewController.m */; };
+		60E2B11D240ED5D800E4EA52 /* DTTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0E2240ED5D800E4EA52 /* DTTableController.m */; };
+		60E2B11E240ED5D800E4EA52 /* DTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0E3240ED5D800E4EA52 /* DTNavigationController.m */; };
+		60E2B11F240ED5D800E4EA52 /* DTHttpRefreshInsetTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0E4240ED5D800E4EA52 /* DTHttpRefreshInsetTabController.m */; };
+		60E2B120240ED5D800E4EA52 /* DTPagesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0E7240ED5D800E4EA52 /* DTPagesController.m */; };
+		60E2B121240ED5D800E4EA52 /* DTHttpTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0E8240ED5D800E4EA52 /* DTHttpTableController.m */; };
+		60E2B122240ED5D800E4EA52 /* DTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0E9240ED5D800E4EA52 /* DTViewController.m */; };
+		60E2B123240ED5D800E4EA52 /* DTHttpLoadMoreTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0EC240ED5D800E4EA52 /* DTHttpLoadMoreTableController.m */; };
+		60E2B124240ED5D800E4EA52 /* WCMethodUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0EE240ED5D800E4EA52 /* WCMethodUtil.m */; };
+		60E2B125240ED5D800E4EA52 /* CWStaticImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0F4240ED5D800E4EA52 /* CWStaticImageManager.m */; };
+		60E2B126240ED5D800E4EA52 /* FFAnimateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0F5240ED5D800E4EA52 /* FFAnimateHelper.m */; };
+		60E2B127240ED5D800E4EA52 /* DTPubUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0F6240ED5D800E4EA52 /* DTPubUtil.m */; };
+		60E2B128240ED5D800E4EA52 /* WCAppStyleUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0F9240ED5D800E4EA52 /* WCAppStyleUtil.m */; };
+		60E2B129240ED5D800E4EA52 /* WCControllerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0FA240ED5D800E4EA52 /* WCControllerUtil.m */; };
+		60E2B12A240ED5D800E4EA52 /* WCBarItemUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0FB240ED5D800E4EA52 /* WCBarItemUtil.m */; };
+		60E2B147240ED6AF00E4EA52 /* JTMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B146240ED6AF00E4EA52 /* JTMainController.m */; };
 		60ED762A240EB25A0013CB8C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ED7629240EB25A0013CB8C /* AppDelegate.m */; };
 		60ED762D240EB25A0013CB8C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ED762C240EB25A0013CB8C /* ViewController.m */; };
 		60ED7630240EB25A0013CB8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60ED762E240EB25A0013CB8C /* Main.storyboard */; };
 		60ED7632240EB25B0013CB8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60ED7631240EB25B0013CB8C /* Assets.xcassets */; };
 		60ED7635240EB25B0013CB8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60ED7633240EB25B0013CB8C /* LaunchScreen.storyboard */; };
 		60ED7638240EB25B0013CB8C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ED7637240EB25B0013CB8C /* main.m */; };
-		60FF446F240ED2960088AC4D /* JTMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FF446E240ED2960088AC4D /* JTMainController.m */; };
 		D2068D9F20BB2156C5736722 /* Pods_JuTuanLife.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87291E484A5B51B2A86BD0CE /* Pods_JuTuanLife.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +82,102 @@
 		6001C786240EB738006092BB /* JTCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTCommon.h; sourceTree = "<group>"; };
 		6001C787240EB738006092BB /* JTCommon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTCommon.m; sourceTree = "<group>"; };
 		6001C7A0240EBA1D006092BB /* JuTuanLife-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JuTuanLife-Prefix.pch"; sourceTree = "<group>"; };
+		60E2B09A240ED5D800E4EA52 /* WCBaseUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCBaseUIKit.h; sourceTree = "<group>"; };
+		60E2B09C240ED5D800E4EA52 /* DTScrollLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTScrollLabel.h; sourceTree = "<group>"; };
+		60E2B09D240ED5D800E4EA52 /* DTGradientLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTGradientLabel.h; sourceTree = "<group>"; };
+		60E2B09E240ED5D800E4EA52 /* DTNoDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTNoDataView.h; sourceTree = "<group>"; };
+		60E2B09F240ED5D800E4EA52 /* CCCommentStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCommentStarView.m; sourceTree = "<group>"; };
+		60E2B0A0240ED5D800E4EA52 /* DTEnrollProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTEnrollProgressView.h; sourceTree = "<group>"; };
+		60E2B0A1240ED5D800E4EA52 /* DTButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTButton.h; sourceTree = "<group>"; };
+		60E2B0A2240ED5D800E4EA52 /* BPOnePixLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPOnePixLineView.m; sourceTree = "<group>"; };
+		60E2B0A3240ED5D800E4EA52 /* DTScrollListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTScrollListViewCell.h; sourceTree = "<group>"; };
+		60E2B0A4240ED5D800E4EA52 /* DTBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTBadgeView.h; sourceTree = "<group>"; };
+		60E2B0A5240ED5D800E4EA52 /* DTLoadMoreCommonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTLoadMoreCommonCell.m; sourceTree = "<group>"; };
+		60E2B0A6240ED5D800E4EA52 /* DTTableCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTableCustomCell.h; sourceTree = "<group>"; };
+		60E2B0A7240ED5D800E4EA52 /* DTTabBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTabBarView.h; sourceTree = "<group>"; };
+		60E2B0A8240ED5D800E4EA52 /* DTTabScorllContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTabScorllContentCell.h; sourceTree = "<group>"; };
+		60E2B0A9240ED5D800E4EA52 /* DTTableButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTableButtonCell.m; sourceTree = "<group>"; };
+		60E2B0AA240ED5D800E4EA52 /* DTDrivingLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTDrivingLoadingView.m; sourceTree = "<group>"; };
+		60E2B0AB240ED5D800E4EA52 /* DTPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPickerView.h; sourceTree = "<group>"; };
+		60E2B0AC240ED5D800E4EA52 /* DTControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTControl.m; sourceTree = "<group>"; };
+		60E2B0AD240ED5D800E4EA52 /* DTScrollTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTScrollTabView.h; sourceTree = "<group>"; };
+		60E2B0AE240ED5D800E4EA52 /* CLDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLDatePickerView.m; sourceTree = "<group>"; };
+		60E2B0AF240ED5D800E4EA52 /* DTUISegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTUISegmentView.m; sourceTree = "<group>"; };
+		60E2B0B0240ED5D800E4EA52 /* CLTitleTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLTitleTabView.m; sourceTree = "<group>"; };
+		60E2B0B1240ED5D800E4EA52 /* CLAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLAlertView.m; sourceTree = "<group>"; };
+		60E2B0B2240ED5D800E4EA52 /* DTControllerListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTControllerListView.m; sourceTree = "<group>"; };
+		60E2B0B3240ED5D800E4EA52 /* DTTagLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTagLabel.h; sourceTree = "<group>"; };
+		60E2B0B4240ED5D800E4EA52 /* DTPullRefreshHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPullRefreshHeadView.h; sourceTree = "<group>"; };
+		60E2B0B5240ED5D800E4EA52 /* DTStrokeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTStrokeLabel.m; sourceTree = "<group>"; };
+		60E2B0B6240ED5D800E4EA52 /* DTHorizontalScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTHorizontalScrollView.h; sourceTree = "<group>"; };
+		60E2B0B7240ED5D800E4EA52 /* DTLoadMoreCommonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTLoadMoreCommonCell.h; sourceTree = "<group>"; };
+		60E2B0B8240ED5D800E4EA52 /* DTScrollListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTScrollListViewCell.m; sourceTree = "<group>"; };
+		60E2B0B9240ED5D800E4EA52 /* DTBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTBadgeView.m; sourceTree = "<group>"; };
+		60E2B0BA240ED5D800E4EA52 /* BPOnePixLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPOnePixLineView.h; sourceTree = "<group>"; };
+		60E2B0BB240ED5D800E4EA52 /* DTButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTButton.m; sourceTree = "<group>"; };
+		60E2B0BC240ED5D800E4EA52 /* DTEnrollProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTEnrollProgressView.m; sourceTree = "<group>"; };
+		60E2B0BD240ED5D800E4EA52 /* CCCommentStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCommentStarView.h; sourceTree = "<group>"; };
+		60E2B0BE240ED5D800E4EA52 /* DTGradientLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTGradientLabel.m; sourceTree = "<group>"; };
+		60E2B0BF240ED5D800E4EA52 /* DTNoDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTNoDataView.m; sourceTree = "<group>"; };
+		60E2B0C0240ED5D800E4EA52 /* DTScrollLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTScrollLabel.m; sourceTree = "<group>"; };
+		60E2B0C1240ED5D800E4EA52 /* DTControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTControl.h; sourceTree = "<group>"; };
+		60E2B0C2240ED5D800E4EA52 /* DTPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTPickerView.m; sourceTree = "<group>"; };
+		60E2B0C3240ED5D800E4EA52 /* DTTableButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTableButtonCell.h; sourceTree = "<group>"; };
+		60E2B0C4240ED5D800E4EA52 /* DTDrivingLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTDrivingLoadingView.h; sourceTree = "<group>"; };
+		60E2B0C5240ED5D800E4EA52 /* DTTabScorllContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTabScorllContentCell.m; sourceTree = "<group>"; };
+		60E2B0C6240ED5D800E4EA52 /* DTTabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTabBarView.m; sourceTree = "<group>"; };
+		60E2B0C7240ED5D800E4EA52 /* DTTableCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTableCustomCell.m; sourceTree = "<group>"; };
+		60E2B0C8240ED5D800E4EA52 /* DTUISegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTUISegmentView.h; sourceTree = "<group>"; };
+		60E2B0C9240ED5D800E4EA52 /* CLDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLDatePickerView.h; sourceTree = "<group>"; };
+		60E2B0CA240ED5D800E4EA52 /* DTScrollTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTScrollTabView.m; sourceTree = "<group>"; };
+		60E2B0CB240ED5D800E4EA52 /* DTHorizontalScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTHorizontalScrollView.m; sourceTree = "<group>"; };
+		60E2B0CC240ED5D800E4EA52 /* DTStrokeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTStrokeLabel.h; sourceTree = "<group>"; };
+		60E2B0CD240ED5D800E4EA52 /* DTPullRefreshHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTPullRefreshHeadView.m; sourceTree = "<group>"; };
+		60E2B0CE240ED5D800E4EA52 /* CLAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLAlertView.h; sourceTree = "<group>"; };
+		60E2B0CF240ED5D800E4EA52 /* DTControllerListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTControllerListView.h; sourceTree = "<group>"; };
+		60E2B0D0240ED5D800E4EA52 /* DTTagLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTagLabel.m; sourceTree = "<group>"; };
+		60E2B0D1240ED5D800E4EA52 /* CLTitleTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLTitleTabView.h; sourceTree = "<group>"; };
+		60E2B0D3240ED5D800E4EA52 /* DTTabItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTabItem.h; sourceTree = "<group>"; };
+		60E2B0D4240ED5D800E4EA52 /* DTTitleIconItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTitleIconItem.h; sourceTree = "<group>"; };
+		60E2B0D5240ED5D800E4EA52 /* DTTabItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTabItem.m; sourceTree = "<group>"; };
+		60E2B0D6240ED5D800E4EA52 /* DTTitleIconItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTitleIconItem.m; sourceTree = "<group>"; };
+		60E2B0D9240ED5D800E4EA52 /* DTHttpRefreshLoadMoreTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTHttpRefreshLoadMoreTableController.m; sourceTree = "<group>"; };
+		60E2B0DA240ED5D800E4EA52 /* DTHttpRefreshInsetTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTHttpRefreshInsetTabController.h; sourceTree = "<group>"; };
+		60E2B0DB240ED5D800E4EA52 /* DTNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTNavigationController.h; sourceTree = "<group>"; };
+		60E2B0DC240ED5D800E4EA52 /* DTHttpTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTHttpTableController.h; sourceTree = "<group>"; };
+		60E2B0DD240ED5D800E4EA52 /* DTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTViewController.h; sourceTree = "<group>"; };
+		60E2B0DE240ED5D800E4EA52 /* DTPagesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPagesController.h; sourceTree = "<group>"; };
+		60E2B0DF240ED5D800E4EA52 /* DTHttpRefreshTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTHttpRefreshTableController.m; sourceTree = "<group>"; };
+		60E2B0E0240ED5D800E4EA52 /* DTTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTabViewController.m; sourceTree = "<group>"; };
+		60E2B0E1240ED5D800E4EA52 /* DTHttpLoadMoreTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTHttpLoadMoreTableController.h; sourceTree = "<group>"; };
+		60E2B0E2240ED5D800E4EA52 /* DTTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTableController.m; sourceTree = "<group>"; };
+		60E2B0E3240ED5D800E4EA52 /* DTNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTNavigationController.m; sourceTree = "<group>"; };
+		60E2B0E4240ED5D800E4EA52 /* DTHttpRefreshInsetTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTHttpRefreshInsetTabController.m; sourceTree = "<group>"; };
+		60E2B0E5240ED5D800E4EA52 /* DTHttpRefreshLoadMoreTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTHttpRefreshLoadMoreTableController.h; sourceTree = "<group>"; };
+		60E2B0E6240ED5D800E4EA52 /* DTHttpRefreshTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTHttpRefreshTableController.h; sourceTree = "<group>"; };
+		60E2B0E7240ED5D800E4EA52 /* DTPagesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTPagesController.m; sourceTree = "<group>"; };
+		60E2B0E8240ED5D800E4EA52 /* DTHttpTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTHttpTableController.m; sourceTree = "<group>"; };
+		60E2B0E9240ED5D800E4EA52 /* DTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTViewController.m; sourceTree = "<group>"; };
+		60E2B0EA240ED5D800E4EA52 /* DTTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTabViewController.h; sourceTree = "<group>"; };
+		60E2B0EB240ED5D800E4EA52 /* DTTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTableController.h; sourceTree = "<group>"; };
+		60E2B0EC240ED5D800E4EA52 /* DTHttpLoadMoreTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTHttpLoadMoreTableController.m; sourceTree = "<group>"; };
+		60E2B0EE240ED5D800E4EA52 /* WCMethodUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCMethodUtil.m; sourceTree = "<group>"; };
+		60E2B0EF240ED5D800E4EA52 /* DTPubUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTPubUtil.h; sourceTree = "<group>"; };
+		60E2B0F0240ED5D800E4EA52 /* FFAnimateHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFAnimateHelper.h; sourceTree = "<group>"; };
+		60E2B0F1240ED5D800E4EA52 /* WCBarItemUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCBarItemUtil.h; sourceTree = "<group>"; };
+		60E2B0F2240ED5D800E4EA52 /* WCControllerUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCControllerUtil.h; sourceTree = "<group>"; };
+		60E2B0F3240ED5D800E4EA52 /* WCAppStyleUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCAppStyleUtil.h; sourceTree = "<group>"; };
+		60E2B0F4240ED5D800E4EA52 /* CWStaticImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWStaticImageManager.m; sourceTree = "<group>"; };
+		60E2B0F5240ED5D800E4EA52 /* FFAnimateHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFAnimateHelper.m; sourceTree = "<group>"; };
+		60E2B0F6240ED5D800E4EA52 /* DTPubUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTPubUtil.m; sourceTree = "<group>"; };
+		60E2B0F7240ED5D800E4EA52 /* WCMethodUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCMethodUtil.h; sourceTree = "<group>"; };
+		60E2B0F8240ED5D800E4EA52 /* WCUICommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCUICommon.h; sourceTree = "<group>"; };
+		60E2B0F9240ED5D800E4EA52 /* WCAppStyleUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCAppStyleUtil.m; sourceTree = "<group>"; };
+		60E2B0FA240ED5D800E4EA52 /* WCControllerUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCControllerUtil.m; sourceTree = "<group>"; };
+		60E2B0FB240ED5D800E4EA52 /* WCBarItemUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCBarItemUtil.m; sourceTree = "<group>"; };
+		60E2B0FC240ED5D800E4EA52 /* CWStaticImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWStaticImageManager.h; sourceTree = "<group>"; };
+		60E2B145240ED6AF00E4EA52 /* JTMainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTMainController.h; sourceTree = "<group>"; };
+		60E2B146240ED6AF00E4EA52 /* JTMainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTMainController.m; sourceTree = "<group>"; };
 		60ED7625240EB25A0013CB8C /* JuTuanLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuTuanLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60ED7628240EB25A0013CB8C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		60ED7629240EB25A0013CB8C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -46,8 +188,6 @@
 		60ED7634240EB25B0013CB8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60ED7636240EB25B0013CB8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60ED7637240EB25B0013CB8C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		60FF446D240ED2960088AC4D /* JTMainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTMainController.h; sourceTree = "<group>"; };
-		60FF446E240ED2960088AC4D /* JTMainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTMainController.m; sourceTree = "<group>"; };
 		87291E484A5B51B2A86BD0CE /* Pods_JuTuanLife.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JuTuanLife.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -150,8 +290,8 @@
 		6001C792240EB755006092BB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				60FF446D240ED2960088AC4D /* JTMainController.h */,
-				60FF446E240ED2960088AC4D /* JTMainController.m */,
+				60E2B145240ED6AF00E4EA52 /* JTMainController.h */,
+				60E2B146240ED6AF00E4EA52 /* JTMainController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -239,6 +379,147 @@
 			name = Base;
 			sourceTree = "<group>";
 		};
+		60E2B003240ED59900E4EA52 /* WCBaseUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				60E2B0D8240ED5D800E4EA52 /* Controller */,
+				60E2B0D2240ED5D800E4EA52 /* Entity */,
+				60E2B0D7240ED5D800E4EA52 /* Resource */,
+				60E2B0ED240ED5D800E4EA52 /* Util */,
+				60E2B09B240ED5D800E4EA52 /* View */,
+				60E2B09A240ED5D800E4EA52 /* WCBaseUIKit.h */,
+			);
+			path = WCBaseUIKit;
+			sourceTree = "<group>";
+		};
+		60E2B09B240ED5D800E4EA52 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				60E2B09C240ED5D800E4EA52 /* DTScrollLabel.h */,
+				60E2B09D240ED5D800E4EA52 /* DTGradientLabel.h */,
+				60E2B09E240ED5D800E4EA52 /* DTNoDataView.h */,
+				60E2B09F240ED5D800E4EA52 /* CCCommentStarView.m */,
+				60E2B0A0240ED5D800E4EA52 /* DTEnrollProgressView.h */,
+				60E2B0A1240ED5D800E4EA52 /* DTButton.h */,
+				60E2B0A2240ED5D800E4EA52 /* BPOnePixLineView.m */,
+				60E2B0A3240ED5D800E4EA52 /* DTScrollListViewCell.h */,
+				60E2B0A4240ED5D800E4EA52 /* DTBadgeView.h */,
+				60E2B0A5240ED5D800E4EA52 /* DTLoadMoreCommonCell.m */,
+				60E2B0A6240ED5D800E4EA52 /* DTTableCustomCell.h */,
+				60E2B0A7240ED5D800E4EA52 /* DTTabBarView.h */,
+				60E2B0A8240ED5D800E4EA52 /* DTTabScorllContentCell.h */,
+				60E2B0A9240ED5D800E4EA52 /* DTTableButtonCell.m */,
+				60E2B0AA240ED5D800E4EA52 /* DTDrivingLoadingView.m */,
+				60E2B0AB240ED5D800E4EA52 /* DTPickerView.h */,
+				60E2B0AC240ED5D800E4EA52 /* DTControl.m */,
+				60E2B0AD240ED5D800E4EA52 /* DTScrollTabView.h */,
+				60E2B0AE240ED5D800E4EA52 /* CLDatePickerView.m */,
+				60E2B0AF240ED5D800E4EA52 /* DTUISegmentView.m */,
+				60E2B0B0240ED5D800E4EA52 /* CLTitleTabView.m */,
+				60E2B0B1240ED5D800E4EA52 /* CLAlertView.m */,
+				60E2B0B2240ED5D800E4EA52 /* DTControllerListView.m */,
+				60E2B0B3240ED5D800E4EA52 /* DTTagLabel.h */,
+				60E2B0B4240ED5D800E4EA52 /* DTPullRefreshHeadView.h */,
+				60E2B0B5240ED5D800E4EA52 /* DTStrokeLabel.m */,
+				60E2B0B6240ED5D800E4EA52 /* DTHorizontalScrollView.h */,
+				60E2B0B7240ED5D800E4EA52 /* DTLoadMoreCommonCell.h */,
+				60E2B0B8240ED5D800E4EA52 /* DTScrollListViewCell.m */,
+				60E2B0B9240ED5D800E4EA52 /* DTBadgeView.m */,
+				60E2B0BA240ED5D800E4EA52 /* BPOnePixLineView.h */,
+				60E2B0BB240ED5D800E4EA52 /* DTButton.m */,
+				60E2B0BC240ED5D800E4EA52 /* DTEnrollProgressView.m */,
+				60E2B0BD240ED5D800E4EA52 /* CCCommentStarView.h */,
+				60E2B0BE240ED5D800E4EA52 /* DTGradientLabel.m */,
+				60E2B0BF240ED5D800E4EA52 /* DTNoDataView.m */,
+				60E2B0C0240ED5D800E4EA52 /* DTScrollLabel.m */,
+				60E2B0C1240ED5D800E4EA52 /* DTControl.h */,
+				60E2B0C2240ED5D800E4EA52 /* DTPickerView.m */,
+				60E2B0C3240ED5D800E4EA52 /* DTTableButtonCell.h */,
+				60E2B0C4240ED5D800E4EA52 /* DTDrivingLoadingView.h */,
+				60E2B0C5240ED5D800E4EA52 /* DTTabScorllContentCell.m */,
+				60E2B0C6240ED5D800E4EA52 /* DTTabBarView.m */,
+				60E2B0C7240ED5D800E4EA52 /* DTTableCustomCell.m */,
+				60E2B0C8240ED5D800E4EA52 /* DTUISegmentView.h */,
+				60E2B0C9240ED5D800E4EA52 /* CLDatePickerView.h */,
+				60E2B0CA240ED5D800E4EA52 /* DTScrollTabView.m */,
+				60E2B0CB240ED5D800E4EA52 /* DTHorizontalScrollView.m */,
+				60E2B0CC240ED5D800E4EA52 /* DTStrokeLabel.h */,
+				60E2B0CD240ED5D800E4EA52 /* DTPullRefreshHeadView.m */,
+				60E2B0CE240ED5D800E4EA52 /* CLAlertView.h */,
+				60E2B0CF240ED5D800E4EA52 /* DTControllerListView.h */,
+				60E2B0D0240ED5D800E4EA52 /* DTTagLabel.m */,
+				60E2B0D1240ED5D800E4EA52 /* CLTitleTabView.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		60E2B0D2240ED5D800E4EA52 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				60E2B0D3240ED5D800E4EA52 /* DTTabItem.h */,
+				60E2B0D4240ED5D800E4EA52 /* DTTitleIconItem.h */,
+				60E2B0D5240ED5D800E4EA52 /* DTTabItem.m */,
+				60E2B0D6240ED5D800E4EA52 /* DTTitleIconItem.m */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		60E2B0D7240ED5D800E4EA52 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		60E2B0D8240ED5D800E4EA52 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				60E2B0D9240ED5D800E4EA52 /* DTHttpRefreshLoadMoreTableController.m */,
+				60E2B0DA240ED5D800E4EA52 /* DTHttpRefreshInsetTabController.h */,
+				60E2B0DB240ED5D800E4EA52 /* DTNavigationController.h */,
+				60E2B0DC240ED5D800E4EA52 /* DTHttpTableController.h */,
+				60E2B0DD240ED5D800E4EA52 /* DTViewController.h */,
+				60E2B0DE240ED5D800E4EA52 /* DTPagesController.h */,
+				60E2B0DF240ED5D800E4EA52 /* DTHttpRefreshTableController.m */,
+				60E2B0E0240ED5D800E4EA52 /* DTTabViewController.m */,
+				60E2B0E1240ED5D800E4EA52 /* DTHttpLoadMoreTableController.h */,
+				60E2B0E2240ED5D800E4EA52 /* DTTableController.m */,
+				60E2B0E3240ED5D800E4EA52 /* DTNavigationController.m */,
+				60E2B0E4240ED5D800E4EA52 /* DTHttpRefreshInsetTabController.m */,
+				60E2B0E5240ED5D800E4EA52 /* DTHttpRefreshLoadMoreTableController.h */,
+				60E2B0E6240ED5D800E4EA52 /* DTHttpRefreshTableController.h */,
+				60E2B0E7240ED5D800E4EA52 /* DTPagesController.m */,
+				60E2B0E8240ED5D800E4EA52 /* DTHttpTableController.m */,
+				60E2B0E9240ED5D800E4EA52 /* DTViewController.m */,
+				60E2B0EA240ED5D800E4EA52 /* DTTabViewController.h */,
+				60E2B0EB240ED5D800E4EA52 /* DTTableController.h */,
+				60E2B0EC240ED5D800E4EA52 /* DTHttpLoadMoreTableController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		60E2B0ED240ED5D800E4EA52 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				60E2B0EE240ED5D800E4EA52 /* WCMethodUtil.m */,
+				60E2B0EF240ED5D800E4EA52 /* DTPubUtil.h */,
+				60E2B0F0240ED5D800E4EA52 /* FFAnimateHelper.h */,
+				60E2B0F1240ED5D800E4EA52 /* WCBarItemUtil.h */,
+				60E2B0F2240ED5D800E4EA52 /* WCControllerUtil.h */,
+				60E2B0F3240ED5D800E4EA52 /* WCAppStyleUtil.h */,
+				60E2B0F4240ED5D800E4EA52 /* CWStaticImageManager.m */,
+				60E2B0F5240ED5D800E4EA52 /* FFAnimateHelper.m */,
+				60E2B0F6240ED5D800E4EA52 /* DTPubUtil.m */,
+				60E2B0F7240ED5D800E4EA52 /* WCMethodUtil.h */,
+				60E2B0F8240ED5D800E4EA52 /* WCUICommon.h */,
+				60E2B0F9240ED5D800E4EA52 /* WCAppStyleUtil.m */,
+				60E2B0FA240ED5D800E4EA52 /* WCControllerUtil.m */,
+				60E2B0FB240ED5D800E4EA52 /* WCBarItemUtil.m */,
+				60E2B0FC240ED5D800E4EA52 /* CWStaticImageManager.h */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		60ED761C240EB25A0013CB8C = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +541,7 @@
 		60ED7627240EB25A0013CB8C /* JuTuanLife */ = {
 			isa = PBXGroup;
 			children = (
+				60E2B003240ED59900E4EA52 /* WCBaseUIKit */,
 				60ED7628240EB25A0013CB8C /* AppDelegate.h */,
 				60ED7629240EB25A0013CB8C /* AppDelegate.m */,
 				6001C79F240EB95E006092BB /* Base */,
@@ -384,14 +666,60 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60E2B125240ED5D800E4EA52 /* CWStaticImageManager.m in Sources */,
+				60E2B129240ED5D800E4EA52 /* WCControllerUtil.m in Sources */,
+				60E2B121240ED5D800E4EA52 /* DTHttpTableController.m in Sources */,
+				60E2B111240ED5D800E4EA52 /* DTTabScorllContentCell.m in Sources */,
+				60E2B124240ED5D800E4EA52 /* WCMethodUtil.m in Sources */,
+				60E2B104240ED5D800E4EA52 /* DTUISegmentView.m in Sources */,
+				60E2B115240ED5D800E4EA52 /* DTHorizontalScrollView.m in Sources */,
 				60ED762D240EB25A0013CB8C /* ViewController.m in Sources */,
+				60E2B11B240ED5D800E4EA52 /* DTHttpRefreshTableController.m in Sources */,
+				60E2B108240ED5D800E4EA52 /* DTStrokeLabel.m in Sources */,
+				60E2B120240ED5D800E4EA52 /* DTPagesController.m in Sources */,
+				60E2B106240ED5D800E4EA52 /* CLAlertView.m in Sources */,
+				60E2B11D240ED5D800E4EA52 /* DTTableController.m in Sources */,
+				60E2B114240ED5D800E4EA52 /* DTScrollTabView.m in Sources */,
+				60E2B128240ED5D800E4EA52 /* WCAppStyleUtil.m in Sources */,
 				6001C780240EB6C4006092BB /* JTUserManager.m in Sources */,
+				60E2B10C240ED5D800E4EA52 /* DTEnrollProgressView.m in Sources */,
+				60E2B117240ED5D800E4EA52 /* DTTagLabel.m in Sources */,
+				60E2B0FD240ED5D800E4EA52 /* CCCommentStarView.m in Sources */,
+				60E2B126240ED5D800E4EA52 /* FFAnimateHelper.m in Sources */,
+				60E2B105240ED5D800E4EA52 /* CLTitleTabView.m in Sources */,
+				60E2B107240ED5D800E4EA52 /* DTControllerListView.m in Sources */,
 				6001C77D240EB69E006092BB /* JTDataManager.m in Sources */,
+				60E2B109240ED5D800E4EA52 /* DTScrollListViewCell.m in Sources */,
+				60E2B10E240ED5D800E4EA52 /* DTNoDataView.m in Sources */,
+				60E2B116240ED5D800E4EA52 /* DTPullRefreshHeadView.m in Sources */,
 				60ED7638240EB25B0013CB8C /* main.m in Sources */,
-				60FF446F240ED2960088AC4D /* JTMainController.m in Sources */,
+				60E2B10B240ED5D800E4EA52 /* DTButton.m in Sources */,
+				60E2B103240ED5D800E4EA52 /* CLDatePickerView.m in Sources */,
 				6001C788240EB738006092BB /* JTCommon.m in Sources */,
+				60E2B122240ED5D800E4EA52 /* DTViewController.m in Sources */,
+				60E2B127240ED5D800E4EA52 /* DTPubUtil.m in Sources */,
+				60E2B147240ED6AF00E4EA52 /* JTMainController.m in Sources */,
+				60E2B0FF240ED5D800E4EA52 /* DTLoadMoreCommonCell.m in Sources */,
+				60E2B0FE240ED5D800E4EA52 /* BPOnePixLineView.m in Sources */,
+				60E2B10A240ED5D800E4EA52 /* DTBadgeView.m in Sources */,
+				60E2B119240ED5D800E4EA52 /* DTTitleIconItem.m in Sources */,
 				6001C784240EB6FD006092BB /* JTCoreUtil.m in Sources */,
+				60E2B11F240ED5D800E4EA52 /* DTHttpRefreshInsetTabController.m in Sources */,
+				60E2B112240ED5D800E4EA52 /* DTTabBarView.m in Sources */,
+				60E2B12A240ED5D800E4EA52 /* WCBarItemUtil.m in Sources */,
+				60E2B100240ED5D800E4EA52 /* DTTableButtonCell.m in Sources */,
+				60E2B11E240ED5D800E4EA52 /* DTNavigationController.m in Sources */,
+				60E2B11A240ED5D800E4EA52 /* DTHttpRefreshLoadMoreTableController.m in Sources */,
+				60E2B118240ED5D800E4EA52 /* DTTabItem.m in Sources */,
+				60E2B123240ED5D800E4EA52 /* DTHttpLoadMoreTableController.m in Sources */,
+				60E2B113240ED5D800E4EA52 /* DTTableCustomCell.m in Sources */,
+				60E2B110240ED5D800E4EA52 /* DTPickerView.m in Sources */,
+				60E2B102240ED5D800E4EA52 /* DTControl.m in Sources */,
+				60E2B10D240ED5D800E4EA52 /* DTGradientLabel.m in Sources */,
 				60ED762A240EB25A0013CB8C /* AppDelegate.m in Sources */,
+				60E2B101240ED5D800E4EA52 /* DTDrivingLoadingView.m in Sources */,
+				60E2B11C240ED5D800E4EA52 /* DTTabViewController.m in Sources */,
+				60E2B10F240ED5D800E4EA52 /* DTScrollLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
