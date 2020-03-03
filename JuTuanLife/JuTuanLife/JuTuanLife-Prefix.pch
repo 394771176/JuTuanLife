@@ -1,0 +1,25 @@
+//
+//  JuTuanLife-Prefix.pch
+//  JuTuanLife
+//
+//  Created by cheng on 2020/3/4.
+//  Copyright © 2020 cheng. All rights reserved.
+//
+
+#ifndef JuTuanLife_Prefix_pch
+#define JuTuanLife_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "JTDefine.h"
+
+#import "JTCommon.h"
+
+#import "JTDataManager.h"
+#import "JTUserManager.h"
+
+#import "JTCoreUtil.h"
+
+
+#endif /* JuTuanLife_Prefix_pch */
