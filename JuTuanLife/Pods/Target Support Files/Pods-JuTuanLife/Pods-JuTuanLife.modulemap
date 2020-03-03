@@ -1,0 +1,6 @@
+framework module Pods_JuTuanLife {
+  umbrella header "Pods-JuTuanLife-umbrella.h"
+
+  export *
+  module * { export * }
+}

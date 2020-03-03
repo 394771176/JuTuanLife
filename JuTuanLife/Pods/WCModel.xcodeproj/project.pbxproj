@@ -1,0 +1,619 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0211DF246B733A67DF9E076736C47535 /* BPFileUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 038FE364C46C17B76B90786FCDA5400E /* BPFileUtil.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0D24A207A78F2B6B833BEAE53624CACD /* BPAppPreference.m in Sources */ = {isa = PBXBuildFile; fileRef = 19195B1D82298A0D9BEDAD63ACC70B79 /* BPAppPreference.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0F741D4D1B7467D20C95836228437DB2 /* VGEListDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4B9E759E6A7AC4405D35579F45341B /* VGEListDataModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		14D7F996B01B122DECF7C437A48F4DF6 /* DTFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F2F323E71FFD651A413CFF9216A5674 /* DTFileManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1767CE63A171493988D331212D20415D /* WCModel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CBAEEF3301879D89CC20A1AA8A41649D /* WCModel-dummy.m */; };
+		1B90A7C49B2A674C71BDBF452E1FD262 /* DTPosListDataModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 78590F0F90FC905511103C0E91847E8D /* DTPosListDataModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21B0B2C0A196C7869E084376BADC8773 /* DTAppPreferenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B210A50238A1D3B77F4CF8C30E2B55 /* DTAppPreferenceManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		28DC974104CCD799E5FE291F0542B8AB /* VGEListDataModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D88122CA570FD33AF60AFA9E536605A /* VGEListDataModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2944C5B19126DBC60CACE82191131BEF /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 66684EFD8A93EC339C459FA315C1211F /* NSObject+YYModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2C6D024FD7D8F8ACE3B125FFB486F28D /* BPCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D1587E330474C4E33FA678515F0AB66F /* BPCacheManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3211C3711B18BDA325E22530093AA778 /* YYModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FEEF543BC2E760CFE0A7EC01CDF63A2 /* YYModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32DDC5A9F1360B018CD7B94F1493E52E /* VGEDataModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E3DDC8E0E97BF5362DA0C18C9B80B5D /* VGEDataModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		43CCFFD1FDF401BB76E4B6592D417077 /* VGEDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB606313F386D4C26BDB9D1607EC75 /* VGEDataModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4814048459D42D68C41A01900BA26079 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA95BBDA98678708A95406B6A4DCA31 /* YYClassInfo.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		50D149050D8E128455BC72382A0F145F /* WCBaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC08E634DADB3FC737EE30162AC1F9F /* WCBaseEntity.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5567831ABF2D2800ACA590B2964596C8 /* BPAppPreference.h in Headers */ = {isa = PBXBuildFile; fileRef = AAFEBA7CE0CA20B0418ABD02E1E73C38 /* BPAppPreference.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AF024DE12F9337A1981923BBDE749CE /* DTAppPreferenceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C3EBB49720C6A75F453CB2D6E4F38E3 /* DTAppPreferenceManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		63596BFCDDE491057EEA030B8AFF67C9 /* WCModel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 44F8A3CD73A05F98FE70CC8769B479DD /* WCModel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65860B4FA5F2808B9F3D4E7CB1D5B0F5 /* WCDataResult.h in Headers */ = {isa = PBXBuildFile; fileRef = B11F59CC3FC7EC9E4BE49ACF76B6934C /* WCDataResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B3E1ABFD82C276EA98010EBDA30CDF1 /* WCCategory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF6B8FA9C37EAF4BC9A2EFFC15885FA3 /* WCCategory.framework */; };
+		7ABE104B3477797254AF94A608538075 /* BPLocalManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EF2A9497A4A615CECBC4E27EAE5447 /* BPLocalManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7AD226B20A942899E565877D5AB03A52 /* WCModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B596209C7E286AA9658DB17C0D68C53C /* WCModule.framework */; };
+		839A40F1849C7D8AA54B294D63815667 /* NSObject+YYModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 70300BBCCA9F0C217C3E22F892B6FFE3 /* NSObject+YYModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		86D3A9EAA68ED692BA9B27381444060F /* YYClassInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 91FF6B31CEA0CB596F4E4429DEDEF326 /* YYClassInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		882ABB1E7BE28AA671D73AD58180F126 /* BPLocalManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D77042ED2E90209E0CB4F8664DCB36D3 /* BPLocalManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		98B0F654B6DB070D52E76AFD3A4D2BB3 /* BPCacheManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3360CE4B42A20FA731893D651E2A774B /* BPCacheManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		98B25122A2A704C5CD369474A79370AD /* VGEDataModel-Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 35B4A67EC94D461E957DC7050206389D /* VGEDataModel-Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		98EB400AA515875C19A566E44DFA58FC /* DTFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F116299E34315B517AAAA7F43E8D9C22 /* DTFileManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9B9FBF8756C98BC47CCE397336B40911 /* DTTodayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A5CFAB1BCFA03DD109B8B7DF60F982 /* DTTodayManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A68145907A5C4AE93FCE3189C5623C3E /* DTListDataModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 596A6F9C814BA9DBE83A9E09C7D7807E /* DTListDataModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF790886EA9EB0E6ED9162A88EDFFE4A /* DTPosListDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E744267EC170BC07DC16E2BD56137848 /* DTPosListDataModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		C4D781DC2720AF39648025D3083B9B49 /* DTTodayManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D14A85B8421C490BB0476C318EF1BA17 /* DTTodayManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D7623824BBDBE0D2221BEDD3280213B2 /* WCDataResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC0611BDD31466824BF8C2C9135B0DB /* WCDataResult.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		DA0C25B8F9518E526820EA205113E938 /* WCBaseEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = D6F8EAA0D55FE915F7E26F3A74C20F91 /* WCBaseEntity.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E0915D2586A873237E9D386B356957BB /* DTListDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B97ACBF60F37351FA7EA387D4B585C /* DTListDataModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		ECBCC2A6E9C120A6B3BB86B5F352A495 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5808D976127EF90B1BF77254F646C23D /* Foundation.framework */; };
+		F5905011CD7E8BC28BD42EB8A7EFF86D /* BPFileUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = DC7F4C094989E268586BECD0B3CA0B0A /* BPFileUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		02B4CF35CB799D6F0FA646FB0B5BE847 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 624F978997B7C445B11AAC3B52940CFA /* WCModule.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 204C46C3B0BD2B353BAECF2B88EDFC36;
+			remoteInfo = WCModule;
+		};
+		3DD0EF4905A4455C9BE71126743CF51C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF826512E041E41DE8E8DFA8031C92EE /* WCCategory.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B7961D1A0411488E0B195CB1D0BA3CD;
+			remoteInfo = WCCategory;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		038FE364C46C17B76B90786FCDA5400E /* BPFileUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BPFileUtil.m; path = WCModel/Classes/File/BPFileUtil.m; sourceTree = "<group>"; };
+		04EF2A9497A4A615CECBC4E27EAE5447 /* BPLocalManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BPLocalManager.m; path = WCModel/Classes/Cache/BPLocalManager.m; sourceTree = "<group>"; };
+		19195B1D82298A0D9BEDAD63ACC70B79 /* BPAppPreference.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BPAppPreference.m; path = WCModel/Classes/Plist/BPAppPreference.m; sourceTree = "<group>"; };
+		1F2F323E71FFD651A413CFF9216A5674 /* DTFileManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTFileManager.h; path = WCModel/Classes/File/DTFileManager.h; sourceTree = "<group>"; };
+		2BC08E634DADB3FC737EE30162AC1F9F /* WCBaseEntity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WCBaseEntity.m; path = WCModel/Classes/Entity/WCBaseEntity.m; sourceTree = "<group>"; };
+		3360CE4B42A20FA731893D651E2A774B /* BPCacheManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BPCacheManager.h; path = WCModel/Classes/Cache/BPCacheManager.h; sourceTree = "<group>"; };
+		35B4A67EC94D461E957DC7050206389D /* VGEDataModel-Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "VGEDataModel-Private.h"; path = "WCModel/Classes/Model/VGEDataModel-Private.h"; sourceTree = "<group>"; };
+		40B210A50238A1D3B77F4CF8C30E2B55 /* DTAppPreferenceManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTAppPreferenceManager.m; path = WCModel/Classes/Plist/DTAppPreferenceManager.m; sourceTree = "<group>"; };
+		44F8A3CD73A05F98FE70CC8769B479DD /* WCModel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WCModel-umbrella.h"; sourceTree = "<group>"; };
+		46EB606313F386D4C26BDB9D1607EC75 /* VGEDataModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VGEDataModel.m; path = WCModel/Classes/Model/VGEDataModel.m; sourceTree = "<group>"; };
+		4C3EBB49720C6A75F453CB2D6E4F38E3 /* DTAppPreferenceManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTAppPreferenceManager.h; path = WCModel/Classes/Plist/DTAppPreferenceManager.h; sourceTree = "<group>"; };
+		52A5CFAB1BCFA03DD109B8B7DF60F982 /* DTTodayManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTTodayManager.m; path = WCModel/Classes/Plist/DTTodayManager.m; sourceTree = "<group>"; };
+		5808D976127EF90B1BF77254F646C23D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		596A6F9C814BA9DBE83A9E09C7D7807E /* DTListDataModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTListDataModel.h; path = WCModel/Classes/Model/DTListDataModel.h; sourceTree = "<group>"; };
+		5FEEF543BC2E760CFE0A7EC01CDF63A2 /* YYModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYModel.h; path = WCModel/Classes/Entity/YYModel/YYModel.h; sourceTree = "<group>"; };
+		601F306E4BC70E8D9E8DF12C8BE5C99E /* WCModel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WCModel-prefix.pch"; sourceTree = "<group>"; };
+		624F978997B7C445B11AAC3B52940CFA /* WCModule */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WCModule; path = WCModule.xcodeproj; sourceTree = "<group>"; };
+		66684EFD8A93EC339C459FA315C1211F /* NSObject+YYModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+YYModel.m"; path = "WCModel/Classes/Entity/YYModel/NSObject+YYModel.m"; sourceTree = "<group>"; };
+		70300BBCCA9F0C217C3E22F892B6FFE3 /* NSObject+YYModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+YYModel.h"; path = "WCModel/Classes/Entity/YYModel/NSObject+YYModel.h"; sourceTree = "<group>"; };
+		78590F0F90FC905511103C0E91847E8D /* DTPosListDataModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTPosListDataModel.h; path = WCModel/Classes/Model/DTPosListDataModel.h; sourceTree = "<group>"; };
+		7E3DDC8E0E97BF5362DA0C18C9B80B5D /* VGEDataModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VGEDataModel.h; path = WCModel/Classes/Model/VGEDataModel.h; sourceTree = "<group>"; };
+		8BD0802330D9421AE83892419A51E86D /* WCModel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WCModel.xcconfig; sourceTree = "<group>"; };
+		91FF6B31CEA0CB596F4E4429DEDEF326 /* YYClassInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYClassInfo.h; path = WCModel/Classes/Entity/YYModel/YYClassInfo.h; sourceTree = "<group>"; };
+		9D88122CA570FD33AF60AFA9E536605A /* VGEListDataModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VGEListDataModel.h; path = WCModel/Classes/Model/VGEListDataModel.h; sourceTree = "<group>"; };
+		9EC0611BDD31466824BF8C2C9135B0DB /* WCDataResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WCDataResult.m; path = WCModel/Classes/Entity/WCDataResult.m; sourceTree = "<group>"; };
+		A47B33DB01F940770246B3D5E1B6808B /* WCModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WCModel.framework; path = WCModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAFEBA7CE0CA20B0418ABD02E1E73C38 /* BPAppPreference.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BPAppPreference.h; path = WCModel/Classes/Plist/BPAppPreference.h; sourceTree = "<group>"; };
+		B11F59CC3FC7EC9E4BE49ACF76B6934C /* WCDataResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WCDataResult.h; path = WCModel/Classes/Entity/WCDataResult.h; sourceTree = "<group>"; };
+		B596209C7E286AA9658DB17C0D68C53C /* WCModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WCModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE4B9E759E6A7AC4405D35579F45341B /* VGEListDataModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VGEListDataModel.m; path = WCModel/Classes/Model/VGEListDataModel.m; sourceTree = "<group>"; };
+		C2AB751166F2C8077140C4BEFCB77D99 /* WCModel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WCModel.modulemap; sourceTree = "<group>"; };
+		CBAEEF3301879D89CC20A1AA8A41649D /* WCModel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WCModel-dummy.m"; sourceTree = "<group>"; };
+		CDA95BBDA98678708A95406B6A4DCA31 /* YYClassInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYClassInfo.m; path = WCModel/Classes/Entity/YYModel/YYClassInfo.m; sourceTree = "<group>"; };
+		D14A85B8421C490BB0476C318EF1BA17 /* DTTodayManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTTodayManager.h; path = WCModel/Classes/Plist/DTTodayManager.h; sourceTree = "<group>"; };
+		D1587E330474C4E33FA678515F0AB66F /* BPCacheManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BPCacheManager.m; path = WCModel/Classes/Cache/BPCacheManager.m; sourceTree = "<group>"; };
+		D6F8EAA0D55FE915F7E26F3A74C20F91 /* WCBaseEntity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WCBaseEntity.h; path = WCModel/Classes/Entity/WCBaseEntity.h; sourceTree = "<group>"; };
+		D77042ED2E90209E0CB4F8664DCB36D3 /* BPLocalManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BPLocalManager.h; path = WCModel/Classes/Cache/BPLocalManager.h; sourceTree = "<group>"; };
+		DC7F4C094989E268586BECD0B3CA0B0A /* BPFileUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BPFileUtil.h; path = WCModel/Classes/File/BPFileUtil.h; sourceTree = "<group>"; };
+		E6B97ACBF60F37351FA7EA387D4B585C /* DTListDataModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTListDataModel.m; path = WCModel/Classes/Model/DTListDataModel.m; sourceTree = "<group>"; };
+		E744267EC170BC07DC16E2BD56137848 /* DTPosListDataModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTPosListDataModel.m; path = WCModel/Classes/Model/DTPosListDataModel.m; sourceTree = "<group>"; };
+		EF826512E041E41DE8E8DFA8031C92EE /* WCCategory */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WCCategory; path = WCCategory.xcodeproj; sourceTree = "<group>"; };
+		F116299E34315B517AAAA7F43E8D9C22 /* DTFileManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTFileManager.m; path = WCModel/Classes/File/DTFileManager.m; sourceTree = "<group>"; };
+		F2F5E53D5B9AA2520E34E147C571FC1C /* WCModel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WCModel-Info.plist"; sourceTree = "<group>"; };
+		FF6B8FA9C37EAF4BC9A2EFFC15885FA3 /* WCCategory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WCCategory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00252377FD38CC09E177D56C9429BCF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECBCC2A6E9C120A6B3BB86B5F352A495 /* Foundation.framework in Frameworks */,
+				6B3E1ABFD82C276EA98010EBDA30CDF1 /* WCCategory.framework in Frameworks */,
+				7AD226B20A942899E565877D5AB03A52 /* WCModule.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		067FBACC05222587B8F6D0DCDBFC7E41 /* WCModel */ = {
+			isa = PBXGroup;
+			children = (
+				CC7D9605A1FB9727F3175B911CC634C8 /* Cache */,
+				FC5516FCBC391F038C6D6E814DF5197B /* Entity */,
+				207DC29027AE25D8836C3DC488C5916B /* File */,
+				4570344D9C48B5174F457E0F1E5AEF71 /* Model */,
+				15AD30E34A1793173DE44576A392CD2B /* Plist */,
+				3E8C6CFACA6010DE2B416D90CFCD3EF2 /* Support Files */,
+			);
+			name = WCModel;
+			path = WCModel;
+			sourceTree = "<group>";
+		};
+		15AD30E34A1793173DE44576A392CD2B /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				AAFEBA7CE0CA20B0418ABD02E1E73C38 /* BPAppPreference.h */,
+				19195B1D82298A0D9BEDAD63ACC70B79 /* BPAppPreference.m */,
+				4C3EBB49720C6A75F453CB2D6E4F38E3 /* DTAppPreferenceManager.h */,
+				40B210A50238A1D3B77F4CF8C30E2B55 /* DTAppPreferenceManager.m */,
+				D14A85B8421C490BB0476C318EF1BA17 /* DTTodayManager.h */,
+				52A5CFAB1BCFA03DD109B8B7DF60F982 /* DTTodayManager.m */,
+			);
+			name = Plist;
+			sourceTree = "<group>";
+		};
+		207DC29027AE25D8836C3DC488C5916B /* File */ = {
+			isa = PBXGroup;
+			children = (
+				DC7F4C094989E268586BECD0B3CA0B0A /* BPFileUtil.h */,
+				038FE364C46C17B76B90786FCDA5400E /* BPFileUtil.m */,
+				1F2F323E71FFD651A413CFF9216A5674 /* DTFileManager.h */,
+				F116299E34315B517AAAA7F43E8D9C22 /* DTFileManager.m */,
+			);
+			name = File;
+			sourceTree = "<group>";
+		};
+		2F315AEE54EB3B19D7303CC8D32F72EE /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				EF826512E041E41DE8E8DFA8031C92EE /* WCCategory */,
+				624F978997B7C445B11AAC3B52940CFA /* WCModule */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		3E8C6CFACA6010DE2B416D90CFCD3EF2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C2AB751166F2C8077140C4BEFCB77D99 /* WCModel.modulemap */,
+				8BD0802330D9421AE83892419A51E86D /* WCModel.xcconfig */,
+				CBAEEF3301879D89CC20A1AA8A41649D /* WCModel-dummy.m */,
+				F2F5E53D5B9AA2520E34E147C571FC1C /* WCModel-Info.plist */,
+				601F306E4BC70E8D9E8DF12C8BE5C99E /* WCModel-prefix.pch */,
+				44F8A3CD73A05F98FE70CC8769B479DD /* WCModel-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/WCModel";
+			sourceTree = "<group>";
+		};
+		44E3C8B39D147312FB8BE97C9B53D434 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5808D976127EF90B1BF77254F646C23D /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		4570344D9C48B5174F457E0F1E5AEF71 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				596A6F9C814BA9DBE83A9E09C7D7807E /* DTListDataModel.h */,
+				E6B97ACBF60F37351FA7EA387D4B585C /* DTListDataModel.m */,
+				78590F0F90FC905511103C0E91847E8D /* DTPosListDataModel.h */,
+				E744267EC170BC07DC16E2BD56137848 /* DTPosListDataModel.m */,
+				7E3DDC8E0E97BF5362DA0C18C9B80B5D /* VGEDataModel.h */,
+				46EB606313F386D4C26BDB9D1607EC75 /* VGEDataModel.m */,
+				35B4A67EC94D461E957DC7050206389D /* VGEDataModel-Private.h */,
+				9D88122CA570FD33AF60AFA9E536605A /* VGEListDataModel.h */,
+				BE4B9E759E6A7AC4405D35579F45341B /* VGEListDataModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		48AC6377AFDA42A98CF25B50397E9590 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF6B8FA9C37EAF4BC9A2EFFC15885FA3 /* WCCategory.framework */,
+				B596209C7E286AA9658DB17C0D68C53C /* WCModule.framework */,
+				44E3C8B39D147312FB8BE97C9B53D434 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9CAB01E979A142941DF4980C6419D670 = {
+			isa = PBXGroup;
+			children = (
+				2F315AEE54EB3B19D7303CC8D32F72EE /* Dependencies */,
+				48AC6377AFDA42A98CF25B50397E9590 /* Frameworks */,
+				C9530C323196C2C5A8D34169D6B6972B /* Products */,
+				067FBACC05222587B8F6D0DCDBFC7E41 /* WCModel */,
+			);
+			sourceTree = "<group>";
+		};
+		C9530C323196C2C5A8D34169D6B6972B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A47B33DB01F940770246B3D5E1B6808B /* WCModel.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CC7D9605A1FB9727F3175B911CC634C8 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				3360CE4B42A20FA731893D651E2A774B /* BPCacheManager.h */,
+				D1587E330474C4E33FA678515F0AB66F /* BPCacheManager.m */,
+				D77042ED2E90209E0CB4F8664DCB36D3 /* BPLocalManager.h */,
+				04EF2A9497A4A615CECBC4E27EAE5447 /* BPLocalManager.m */,
+			);
+			name = Cache;
+			sourceTree = "<group>";
+		};
+		FC5516FCBC391F038C6D6E814DF5197B /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				70300BBCCA9F0C217C3E22F892B6FFE3 /* NSObject+YYModel.h */,
+				66684EFD8A93EC339C459FA315C1211F /* NSObject+YYModel.m */,
+				D6F8EAA0D55FE915F7E26F3A74C20F91 /* WCBaseEntity.h */,
+				2BC08E634DADB3FC737EE30162AC1F9F /* WCBaseEntity.m */,
+				B11F59CC3FC7EC9E4BE49ACF76B6934C /* WCDataResult.h */,
+				9EC0611BDD31466824BF8C2C9135B0DB /* WCDataResult.m */,
+				91FF6B31CEA0CB596F4E4429DEDEF326 /* YYClassInfo.h */,
+				CDA95BBDA98678708A95406B6A4DCA31 /* YYClassInfo.m */,
+				5FEEF543BC2E760CFE0A7EC01CDF63A2 /* YYModel.h */,
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B977748A343491C5633EB59A4D2C24C0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5567831ABF2D2800ACA590B2964596C8 /* BPAppPreference.h in Headers */,
+				98B0F654B6DB070D52E76AFD3A4D2BB3 /* BPCacheManager.h in Headers */,
+				F5905011CD7E8BC28BD42EB8A7EFF86D /* BPFileUtil.h in Headers */,
+				882ABB1E7BE28AA671D73AD58180F126 /* BPLocalManager.h in Headers */,
+				5AF024DE12F9337A1981923BBDE749CE /* DTAppPreferenceManager.h in Headers */,
+				14D7F996B01B122DECF7C437A48F4DF6 /* DTFileManager.h in Headers */,
+				A68145907A5C4AE93FCE3189C5623C3E /* DTListDataModel.h in Headers */,
+				1B90A7C49B2A674C71BDBF452E1FD262 /* DTPosListDataModel.h in Headers */,
+				C4D781DC2720AF39648025D3083B9B49 /* DTTodayManager.h in Headers */,
+				839A40F1849C7D8AA54B294D63815667 /* NSObject+YYModel.h in Headers */,
+				98B25122A2A704C5CD369474A79370AD /* VGEDataModel-Private.h in Headers */,
+				32DDC5A9F1360B018CD7B94F1493E52E /* VGEDataModel.h in Headers */,
+				28DC974104CCD799E5FE291F0542B8AB /* VGEListDataModel.h in Headers */,
+				DA0C25B8F9518E526820EA205113E938 /* WCBaseEntity.h in Headers */,
+				65860B4FA5F2808B9F3D4E7CB1D5B0F5 /* WCDataResult.h in Headers */,
+				63596BFCDDE491057EEA030B8AFF67C9 /* WCModel-umbrella.h in Headers */,
+				86D3A9EAA68ED692BA9B27381444060F /* YYClassInfo.h in Headers */,
+				3211C3711B18BDA325E22530093AA778 /* YYModel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		F7DEDB7C2195D421F161666F4E272F06 /* WCModel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94FC5E8EDD29CD0BBA58EF7630DDA886 /* Build configuration list for PBXNativeTarget "WCModel" */;
+			buildPhases = (
+				B977748A343491C5633EB59A4D2C24C0 /* Headers */,
+				9384D6432F82D34BC85CEFC0506ECAB0 /* Sources */,
+				00252377FD38CC09E177D56C9429BCF0 /* Frameworks */,
+				C43B1615BCEB3994970DD8DF34BF9090 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2F6532D5F663EFEABC142B1C5BCF8CEB /* PBXTargetDependency */,
+				F91C74B22147301217878E76F36544D0 /* PBXTargetDependency */,
+			);
+			name = WCModel;
+			productName = WCModel;
+			productReference = A47B33DB01F940770246B3D5E1B6808B /* WCModel.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		92C031651B1F2B404C7A9114C8F4F1AB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = DC7CB7FAACF91711536AA3BFEC8A47F1 /* Build configuration list for PBXProject "WCModel" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9CAB01E979A142941DF4980C6419D670;
+			productRefGroup = C9530C323196C2C5A8D34169D6B6972B /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProjectRef = 624F978997B7C445B11AAC3B52940CFA /* WCModule */;
+				},
+				{
+					ProjectRef = EF826512E041E41DE8E8DFA8031C92EE /* WCCategory */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				F7DEDB7C2195D421F161666F4E272F06 /* WCModel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C43B1615BCEB3994970DD8DF34BF9090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9384D6432F82D34BC85CEFC0506ECAB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D24A207A78F2B6B833BEAE53624CACD /* BPAppPreference.m in Sources */,
+				2C6D024FD7D8F8ACE3B125FFB486F28D /* BPCacheManager.m in Sources */,
+				0211DF246B733A67DF9E076736C47535 /* BPFileUtil.m in Sources */,
+				7ABE104B3477797254AF94A608538075 /* BPLocalManager.m in Sources */,
+				21B0B2C0A196C7869E084376BADC8773 /* DTAppPreferenceManager.m in Sources */,
+				98EB400AA515875C19A566E44DFA58FC /* DTFileManager.m in Sources */,
+				E0915D2586A873237E9D386B356957BB /* DTListDataModel.m in Sources */,
+				AF790886EA9EB0E6ED9162A88EDFFE4A /* DTPosListDataModel.m in Sources */,
+				9B9FBF8756C98BC47CCE397336B40911 /* DTTodayManager.m in Sources */,
+				2944C5B19126DBC60CACE82191131BEF /* NSObject+YYModel.m in Sources */,
+				43CCFFD1FDF401BB76E4B6592D417077 /* VGEDataModel.m in Sources */,
+				0F741D4D1B7467D20C95836228437DB2 /* VGEListDataModel.m in Sources */,
+				50D149050D8E128455BC72382A0F145F /* WCBaseEntity.m in Sources */,
+				D7623824BBDBE0D2221BEDD3280213B2 /* WCDataResult.m in Sources */,
+				1767CE63A171493988D331212D20415D /* WCModel-dummy.m in Sources */,
+				4814048459D42D68C41A01900BA26079 /* YYClassInfo.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2F6532D5F663EFEABC142B1C5BCF8CEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WCCategory;
+			targetProxy = 3DD0EF4905A4455C9BE71126743CF51C /* PBXContainerItemProxy */;
+		};
+		F91C74B22147301217878E76F36544D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WCModule;
+			targetProxy = 02B4CF35CB799D6F0FA646FB0B5BE847 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1E387EBB5CABEA1B1484E9D42D51B3E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		57CAE852FFD9A453F2D8B57313FA0EE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BD0802330D9421AE83892419A51E86D /* WCModel.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WCModel/WCModel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WCModel/WCModel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/WCModel/WCModel.modulemap";
+				PRODUCT_MODULE_NAME = WCModel;
+				PRODUCT_NAME = WCModel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DB51101A6EDB8CE3BE9524B76A0E4D9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		FCF8CB0A24C233F45706247B1EB30728 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BD0802330D9421AE83892419A51E86D /* WCModel.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WCModel/WCModel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WCModel/WCModel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/WCModel/WCModel.modulemap";
+				PRODUCT_MODULE_NAME = WCModel;
+				PRODUCT_NAME = WCModel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		94FC5E8EDD29CD0BBA58EF7630DDA886 /* Build configuration list for PBXNativeTarget "WCModel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCF8CB0A24C233F45706247B1EB30728 /* Debug */,
+				57CAE852FFD9A453F2D8B57313FA0EE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DC7CB7FAACF91711536AA3BFEC8A47F1 /* Build configuration list for PBXProject "WCModel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E387EBB5CABEA1B1484E9D42D51B3E7 /* Debug */,
+				DB51101A6EDB8CE3BE9524B76A0E4D9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 92C031651B1F2B404C7A9114C8F4F1AB /* Project object */;
+}

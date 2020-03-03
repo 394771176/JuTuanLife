@@ -1,0 +1,6 @@
+framework module WCBaseUIKit {
+  umbrella header "WCBaseUIKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

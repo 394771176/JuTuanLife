@@ -1,0 +1,419 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22F5D6A4FD489F4CF8842BC4DEB25C31 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E462151D9151E2C1220B4185F9B40105 /* UIKit.framework */; };
+		262A97F051B5A03EB0958C3516E26E46 /* NSData+md5.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CB171C0E3F7494FCB71D0EE9E780C20 /* NSData+md5.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		88BDCAE65278740907CE1B08B093CA91 /* WCEncrypt-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DBCC8E96B33243E3847FAB4D8C7A151E /* WCEncrypt-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96FEED932ADCEB7153E63333E855C772 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12844AEEA2DDD7F10BA1BB677D422C78 /* Foundation.framework */; };
+		9FAA7E3878E9DAA7BC89586C11F9ED23 /* NSString+md5.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DE4CCF6FAE3D9D780298AB45CC8AAC2 /* NSString+md5.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD7ADB9DC997F539DFC000E230EF5276 /* NSString+md5.m in Sources */ = {isa = PBXBuildFile; fileRef = 172FB2DC08C6E56CC594D999744B707F /* NSString+md5.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D6E9FC096D2929FF03663CCB5F9FB05A /* WCEncrypt-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 051F6A73C749F6EECC8832DEA5B50370 /* WCEncrypt-dummy.m */; };
+		EF52D7F267D9F43748097EACD86A687E /* NSData+md5.m in Sources */ = {isa = PBXBuildFile; fileRef = E9DF5B74F70CBE6A32CF305EE1B42BA3 /* NSData+md5.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		051F6A73C749F6EECC8832DEA5B50370 /* WCEncrypt-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WCEncrypt-dummy.m"; sourceTree = "<group>"; };
+		12844AEEA2DDD7F10BA1BB677D422C78 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		172FB2DC08C6E56CC594D999744B707F /* NSString+md5.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+md5.m"; path = "WCEncrypt/Classes/MD5/NSString+md5.m"; sourceTree = "<group>"; };
+		301EFD61F1778491BC612D0D0EA50EFD /* WCEncrypt-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WCEncrypt-Info.plist"; sourceTree = "<group>"; };
+		36098C67F01E05FA0EA909420A02CC3F /* WCEncrypt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WCEncrypt.framework; path = WCEncrypt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DE4CCF6FAE3D9D780298AB45CC8AAC2 /* NSString+md5.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+md5.h"; path = "WCEncrypt/Classes/MD5/NSString+md5.h"; sourceTree = "<group>"; };
+		5CB171C0E3F7494FCB71D0EE9E780C20 /* NSData+md5.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+md5.h"; path = "WCEncrypt/Classes/MD5/NSData+md5.h"; sourceTree = "<group>"; };
+		944EE009A1593CFC295C1E24D78338D5 /* WCEncrypt-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WCEncrypt-prefix.pch"; sourceTree = "<group>"; };
+		9A77DA2ED3E20D41E5EAFE686DEAA840 /* WCEncrypt.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WCEncrypt.modulemap; sourceTree = "<group>"; };
+		DBCC8E96B33243E3847FAB4D8C7A151E /* WCEncrypt-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WCEncrypt-umbrella.h"; sourceTree = "<group>"; };
+		E462151D9151E2C1220B4185F9B40105 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		E9DF5B74F70CBE6A32CF305EE1B42BA3 /* NSData+md5.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+md5.m"; path = "WCEncrypt/Classes/MD5/NSData+md5.m"; sourceTree = "<group>"; };
+		FB818B47F36F7641E9281693D693014F /* WCEncrypt.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WCEncrypt.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B4400CA8DD74328600072614FC309799 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96FEED932ADCEB7153E63333E855C772 /* Foundation.framework in Frameworks */,
+				22F5D6A4FD489F4CF8842BC4DEB25C31 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0004FE2C086C714E3FDC57DF42EA3FC8 /* MD5 */ = {
+			isa = PBXGroup;
+			children = (
+				5CB171C0E3F7494FCB71D0EE9E780C20 /* NSData+md5.h */,
+				E9DF5B74F70CBE6A32CF305EE1B42BA3 /* NSData+md5.m */,
+				3DE4CCF6FAE3D9D780298AB45CC8AAC2 /* NSString+md5.h */,
+				172FB2DC08C6E56CC594D999744B707F /* NSString+md5.m */,
+			);
+			name = MD5;
+			sourceTree = "<group>";
+		};
+		4AAAA990DE9EEFBDAF7E4A9874929AFC /* WCEncrypt */ = {
+			isa = PBXGroup;
+			children = (
+				0004FE2C086C714E3FDC57DF42EA3FC8 /* MD5 */,
+				51D4731D100A3ED40137480BCE71BB7A /* Support Files */,
+			);
+			name = WCEncrypt;
+			path = WCEncrypt;
+			sourceTree = "<group>";
+		};
+		4C608749B71ABCE9C727B8B41DF2DDE1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				12844AEEA2DDD7F10BA1BB677D422C78 /* Foundation.framework */,
+				E462151D9151E2C1220B4185F9B40105 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		51D4731D100A3ED40137480BCE71BB7A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9A77DA2ED3E20D41E5EAFE686DEAA840 /* WCEncrypt.modulemap */,
+				FB818B47F36F7641E9281693D693014F /* WCEncrypt.xcconfig */,
+				051F6A73C749F6EECC8832DEA5B50370 /* WCEncrypt-dummy.m */,
+				301EFD61F1778491BC612D0D0EA50EFD /* WCEncrypt-Info.plist */,
+				944EE009A1593CFC295C1E24D78338D5 /* WCEncrypt-prefix.pch */,
+				DBCC8E96B33243E3847FAB4D8C7A151E /* WCEncrypt-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/WCEncrypt";
+			sourceTree = "<group>";
+		};
+		5BAA177B6AA9543260955BBAC1CF0C36 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C608749B71ABCE9C727B8B41DF2DDE1 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		940AA3374867284CDE27F52DDBD85D08 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				36098C67F01E05FA0EA909420A02CC3F /* WCEncrypt.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9EEEE7C991769EDB79C5382F0A238DAA = {
+			isa = PBXGroup;
+			children = (
+				5BAA177B6AA9543260955BBAC1CF0C36 /* Frameworks */,
+				940AA3374867284CDE27F52DDBD85D08 /* Products */,
+				4AAAA990DE9EEFBDAF7E4A9874929AFC /* WCEncrypt */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		910C7A03DF3F6286C126F64ECE5C1CF4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				262A97F051B5A03EB0958C3516E26E46 /* NSData+md5.h in Headers */,
+				9FAA7E3878E9DAA7BC89586C11F9ED23 /* NSString+md5.h in Headers */,
+				88BDCAE65278740907CE1B08B093CA91 /* WCEncrypt-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1B6B0557A7BF1D49310AB076E55FAE59 /* WCEncrypt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5FED13F92A11472A42F8D811AC247D02 /* Build configuration list for PBXNativeTarget "WCEncrypt" */;
+			buildPhases = (
+				910C7A03DF3F6286C126F64ECE5C1CF4 /* Headers */,
+				D29F89692AA983F21DB65112E2C5A5CF /* Sources */,
+				B4400CA8DD74328600072614FC309799 /* Frameworks */,
+				46ED1C2BCF76F90C8D57ACAAB4994AE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WCEncrypt;
+			productName = WCEncrypt;
+			productReference = 36098C67F01E05FA0EA909420A02CC3F /* WCEncrypt.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1CE74CF9E08E4D6F70399B4CAE11A1EB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 04D6A5A9338416731F46D693F56E9301 /* Build configuration list for PBXProject "WCEncrypt" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9EEEE7C991769EDB79C5382F0A238DAA;
+			productRefGroup = 940AA3374867284CDE27F52DDBD85D08 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1B6B0557A7BF1D49310AB076E55FAE59 /* WCEncrypt */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		46ED1C2BCF76F90C8D57ACAAB4994AE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D29F89692AA983F21DB65112E2C5A5CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF52D7F267D9F43748097EACD86A687E /* NSData+md5.m in Sources */,
+				AD7ADB9DC997F539DFC000E230EF5276 /* NSString+md5.m in Sources */,
+				D6E9FC096D2929FF03663CCB5F9FB05A /* WCEncrypt-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0A14445C68E58C180D39A436EE32AF34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		21A3A37D82005599AC78913AF967A681 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB818B47F36F7641E9281693D693014F /* WCEncrypt.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WCEncrypt/WCEncrypt-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WCEncrypt/WCEncrypt-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/WCEncrypt/WCEncrypt.modulemap";
+				PRODUCT_MODULE_NAME = WCEncrypt;
+				PRODUCT_NAME = WCEncrypt;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EF60F18C35B9A34B3D8D4681D005BA31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB818B47F36F7641E9281693D693014F /* WCEncrypt.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WCEncrypt/WCEncrypt-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WCEncrypt/WCEncrypt-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/WCEncrypt/WCEncrypt.modulemap";
+				PRODUCT_MODULE_NAME = WCEncrypt;
+				PRODUCT_NAME = WCEncrypt;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FEE0F33018C006C63C12413CC1270E97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04D6A5A9338416731F46D693F56E9301 /* Build configuration list for PBXProject "WCEncrypt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A14445C68E58C180D39A436EE32AF34 /* Debug */,
+				FEE0F33018C006C63C12413CC1270E97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5FED13F92A11472A42F8D811AC247D02 /* Build configuration list for PBXNativeTarget "WCEncrypt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF60F18C35B9A34B3D8D4681D005BA31 /* Debug */,
+				21A3A37D82005599AC78913AF967A681 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1CE74CF9E08E4D6F70399B4CAE11A1EB /* Project object */;
+}
