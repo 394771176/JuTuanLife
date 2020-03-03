@@ -10,6 +10,6 @@
 #define JTDefine_h
 
 #import "JTAPPKey.h"
-#import "JTContants.h"
+#import "JTConstants.h"
 
 #endif /* JTDefine_h */
