@@ -17,6 +17,7 @@
 		60ED7632240EB25B0013CB8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60ED7631240EB25B0013CB8C /* Assets.xcassets */; };
 		60ED7635240EB25B0013CB8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60ED7633240EB25B0013CB8C /* LaunchScreen.storyboard */; };
 		60ED7638240EB25B0013CB8C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ED7637240EB25B0013CB8C /* main.m */; };
+		60FF446F240ED2960088AC4D /* JTMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FF446E240ED2960088AC4D /* JTMainController.m */; };
 		D2068D9F20BB2156C5736722 /* Pods_JuTuanLife.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87291E484A5B51B2A86BD0CE /* Pods_JuTuanLife.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,8 @@
 		60ED7634240EB25B0013CB8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60ED7636240EB25B0013CB8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60ED7637240EB25B0013CB8C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		60FF446D240ED2960088AC4D /* JTMainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTMainController.h; sourceTree = "<group>"; };
+		60FF446E240ED2960088AC4D /* JTMainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTMainController.m; sourceTree = "<group>"; };
 		87291E484A5B51B2A86BD0CE /* Pods_JuTuanLife.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JuTuanLife.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -74,7 +77,6 @@
 				22D0A58BFCB7D41C914AE223 /* Pods-JuTuanLife.debug.xcconfig */,
 				252ACCD2D3E36346102AC1B4 /* Pods-JuTuanLife.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -148,16 +150,10 @@
 		6001C792240EB755006092BB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				6001C793240EB755006092BB /* 未命名文件夹 */,
+				60FF446D240ED2960088AC4D /* JTMainController.h */,
+				60FF446E240ED2960088AC4D /* JTMainController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		6001C793240EB755006092BB /* 未命名文件夹 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "未命名文件夹";
 			sourceTree = "<group>";
 		};
 		6001C794240EB755006092BB /* Model */ = {
@@ -392,6 +388,7 @@
 				6001C780240EB6C4006092BB /* JTUserManager.m in Sources */,
 				6001C77D240EB69E006092BB /* JTDataManager.m in Sources */,
 				60ED7638240EB25B0013CB8C /* main.m in Sources */,
+				60FF446F240ED2960088AC4D /* JTMainController.m in Sources */,
 				6001C788240EB738006092BB /* JTCommon.m in Sources */,
 				6001C784240EB6FD006092BB /* JTCoreUtil.m in Sources */,
 				60ED762A240EB25A0013CB8C /* AppDelegate.m in Sources */,
