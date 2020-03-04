@@ -29,4 +29,7 @@
 + (void)showHUDNoNetWorkHintInWindow;
 + (void)showHUDInWindowWithImage:(NSString *)imageName andMessage:(NSString *)msg;
 
++ (void)sendTagert:(id)tagert action:(SEL)action object:(id)object;
++ (void)sendTagert:(id)tagert action:(SEL)action object:(id)object object2:(id)object2;
+
 @end

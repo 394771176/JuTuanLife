@@ -48,7 +48,7 @@
     if (style==DTTableButtonStyleGray) {
         _submitBtn.userInteractionEnabled = NO;
         [self setButtonTitleColor:[UIColor whiteColor]];
-        [self setButtonBorderColor:nil withBgColorStr:@"d9d9d9"];
+        [self setButtonBorderColor:nil withBgColorStr:_gray?:@"d9d9d9"];
     } else if (style==DTTableButtonStyleGrayWhite) {
         _submitBtn.userInteractionEnabled = NO;
         [self setButtonTitleColor:[UIColor colorWithHexString:@"969696"]];
@@ -57,28 +57,24 @@
         _submitBtn.userInteractionEnabled = YES;
         if (style==DTTableButtonStyleRed) {
             [self setButtonTitleColor:[UIColor whiteColor]];
-            [self setButtonBorderColor:nil withBgColorStr:APP_CONST_RED_STRING];//f34a2e
-            [_submitBtn setBackgroundImage:[[CWStaticImageManager sharedInstance] imageWithColorHex:@"d94f4f" size:_submitBtn.size corner:_corner] forState:UIControlStateHighlighted];
+            [self setButtonBorderColor:nil withBgColorStr:_red?:APP_CONST_RED_STRING];//f34a2e
         } else if (style==DTTableButtonStyleGreen) {
             [self setButtonTitleColor:[UIColor whiteColor]];
-            [self setButtonBorderColor:nil withBgColorStr:@"27b83b"];
-            [_submitBtn setBackgroundImage:[[CWStaticImageManager sharedInstance] imageWithColorHex:@"39961c" size:_submitBtn.size corner:_corner] forState:UIControlStateHighlighted];
+            [self setButtonBorderColor:nil withBgColorStr:_green?:@"27b83b"];
         } else if (style==DTTableButtonStyleBlue) {
             [self setButtonTitleColor:[UIColor whiteColor]];
-            [self setButtonBorderColor:nil withBgColorStr:APP_CONST_BLUE_STRING];
-            [_submitBtn setBackgroundImage:[[CWStaticImageManager sharedInstance] imageWithColorHex:@"2898df" size:_submitBtn.size corner:_corner] forState:UIControlStateHighlighted];
+            [self setButtonBorderColor:nil withBgColorStr:_blue?:APP_CONST_BLUE_STRING];
         } else if (style==DTTableButtonStyleRedWhite) {
             [self setButtonTitleColor:[UIColor colorWithHexString:@"f34a2e"]];
             [self setButtonBorderColor:[UIColor colorWithHexString:@"f34a2e"] withBgColorStr:@"ffffff"];
-            [_submitBtn setBackgroundImage:[[CWStaticImageManager sharedInstance] imageWithColorHex:@"e5e5e5" size:_submitBtn.size corner:_corner] forState:UIControlStateHighlighted];
         } else if (style==DTTableButtonStyleGreenWhite) {
             [self setButtonTitleColor:[UIColor colorWithHexString:@"27b83b"]];
             [self setButtonBorderColor:[UIColor colorWithHexString:@"27b83b"] withBgColorStr:@"ffffff"];
-            [_submitBtn setBackgroundImage:[[CWStaticImageManager sharedInstance] imageWithColorHex:@"e5e5e5" size:_submitBtn.size corner:_corner] forState:UIControlStateHighlighted];
         } else if (style==DTTableButtonStyleBlueWhite) {
             [self setButtonTitleColor:APP_CONST_BLUE_COLOR];
             [self setButtonBorderColor:APP_CONST_BLUE_COLOR withBgColorStr:@"ffffff"];
-            [_submitBtn setBackgroundImage:[[CWStaticImageManager sharedInstance] imageWithColorHex:@"e5e5e5" size:_submitBtn.size corner:_corner] forState:UIControlStateHighlighted];
+        } else if (style == DTTableButtonStyleNone) {
+            [_submitBtn setBackgroundImageWithImageName:nil];
         }
     }
 }
@@ -111,7 +107,7 @@
 
 - (void)setButtonBgColorStr:(NSString *)colorStr
 {
-    [_submitBtn setBackgroundImage:[[CWStaticImageManager sharedInstance] imageWithColorHex:colorStr size:_submitBtn.size corner:_corner] forState:UIControlStateNormal];
+    [_submitBtn setBackgroundImageAndHightlightWithColorHex:colorStr cornerRadius:_corner];
 }
 
 - (void)setButtonTitle:(NSString *)title withBgColorStr:(NSString *)colorStr
@@ -124,6 +120,11 @@
 {
     [self setButtonTitle:title];
     [self setButtonTitleColor:color];
+}
+
+- (void)setButtonTitle:(NSString *)title withTitleColorStr:(NSString *)colorStr
+{
+    [self setButtonTitle:title withTitleColor:[UIColor colorWithString:colorStr]];
 }
 
 - (void)setButtonBorderColor:(UIColor *)color withBgColorStr:(NSString *)colorStr

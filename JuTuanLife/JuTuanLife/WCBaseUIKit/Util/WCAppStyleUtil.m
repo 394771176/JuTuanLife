@@ -9,8 +9,8 @@
 #import "WCUICommon.h"
 
 #define APP_CONST_NAVBAR_BGCOLOR             @"ffffff"
-#define APP_CONST_NAVBAR_TITLECOLOR          @"3f3f3f"
-#define APP_CONST_BASE_CONTROLLER_BGCOLOR          @"f2f2f2"
+#define APP_CONST_NAVBAR_TITLECOLOR          @"111111"
+#define APP_CONST_BASE_CONTROLLER_BGCOLOR          @"ffffff"
 
 @implementation WCAppStyleUtil
 

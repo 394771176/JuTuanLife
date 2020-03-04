@@ -11,6 +11,18 @@
 		6001C780240EB6C4006092BB /* JTUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001C77F240EB6C4006092BB /* JTUserManager.m */; };
 		6001C784240EB6FD006092BB /* JTCoreUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001C783240EB6FD006092BB /* JTCoreUtil.m */; };
 		6001C788240EB738006092BB /* JTCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001C787240EB738006092BB /* JTCommon.m */; };
+		60D03C90240FF99600E7D7D1 /* launch_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60D03C8F240FF99600E7D7D1 /* launch_image@2x.png */; };
+		60D03C93240FF9F100E7D7D1 /* JTLoginHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D03C92240FF9F100E7D7D1 /* JTLoginHomeController.m */; };
+		60D03C96240FFA9900E7D7D1 /* JTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D03C95240FFA9900E7D7D1 /* JTUser.m */; };
+		60D03C99240FFE9400E7D7D1 /* JTLoginHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D03C98240FFE9400E7D7D1 /* JTLoginHeaderView.m */; };
+		60D03C9C2410046600E7D7D1 /* SCLoginTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D03C9B2410046600E7D7D1 /* SCLoginTextFieldCell.m */; };
+		60D03C9F241004A800E7D7D1 /* login_icon_code@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60D03C9D241004A800E7D7D1 /* login_icon_code@2x.png */; };
+		60D03CA0241004A800E7D7D1 /* login_icon_phone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60D03C9E241004A800E7D7D1 /* login_icon_phone@2x.png */; };
+		60D03CAA241012DF00E7D7D1 /* login_password_see@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60D03CA7241012DF00E7D7D1 /* login_password_see@2x.png */; };
+		60D03CAB241012DF00E7D7D1 /* login_password_unsee@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60D03CA8241012DF00E7D7D1 /* login_password_unsee@2x.png */; };
+		60D03CAC241012DF00E7D7D1 /* login_password_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60D03CA9241012DF00E7D7D1 /* login_password_close@2x.png */; };
+		60D03CAE241015F100E7D7D1 /* logo_jtbang@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60D03CAD241015F100E7D7D1 /* logo_jtbang@2x.png */; };
+		60D03CB02410172700E7D7D1 /* login_header_bg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60D03CAF2410172700E7D7D1 /* login_header_bg@2x.jpg */; };
 		60E2B0FD240ED5D800E4EA52 /* CCCommentStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B09F240ED5D800E4EA52 /* CCCommentStarView.m */; };
 		60E2B0FE240ED5D800E4EA52 /* BPOnePixLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0A2240ED5D800E4EA52 /* BPOnePixLineView.m */; };
 		60E2B0FF240ED5D800E4EA52 /* DTLoadMoreCommonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0A5240ED5D800E4EA52 /* DTLoadMoreCommonCell.m */; };
@@ -58,8 +70,8 @@
 		60E2B129240ED5D800E4EA52 /* WCControllerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0FA240ED5D800E4EA52 /* WCControllerUtil.m */; };
 		60E2B12A240ED5D800E4EA52 /* WCBarItemUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0FB240ED5D800E4EA52 /* WCBarItemUtil.m */; };
 		60E2B147240ED6AF00E4EA52 /* JTMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B146240ED6AF00E4EA52 /* JTMainController.m */; };
+		60E2B2B7240FE58100E4EA52 /* BPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B2B5240FE58100E4EA52 /* BPAppDelegate.m */; };
 		60ED762A240EB25A0013CB8C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ED7629240EB25A0013CB8C /* AppDelegate.m */; };
-		60ED762D240EB25A0013CB8C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ED762C240EB25A0013CB8C /* ViewController.m */; };
 		60ED7630240EB25A0013CB8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60ED762E240EB25A0013CB8C /* Main.storyboard */; };
 		60ED7632240EB25B0013CB8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60ED7631240EB25B0013CB8C /* Assets.xcassets */; };
 		60ED7635240EB25B0013CB8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60ED7633240EB25B0013CB8C /* LaunchScreen.storyboard */; };
@@ -82,6 +94,22 @@
 		6001C786240EB738006092BB /* JTCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTCommon.h; sourceTree = "<group>"; };
 		6001C787240EB738006092BB /* JTCommon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTCommon.m; sourceTree = "<group>"; };
 		6001C7A0240EBA1D006092BB /* JuTuanLife-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JuTuanLife-Prefix.pch"; sourceTree = "<group>"; };
+		60D03C8F240FF99600E7D7D1 /* launch_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch_image@2x.png"; sourceTree = "<group>"; };
+		60D03C91240FF9F100E7D7D1 /* JTLoginHomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTLoginHomeController.h; sourceTree = "<group>"; };
+		60D03C92240FF9F100E7D7D1 /* JTLoginHomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTLoginHomeController.m; sourceTree = "<group>"; };
+		60D03C94240FFA9900E7D7D1 /* JTUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTUser.h; sourceTree = "<group>"; };
+		60D03C95240FFA9900E7D7D1 /* JTUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTUser.m; sourceTree = "<group>"; };
+		60D03C97240FFE9400E7D7D1 /* JTLoginHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTLoginHeaderView.h; sourceTree = "<group>"; };
+		60D03C98240FFE9400E7D7D1 /* JTLoginHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTLoginHeaderView.m; sourceTree = "<group>"; };
+		60D03C9A2410046600E7D7D1 /* SCLoginTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLoginTextFieldCell.h; sourceTree = "<group>"; };
+		60D03C9B2410046600E7D7D1 /* SCLoginTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLoginTextFieldCell.m; sourceTree = "<group>"; };
+		60D03C9D241004A800E7D7D1 /* login_icon_code@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_icon_code@2x.png"; sourceTree = "<group>"; };
+		60D03C9E241004A800E7D7D1 /* login_icon_phone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_icon_phone@2x.png"; sourceTree = "<group>"; };
+		60D03CA7241012DF00E7D7D1 /* login_password_see@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_password_see@2x.png"; sourceTree = "<group>"; };
+		60D03CA8241012DF00E7D7D1 /* login_password_unsee@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_password_unsee@2x.png"; sourceTree = "<group>"; };
+		60D03CA9241012DF00E7D7D1 /* login_password_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_password_close@2x.png"; sourceTree = "<group>"; };
+		60D03CAD241015F100E7D7D1 /* logo_jtbang@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_jtbang@2x.png"; sourceTree = "<group>"; };
+		60D03CAF2410172700E7D7D1 /* login_header_bg@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "login_header_bg@2x.jpg"; sourceTree = "<group>"; };
 		60E2B09A240ED5D800E4EA52 /* WCBaseUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCBaseUIKit.h; sourceTree = "<group>"; };
 		60E2B09C240ED5D800E4EA52 /* DTScrollLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTScrollLabel.h; sourceTree = "<group>"; };
 		60E2B09D240ED5D800E4EA52 /* DTGradientLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTGradientLabel.h; sourceTree = "<group>"; };
@@ -178,11 +206,11 @@
 		60E2B0FC240ED5D800E4EA52 /* CWStaticImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWStaticImageManager.h; sourceTree = "<group>"; };
 		60E2B145240ED6AF00E4EA52 /* JTMainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTMainController.h; sourceTree = "<group>"; };
 		60E2B146240ED6AF00E4EA52 /* JTMainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTMainController.m; sourceTree = "<group>"; };
+		60E2B2B5240FE58100E4EA52 /* BPAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPAppDelegate.m; sourceTree = "<group>"; };
+		60E2B2B6240FE58100E4EA52 /* BPAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPAppDelegate.h; sourceTree = "<group>"; };
 		60ED7625240EB25A0013CB8C /* JuTuanLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuTuanLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60ED7628240EB25A0013CB8C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		60ED7629240EB25A0013CB8C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		60ED762B240EB25A0013CB8C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		60ED762C240EB25A0013CB8C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		60ED762F240EB25A0013CB8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		60ED7631240EB25B0013CB8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60ED7634240EB25B0013CB8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -331,21 +359,17 @@
 		6001C798240EB755006092BB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				6001C799240EB755006092BB /* 未命名文件夹 */,
+				60D03C91240FF9F100E7D7D1 /* JTLoginHomeController.h */,
+				60D03C92240FF9F100E7D7D1 /* JTLoginHomeController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		6001C799240EB755006092BB /* 未命名文件夹 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "未命名文件夹";
 			sourceTree = "<group>";
 		};
 		6001C79A240EB755006092BB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				60D03C94240FFA9900E7D7D1 /* JTUser.h */,
+				60D03C95240FFA9900E7D7D1 /* JTUser.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -353,6 +377,10 @@
 		6001C79B240EB755006092BB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				60D03C97240FFE9400E7D7D1 /* JTLoginHeaderView.h */,
+				60D03C98240FFE9400E7D7D1 /* JTLoginHeaderView.m */,
+				60D03C9A2410046600E7D7D1 /* SCLoginTextFieldCell.h */,
+				60D03C9B2410046600E7D7D1 /* SCLoginTextFieldCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -360,6 +388,13 @@
 		6001C79C240EB755006092BB /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				60D03CAF2410172700E7D7D1 /* login_header_bg@2x.jpg */,
+				60D03CA9241012DF00E7D7D1 /* login_password_close@2x.png */,
+				60D03CA7241012DF00E7D7D1 /* login_password_see@2x.png */,
+				60D03CA8241012DF00E7D7D1 /* login_password_unsee@2x.png */,
+				60D03C9D241004A800E7D7D1 /* login_icon_code@2x.png */,
+				60D03C9E241004A800E7D7D1 /* login_icon_phone@2x.png */,
+				60D03CAD241015F100E7D7D1 /* logo_jtbang@2x.png */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -367,11 +402,10 @@
 		6001C79F240EB95E006092BB /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				60ED762B240EB25A0013CB8C /* ViewController.h */,
-				60ED762C240EB25A0013CB8C /* ViewController.m */,
 				60ED7636240EB25B0013CB8C /* Info.plist */,
 				6001C7A0240EBA1D006092BB /* JuTuanLife-Prefix.pch */,
 				60ED7637240EB25B0013CB8C /* main.m */,
+				60D03C8F240FF99600E7D7D1 /* launch_image@2x.png */,
 				60ED7633240EB25B0013CB8C /* LaunchScreen.storyboard */,
 				60ED762E240EB25A0013CB8C /* Main.storyboard */,
 				60ED7631240EB25B0013CB8C /* Assets.xcassets */,
@@ -501,6 +535,8 @@
 		60E2B0ED240ED5D800E4EA52 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				60E2B2B6240FE58100E4EA52 /* BPAppDelegate.h */,
+				60E2B2B5240FE58100E4EA52 /* BPAppDelegate.m */,
 				60E2B0EE240ED5D800E4EA52 /* WCMethodUtil.m */,
 				60E2B0EF240ED5D800E4EA52 /* DTPubUtil.h */,
 				60E2B0F0240ED5D800E4EA52 /* FFAnimateHelper.h */,
@@ -614,8 +650,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				60ED7635240EB25B0013CB8C /* LaunchScreen.storyboard in Resources */,
+				60D03CAA241012DF00E7D7D1 /* login_password_see@2x.png in Resources */,
+				60D03CAB241012DF00E7D7D1 /* login_password_unsee@2x.png in Resources */,
+				60D03C90240FF99600E7D7D1 /* launch_image@2x.png in Resources */,
+				60D03CAC241012DF00E7D7D1 /* login_password_close@2x.png in Resources */,
+				60D03CA0241004A800E7D7D1 /* login_icon_phone@2x.png in Resources */,
+				60D03CB02410172700E7D7D1 /* login_header_bg@2x.jpg in Resources */,
 				60ED7632240EB25B0013CB8C /* Assets.xcassets in Resources */,
 				60ED7630240EB25A0013CB8C /* Main.storyboard in Resources */,
+				60D03C9F241004A800E7D7D1 /* login_icon_code@2x.png in Resources */,
+				60D03CAE241015F100E7D7D1 /* logo_jtbang@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -673,12 +717,13 @@
 				60E2B124240ED5D800E4EA52 /* WCMethodUtil.m in Sources */,
 				60E2B104240ED5D800E4EA52 /* DTUISegmentView.m in Sources */,
 				60E2B115240ED5D800E4EA52 /* DTHorizontalScrollView.m in Sources */,
-				60ED762D240EB25A0013CB8C /* ViewController.m in Sources */,
 				60E2B11B240ED5D800E4EA52 /* DTHttpRefreshTableController.m in Sources */,
 				60E2B108240ED5D800E4EA52 /* DTStrokeLabel.m in Sources */,
 				60E2B120240ED5D800E4EA52 /* DTPagesController.m in Sources */,
 				60E2B106240ED5D800E4EA52 /* CLAlertView.m in Sources */,
 				60E2B11D240ED5D800E4EA52 /* DTTableController.m in Sources */,
+				60E2B2B7240FE58100E4EA52 /* BPAppDelegate.m in Sources */,
+				60D03C93240FF9F100E7D7D1 /* JTLoginHomeController.m in Sources */,
 				60E2B114240ED5D800E4EA52 /* DTScrollTabView.m in Sources */,
 				60E2B128240ED5D800E4EA52 /* WCAppStyleUtil.m in Sources */,
 				6001C780240EB6C4006092BB /* JTUserManager.m in Sources */,
@@ -692,9 +737,11 @@
 				60E2B109240ED5D800E4EA52 /* DTScrollListViewCell.m in Sources */,
 				60E2B10E240ED5D800E4EA52 /* DTNoDataView.m in Sources */,
 				60E2B116240ED5D800E4EA52 /* DTPullRefreshHeadView.m in Sources */,
+				60D03C96240FFA9900E7D7D1 /* JTUser.m in Sources */,
 				60ED7638240EB25B0013CB8C /* main.m in Sources */,
 				60E2B10B240ED5D800E4EA52 /* DTButton.m in Sources */,
 				60E2B103240ED5D800E4EA52 /* CLDatePickerView.m in Sources */,
+				60D03C99240FFE9400E7D7D1 /* JTLoginHeaderView.m in Sources */,
 				6001C788240EB738006092BB /* JTCommon.m in Sources */,
 				60E2B122240ED5D800E4EA52 /* DTViewController.m in Sources */,
 				60E2B127240ED5D800E4EA52 /* DTPubUtil.m in Sources */,
@@ -720,6 +767,7 @@
 				60E2B101240ED5D800E4EA52 /* DTDrivingLoadingView.m in Sources */,
 				60E2B11C240ED5D800E4EA52 /* DTTabViewController.m in Sources */,
 				60E2B10F240ED5D800E4EA52 /* DTScrollLabel.m in Sources */,
+				60D03C9C2410046600E7D7D1 /* SCLoginTextFieldCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -866,13 +914,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JuTuanLife/JuTuanLife-Prefix.pch";
 				INFOPLIST_FILE = JuTuanLife/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jtlife.jutuan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -885,13 +934,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JuTuanLife/JuTuanLife-Prefix.pch";
 				INFOPLIST_FILE = JuTuanLife/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jtlife.jutuan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

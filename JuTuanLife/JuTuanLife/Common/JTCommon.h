@@ -8,9 +8,23 @@
 
 #import <Foundation/Foundation.h>
 
+#import <WCModel/BPFileUtil.h>
+#import <WCModel/BPAppPreference.h>
+#import <WCModel/WCBaseEntity.h>
+#import <WCNetKit/WCNetManager.h>
+
+#import "JTMainController.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JTCommon : NSObject
+@interface JTCommon : WCControllerUtil
+
++ (void)setupAppStyle;
+
++ (void)setMainController:(JTMainController *)vc;
++ (JTMainController *)mainController;
+
++ (void)resetMainController;
 
 @end
 

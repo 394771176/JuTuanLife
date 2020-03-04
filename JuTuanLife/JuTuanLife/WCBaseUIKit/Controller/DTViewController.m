@@ -78,7 +78,7 @@
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor colorWithHexString:@"f2f2f2" alpha:1];
+    self.view.backgroundColor = [WCAppStyleUtil baseControllerBackgroundColor];
     self.view.clipsToBounds = YES;
     
     if (!self.disableBackBtn && !_superDTController) {

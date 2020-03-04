@@ -89,4 +89,16 @@
     }];
 }
 
++ (void)asyncBlock:(WCDataRequest *(^)(void))request finish:(void (^)(WCDataResult *))finish
+{
+    [self asyncBlock:request config:nil finish:finish];
+}
+
++ (void)asyncBlock:(WCDataRequest *(^)(void))request config:(void (^)(WCDataResult *))config finish:(void (^)(WCDataResult *))finish
+{
+    if (request) {
+        [self async:request() config:config finish:finish];
+    }
+}
+
 @end

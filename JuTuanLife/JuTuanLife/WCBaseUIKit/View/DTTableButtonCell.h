@@ -18,6 +18,7 @@ typedef enum
     DTTableButtonStyleBlueWhite,
     DTTableButtonStyleGreenWhite,
     DTTableButtonStyleGrayWhite,
+    DTTableButtonStyleNone,
 }DTTableButtonStyle;
 
 @class DTTableButtonCell;
@@ -38,6 +39,12 @@ typedef enum
 @property (nonatomic) DTTableButtonStyle style;
 @property (nonatomic) CGFloat corner;//default is 5.f
 
+//颜色自定义配置
+@property (nonatomic, strong) NSString *blue;
+@property (nonatomic, strong) NSString *red;
+@property (nonatomic, strong) NSString *green;
+@property (nonatomic, strong) NSString *gray;
+
 - (void)setButtonTop:(CGFloat)top;//默认居中，上下间距相等
 - (void)setButtonTitle:(NSString *)title;
 - (void)setButtonTitleColor:(UIColor *)color;//default is white
@@ -45,6 +52,7 @@ typedef enum
 - (void)setButtonImage:(UIImage *)image;
 
 - (void)setButtonTitle:(NSString *)title withTitleColor:(UIColor *)color;
+- (void)setButtonTitle:(NSString *)title withTitleColorStr:(NSString *)colorStr;
 
 - (void)setButtonTitle:(NSString *)title withBgColorStr:(NSString *)colorStr;
 - (void)setButtonBorderColor:(UIColor *)color withBgColorStr:(NSString *)colorStr;

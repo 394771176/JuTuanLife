@@ -24,6 +24,13 @@
        config:(void (^)(WCDataResult *result))config
        finish:(void (^)(WCDataResult *result))finish;
 
++ (void)asyncBlock:(WCDataRequest * (^)(void))request
+       finish:(void (^)(WCDataResult *result))finish;
+
++ (void)asyncBlock:(WCDataRequest * (^)(void))request
+       config:(void (^)(WCDataResult *result))config
+       finish:(void (^)(WCDataResult *result))finish;
+
 //提供一些常用方法，比如b拼接系统参数， 拼接分页参数等
 //+ (NSMutableDictionary *)params:(NSMutableDictionary *)params withStart:(NSInteger)start limit:(NSInteger)limit pos:(NSString *)pos;
 

@@ -61,6 +61,7 @@
 #if __has_include(<WCCategory/WCCategory+UI.h>)
 
 #define COLOR(str)          [UIColor colorWithHexString:@#str]
+#define COLORS(str)         [UIColor colorWithHexString:str]
 
 #endif
 

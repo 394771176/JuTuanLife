@@ -79,4 +79,24 @@
     [MBProgressHUD showHUDInWindowWithImage:imageName andMessage:msg];
 }
 
++ (void)sendTagert:(id)tagert action:(SEL)action object:(id)object
+{
+    if (tagert && action && [tagert respondsToSelector:action]) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+        [tagert performSelector:action withObject:object];
+#pragma clang diagnostic pop
+    }
+}
+
++ (void)sendTagert:(id)tagert action:(SEL)action object:(id)object object2:(id)object2
+{
+    if (tagert && action && [tagert respondsToSelector:action]) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+        [tagert performSelector:action withObject:object withObject:object2];
+#pragma clang diagnostic pop
+    }
+}
+
 @end
