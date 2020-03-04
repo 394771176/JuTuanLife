@@ -25,8 +25,10 @@ typedef NS_ENUM(NSUInteger, JTLoginType) {
 SHARED_INSTANCE_H
 
 - (BOOL)isLogined;
+- (BOOL)isAuth;
 
-+ (void)loginAuth:(DTIntBlock)block;
+//+ (void)loginAction:(DTIntBlock)block;//登录操作
++ (void)loginAuth:(DTIntBlock)block;//登录
 
 @end
 

@@ -9,6 +9,9 @@
 #import "JTLoginHomeController.h"
 #import "SCLoginTextFieldCell.h"
 #import "JTLoginHeaderView.h"
+#import "JTLoginAuthController.h"
+#import "JTLoginAgreementController.h"
+#import "JTLoginForgetController.h"
 
 @interface JTLoginHomeController ()
 <
@@ -64,6 +67,7 @@ DTTableButtonCellDelegate
     _loginCell.submitBtn.height = 48;
     [_loginCell setButtonTop:128];
     _loginCell.style = DTTableButtonStyleGray;
+    _loginCell.delegate = self;
     
     _forgetCell = [[DTTableButtonCell alloc] init];
     [_forgetCell setButtonTitle:@"找回密码" withTitleColorStr:@"#999999"];
@@ -71,6 +75,7 @@ DTTableButtonCellDelegate
     _forgetCell.height = _forgetCell.contentView.height = 100;
     _forgetCell.submitBtn.bottom = _forgetCell.contentView.height - (44 + SAFE_BOTTOM_VIEW_HEIGHT);
     _forgetCell.submitBtn.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
+    _forgetCell.delegate = self;
     
     [super viewDidLoad];
     
@@ -93,7 +98,8 @@ DTTableButtonCellDelegate
 
 - (void)forgetAction
 {
-    
+    JTLoginForgetController *vc = [JTLoginForgetController new];
+    [WCControllerUtil pushViewController:vc];
 }
 
 #pragma mark - UITableViewDataSource & UITableViewDelegate

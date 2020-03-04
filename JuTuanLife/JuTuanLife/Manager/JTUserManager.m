@@ -28,13 +28,44 @@ SHARED_INSTANCE_M
     return self.ac_token.length > 0;
 }
 
+- (BOOL)isAuth
+{
+    return [self isLogined] && self.user.status == JTUserStatusAuthPass;
+}
+
 + (void)loginAuth:(DTIntBlock)block
 {
     if (block) {
-        if ([[self sharedInstance] isLogined]) {
+        if ([[self sharedInstance] isAuth]) {
             block(JTLoginTypeLoginedBefore);
+        } else if ([[self sharedInstance] isLogined]) {
+            [self authBlock:block];
         } else {
-            
+            //登录
+        }
+    }
+}
+
++ (void)authBlock:(DTIntBlock)block
+{
+    if (block) {
+        JTUser *user = [[self sharedInstance] user];
+        switch (user.status) {
+            case JTUserStatusNeedCertifie:
+            {
+                
+            }
+                break;
+            case JTUserStatusNeedSign:
+            {
+                
+            }
+                break;
+            default:
+            {
+                
+            }
+                break;
         }
     }
 }

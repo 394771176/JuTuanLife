@@ -10,11 +10,19 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSUInteger, JTUserStatus) {
+    JTUserStatusNeedCertifie,
+    JTUserStatusNeedSign,
+    JTUserStatusAuthPass,
+};
+
 @interface JTUser : WCBaseEntity
 
 @property (nonatomic, assign) NSInteger uid;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *avatar;
+
+@property (nonatomic, assign) JTUserStatus status;
 
 @end
 

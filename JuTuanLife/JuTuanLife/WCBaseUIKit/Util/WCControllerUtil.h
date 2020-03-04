@@ -30,4 +30,6 @@
  */
 + (UIViewController *)topCurrentController;
 
++ (void)pushViewController:(UIViewController *)controller;
+
 @end
