@@ -27,7 +27,6 @@ SHARED_INSTANCE_H
 
 + (NSString *)createUserAgent;
 
-
 #pragma mark - WCNetManagerProtocol
 
 + (NSString *)userAgent;

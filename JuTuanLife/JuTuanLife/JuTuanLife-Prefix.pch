@@ -14,10 +14,13 @@
 
 #import "WCBaseUIKit.h"
 
+#import "JTAPPKey.h"
+#import "JTConstants.h"
 #import "JTDefine.h"
 
 #import "JTCommon.h"
 
+#import "JTNetManager.h"
 #import "JTDataManager.h"
 #import "JTUserManager.h"
 

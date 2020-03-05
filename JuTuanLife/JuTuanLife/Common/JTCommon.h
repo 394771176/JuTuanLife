@@ -26,6 +26,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)resetMainController;
 
++ (BOOL)isServerPro;
++ (NSString *)serverForPro:(NSString *)pro test:(NSString *)test;
+
 @end
 
 NS_ASSUME_NONNULL_END

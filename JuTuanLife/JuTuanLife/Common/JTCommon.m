@@ -66,4 +66,21 @@ static id mainController = nil;
     }];
 }
 
++ (BOOL)isServerPro
+{
+#if DEBUG
+    return APP_SERVER_DEBUG == 0;
+#endif
+    return YES;
+}
+
++ (NSString *)serverForPro:(NSString *)pro test:(NSString *)test
+{
+    if ([self isServerPro]) {
+        return pro;
+    } else {
+        return test;
+    }
+}
+
 @end

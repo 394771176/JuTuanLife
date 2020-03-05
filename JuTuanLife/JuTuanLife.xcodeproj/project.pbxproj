@@ -32,18 +32,37 @@
 		606FE71E24101DE700522B96 /* nav_share_b@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 606FE70C24101DE700522B96 /* nav_share_b@2x.png */; };
 		606FE71F24101DE700522B96 /* nav_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 606FE70D24101DE700522B96 /* nav_close@2x.png */; };
 		606FE72024101DE700522B96 /* nav_icon_store@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 606FE70E24101DE700522B96 /* nav_icon_store@2x.png */; };
+		606FE72624113DE600522B96 /* JTRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE72524113DE600522B96 /* JTRequest.m */; };
+		606FE72E241149BC00522B96 /* CKUDIDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE72A241149BC00522B96 /* CKUDIDManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		606FE72F241149BC00522B96 /* CKOldOpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE72B241149BC00522B96 /* CKOldOpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		606FE730241149BC00522B96 /* CKOpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE72C241149BC00522B96 /* CKOpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		606FE7332411550200522B96 /* JTNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE7322411550200522B96 /* JTNetManager.m */; };
+		606FE736241157ED00522B96 /* JTUserRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE735241157ED00522B96 /* JTUserRequest.m */; };
+		606FE73924115A5600522B96 /* JTService.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE73824115A5600522B96 /* JTService.m */; };
+		606FE73C2411607700522B96 /* JTDataResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE73B2411607700522B96 /* JTDataResult.m */; };
+		606FE74A241164F700522B96 /* auth_idcard_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 606FE73D241164F500522B96 /* auth_idcard_2@2x.png */; };
+		606FE74B241164F700522B96 /* login_password_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 606FE73E241164F500522B96 /* login_password_close@2x.png */; };
+		606FE74C241164F700522B96 /* login_icon_phone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 606FE73F241164F600522B96 /* login_icon_phone@2x.png */; };
+		606FE74D241164F700522B96 /* protorol_agree@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 606FE740241164F600522B96 /* protorol_agree@2x.png */; };
+		606FE74E241164F700522B96 /* auth_idcard_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 606FE741241164F600522B96 /* auth_idcard_3@2x.png */; };
+		606FE74F241164F700522B96 /* login_password_see@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 606FE742241164F600522B96 /* login_password_see@2x.png */; };
+		606FE750241164F700522B96 /* login_password_unsee@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 606FE743241164F600522B96 /* login_password_unsee@2x.png */; };
+		606FE751241164F700522B96 /* login_header_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 606FE744241164F600522B96 /* login_header_bg@2x.png */; };
+		606FE752241164F700522B96 /* login_icon_code@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 606FE745241164F600522B96 /* login_icon_code@2x.png */; };
+		606FE753241164F700522B96 /* protorol_unagree@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 606FE746241164F600522B96 /* protorol_unagree@2x.png */; };
+		606FE754241164F700522B96 /* auth_idcard_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 606FE747241164F700522B96 /* auth_idcard_1@2x.png */; };
+		606FE755241164F700522B96 /* logo_jtbang@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 606FE748241164F700522B96 /* logo_jtbang@2x.png */; };
+		606FE756241164F700522B96 /* auth_cam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 606FE749241164F700522B96 /* auth_cam@2x.png */; };
+		606FE75C24116C3D00522B96 /* FFFix.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE75924116C3D00522B96 /* FFFix.m */; };
+		606FE75D24116C3D00522B96 /* DTFix+iOS13.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE75B24116C3D00522B96 /* DTFix+iOS13.m */; };
+		606FE77F241172D500522B96 /* JTLoginAuthImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE77E241172D500522B96 /* JTLoginAuthImageCell.m */; };
+		606FE782241172EA00522B96 /* JTLoginProtorolCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE781241172EA00522B96 /* JTLoginProtorolCell.m */; };
+		606FE7852411730300522B96 /* JTLoginForgetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE7842411730300522B96 /* JTLoginForgetCell.m */; };
 		60D03C90240FF99600E7D7D1 /* launch_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60D03C8F240FF99600E7D7D1 /* launch_image@2x.png */; };
 		60D03C93240FF9F100E7D7D1 /* JTLoginHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D03C92240FF9F100E7D7D1 /* JTLoginHomeController.m */; };
 		60D03C96240FFA9900E7D7D1 /* JTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D03C95240FFA9900E7D7D1 /* JTUser.m */; };
 		60D03C99240FFE9400E7D7D1 /* JTLoginHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D03C98240FFE9400E7D7D1 /* JTLoginHeaderView.m */; };
 		60D03C9C2410046600E7D7D1 /* SCLoginTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D03C9B2410046600E7D7D1 /* SCLoginTextFieldCell.m */; };
-		60D03C9F241004A800E7D7D1 /* login_icon_code@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60D03C9D241004A800E7D7D1 /* login_icon_code@2x.png */; };
-		60D03CA0241004A800E7D7D1 /* login_icon_phone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60D03C9E241004A800E7D7D1 /* login_icon_phone@2x.png */; };
-		60D03CAA241012DF00E7D7D1 /* login_password_see@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60D03CA7241012DF00E7D7D1 /* login_password_see@2x.png */; };
-		60D03CAB241012DF00E7D7D1 /* login_password_unsee@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60D03CA8241012DF00E7D7D1 /* login_password_unsee@2x.png */; };
-		60D03CAC241012DF00E7D7D1 /* login_password_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60D03CA9241012DF00E7D7D1 /* login_password_close@2x.png */; };
-		60D03CAE241015F100E7D7D1 /* logo_jtbang@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60D03CAD241015F100E7D7D1 /* logo_jtbang@2x.png */; };
-		60D03CB02410172700E7D7D1 /* login_header_bg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60D03CAF2410172700E7D7D1 /* login_header_bg@2x.jpg */; };
 		60E2B0FD240ED5D800E4EA52 /* CCCommentStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B09F240ED5D800E4EA52 /* CCCommentStarView.m */; };
 		60E2B0FE240ED5D800E4EA52 /* BPOnePixLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0A2240ED5D800E4EA52 /* BPOnePixLineView.m */; };
 		60E2B0FF240ED5D800E4EA52 /* DTLoadMoreCommonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0A5240ED5D800E4EA52 /* DTLoadMoreCommonCell.m */; };
@@ -139,6 +158,45 @@
 		606FE70C24101DE700522B96 /* nav_share_b@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_share_b@2x.png"; sourceTree = "<group>"; };
 		606FE70D24101DE700522B96 /* nav_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_close@2x.png"; sourceTree = "<group>"; };
 		606FE70E24101DE700522B96 /* nav_icon_store@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_icon_store@2x.png"; sourceTree = "<group>"; };
+		606FE72424113DE600522B96 /* JTRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTRequest.h; sourceTree = "<group>"; };
+		606FE72524113DE600522B96 /* JTRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTRequest.m; sourceTree = "<group>"; };
+		606FE728241149BC00522B96 /* CKOldOpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKOldOpenUDID.h; sourceTree = "<group>"; };
+		606FE729241149BC00522B96 /* CKOpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKOpenUDID.h; sourceTree = "<group>"; };
+		606FE72A241149BC00522B96 /* CKUDIDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKUDIDManager.m; sourceTree = "<group>"; };
+		606FE72B241149BC00522B96 /* CKOldOpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKOldOpenUDID.m; sourceTree = "<group>"; };
+		606FE72C241149BC00522B96 /* CKOpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKOpenUDID.m; sourceTree = "<group>"; };
+		606FE72D241149BC00522B96 /* CKUDIDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKUDIDManager.h; sourceTree = "<group>"; };
+		606FE7312411550200522B96 /* JTNetManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTNetManager.h; sourceTree = "<group>"; };
+		606FE7322411550200522B96 /* JTNetManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTNetManager.m; sourceTree = "<group>"; };
+		606FE734241157ED00522B96 /* JTUserRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTUserRequest.h; sourceTree = "<group>"; };
+		606FE735241157ED00522B96 /* JTUserRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTUserRequest.m; sourceTree = "<group>"; };
+		606FE73724115A5600522B96 /* JTService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTService.h; sourceTree = "<group>"; };
+		606FE73824115A5600522B96 /* JTService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTService.m; sourceTree = "<group>"; };
+		606FE73A2411607700522B96 /* JTDataResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTDataResult.h; sourceTree = "<group>"; };
+		606FE73B2411607700522B96 /* JTDataResult.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTDataResult.m; sourceTree = "<group>"; };
+		606FE73D241164F500522B96 /* auth_idcard_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "auth_idcard_2@2x.png"; sourceTree = "<group>"; };
+		606FE73E241164F500522B96 /* login_password_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_password_close@2x.png"; sourceTree = "<group>"; };
+		606FE73F241164F600522B96 /* login_icon_phone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_icon_phone@2x.png"; sourceTree = "<group>"; };
+		606FE740241164F600522B96 /* protorol_agree@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "protorol_agree@2x.png"; sourceTree = "<group>"; };
+		606FE741241164F600522B96 /* auth_idcard_3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "auth_idcard_3@2x.png"; sourceTree = "<group>"; };
+		606FE742241164F600522B96 /* login_password_see@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_password_see@2x.png"; sourceTree = "<group>"; };
+		606FE743241164F600522B96 /* login_password_unsee@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_password_unsee@2x.png"; sourceTree = "<group>"; };
+		606FE744241164F600522B96 /* login_header_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_header_bg@2x.png"; sourceTree = "<group>"; };
+		606FE745241164F600522B96 /* login_icon_code@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_icon_code@2x.png"; sourceTree = "<group>"; };
+		606FE746241164F600522B96 /* protorol_unagree@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "protorol_unagree@2x.png"; sourceTree = "<group>"; };
+		606FE747241164F700522B96 /* auth_idcard_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "auth_idcard_1@2x.png"; sourceTree = "<group>"; };
+		606FE748241164F700522B96 /* logo_jtbang@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_jtbang@2x.png"; sourceTree = "<group>"; };
+		606FE749241164F700522B96 /* auth_cam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "auth_cam@2x.png"; sourceTree = "<group>"; };
+		606FE75824116C3D00522B96 /* DTFix+iOS13.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DTFix+iOS13.h"; sourceTree = "<group>"; };
+		606FE75924116C3D00522B96 /* FFFix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFFix.m; sourceTree = "<group>"; };
+		606FE75A24116C3D00522B96 /* FFFix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFFix.h; sourceTree = "<group>"; };
+		606FE75B24116C3D00522B96 /* DTFix+iOS13.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DTFix+iOS13.m"; sourceTree = "<group>"; };
+		606FE77D241172D500522B96 /* JTLoginAuthImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTLoginAuthImageCell.h; sourceTree = "<group>"; };
+		606FE77E241172D500522B96 /* JTLoginAuthImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTLoginAuthImageCell.m; sourceTree = "<group>"; };
+		606FE780241172EA00522B96 /* JTLoginProtorolCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTLoginProtorolCell.h; sourceTree = "<group>"; };
+		606FE781241172EA00522B96 /* JTLoginProtorolCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTLoginProtorolCell.m; sourceTree = "<group>"; };
+		606FE7832411730300522B96 /* JTLoginForgetCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTLoginForgetCell.h; sourceTree = "<group>"; };
+		606FE7842411730300522B96 /* JTLoginForgetCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTLoginForgetCell.m; sourceTree = "<group>"; };
 		60D03C8F240FF99600E7D7D1 /* launch_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch_image@2x.png"; sourceTree = "<group>"; };
 		60D03C91240FF9F100E7D7D1 /* JTLoginHomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTLoginHomeController.h; sourceTree = "<group>"; };
 		60D03C92240FF9F100E7D7D1 /* JTLoginHomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTLoginHomeController.m; sourceTree = "<group>"; };
@@ -148,13 +206,6 @@
 		60D03C98240FFE9400E7D7D1 /* JTLoginHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTLoginHeaderView.m; sourceTree = "<group>"; };
 		60D03C9A2410046600E7D7D1 /* SCLoginTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLoginTextFieldCell.h; sourceTree = "<group>"; };
 		60D03C9B2410046600E7D7D1 /* SCLoginTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLoginTextFieldCell.m; sourceTree = "<group>"; };
-		60D03C9D241004A800E7D7D1 /* login_icon_code@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_icon_code@2x.png"; sourceTree = "<group>"; };
-		60D03C9E241004A800E7D7D1 /* login_icon_phone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_icon_phone@2x.png"; sourceTree = "<group>"; };
-		60D03CA7241012DF00E7D7D1 /* login_password_see@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_password_see@2x.png"; sourceTree = "<group>"; };
-		60D03CA8241012DF00E7D7D1 /* login_password_unsee@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_password_unsee@2x.png"; sourceTree = "<group>"; };
-		60D03CA9241012DF00E7D7D1 /* login_password_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_password_close@2x.png"; sourceTree = "<group>"; };
-		60D03CAD241015F100E7D7D1 /* logo_jtbang@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_jtbang@2x.png"; sourceTree = "<group>"; };
-		60D03CAF2410172700E7D7D1 /* login_header_bg@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "login_header_bg@2x.jpg"; sourceTree = "<group>"; };
 		60E2B09A240ED5D800E4EA52 /* WCBaseUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCBaseUIKit.h; sourceTree = "<group>"; };
 		60E2B09C240ED5D800E4EA52 /* DTScrollLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTScrollLabel.h; sourceTree = "<group>"; };
 		60E2B09D240ED5D800E4EA52 /* DTGradientLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTGradientLabel.h; sourceTree = "<group>"; };
@@ -310,6 +361,10 @@
 				6001C77C240EB69E006092BB /* JTDataManager.m */,
 				6001C77E240EB6C4006092BB /* JTUserManager.h */,
 				6001C77F240EB6C4006092BB /* JTUserManager.m */,
+				606FE7312411550200522B96 /* JTNetManager.h */,
+				606FE7322411550200522B96 /* JTNetManager.m */,
+				606FE734241157ED00522B96 /* JTUserRequest.h */,
+				606FE735241157ED00522B96 /* JTUserRequest.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -328,6 +383,12 @@
 			children = (
 				6001C786240EB738006092BB /* JTCommon.h */,
 				6001C787240EB738006092BB /* JTCommon.m */,
+				606FE73724115A5600522B96 /* JTService.h */,
+				606FE73824115A5600522B96 /* JTService.m */,
+				606FE72424113DE600522B96 /* JTRequest.h */,
+				606FE72524113DE600522B96 /* JTRequest.m */,
+				606FE73A2411607700522B96 /* JTDataResult.h */,
+				606FE73B2411607700522B96 /* JTDataResult.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -433,6 +494,12 @@
 				60D03C98240FFE9400E7D7D1 /* JTLoginHeaderView.m */,
 				60D03C9A2410046600E7D7D1 /* SCLoginTextFieldCell.h */,
 				60D03C9B2410046600E7D7D1 /* SCLoginTextFieldCell.m */,
+				606FE77D241172D500522B96 /* JTLoginAuthImageCell.h */,
+				606FE77E241172D500522B96 /* JTLoginAuthImageCell.m */,
+				606FE780241172EA00522B96 /* JTLoginProtorolCell.h */,
+				606FE781241172EA00522B96 /* JTLoginProtorolCell.m */,
+				606FE7832411730300522B96 /* JTLoginForgetCell.h */,
+				606FE7842411730300522B96 /* JTLoginForgetCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -440,13 +507,19 @@
 		6001C79C240EB755006092BB /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				60D03CAF2410172700E7D7D1 /* login_header_bg@2x.jpg */,
-				60D03CA9241012DF00E7D7D1 /* login_password_close@2x.png */,
-				60D03CA7241012DF00E7D7D1 /* login_password_see@2x.png */,
-				60D03CA8241012DF00E7D7D1 /* login_password_unsee@2x.png */,
-				60D03C9D241004A800E7D7D1 /* login_icon_code@2x.png */,
-				60D03C9E241004A800E7D7D1 /* login_icon_phone@2x.png */,
-				60D03CAD241015F100E7D7D1 /* logo_jtbang@2x.png */,
+				606FE749241164F700522B96 /* auth_cam@2x.png */,
+				606FE747241164F700522B96 /* auth_idcard_1@2x.png */,
+				606FE73D241164F500522B96 /* auth_idcard_2@2x.png */,
+				606FE741241164F600522B96 /* auth_idcard_3@2x.png */,
+				606FE744241164F600522B96 /* login_header_bg@2x.png */,
+				606FE745241164F600522B96 /* login_icon_code@2x.png */,
+				606FE73F241164F600522B96 /* login_icon_phone@2x.png */,
+				606FE73E241164F500522B96 /* login_password_close@2x.png */,
+				606FE742241164F600522B96 /* login_password_see@2x.png */,
+				606FE743241164F600522B96 /* login_password_unsee@2x.png */,
+				606FE748241164F700522B96 /* logo_jtbang@2x.png */,
+				606FE740241164F600522B96 /* protorol_agree@2x.png */,
+				606FE746241164F600522B96 /* protorol_unagree@2x.png */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -454,8 +527,6 @@
 		6001C79F240EB95E006092BB /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				60ED7636240EB25B0013CB8C /* Info.plist */,
-				6001C7A0240EBA1D006092BB /* JuTuanLife-Prefix.pch */,
 				60ED7637240EB25B0013CB8C /* main.m */,
 				60D03C8F240FF99600E7D7D1 /* launch_image@2x.png */,
 				60ED7633240EB25B0013CB8C /* LaunchScreen.storyboard */,
@@ -490,9 +561,35 @@
 			path = navbar;
 			sourceTree = "<group>";
 		};
+		606FE727241149BC00522B96 /* OpenUDID */ = {
+			isa = PBXGroup;
+			children = (
+				606FE728241149BC00522B96 /* CKOldOpenUDID.h */,
+				606FE729241149BC00522B96 /* CKOpenUDID.h */,
+				606FE72A241149BC00522B96 /* CKUDIDManager.m */,
+				606FE72B241149BC00522B96 /* CKOldOpenUDID.m */,
+				606FE72C241149BC00522B96 /* CKOpenUDID.m */,
+				606FE72D241149BC00522B96 /* CKUDIDManager.h */,
+			);
+			path = OpenUDID;
+			sourceTree = "<group>";
+		};
+		606FE75724116C3D00522B96 /* Fixed */ = {
+			isa = PBXGroup;
+			children = (
+				606FE75824116C3D00522B96 /* DTFix+iOS13.h */,
+				606FE75924116C3D00522B96 /* FFFix.m */,
+				606FE75A24116C3D00522B96 /* FFFix.h */,
+				606FE75B24116C3D00522B96 /* DTFix+iOS13.m */,
+			);
+			path = Fixed;
+			sourceTree = "<group>";
+		};
 		60E2B003240ED59900E4EA52 /* WCBaseUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				606FE75724116C3D00522B96 /* Fixed */,
+				606FE727241149BC00522B96 /* OpenUDID */,
 				60E2B0D8240ED5D800E4EA52 /* Controller */,
 				60E2B0D2240ED5D800E4EA52 /* Entity */,
 				60E2B0D7240ED5D800E4EA52 /* Resource */,
@@ -657,6 +754,8 @@
 				60E2B003240ED59900E4EA52 /* WCBaseUIKit */,
 				60ED7628240EB25A0013CB8C /* AppDelegate.h */,
 				60ED7629240EB25A0013CB8C /* AppDelegate.m */,
+				6001C7A0240EBA1D006092BB /* JuTuanLife-Prefix.pch */,
+				60ED7636240EB25B0013CB8C /* Info.plist */,
 				6001C79F240EB95E006092BB /* Base */,
 				6001C609240EB53B006092BB /* Macros */,
 				6001C785240EB721006092BB /* Common */,
@@ -727,34 +826,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				60ED7635240EB25B0013CB8C /* LaunchScreen.storyboard in Resources */,
+				606FE754241164F700522B96 /* auth_idcard_1@2x.png in Resources */,
+				606FE74F241164F700522B96 /* login_password_see@2x.png in Resources */,
 				606FE71C24101DE700522B96 /* nav_icon_redbag@2x.png in Resources */,
+				606FE74A241164F700522B96 /* auth_idcard_2@2x.png in Resources */,
 				606FE71224101DE700522B96 /* nav_close_b@2x.png in Resources */,
 				606FE71F24101DE700522B96 /* nav_close@2x.png in Resources */,
 				606FE72024101DE700522B96 /* nav_icon_store@2x.png in Resources */,
 				606FE71924101DE700522B96 /* nav_message@2x.png in Resources */,
-				60D03CAA241012DF00E7D7D1 /* login_password_see@2x.png in Resources */,
-				60D03CAB241012DF00E7D7D1 /* login_password_unsee@2x.png in Resources */,
 				60D03C90240FF99600E7D7D1 /* launch_image@2x.png in Resources */,
 				606FE71A24101DE700522B96 /* nav_back_b@2x.png in Resources */,
-				60D03CAC241012DF00E7D7D1 /* login_password_close@2x.png in Resources */,
 				606FE71524101DE700522B96 /* nav_test_icon_settings@2x.png in Resources */,
 				606FE71824101DE700522B96 /* nav_search@2x.png in Resources */,
+				606FE755241164F700522B96 /* logo_jtbang@2x.png in Resources */,
+				606FE751241164F700522B96 /* login_header_bg@2x.png in Resources */,
 				606FE71424101DE700522B96 /* nav_share@2x.png in Resources */,
+				606FE74D241164F700522B96 /* protorol_agree@2x.png in Resources */,
 				606FE71124101DE700522B96 /* nav_back_b2@2x.png in Resources */,
 				606FE71324101DE700522B96 /* nav_setting_white@2x.png in Resources */,
 				606FE71724101DE700522B96 /* nav_more_b@2x.png in Resources */,
 				606FE71624101DE700522B96 /* nav_delete@2x.png in Resources */,
-				60D03CA0241004A800E7D7D1 /* login_icon_phone@2x.png in Resources */,
-				60D03CB02410172700E7D7D1 /* login_header_bg@2x.jpg in Resources */,
+				606FE74E241164F700522B96 /* auth_idcard_3@2x.png in Resources */,
+				606FE74B241164F700522B96 /* login_password_close@2x.png in Resources */,
 				60ED7632240EB25B0013CB8C /* Assets.xcassets in Resources */,
+				606FE756241164F700522B96 /* auth_cam@2x.png in Resources */,
+				606FE74C241164F700522B96 /* login_icon_phone@2x.png in Resources */,
 				606FE71024101DE700522B96 /* nav_setting@2x.png in Resources */,
 				60ED7630240EB25A0013CB8C /* Main.storyboard in Resources */,
 				606FE71D24101DE700522B96 /* nav_back@2x.png in Resources */,
 				606FE70F24101DE700522B96 /* nav_close_b2@2x.png in Resources */,
+				606FE753241164F700522B96 /* protorol_unagree@2x.png in Resources */,
 				606FE71E24101DE700522B96 /* nav_share_b@2x.png in Resources */,
-				60D03C9F241004A800E7D7D1 /* login_icon_code@2x.png in Resources */,
 				606FE71B24101DE700522B96 /* nav_message_white@2x.png in Resources */,
-				60D03CAE241015F100E7D7D1 /* logo_jtbang@2x.png in Resources */,
+				606FE752241164F700522B96 /* login_icon_code@2x.png in Resources */,
+				606FE750241164F700522B96 /* login_password_unsee@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -810,6 +915,7 @@
 				60E2B121240ED5D800E4EA52 /* DTHttpTableController.m in Sources */,
 				60E2B111240ED5D800E4EA52 /* DTTabScorllContentCell.m in Sources */,
 				60E2B124240ED5D800E4EA52 /* WCMethodUtil.m in Sources */,
+				606FE73924115A5600522B96 /* JTService.m in Sources */,
 				60E2B104240ED5D800E4EA52 /* DTUISegmentView.m in Sources */,
 				60E2B115240ED5D800E4EA52 /* DTHorizontalScrollView.m in Sources */,
 				60E2B11B240ED5D800E4EA52 /* DTHttpRefreshTableController.m in Sources */,
@@ -820,9 +926,13 @@
 				60E2B2B7240FE58100E4EA52 /* BPAppDelegate.m in Sources */,
 				60D03C93240FF9F100E7D7D1 /* JTLoginHomeController.m in Sources */,
 				60E2B114240ED5D800E4EA52 /* DTScrollTabView.m in Sources */,
+				606FE72F241149BC00522B96 /* CKOldOpenUDID.m in Sources */,
 				60E2B128240ED5D800E4EA52 /* WCAppStyleUtil.m in Sources */,
+				606FE75D24116C3D00522B96 /* DTFix+iOS13.m in Sources */,
 				6001C780240EB6C4006092BB /* JTUserManager.m in Sources */,
 				60E2B10C240ED5D800E4EA52 /* DTEnrollProgressView.m in Sources */,
+				606FE77F241172D500522B96 /* JTLoginAuthImageCell.m in Sources */,
+				606FE7332411550200522B96 /* JTNetManager.m in Sources */,
 				60E2B117240ED5D800E4EA52 /* DTTagLabel.m in Sources */,
 				60E2B0FD240ED5D800E4EA52 /* CCCommentStarView.m in Sources */,
 				60E2B126240ED5D800E4EA52 /* FFAnimateHelper.m in Sources */,
@@ -830,9 +940,11 @@
 				60E2B107240ED5D800E4EA52 /* DTControllerListView.m in Sources */,
 				6001C77D240EB69E006092BB /* JTDataManager.m in Sources */,
 				60E2B109240ED5D800E4EA52 /* DTScrollListViewCell.m in Sources */,
+				606FE72E241149BC00522B96 /* CKUDIDManager.m in Sources */,
 				60E2B10E240ED5D800E4EA52 /* DTNoDataView.m in Sources */,
 				60E2B116240ED5D800E4EA52 /* DTPullRefreshHeadView.m in Sources */,
 				60D03C96240FFA9900E7D7D1 /* JTUser.m in Sources */,
+				606FE730241149BC00522B96 /* CKOpenUDID.m in Sources */,
 				60ED7638240EB25B0013CB8C /* main.m in Sources */,
 				60E2B10B240ED5D800E4EA52 /* DTButton.m in Sources */,
 				60E2B103240ED5D800E4EA52 /* CLDatePickerView.m in Sources */,
@@ -849,16 +961,21 @@
 				6001C784240EB6FD006092BB /* JTCoreUtil.m in Sources */,
 				60E2B11F240ED5D800E4EA52 /* DTHttpRefreshInsetTabController.m in Sources */,
 				60E2B112240ED5D800E4EA52 /* DTTabBarView.m in Sources */,
+				606FE75C24116C3D00522B96 /* FFFix.m in Sources */,
 				606FE6FB24101D2C00522B96 /* JTLoginAgreementController.m in Sources */,
 				606FE6F824101CFD00522B96 /* JTLoginAuthController.m in Sources */,
+				606FE72624113DE600522B96 /* JTRequest.m in Sources */,
 				60E2B12A240ED5D800E4EA52 /* WCBarItemUtil.m in Sources */,
+				606FE7852411730300522B96 /* JTLoginForgetCell.m in Sources */,
 				60E2B100240ED5D800E4EA52 /* DTTableButtonCell.m in Sources */,
 				60E2B11E240ED5D800E4EA52 /* DTNavigationController.m in Sources */,
 				60E2B11A240ED5D800E4EA52 /* DTHttpRefreshLoadMoreTableController.m in Sources */,
 				60E2B118240ED5D800E4EA52 /* DTTabItem.m in Sources */,
 				60E2B123240ED5D800E4EA52 /* DTHttpLoadMoreTableController.m in Sources */,
 				60E2B113240ED5D800E4EA52 /* DTTableCustomCell.m in Sources */,
+				606FE782241172EA00522B96 /* JTLoginProtorolCell.m in Sources */,
 				60E2B110240ED5D800E4EA52 /* DTPickerView.m in Sources */,
+				606FE736241157ED00522B96 /* JTUserRequest.m in Sources */,
 				60E2B102240ED5D800E4EA52 /* DTControl.m in Sources */,
 				60E2B10D240ED5D800E4EA52 /* DTGradientLabel.m in Sources */,
 				60ED762A240EB25A0013CB8C /* AppDelegate.m in Sources */,
@@ -866,6 +983,7 @@
 				60E2B11C240ED5D800E4EA52 /* DTTabViewController.m in Sources */,
 				60E2B10F240ED5D800E4EA52 /* DTScrollLabel.m in Sources */,
 				60D03C9C2410046600E7D7D1 /* SCLoginTextFieldCell.m in Sources */,
+				606FE73C2411607700522B96 /* JTDataResult.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1009,6 +1127,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JZWZRKY2YQ;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JuTuanLife/JuTuanLife-Prefix.pch";
 				INFOPLIST_FILE = JuTuanLife/Info.plist;
@@ -1017,7 +1136,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jtlife.jutuan;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lilu.jutuan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1029,6 +1148,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JZWZRKY2YQ;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JuTuanLife/JuTuanLife-Prefix.pch";
 				INFOPLIST_FILE = JuTuanLife/Info.plist;
@@ -1037,7 +1157,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jtlife.jutuan;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lilu.jutuan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

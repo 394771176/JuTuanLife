@@ -7,26 +7,71 @@
 //
 
 #import "JTLoginAuthController.h"
+#import "JTLoginAuthImageCell.h"
 
 @interface JTLoginAuthController ()
+<
+DTTableButtonCellDelegate
+>
+{
+    NSMutableArray<JTLoginAuthImageCell *> *_cellArray;
+}
 
 @end
 
 @implementation JTLoginAuthController
 
 - (void)viewDidLoad {
+    
+    _cellArray = [NSMutableArray array];
+    for (int i = 0; i < 3; i++) {
+        JTLoginAuthImageCell *cell = [[JTLoginAuthImageCell alloc] init];
+        cell.step = i + 1;
+        cell.delegate = self;
+        [_cellArray safeAddObject:cell];
+    }
+    
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.title = @"认证身份";
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - UITableViewDataSource & UITableViewDelegate
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
 }
-*/
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return _cellArray.count;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [JTLoginAuthImageCell cellHeightWithItem:nil tableView:tableView];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [_cellArray safeObjectAtIndex:indexPath.row];
+    if (cell) {
+        return cell;
+    }
+    return [[UITableViewCell alloc] init];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark - DTTableButtonCellDelegate
+
+- (void)tableButtonCellDidClickAction:(JTLoginAuthImageCell *)cell
+{
+    NSInteger step = cell.step;
+    NSLog(@"step:%zd", step);
+}
 
 @end

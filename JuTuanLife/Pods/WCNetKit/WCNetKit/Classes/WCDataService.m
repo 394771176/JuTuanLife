@@ -33,7 +33,7 @@
 // 同步请求
 + (WCDataResult *)sync:(WCDataRequest *)req
 {
-    if ([DTReachabilityUtil sharedInstance].isReachable) {
+    if (![DTReachabilityUtil sharedInstance].isReachable) {
         return [WCDataResult resultForNetworkError];
     }
     
@@ -46,14 +46,7 @@
     
     WCDataResult *dataResult = nil;
     if (result) {
-        switch (req.resultType) {
-            case WCHTTPResultTypeZero:
-                dataResult = [WCZeroDataResult itemFromDict:result];
-                break;
-            default:
-                dataResult = [WCDataResult itemFromDict:result];
-                break;
-        }
+        dataResult = [req getResultFromData:result];
     } else {
         if (request.asiRequest.responseStatusCode == 0) {
             dataResult = [WCDataResult resultForNetworkError];

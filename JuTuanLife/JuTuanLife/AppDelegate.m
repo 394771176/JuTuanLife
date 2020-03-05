@@ -30,6 +30,7 @@
 
 - (void)windowWillInit:(NSDictionary *)launchOptions
 {
+    [JTNetManager setupNetManager];
     
 }
 

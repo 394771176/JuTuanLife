@@ -137,6 +137,20 @@
     return request;
 }
 
+- (WCDataResult *)getResultFromData:(id)data
+{
+    WCDataResult *result = nil;
+    switch (self.resultType) {
+        case WCHTTPResultTypeZero:
+            result = [WCZeroDataResult itemFromDict:result];
+            break;
+        default:
+            result = [WCDataResult itemFromDict:result];
+            break;
+    }
+    return result;
+}
+
 + (instancetype)requestWithUrl:(NSString *)url api:(NSString *)api params:(NSDictionary *)params
 {
     return [self requestWithUrl:url api:api params:params httpMethod:WCHTTPMethodGET];
@@ -190,6 +204,7 @@
     request.serverUrl = url;
     request.api = api;
     request.params = params;
+    request.httpMethod = httpMethod;
     request.signKey = signKey;
     request.contentType = contentType;
     request.resultType = resultType;

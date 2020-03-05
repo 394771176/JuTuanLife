@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JTLoginHeaderView : UIView
 
+@property (nonatomic) CGFloat scrollOffsetY;
+
 @end
 
 NS_ASSUME_NONNULL_END

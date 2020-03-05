@@ -10,6 +10,7 @@
 
 @interface JTLoginHeaderView () {
     UIImageView *_bgView;
+    UIImageView *_bgLineImageView;
     UIImageView *_logoView;
 }
 
@@ -21,8 +22,19 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        _bgView = [UIImageView imageViewWithImageName:@"login_header_bg.jpg"];
-        _bgView.height = 204;
+        UIImage *image = [UIImage imageNamed:@"login_header_bg"];
+        
+        _bgLineImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.width, SAFE_BOTTOM_VIEW_HEIGHT + 1)];
+        _bgLineImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+        _bgLineImageView.contentMode = UIViewContentModeScaleToFill;
+        _bgLineImageView.clipsToBounds = YES;
+        //        _bgLineImageView.image = [image getSubImage:CGRectMake(0, 0, CGImageGetWidth(image.CGImage), 1)];
+        _bgLineImageView.image = [image subImageFromRect:CGRectMake(0, 0, CGImageGetWidth(image.CGImage), 1)];;
+        [self addSubview:_bgLineImageView];
+        
+        _bgView = [[UIImageView alloc] initWithImage:image];
+        _bgView.top = SAFE_BOTTOM_VIEW_HEIGHT;
+        _bgView.width = self.width;
         _bgView.contentMode = UIViewContentModeScaleAspectFill;
         _bgView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         _bgView.clipsToBounds = YES;
@@ -41,6 +53,31 @@
         [self insertSubview:logoBg belowSubview:_logoView];
     }
     return self;
+}
+
+- (void)setScrollOffsetY:(CGFloat)scrollOffsetY
+{
+    _scrollOffsetY = scrollOffsetY;
+    
+    [self updateWallLocation];
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    [self updateWallLocation];
+}
+
+- (void)updateWallLocation
+{
+    if (self.window) {
+        if (_scrollOffsetY >= 0.f) {
+            _bgLineImageView.frame = CGRectMake(0, 0, self.width, SAFE_BOTTOM_VIEW_HEIGHT);
+        } else {
+            _bgLineImageView.frame = CGRectMake(0, _scrollOffsetY, self.width, SAFE_BOTTOM_VIEW_HEIGHT-_scrollOffsetY);
+        }
+    }
 }
 
 @end

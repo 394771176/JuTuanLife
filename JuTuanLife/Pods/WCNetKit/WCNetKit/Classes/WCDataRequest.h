@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "BPURLRequest.h"
+#import <WCModel/WCDataResult.h>
 
 #define WCHTTPMethodGET   @"GET"
 #define WCHTTPMethodPOST  @"POST"
@@ -44,6 +45,7 @@ typedef NS_ENUM(NSInteger, WCHTTPResultType) {
 @property (nonatomic, weak) id<BPURLRequestDelegate> delegate;
 
 - (BPURLRequest *)makeRequest;
+- (WCDataResult *)getResultFromData:(id)data;
 
 + (instancetype)requestWithUrl:(NSString *)url api:(NSString *)api params:(NSDictionary *)params;
 + (instancetype)requestWithUrl:(NSString *)url api:(NSString *)api params:(NSDictionary *)params httpMethod:(NSString *)httpMethod;

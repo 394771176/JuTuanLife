@@ -96,6 +96,4 @@ typedef NS_ENUM(NSInteger, SCCodeBtnStatus) {
 
 @property (nonatomic) BOOL isSecure;
 
-- (void)setSecureStatusBtnRightGap:(CGFloat)rightGap;
-
 @end

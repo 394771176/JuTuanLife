@@ -45,20 +45,26 @@ DTTableButtonCellDelegate
     return YES;
 }
 
+- (UIStatusBarStyle)statusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
 - (void)viewDidLoad
 {
-    _loginHeader = [[JTLoginHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.width, 204 + 55)];
+    _loginHeader = [[JTLoginHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.width, 204 + 55 + SAFE_BOTTOM_VIEW_HEIGHT)];
     
     _phoneCell = [[SCLoginPhoneCell alloc] init];
     _phoneCell.delegate = self;
     _phoneCell.phoneTextStyle = YES;
+    _phoneCell.placehloder = @"请输入手机号码";
     _phoneCell.textField.returnKeyType = UIReturnKeyNext;
     [_phoneCell setleftGap:59 textHeight:_phoneCell.contentView.height];
     
     _passwordCell = [[SCLoginPasswordCell alloc] init];
     _passwordCell.delegate = self;
     [_passwordCell setleftGap:59 textHeight:_phoneCell.contentView.height];
-    [_passwordCell setSecureStatusBtnRightGap:59];
+    _passwordCell.placehloder = @"请输入6-12位数字、字母";
     
     _loginCell = [[DTTableButtonCell alloc] init];
     [_loginCell.submitBtn setTitle:@"登 录"];
@@ -73,14 +79,14 @@ DTTableButtonCellDelegate
     [_forgetCell setButtonTitle:@"找回密码" withTitleColorStr:@"#999999"];
     _forgetCell.style = DTTableButtonStyleNone;
     _forgetCell.height = _forgetCell.contentView.height = 100;
-    _forgetCell.submitBtn.bottom = _forgetCell.contentView.height - (44 + SAFE_BOTTOM_VIEW_HEIGHT);
+    _forgetCell.submitBtn.bottom = _forgetCell.contentView.height - (40);
     _forgetCell.submitBtn.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
     _forgetCell.delegate = self;
     
     [super viewDidLoad];
     
     self.tableView.tableHeaderView = _loginHeader;
-    
+    self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
 }
 
 #pragma mark - action
@@ -88,12 +94,15 @@ DTTableButtonCellDelegate
 - (void)loginAction
 {
     [WCDataService asyncBlock:^WCDataRequest *{
-        return nil;
+        return [JTUserRequest requestWithApi:@"basic/get_app_config" params:nil];
     } config:^(WCDataResult *result) {
         
     } finish:^(WCDataResult *result) {
-        
+        NSLog(@"result = %@", result.data);
     }];
+    
+    JTLoginAuthController *vc = [JTLoginAuthController new];
+    [WCControllerUtil pushViewController:vc];
 }
 
 - (void)forgetAction
@@ -131,8 +140,8 @@ DTTableButtonCellDelegate
             CGFloat height = [tableView totalHeightToSection:indexPath.section target:self];
             height += _loginHeader.height;
             height = self.tableView.height - height;
-            if (height < 100 + SAFE_BOTTOM_VIEW_HEIGHT) {
-                height = 100 + SAFE_BOTTOM_VIEW_HEIGHT;
+            if (height < 100) {
+                height = 100;
             }
             return height;
         }
@@ -176,6 +185,12 @@ DTTableButtonCellDelegate
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    [super scrollViewDidScroll:scrollView];
+    [_loginHeader setScrollOffsetY:scrollView.contentOffset.y];
+}
+
 #pragma mark - DTTableButtonCellDelegate
 
 - (void)tableButtonCellDidClickAction:(DTTableCustomCell *)cell
@@ -193,7 +208,10 @@ DTTableButtonCellDelegate
 {
     if (textField == _phoneCell.textField) {
         [_passwordCell.textField becomeFirstResponder];
+    } else {
+        [textField resignFirstResponder];
     }
+        
 }
 
 - (void)loginTextFieldCell:(SCLoginTextFieldCell *)cell textFieldDidChange:(UITextField *)textField

@@ -30,9 +30,9 @@
         _bodyView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
         [self.contentView addSubview:_bodyView];
         
-        _iconView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 24, _bodyView.height)];
+        _iconView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 12, _bodyView.height)];
         _iconView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
-        _iconView.contentMode = UIViewContentModeScaleAspectFit;
+        _iconView.contentMode = UIViewContentModeCenter;
         [_bodyView addSubview:_iconView];
         
         _textField = [[UITextField alloc] initWithFrame:CGRectMake(_iconView.right + 12, 0, _bodyView.width - _iconView.right - 12, _bodyView.height)];
@@ -136,7 +136,7 @@
 
 - (void)setPlacehloderWithDefault:(NSString *)placehloder
 {
-    if (!_placehloder) {
+    if (!_placehloder.length) {
         [self setPlacehloder:placehloder];
     }
 }
@@ -212,7 +212,7 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.phoneTextStyle = NO;
+        _phoneTextStyle = NO;
         self.type = SCLoginTextFieldTypePhone;
     }
     return self;
@@ -509,23 +509,17 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         _secureBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        _secureBtn.frame = CGRectMake(self.contentView.width - 40 - 10, self.textField.top, 40, self.textField.height);
+        _secureBtn.frame = CGRectMake(_bodyView.width - 26, self.textField.top, 26, self.textField.height);
         _secureBtn.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleTopMargin;
         [_secureBtn addTarget:self action:@selector(secureBtnAction:)];
-        [self.contentView addSubview:_secureBtn];
+        [_bodyView addSubview:_secureBtn];
         
-        self.textField.width = _secureBtn.left - self.textField.left - 10;
+        self.textField.width = _secureBtn.left - self.textField.left - 15;
 
         self.type = SCLoginTextFieldTypePassword;
         self.isSecure = YES;
     }
     return self;
-}
-
-- (void)setSecureStatusBtnRightGap:(CGFloat)rightGap
-{
-    _secureBtn.right = self.contentView.width - rightGap;
-    self.textField.width = _secureBtn.left - self.textField.left - 10;
 }
 
 - (void)setIsSecure:(BOOL)isSecure

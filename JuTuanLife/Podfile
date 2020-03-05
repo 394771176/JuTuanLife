@@ -17,6 +17,7 @@ target 'JuTuanLife' do
   # Pods for JuTuanLife
 
 #  pod 'WCBaseUIKit'
+pod 'WCModule'
 pod 'WCModel'
 pod 'WCNetKit'
 pod 'WCPlugin'

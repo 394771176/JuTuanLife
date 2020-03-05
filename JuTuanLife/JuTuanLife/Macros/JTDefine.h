@@ -9,7 +9,4 @@
 #ifndef JTDefine_h
 #define JTDefine_h
 
-#import "JTAPPKey.h"
-#import "JTConstants.h"
-
 #endif /* JTDefine_h */

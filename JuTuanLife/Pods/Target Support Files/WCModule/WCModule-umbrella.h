@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "WCModule.h"
 #import "ASIAuthenticationDialog.h"
 #import "ASICacheDelegate.h"
 #import "ASIDataCompressor.h"
@@ -73,6 +74,9 @@
 #import "UIImageView+WebCache.h"
 #import "UIView+WebCache.h"
 #import "UIView+WebCacheOperation.h"
+#import "SDWebImageManagerUtil.h"
+#import "UIButton+CLWebCache.h"
+#import "UIImageView+CLWebCache.h"
 
 FOUNDATION_EXPORT double WCModuleVersionNumber;
 FOUNDATION_EXPORT const unsigned char WCModuleVersionString[];

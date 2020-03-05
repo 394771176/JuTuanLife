@@ -30,12 +30,20 @@ PODS:
   - WCModel/Plist (0.1.1):
     - WCCategory
     - WCModel/File
+  - WCModule (0.1.6):
+    - WCModule/ASIHttpRequest (= 0.1.6)
+    - WCModule/FMDB (= 0.1.6)
+    - WCModule/SDWebImage (= 0.1.6)
+    - WCModule/SDWebImageUtil (= 0.1.6)
   - WCModule/ASIHttpRequest (0.1.6):
     - WCModule/Reachability
   - WCModule/FMDB (0.1.6)
   - WCModule/Reachability (0.1.6)
   - WCModule/RegexKitLite (0.1.6)
   - WCModule/SDWebImage (0.1.6)
+  - WCModule/SDWebImageUtil (0.1.6):
+    - WCCategory
+    - WCModule/SDWebImage
   - WCNetKit (0.1.2):
     - WCCategory
     - WCEncrypt/MD5
@@ -50,6 +58,7 @@ PODS:
 
 DEPENDENCIES:
   - WCModel
+  - WCModule
   - WCNetKit
   - WCPlugin
 
@@ -70,6 +79,6 @@ SPEC CHECKSUMS:
   WCNetKit: 486a3602eccc0ad6f631bee8856cbd9c24e445d0
   WCPlugin: 46a39341f494bcc8dccffd1a9749addfa62885c5
 
-PODFILE CHECKSUM: 88793ef26009af0720f5a1f0e24b05b2a5e492e9
+PODFILE CHECKSUM: 248586af8230600fe31f52890db544a1f56870e5
 
 COCOAPODS: 1.7.5
