@@ -33,6 +33,7 @@ DTTableButtonCellDelegate
     
     [super viewDidLoad];
     self.title = @"认证身份";
+    self.view.backgroundColor = [UIColor colorWithString:@"f9f9f9"];
 }
 
 #pragma mark - UITableViewDataSource & UITableViewDelegate

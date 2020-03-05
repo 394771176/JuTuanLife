@@ -24,12 +24,13 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         //625 - 348
-        self.height = self.contentView.height = 478 / 2.f + 40;
+        self.height = self.contentView.height = 478 / 2.f + 20;
         
-        _bodyView = [[DTControl alloc] initWithFrame:CGRectMake(16, 20, self.contentView.width - 32, self.contentView.height - 40)];
+        _bodyView = [[DTControl alloc] initWithFrame:CGRectMake(16, 10, self.contentView.width - 32, self.contentView.height - 20)];
         _bodyView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         _bodyView.backgroundColor = [UIColor whiteColor];
         [_bodyView addTarget:self action:@selector(clickAction)];
+//        _bodyView.cornerRadius = 5;
         [self.contentView addSubview:_bodyView];
         
         _titleLabel = [UILabel labelWithFrame:CGRectMake(9, 5, _bodyView.width - 20, 44) fontSize:16 colorString:@"333333"];
@@ -48,9 +49,11 @@
         [_camBgView addSubview:_camView];
         
         _bodyView.layer.shadowOffset = CGSizeMake(0, 2);
-        _bodyView.layer.shadowRadius = 8;
+        _bodyView.layer.shadowRadius = 10;
         _bodyView.layer.opacity = 1;
-        _bodyView.layer.shadowColor = [UIColor colorWithWhite:0 alpha:0.05].CGColor;
+        _bodyView.layer.shadowColor = [UIColor colorWithWhite:0 alpha:0.3].CGColor;
+        
+        [self setSelectionStyleClear];
     }
     return self;
 }
