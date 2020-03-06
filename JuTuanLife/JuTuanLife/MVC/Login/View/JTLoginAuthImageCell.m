@@ -48,10 +48,11 @@
         [_camView setImageWithName:@"auth_cam"];
         [_camBgView addSubview:_camView];
         
+        _bodyView.clipsToBounds = NO;
         _bodyView.layer.shadowOffset = CGSizeMake(0, 2);
         _bodyView.layer.shadowRadius = 10;
         _bodyView.layer.opacity = 1;
-        _bodyView.layer.shadowColor = [UIColor colorWithWhite:0 alpha:0.3].CGColor;
+        _bodyView.layer.shadowColor = [UIColor colorWithWhite:0 alpha:0.5].CGColor;
         
         [self setSelectionStyleClear];
     }

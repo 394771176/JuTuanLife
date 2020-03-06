@@ -8,6 +8,7 @@
 
 #import "JTLoginAuthController.h"
 #import "JTLoginAuthImageCell.h"
+#import "JTLoginAgreementController.h"
 
 @interface JTLoginAuthController ()
 <
@@ -15,6 +16,8 @@ DTTableButtonCellDelegate
 >
 {
     NSMutableArray<JTLoginAuthImageCell *> *_cellArray;
+    UIView *_bottomView;
+    UIButton *_bottomBtn;
 }
 
 @end
@@ -33,7 +36,36 @@ DTTableButtonCellDelegate
     
     [super viewDidLoad];
     self.title = @"认证身份";
-    self.view.backgroundColor = [UIColor colorWithString:@"f9f9f9"];
+    self.backgroundColor = APP_JT_GRAY_BGCOLOR;
+    
+    [self.tableView setTableHeaderHeight:10 footerHeight:12];
+    
+    [self setupBottomView];
+}
+
+- (void)setupBottomView
+{
+    if (!_bottomView) {
+        _bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, self.height - 74 - SAFE_BOTTOM_VIEW_HEIGHT, self.width, 74 + SAFE_BOTTOM_VIEW_HEIGHT)];
+        _bottomView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
+        _bottomView.backgroundColor = [UIColor whiteColor];
+        [self.view addSubview:_bottomView];
+        
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        btn.frame = CGRectMake(24, 13, _bottomView.width - 48, 48);
+        btn.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+        [btn setBackgroundImageAndHightlightWithColorHex:APP_JT_BLUE_STRING cornerRadius:5];
+        [btn addTarget:self action:@selector(nextStepAction)];
+        [btn setTitle:@"下一步" fontSize:18 colorString:@"FFFFFF"];
+        [_bottomView addSubview:btn];
+        
+        self.tableView.height = _bottomView.top;
+    }
+}
+
+- (void)nextStepAction
+{
+    PUSH_VC(JTLoginAgreementController)
 }
 
 #pragma mark - UITableViewDataSource & UITableViewDelegate

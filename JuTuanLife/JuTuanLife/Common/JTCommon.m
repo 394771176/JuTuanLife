@@ -68,10 +68,18 @@ static id mainController = nil;
 
 + (BOOL)isServerPro
 {
-#if DEBUG
+#ifdef DEBUG
     return APP_SERVER_DEBUG == 0;
 #endif
     return YES;
+}
+
++ (BOOL)APPDebug
+{
+#ifdef DEBUG
+    return APP_CONST_DEBUG == 1;
+#endif
+    return NO;
 }
 
 + (NSString *)serverForPro:(NSString *)pro test:(NSString *)test
@@ -82,5 +90,7 @@ static id mainController = nil;
         return test;
     }
 }
+
+
 
 @end

@@ -6,11 +6,11 @@
 //  Copyright © 2020 cheng. All rights reserved.
 //
 
-#import "DTViewController.h"
+#import "DTTableController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JTLoginAgreementController : DTViewController
+@interface JTLoginAgreementController : DTTableController
 
 @end
 

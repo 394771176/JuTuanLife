@@ -10,4 +10,9 @@
 
 @implementation JTCoreUtil
 
++ (void)openWithLink:(NSString *)link
+{
+    NSLog(@"open link : %@", link);
+}
+
 @end

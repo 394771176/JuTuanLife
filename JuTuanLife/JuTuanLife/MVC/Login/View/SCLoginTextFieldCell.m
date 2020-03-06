@@ -11,7 +11,7 @@
 #define SC_LOGIN_CODE_TIME_COUNT 60
 
 @interface SCLoginTextFieldCell () {
-
+    
 }
 
 @end

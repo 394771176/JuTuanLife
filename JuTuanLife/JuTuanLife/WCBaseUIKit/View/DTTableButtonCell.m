@@ -144,8 +144,7 @@
 
 - (void)setButtonHorGap:(CGFloat)gap
 {
-    _submitBtn.left = gap;
-    _submitBtn.right = self.contentView.width-2*gap;
+    _submitBtn.frame = CGRectMake(gap, _submitBtn.top, self.contentView.width - gap * 2, _submitBtn.height);
 }
 
 - (void)submitBtnAction

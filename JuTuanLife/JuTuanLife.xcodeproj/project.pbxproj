@@ -58,6 +58,11 @@
 		606FE77F241172D500522B96 /* JTLoginAuthImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE77E241172D500522B96 /* JTLoginAuthImageCell.m */; };
 		606FE782241172EA00522B96 /* JTLoginProtorolCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE781241172EA00522B96 /* JTLoginProtorolCell.m */; };
 		606FE7852411730300522B96 /* JTLoginForgetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE7842411730300522B96 /* JTLoginForgetCell.m */; };
+		606FE7882412B10C00522B96 /* JTProtorolItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE7872412B10C00522B96 /* JTProtorolItem.m */; };
+		606FE78B2412C28500522B96 /* DTTableTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE78A2412C28500522B96 /* DTTableTitleCell.m */; };
+		606FE78E2412C29900522B96 /* DTTableContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE78C2412C29900522B96 /* DTTableContentCell.m */; };
+		606FE7912412C2AD00522B96 /* DTTitleContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE78F2412C2AD00522B96 /* DTTitleContentCell.m */; };
+		606FE7942412C2CB00522B96 /* DTTableIconCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE7922412C2CB00522B96 /* DTTableIconCell.m */; };
 		60D03C90240FF99600E7D7D1 /* launch_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60D03C8F240FF99600E7D7D1 /* launch_image@2x.png */; };
 		60D03C93240FF9F100E7D7D1 /* JTLoginHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D03C92240FF9F100E7D7D1 /* JTLoginHomeController.m */; };
 		60D03C96240FFA9900E7D7D1 /* JTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D03C95240FFA9900E7D7D1 /* JTUser.m */; };
@@ -197,6 +202,16 @@
 		606FE781241172EA00522B96 /* JTLoginProtorolCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTLoginProtorolCell.m; sourceTree = "<group>"; };
 		606FE7832411730300522B96 /* JTLoginForgetCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTLoginForgetCell.h; sourceTree = "<group>"; };
 		606FE7842411730300522B96 /* JTLoginForgetCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTLoginForgetCell.m; sourceTree = "<group>"; };
+		606FE7862412B10C00522B96 /* JTProtorolItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTProtorolItem.h; sourceTree = "<group>"; };
+		606FE7872412B10C00522B96 /* JTProtorolItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTProtorolItem.m; sourceTree = "<group>"; };
+		606FE7892412C28500522B96 /* DTTableTitleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTTableTitleCell.h; sourceTree = "<group>"; };
+		606FE78A2412C28500522B96 /* DTTableTitleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTTableTitleCell.m; sourceTree = "<group>"; };
+		606FE78C2412C29900522B96 /* DTTableContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTableContentCell.m; sourceTree = "<group>"; };
+		606FE78D2412C29900522B96 /* DTTableContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTableContentCell.h; sourceTree = "<group>"; };
+		606FE78F2412C2AD00522B96 /* DTTitleContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTitleContentCell.m; sourceTree = "<group>"; };
+		606FE7902412C2AD00522B96 /* DTTitleContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTitleContentCell.h; sourceTree = "<group>"; };
+		606FE7922412C2CB00522B96 /* DTTableIconCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTableIconCell.m; sourceTree = "<group>"; };
+		606FE7932412C2CB00522B96 /* DTTableIconCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTableIconCell.h; sourceTree = "<group>"; };
 		60D03C8F240FF99600E7D7D1 /* launch_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch_image@2x.png"; sourceTree = "<group>"; };
 		60D03C91240FF9F100E7D7D1 /* JTLoginHomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTLoginHomeController.h; sourceTree = "<group>"; };
 		60D03C92240FF9F100E7D7D1 /* JTLoginHomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTLoginHomeController.m; sourceTree = "<group>"; };
@@ -483,6 +498,8 @@
 			children = (
 				60D03C94240FFA9900E7D7D1 /* JTUser.h */,
 				60D03C95240FFA9900E7D7D1 /* JTUser.m */,
+				606FE7862412B10C00522B96 /* JTProtorolItem.h */,
+				606FE7872412B10C00522B96 /* JTProtorolItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -603,6 +620,14 @@
 		60E2B09B240ED5D800E4EA52 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				606FE7892412C28500522B96 /* DTTableTitleCell.h */,
+				606FE78A2412C28500522B96 /* DTTableTitleCell.m */,
+				606FE78D2412C29900522B96 /* DTTableContentCell.h */,
+				606FE78C2412C29900522B96 /* DTTableContentCell.m */,
+				606FE7902412C2AD00522B96 /* DTTitleContentCell.h */,
+				606FE78F2412C2AD00522B96 /* DTTitleContentCell.m */,
+				606FE7932412C2CB00522B96 /* DTTableIconCell.h */,
+				606FE7922412C2CB00522B96 /* DTTableIconCell.m */,
 				60E2B09C240ED5D800E4EA52 /* DTScrollLabel.h */,
 				60E2B09D240ED5D800E4EA52 /* DTGradientLabel.h */,
 				60E2B09E240ED5D800E4EA52 /* DTNoDataView.h */,
@@ -924,6 +949,7 @@
 				60E2B106240ED5D800E4EA52 /* CLAlertView.m in Sources */,
 				60E2B11D240ED5D800E4EA52 /* DTTableController.m in Sources */,
 				60E2B2B7240FE58100E4EA52 /* BPAppDelegate.m in Sources */,
+				606FE78E2412C29900522B96 /* DTTableContentCell.m in Sources */,
 				60D03C93240FF9F100E7D7D1 /* JTLoginHomeController.m in Sources */,
 				60E2B114240ED5D800E4EA52 /* DTScrollTabView.m in Sources */,
 				606FE72F241149BC00522B96 /* CKOldOpenUDID.m in Sources */,
@@ -945,6 +971,8 @@
 				60E2B116240ED5D800E4EA52 /* DTPullRefreshHeadView.m in Sources */,
 				60D03C96240FFA9900E7D7D1 /* JTUser.m in Sources */,
 				606FE730241149BC00522B96 /* CKOpenUDID.m in Sources */,
+				606FE78B2412C28500522B96 /* DTTableTitleCell.m in Sources */,
+				606FE7882412B10C00522B96 /* JTProtorolItem.m in Sources */,
 				60ED7638240EB25B0013CB8C /* main.m in Sources */,
 				60E2B10B240ED5D800E4EA52 /* DTButton.m in Sources */,
 				60E2B103240ED5D800E4EA52 /* CLDatePickerView.m in Sources */,
@@ -974,6 +1002,7 @@
 				60E2B123240ED5D800E4EA52 /* DTHttpLoadMoreTableController.m in Sources */,
 				60E2B113240ED5D800E4EA52 /* DTTableCustomCell.m in Sources */,
 				606FE782241172EA00522B96 /* JTLoginProtorolCell.m in Sources */,
+				606FE7942412C2CB00522B96 /* DTTableIconCell.m in Sources */,
 				60E2B110240ED5D800E4EA52 /* DTPickerView.m in Sources */,
 				606FE736241157ED00522B96 /* JTUserRequest.m in Sources */,
 				60E2B102240ED5D800E4EA52 /* DTControl.m in Sources */,
@@ -983,6 +1012,7 @@
 				60E2B11C240ED5D800E4EA52 /* DTTabViewController.m in Sources */,
 				60E2B10F240ED5D800E4EA52 /* DTScrollLabel.m in Sources */,
 				60D03C9C2410046600E7D7D1 /* SCLoginTextFieldCell.m in Sources */,
+				606FE7912412C2AD00522B96 /* DTTitleContentCell.m in Sources */,
 				606FE73C2411607700522B96 /* JTDataResult.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

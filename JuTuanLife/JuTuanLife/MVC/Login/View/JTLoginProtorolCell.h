@@ -7,10 +7,14 @@
 //
 
 #import "DTTableCustomCell.h"
+#import "JTProtorolItem.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface JTLoginProtorolCell : DTTableCustomCell
+
+@property (nonatomic, strong) JTProtorolItem *item;
+//@property (nonatomic, weak) id<DTTableButtonCellDelegate> delegate;
 
 @end
 

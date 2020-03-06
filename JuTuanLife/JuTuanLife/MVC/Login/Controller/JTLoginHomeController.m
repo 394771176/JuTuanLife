@@ -68,12 +68,16 @@ DTTableButtonCellDelegate
     
     _loginCell = [[DTTableButtonCell alloc] init];
     [_loginCell.submitBtn setTitle:@"登 录"];
-    _loginCell.gray = @"#CFCFCF";
-    _loginCell.blue = @"#137FFE";
+    _loginCell.gray = APP_JT_GRAY_STRING;
+    _loginCell.blue = APP_JT_BLUE_STRING;
     _loginCell.submitBtn.height = 48;
     [_loginCell setButtonTop:128];
     _loginCell.style = DTTableButtonStyleGray;
     _loginCell.delegate = self;
+    
+    if (APP_DEBUG) {
+        _loginCell.style = DTTableButtonStyleBlue;
+    }
     
     _forgetCell = [[DTTableButtonCell alloc] init];
     [_forgetCell setButtonTitle:@"找回密码" withTitleColorStr:@"#999999"];

@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JTCoreUtil : NSObject
 
++ (void)openWithLink:(NSString *)link;
+
 @end
 
 NS_ASSUME_NONNULL_END

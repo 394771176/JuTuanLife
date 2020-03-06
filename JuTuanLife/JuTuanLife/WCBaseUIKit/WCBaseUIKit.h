@@ -41,10 +41,15 @@
 #import "DTStrokeLabel.h"
 #import "DTTabBarView.h"
 #import "DTTableButtonCell.h"
+#import "DTTableContentCell.h"
 #import "DTTableCustomCell.h"
+#import "DTTableIconCell.h"
+#import "DTTableTitleCell.h"
 #import "DTTabScorllContentCell.h"
 #import "DTTagLabel.h"
+#import "DTTitleContentCell.h"
 #import "DTUISegmentView.h"
+
 
 /*controller*/
 #import "DTViewController.h"
