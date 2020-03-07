@@ -85,6 +85,8 @@
             [_loadMoreCell startLoad];
         }
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    } else {
+        [super tableView:tableView didSelectRowAtIndexPath:indexPath];
     }
 }
 

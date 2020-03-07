@@ -7,6 +7,7 @@
 //
 
 #import "JTMainController.h"
+#import "JTMineHomeController.h"
 
 @implementation JTMainController
 
@@ -22,6 +23,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+//    self.view
 }
 
 @end

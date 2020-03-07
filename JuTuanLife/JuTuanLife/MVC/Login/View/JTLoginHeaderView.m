@@ -12,6 +12,7 @@
     UIImageView *_bgView;
     UIImageView *_bgLineImageView;
     UIImageView *_logoView;
+    UIView *_logoBgView;
 }
 
 @end
@@ -39,25 +40,35 @@
         _bgView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         _bgView.clipsToBounds = YES;
         [self addSubview:_bgView];
-        
-        _logoView = [UIImageView imageViewWithImageName:@"logo_jtbang"];
-        _logoView.center = CGPointMake(self.width / 2, _bgView.bottom - _logoView.height / 2);
-        _logoView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin;
-        [self addSubview:_logoView];
-        
-        UIView *logoBg = [[UIView alloc] initWithFrame:CGRectInset(_logoView.frame, -10, -10)];
-        logoBg.backgroundColor = [UIColor whiteColor];
-        logoBg.cornerRadius = logoBg.height / 2;
-        logoBg.alpha = 0.5;
-        logoBg.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin;
-        [self insertSubview:logoBg belowSubview:_logoView];
     }
     return self;
 }
 
-- (void)setScrollOffsetY:(CGFloat)scrollOffsetY
+- (void)setShowLogo:(BOOL)showLogo
 {
-    _scrollOffsetY = scrollOffsetY;
+    _showLogo = showLogo;
+    if (_showLogo) {
+        if (!_logoView) {
+            _logoView = [UIImageView imageViewWithImageName:@"logo_jtbang"];
+            _logoView.center = CGPointMake(self.width / 2, _bgView.bottom - _logoView.height / 2);
+            _logoView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin;
+            [self addSubview:_logoView];
+            
+            UIView *logoBg = [[UIView alloc] initWithFrame:CGRectInset(_logoView.frame, -10, -10)];
+            logoBg.backgroundColor = [UIColor whiteColor];
+            logoBg.cornerRadius = logoBg.height / 2;
+            logoBg.alpha = 0.5;
+            logoBg.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin;
+            [self insertSubview:logoBg belowSubview:_logoView];
+            _logoBgView = logoBg;
+        }
+    }
+    _logoView.hidden = _logoBgView.hidden = !_showLogo;
+}
+
+- (void)setContentOffset:(CGPoint)contentOffset
+{
+    _contentOffset = contentOffset;
     
     [self updateWallLocation];
 }
@@ -72,10 +83,11 @@
 - (void)updateWallLocation
 {
     if (self.window) {
-        if (_scrollOffsetY >= 0.f) {
+        CGFloat offsetY = _contentOffset.y;
+        if (offsetY >= 0.f) {
             _bgLineImageView.frame = CGRectMake(0, 0, self.width, SAFE_BOTTOM_VIEW_HEIGHT);
         } else {
-            _bgLineImageView.frame = CGRectMake(0, _scrollOffsetY, self.width, SAFE_BOTTOM_VIEW_HEIGHT-_scrollOffsetY);
+            _bgLineImageView.frame = CGRectMake(0, offsetY, self.width, SAFE_BOTTOM_VIEW_HEIGHT-offsetY);
         }
     }
 }

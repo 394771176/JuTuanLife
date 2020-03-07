@@ -68,6 +68,11 @@
     [self setIconName:imageName];
 }
 
+- (void)setItem:(DTTitleIconItem *)item
+{
+    [self setTitle:item.title content:nil icon:item.icon];
+}
+
 - (void)layoutSubviews
 {
     [super layoutSubviews];

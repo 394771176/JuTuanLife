@@ -7,6 +7,7 @@
 //
 
 #import "DTTitleContentCell.h"
+#import "DTTitleIconItem.h"
 
 @protocol DTTableIconCelldelegate<NSObject>
 
@@ -38,9 +39,13 @@
 @property (nonatomic, strong) NSString *iconName;
 @property (nonatomic, strong) UIImageView *iconView;
 
+@property (nonatomic, strong) DTTitleIconItem *item;
+
 - (void)setTitle:(NSString *)title content:(NSString *)content icon:(UIImage *)image;
 - (void)setTitle:(NSString *)title content:(NSString *)content iconName:(NSString *)imageName;
 
 - (void)setIconLeft:(CGFloat)left;
+
+
 
 @end

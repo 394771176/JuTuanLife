@@ -63,6 +63,24 @@
 		606FE78E2412C29900522B96 /* DTTableContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE78C2412C29900522B96 /* DTTableContentCell.m */; };
 		606FE7912412C2AD00522B96 /* DTTitleContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE78F2412C2AD00522B96 /* DTTitleContentCell.m */; };
 		606FE7942412C2CB00522B96 /* DTTableIconCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE7922412C2CB00522B96 /* DTTableIconCell.m */; };
+		606FE7962413708500522B96 /* login_auth_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 606FE7952413708400522B96 /* login_auth_bg@2x.png */; };
+		606FE7982413716700522B96 /* login_protorol_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 606FE7972413716700522B96 /* login_protorol_bg@2x.png */; };
+		606FE7A024137AD800522B96 /* JTMineHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE79F24137AD800522B96 /* JTMineHomeController.m */; };
+		606FE7A324137B0200522B96 /* JTUserInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE7A224137B0200522B96 /* JTUserInfoController.m */; };
+		606FE7A624137B1800522B96 /* JTUserBankController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE7A524137B1800522B96 /* JTUserBankController.m */; };
+		606FE7A924137B2D00522B96 /* JTUserProtorolsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE7A824137B2D00522B96 /* JTUserProtorolsController.m */; };
+		606FE7AC24137B8300522B96 /* JTAboutUsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE7AB24137B8300522B96 /* JTAboutUsController.m */; };
+		606FE7AF24137D7E00522B96 /* JTMineHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE7AE24137D7E00522B96 /* JTMineHeaderView.m */; };
+		606FE7B3241380B200522B96 /* WCTableRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE7B2241380B200522B96 /* WCTableRow.m */; };
+		606FE7B6241380D100522B96 /* WCTableSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE7B5241380D100522B96 /* WCTableSection.m */; };
+		606FE7B9241385BE00522B96 /* WCSourceTableData.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE7B8241385BE00522B96 /* WCSourceTableData.m */; };
+		60B939A62413E465003147DC /* user_home_avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60B9399F2413E464003147DC /* user_home_avatar@2x.png */; };
+		60B939A72413E465003147DC /* user_home_info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60B939A02413E464003147DC /* user_home_info@2x.png */; };
+		60B939A82413E465003147DC /* user_home_jutui@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60B939A12413E464003147DC /* user_home_jutui@2x.png */; };
+		60B939A92413E465003147DC /* user_home_logout@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60B939A22413E465003147DC /* user_home_logout@2x.png */; };
+		60B939AA2413E465003147DC /* user_home_camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60B939A32413E465003147DC /* user_home_camera@2x.png */; };
+		60B939AB2413E465003147DC /* user_home_protorol@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60B939A42413E465003147DC /* user_home_protorol@2x.png */; };
+		60B939AC2413E465003147DC /* user_home_bank@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60B939A52413E465003147DC /* user_home_bank@2x.png */; };
 		60D03C90240FF99600E7D7D1 /* launch_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60D03C8F240FF99600E7D7D1 /* launch_image@2x.png */; };
 		60D03C93240FF9F100E7D7D1 /* JTLoginHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D03C92240FF9F100E7D7D1 /* JTLoginHomeController.m */; };
 		60D03C96240FFA9900E7D7D1 /* JTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D03C95240FFA9900E7D7D1 /* JTUser.m */; };
@@ -212,6 +230,33 @@
 		606FE7902412C2AD00522B96 /* DTTitleContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTitleContentCell.h; sourceTree = "<group>"; };
 		606FE7922412C2CB00522B96 /* DTTableIconCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTableIconCell.m; sourceTree = "<group>"; };
 		606FE7932412C2CB00522B96 /* DTTableIconCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTableIconCell.h; sourceTree = "<group>"; };
+		606FE7952413708400522B96 /* login_auth_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_auth_bg@2x.png"; sourceTree = "<group>"; };
+		606FE7972413716700522B96 /* login_protorol_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_protorol_bg@2x.png"; sourceTree = "<group>"; };
+		606FE79E24137AD800522B96 /* JTMineHomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTMineHomeController.h; sourceTree = "<group>"; };
+		606FE79F24137AD800522B96 /* JTMineHomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTMineHomeController.m; sourceTree = "<group>"; };
+		606FE7A124137B0200522B96 /* JTUserInfoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTUserInfoController.h; sourceTree = "<group>"; };
+		606FE7A224137B0200522B96 /* JTUserInfoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTUserInfoController.m; sourceTree = "<group>"; };
+		606FE7A424137B1800522B96 /* JTUserBankController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTUserBankController.h; sourceTree = "<group>"; };
+		606FE7A524137B1800522B96 /* JTUserBankController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTUserBankController.m; sourceTree = "<group>"; };
+		606FE7A724137B2D00522B96 /* JTUserProtorolsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTUserProtorolsController.h; sourceTree = "<group>"; };
+		606FE7A824137B2D00522B96 /* JTUserProtorolsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTUserProtorolsController.m; sourceTree = "<group>"; };
+		606FE7AA24137B8300522B96 /* JTAboutUsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTAboutUsController.h; sourceTree = "<group>"; };
+		606FE7AB24137B8300522B96 /* JTAboutUsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTAboutUsController.m; sourceTree = "<group>"; };
+		606FE7AD24137D7E00522B96 /* JTMineHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTMineHeaderView.h; sourceTree = "<group>"; };
+		606FE7AE24137D7E00522B96 /* JTMineHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTMineHeaderView.m; sourceTree = "<group>"; };
+		606FE7B1241380B200522B96 /* WCTableRow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCTableRow.h; sourceTree = "<group>"; };
+		606FE7B2241380B200522B96 /* WCTableRow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCTableRow.m; sourceTree = "<group>"; };
+		606FE7B4241380D100522B96 /* WCTableSection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCTableSection.h; sourceTree = "<group>"; };
+		606FE7B5241380D100522B96 /* WCTableSection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCTableSection.m; sourceTree = "<group>"; };
+		606FE7B7241385BE00522B96 /* WCSourceTableData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCSourceTableData.h; sourceTree = "<group>"; };
+		606FE7B8241385BE00522B96 /* WCSourceTableData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCSourceTableData.m; sourceTree = "<group>"; };
+		60B9399F2413E464003147DC /* user_home_avatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_home_avatar@2x.png"; sourceTree = "<group>"; };
+		60B939A02413E464003147DC /* user_home_info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_home_info@2x.png"; sourceTree = "<group>"; };
+		60B939A12413E464003147DC /* user_home_jutui@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_home_jutui@2x.png"; sourceTree = "<group>"; };
+		60B939A22413E465003147DC /* user_home_logout@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_home_logout@2x.png"; sourceTree = "<group>"; };
+		60B939A32413E465003147DC /* user_home_camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_home_camera@2x.png"; sourceTree = "<group>"; };
+		60B939A42413E465003147DC /* user_home_protorol@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_home_protorol@2x.png"; sourceTree = "<group>"; };
+		60B939A52413E465003147DC /* user_home_bank@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_home_bank@2x.png"; sourceTree = "<group>"; };
 		60D03C8F240FF99600E7D7D1 /* launch_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch_image@2x.png"; sourceTree = "<group>"; };
 		60D03C91240FF9F100E7D7D1 /* JTLoginHomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTLoginHomeController.h; sourceTree = "<group>"; };
 		60D03C92240FF9F100E7D7D1 /* JTLoginHomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTLoginHomeController.m; sourceTree = "<group>"; };
@@ -387,6 +432,7 @@
 		6001C781240EB6E7006092BB /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				606FE7B02413809300522B96 /* SourcesTable */,
 				6001C782240EB6FD006092BB /* JTCoreUtil.h */,
 				6001C783240EB6FD006092BB /* JTCoreUtil.m */,
 			);
@@ -421,6 +467,10 @@
 		6001C78A240EB755006092BB /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				606FE79A24137A8800522B96 /* Controller */,
+				606FE79924137A8800522B96 /* Model */,
+				606FE79C24137A8800522B96 /* Resource */,
+				606FE79D24137A8800522B96 /* View */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -537,6 +587,8 @@
 				606FE748241164F700522B96 /* logo_jtbang@2x.png */,
 				606FE740241164F600522B96 /* protorol_agree@2x.png */,
 				606FE746241164F600522B96 /* protorol_unagree@2x.png */,
+				606FE7972413716700522B96 /* login_protorol_bg@2x.png */,
+				606FE7952413708400522B96 /* login_auth_bg@2x.png */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -600,6 +652,66 @@
 				606FE75B24116C3D00522B96 /* DTFix+iOS13.m */,
 			);
 			path = Fixed;
+			sourceTree = "<group>";
+		};
+		606FE79924137A8800522B96 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		606FE79A24137A8800522B96 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				606FE79E24137AD800522B96 /* JTMineHomeController.h */,
+				606FE79F24137AD800522B96 /* JTMineHomeController.m */,
+				606FE7A124137B0200522B96 /* JTUserInfoController.h */,
+				606FE7A224137B0200522B96 /* JTUserInfoController.m */,
+				606FE7A424137B1800522B96 /* JTUserBankController.h */,
+				606FE7A524137B1800522B96 /* JTUserBankController.m */,
+				606FE7A724137B2D00522B96 /* JTUserProtorolsController.h */,
+				606FE7A824137B2D00522B96 /* JTUserProtorolsController.m */,
+				606FE7AA24137B8300522B96 /* JTAboutUsController.h */,
+				606FE7AB24137B8300522B96 /* JTAboutUsController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		606FE79C24137A8800522B96 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				60B939A02413E464003147DC /* user_home_info@2x.png */,
+				60B939A42413E465003147DC /* user_home_protorol@2x.png */,
+				60B939A12413E464003147DC /* user_home_jutui@2x.png */,
+				60B9399F2413E464003147DC /* user_home_avatar@2x.png */,
+				60B939A22413E465003147DC /* user_home_logout@2x.png */,
+				60B939A32413E465003147DC /* user_home_camera@2x.png */,
+				60B939A52413E465003147DC /* user_home_bank@2x.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		606FE79D24137A8800522B96 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				606FE7AD24137D7E00522B96 /* JTMineHeaderView.h */,
+				606FE7AE24137D7E00522B96 /* JTMineHeaderView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		606FE7B02413809300522B96 /* SourcesTable */ = {
+			isa = PBXGroup;
+			children = (
+				606FE7B1241380B200522B96 /* WCTableRow.h */,
+				606FE7B2241380B200522B96 /* WCTableRow.m */,
+				606FE7B4241380D100522B96 /* WCTableSection.h */,
+				606FE7B5241380D100522B96 /* WCTableSection.m */,
+				606FE7B7241385BE00522B96 /* WCSourceTableData.h */,
+				606FE7B8241385BE00522B96 /* WCSourceTableData.m */,
+			);
+			path = SourcesTable;
 			sourceTree = "<group>";
 		};
 		60E2B003240ED59900E4EA52 /* WCBaseUIKit */ = {
@@ -707,26 +819,26 @@
 		60E2B0D8240ED5D800E4EA52 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				60E2B0D9240ED5D800E4EA52 /* DTHttpRefreshLoadMoreTableController.m */,
-				60E2B0DA240ED5D800E4EA52 /* DTHttpRefreshInsetTabController.h */,
-				60E2B0DB240ED5D800E4EA52 /* DTNavigationController.h */,
-				60E2B0DC240ED5D800E4EA52 /* DTHttpTableController.h */,
-				60E2B0DD240ED5D800E4EA52 /* DTViewController.h */,
-				60E2B0DE240ED5D800E4EA52 /* DTPagesController.h */,
-				60E2B0DF240ED5D800E4EA52 /* DTHttpRefreshTableController.m */,
-				60E2B0E0240ED5D800E4EA52 /* DTTabViewController.m */,
 				60E2B0E1240ED5D800E4EA52 /* DTHttpLoadMoreTableController.h */,
-				60E2B0E2240ED5D800E4EA52 /* DTTableController.m */,
-				60E2B0E3240ED5D800E4EA52 /* DTNavigationController.m */,
+				60E2B0EC240ED5D800E4EA52 /* DTHttpLoadMoreTableController.m */,
+				60E2B0DA240ED5D800E4EA52 /* DTHttpRefreshInsetTabController.h */,
 				60E2B0E4240ED5D800E4EA52 /* DTHttpRefreshInsetTabController.m */,
 				60E2B0E5240ED5D800E4EA52 /* DTHttpRefreshLoadMoreTableController.h */,
+				60E2B0D9240ED5D800E4EA52 /* DTHttpRefreshLoadMoreTableController.m */,
 				60E2B0E6240ED5D800E4EA52 /* DTHttpRefreshTableController.h */,
-				60E2B0E7240ED5D800E4EA52 /* DTPagesController.m */,
+				60E2B0DF240ED5D800E4EA52 /* DTHttpRefreshTableController.m */,
+				60E2B0DC240ED5D800E4EA52 /* DTHttpTableController.h */,
 				60E2B0E8240ED5D800E4EA52 /* DTHttpTableController.m */,
-				60E2B0E9240ED5D800E4EA52 /* DTViewController.m */,
-				60E2B0EA240ED5D800E4EA52 /* DTTabViewController.h */,
+				60E2B0DB240ED5D800E4EA52 /* DTNavigationController.h */,
+				60E2B0E3240ED5D800E4EA52 /* DTNavigationController.m */,
+				60E2B0DE240ED5D800E4EA52 /* DTPagesController.h */,
+				60E2B0E7240ED5D800E4EA52 /* DTPagesController.m */,
 				60E2B0EB240ED5D800E4EA52 /* DTTableController.h */,
-				60E2B0EC240ED5D800E4EA52 /* DTHttpLoadMoreTableController.m */,
+				60E2B0E2240ED5D800E4EA52 /* DTTableController.m */,
+				60E2B0EA240ED5D800E4EA52 /* DTTabViewController.h */,
+				60E2B0E0240ED5D800E4EA52 /* DTTabViewController.m */,
+				60E2B0DD240ED5D800E4EA52 /* DTViewController.h */,
+				60E2B0E9240ED5D800E4EA52 /* DTViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -853,18 +965,23 @@
 				60ED7635240EB25B0013CB8C /* LaunchScreen.storyboard in Resources */,
 				606FE754241164F700522B96 /* auth_idcard_1@2x.png in Resources */,
 				606FE74F241164F700522B96 /* login_password_see@2x.png in Resources */,
+				606FE7962413708500522B96 /* login_auth_bg@2x.png in Resources */,
 				606FE71C24101DE700522B96 /* nav_icon_redbag@2x.png in Resources */,
 				606FE74A241164F700522B96 /* auth_idcard_2@2x.png in Resources */,
 				606FE71224101DE700522B96 /* nav_close_b@2x.png in Resources */,
 				606FE71F24101DE700522B96 /* nav_close@2x.png in Resources */,
 				606FE72024101DE700522B96 /* nav_icon_store@2x.png in Resources */,
 				606FE71924101DE700522B96 /* nav_message@2x.png in Resources */,
+				60B939A82413E465003147DC /* user_home_jutui@2x.png in Resources */,
 				60D03C90240FF99600E7D7D1 /* launch_image@2x.png in Resources */,
 				606FE71A24101DE700522B96 /* nav_back_b@2x.png in Resources */,
+				60B939AC2413E465003147DC /* user_home_bank@2x.png in Resources */,
 				606FE71524101DE700522B96 /* nav_test_icon_settings@2x.png in Resources */,
 				606FE71824101DE700522B96 /* nav_search@2x.png in Resources */,
 				606FE755241164F700522B96 /* logo_jtbang@2x.png in Resources */,
+				60B939AB2413E465003147DC /* user_home_protorol@2x.png in Resources */,
 				606FE751241164F700522B96 /* login_header_bg@2x.png in Resources */,
+				606FE7982413716700522B96 /* login_protorol_bg@2x.png in Resources */,
 				606FE71424101DE700522B96 /* nav_share@2x.png in Resources */,
 				606FE74D241164F700522B96 /* protorol_agree@2x.png in Resources */,
 				606FE71124101DE700522B96 /* nav_back_b2@2x.png in Resources */,
@@ -872,7 +989,9 @@
 				606FE71724101DE700522B96 /* nav_more_b@2x.png in Resources */,
 				606FE71624101DE700522B96 /* nav_delete@2x.png in Resources */,
 				606FE74E241164F700522B96 /* auth_idcard_3@2x.png in Resources */,
+				60B939A62413E465003147DC /* user_home_avatar@2x.png in Resources */,
 				606FE74B241164F700522B96 /* login_password_close@2x.png in Resources */,
+				60B939A72413E465003147DC /* user_home_info@2x.png in Resources */,
 				60ED7632240EB25B0013CB8C /* Assets.xcassets in Resources */,
 				606FE756241164F700522B96 /* auth_cam@2x.png in Resources */,
 				606FE74C241164F700522B96 /* login_icon_phone@2x.png in Resources */,
@@ -882,9 +1001,11 @@
 				606FE70F24101DE700522B96 /* nav_close_b2@2x.png in Resources */,
 				606FE753241164F700522B96 /* protorol_unagree@2x.png in Resources */,
 				606FE71E24101DE700522B96 /* nav_share_b@2x.png in Resources */,
+				60B939A92413E465003147DC /* user_home_logout@2x.png in Resources */,
 				606FE71B24101DE700522B96 /* nav_message_white@2x.png in Resources */,
 				606FE752241164F700522B96 /* login_icon_code@2x.png in Resources */,
 				606FE750241164F700522B96 /* login_password_unsee@2x.png in Resources */,
+				60B939AA2413E465003147DC /* user_home_camera@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -936,6 +1057,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60E2B125240ED5D800E4EA52 /* CWStaticImageManager.m in Sources */,
+				606FE7A924137B2D00522B96 /* JTUserProtorolsController.m in Sources */,
 				60E2B129240ED5D800E4EA52 /* WCControllerUtil.m in Sources */,
 				60E2B121240ED5D800E4EA52 /* DTHttpTableController.m in Sources */,
 				60E2B111240ED5D800E4EA52 /* DTTabScorllContentCell.m in Sources */,
@@ -953,17 +1075,22 @@
 				60D03C93240FF9F100E7D7D1 /* JTLoginHomeController.m in Sources */,
 				60E2B114240ED5D800E4EA52 /* DTScrollTabView.m in Sources */,
 				606FE72F241149BC00522B96 /* CKOldOpenUDID.m in Sources */,
+				606FE7B6241380D100522B96 /* WCTableSection.m in Sources */,
 				60E2B128240ED5D800E4EA52 /* WCAppStyleUtil.m in Sources */,
 				606FE75D24116C3D00522B96 /* DTFix+iOS13.m in Sources */,
 				6001C780240EB6C4006092BB /* JTUserManager.m in Sources */,
+				606FE7A024137AD800522B96 /* JTMineHomeController.m in Sources */,
 				60E2B10C240ED5D800E4EA52 /* DTEnrollProgressView.m in Sources */,
 				606FE77F241172D500522B96 /* JTLoginAuthImageCell.m in Sources */,
 				606FE7332411550200522B96 /* JTNetManager.m in Sources */,
 				60E2B117240ED5D800E4EA52 /* DTTagLabel.m in Sources */,
+				606FE7AF24137D7E00522B96 /* JTMineHeaderView.m in Sources */,
 				60E2B0FD240ED5D800E4EA52 /* CCCommentStarView.m in Sources */,
 				60E2B126240ED5D800E4EA52 /* FFAnimateHelper.m in Sources */,
+				606FE7AC24137B8300522B96 /* JTAboutUsController.m in Sources */,
 				60E2B105240ED5D800E4EA52 /* CLTitleTabView.m in Sources */,
 				60E2B107240ED5D800E4EA52 /* DTControllerListView.m in Sources */,
+				606FE7B3241380B200522B96 /* WCTableRow.m in Sources */,
 				6001C77D240EB69E006092BB /* JTDataManager.m in Sources */,
 				60E2B109240ED5D800E4EA52 /* DTScrollListViewCell.m in Sources */,
 				606FE72E241149BC00522B96 /* CKUDIDManager.m in Sources */,
@@ -1008,9 +1135,12 @@
 				60E2B102240ED5D800E4EA52 /* DTControl.m in Sources */,
 				60E2B10D240ED5D800E4EA52 /* DTGradientLabel.m in Sources */,
 				60ED762A240EB25A0013CB8C /* AppDelegate.m in Sources */,
+				606FE7B9241385BE00522B96 /* WCSourceTableData.m in Sources */,
 				60E2B101240ED5D800E4EA52 /* DTDrivingLoadingView.m in Sources */,
 				60E2B11C240ED5D800E4EA52 /* DTTabViewController.m in Sources */,
+				606FE7A624137B1800522B96 /* JTUserBankController.m in Sources */,
 				60E2B10F240ED5D800E4EA52 /* DTScrollLabel.m in Sources */,
+				606FE7A324137B0200522B96 /* JTUserInfoController.m in Sources */,
 				60D03C9C2410046600E7D7D1 /* SCLoginTextFieldCell.m in Sources */,
 				606FE7912412C2AD00522B96 /* DTTitleContentCell.m in Sources */,
 				606FE73C2411607700522B96 /* JTDataResult.m in Sources */,

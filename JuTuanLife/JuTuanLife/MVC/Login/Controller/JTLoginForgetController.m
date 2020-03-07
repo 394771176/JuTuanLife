@@ -8,6 +8,7 @@
 
 #import "JTLoginForgetController.h"
 #import "SCLoginTextFieldCell.h"
+#import "JTMineHomeController.h"
 
 @interface JTLoginForgetController () <DTTableButtonCellDelegate> {
     NSMutableArray *_cellList;
@@ -121,8 +122,12 @@
 
 - (void)tableButtonCellDidClickAction:(DTTableCustomCell *)cell
 {
-    NSLog(@"123");
+    if (APP_DEBUG) {
+        PUSH_VC(JTMineHomeController);
+        return;
+    }
     [self backAction];
+    
 }
 
 @end

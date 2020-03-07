@@ -172,33 +172,6 @@ NSString *const CONTENT_OFFSET = @"contentOffset";
     return [super pullRefreshTableHeaderDataSourceIsLoading:view];
 }
 
-#pragma mark - UITableViewDataSource & UITableViewDelegate
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 0;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 44;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return [[UITableViewCell alloc] init];
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-}
-
 - (void)currentControllerScrollToTop:(BOOL)animation
 {
     UIViewController *controller = [self currentController];

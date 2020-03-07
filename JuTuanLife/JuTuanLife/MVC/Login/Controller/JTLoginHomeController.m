@@ -53,6 +53,7 @@ DTTableButtonCellDelegate
 - (void)viewDidLoad
 {
     _loginHeader = [[JTLoginHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.width, 204 + 55 + SAFE_BOTTOM_VIEW_HEIGHT)];
+    _loginHeader.showLogo = YES;
     
     _phoneCell = [[SCLoginPhoneCell alloc] init];
     _phoneCell.delegate = self;
@@ -192,7 +193,7 @@ DTTableButtonCellDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     [super scrollViewDidScroll:scrollView];
-    [_loginHeader setScrollOffsetY:scrollView.contentOffset.y];
+    [_loginHeader setContentOffset:scrollView.contentOffset];
 }
 
 #pragma mark - DTTableButtonCellDelegate

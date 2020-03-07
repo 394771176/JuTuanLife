@@ -26,6 +26,12 @@
         //625 - 348
         self.height = self.contentView.height = 478 / 2.f + 20;
         
+        //6,7 8,7  24 * 24
+        CREATE_UI_V(UIImageView, 9, 4, self.contentView.width - 9 * 2, self.contentView.height - 4 - 2);
+        v.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        v.image = [[UIImage imageNamed:@"login_auth_bg"] resizableImageWithCapInsets:UIEdgeInsetsMake(12, 12, 11, 11)];
+        [self.contentView addSubview:v];
+        
         _bodyView = [[DTControl alloc] initWithFrame:CGRectMake(16, 10, self.contentView.width - 32, self.contentView.height - 20)];
         _bodyView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         _bodyView.backgroundColor = [UIColor whiteColor];

@@ -26,13 +26,19 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        
+        //0,3 6,3  27 * 27
+        CREATE_UI_V(UIImageView, 21, 12, self.contentView.width - 21 * 2, self.contentView.height - 12 - 6);
+        v.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        v.image = [[UIImage imageNamed:@"login_protorol_bg"] resizableImageWithCapInsets:UIEdgeInsetsMake(13, 13, 13, 13)];
+        [self.contentView addSubview:v];
+        
         CREATE_UI_VV(_bodyView, DTControl, 24, 12, self.contentView.width - 24 * 2, self.contentView.height - 12 * 2);
         _bodyView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         [_bodyView addTarget:self action:@selector(clickAction)];
-        _bodyView.backgroundColor = [UIColor whiteColor];
         [self.contentView addSubview:_bodyView];
         
-        CREATE_UI_VV(_titleLabel, UILabel, 15, 0, _bodyView.width - 30, _bodyView.height);
+        CREATE_UI_VV(_titleLabel, UILabel, 15, 3, _bodyView.width - 30, _bodyView.height - 3);
         _titleLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         [_titleLabel setFontSize:16 colorString:APP_JT_BLUE_STRING];
         [_bodyView addSubview:_titleLabel];

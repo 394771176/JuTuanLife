@@ -8,6 +8,7 @@
 
 #import "DTViewController.h"
 #import "DTNoDataView.h"
+#import "WCSourceTableData.h"
 
 @class DTTableController;
 
@@ -41,6 +42,10 @@
 
 //当有superController时，父类进行刷新
 @property (nonatomic, assign) BOOL needSuperReload;
+
+@property (nonatomic, strong) WCSourceTableData *sourceTableData;
+
+- (WCSourceTableData *)setupSourceTableData;
 
 - (void)reloadTableView;
 
