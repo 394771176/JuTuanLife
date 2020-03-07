@@ -46,7 +46,7 @@
 
 #define CELL_ID(str)        static NSString *cellId = @#str;
 
-#define URL(str)            [NSURL URLWithString:@#str]
+#define URL(str)            [NSURL URLWithString:str]
 
 #define RGB(r, g, b)        RGBA(r, g, b, 1)
 #define RGBA(r, g, b, a)    [UIColor colorWithRed:(float)(r)/255.0 green:(float)(g)/255.0 blue:(float)(b)/255.0 alpha:a]

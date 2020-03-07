@@ -89,6 +89,8 @@ DTTableButtonCellDelegate
     _forgetCell.delegate = self;
     
     [super viewDidLoad];
+    self.title = @"登录";
+    self.backgroundColor = [UIColor whiteColor];
     
     self.tableView.tableHeaderView = _loginHeader;
     self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;

@@ -7,11 +7,10 @@
 //
 
 #import "JTLoginHeaderView.h"
-
-NS_ASSUME_NONNULL_BEGIN
+#import "JTUser.h"
 
 @interface JTMineHeaderView : JTLoginHeaderView
 
-@end
+@property (nonatomic, strong) JTUser *user;
 
-NS_ASSUME_NONNULL_END
+@end

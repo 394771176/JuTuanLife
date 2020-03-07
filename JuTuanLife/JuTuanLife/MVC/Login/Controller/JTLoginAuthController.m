@@ -36,7 +36,6 @@ DTTableButtonCellDelegate
     
     [super viewDidLoad];
     self.title = @"认证身份";
-    self.backgroundColor = APP_JT_GRAY_BGCOLOR;
     
     [self.tableView setTableHeaderHeight:10 footerHeight:12];
     

@@ -64,6 +64,7 @@
     [super viewDidLoad];
     
     self.title = @"找回密码";
+    self.backgroundColor = [UIColor whiteColor];
     
     [self.tableView setTableHeaderHeight:100];
 }

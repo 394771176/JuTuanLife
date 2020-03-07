@@ -34,7 +34,6 @@
     
     [super viewDidLoad];
     self.title = @"签署协议";
-    self.backgroundColor = APP_JT_GRAY_BGCOLOR;
     
     [self.tableView setTableHeaderHeight:10 footerHeight:12];
     

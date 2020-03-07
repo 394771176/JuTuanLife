@@ -32,6 +32,8 @@
     self.title = @"我的";
     
     [self setupTableHeader];
+    
+    [self reloadTableView];
 }
 
 - (void)setupTableHeader
@@ -78,6 +80,12 @@
     }];
     
     return source;
+}
+
+- (void)reloadTableView
+{
+    _headerView.user = nil;
+    [super reloadTableView];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView

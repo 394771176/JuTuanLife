@@ -9,6 +9,7 @@
 #define WCBaseUIKit_h
 
 #import <WCCategory/WCCategory.h>
+#import <WCModule/WCModule.h>
 
 /*Entity*/
 #import "DTTabItem.h"
