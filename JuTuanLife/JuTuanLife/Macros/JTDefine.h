@@ -30,17 +30,7 @@ UIViewController *vc = [[_xxx_ alloc] init]; \
 #define CREATE_UI_V(c, x, y, w, h)    c *v = CREATE_UI(c, x, y, w, h)
 #define CREATE_UI_VV(v, c, x, y, w, h)  v = CREATE_UI(c, x, y, w, h)
 
-#define CREATE_Btn(x, y, w, h)     \
-UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom]; \
-btn.frame = RECT(x, y, w, h)
-
-#define CREATE_Btn_B(btn, x, y, w, h)     \
-btn = [UIButton buttonWithType:UIButtonTypeCustom]; \
-btn.frame = RECT(x, y, w, h)
-
-
 #define CREATE_ITEM(c)              c *item = [c new];
-
 
 #ifndef __OPTIMIZE__
 #define NSLog(...) NSLog(__VA_ARGS__)

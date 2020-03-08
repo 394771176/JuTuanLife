@@ -28,15 +28,12 @@
     if (self) {
         
         //0,3 6,3  27 * 27
-        CREATE_UI_V(UIImageView, 21, 12, self.contentView.width - 21 * 2, self.contentView.height - 12 - 6);
-        v.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-        v.image = [[UIImage imageNamed:@"login_protorol_bg"] resizableImageWithCapInsets:UIEdgeInsetsMake(13, 13, 13, 13)];
-        [self.contentView addSubview:v];
+        UIImage *image = [[UIImage imageNamed:@"login_protorol_bg"] resizableImageWithCapInsets:UIEdgeInsetsMake(13, 13, 13, 13)];
         
-        CREATE_UI_VV(_bodyView, DTControl, 24, 12, self.contentView.width - 24 * 2, self.contentView.height - 12 * 2);
-        _bodyView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        UICREATEImg(UIImageView, 21, 12, self.contentView.width - 21 * 2, self.contentView.height - 12 - 6, AAWH, CCFill, image, self.contentView)
+        
+        UICREATETo(_bodyView, DTControl, 24, 12, self.contentView.width - 24 * 2, self.contentView.height - 12 * 2, AAWH, self.contentView);
         [_bodyView addTarget:self action:@selector(clickAction)];
-        [self.contentView addSubview:_bodyView];
         
         CREATE_UI_VV(_titleLabel, UILabel, 15, 3, _bodyView.width - 30, _bodyView.height - 3);
         _titleLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;

@@ -108,8 +108,10 @@ DTTableButtonCellDelegate
         NSLog(@"result = %@", result.data);
     }];
     
-    JTLoginAuthController *vc = [JTLoginAuthController new];
-    [WCControllerUtil pushViewController:vc];
+//    JTLoginAuthController *vc = [JTLoginAuthController new];
+//    [WCControllerUtil pushViewController:vc];
+    
+    [JTCommon resetMainController];
 }
 
 - (void)forgetAction

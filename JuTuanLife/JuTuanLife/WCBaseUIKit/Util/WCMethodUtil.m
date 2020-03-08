@@ -44,6 +44,103 @@ CGFloat validValue(CGFloat f, CGFloat min, CGFloat max)
     return f;
 }
 
+UIColor *ColorFrom(id color)
+{
+    if (color) {
+        if ([color isKindOfClass:UIColor.class]) {
+            return color;
+        } else if ([color isKindOfClass:NSString.class]) {
+            return [UIColor colorWithString:color];
+        }
+    }
+    return [UIColor clearColor];
+}
+
+UIFont *FontFrom(id font) {
+    if (font) {
+        if ([font isKindOfClass:UIFont.class]) {
+            return font;
+        } else if ([font isKindOfClass:NSNumber.class] || [font isKindOfClass:NSString.class]) {
+            return [UIFont systemFontOfSize:[font integerValue]];
+        }
+    }
+    return [UIFont systemFontOfSize:16];
+}
+
+UIImage *ImageFrom(id image) {
+    if (image) {
+        if ([image isKindOfClass:UIImage.class]) {
+            return image;
+        } else if ([image isKindOfClass:NSString.class]) {
+            return [UIImage imageNamed:image];
+        }
+    }
+    return nil;
+}
+
+
+id UICreate(Class uiClass, CGRect frame, UIAutoResizingType AA, UIView *toView)
+{
+    UIView *view = nil;
+    if ([uiClass isKindOfClass:UIButton.class]) {
+        view = [uiClass buttonWithType:UIButtonTypeCustom];
+        [view setFrame:frame];
+    } else {
+        view = [[uiClass alloc] initWithFrame:frame];
+    }
+    view.autoresizingMask = (UIViewAutoresizing)AA;
+    if (toView) {
+        [toView addSubview:view];
+    }
+    return view;
+}
+
+id UICreateLabel(Class uiClass, CGRect frame, UIAutoResizingType AA, NSString *text, id font, id color, UIView *toView)
+{
+    UILabel *label = UICreate(uiClass, frame, AA, toView);
+    label.text = text;
+    label.font = FontFrom(font);
+    label.textColor = ColorFrom(color);
+    return label;
+}
+
+id UICreateImage(Class uiClass, CGRect frame, UIAutoResizingType AA, UIContetntModeType CC, id image, UIView *toView)
+{
+    UIImageView *imageView = nil;
+    UIImage *img = ImageFrom(image);
+    if (CGRectEqualToRect(frame, CGRectZero) && img) {
+        imageView = [[uiClass alloc] initWithImage:img];
+    } else {
+        imageView = UICreate(uiClass, frame, AA, toView);
+        imageView.image = img;
+    }
+    imageView.contentMode = (UIViewContentMode)CC;
+    return imageView;
+}
+
+id UICreateBtn(Class uiClass, CGRect frame, UIAutoResizingType AA, NSString *title, id font, id color, id target, SEL action, UIView *toView)
+{
+    UIButton *btn = UICreate(uiClass, frame, AA, toView);
+    [btn setTitle:title];
+    [btn setTitleFont:FontFrom(font)];
+    [btn setTitleColor:ColorFrom(color)];
+    
+    if (target && action && [target respondsToSelector:action]) {
+        [btn addTarget:target action:action];
+    }
+    
+    return btn;
+}
+
 @implementation WCMethodUtil
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+
+    }
+    return self;
+}
 
 @end

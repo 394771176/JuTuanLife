@@ -81,6 +81,27 @@
 		60B939AA2413E465003147DC /* user_home_camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60B939A32413E465003147DC /* user_home_camera@2x.png */; };
 		60B939AB2413E465003147DC /* user_home_protorol@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60B939A42413E465003147DC /* user_home_protorol@2x.png */; };
 		60B939AC2413E465003147DC /* user_home_bank@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60B939A52413E465003147DC /* user_home_bank@2x.png */; };
+		60B939BE2414D02F003147DC /* JTShipHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B939BD2414D02F003147DC /* JTShipHomeController.m */; };
+		60B939C12414D041003147DC /* JTTaskHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B939C02414D041003147DC /* JTTaskHomeController.m */; };
+		60B939C92414D09B003147DC /* JTMessageCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B939C82414D09B003147DC /* JTMessageCenterController.m */; };
+		60B939CC2414D0E8003147DC /* JTMessageListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B939CB2414D0E8003147DC /* JTMessageListCell.m */; };
+		60B939CF2414D104003147DC /* JTMessageListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B939CE2414D104003147DC /* JTMessageListModel.m */; };
+		60B939D22414D12E003147DC /* JTTaskListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B939D12414D12E003147DC /* JTTaskListCell.m */; };
+		60B939D52414D141003147DC /* JTTaskListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B939D42414D141003147DC /* JTTaskListModel.m */; };
+		60B939D82414D15E003147DC /* JTShipListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B939D72414D15E003147DC /* JTShipListModel.m */; };
+		60B939DB2414D179003147DC /* JTShipListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B939DA2414D179003147DC /* JTShipListCell.m */; };
+		60B939DE2414D289003147DC /* JTHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B939DD2414D289003147DC /* JTHomeController.m */; };
+		60B93B4E2414DC41003147DC /* DTMainTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B93B4D2414DC41003147DC /* DTMainTabBarView.m */; };
+		60B93B582414E0A3003147DC /* main_tab_task@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60B93B502414E0A3003147DC /* main_tab_task@2x.png */; };
+		60B93B592414E0A3003147DC /* main_tab_home_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60B93B512414E0A3003147DC /* main_tab_home_sel@2x.png */; };
+		60B93B5A2414E0A3003147DC /* main_tab_home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60B93B522414E0A3003147DC /* main_tab_home@2x.png */; };
+		60B93B5B2414E0A3003147DC /* main_tab_ship_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60B93B532414E0A3003147DC /* main_tab_ship_sel@2x.png */; };
+		60B93B5C2414E0A3003147DC /* main_tab_mine_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60B93B542414E0A3003147DC /* main_tab_mine_sel@2x.png */; };
+		60B93B5D2414E0A3003147DC /* main_tab_task_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60B93B552414E0A3003147DC /* main_tab_task_sel@2x.png */; };
+		60B93B5E2414E0A3003147DC /* main_tab_ship@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60B93B562414E0A3003147DC /* main_tab_ship@2x.png */; };
+		60B93B5F2414E0A3003147DC /* main_tab_mine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60B93B572414E0A3003147DC /* main_tab_mine@2x.png */; };
+		60B93B622414E111003147DC /* jt_cell_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60B93B602414E111003147DC /* jt_cell_arrow@2x.png */; };
+		60B93B632414E111003147DC /* jt_nav_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60B93B612414E111003147DC /* jt_nav_back@2x.png */; };
 		60D03C90240FF99600E7D7D1 /* launch_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60D03C8F240FF99600E7D7D1 /* launch_image@2x.png */; };
 		60D03C93240FF9F100E7D7D1 /* JTLoginHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D03C92240FF9F100E7D7D1 /* JTLoginHomeController.m */; };
 		60D03C96240FFA9900E7D7D1 /* JTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D03C95240FFA9900E7D7D1 /* JTUser.m */; };
@@ -257,6 +278,38 @@
 		60B939A32413E465003147DC /* user_home_camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_home_camera@2x.png"; sourceTree = "<group>"; };
 		60B939A42413E465003147DC /* user_home_protorol@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_home_protorol@2x.png"; sourceTree = "<group>"; };
 		60B939A52413E465003147DC /* user_home_bank@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_home_bank@2x.png"; sourceTree = "<group>"; };
+		60B939BC2414D02F003147DC /* JTShipHomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTShipHomeController.h; sourceTree = "<group>"; };
+		60B939BD2414D02F003147DC /* JTShipHomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTShipHomeController.m; sourceTree = "<group>"; };
+		60B939BF2414D041003147DC /* JTTaskHomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTTaskHomeController.h; sourceTree = "<group>"; };
+		60B939C02414D041003147DC /* JTTaskHomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTTaskHomeController.m; sourceTree = "<group>"; };
+		60B939C72414D09B003147DC /* JTMessageCenterController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTMessageCenterController.h; sourceTree = "<group>"; };
+		60B939C82414D09B003147DC /* JTMessageCenterController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTMessageCenterController.m; sourceTree = "<group>"; };
+		60B939CA2414D0E8003147DC /* JTMessageListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTMessageListCell.h; sourceTree = "<group>"; };
+		60B939CB2414D0E8003147DC /* JTMessageListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTMessageListCell.m; sourceTree = "<group>"; };
+		60B939CD2414D104003147DC /* JTMessageListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTMessageListModel.h; sourceTree = "<group>"; };
+		60B939CE2414D104003147DC /* JTMessageListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTMessageListModel.m; sourceTree = "<group>"; };
+		60B939D02414D12E003147DC /* JTTaskListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTTaskListCell.h; sourceTree = "<group>"; };
+		60B939D12414D12E003147DC /* JTTaskListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTTaskListCell.m; sourceTree = "<group>"; };
+		60B939D32414D141003147DC /* JTTaskListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTTaskListModel.h; sourceTree = "<group>"; };
+		60B939D42414D141003147DC /* JTTaskListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTTaskListModel.m; sourceTree = "<group>"; };
+		60B939D62414D15E003147DC /* JTShipListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTShipListModel.h; sourceTree = "<group>"; };
+		60B939D72414D15E003147DC /* JTShipListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTShipListModel.m; sourceTree = "<group>"; };
+		60B939D92414D179003147DC /* JTShipListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTShipListCell.h; sourceTree = "<group>"; };
+		60B939DA2414D179003147DC /* JTShipListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTShipListCell.m; sourceTree = "<group>"; };
+		60B939DC2414D289003147DC /* JTHomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTHomeController.h; sourceTree = "<group>"; };
+		60B939DD2414D289003147DC /* JTHomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTHomeController.m; sourceTree = "<group>"; };
+		60B93B4C2414DC41003147DC /* DTMainTabBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTMainTabBarView.h; sourceTree = "<group>"; };
+		60B93B4D2414DC41003147DC /* DTMainTabBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTMainTabBarView.m; sourceTree = "<group>"; };
+		60B93B502414E0A3003147DC /* main_tab_task@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main_tab_task@2x.png"; sourceTree = "<group>"; };
+		60B93B512414E0A3003147DC /* main_tab_home_sel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main_tab_home_sel@2x.png"; sourceTree = "<group>"; };
+		60B93B522414E0A3003147DC /* main_tab_home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main_tab_home@2x.png"; sourceTree = "<group>"; };
+		60B93B532414E0A3003147DC /* main_tab_ship_sel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main_tab_ship_sel@2x.png"; sourceTree = "<group>"; };
+		60B93B542414E0A3003147DC /* main_tab_mine_sel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main_tab_mine_sel@2x.png"; sourceTree = "<group>"; };
+		60B93B552414E0A3003147DC /* main_tab_task_sel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main_tab_task_sel@2x.png"; sourceTree = "<group>"; };
+		60B93B562414E0A3003147DC /* main_tab_ship@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main_tab_ship@2x.png"; sourceTree = "<group>"; };
+		60B93B572414E0A3003147DC /* main_tab_mine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main_tab_mine@2x.png"; sourceTree = "<group>"; };
+		60B93B602414E111003147DC /* jt_cell_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jt_cell_arrow@2x.png"; sourceTree = "<group>"; };
+		60B93B612414E111003147DC /* jt_nav_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jt_nav_back@2x.png"; sourceTree = "<group>"; };
 		60D03C8F240FF99600E7D7D1 /* launch_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch_image@2x.png"; sourceTree = "<group>"; };
 		60D03C91240FF9F100E7D7D1 /* JTLoginHomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTLoginHomeController.h; sourceTree = "<group>"; };
 		60D03C92240FF9F100E7D7D1 /* JTLoginHomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTLoginHomeController.m; sourceTree = "<group>"; };
@@ -458,8 +511,11 @@
 			isa = PBXGroup;
 			children = (
 				6001C791240EB755006092BB /* Main */,
+				60B939B72414D01B003147DC /* Ship */,
+				60B939B22414D01B003147DC /* Task */,
 				6001C78A240EB755006092BB /* Mine */,
 				6001C797240EB755006092BB /* Login */,
+				60B939C22414D06D003147DC /* Message */,
 			);
 			path = MVC;
 			sourceTree = "<group>";
@@ -491,6 +547,8 @@
 			children = (
 				60E2B145240ED6AF00E4EA52 /* JTMainController.h */,
 				60E2B146240ED6AF00E4EA52 /* JTMainController.m */,
+				60B939DC2414D289003147DC /* JTHomeController.h */,
+				60B939DD2414D289003147DC /* JTHomeController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -512,6 +570,9 @@
 		6001C796240EB755006092BB /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				60B93B602414E111003147DC /* jt_cell_arrow@2x.png */,
+				60B93B612414E111003147DC /* jt_nav_back@2x.png */,
+				60B93B4F2414E0A3003147DC /* mainTab */,
 				606FE6FC24101DE700522B96 /* navbar */,
 			);
 			path = Resource;
@@ -714,6 +775,156 @@
 			path = SourcesTable;
 			sourceTree = "<group>";
 		};
+		60B939B22414D01B003147DC /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				60B939B32414D01B003147DC /* Controller */,
+				60B939B42414D01B003147DC /* Model */,
+				60B939B52414D01B003147DC /* View */,
+				60B939B62414D01B003147DC /* Resource */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		60B939B32414D01B003147DC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				60B939BF2414D041003147DC /* JTTaskHomeController.h */,
+				60B939C02414D041003147DC /* JTTaskHomeController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		60B939B42414D01B003147DC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				60B939D32414D141003147DC /* JTTaskListModel.h */,
+				60B939D42414D141003147DC /* JTTaskListModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		60B939B52414D01B003147DC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				60B939D02414D12E003147DC /* JTTaskListCell.h */,
+				60B939D12414D12E003147DC /* JTTaskListCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		60B939B62414D01B003147DC /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		60B939B72414D01B003147DC /* Ship */ = {
+			isa = PBXGroup;
+			children = (
+				60B939B82414D01B003147DC /* Controller */,
+				60B939B92414D01B003147DC /* Model */,
+				60B939BA2414D01B003147DC /* View */,
+				60B939BB2414D01B003147DC /* Resource */,
+			);
+			path = Ship;
+			sourceTree = "<group>";
+		};
+		60B939B82414D01B003147DC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				60B939BC2414D02F003147DC /* JTShipHomeController.h */,
+				60B939BD2414D02F003147DC /* JTShipHomeController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		60B939B92414D01B003147DC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				60B939D62414D15E003147DC /* JTShipListModel.h */,
+				60B939D72414D15E003147DC /* JTShipListModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		60B939BA2414D01B003147DC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				60B939D92414D179003147DC /* JTShipListCell.h */,
+				60B939DA2414D179003147DC /* JTShipListCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		60B939BB2414D01B003147DC /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		60B939C22414D06D003147DC /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				60B939C32414D06E003147DC /* Controller */,
+				60B939C42414D06E003147DC /* Model */,
+				60B939C52414D06E003147DC /* View */,
+				60B939C62414D06E003147DC /* Resource */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		60B939C32414D06E003147DC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				60B939C72414D09B003147DC /* JTMessageCenterController.h */,
+				60B939C82414D09B003147DC /* JTMessageCenterController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		60B939C42414D06E003147DC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				60B939CD2414D104003147DC /* JTMessageListModel.h */,
+				60B939CE2414D104003147DC /* JTMessageListModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		60B939C52414D06E003147DC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				60B939CA2414D0E8003147DC /* JTMessageListCell.h */,
+				60B939CB2414D0E8003147DC /* JTMessageListCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		60B939C62414D06E003147DC /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		60B93B4F2414E0A3003147DC /* mainTab */ = {
+			isa = PBXGroup;
+			children = (
+				60B93B502414E0A3003147DC /* main_tab_task@2x.png */,
+				60B93B512414E0A3003147DC /* main_tab_home_sel@2x.png */,
+				60B93B522414E0A3003147DC /* main_tab_home@2x.png */,
+				60B93B532414E0A3003147DC /* main_tab_ship_sel@2x.png */,
+				60B93B542414E0A3003147DC /* main_tab_mine_sel@2x.png */,
+				60B93B552414E0A3003147DC /* main_tab_task_sel@2x.png */,
+				60B93B562414E0A3003147DC /* main_tab_ship@2x.png */,
+				60B93B572414E0A3003147DC /* main_tab_mine@2x.png */,
+			);
+			path = mainTab;
+			sourceTree = "<group>";
+		};
 		60E2B003240ED59900E4EA52 /* WCBaseUIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -732,68 +943,70 @@
 		60E2B09B240ED5D800E4EA52 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				606FE7892412C28500522B96 /* DTTableTitleCell.h */,
-				606FE78A2412C28500522B96 /* DTTableTitleCell.m */,
+				60E2B0BA240ED5D800E4EA52 /* BPOnePixLineView.h */,
+				60E2B0A2240ED5D800E4EA52 /* BPOnePixLineView.m */,
+				60E2B0BD240ED5D800E4EA52 /* CCCommentStarView.h */,
+				60E2B09F240ED5D800E4EA52 /* CCCommentStarView.m */,
+				60E2B0CE240ED5D800E4EA52 /* CLAlertView.h */,
+				60E2B0B1240ED5D800E4EA52 /* CLAlertView.m */,
+				60E2B0C9240ED5D800E4EA52 /* CLDatePickerView.h */,
+				60E2B0AE240ED5D800E4EA52 /* CLDatePickerView.m */,
+				60E2B0D1240ED5D800E4EA52 /* CLTitleTabView.h */,
+				60E2B0B0240ED5D800E4EA52 /* CLTitleTabView.m */,
+				60E2B0A4240ED5D800E4EA52 /* DTBadgeView.h */,
+				60E2B0B9240ED5D800E4EA52 /* DTBadgeView.m */,
+				60E2B0A1240ED5D800E4EA52 /* DTButton.h */,
+				60E2B0BB240ED5D800E4EA52 /* DTButton.m */,
+				60E2B0C1240ED5D800E4EA52 /* DTControl.h */,
+				60E2B0AC240ED5D800E4EA52 /* DTControl.m */,
+				60E2B0CF240ED5D800E4EA52 /* DTControllerListView.h */,
+				60E2B0B2240ED5D800E4EA52 /* DTControllerListView.m */,
+				60E2B0C4240ED5D800E4EA52 /* DTDrivingLoadingView.h */,
+				60E2B0AA240ED5D800E4EA52 /* DTDrivingLoadingView.m */,
+				60E2B0A0240ED5D800E4EA52 /* DTEnrollProgressView.h */,
+				60E2B0BC240ED5D800E4EA52 /* DTEnrollProgressView.m */,
+				60E2B09D240ED5D800E4EA52 /* DTGradientLabel.h */,
+				60E2B0BE240ED5D800E4EA52 /* DTGradientLabel.m */,
+				60E2B0B6240ED5D800E4EA52 /* DTHorizontalScrollView.h */,
+				60E2B0CB240ED5D800E4EA52 /* DTHorizontalScrollView.m */,
+				60E2B0B7240ED5D800E4EA52 /* DTLoadMoreCommonCell.h */,
+				60E2B0A5240ED5D800E4EA52 /* DTLoadMoreCommonCell.m */,
+				60E2B09E240ED5D800E4EA52 /* DTNoDataView.h */,
+				60E2B0BF240ED5D800E4EA52 /* DTNoDataView.m */,
+				60E2B0AB240ED5D800E4EA52 /* DTPickerView.h */,
+				60E2B0C2240ED5D800E4EA52 /* DTPickerView.m */,
+				60E2B0B4240ED5D800E4EA52 /* DTPullRefreshHeadView.h */,
+				60E2B0CD240ED5D800E4EA52 /* DTPullRefreshHeadView.m */,
+				60E2B09C240ED5D800E4EA52 /* DTScrollLabel.h */,
+				60E2B0C0240ED5D800E4EA52 /* DTScrollLabel.m */,
+				60E2B0A3240ED5D800E4EA52 /* DTScrollListViewCell.h */,
+				60E2B0B8240ED5D800E4EA52 /* DTScrollListViewCell.m */,
+				60E2B0AD240ED5D800E4EA52 /* DTScrollTabView.h */,
+				60E2B0CA240ED5D800E4EA52 /* DTScrollTabView.m */,
+				60E2B0CC240ED5D800E4EA52 /* DTStrokeLabel.h */,
+				60E2B0B5240ED5D800E4EA52 /* DTStrokeLabel.m */,
+				60E2B0A7240ED5D800E4EA52 /* DTTabBarView.h */,
+				60E2B0C6240ED5D800E4EA52 /* DTTabBarView.m */,
+				60B93B4C2414DC41003147DC /* DTMainTabBarView.h */,
+				60B93B4D2414DC41003147DC /* DTMainTabBarView.m */,
+				60E2B0C3240ED5D800E4EA52 /* DTTableButtonCell.h */,
+				60E2B0A9240ED5D800E4EA52 /* DTTableButtonCell.m */,
 				606FE78D2412C29900522B96 /* DTTableContentCell.h */,
 				606FE78C2412C29900522B96 /* DTTableContentCell.m */,
-				606FE7902412C2AD00522B96 /* DTTitleContentCell.h */,
-				606FE78F2412C2AD00522B96 /* DTTitleContentCell.m */,
+				60E2B0A6240ED5D800E4EA52 /* DTTableCustomCell.h */,
+				60E2B0C7240ED5D800E4EA52 /* DTTableCustomCell.m */,
 				606FE7932412C2CB00522B96 /* DTTableIconCell.h */,
 				606FE7922412C2CB00522B96 /* DTTableIconCell.m */,
-				60E2B09C240ED5D800E4EA52 /* DTScrollLabel.h */,
-				60E2B09D240ED5D800E4EA52 /* DTGradientLabel.h */,
-				60E2B09E240ED5D800E4EA52 /* DTNoDataView.h */,
-				60E2B09F240ED5D800E4EA52 /* CCCommentStarView.m */,
-				60E2B0A0240ED5D800E4EA52 /* DTEnrollProgressView.h */,
-				60E2B0A1240ED5D800E4EA52 /* DTButton.h */,
-				60E2B0A2240ED5D800E4EA52 /* BPOnePixLineView.m */,
-				60E2B0A3240ED5D800E4EA52 /* DTScrollListViewCell.h */,
-				60E2B0A4240ED5D800E4EA52 /* DTBadgeView.h */,
-				60E2B0A5240ED5D800E4EA52 /* DTLoadMoreCommonCell.m */,
-				60E2B0A6240ED5D800E4EA52 /* DTTableCustomCell.h */,
-				60E2B0A7240ED5D800E4EA52 /* DTTabBarView.h */,
+				606FE7892412C28500522B96 /* DTTableTitleCell.h */,
+				606FE78A2412C28500522B96 /* DTTableTitleCell.m */,
 				60E2B0A8240ED5D800E4EA52 /* DTTabScorllContentCell.h */,
-				60E2B0A9240ED5D800E4EA52 /* DTTableButtonCell.m */,
-				60E2B0AA240ED5D800E4EA52 /* DTDrivingLoadingView.m */,
-				60E2B0AB240ED5D800E4EA52 /* DTPickerView.h */,
-				60E2B0AC240ED5D800E4EA52 /* DTControl.m */,
-				60E2B0AD240ED5D800E4EA52 /* DTScrollTabView.h */,
-				60E2B0AE240ED5D800E4EA52 /* CLDatePickerView.m */,
-				60E2B0AF240ED5D800E4EA52 /* DTUISegmentView.m */,
-				60E2B0B0240ED5D800E4EA52 /* CLTitleTabView.m */,
-				60E2B0B1240ED5D800E4EA52 /* CLAlertView.m */,
-				60E2B0B2240ED5D800E4EA52 /* DTControllerListView.m */,
-				60E2B0B3240ED5D800E4EA52 /* DTTagLabel.h */,
-				60E2B0B4240ED5D800E4EA52 /* DTPullRefreshHeadView.h */,
-				60E2B0B5240ED5D800E4EA52 /* DTStrokeLabel.m */,
-				60E2B0B6240ED5D800E4EA52 /* DTHorizontalScrollView.h */,
-				60E2B0B7240ED5D800E4EA52 /* DTLoadMoreCommonCell.h */,
-				60E2B0B8240ED5D800E4EA52 /* DTScrollListViewCell.m */,
-				60E2B0B9240ED5D800E4EA52 /* DTBadgeView.m */,
-				60E2B0BA240ED5D800E4EA52 /* BPOnePixLineView.h */,
-				60E2B0BB240ED5D800E4EA52 /* DTButton.m */,
-				60E2B0BC240ED5D800E4EA52 /* DTEnrollProgressView.m */,
-				60E2B0BD240ED5D800E4EA52 /* CCCommentStarView.h */,
-				60E2B0BE240ED5D800E4EA52 /* DTGradientLabel.m */,
-				60E2B0BF240ED5D800E4EA52 /* DTNoDataView.m */,
-				60E2B0C0240ED5D800E4EA52 /* DTScrollLabel.m */,
-				60E2B0C1240ED5D800E4EA52 /* DTControl.h */,
-				60E2B0C2240ED5D800E4EA52 /* DTPickerView.m */,
-				60E2B0C3240ED5D800E4EA52 /* DTTableButtonCell.h */,
-				60E2B0C4240ED5D800E4EA52 /* DTDrivingLoadingView.h */,
 				60E2B0C5240ED5D800E4EA52 /* DTTabScorllContentCell.m */,
-				60E2B0C6240ED5D800E4EA52 /* DTTabBarView.m */,
-				60E2B0C7240ED5D800E4EA52 /* DTTableCustomCell.m */,
-				60E2B0C8240ED5D800E4EA52 /* DTUISegmentView.h */,
-				60E2B0C9240ED5D800E4EA52 /* CLDatePickerView.h */,
-				60E2B0CA240ED5D800E4EA52 /* DTScrollTabView.m */,
-				60E2B0CB240ED5D800E4EA52 /* DTHorizontalScrollView.m */,
-				60E2B0CC240ED5D800E4EA52 /* DTStrokeLabel.h */,
-				60E2B0CD240ED5D800E4EA52 /* DTPullRefreshHeadView.m */,
-				60E2B0CE240ED5D800E4EA52 /* CLAlertView.h */,
-				60E2B0CF240ED5D800E4EA52 /* DTControllerListView.h */,
+				60E2B0B3240ED5D800E4EA52 /* DTTagLabel.h */,
 				60E2B0D0240ED5D800E4EA52 /* DTTagLabel.m */,
-				60E2B0D1240ED5D800E4EA52 /* CLTitleTabView.h */,
+				606FE7902412C2AD00522B96 /* DTTitleContentCell.h */,
+				606FE78F2412C2AD00522B96 /* DTTitleContentCell.m */,
+				60E2B0C8240ED5D800E4EA52 /* DTUISegmentView.h */,
+				60E2B0AF240ED5D800E4EA52 /* DTUISegmentView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -802,8 +1015,8 @@
 			isa = PBXGroup;
 			children = (
 				60E2B0D3240ED5D800E4EA52 /* DTTabItem.h */,
-				60E2B0D4240ED5D800E4EA52 /* DTTitleIconItem.h */,
 				60E2B0D5240ED5D800E4EA52 /* DTTabItem.m */,
+				60E2B0D4240ED5D800E4EA52 /* DTTitleIconItem.h */,
 				60E2B0D6240ED5D800E4EA52 /* DTTitleIconItem.m */,
 			);
 			path = Entity;
@@ -848,21 +1061,21 @@
 			children = (
 				60E2B2B6240FE58100E4EA52 /* BPAppDelegate.h */,
 				60E2B2B5240FE58100E4EA52 /* BPAppDelegate.m */,
-				60E2B0EE240ED5D800E4EA52 /* WCMethodUtil.m */,
-				60E2B0EF240ED5D800E4EA52 /* DTPubUtil.h */,
-				60E2B0F0240ED5D800E4EA52 /* FFAnimateHelper.h */,
-				60E2B0F1240ED5D800E4EA52 /* WCBarItemUtil.h */,
-				60E2B0F2240ED5D800E4EA52 /* WCControllerUtil.h */,
-				60E2B0F3240ED5D800E4EA52 /* WCAppStyleUtil.h */,
-				60E2B0F4240ED5D800E4EA52 /* CWStaticImageManager.m */,
-				60E2B0F5240ED5D800E4EA52 /* FFAnimateHelper.m */,
-				60E2B0F6240ED5D800E4EA52 /* DTPubUtil.m */,
-				60E2B0F7240ED5D800E4EA52 /* WCMethodUtil.h */,
-				60E2B0F8240ED5D800E4EA52 /* WCUICommon.h */,
-				60E2B0F9240ED5D800E4EA52 /* WCAppStyleUtil.m */,
-				60E2B0FA240ED5D800E4EA52 /* WCControllerUtil.m */,
-				60E2B0FB240ED5D800E4EA52 /* WCBarItemUtil.m */,
 				60E2B0FC240ED5D800E4EA52 /* CWStaticImageManager.h */,
+				60E2B0F4240ED5D800E4EA52 /* CWStaticImageManager.m */,
+				60E2B0EF240ED5D800E4EA52 /* DTPubUtil.h */,
+				60E2B0F6240ED5D800E4EA52 /* DTPubUtil.m */,
+				60E2B0F0240ED5D800E4EA52 /* FFAnimateHelper.h */,
+				60E2B0F5240ED5D800E4EA52 /* FFAnimateHelper.m */,
+				60E2B0F3240ED5D800E4EA52 /* WCAppStyleUtil.h */,
+				60E2B0F9240ED5D800E4EA52 /* WCAppStyleUtil.m */,
+				60E2B0F1240ED5D800E4EA52 /* WCBarItemUtil.h */,
+				60E2B0FB240ED5D800E4EA52 /* WCBarItemUtil.m */,
+				60E2B0F2240ED5D800E4EA52 /* WCControllerUtil.h */,
+				60E2B0FA240ED5D800E4EA52 /* WCControllerUtil.m */,
+				60E2B0F7240ED5D800E4EA52 /* WCMethodUtil.h */,
+				60E2B0EE240ED5D800E4EA52 /* WCMethodUtil.m */,
+				60E2B0F8240ED5D800E4EA52 /* WCUICommon.h */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -967,8 +1180,13 @@
 				606FE74F241164F700522B96 /* login_password_see@2x.png in Resources */,
 				606FE7962413708500522B96 /* login_auth_bg@2x.png in Resources */,
 				606FE71C24101DE700522B96 /* nav_icon_redbag@2x.png in Resources */,
+				60B93B5D2414E0A3003147DC /* main_tab_task_sel@2x.png in Resources */,
+				60B93B582414E0A3003147DC /* main_tab_task@2x.png in Resources */,
+				60B93B5B2414E0A3003147DC /* main_tab_ship_sel@2x.png in Resources */,
 				606FE74A241164F700522B96 /* auth_idcard_2@2x.png in Resources */,
+				60B93B592414E0A3003147DC /* main_tab_home_sel@2x.png in Resources */,
 				606FE71224101DE700522B96 /* nav_close_b@2x.png in Resources */,
+				60B93B632414E111003147DC /* jt_nav_back@2x.png in Resources */,
 				606FE71F24101DE700522B96 /* nav_close@2x.png in Resources */,
 				606FE72024101DE700522B96 /* nav_icon_store@2x.png in Resources */,
 				606FE71924101DE700522B96 /* nav_message@2x.png in Resources */,
@@ -982,6 +1200,7 @@
 				60B939AB2413E465003147DC /* user_home_protorol@2x.png in Resources */,
 				606FE751241164F700522B96 /* login_header_bg@2x.png in Resources */,
 				606FE7982413716700522B96 /* login_protorol_bg@2x.png in Resources */,
+				60B93B5F2414E0A3003147DC /* main_tab_mine@2x.png in Resources */,
 				606FE71424101DE700522B96 /* nav_share@2x.png in Resources */,
 				606FE74D241164F700522B96 /* protorol_agree@2x.png in Resources */,
 				606FE71124101DE700522B96 /* nav_back_b2@2x.png in Resources */,
@@ -992,6 +1211,7 @@
 				60B939A62413E465003147DC /* user_home_avatar@2x.png in Resources */,
 				606FE74B241164F700522B96 /* login_password_close@2x.png in Resources */,
 				60B939A72413E465003147DC /* user_home_info@2x.png in Resources */,
+				60B93B622414E111003147DC /* jt_cell_arrow@2x.png in Resources */,
 				60ED7632240EB25B0013CB8C /* Assets.xcassets in Resources */,
 				606FE756241164F700522B96 /* auth_cam@2x.png in Resources */,
 				606FE74C241164F700522B96 /* login_icon_phone@2x.png in Resources */,
@@ -1000,12 +1220,15 @@
 				606FE71D24101DE700522B96 /* nav_back@2x.png in Resources */,
 				606FE70F24101DE700522B96 /* nav_close_b2@2x.png in Resources */,
 				606FE753241164F700522B96 /* protorol_unagree@2x.png in Resources */,
+				60B93B5E2414E0A3003147DC /* main_tab_ship@2x.png in Resources */,
 				606FE71E24101DE700522B96 /* nav_share_b@2x.png in Resources */,
 				60B939A92413E465003147DC /* user_home_logout@2x.png in Resources */,
 				606FE71B24101DE700522B96 /* nav_message_white@2x.png in Resources */,
 				606FE752241164F700522B96 /* login_icon_code@2x.png in Resources */,
 				606FE750241164F700522B96 /* login_password_unsee@2x.png in Resources */,
+				60B93B5C2414E0A3003147DC /* main_tab_mine_sel@2x.png in Resources */,
 				60B939AA2413E465003147DC /* user_home_camera@2x.png in Resources */,
+				60B93B5A2414E0A3003147DC /* main_tab_home@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1067,6 +1290,7 @@
 				60E2B115240ED5D800E4EA52 /* DTHorizontalScrollView.m in Sources */,
 				60E2B11B240ED5D800E4EA52 /* DTHttpRefreshTableController.m in Sources */,
 				60E2B108240ED5D800E4EA52 /* DTStrokeLabel.m in Sources */,
+				60B939D82414D15E003147DC /* JTShipListModel.m in Sources */,
 				60E2B120240ED5D800E4EA52 /* DTPagesController.m in Sources */,
 				60E2B106240ED5D800E4EA52 /* CLAlertView.m in Sources */,
 				60E2B11D240ED5D800E4EA52 /* DTTableController.m in Sources */,
@@ -1078,6 +1302,7 @@
 				606FE7B6241380D100522B96 /* WCTableSection.m in Sources */,
 				60E2B128240ED5D800E4EA52 /* WCAppStyleUtil.m in Sources */,
 				606FE75D24116C3D00522B96 /* DTFix+iOS13.m in Sources */,
+				60B939DB2414D179003147DC /* JTShipListCell.m in Sources */,
 				6001C780240EB6C4006092BB /* JTUserManager.m in Sources */,
 				606FE7A024137AD800522B96 /* JTMineHomeController.m in Sources */,
 				60E2B10C240ED5D800E4EA52 /* DTEnrollProgressView.m in Sources */,
@@ -1088,6 +1313,7 @@
 				60E2B0FD240ED5D800E4EA52 /* CCCommentStarView.m in Sources */,
 				60E2B126240ED5D800E4EA52 /* FFAnimateHelper.m in Sources */,
 				606FE7AC24137B8300522B96 /* JTAboutUsController.m in Sources */,
+				60B939C92414D09B003147DC /* JTMessageCenterController.m in Sources */,
 				60E2B105240ED5D800E4EA52 /* CLTitleTabView.m in Sources */,
 				60E2B107240ED5D800E4EA52 /* DTControllerListView.m in Sources */,
 				606FE7B3241380B200522B96 /* WCTableRow.m in Sources */,
@@ -1100,16 +1326,24 @@
 				606FE730241149BC00522B96 /* CKOpenUDID.m in Sources */,
 				606FE78B2412C28500522B96 /* DTTableTitleCell.m in Sources */,
 				606FE7882412B10C00522B96 /* JTProtorolItem.m in Sources */,
+				60B939CC2414D0E8003147DC /* JTMessageListCell.m in Sources */,
 				60ED7638240EB25B0013CB8C /* main.m in Sources */,
 				60E2B10B240ED5D800E4EA52 /* DTButton.m in Sources */,
+				60B939DE2414D289003147DC /* JTHomeController.m in Sources */,
 				60E2B103240ED5D800E4EA52 /* CLDatePickerView.m in Sources */,
 				60D03C99240FFE9400E7D7D1 /* JTLoginHeaderView.m in Sources */,
 				606FE6F524101CCA00522B96 /* JTLoginForgetController.m in Sources */,
 				6001C788240EB738006092BB /* JTCommon.m in Sources */,
+				60B939D22414D12E003147DC /* JTTaskListCell.m in Sources */,
 				60E2B122240ED5D800E4EA52 /* DTViewController.m in Sources */,
 				60E2B127240ED5D800E4EA52 /* DTPubUtil.m in Sources */,
 				60E2B147240ED6AF00E4EA52 /* JTMainController.m in Sources */,
+				60B93B4E2414DC41003147DC /* DTMainTabBarView.m in Sources */,
+				60B939CF2414D104003147DC /* JTMessageListModel.m in Sources */,
+				60B939BE2414D02F003147DC /* JTShipHomeController.m in Sources */,
+				60B939D52414D141003147DC /* JTTaskListModel.m in Sources */,
 				60E2B0FF240ED5D800E4EA52 /* DTLoadMoreCommonCell.m in Sources */,
+				60B939C12414D041003147DC /* JTTaskHomeController.m in Sources */,
 				60E2B0FE240ED5D800E4EA52 /* BPOnePixLineView.m in Sources */,
 				60E2B10A240ED5D800E4EA52 /* DTBadgeView.m in Sources */,
 				60E2B119240ED5D800E4EA52 /* DTTitleIconItem.m in Sources */,

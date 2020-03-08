@@ -33,6 +33,7 @@
 #import "DTGradientLabel.h"
 #import "DTHorizontalScrollView.h"
 #import "DTLoadMoreCommonCell.h"
+#import "DTMainTabBarView.h"
 #import "DTNoDataView.h"
 #import "DTPickerView.h"
 #import "DTPullRefreshHeadView.h"

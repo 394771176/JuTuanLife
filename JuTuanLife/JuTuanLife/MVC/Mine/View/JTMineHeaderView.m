@@ -23,11 +23,8 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        CREATE_Btn_B(_headerBtn, 16, 52 + SAFE_BOTTOM_VIEW_HEIGHT, 80, 80);
-        _headerBtn.autoresizingMask = UIViewAutoresizingFlexibleRightMargin;
-        _headerBtn.cornerRadius = _headerBtn.height / 2;
-        [_headerBtn addTarget:self action:@selector(headerBtnAction)];
-        [self addSubview:_headerBtn];
+
+        _headerBtn = UICreateBtn([UIButton class], RECT(16, 52+SAFE_BOTTOM_VIEW_HEIGHT, 80, 80), AAR, nil, nil, nil, self, @selector(headerBtnAction), self);
         
         _nameLabel = [UILabel labelWithFrame:RECT(_headerBtn.right + 16, _headerBtn.top + 15, self.width - _headerBtn.right - 16 * 2, 28) font:[UIFont systemFontOfSize:20] colorString:@"ffffff"];
         _nameLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;

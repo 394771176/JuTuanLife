@@ -39,8 +39,7 @@
 - (void)setupTableHeader
 {
     if (!_headerView) {
-        CREATE_UI_VV(_headerView, JTMineHeaderView, 0, 0, self.width, 204 + SAFE_BOTTOM_VIEW_HEIGHT);
-        _headerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+        UICREATETo(_headerView, JTMineHeaderView, 0, 0, self.width, 204 + SAFE_BOTTOM_VIEW_HEIGHT, AAW, nil)
         self.tableView.tableHeaderView = _headerView;
     }
 }

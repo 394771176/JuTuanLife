@@ -45,10 +45,8 @@
 - (void)setupBottomView
 {
     if (!_bottomView) {
-        CREATE_UI_VV(_bottomView, UIView, 0, self.height - 167 - SAFE_BOTTOM_VIEW_HEIGHT, self.width, 167 + SAFE_BOTTOM_VIEW_HEIGHT);
-        _bottomView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
+        UICREATETo(_bottomView, UIView, 0, self.height - 167 - SAFE_BOTTOM_VIEW_HEIGHT, self.width, 167 + SAFE_BOTTOM_VIEW_HEIGHT, AAWT, self)
         _bottomView.backgroundColor = [UIColor whiteColor];
-        [self addSubview:_bottomView];
         
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         btn.frame = CGRectMake(24, _bottomView.height - 16 - 48 - SAFE_BOTTOM_VIEW_HEIGHT, _bottomView.width - 24 * 2, 48);
