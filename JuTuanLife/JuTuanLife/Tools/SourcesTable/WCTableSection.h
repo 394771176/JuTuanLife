@@ -26,6 +26,7 @@ typedef UIView * (^SectionHeaderFooter)(NSInteger section);
 - (void)clearDataList;
 - (void)resetDataList:(NSArray *)dataList;
 
+//item 可以是数据对象，也可以是WCTableRow，但不能是WCTableSection了
 - (void)addItemToDataList:(id)item;
 
 + (id)sectionWithItems:(NSArray *)items;

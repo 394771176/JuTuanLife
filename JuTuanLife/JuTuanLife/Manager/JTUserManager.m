@@ -39,6 +39,7 @@ SHARED_INSTANCE_M
         if ([[self sharedInstance] isAuth]) {
             block(JTLoginTypeLoginedBefore);
         } else if ([[self sharedInstance] isLogined]) {
+//            [[self sharedInstance] user];
             [self authBlock:block];
         } else {
             //登录
@@ -67,6 +68,13 @@ SHARED_INSTANCE_M
             }
                 break;
         }
+    }
+}
+
++ (void)logoutAction:(void (^)(void))block
+{
+    if (block) {
+        block();
     }
 }
 

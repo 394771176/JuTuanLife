@@ -16,6 +16,7 @@
 
 - (void)setContentColor:(UIColor *)color;
 - (void)setContentFontSize:(CGFloat)size;
+- (void)setContentColor:(UIColor *)color withFont:(UIFont *)font;
 - (void)setContentColor:(UIColor *)color withFontSize:(CGFloat)size;
 - (void)setContentColorString:(NSString *)colorString withFontSize:(CGFloat)size;
 

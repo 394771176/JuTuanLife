@@ -8,6 +8,10 @@
 
 #import "JTMineHomeController.h"
 #import "JTMineHeaderView.h"
+#import "JTUserInfoController.h"
+#import "JTUserBankController.h"
+#import "JTUserProtorolsController.h"
+#import "JTAboutUsController.h"
 
 @interface JTMineHomeController () {
     JTMineHeaderView *_headerView;
@@ -49,17 +53,17 @@
     WCSourceTableData *source = [WCSourceTableData new];
     {
         NSMutableArray *items = [NSMutableArray array];
-        [items addObject:[DTTitleIconItem itemWithTitle:@"身份信息" iconName:@"user_home_info"]];
-        [items addObject:[DTTitleIconItem itemWithTitle:@"银行卡" iconName:@"user_home_bank"]];
-        [items addObject:[DTTitleIconItem itemWithTitle:@"协议合同" iconName:@"user_home_protorol"]];
+        [items addObject:[DTTitleIconItem itemWithTitle:@"身份信息" iconName:@"user_home_info" scheme:@"info"]];
+        [items addObject:[DTTitleIconItem itemWithTitle:@"银行卡" iconName:@"user_home_bank" scheme:@"bank"]];
+        [items addObject:[DTTitleIconItem itemWithTitle:@"协议合同" iconName:@"user_home_protorol" scheme:@"protorol"]];
         [source addSectionWithItems:items cellClass:[DTTableIconCell class] height:44];
         [source setLastSectionHeaderHeight:12 footerHeight:4];
     }
     
     {
         NSMutableArray *items = [NSMutableArray array];
-        [items addObject:[DTTitleIconItem itemWithTitle:@"关于聚推帮" iconName:@"user_home_jutui"]];
-        [items addObject:[DTTitleIconItem itemWithTitle:@"退出登录" iconName:@"user_home_logout"]];
+        [items addObject:[DTTitleIconItem itemWithTitle:@"关于聚推帮" iconName:@"user_home_jutui" scheme:@"about"]];
+        [items addObject:[DTTitleIconItem itemWithTitle:@"退出登录" iconName:@"user_home_logout" scheme:@"logout"]];
         [source addSectionWithItems:items cellClass:[DTTableIconCell class] height:44];
         [source setLastSectionHeaderHeight:12 footerHeight:4];
     }
@@ -74,11 +78,32 @@
         }
     } clickBlock:^(DTTitleIconItem *data, NSIndexPath *indexPath) {
         if (weakSelf) {
-            NSLog(@"%@", data.title);
+            if ([data.openSchemeUrl isEqualToString:@"info"]) {
+                PUSH_VC(JTUserInfoController);
+            } else if ([data.openSchemeUrl isEqualToString:@"bank"]) {
+                PUSH_VC(JTUserBankController);
+            } else if ([data.openSchemeUrl isEqualToString:@"protorol"]) {
+                PUSH_VC(JTUserProtorolsController);
+            } else if ([data.openSchemeUrl isEqualToString:@"about"]) {
+                PUSH_VC(JTAboutUsController);
+            } else if ([data.openSchemeUrl isEqualToString:@"logout"]) {
+                [self logoutAction];
+            }
         }
     }];
     
     return source;
+}
+
+#pragma mark - action
+
+- (void)logoutAction
+{
+    [JTCoreUtil showActionSheetWithTitle:nil message:nil cancelTitle:@"取消" confirmTitle:nil destructiveTitle:@"退出登录" handler:^(UIAlertAction *action) {
+        [JTUserManager logoutAction:^{
+            NSLog(@"退出");
+        }];
+    }];
 }
 
 - (void)reloadTableView

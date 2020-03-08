@@ -21,6 +21,7 @@ typedef enum {
  common  left = right = gap;
  bottom  left = right = 0;
  None : line hidden
+ Custom: line show
  */
 
 //默认为 DTCellLineBottom, 无缩进
@@ -29,6 +30,7 @@ typedef enum {
     DTCellLineCommon,
     DTCellLineBottom,//目前默认 bottom style
     DTCellLineNone,
+    DTCellLineCustom,
 } DTCellLineStyle;
 
 @interface DTTableCustomCell : UITableViewCell

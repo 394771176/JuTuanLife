@@ -12,8 +12,6 @@
     
 }
 
-@property (nonatomic, strong) id item;
-
 + (CGFloat)cellHeightWithItem:(id)item tableView:(UITableView *)tableView;
 
 @end
@@ -46,7 +44,7 @@
 
 - (id)dataAtIndexPath:(NSIndexPath *)indexPath
 {
-    return self.data;
+    return self.item;
 }
 
 // MARK: - UITableViewDelegate -
@@ -60,15 +58,15 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (_heightBlock) {
-        return _heightBlock(self.data, indexPath);
+        return _heightBlock(self.item, indexPath);
     } else if (_height > 0) {
         return _height;
     } else if (_cellClass && [_cellClass respondsToSelector:@selector(cellHeightWithItem:tableView:)]) {
-        return [[_cellClass class] cellHeightWithItem:self.data tableView:tableView];
+        return [[_cellClass class] cellHeightWithItem:self.item tableView:tableView];
     } else if (_cellBlock) {
-        id cell = _cellBlock(self.data, indexPath);
+        id cell = _cellBlock(self.item, indexPath);
         if ([[cell class] respondsToSelector:@selector(cellHeightWithItem:tableView:)]) {
-            return [[cell class] cellHeightWithItem:self.data tableView:tableView];
+            return [[cell class] cellHeightWithItem:self.item tableView:tableView];
         }
     }
     return 0;
@@ -78,7 +76,7 @@
 {
     UITableViewCell *cell = nil;
     if (_cellBlock) {
-        cell = _cellBlock(self.data, indexPath);
+        cell = _cellBlock(self.item, indexPath);
     } else if (_cellClass) {
         if (!self.reuseCellId) {
             self.reuseCellId = NSStringFromClass([self.cellClass class]);
@@ -91,10 +89,15 @@
     
     if (cell) {
         if (_configBlock) {
-            _configBlock(cell, self.data, indexPath);
-        } else if ([cell respondsToSelector:@selector(setItem:)]) {
-            //只是借助WCTableRow为替身，方便调setItem方法，而没有警告
-            [(WCTableRow *)cell setItem:self.data];
+            _configBlock(cell, self.item, indexPath);
+        } else {
+            if ([cell respondsToSelector:@selector(setItem:)]) {
+                //只是借助WCTableRow为替身，方便调setItem方法，而没有警告
+                [(WCTableRow *)cell setItem:self.item];
+            }
+            if ([cell respondsToSelector:@selector(setUserInfo:)]) {
+                [(WCTableRow *)cell setUserInfo:self.userInfo];
+            }
         }
     }
     return cell;
@@ -103,7 +106,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (self.clickBlock) {
-        self.clickBlock(self.data, indexPath);
+        self.clickBlock(self.item, indexPath);
     }
 }
 

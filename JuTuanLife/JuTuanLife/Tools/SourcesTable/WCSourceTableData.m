@@ -43,6 +43,14 @@
     }
 }
 
+- (void)resetOnlyDataSource:(NSArray *)dataSource
+{
+    [_dataSource removeAllObjects];
+    if (dataSource.count) {
+        [_dataSource addObjectsFromArray:dataSource];
+    }
+}
+
 - (void)resetDataSourceWithItems:(NSArray *)items cellClass:(nonnull Class)cellClass
 {
     [self clearDataSource];
@@ -82,9 +90,15 @@
     if (![self isSectionData]) {
         [self.dataSource safeAddObject:row];
     } else {
-        WCTableSection *section = [WCTableSection sectionWithItems:[NSArray arrayWithObjects:row.data, nil] cellClass:row.cellClass];
-        [self addSectionItem:section];
+        [self addRowItemToNewSection:row];
     }
+}
+
+- (void)addRowItemToNewSection:(WCTableRow *)row
+{
+    WCTableSection *section = [WCTableSection new];
+    [section addItemToDataList:row];
+    [self addSectionItem:section];
 }
 
 - (void)addRowItemToLastSection:(WCTableRow *)row
@@ -102,7 +116,7 @@
                 [self.dataSource replaceObjectAtIndex:self.dataSource.count - 1 withObject:array];
             }
         } else if ([lastData isKindOfClass:WCTableSection.class]) {
-            [(WCTableSection *)lastData addItemToDataList:row.data];
+            [(WCTableSection *)lastData addItemToDataList:row];
         }
     }
 }
@@ -114,7 +128,7 @@
     } else {
         NSMutableArray *array = [NSMutableArray arrayWithArray:self.dataSource];
         NSMutableArray *sections = [NSMutableArray arrayWithObjects:array, section, nil];
-        [self resetDataSource:sections];
+        [self resetOnlyDataSource:sections];
     }
 }
 
@@ -140,8 +154,8 @@
     if ([item isKindOfClass:WCTableSection.class]) {
         item.footerHeight = height;
     } else {
-        if (!_headerHeightDict) {
-            _headerHeightDict = [NSMutableDictionary dictionary];
+        if (!_footerHeightDict) {
+            _footerHeightDict = [NSMutableDictionary dictionary];
         }
         [_footerHeightDict safeSetObject:@(height) forKey:@(section)];
     }
@@ -259,12 +273,12 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    WCTableSection *item = [self dataForSection:section];
-    if ([item isKindOfClass:WCTableSection.class]) {
-        return [item tableView:tableView heightForHeaderInSection:section];
+    if ([_headerHeightDict objectForKey:@(section)]) {
+        return [[_headerHeightDict objectForKey:@(section)] floatValue];
     } else {
-        if ([_headerHeightDict objectForKey:@(section)]) {
-            return [[_headerHeightDict objectForKey:@(section)] floatValue];
+        WCTableSection *item = [self dataForSection:section];
+        if ([item isKindOfClass:WCTableSection.class]) {
+            return [item tableView:tableView heightForHeaderInSection:section];
         }
     }
     return 0.f;
@@ -272,12 +286,12 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    if ([self tableView:tableView heightForHeaderInSection:section] > 0) {
+    if ([_headerHeightDict objectForKey:@(section)]) {
+        return [WCTableSection tableView:tableView headerFooterViewWithHeight:10];
+    } else {
         WCTableSection *item = [self dataForSection:section];
         if ([item isKindOfClass:WCTableSection.class]) {
             return [item tableView:tableView viewForHeaderInSection:section];
-        } else {
-            return [WCTableSection tableView:tableView headerFooterViewWithHeight:10];
         }
     }
     return nil;
@@ -285,23 +299,25 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-    WCTableSection *item = [self dataForSection:section];
-    if ([item isKindOfClass:WCTableSection.class]) {
-        return [item tableView:tableView heightForFooterInSection:section];
-    } else if ([_footerHeightDict objectForKey:@(section)]) {
+    if ([_footerHeightDict objectForKey:@(section)]) {
         return [[_footerHeightDict objectForKey:@(section)] floatValue];
+    } else {
+        WCTableSection *item = [self dataForSection:section];
+        if ([item isKindOfClass:WCTableSection.class]) {
+            return [item tableView:tableView heightForFooterInSection:section];
+        }
     }
     return 0.f;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
-    if ([self tableView:tableView heightForFooterInSection:section] > 0) {
+    if ([_footerHeightDict objectForKey:@(section)]) {
+        return [WCTableSection tableView:tableView headerFooterViewWithHeight:10];
+    } else {
         WCTableSection *item = [self dataForSection:section];
         if ([item isKindOfClass:WCTableSection.class]) {
             return [item tableView:tableView viewForFooterInSection:section];
-        } else {
-            return [WCTableSection tableView:tableView headerFooterViewWithHeight:10];
         }
     }
     return nil;

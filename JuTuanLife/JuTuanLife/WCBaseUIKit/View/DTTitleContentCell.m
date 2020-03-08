@@ -47,6 +47,12 @@
     _contentLabel.font = [UIFont systemFontOfSize:size];
 }
 
+- (void)setContentColor:(UIColor *)color withFont:(UIFont *)font
+{
+    [self setContentColor:color];
+    _contentLabel.font = font;
+}
+
 - (void)setContentColor:(UIColor *)color withFontSize:(CGFloat)size
 {
     [self setContentColor:color];

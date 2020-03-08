@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"结算银行卡";
     // Do any additional setup after loading the view.
 }
 

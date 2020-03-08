@@ -37,7 +37,9 @@
 - (void)addSectionWithItems:(NSArray *)items cellClass:(Class)cellClass height:(CGFloat)height;
 
 - (void)addRowItem:(WCTableRow *)row;
+- (void)addRowItemToNewSection:(WCTableRow *)row;
 - (void)addRowItemToLastSection:(WCTableRow *)row;
+
 - (void)addSectionItem:(WCTableSection *)section;
 
 //- (void)insertRowItem:(WCTableRow *)row inSection:(NSInteger)section;

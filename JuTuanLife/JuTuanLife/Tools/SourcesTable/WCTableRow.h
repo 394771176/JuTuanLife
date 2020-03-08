@@ -18,7 +18,8 @@ typedef void (^CellClick)(id data, NSIndexPath *indexPath);
 
 @interface WCTableRow : NSObject<UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) id data;
+@property (nonatomic, strong) id item;
+@property (nonatomic, strong) id userInfo;
 @property (nonatomic, strong) Class cellClass;
 @property (nonatomic, assign) CGFloat height;
 @property (nonatomic, strong) NSString *reuseCellId;

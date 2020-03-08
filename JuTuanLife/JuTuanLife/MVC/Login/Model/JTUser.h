@@ -22,7 +22,20 @@ typedef NS_ENUM(NSUInteger, JTUserStatus) {
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *avatar;
 
+@property (nonatomic, strong) NSString *phone;
+@property (nonatomic, strong) NSString *IDNum;
+@property (nonatomic, strong) NSString *bankNum;
+
+@property (nonatomic, strong) NSString *city;
+
+@property (nonatomic, strong) NSString *address;
+@property (nonatomic, strong) NSString *yajinTip;
+
 @property (nonatomic, assign) JTUserStatus status;
+
+- (NSString *)phoneCipher;
+- (NSString *)IDNumCipher;
+- (NSString *)bankNumCipher;
 
 @end
 

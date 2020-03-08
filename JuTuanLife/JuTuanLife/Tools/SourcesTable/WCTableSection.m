@@ -17,7 +17,7 @@
 
 + (id)sectionWithItems:(NSArray *)items cellClass:(Class)cellClass
 {
-    return [self sectionWithItems:items cellClass:NULL height:0];
+    return [self sectionWithItems:items cellClass:cellClass height:0];
 }
 
 + (id)sectionWithItems:(NSArray *)items cellClass:(Class)cellClass height:(CGFloat)height
@@ -75,20 +75,35 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    self.data = [self.dataList safeObjectAtIndex:indexPath.row];
-    return [super tableView:tableView heightForRowAtIndexPath:indexPath];
+    id data = [self.dataList safeObjectAtIndex:indexPath.row];
+    if ([data isKindOfClass:WCTableRow.class]) {
+        return [data tableView:tableView heightForRowAtIndexPath:indexPath];
+    } else {
+        self.item = data;
+        return [super tableView:tableView heightForRowAtIndexPath:indexPath];
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    self.data = [self.dataList safeObjectAtIndex:indexPath.row];
-    return [super tableView:tableView cellForRowAtIndexPath:indexPath];
+    id data = [self.dataList safeObjectAtIndex:indexPath.row];
+    if ([data isKindOfClass:WCTableRow.class]) {
+        return [data tableView:tableView cellForRowAtIndexPath:indexPath];
+    } else {
+        self.item = data;
+        return [super tableView:tableView cellForRowAtIndexPath:indexPath];
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    self.data = [self.dataList safeObjectAtIndex:indexPath.row];
-    [super tableView:tableView didSelectRowAtIndexPath:indexPath];
+    id data = [self.dataList safeObjectAtIndex:indexPath.row];
+    if ([data isKindOfClass:WCTableRow.class]) {
+        [data tableView:tableView didSelectRowAtIndexPath:indexPath];
+    } else {
+        self.item = data;
+        [super tableView:tableView didSelectRowAtIndexPath:indexPath];
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section

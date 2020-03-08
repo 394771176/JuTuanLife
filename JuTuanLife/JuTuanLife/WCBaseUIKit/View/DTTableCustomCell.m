@@ -78,8 +78,10 @@
             [self setSeparatorLineWithLeft:_lineGap andRight:0];
         } else if (lineStyle==DTCellLineCommon){
             [self setSeparatorLineWithLeft:_lineGap];
-        } else {
+        } else if (lineStyle == DTCellLineBottom) {
             [self setSeparatorLineWithLeft:0];
+        } else if (lineStyle == DTCellLineCustom) {
+            //do nothing
         }
     }
 }
@@ -105,7 +107,7 @@
 - (UIImageView *)createArrowImage
 {
     UIImageView *arrow = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cell_common_arrow"]];
-    arrow.frame = CGRectMake(self.contentView.width-15-arrow.width, 0, arrow.width, self.contentView.height);
+    arrow.frame = CGRectMake(self.contentView.width-28-arrow.width, 0, arrow.width, self.contentView.height);
     arrow.contentMode = UIViewContentModeCenter;
     arrow.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleHeight;
     return arrow;
