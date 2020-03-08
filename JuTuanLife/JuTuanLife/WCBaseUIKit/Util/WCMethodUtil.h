@@ -7,6 +7,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define RECT(x, y, w, h)             CGRectMake(x, y, w, h)
+
 #define UICREATE(cla, x, y, w, h, AA, toV)   UICreate([cla class], RECT(x, y, w, h), AA, toV);
 #define UICREATELabel(cla, x, y, w, h, AA, text, font, color, toV)   UICreateLabel([cla class], RECT(x, y, w, h), AA, text, font, color, toV);
 #define UICREATEImg(cla, x, y, w, h, AA, CC, image, toV)    UICreateImage([cla class], RECT(x, y, w, h), AA, CC, image, toV);

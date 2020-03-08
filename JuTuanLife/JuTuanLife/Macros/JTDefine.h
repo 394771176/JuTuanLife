@@ -25,7 +25,6 @@ UIViewController *vc = [[_xxx_ alloc] init]; \
 [WCControllerUtil pushViewController:vc]; \
 }
 
-#define RECT(x, y, w, h)             CGRectMake(x, y, w, h)
 #define CREATE_UI(c, x, y, w, h)     [[c alloc] initWithFrame:RECT(x, y, w, h)]
 #define CREATE_UI_V(c, x, y, w, h)    c *v = CREATE_UI(c, x, y, w, h)
 #define CREATE_UI_VV(v, c, x, y, w, h)  v = CREATE_UI(c, x, y, w, h)
