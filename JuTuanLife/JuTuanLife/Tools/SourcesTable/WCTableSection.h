@@ -32,6 +32,10 @@ typedef UIView * (^SectionHeaderFooter)(NSInteger section);
 + (id)sectionWithItems:(NSArray *)items;
 + (id)sectionWithItems:(NSArray *)items cellClass:(Class)cellClass;
 + (id)sectionWithItems:(NSArray *)items cellClass:(Class)cellClass height:(CGFloat)height;
++ (id)sectionWithItems:(NSArray *)items cellClass:(Class)cellClass heightBlock:(CellHeight)heightBlock;
++ (id)sectionWithItems:(id)item cellClass:(Class)cellClass config:(CellConfig)config click:(CellClick)click;
++ (id)sectionWithItems:(id)item cellClass:(Class)cellClass config:(CellConfig)config click:(CellClick)click;
++ (id)sectionWithCell:(CellItem)cell config:(CellConfig)config click:(CellClick)click;
 
 + (UIView *)tableView:(UITableView *)tableView headerFooterViewWithHeight:(CGFloat)height;
 

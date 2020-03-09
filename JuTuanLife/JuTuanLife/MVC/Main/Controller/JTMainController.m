@@ -107,6 +107,10 @@
     [self setupMainTabBar];
     
     self.selectedIndex = 0;
+    if (APP_DEBUG) {
+        self.selectedIndex = 3;
+    }
+        
 }
 
 - (DTViewController *)currentController

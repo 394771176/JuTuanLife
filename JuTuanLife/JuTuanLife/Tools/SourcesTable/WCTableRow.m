@@ -37,9 +37,37 @@
     return row;
 }
 
++ (id)rowWithItem:(id)item cellClass:(Class)cellClass heightBlock:(CellHeight)heightBlock
+{
+    WCTableRow *row = [WCTableRow rowWithItem:item cellClass:cellClass height:0];
+    row.heightBlock = heightBlock;
+    return row;
+}
+
++ (id)rowWithItem:(id)item cellClass:(Class)cellClass config:(CellConfig)config click:(CellClick)click
+{
+    WCTableRow *row = [WCTableRow rowWithItem:item cellClass:cellClass height:0];
+    [row setConfigBlock:config clickBlock:click];
+    return row;
+}
+
++ (id)rowWithCell:(CellItem)cell config:(CellConfig)config click:(CellClick)click
+{
+    WCTableRow *row = [WCTableRow new];
+    row.cellBlock = cell;
+    [row setConfigBlock:config clickBlock:click];
+    return row;
+}
+
 + (CGFloat)cellHeightWithItem:(id)item tableView:(UITableView *)tableView
 {
     return 0;
+}
+
+- (void)setConfigBlock:(CellConfig)configBlock clickBlock:(CellClick)clickBlock
+{
+    _configBlock = configBlock;
+    _clickBlock = clickBlock;
 }
 
 - (id)dataAtIndexPath:(NSIndexPath *)indexPath
@@ -74,6 +102,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if ([self.item isKindOfClass:UITableViewCell.class]) {
+        return self.item;
+    }
     UITableViewCell *cell = nil;
     if (_cellBlock) {
         cell = _cellBlock(self.item, indexPath);

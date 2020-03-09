@@ -7,11 +7,12 @@
 //
 
 #import "DTTableCustomCell.h"
-
-NS_ASSUME_NONNULL_BEGIN
+#import "SCLoginTextFieldCell.h"
 
 @interface JTMineInfoListCell : DTTitleContentCell
 
-@end
+@property (nonatomic, assign) BOOL canEdit;
+@property (nonatomic, assign) BOOL showCamera;
+@property (nonatomic, weak) id<SCLoginTextFieldCellDelegate> delegate;
 
-NS_ASSUME_NONNULL_END
+@end

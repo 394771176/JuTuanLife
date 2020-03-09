@@ -6,16 +6,16 @@
 //  Copyright © 2020 cheng. All rights reserved.
 //
 
-#import "WCSourceTableData.h"
+#import "WCTableSourceData.h"
 
-@interface WCSourceTableData () {
+@interface WCTableSourceData () {
     NSMutableDictionary *_headerHeightDict;
     NSMutableDictionary *_footerHeightDict;
 }
 
 @end
 
-@implementation WCSourceTableData
+@implementation WCTableSourceData
 
 - (instancetype)init
 {
@@ -123,12 +123,16 @@
 
 - (void)addSectionItem:(WCTableSection *)section
 {
-    if ([self isSectionData] || self.dataSource.count <= 0) {
-        [self.dataSource addObject:section];
-    } else {
-        NSMutableArray *array = [NSMutableArray arrayWithArray:self.dataSource];
-        NSMutableArray *sections = [NSMutableArray arrayWithObjects:array, section, nil];
-        [self resetOnlyDataSource:sections];
+    [self checkMustSectionData];
+    [self.dataSource addObject:section];
+}
+
+- (void)checkMustSectionData
+{
+    if (![self isSectionData] && self.dataSource.count > 0) {
+        NSArray *array = [NSArray arrayWithArray:self.dataSource];
+        WCTableSection *section = [WCTableSection sectionWithItems:array];
+        [self resetOnlyDataSource:[NSArray arrayWithObjects:section, nil]];
     }
 }
 
@@ -137,6 +141,7 @@
 
 - (void)setSection:(NSInteger)section headerHeight:(CGFloat)height
 {
+    [self checkMustSectionData];
     WCTableSection *item = [self dataForSection:section];
     if ([item isKindOfClass:WCTableSection.class]) {
         item.headerHeight = height;
@@ -150,6 +155,7 @@
 
 - (void)setSection:(NSInteger)section footerHeight:(CGFloat)height
 {
+    [self checkMustSectionData];
     WCTableSection *item = [self dataForSection:section];
     if ([item isKindOfClass:WCTableSection.class]) {
         item.footerHeight = height;
@@ -176,10 +182,35 @@
     }
 }
 
+- (void)setLastRowConfigBlock:(CellConfig)configBlock clickBlock:(CellClick)clickBlock
+{
+    if (self.dataSource.count) {
+        id row = [self.dataSource lastObject];
+        if ([row isKindOfClass:WCTableSection.class]) {
+            row = [(WCTableSection *)row dataList].lastObject;
+        }
+        if ([row isKindOfClass:WCTableRow.class]) {
+            [row setConfigBlock:configBlock clickBlock:clickBlock];
+        }
+    }
+}
+
 - (void)setConfigBlock:(CellConfig)configBlock clickBlock:(CellClick)clickBlock
 {
     self.configBlock = configBlock;
     self.clickBlock = clickBlock;
+}
+
+- (void)setLastSectionConfigBlock:(CellConfig)configBlock clickBlock:(CellClick)clickBlock
+{
+    [self checkMustSectionData];
+    if (self.dataSource.count) {
+        WCTableSection *section = [self.dataSource lastObject];
+        if ([section isKindOfClass:WCTableSection.class]) {
+            [section setConfigBlock:configBlock];
+            [section setClickBlock:clickBlock];
+        }
+    }
 }
 
 #pragma mark - tableview Delegate

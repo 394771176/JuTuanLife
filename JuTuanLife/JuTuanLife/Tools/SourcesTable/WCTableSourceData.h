@@ -11,7 +11,7 @@
 #import "WCTableSection.h"
 #import "WCTableRow.h"
 
-@interface WCSourceTableData : NSObject <UITableViewDataSource, UITableViewDelegate>
+@interface WCTableSourceData : NSObject <UITableViewDataSource, UITableViewDelegate>
 
 /*
  1围数据：WCTableRow
@@ -51,5 +51,7 @@
 - (void)setLastSectionHeaderHeight:(CGFloat)height footerHeight:(CGFloat)fheight;
 
 - (void)setConfigBlock:(CellConfig)configBlock clickBlock:(CellClick)clickBlock;
+- (void)setLastSectionConfigBlock:(CellConfig)configBlock clickBlock:(CellClick)clickBlock;
+- (void)setLastRowConfigBlock:(CellConfig)configBlock clickBlock:(CellClick)clickBlock;
 
 @end

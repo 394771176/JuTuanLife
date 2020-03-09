@@ -48,9 +48,9 @@
     }
 }
 
-- (WCSourceTableData *)setupSourceTableData
+- (WCTableSourceData *)setupTableSourceData
 {
-    WCSourceTableData *source = [WCSourceTableData new];
+    WCTableSourceData *source = [WCTableSourceData new];
     {
         NSMutableArray *items = [NSMutableArray array];
         [items addObject:[DTTitleIconItem itemWithTitle:@"身份信息" iconName:@"user_home_info" scheme:@"info"]];

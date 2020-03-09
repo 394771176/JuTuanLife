@@ -52,7 +52,7 @@
 {
     [super viewDidLoad];
 
-    self.sourceTableData = [self setupSourceTableData];
+    self.tableSourceData = [self setupTableSourceData];
     
 //    _tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:self.tableViewStyle];
@@ -77,7 +77,7 @@
     
 }
 
-- (WCSourceTableData *)setupSourceTableData
+- (WCTableSourceData *)setupTableSourceData
 {
     return nil;
 }
@@ -91,64 +91,64 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    if (self.sourceTableData) {
-        return [self.sourceTableData numberOfSectionsInTableView:tableView];
+    if (self.tableSourceData) {
+        return [self.tableSourceData numberOfSectionsInTableView:tableView];
     }
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    if (self.sourceTableData) {
-        return [self.sourceTableData tableView:tableView numberOfRowsInSection:section];
+    if (self.tableSourceData) {
+        return [self.tableSourceData tableView:tableView numberOfRowsInSection:section];
     }
     return 0;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (self.sourceTableData) {
-        return [self.sourceTableData tableView:tableView heightForRowAtIndexPath:indexPath];
+    if (self.tableSourceData) {
+        return [self.tableSourceData tableView:tableView heightForRowAtIndexPath:indexPath];
     }
     return 44;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (self.sourceTableData) {
-        return [self.sourceTableData tableView:tableView cellForRowAtIndexPath:indexPath];
+    if (self.tableSourceData) {
+        return [self.tableSourceData tableView:tableView cellForRowAtIndexPath:indexPath];
     }
     return [[UITableViewCell alloc] init];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    if (self.sourceTableData) {
-        return [self.sourceTableData tableView:tableView heightForHeaderInSection:section];
+    if (self.tableSourceData) {
+        return [self.tableSourceData tableView:tableView heightForHeaderInSection:section];
     }
     return 0.f;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    if (self.sourceTableData) {
-        return [self.sourceTableData tableView:tableView viewForHeaderInSection:section];
+    if (self.tableSourceData) {
+        return [self.tableSourceData tableView:tableView viewForHeaderInSection:section];
     }
     return nil;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-    if (self.sourceTableData) {
-        return [self.sourceTableData tableView:tableView heightForFooterInSection:section];
+    if (self.tableSourceData) {
+        return [self.tableSourceData tableView:tableView heightForFooterInSection:section];
     }
     return 0.f;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
-    if (self.sourceTableData) {
-        return [self.sourceTableData tableView:tableView viewForFooterInSection:section];
+    if (self.tableSourceData) {
+        return [self.tableSourceData tableView:tableView viewForFooterInSection:section];
     }
     return nil;
 }
@@ -156,8 +156,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if (self.sourceTableData) {
-        [self.sourceTableData tableView:tableView didSelectRowAtIndexPath:indexPath];
+    if (self.tableSourceData) {
+        [self.tableSourceData tableView:tableView didSelectRowAtIndexPath:indexPath];
     }
 }
 

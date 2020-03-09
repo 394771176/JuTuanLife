@@ -29,6 +29,28 @@
     return section;
 }
 
++ (id)sectionWithItems:(NSArray *)items cellClass:(Class)cellClass heightBlock:(CellHeight)heightBlock
+{
+    WCTableSection *section = [WCTableSection sectionWithItems:items cellClass:cellClass height:0];
+    section.heightBlock = heightBlock;
+    return section;
+}
+
++ (id)sectionWithItems:(id)items cellClass:(Class)cellClass config:(CellConfig)config click:(CellClick)click
+{
+    WCTableSection *section = [WCTableSection sectionWithItems:items cellClass:cellClass height:0];
+    [section setConfigBlock:config clickBlock:click];
+    return section;
+}
+
++ (id)sectionWithCell:(CellItem)cell config:(CellConfig)config click:(CellClick)click
+{
+    WCTableSection *section = [WCTableSection new];
+    section.cellBlock = cell;
+    [section setConfigBlock:config clickBlock:click];
+    return section;
+}
+
 - (instancetype)init
 {
     self = [super init];

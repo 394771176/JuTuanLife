@@ -22,10 +22,10 @@
     self.title = @"身份信息";
 }
 
-- (WCSourceTableData *)setupSourceTableData
+- (WCTableSourceData *)setupTableSourceData
 {
     JTUser *user = [JTUserManager sharedInstance].user;
-    WCSourceTableData *source = [WCSourceTableData new];
+    WCTableSourceData *source = [WCTableSourceData new];
     [source addRowWithItem:user cellClass:[JTMineInfoAvatarCell class]];
     [source setLastSectionHeaderHeight:12 footerHeight:0];
     

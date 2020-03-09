@@ -35,5 +35,10 @@ typedef void (^CellClick)(id data, NSIndexPath *indexPath);
 + (id)rowWithItem:(id)item;
 + (id)rowWithItem:(id)item cellClass:(Class)cellClass;
 + (id)rowWithItem:(id)item cellClass:(Class)cellClass height:(CGFloat)height;
++ (id)rowWithItem:(id)item cellClass:(Class)cellClass heightBlock:(CellHeight)heightBlock;
++ (id)rowWithItem:(id)item cellClass:(Class)cellClass config:(CellConfig)config click:(CellClick)click;
++ (id)rowWithCell:(CellItem)cell config:(CellConfig)config click:(CellClick)click;
+
+- (void)setConfigBlock:(CellConfig)configBlock clickBlock:(CellClick)clickBlock;
 
 @end

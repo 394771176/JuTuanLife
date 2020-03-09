@@ -28,6 +28,8 @@
 #define APP_JT_BLUE_STRING              @"#137FFE"
 #define APP_JT_BLUE_COLOR               COLORS(APP_JT_BLUE_STRING)
 
+#define APP_JT_BTN_BLUE                 @"#107CF8"
+
 #define APP_JT_GRAY_STRING              @"#CFCFCF"
 #define APP_JT_GRAY_COLOR               COLORS(APP_JT_GRAY_STRING)
 
