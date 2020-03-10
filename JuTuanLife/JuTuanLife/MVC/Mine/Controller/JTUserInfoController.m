@@ -10,6 +10,7 @@
 #import "JTMineInfoListCell.h"
 #import "JTMineInfoAvatarCell.h"
 #import "JTMineYaJinCell.h"
+#import "JTUserInfoEditController.h"
 
 @interface JTUserInfoController ()
 
@@ -43,7 +44,12 @@
         section.configBlock = ^(JTMineInfoListCell *cell, NSString *data, NSIndexPath *indexPath) {
             cell.title = data;
             [cell showArrow:indexPath.row > 2];
-            [cell setLineStyle:(cell.isShowArrow ? DTCellLineCustom : DTCellLineNone)];
+            if (cell.isShowArrow) {
+                [cell setLineStyle:DTCellLineCustom];
+                [cell setSelectionStyleDefault];
+            } else {
+                [cell setSelectionStyleNoneLine];
+            }
             switch (indexPath.row) {
                 case 0:
                 {
@@ -72,6 +78,11 @@
                     break;
                 default:
                     break;
+            }
+        };
+        section.clickBlock = ^(id data, NSIndexPath *indexPath) {
+            if (indexPath.row > 2) {
+                PUSH_VC(JTUserInfoEditController)
             }
         };
         

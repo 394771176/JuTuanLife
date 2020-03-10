@@ -76,6 +76,7 @@
 		606FE7B9241385BE00522B96 /* WCTableSourceData.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE7B8241385BE00522B96 /* WCTableSourceData.m */; };
 		607100FD2417DD4B009B617E /* JTUserProtorolsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 607100FC2417DD4B009B617E /* JTUserProtorolsCell.m */; };
 		607101002417EB51009B617E /* JTUserProtorols.m in Sources */ = {isa = PBXBuildFile; fileRef = 607100FF2417EB51009B617E /* JTUserProtorols.m */; };
+		607101032417F221009B617E /* JTUserInfoEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 607101022417F221009B617E /* JTUserInfoEditController.m */; };
 		6071FF81241547CB009B617E /* JTMineInfoAvatarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6071FF80241547CB009B617E /* JTMineInfoAvatarCell.m */; };
 		6071FF8424154F15009B617E /* JTMineYaJinCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6071FF8324154F15009B617E /* JTMineYaJinCell.m */; };
 		6071FF872416912A009B617E /* JTUserAddBankController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6071FF862416912A009B617E /* JTUserAddBankController.m */; };
@@ -285,6 +286,8 @@
 		607100FC2417DD4B009B617E /* JTUserProtorolsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTUserProtorolsCell.m; sourceTree = "<group>"; };
 		607100FE2417EB51009B617E /* JTUserProtorols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTUserProtorols.h; sourceTree = "<group>"; };
 		607100FF2417EB51009B617E /* JTUserProtorols.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTUserProtorols.m; sourceTree = "<group>"; };
+		607101012417F221009B617E /* JTUserInfoEditController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTUserInfoEditController.h; sourceTree = "<group>"; };
+		607101022417F221009B617E /* JTUserInfoEditController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTUserInfoEditController.m; sourceTree = "<group>"; };
 		6071FF7F241547CB009B617E /* JTMineInfoAvatarCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTMineInfoAvatarCell.h; sourceTree = "<group>"; };
 		6071FF80241547CB009B617E /* JTMineInfoAvatarCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTMineInfoAvatarCell.m; sourceTree = "<group>"; };
 		6071FF8224154F15009B617E /* JTMineYaJinCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTMineYaJinCell.h; sourceTree = "<group>"; };
@@ -765,6 +768,8 @@
 				606FE79F24137AD800522B96 /* JTMineHomeController.m */,
 				606FE7A124137B0200522B96 /* JTUserInfoController.h */,
 				606FE7A224137B0200522B96 /* JTUserInfoController.m */,
+				607101012417F221009B617E /* JTUserInfoEditController.h */,
+				607101022417F221009B617E /* JTUserInfoEditController.m */,
 				606FE7A424137B1800522B96 /* JTUserBankController.h */,
 				606FE7A524137B1800522B96 /* JTUserBankController.m */,
 				6071FF852416912A009B617E /* JTUserAddBankController.h */,
@@ -1351,6 +1356,7 @@
 				606FE78E2412C29900522B96 /* DTTableContentCell.m in Sources */,
 				60D03C93240FF9F100E7D7D1 /* JTLoginHomeController.m in Sources */,
 				60E2B114240ED5D800E4EA52 /* DTScrollTabView.m in Sources */,
+				607101032417F221009B617E /* JTUserInfoEditController.m in Sources */,
 				606FE72F241149BC00522B96 /* CKOldOpenUDID.m in Sources */,
 				606FE7B6241380D100522B96 /* WCTableSection.m in Sources */,
 				60E2B128240ED5D800E4EA52 /* WCAppStyleUtil.m in Sources */,
