@@ -8,8 +8,9 @@
 
 #import "JTMineInfoListCell.h"
 
-@interface JTMineInfoListCell () <UITextFieldDelegate> {
-    UITextField *_textField;
+@interface JTMineInfoListCell () <UITextViewDelegate> {
+//    UITextField *_textField;
+    UITextView *_textView;
     UIButton *_cameraBtn;
 }
 
@@ -42,14 +43,24 @@
 - (void)setCanEdit:(BOOL)canEdit
 {
     _canEdit = canEdit;
-    if (canEdit && !_textField) {
-        UICREATETo(_textField, UITextField, self.contentLabel.left, self.contentLabel.top, self.contentLabel.width, self.contentLabel.height, AAWH, self.contentView);
-        [_textField setTextColor:self.contentLabel.textColor];
-        [_textField setFont:self.contentLabel.font];
-        _textField.text = self.content;
-        _textField.delegate = self;
+//    if (canEdit && !_textField) {
+//        UICREATETo(_textField, UITextField, self.contentLabel.left, self.contentLabel.top, self.contentLabel.width, self.contentLabel.height, AAWH, self.contentView);
+//        [_textField setTextColor:self.contentLabel.textColor];
+//        [_textField setFont:self.contentLabel.font];
+//        _textField.text = self.content;
+//        _textField.delegate = self;
+//    }
+//    _textField.hidden = !canEdit;
+
+    if (canEdit && !_textView) {
+        UICREATETo(_textView, UITextView, self.contentLabel.left, self.contentLabel.top, self.contentLabel.width, self.contentLabel.height, AAWH, self.contentView);
+        [_textView setTextColor:self.contentLabel.textColor];
+        [_textView setFont:self.contentLabel.font];
+        _textView.text = self.content;
+        _textView.delegate = self;
     }
-    _textField.hidden = !canEdit;
+    _textView.hidden = !canEdit;
+    
     self.contentLabel.hidden = canEdit;
     
     [self setLineStyle:(_canEdit ? DTCellLineCustom : DTCellLineNone)];
@@ -69,8 +80,8 @@
 {
     [super setContent:content];
     if (_canEdit) {
-        if (content.length <= 0 || ![_textField.text isEqualToString:content]) {
-            _textField.text = content;
+        if (content.length <= 0 || ![_textView.text isEqualToString:content]) {
+            _textView.text = content;
         }
     }
 }
@@ -79,6 +90,30 @@
 {
     NSLog(@"camera");
 }
+
+#pragma mark - UITextViewDelegate
+
+//- (BOOL)textViewShouldEndEditing:(UITextView *)textView
+//{
+//    if (_canEdit) {
+//        return NO;
+//    }
+//    return YES;
+//}
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    return YES;
+}
+
+- (void)textViewDidChange:(UITextView *)textView
+{
+    self.content = textView.text;
+    if (_delegate && [_delegate respondsToSelector:@selector(loginTextFieldCell:textFieldDidChange:)]) {
+        [_delegate loginTextFieldCell:(id)self textFieldDidChange:(id)_textView];
+    }
+}
+
 #pragma mark - UITextFieldDelegate
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
@@ -108,6 +143,11 @@
 
 + (CGFloat)cellHeightWithItem:(NSString *)item tableView:(UITableView *)tableView
 {
+    if (item) {
+        CGFloat height = [item sizeWithFont:[UIFont systemFontOfSize:15] constrainedToSize:CGSizeMake(tableView.width - 28 - 8 - 92, FLT_MAX)].height;
+        
+        return MAX(44, height + 24);
+    }
     return 44;
 }
 

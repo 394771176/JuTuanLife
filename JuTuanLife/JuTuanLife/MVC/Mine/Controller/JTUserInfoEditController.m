@@ -9,7 +9,9 @@
 #import "JTUserInfoEditController.h"
 #import "JTMineInfoListCell.h"
 
-@interface JTUserInfoEditController ()
+@interface JTUserInfoEditController () <SCLoginTextFieldCellDelegate> {
+    NSString *_address;
+}
 
 @end
 
@@ -18,6 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"修改身份信息";
+    
+    self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
 }
 
 - (WCTableSourceData *)setupTableSourceData
@@ -26,7 +30,7 @@
     WEAK_SELF
     WCTableSection *section = [WCTableSection sectionWithItems:@[@"拓业城市：", @"收货地址："] cellClass:[JTMineInfoListCell class] heightBlock:^CGFloat(id data, NSIndexPath *indexPath) {
         if (indexPath.row == 1) {
-            return [JTMineInfoListCell cellHeightWithItem:nil tableView:weakSelf.tableView];
+            return [JTMineInfoListCell cellHeightWithItem:_address tableView:weakSelf.tableView];
         } else {
             return [JTMineInfoListCell cellHeightWithItem:nil tableView:weakSelf.tableView];
         }
@@ -35,8 +39,12 @@
         [cell setTitle:data];
         [cell setLineStyle:DTCellLineCustom];
         if (indexPath.row == 1) {
+            [cell setCanEdit:YES];
+            cell.delegate = self;
             [cell setSelectionStyleNone];
         } else {
+            [cell setCanEdit:NO];
+            cell.delegate = nil;
             [cell setSelectionStyleDefault];
         }
     } clickBlock:^(id data, NSIndexPath *indexPath) {
@@ -59,11 +67,27 @@
         [cell setLineStyle:DTCellLineNone];
     } clickBlock:^(id data, NSIndexPath *indexPath) {
         NSLog(@"%@", data);
+        [self.view endEditing:YES];
     }];
     [source setLastSectionHeaderHeight:16 footerHeight:0];
     
     return source;
 }
 
+#pragma mark - SCLoginTextFieldCellDelegate
+
+- (void)loginTextFieldCell:(SCLoginTextFieldCell *)cell textFieldDidChange:(UITextField *)textField
+{
+    _address = textField.text;
+//    [self reloadTableView];
+    [self.tableView beginUpdates];
+    [self.tableView endUpdates];
+//    [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:1 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
+}
+
+- (void)loginTextFieldCell:(SCLoginTextFieldCell *)cell textFieldDidReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+}
 
 @end
