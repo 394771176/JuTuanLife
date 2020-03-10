@@ -74,6 +74,8 @@
 		606FE7B3241380B200522B96 /* WCTableRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE7B2241380B200522B96 /* WCTableRow.m */; };
 		606FE7B6241380D100522B96 /* WCTableSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE7B5241380D100522B96 /* WCTableSection.m */; };
 		606FE7B9241385BE00522B96 /* WCTableSourceData.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE7B8241385BE00522B96 /* WCTableSourceData.m */; };
+		607100FD2417DD4B009B617E /* JTUserProtorolsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 607100FC2417DD4B009B617E /* JTUserProtorolsCell.m */; };
+		607101002417EB51009B617E /* JTUserProtorols.m in Sources */ = {isa = PBXBuildFile; fileRef = 607100FF2417EB51009B617E /* JTUserProtorols.m */; };
 		6071FF81241547CB009B617E /* JTMineInfoAvatarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6071FF80241547CB009B617E /* JTMineInfoAvatarCell.m */; };
 		6071FF8424154F15009B617E /* JTMineYaJinCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6071FF8324154F15009B617E /* JTMineYaJinCell.m */; };
 		6071FF872416912A009B617E /* JTUserAddBankController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6071FF862416912A009B617E /* JTUserAddBankController.m */; };
@@ -279,6 +281,10 @@
 		606FE7B5241380D100522B96 /* WCTableSection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCTableSection.m; sourceTree = "<group>"; };
 		606FE7B7241385BE00522B96 /* WCTableSourceData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCTableSourceData.h; sourceTree = "<group>"; };
 		606FE7B8241385BE00522B96 /* WCTableSourceData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCTableSourceData.m; sourceTree = "<group>"; };
+		607100FB2417DD4B009B617E /* JTUserProtorolsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTUserProtorolsCell.h; sourceTree = "<group>"; };
+		607100FC2417DD4B009B617E /* JTUserProtorolsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTUserProtorolsCell.m; sourceTree = "<group>"; };
+		607100FE2417EB51009B617E /* JTUserProtorols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTUserProtorols.h; sourceTree = "<group>"; };
+		607100FF2417EB51009B617E /* JTUserProtorols.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTUserProtorols.m; sourceTree = "<group>"; };
 		6071FF7F241547CB009B617E /* JTMineInfoAvatarCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTMineInfoAvatarCell.h; sourceTree = "<group>"; };
 		6071FF80241547CB009B617E /* JTMineInfoAvatarCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTMineInfoAvatarCell.m; sourceTree = "<group>"; };
 		6071FF8224154F15009B617E /* JTMineYaJinCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTMineYaJinCell.h; sourceTree = "<group>"; };
@@ -746,6 +752,8 @@
 			children = (
 				6071FF8B24169D77009B617E /* JTUserBank.h */,
 				6071FF8C24169D77009B617E /* JTUserBank.m */,
+				607100FE2417EB51009B617E /* JTUserProtorols.h */,
+				607100FF2417EB51009B617E /* JTUserProtorols.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -798,6 +806,8 @@
 				6071FF8324154F15009B617E /* JTMineYaJinCell.m */,
 				6071FF88241697F6009B617E /* JTUserBankCell.h */,
 				6071FF89241697F6009B617E /* JTUserBankCell.m */,
+				607100FB2417DD4B009B617E /* JTUserProtorolsCell.h */,
+				607100FC2417DD4B009B617E /* JTUserProtorolsCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1356,6 +1366,7 @@
 				606FE7AF24137D7E00522B96 /* JTMineHeaderView.m in Sources */,
 				60E2B0FD240ED5D800E4EA52 /* CCCommentStarView.m in Sources */,
 				60E2B126240ED5D800E4EA52 /* FFAnimateHelper.m in Sources */,
+				607100FD2417DD4B009B617E /* JTUserProtorolsCell.m in Sources */,
 				606FE7AC24137B8300522B96 /* JTAboutUsController.m in Sources */,
 				60B939C92414D09B003147DC /* JTMessageCenterController.m in Sources */,
 				60E2B105240ED5D800E4EA52 /* CLTitleTabView.m in Sources */,
@@ -1368,6 +1379,7 @@
 				60E2B116240ED5D800E4EA52 /* DTPullRefreshHeadView.m in Sources */,
 				60D03C96240FFA9900E7D7D1 /* JTUser.m in Sources */,
 				606FE730241149BC00522B96 /* CKOpenUDID.m in Sources */,
+				607101002417EB51009B617E /* JTUserProtorols.m in Sources */,
 				606FE78B2412C28500522B96 /* DTTableTitleCell.m in Sources */,
 				606FE7882412B10C00522B96 /* JTProtorolItem.m in Sources */,
 				60B939CC2414D0E8003147DC /* JTMessageListCell.m in Sources */,

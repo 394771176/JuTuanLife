@@ -45,12 +45,12 @@
         params = [NSMutableDictionary dictionary];
         [params safeSetObject:@"app" forKey:@"_platform"];
         [params safeSetObject:@"ios" forKey:@"_os"];
-        [params safeSetObject:@"JuTui" forKey:@"_caller"];
-        [params safeSetObject:@"AppStore" forKey:@"_appChannel"];
+        [params safeSetObject:@"JuTuiBang" forKey:@"_caller"];
         [params safeSetObject:[self.class bundleShortVersion] forKey:@"_appVersion"];
         [params safeSetObject:[UIDevice currentDevice].systemVersion forKey:@"_sysVersion"];
         [params safeSetObject:[self.class machineModel] forKey:@"_model"];
         [params safeSetObject:[self.class openUDID] forKey:@"_openUDID"];
+        [params safeSetObject:@"AppStore" forKey:@"_appChannel"];
 //        [params safeSetObject:[self.class clientUDID] forKey:@"cUDID"];
         if (APP_DEBUG) {
             [params safeSetObject:@"true" forKey:@"__intern__show-error-mesg"];
