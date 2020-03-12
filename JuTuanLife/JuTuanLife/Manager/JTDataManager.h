@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface JTDataManager : NSObject
 
-@end
+SHARED_INSTANCE_H
 
-NS_ASSUME_NONNULL_END
+//用户数据，基础配置关
++ (void)setupManager;
+
+@end

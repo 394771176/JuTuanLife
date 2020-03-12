@@ -31,6 +31,8 @@ UIViewController *vc = [[_xxx_ alloc] init]; \
 
 #define CREATE_ITEM(c)              c *item = [c new];
 
+#define KEY(str)        static NSString * const str = @#str;
+
 #ifndef __OPTIMIZE__
 #define NSLog(...) NSLog(__VA_ARGS__)
 #else

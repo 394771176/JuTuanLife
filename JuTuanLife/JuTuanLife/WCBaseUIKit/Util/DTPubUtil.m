@@ -99,4 +99,23 @@
     }
 }
 
++ (void)addBlock:(void (^)(void))block withDelay:(CGFloat)delay
+{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        block();
+    });
+}
+
++ (void)addBlockOnBackgroundThread:(void (^)(void))block
+{
+    [self performSelectorInBackground:@selector(runBlockInBackground:) withObject:block];
+}
+
++ (void)runBlockInBackground:(void (^)(void))block
+{
+    @autoreleasepool {
+        block();
+    }
+}
+
 @end

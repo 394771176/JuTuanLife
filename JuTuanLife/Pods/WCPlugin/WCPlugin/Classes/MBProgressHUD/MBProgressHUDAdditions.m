@@ -44,7 +44,7 @@
     hud.userInteractionEnabled = NO;
     hud.labelText = msg;
     [hud show:YES];
-    [hud hide:YES afterDelay:1.5f];
+    [hud hide:YES afterDelay:1.8f];
 }
 
 + (void)showHUDSuccessHintInWindow:(NSString *)msg
@@ -55,7 +55,7 @@
     hud.userInteractionEnabled = NO;
     hud.labelText = msg;
     [hud show:YES];
-    [hud hide:YES afterDelay:1.5f];
+    [hud hide:YES afterDelay:1.8f];
 }
 
 + (void)showHUDNoNetworkHintInWindow:(NSString *)msg
@@ -66,7 +66,7 @@
     hud.userInteractionEnabled = NO;
     hud.labelText = msg;
     [hud show:YES];
-    [hud hide:YES afterDelay:1.5f];
+    [hud hide:YES afterDelay:1.6f];
 }
 
 + (void)showHUDInWindowWithImage:(NSString *)imageName andMessage:(NSString *)msg
@@ -77,7 +77,7 @@
     hud.userInteractionEnabled = NO;
     hud.labelText = msg;
     [hud show:YES];
-    [hud hide:YES afterDelay:1.5f];
+    [hud hide:YES afterDelay:1.8f];
 }
 
 #pragma mark - loading时 HUD 需要手动stop

@@ -39,24 +39,14 @@
     
 }
 
-- (UIViewController *)rootController
-{
-    if ([JTUserManager sharedInstance].isLogined) {
-        return [[JTMainController alloc] init];
-    } else {
-        return [[JTLoginHomeController alloc] init];
-    }
-}
-
 - (void)windowDidAppear:(NSDictionary *)launchOptions
 {
-    UIViewController *root = [self rootController];
+    UIViewController *root = [JTUserManager rootController];
     DTNavigationController *navC = [[DTNavigationController alloc] initWithRootViewController:root];
     self.window.rootViewController = navC;
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
     
     return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }

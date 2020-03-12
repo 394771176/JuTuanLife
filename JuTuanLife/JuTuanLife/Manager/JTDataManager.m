@@ -10,4 +10,27 @@
 
 @implementation JTDataManager
 
+SHARED_INSTANCE_M
+
++ (void)setupManager
+{
+    [[self sharedInstance] updateBaseConfig];
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
+
+- (void)updateBaseConfig
+{
+    [WCDataService async:[JTUserRequest getBaseConfig] finish:^(WCDataResult *result) {
+        
+    }];
+}
+
 @end

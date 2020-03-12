@@ -35,17 +35,79 @@
     }
 }
 
+- (NSString *)urlCodeValueForKey:(NSString *)key params:(NSDictionary *)params
+{
+    id obj = [params valueForKey:key];
+    if (obj) {
+        if (([obj isKindOfClass:[UIImage class]])
+            ||([obj isKindOfClass:[NSData class]])) {
+            return nil;
+        } else if ([obj isKindOfClass:[NSNumber class]]) {
+            obj = [(NSNumber *)obj stringValue];
+        }
+        
+        NSString *code = [NSString stringWithFormat:@"%@=%@", key, [obj urlEncoded]];
+        return code;
+    } else {
+        return nil;
+    }
+}
+
+- (NSString *)requestUrl
+{
+    NSString *url = [super requestUrl];
+    NSMutableArray *pairs = [NSMutableArray array];
+    if (self.needSystemParams) {
+        NSDictionary *system = [WCNetManager systemParams];
+        [pairs safeAddObject:[self urlCodeValueForKey:@"_platform" params:system]];
+        [pairs safeAddObject:[self urlCodeValueForKey:@"_os" params:system]];
+        [pairs safeAddObject:[self urlCodeValueForKey:@"_sysVersion" params:system]];
+        [pairs safeAddObject:[self urlCodeValueForKey:@"_model" params:system]];
+        [pairs safeAddObject:[self urlCodeValueForKey:@"_appVersion" params:system]];
+        [pairs safeAddObject:[self urlCodeValueForKey:@"_openUDID" params:system]];
+        [pairs safeAddObject:[self urlCodeValueForKey:@"_appChannel" params:system]];
+        [pairs safeAddObject:[self urlCodeValueForKey:@"_caller" params:system]];
+    }
+    
+    //有就带上
+    if ([JTUserManager sharedInstance].ac_token) {
+        [pairs safeAddObject:[NSString stringWithFormat:@"_ac_token=%@", FFURLEncode([JTUserManager sharedInstance].ac_token)]];
+    }
+    
+    [pairs safeAddObject:[NSString stringWithFormat:@"_t=%.0f", WCTimeIntervalWithSecondsSince1970()]];
+    
+    NSString* queryPrefix = ([url rangeOfString:@"?"].length ? @"&" : @"?");
+    
+    return [NSString stringWithFormat:@"%@%@%@", url, queryPrefix, [pairs componentsJoinedByString:@"&"]];
+}
+
+- (NSMutableDictionary *)requestParams
+{
+    if ([self.params isKindOfClass:NSMutableDictionary.class]) {
+        return (id)self.params;
+    } else {
+        NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+        if (self.params.count) {
+            [dict addEntriesFromDictionary:self.params];
+        }
+        return dict;
+    }
+}
+
 - (BPURLRequest *)makeRequest
 {
     BPURLRequest *r = [super makeRequest];
     if (APP_DEBUG) {
-        NSLog(@"\nURL(%@):%@\n%@", self.httpMethod, r.asiRequest.url.absoluteString, self.params);
+        NSLog(@"\nURL(%@):\n%@\n%@", self.httpMethod, r.asiRequest.url.absoluteString, self.params);
     }
     return r;
 }
 
-- (WCDataResult *)getResultFromData:(id)data
+- (WCDataResult *)parseData:(id)data;
 {
+    if (APP_DEBUG) {
+        NSLog(@"\nData:\b%@", data);
+    }
     return [JTDataResult itemFromDict:data];
 }
 

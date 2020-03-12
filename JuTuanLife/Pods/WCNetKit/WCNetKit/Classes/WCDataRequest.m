@@ -24,28 +24,6 @@
     return reqUrl;
 }
 
-- (NSMutableDictionary *)requestParams
-{
-    NSMutableDictionary *params = nil;
-    if (_params && [_params isKindOfClass:NSMutableDictionary.class]) {
-        params = (id)_params;
-    } else {
-        if (_params) {
-            params = [NSMutableDictionary dictionaryWithDictionary:_params];
-        } else {
-            params = [NSMutableDictionary dictionary];
-        }
-    }
-    if (_needSystemParams) {
-        [params addEntriesFromDictionary:[WCNetManager systemParams]];
-    }
-    if (_needToken) {
-        [WCNetManager setUserTokenParams:params];
-    }
-
-    return params;
-}
-
 //+ (NSString *)getImageContentTypeWithData:(NSData *)data
 //{
 //    SDImageFormat imageFormat = [NSData sd_imageFormatForImageData:data];
@@ -115,9 +93,36 @@
     }
 }
 
+- (NSString *)requestUrl
+{
+    return [self.class requestUrlWithServer:_serverUrl api:_api];
+}
+
+- (NSMutableDictionary *)requestParams
+{
+    NSMutableDictionary *params = nil;
+    if (_params && [_params isKindOfClass:NSMutableDictionary.class]) {
+        params = (id)_params;
+    } else {
+        if (_params) {
+            params = [NSMutableDictionary dictionaryWithDictionary:_params];
+        } else {
+            params = [NSMutableDictionary dictionary];
+        }
+    }
+    if (_needSystemParams) {
+        [params addEntriesFromDictionary:[WCNetManager systemParams]];
+    }
+    if (_needToken) {
+        [WCNetManager setUserTokenParams:params];
+    }
+    
+    return params;
+}
+
 - (BPURLRequest *)makeRequest
 {
-    NSString *reqUrl = [self.class requestUrlWithServer:_serverUrl api:_api];
+    NSString *reqUrl = [self requestUrl];
     if (!reqUrl) {
         return nil;
     }
@@ -137,7 +142,7 @@
     return request;
 }
 
-- (WCDataResult *)getResultFromData:(id)data
+- (WCDataResult *)parseData:(id)data
 {
     WCDataResult *result = nil;
     switch (self.resultType) {

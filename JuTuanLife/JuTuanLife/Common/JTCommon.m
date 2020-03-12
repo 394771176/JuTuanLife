@@ -49,21 +49,25 @@ static id mainController = nil;
     return mainController;
 }
 
-+ (void)resetMainController
++ (void)resetRootController
 {
-    JTMainController *mainC = [[JTMainController alloc] init];
-    DTNavigationController *navC = [[DTNavigationController alloc] initWithRootViewController:mainC];
-    
+    UIViewController *vc = [JTUserManager rootController];
+    DTNavigationController *navC = [[DTNavigationController alloc] initWithRootViewController:vc];
     UIWindow *window = [[UIApplication sharedApplication].delegate window];
-    UIImageView *imgView = [[UIImageView alloc] initWithFrame:window.bounds];
-    imgView.image = [window captureView];
     window.rootViewController = navC;
-    [window addSubview:imgView];
-    [UIView animateWithDuration:0.25f animations:^{
-        imgView.top = window.bottom;
-    } completion:^(BOOL finished) {
-        [imgView removeFromSuperview];
-    }];
+    
+    if ([vc isKindOfClass:JTMainController.class]) {
+        UIImageView *imgView = [[UIImageView alloc] initWithFrame:window.bounds];
+        imgView.image = [window captureView];
+        [window addSubview:imgView];
+        [UIView animateWithDuration:0.25f animations:^{
+            imgView.top = window.bottom;
+        } completion:^(BOOL finished) {
+            [imgView removeFromSuperview];
+        }];
+    } else {
+        
+    }
 }
 
 + (BOOL)isServerPro

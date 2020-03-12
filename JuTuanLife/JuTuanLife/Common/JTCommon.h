@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)setMainController:(JTMainController *)vc;
 + (JTMainController *)mainController;
 
-+ (void)resetMainController;
++ (void)resetRootController;
 
 + (BOOL)APPDebug;
 + (BOOL)isServerPro;

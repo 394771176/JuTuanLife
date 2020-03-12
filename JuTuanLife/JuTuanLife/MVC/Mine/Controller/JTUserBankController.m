@@ -36,7 +36,7 @@
 - (void)reloadTableView
 {
     [self.tableSourceData clearDataSource];
-    if ([JTUserManager sharedInstance].user.IDNum.length || _showBank) {
+    if ([JTUserManager sharedInstance].user.bankNum.length || _showBank) {
         [self hideNoDataView];
         [self.tableSourceData addRowWithItem:nil cellClass:[JTUserBankCell class]];
         WEAK_SELF

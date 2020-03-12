@@ -23,14 +23,17 @@
 
 @implementation JTLoginAgreementController
 
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        self.disableBackGesture = YES;
+        self.disableBackBtn = YES;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
-    
-    _protorolsList = [NSArray arrayWithObjects:
-                      [JTProtorolItem itemWithName:@"《聚推帮业务分销代理协议》" link:@""],
-                      [JTProtorolItem itemWithName:@"《聚推帮业务提成分润委托声明书》" link:@""],
-                      [JTProtorolItem itemWithName:@"《个人所得税扣缴管理方法》" link:@""],
-                      [JTProtorolItem itemWithName:@"《聚推帮业务人员诚信展业承诺书》" link:@""],
-                      nil];
     
     [super viewDidLoad];
     self.title = @"签署协议";
@@ -39,6 +42,7 @@
     
     [self setupBottomView];
     
+    _protorolsList = [JTUserManager sharedInstance].protorolList;
     [self reloadTableView];
 }
 
@@ -64,7 +68,7 @@
         
         {
             UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-            btn.frame = CGRectMake(_protorolsLabel.left - 4, _protorolsLabel.top - 8, 16 + 16, 16 + 16);
+            btn.frame = CGRectMake(_protorolsLabel.left - 5, _protorolsLabel.top - 8, 16 + 16, 16 + 16);
             btn.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
             [btn addTarget:self action:@selector(clickBoxAction:)];
             [btn setImageWithImageName:@"protorol_unagree" selImageName:@"protorol_agree"];
@@ -102,6 +106,15 @@
 - (void)submitAction
 {
     NSLog(@"submit");
+    [JTService async:[JTUserRequest sign_contracts:_protorolsList] finish:^(WCDataResult *result) {
+        if (result.success) {
+            [[JTUserManager sharedInstance] updateProtorol:nil];
+            [[JTUserManager sharedInstance] setControllerAuthStatus:JTUserStatusAuthPass];
+            [[JTUserManager sharedInstance] checkUpdateAuthStatusController];
+        } else {
+            [DTPubUtil showHUDErrorHintInWindow:result.msg];
+        }
+    }];
 }
 
 - (void)clickBoxAction:(UIButton *)sender

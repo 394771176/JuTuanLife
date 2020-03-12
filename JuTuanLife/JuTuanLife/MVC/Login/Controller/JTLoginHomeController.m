@@ -35,7 +35,8 @@ DTTableButtonCellDelegate
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        
+        self.disableBackGesture = YES;
+        self.disableBackBtn = YES;
     }
     return self;
 }
@@ -66,6 +67,7 @@ DTTableButtonCellDelegate
     _passwordCell.delegate = self;
     [_passwordCell setleftGap:59 textHeight:_phoneCell.contentView.height];
     _passwordCell.placehloder = @"请输入6-12位数字、字母";
+    _passwordCell.maxTextLength = 18;
     
     _loginCell = [[DTTableButtonCell alloc] init];
     [_loginCell.submitBtn setTitle:@"登 录"];
@@ -100,18 +102,29 @@ DTTableButtonCellDelegate
 
 - (void)loginAction
 {
-    [WCDataService asyncBlock:^WCDataRequest *{
-        return [JTUserRequest requestWithApi:@"basic/get_app_config" params:nil];
-    } config:^(WCDataResult *result) {
-        
-    } finish:^(WCDataResult *result) {
-        NSLog(@"result = %@", result.data);
+    //15618197321 / d4071255
+    NSString *phone = _phoneCell.text;
+    NSString *password = _passwordCell.text;
+    if (APP_DEBUG) {
+        phone = @"18800333031";
+        password = @"wang@123";
+    }
+    [JTUserManager loginActionWithPhone:phone password:password completion:^(WCDataResult *result) {
+        if (result.success) {
+            [[JTUserManager sharedInstance] checkUpdateAuthStatusController];
+        } else {
+            [DTPubUtil showHUDErrorHintInWindow:result.msg];
+            if (APP_DEBUG) {
+                [[JTUserManager sharedInstance] setControllerAuthStatus:JTUserStatusNeedCertifie];
+                [[JTUserManager sharedInstance] checkUpdateAuthStatusController];
+            }
+        }
     }];
     
 //    JTLoginAuthController *vc = [JTLoginAuthController new];
 //    [WCControllerUtil pushViewController:vc];
     
-    [JTCommon resetMainController];
+//    [JTCommon resetMainController];
 }
 
 - (void)forgetAction
@@ -220,7 +233,6 @@ DTTableButtonCellDelegate
     } else {
         [textField resignFirstResponder];
     }
-        
 }
 
 - (void)loginTextFieldCell:(SCLoginTextFieldCell *)cell textFieldDidChange:(UITextField *)textField

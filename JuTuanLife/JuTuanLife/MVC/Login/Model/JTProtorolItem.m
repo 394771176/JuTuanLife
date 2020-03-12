@@ -12,14 +12,19 @@
 
 + (NSDictionary<NSString *,id> *)modelCustomPropertyMapper
 {
-    return @{};
+    return @{@"itemId" : @"id"};
+}
+
+- (BOOL)modelCustomTransformFromDictionary:(NSDictionary *)dic
+{
+    return YES;
 }
 
 + (JTProtorolItem *)itemWithName:(NSString *)name link:(NSString *)link
 {
     CREATE_ITEM(JTProtorolItem)
     item.name = name;
-    item.link = link;
+    item.contentUrl = link;
     return item;
 }
 

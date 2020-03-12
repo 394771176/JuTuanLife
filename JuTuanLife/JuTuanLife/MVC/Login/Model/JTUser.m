@@ -23,16 +23,17 @@
 
 - (NSString *)IDNumCipher
 {
-    if (self.IDNumCipher.length) {
-        return [_IDNum stringByReplacingCharactersInRange:NSMakeRange(1, _IDNum.length - 5) withString:@"·"];
+    NSString *num = self.cert.certNo;
+    if (num.length > 5) {
+        return [num stringByReplacingCharactersInRange:NSMakeRange(1, num.length - 5) withString:@"·"];
     } else {
-        return _IDNum;
+        return num;
     }
 }
 
 - (NSString *)bankNumCipher
 {
-    if (_bankNum.length) {
+    if (_bankNum.length > 4) {
         return [_bankNum stringByReplacingCharactersInRange:NSMakeRange(0, _bankNum.length - 4) withString:@"·"];
     } else {
         return _bankNum;

@@ -24,6 +24,16 @@ DTTableButtonCellDelegate
 
 @implementation JTLoginAuthController
 
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        self.disableBackGesture = YES;
+        self.disableBackBtn = YES;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     
     _cellArray = [NSMutableArray array];
@@ -64,7 +74,11 @@ DTTableButtonCellDelegate
 
 - (void)nextStepAction
 {
-    PUSH_VC(JTLoginAgreementController)
+    if (APP_DEBUG) {
+        [[JTUserManager sharedInstance] setControllerAuthStatus:JTUserStatusNeedSign];
+        [[JTUserManager sharedInstance] checkUpdateAuthStatusController];
+    }
+//    PUSH_VC(JTLoginAgreementController)
 }
 
 #pragma mark - UITableViewDataSource & UITableViewDelegate

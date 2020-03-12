@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <WCNetKit/WCNetManager.h>
-
+#import "JTService.h"
 #import "JTUserRequest.h"
 
 NS_ASSUME_NONNULL_BEGIN

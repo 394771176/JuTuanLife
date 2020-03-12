@@ -13,6 +13,9 @@
 
 @interface WCDataService : NSObject
 
++ (void)addBlockOnMainThread:(void (^)(void))block;
++ (void)addBlockOnGlobalThread:(void (^)(void))block;
+
 // 同步请求
 + (WCDataResult *)sync:(WCDataRequest *)request;
 

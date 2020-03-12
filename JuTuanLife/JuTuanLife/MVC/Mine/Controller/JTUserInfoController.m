@@ -36,7 +36,7 @@
         WCTableSection *section = [WCTableSection sectionWithItems:@[@"姓 名：", @"手 机：", @"身份证号：", @"拓业城市：", @"收货地址："] cellClass:[JTMineInfoListCell class]];
         section.heightBlock = ^CGFloat(id data, NSIndexPath *indexPath) {
             if (indexPath.row == 4) {
-                return [JTMineInfoListCell cellHeightWithItem:user.address tableView:weakSelf.tableView];
+                return [JTMineInfoListCell cellHeightWithItem:user.cert tableView:weakSelf.tableView];
             } else {
                 return [JTMineInfoListCell cellHeightWithItem:nil tableView:weakSelf.tableView];
             }
@@ -68,7 +68,7 @@
                     break;
                 case 3:
                 {
-                    [cell setContent:[user city]];
+                    [cell setContent:[user bizCityName]];
                 }
                     break;
                 case 4:

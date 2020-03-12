@@ -10,8 +10,6 @@
 #import "WCBaseUIKit.h"
 #import "JTUser.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 typedef NS_ENUM(NSUInteger, JTLoginType) {
     JTLoginTypeLoginedBefore = 0,//之前已经登录
     JTLoginTypeLoginNow,//现在登录
@@ -21,19 +19,39 @@ typedef NS_ENUM(NSUInteger, JTLoginType) {
 @interface JTUserManager : NSObject
 
 @property (nonatomic, strong) NSString *ac_token;
+@property (nonatomic, strong) NSString *rf_token;
 
 @property (nonatomic, strong) JTUser *user;
+@property (nonatomic, strong) NSArray <JTProtorolItem *> *protorolList;
 
+@property (nonatomic, strong) DTIntBlock loginBlock;
 
 SHARED_INSTANCE_H
 
 - (BOOL)isLogined;
 - (BOOL)isAuth;
+- (JTUserStatus)userAuthStatus;
+
+- (void)refreshUserInfo;
+- (void)refreshProtorol;
+
+- (void)updateAcToken:(NSDictionary *)dict;
+- (void)updateUserInfo:(NSDictionary *)dict;
+- (void)updateProtorol:(NSDictionary *)dict;
+
+//登录三要素：token , userinfo , 协议数据
+- (void)saveAcToken:(NSDictionary *)tokenDict userInfo:(NSDictionary *)userDict protorol:(NSDictionary *)protorolDict;
+
+
+- (void)setControllerAuthStatus:(JTUserStatus)status;
+- (void)checkUpdateAuthStatusController;
 
 //+ (void)loginAction:(DTIntBlock)block;//登录操作
 + (void)loginAuth:(DTIntBlock)block;//登录
 + (void)logoutAction:(void (^)(void))block;
 
-@end
++ (void)loginActionWithPhone:(NSString *)phone password:(NSString *)password completion:(void (^)(WCDataResult *result))completion;
 
-NS_ASSUME_NONNULL_END
++ (UIViewController *)rootController;
+
+@end

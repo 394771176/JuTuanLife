@@ -46,7 +46,7 @@
     
     WCDataResult *dataResult = nil;
     if (result) {
-        dataResult = [req getResultFromData:result];
+        dataResult = [req parseData:result];
     } else {
         if (request.asiRequest.responseStatusCode == 0) {
             dataResult = [WCDataResult resultForNetworkError];
