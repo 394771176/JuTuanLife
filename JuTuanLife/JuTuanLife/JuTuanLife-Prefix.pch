@@ -25,5 +25,6 @@
 #import "JTUserManager.h"
 
 #import "JTCoreUtil.h"
+#import "JTLinkUtil.h"
 
 #endif /* JuTuanLife_Prefix_pch */

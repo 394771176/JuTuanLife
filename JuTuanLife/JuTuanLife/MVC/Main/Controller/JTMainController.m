@@ -29,6 +29,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         [JTCommon setMainController:self];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshUserInfoForLaunch) name:JTUserManager_LAUNCH_REFRESH object:nil];
     }
     return self;
 }
@@ -62,6 +64,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self setRightBarItem:nil];
     [[self currentController] viewWillAppear:animated];
 }
 
@@ -83,18 +86,18 @@
     [[self currentController] viewDidDisappear:animated];
 }
 
-- (UIStatusBarStyle)statusBarStyle
-{
-    if (_selectedIndex == 3) {
-        return UIStatusBarStyleLightContent;
-    } else {
-        return UIStatusBarStyleDefault;
-    }
-}
+//- (UIStatusBarStyle)statusBarStyle
+//{
+//    if (_selectedIndex == 0 || _selectedIndex == 3) {
+//        return UIStatusBarStyleLightContent;
+//    } else {
+//        return UIStatusBarStyleDefault;
+//    }
+//}
 
 - (BOOL)hiddenNavBar
 {
-    return _selectedIndex == 3;
+    return _selectedIndex == 0 || _selectedIndex == 3;
 }
 
 - (void)viewDidLoad
@@ -108,9 +111,8 @@
     
     self.selectedIndex = 0;
     if (APP_DEBUG) {
-        self.selectedIndex = 3;
-    }
-        
+//        self.selectedIndex = 3;
+    } 
 }
 
 - (DTViewController *)currentController
@@ -135,6 +137,10 @@
     
     _selectedIndex = selectedIndex;
     _mainTabBar.selectIndex = selectedIndex;
+    
+    if (_selectedIndex != 1) {
+        [self setRightBarItem:nil];
+    }
     
     UIViewController *controller = [_controllerList safeObjectAtIndex:_selectedIndex];
     [self.view insertSubview:controller.view belowSubview:_mainTabBar];
@@ -167,6 +173,15 @@
     } else {
         self.selectedIndex = index;
     }
+}
+
+#pragma mark - notice
+
+- (void)refreshUserInfoForLaunch
+{
+    [self addBlockWhenFirstDidAppear:^(id userInfo) {
+        [[JTUserManager sharedInstance] checkUserAuthStatus];
+    }];
 }
 
 @end

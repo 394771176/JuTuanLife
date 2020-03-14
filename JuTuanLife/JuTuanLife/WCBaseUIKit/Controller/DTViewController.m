@@ -74,6 +74,12 @@
     return NO;
 }
 
+- (void)setDisableBackBtn:(BOOL)disableBackBtn
+{
+    _disableBackBtn = disableBackBtn;
+    self.navigationItem.hidesBackButton = disableBackBtn;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -86,9 +92,22 @@
     }
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return [self statusBarStyle];
+}
+
+- (BOOL)prefersStatusBarHidden
+{
+    return NO;
+    return [self hiddenStatusBar];
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+
+    [[UIApplication sharedApplication] setStatusBarHidden:[self hiddenStatusBar] animated:animated];
 
     if (![self hiddenStatusBar]) {
         [[UIApplication sharedApplication] setStatusBarStyle:[self statusBarStyle] animated:animated];
@@ -109,7 +128,7 @@
     [super viewWillDisappear:animated];
     
     UIViewController *controller = [self getCurrentVisibleViewController];
-    //下一个界面 不响应我们的方法，且当前界面做了调整，需要主动恢复
+//    下一个界面 不响应我们的方法，且当前界面做了调整，需要主动恢复
     if (controller && ![controller respondsToSelector:@selector(hiddenStatusBar)] && [self hiddenStatusBar]) {
         [[UIApplication sharedApplication] setStatusBarHidden:NO];
     }

@@ -18,7 +18,7 @@ typedef NS_ENUM(NSUInteger, JTUserStatus) {
     JTUserStatusAuthPass,
 };
 
-@class JTUserCert;
+@class JTUserCert, JTUserTeam;
 
 @interface JTUser : WCBaseEntity
 
@@ -40,6 +40,9 @@ typedef NS_ENUM(NSUInteger, JTUserStatus) {
 
 @property (nonatomic, strong) NSString *bankNum;
 @property (nonatomic, strong) NSString *yajinTip;
+
+@property (nonatomic, assign) NSInteger apprentices;
+@property (nonatomic, strong) NSArray<JTUserTeam *> *teams;
 
 - (NSString *)phoneCipher;
 - (NSString *)IDNumCipher;
@@ -67,5 +70,15 @@ typedef NS_ENUM(NSUInteger, JTUserStatus) {
 @property (nonatomic, strong) NSString *certAuthTime;
 
 @end
+
+@interface JTUserTeam : WCBaseEntity {
+    
+}
+
+@property (nonatomic, strong) NSString *itemId;
+@property (nonatomic, strong) NSString *name;
+
+@end
+
 
 NS_ASSUME_NONNULL_END

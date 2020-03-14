@@ -29,6 +29,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (JTRequest *)get_unsigned_contracts;
 + (JTRequest *)sign_contracts:(NSArray *)array;
 
++ (JTRequest *)getShipList;
+
 @end
 
 NS_ASSUME_NONNULL_END

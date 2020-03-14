@@ -66,12 +66,12 @@ static WCAppStyleConfig *_config = nil;
 
 + (UIInterfaceOrientationMask)supportedInterfaceOrientations
 {
-    return _config.appInterfaceOrientations;
+    return self.config.appInterfaceOrientations;
 }
 
 + (void)setAppSupportedInterfaceOrientations:(UIInterfaceOrientationMask)orientations
 {
-    _config.appInterfaceOrientations = orientations;
+    self.config.appInterfaceOrientations = orientations;
 }
 
 @end

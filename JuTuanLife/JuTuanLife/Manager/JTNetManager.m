@@ -17,6 +17,12 @@
 #include <arpa/inet.h>
 #include <ifaddrs.h>
 
+@interface JTNetManager () {
+    NSMutableDictionary *_systemParams;
+}
+
+@end
+
 @implementation JTNetManager
 
 + (void)setupNetManager
@@ -24,6 +30,39 @@
     JTNetManager *manager = [self sharedInstance];
 //    manager.defaultTimeOut = 10;
     [WCNetManager setup:manager];
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self setupSystemParams];
+    }
+    return self;
+}
+
+- (void)setupSystemParams
+{
+    if (_systemParams == nil) {
+        NSMutableDictionary *params = [NSMutableDictionary dictionary];
+        [params safeSetObject:@"app" forKey:@"_platform"];
+        [params safeSetObject:@"ios" forKey:@"_os"];
+        [params safeSetObject:@"JuTuiBang" forKey:@"_caller"];
+        [params safeSetObject:[self.class bundleShortVersion] forKey:@"_appVersion"];
+        [params safeSetObject:[UIDevice currentDevice].systemVersion forKey:@"_sysVersion"];
+        [params safeSetObject:[self.class machineModel] forKey:@"_model"];
+        [params safeSetObject:[self.class openUDID] forKey:@"_openUDID"];
+        [params safeSetObject:@"AppStore" forKey:@"_appChannel"];
+        //        [params safeSetObject:[self.class clientUDID] forKey:@"cUDID"];
+        if (APP_DEBUG) {
+            [params safeSetObject:@"true" forKey:@"__intern__show-error-mesg"];
+        }
+        // jailbroken
+        //        if ([self.class isJailbroken]) {
+        //            [params safeSetObject:@"1" forKey:@"jb"];
+        //        }
+        _systemParams = params;
+    }
 }
 
 #pragma mark - WCNetManagerProtocol
@@ -40,27 +79,7 @@
 
 - (NSDictionary *)systemParams
 {
-    static NSMutableDictionary *params = nil;
-    if (params == nil) {
-        params = [NSMutableDictionary dictionary];
-        [params safeSetObject:@"app" forKey:@"_platform"];
-        [params safeSetObject:@"ios" forKey:@"_os"];
-        [params safeSetObject:@"JuTuiBang" forKey:@"_caller"];
-        [params safeSetObject:[self.class bundleShortVersion] forKey:@"_appVersion"];
-        [params safeSetObject:[UIDevice currentDevice].systemVersion forKey:@"_sysVersion"];
-        [params safeSetObject:[self.class machineModel] forKey:@"_model"];
-        [params safeSetObject:[self.class openUDID] forKey:@"_openUDID"];
-        [params safeSetObject:@"AppStore" forKey:@"_appChannel"];
-//        [params safeSetObject:[self.class clientUDID] forKey:@"cUDID"];
-        if (APP_DEBUG) {
-            [params safeSetObject:@"true" forKey:@"__intern__show-error-mesg"];
-        }
-        // jailbroken
-        //        if ([self.class isJailbroken]) {
-        //            [params safeSetObject:@"1" forKey:@"jb"];
-        //        }
-    }
-    return params;
+    return _systemParams;
 }
 
 + (NSString *)bundleShortVersion

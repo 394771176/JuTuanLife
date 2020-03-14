@@ -110,6 +110,9 @@ id UICreateImage(Class uiClass, CGRect frame, UIAutoResizingType AA, UIContetntM
     UIImage *img = ImageFrom(image);
     if (CGRectEqualToRect(frame, CGRectZero) && img) {
         imageView = [[uiClass alloc] initWithImage:img];
+        if (toView) {
+            [toView addSubview:imageView];
+        }
     } else {
         imageView = UICreate(uiClass, frame, AA, toView);
         imageView.image = img;

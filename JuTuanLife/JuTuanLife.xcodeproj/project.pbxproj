@@ -82,6 +82,7 @@
 		6071FF872416912A009B617E /* JTUserAddBankController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6071FF862416912A009B617E /* JTUserAddBankController.m */; };
 		6071FF8A241697F6009B617E /* JTUserBankCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6071FF89241697F6009B617E /* JTUserBankCell.m */; };
 		6071FF8D24169D77009B617E /* JTUserBank.m in Sources */ = {isa = PBXBuildFile; fileRef = 6071FF8C24169D77009B617E /* JTUserBank.m */; };
+		60ACA3A7241CCE1B0023ECB4 /* JTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ACA3A6241CCE1B0023ECB4 /* JTViewController.m */; };
 		60B939A62413E465003147DC /* user_home_avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60B9399F2413E464003147DC /* user_home_avatar@2x.png */; };
 		60B939A72413E465003147DC /* user_home_info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60B939A02413E464003147DC /* user_home_info@2x.png */; };
 		60B939A82413E465003147DC /* user_home_jutui@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60B939A12413E464003147DC /* user_home_jutui@2x.png */; };
@@ -113,6 +114,7 @@
 		60B93B662414FA1D003147DC /* JTAboutUsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B93B652414FA1D003147DC /* JTAboutUsView.m */; };
 		60B93B692414FBD5003147DC /* JTMineInfoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B93B682414FBD5003147DC /* JTMineInfoListCell.m */; };
 		60B93B6C241520F6003147DC /* JTLinkUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B93B6B241520F6003147DC /* JTLinkUtil.m */; };
+		60BDC41C241CEB4C00CEAA56 /* JTUserHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BDC41B241CEB4C00CEAA56 /* JTUserHeaderView.m */; };
 		60D03C90240FF99600E7D7D1 /* launch_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60D03C8F240FF99600E7D7D1 /* launch_image@2x.png */; };
 		60D03C93240FF9F100E7D7D1 /* JTLoginHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D03C92240FF9F100E7D7D1 /* JTLoginHomeController.m */; };
 		60D03C96240FFA9900E7D7D1 /* JTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D03C95240FFA9900E7D7D1 /* JTUser.m */; };
@@ -166,6 +168,14 @@
 		60E2B12A240ED5D800E4EA52 /* WCBarItemUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0FB240ED5D800E4EA52 /* WCBarItemUtil.m */; };
 		60E2B147240ED6AF00E4EA52 /* JTMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B146240ED6AF00E4EA52 /* JTMainController.m */; };
 		60E2B2B7240FE58100E4EA52 /* BPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B2B5240FE58100E4EA52 /* BPAppDelegate.m */; };
+		60ECA61F241CEEE20029C45A /* JTHomeFenrunCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ECA61E241CEEE20029C45A /* JTHomeFenrunCell.m */; };
+		60ECA622241CEF840029C45A /* JTHomeBusinessCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ECA621241CEF840029C45A /* JTHomeBusinessCell.m */; };
+		60ECA792241D02CC0029C45A /* JTBusinessItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ECA791241D02CC0029C45A /* JTBusinessItem.m */; };
+		60ECA794241D0CE50029C45A /* jt_no_task@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60ECA793241D0CE50029C45A /* jt_no_task@2x.png */; };
+		60ECA797241D188B0029C45A /* JTShipCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ECA796241D188B0029C45A /* JTShipCenterController.m */; };
+		60ECA79A241D1E9C0029C45A /* JTShipItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ECA799241D1E9C0029C45A /* JTShipItem.m */; };
+		60ECA79C241D1F3F0029C45A /* jt_ship_add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60ECA79B241D1F3F0029C45A /* jt_ship_add@2x.png */; };
+		60ECA79F241D26BD0029C45A /* JTUserTeamView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ECA79E241D26BD0029C45A /* JTUserTeamView.m */; };
 		60ED762A240EB25A0013CB8C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ED7629240EB25A0013CB8C /* AppDelegate.m */; };
 		60ED7630240EB25A0013CB8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60ED762E240EB25A0013CB8C /* Main.storyboard */; };
 		60ED7632240EB25B0013CB8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60ED7631240EB25B0013CB8C /* Assets.xcassets */; };
@@ -298,6 +308,8 @@
 		6071FF89241697F6009B617E /* JTUserBankCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTUserBankCell.m; sourceTree = "<group>"; };
 		6071FF8B24169D77009B617E /* JTUserBank.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTUserBank.h; sourceTree = "<group>"; };
 		6071FF8C24169D77009B617E /* JTUserBank.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTUserBank.m; sourceTree = "<group>"; };
+		60ACA3A5241CCE1B0023ECB4 /* JTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTViewController.h; sourceTree = "<group>"; };
+		60ACA3A6241CCE1B0023ECB4 /* JTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTViewController.m; sourceTree = "<group>"; };
 		60B9399F2413E464003147DC /* user_home_avatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_home_avatar@2x.png"; sourceTree = "<group>"; };
 		60B939A02413E464003147DC /* user_home_info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_home_info@2x.png"; sourceTree = "<group>"; };
 		60B939A12413E464003147DC /* user_home_jutui@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_home_jutui@2x.png"; sourceTree = "<group>"; };
@@ -343,6 +355,8 @@
 		60B93B682414FBD5003147DC /* JTMineInfoListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTMineInfoListCell.m; sourceTree = "<group>"; };
 		60B93B6A241520F6003147DC /* JTLinkUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTLinkUtil.h; sourceTree = "<group>"; };
 		60B93B6B241520F6003147DC /* JTLinkUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTLinkUtil.m; sourceTree = "<group>"; };
+		60BDC41A241CEB4C00CEAA56 /* JTUserHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTUserHeaderView.h; sourceTree = "<group>"; };
+		60BDC41B241CEB4C00CEAA56 /* JTUserHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTUserHeaderView.m; sourceTree = "<group>"; };
 		60D03C8F240FF99600E7D7D1 /* launch_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch_image@2x.png"; sourceTree = "<group>"; };
 		60D03C91240FF9F100E7D7D1 /* JTLoginHomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTLoginHomeController.h; sourceTree = "<group>"; };
 		60D03C92240FF9F100E7D7D1 /* JTLoginHomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTLoginHomeController.m; sourceTree = "<group>"; };
@@ -450,6 +464,20 @@
 		60E2B146240ED6AF00E4EA52 /* JTMainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTMainController.m; sourceTree = "<group>"; };
 		60E2B2B5240FE58100E4EA52 /* BPAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPAppDelegate.m; sourceTree = "<group>"; };
 		60E2B2B6240FE58100E4EA52 /* BPAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPAppDelegate.h; sourceTree = "<group>"; };
+		60ECA61D241CEEE20029C45A /* JTHomeFenrunCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTHomeFenrunCell.h; sourceTree = "<group>"; };
+		60ECA61E241CEEE20029C45A /* JTHomeFenrunCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTHomeFenrunCell.m; sourceTree = "<group>"; };
+		60ECA620241CEF840029C45A /* JTHomeBusinessCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTHomeBusinessCell.h; sourceTree = "<group>"; };
+		60ECA621241CEF840029C45A /* JTHomeBusinessCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTHomeBusinessCell.m; sourceTree = "<group>"; };
+		60ECA790241D02CC0029C45A /* JTBusinessItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTBusinessItem.h; sourceTree = "<group>"; };
+		60ECA791241D02CC0029C45A /* JTBusinessItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTBusinessItem.m; sourceTree = "<group>"; };
+		60ECA793241D0CE50029C45A /* jt_no_task@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "jt_no_task@2x.png"; path = "../../Mine/Resource/jt_no_task@2x.png"; sourceTree = "<group>"; };
+		60ECA795241D188B0029C45A /* JTShipCenterController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTShipCenterController.h; sourceTree = "<group>"; };
+		60ECA796241D188B0029C45A /* JTShipCenterController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTShipCenterController.m; sourceTree = "<group>"; };
+		60ECA798241D1E9C0029C45A /* JTShipItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTShipItem.h; sourceTree = "<group>"; };
+		60ECA799241D1E9C0029C45A /* JTShipItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTShipItem.m; sourceTree = "<group>"; };
+		60ECA79B241D1F3F0029C45A /* jt_ship_add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jt_ship_add@2x.png"; sourceTree = "<group>"; };
+		60ECA79D241D26BD0029C45A /* JTUserTeamView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTUserTeamView.h; sourceTree = "<group>"; };
+		60ECA79E241D26BD0029C45A /* JTUserTeamView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTUserTeamView.m; sourceTree = "<group>"; };
 		60ED7625240EB25A0013CB8C /* JuTuanLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JuTuanLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60ED7628240EB25A0013CB8C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		60ED7629240EB25A0013CB8C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -591,6 +619,8 @@
 		6001C794240EB755006092BB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				60ECA790241D02CC0029C45A /* JTBusinessItem.h */,
+				60ECA791241D02CC0029C45A /* JTBusinessItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -598,6 +628,10 @@
 		6001C795240EB755006092BB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				60ECA61D241CEEE20029C45A /* JTHomeFenrunCell.h */,
+				60ECA61E241CEEE20029C45A /* JTHomeFenrunCell.m */,
+				60ECA620241CEF840029C45A /* JTHomeBusinessCell.h */,
+				60ECA621241CEF840029C45A /* JTHomeBusinessCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -801,6 +835,10 @@
 			children = (
 				606FE7AD24137D7E00522B96 /* JTMineHeaderView.h */,
 				606FE7AE24137D7E00522B96 /* JTMineHeaderView.m */,
+				60BDC41A241CEB4C00CEAA56 /* JTUserHeaderView.h */,
+				60BDC41B241CEB4C00CEAA56 /* JTUserHeaderView.m */,
+				60ECA79D241D26BD0029C45A /* JTUserTeamView.h */,
+				60ECA79E241D26BD0029C45A /* JTUserTeamView.m */,
 				60B93B642414FA1D003147DC /* JTAboutUsView.h */,
 				60B93B652414FA1D003147DC /* JTAboutUsView.m */,
 				60B93B672414FBD5003147DC /* JTMineInfoListCell.h */,
@@ -871,6 +909,7 @@
 		60B939B62414D01B003147DC /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				60ECA793241D0CE50029C45A /* jt_no_task@2x.png */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -891,6 +930,8 @@
 			children = (
 				60B939BC2414D02F003147DC /* JTShipHomeController.h */,
 				60B939BD2414D02F003147DC /* JTShipHomeController.m */,
+				60ECA795241D188B0029C45A /* JTShipCenterController.h */,
+				60ECA796241D188B0029C45A /* JTShipCenterController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -900,6 +941,8 @@
 			children = (
 				60B939D62414D15E003147DC /* JTShipListModel.h */,
 				60B939D72414D15E003147DC /* JTShipListModel.m */,
+				60ECA798241D1E9C0029C45A /* JTShipItem.h */,
+				60ECA799241D1E9C0029C45A /* JTShipItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -916,6 +959,7 @@
 		60B939BB2414D01B003147DC /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				60ECA79B241D1F3F0029C45A /* jt_ship_add@2x.png */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -1159,6 +1203,8 @@
 				60E2B003240ED59900E4EA52 /* WCBaseUIKit */,
 				60ED7628240EB25A0013CB8C /* AppDelegate.h */,
 				60ED7629240EB25A0013CB8C /* AppDelegate.m */,
+				60ACA3A5241CCE1B0023ECB4 /* JTViewController.h */,
+				60ACA3A6241CCE1B0023ECB4 /* JTViewController.m */,
 				6001C7A0240EBA1D006092BB /* JuTuanLife-Prefix.pch */,
 				60ED7636240EB25B0013CB8C /* Info.plist */,
 				6001C79F240EB95E006092BB /* Base */,
@@ -1238,6 +1284,7 @@
 				60B93B5D2414E0A3003147DC /* main_tab_task_sel@2x.png in Resources */,
 				60B93B582414E0A3003147DC /* main_tab_task@2x.png in Resources */,
 				60B93B5B2414E0A3003147DC /* main_tab_ship_sel@2x.png in Resources */,
+				60ECA79C241D1F3F0029C45A /* jt_ship_add@2x.png in Resources */,
 				606FE74A241164F700522B96 /* auth_idcard_2@2x.png in Resources */,
 				60B93B592414E0A3003147DC /* main_tab_home_sel@2x.png in Resources */,
 				606FE71224101DE700522B96 /* nav_close_b@2x.png in Resources */,
@@ -1254,6 +1301,7 @@
 				606FE755241164F700522B96 /* logo_jtbang@2x.png in Resources */,
 				60B939AB2413E465003147DC /* user_home_protorol@2x.png in Resources */,
 				606FE751241164F700522B96 /* login_header_bg@2x.png in Resources */,
+				60ECA794241D0CE50029C45A /* jt_no_task@2x.png in Resources */,
 				606FE7982413716700522B96 /* login_protorol_bg@2x.png in Resources */,
 				60B93B5F2414E0A3003147DC /* main_tab_mine@2x.png in Resources */,
 				606FE71424101DE700522B96 /* nav_share@2x.png in Resources */,
@@ -1348,6 +1396,7 @@
 				60E2B108240ED5D800E4EA52 /* DTStrokeLabel.m in Sources */,
 				60B93B692414FBD5003147DC /* JTMineInfoListCell.m in Sources */,
 				60B939D82414D15E003147DC /* JTShipListModel.m in Sources */,
+				60ECA79F241D26BD0029C45A /* JTUserTeamView.m in Sources */,
 				60E2B120240ED5D800E4EA52 /* DTPagesController.m in Sources */,
 				6071FF872416912A009B617E /* JTUserAddBankController.m in Sources */,
 				60E2B106240ED5D800E4EA52 /* CLAlertView.m in Sources */,
@@ -1370,6 +1419,7 @@
 				606FE7332411550200522B96 /* JTNetManager.m in Sources */,
 				60E2B117240ED5D800E4EA52 /* DTTagLabel.m in Sources */,
 				606FE7AF24137D7E00522B96 /* JTMineHeaderView.m in Sources */,
+				60ECA622241CEF840029C45A /* JTHomeBusinessCell.m in Sources */,
 				60E2B0FD240ED5D800E4EA52 /* CCCommentStarView.m in Sources */,
 				60E2B126240ED5D800E4EA52 /* FFAnimateHelper.m in Sources */,
 				607100FD2417DD4B009B617E /* JTUserProtorolsCell.m in Sources */,
@@ -1402,6 +1452,8 @@
 				60E2B122240ED5D800E4EA52 /* DTViewController.m in Sources */,
 				60E2B127240ED5D800E4EA52 /* DTPubUtil.m in Sources */,
 				60E2B147240ED6AF00E4EA52 /* JTMainController.m in Sources */,
+				60ECA792241D02CC0029C45A /* JTBusinessItem.m in Sources */,
+				60ECA797241D188B0029C45A /* JTShipCenterController.m in Sources */,
 				60B93B4E2414DC41003147DC /* DTMainTabBarView.m in Sources */,
 				60B939CF2414D104003147DC /* JTMessageListModel.m in Sources */,
 				60B939BE2414D02F003147DC /* JTShipHomeController.m in Sources */,
@@ -1425,6 +1477,7 @@
 				60E2B11A240ED5D800E4EA52 /* DTHttpRefreshLoadMoreTableController.m in Sources */,
 				60E2B118240ED5D800E4EA52 /* DTTabItem.m in Sources */,
 				60E2B123240ED5D800E4EA52 /* DTHttpLoadMoreTableController.m in Sources */,
+				60ECA79A241D1E9C0029C45A /* JTShipItem.m in Sources */,
 				60E2B113240ED5D800E4EA52 /* DTTableCustomCell.m in Sources */,
 				606FE782241172EA00522B96 /* JTLoginProtorolCell.m in Sources */,
 				606FE7942412C2CB00522B96 /* DTTableIconCell.m in Sources */,
@@ -1434,6 +1487,7 @@
 				60E2B10D240ED5D800E4EA52 /* DTGradientLabel.m in Sources */,
 				60B93B6C241520F6003147DC /* JTLinkUtil.m in Sources */,
 				60ED762A240EB25A0013CB8C /* AppDelegate.m in Sources */,
+				60ACA3A7241CCE1B0023ECB4 /* JTViewController.m in Sources */,
 				606FE7B9241385BE00522B96 /* WCTableSourceData.m in Sources */,
 				60E2B101240ED5D800E4EA52 /* DTDrivingLoadingView.m in Sources */,
 				6071FF8A241697F6009B617E /* JTUserBankCell.m in Sources */,
@@ -1443,6 +1497,8 @@
 				606FE7A324137B0200522B96 /* JTUserInfoController.m in Sources */,
 				60D03C9C2410046600E7D7D1 /* SCLoginTextFieldCell.m in Sources */,
 				606FE7912412C2AD00522B96 /* DTTitleContentCell.m in Sources */,
+				60ECA61F241CEEE20029C45A /* JTHomeFenrunCell.m in Sources */,
+				60BDC41C241CEB4C00CEAA56 /* JTUserHeaderView.m in Sources */,
 				606FE73C2411607700522B96 /* JTDataResult.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1586,7 +1642,8 @@
 			baseConfigurationReference = 22D0A58BFCB7D41C914AE223 /* Pods-JuTuanLife.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = JZWZRKY2YQ;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JuTuanLife/JuTuanLife-Prefix.pch";
@@ -1596,8 +1653,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lilu.jutuan;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jtlife.jutuan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = AnyApp_Dev;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1607,7 +1665,8 @@
 			baseConfigurationReference = 252ACCD2D3E36346102AC1B4 /* Pods-JuTuanLife.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = JZWZRKY2YQ;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JuTuanLife/JuTuanLife-Prefix.pch";
@@ -1617,8 +1676,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lilu.jutuan;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jtlife.jutuan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = AnyAPP_AdHoc;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

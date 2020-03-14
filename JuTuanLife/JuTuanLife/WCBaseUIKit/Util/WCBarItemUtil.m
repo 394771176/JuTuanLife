@@ -30,6 +30,7 @@
 + (UIBarButtonItem *)barButtonItemWithImage:(UIImage *)image target:(id)target action:(SEL)action
 {
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:target action:action];
+    item.tintColor = [UIColor colorWithString:@"333333"];
     return item;
 }
 

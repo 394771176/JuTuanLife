@@ -56,6 +56,11 @@
     [_dataModel reload];
 }
 
+- (id)Model
+{
+    return _dataModel;
+}
+
 - (DTListDataModel *)createDataModel
 {
     return nil;

@@ -74,10 +74,7 @@ DTTableButtonCellDelegate
 
 - (void)nextStepAction
 {
-    if (APP_DEBUG) {
-        [[JTUserManager sharedInstance] setControllerAuthStatus:JTUserStatusNeedSign];
-        [[JTUserManager sharedInstance] checkUpdateAuthStatusController];
-    }
+    [[JTUserManager sharedInstance] checkToNextForStatus:JTUserStatusNeedCertifie];
 //    PUSH_VC(JTLoginAgreementController)
 }
 

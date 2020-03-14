@@ -111,20 +111,11 @@ DTTableButtonCellDelegate
     }
     [JTUserManager loginActionWithPhone:phone password:password completion:^(WCDataResult *result) {
         if (result.success) {
-            [[JTUserManager sharedInstance] checkUpdateAuthStatusController];
+            [[JTUserManager sharedInstance] checkToNextForStatus:JTUserStatusNeedLogin];
         } else {
             [DTPubUtil showHUDErrorHintInWindow:result.msg];
-            if (APP_DEBUG) {
-                [[JTUserManager sharedInstance] setControllerAuthStatus:JTUserStatusNeedCertifie];
-                [[JTUserManager sharedInstance] checkUpdateAuthStatusController];
-            }
         }
     }];
-    
-//    JTLoginAuthController *vc = [JTLoginAuthController new];
-//    [WCControllerUtil pushViewController:vc];
-    
-//    [JTCommon resetMainController];
 }
 
 - (void)forgetAction

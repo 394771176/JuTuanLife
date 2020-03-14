@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JTTaskHomeController : DTHttpRefreshLoadMoreTableController
+@interface JTTaskHomeController : DTTableController
 
 @end
 

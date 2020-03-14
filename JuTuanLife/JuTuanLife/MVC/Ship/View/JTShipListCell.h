@@ -7,11 +7,10 @@
 //
 
 #import "DTTableCustomCell.h"
-
-NS_ASSUME_NONNULL_BEGIN
+#import "JTShipItem.h"
 
 @interface JTShipListCell : DTTableCustomCell
 
-@end
+@property (nonatomic, strong) JTShipItem *item;
 
-NS_ASSUME_NONNULL_END
+@end

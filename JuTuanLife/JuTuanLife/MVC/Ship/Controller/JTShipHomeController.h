@@ -8,10 +8,6 @@
 
 #import "DTHttpRefreshLoadMoreTableController.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface JTShipHomeController : DTHttpRefreshLoadMoreTableController
 
 @end
-
-NS_ASSUME_NONNULL_END

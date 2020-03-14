@@ -57,7 +57,6 @@
         _addBankBtn.backgroundColor = [UIColor whiteColor];
         _addBankBtn.cornerRadius = 3;
         
-        
         UICREATELabelTo(_addBankTip, UILabel, 10, _addBankBtn.bottom + 10, self.view.width - 20, 32, AAW, @"请添加1张用于收取分润的银行卡", @"12", @"999999", self.view);
         _addBankTip.textAlignment = NSTextAlignmentCenter;
     }

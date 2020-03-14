@@ -32,4 +32,6 @@
 
 + (void)pushViewController:(UIViewController *)controller;
 
++ (void)presentViewController:(UIViewController *)controller;
+
 @end

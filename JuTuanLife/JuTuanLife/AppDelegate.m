@@ -44,6 +44,8 @@
     UIViewController *root = [JTUserManager rootController];
     DTNavigationController *navC = [[DTNavigationController alloc] initWithRootViewController:root];
     self.window.rootViewController = navC;
+    
+    [[JTUserManager sharedInstance] refreshUserInfoForLaunch];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

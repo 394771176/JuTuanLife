@@ -21,11 +21,6 @@
 
 @implementation JTMineHomeController
 
-- (UIStatusBarStyle)statusBarStyle
-{
-    return UIStatusBarStyleLightContent;
-}
-
 - (BOOL)hiddenNavBar
 {
     return YES;
@@ -43,7 +38,7 @@
 - (void)setupTableHeader
 {
     if (!_headerView) {
-        UICREATETo(_headerView, JTMineHeaderView, 0, 0, self.width, 204 + SAFE_BOTTOM_VIEW_HEIGHT, AAW, nil)
+        UICREATETo(_headerView, JTMineHeaderView, 0, 0, self.width, 180 + SAFE_BOTTOM_VIEW_HEIGHT, AAW, nil);
         self.tableView.tableHeaderView = _headerView;
     }
 }
@@ -108,14 +103,13 @@
 
 - (void)reloadTableView
 {
-    _headerView.user = nil;
+    _headerView.user = [JTUserManager sharedInstance].user;
     [super reloadTableView];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     [super scrollViewDidScroll:scrollView];
-    [_headerView setContentOffset:scrollView.contentOffset];
 }
 
 @end

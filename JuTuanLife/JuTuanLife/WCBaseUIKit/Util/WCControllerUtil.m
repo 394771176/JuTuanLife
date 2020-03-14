@@ -60,11 +60,29 @@
 + (void)pushViewController:(UIViewController *)controller
 {
     id top = [self topContainerController];
-    if (top) {
+    if (top && controller) {
         if ([top isKindOfClass:UINavigationController.class]) {
             [top pushViewController:controller animated:YES];
         } else {
-            [top presentViewController:controller animated:YES completion:nil];
+            [self presentViewController:controller base:top];
+        }
+    }
+}
+
++ (void)presentViewController:(UIViewController *)controller
+{
+    id top = [self topContainerController];
+    [self presentViewController:controller base:top];
+}
+
++ (void)presentViewController:(UIViewController *)controller base:(id)base
+{
+    if (base && controller) {
+        if ([controller isKindOfClass:UINavigationController.class]) {
+            [base presentViewController:controller animated:YES completion:nil];
+        } else {
+            DTNavigationController *nav = [[DTNavigationController alloc] initWithRootViewController:controller];
+            [base presentViewController:nav animated:YES completion:nil];
         }
     }
 }

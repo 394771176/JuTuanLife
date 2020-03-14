@@ -109,8 +109,7 @@
     [JTService async:[JTUserRequest sign_contracts:_protorolsList] finish:^(WCDataResult *result) {
         if (result.success) {
             [[JTUserManager sharedInstance] updateProtorol:nil];
-            [[JTUserManager sharedInstance] setControllerAuthStatus:JTUserStatusAuthPass];
-            [[JTUserManager sharedInstance] checkUpdateAuthStatusController];
+            [[JTUserManager sharedInstance] checkToNextForStatus:JTUserStatusNeedSign];
         } else {
             [DTPubUtil showHUDErrorHintInWindow:result.msg];
         }

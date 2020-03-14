@@ -7,11 +7,10 @@
 //
 
 #import <WCModel/DTListDataModel.h>
-
-NS_ASSUME_NONNULL_BEGIN
+#import "JTShipItem.h"
 
 @interface JTShipListModel : DTListDataModel
 
-@end
+@property (nonatomic, strong) NSArray<JTShipItem *> *teachers;
 
-NS_ASSUME_NONNULL_END
+@end

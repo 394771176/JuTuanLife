@@ -7,26 +7,91 @@
 //
 
 #import "JTShipHomeController.h"
+#import "JTShipListModel.h"
+#import "JTShipListCell.h"
 
-@interface JTShipHomeController ()
+@interface JTShipHomeController () {
+    UIView *_headerSearchView;
+    
+    UIBarButtonItem *_rightBarItem;
+}
 
 @end
 
 @implementation JTShipHomeController
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self setRightBarItem:_rightBarItem];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    _rightBarItem = [WCBarItemUtil barButtonItemWithImage:[UIImage imageNamed:@"jt_ship_add"] target:self action:@selector(addShipAction)];
+    
+    [self setupTableHeader];
+    
+    [self reloadTableView];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)setupTableHeader
+{
+    if (!_headerSearchView) {
+        UICREATETo(_headerSearchView, UIView, 0, 0, self.view.width, 60, AAW, nil);
+        _headerSearchView.backgroundColor = [UIColor clearColor];
+        self.tableView.tableHeaderView = _headerSearchView;
+    }
 }
-*/
+
+- (DTListDataModel *)createDataModel
+{
+    JTShipListModel *model = [[JTShipListModel alloc] init];
+    [model loadCache];
+    return model;
+}
+
+- (WCTableSourceData *)setupTableSourceData
+{
+    WCTableSourceData *source = [WCTableSourceData new];
+    
+    if ([self.Model teachers].count) {
+        WCTableSection *section = [WCTableSection sectionWithItems:[self.Model teachers] cellClass:[JTShipListCell class]];
+        section.clickBlock = ^(id data, NSIndexPath *indexPath) {
+            
+        };
+    }
+    
+    if ([self.Model itemCount]) {
+        WCTableSection *section = [WCTableSection sectionWithItems:[self.Model data] cellClass:[JTShipListCell class]];
+        section.clickBlock = ^(id data, NSIndexPath *indexPath) {
+            
+        };
+    }
+    
+    WCTableSection *section = [WCTableSection sectionWithItems:@[@"", @"", @""] cellClass:[JTShipListCell class]];
+    section.configBlock = ^(JTShipListCell * cell, id data, NSIndexPath *indexPath) {
+        cell.item = (id)[JTUserManager sharedInstance].user;
+    };
+    section.clickBlock = ^(id data, NSIndexPath *indexPath) {
+        
+    };
+    
+    [source addSectionItem:section];
+    
+    return source;
+}
+
+- (void)reloadData
+{
+    
+    [super reloadData];
+}
+
+- (void)addShipAction
+{
+    NSLog(@"add");
+}
 
 @end

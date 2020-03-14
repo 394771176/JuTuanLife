@@ -121,10 +121,21 @@
 + (JTRequest *)sign_contracts:(NSArray *)array
 {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    NSMutableArray *ids = [NSMutableArray array];
     [array enumerateObjectsUsingBlock:^(JTProtorolItem *obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        [params safeSetObject:obj.itemId forKey:[NSString stringWithFormat:@"contractId[%zd]", idx]];
+//        [params safeSetObject:obj.itemId forKey:[NSString stringWithFormat:@"contractId[%zd]", idx]];
+        [ids safeAddObject:obj.itemId];
     }];
+    if (ids.count) {
+        [params safeSetObject:[ids componentsJoinedByString:@","] forKey:@"contractIds"];
+    }
     return [self requestWithApi:@"sale/contract/sign_contracts" params:params httpMethod:WCHTTPMethodPOST];
+}
+
++ (JTRequest *)getShipList
+{
+//    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    return [self requestWithApi:@"" params:nil];
 }
 
 @end

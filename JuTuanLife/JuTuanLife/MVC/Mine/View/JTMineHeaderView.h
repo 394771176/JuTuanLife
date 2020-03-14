@@ -9,7 +9,7 @@
 #import "JTLoginHeaderView.h"
 #import "JTUser.h"
 
-@interface JTMineHeaderView : JTLoginHeaderView
+@interface JTMineHeaderView : UIView
 
 @property (nonatomic, strong) JTUser *user;
 

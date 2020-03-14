@@ -25,7 +25,7 @@
 
 + (id)rowWithItem:(id)item cellClass:(Class)cellClass
 {
-    return [self rowWithItem:item cellClass:NULL height:0];
+    return [self rowWithItem:item cellClass:cellClass height:0];
 }
 
 + (id)rowWithItem:(id)item cellClass:(Class)cellClass height:(CGFloat)height

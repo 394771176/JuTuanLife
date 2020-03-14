@@ -10,6 +10,8 @@
 #import "WCBaseUIKit.h"
 #import "JTUser.h"
 
+KEY(JTUserManager_LAUNCH_REFRESH)
+
 typedef NS_ENUM(NSUInteger, JTLoginType) {
     JTLoginTypeLoginedBefore = 0,//之前已经登录
     JTLoginTypeLoginNow,//现在登录
@@ -21,6 +23,11 @@ typedef NS_ENUM(NSUInteger, JTLoginType) {
 @property (nonatomic, strong) NSString *ac_token;
 @property (nonatomic, strong) NSString *rf_token;
 
+@property (nonatomic, strong) NSString *phone;
+
+//认证完成过一次
+@property (nonatomic, assign) BOOL hadFirstAuthFinish;
+
 @property (nonatomic, strong) JTUser *user;
 @property (nonatomic, strong) NSArray <JTProtorolItem *> *protorolList;
 
@@ -29,11 +36,15 @@ typedef NS_ENUM(NSUInteger, JTLoginType) {
 SHARED_INSTANCE_H
 
 - (BOOL)isLogined;
-- (BOOL)isAuth;
 - (JTUserStatus)userAuthStatus;
 
-- (void)refreshUserInfo;
-- (void)refreshProtorol;
+- (void)refreshUserInfo:(DTCommonBlock)block;
+- (void)refreshProtorol:(DTCommonBlock)block;
+
+//启动时刷新
+- (void)refreshUserInfoForLaunch;
+
+- (void)checkUserAuthStatus;
 
 - (void)updateAcToken:(NSDictionary *)dict;
 - (void)updateUserInfo:(NSDictionary *)dict;
@@ -42,9 +53,7 @@ SHARED_INSTANCE_H
 //登录三要素：token , userinfo , 协议数据
 - (void)saveAcToken:(NSDictionary *)tokenDict userInfo:(NSDictionary *)userDict protorol:(NSDictionary *)protorolDict;
 
-
-- (void)setControllerAuthStatus:(JTUserStatus)status;
-- (void)checkUpdateAuthStatusController;
+- (void)checkToNextForStatus:(JTUserStatus)status;
 
 //+ (void)loginAction:(DTIntBlock)block;//登录操作
 + (void)loginAuth:(DTIntBlock)block;//登录

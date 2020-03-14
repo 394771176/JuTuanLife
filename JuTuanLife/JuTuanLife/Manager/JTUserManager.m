@@ -11,6 +11,7 @@
 #import "JTLoginHomeController.h"
 #import "JTLoginAuthController.h"
 #import "JTLoginAgreementController.h"
+#import "JTViewController.h"
 
 //#define JTUserManager_ACTOKEN_KEY      @"JTUserManager_ACTOKEN.KEY"
 //#define JTUserManager_USERINFO_KEY      @"JTUserManager_USERINFO.KEY"
@@ -19,10 +20,12 @@
 KEY(JTUserManager_ACTOKEN)
 KEY(JTUserManager_USERINFO)
 KEY(JTUserManager_PROTOROL)
+KEY(JTUserManager_FIRST_AUTH_FINISH)
+
+KEY(JTUserManager_PHONE)
 
 @interface JTUserManager () {
-    JTUserStatus _currentStatusMark;
-    JTUserStatus _statusMark;
+    
 }
 
 @end
@@ -35,9 +38,20 @@ SHARED_INSTANCE_M
 {
     self = [super init];
     if (self) {
-        NSDictionary *tokenDict = [[BPAppPreference sharedInstance] dictionaryForKey:JTUserManager_ACTOKEN];
+        _hadFirstAuthFinish = [[BPAppPreference sharedInstance] boolForKey:JTUserManager_FIRST_AUTH_FINISH];
+        [self setupUserInfo];
+    }
+    return self;
+}
+
+- (void)setupUserInfo
+{
+    if (_hadFirstAuthFinish) {
+        NSDictionary *tokenDict = [[[BPAppPreference sharedInstance] stringForKey:JTUserManager_ACTOKEN] JSONObject];
         NSDictionary *userDict = [[[BPAppPreference sharedInstance] stringForKey:JTUserManager_USERINFO] JSONObject];
         NSDictionary *protorolDict = [[[BPAppPreference sharedInstance] stringForKey:JTUserManager_PROTOROL] JSONObject];
+        
+        _phone = [[BPAppPreference sharedInstance] stringForKey:JTUserManager_PHONE];
         
         if (tokenDict) {
             _ac_token = [tokenDict objectForKey:@"ac_token"];
@@ -50,10 +64,7 @@ SHARED_INSTANCE_M
             NSArray *list = [protorolDict arrayForKey:@"contracts"];
             _protorolList = [JTProtorolItem itemsFromArray:list];
         }
-        
-        _currentStatusMark = [self userAuthStatus];
     }
-    return self;
 }
 
 - (BOOL)isLogined
@@ -61,16 +72,13 @@ SHARED_INSTANCE_M
     return _ac_token.length > 0 && _rf_token.length > 0 && _user;
 }
 
-- (BOOL)isAuth
+- (BOOL)isHadFirstAuthFinish
 {
     return [self userAuthStatus] == JTUserStatusAuthPass;
 }
 
 - (JTUserStatus)userAuthStatus
 {
-    if (_statusMark > 0) {
-        return _statusMark;
-    }
     if ([self isLogined]) {
         if (!self.user.cert.certAuth) {
             return JTUserStatusNeedCertifie;
@@ -84,31 +92,71 @@ SHARED_INSTANCE_M
     }
 }
 
-- (void)setControllerAuthStatus:(JTUserStatus)status
+- (JTUserStatus)checkNextStatusWith:(JTUserStatus)status
 {
-    _statusMark = status;
+    JTUserStatus nextStatus = status + 1;
+    if ([self isLogined]) {
+        if (nextStatus == JTUserStatusNeedCertifie) {
+            if (self.user.cert.certAuth) {
+                nextStatus ++;
+            }
+        }
+        if (nextStatus == JTUserStatusNeedSign) {
+            if (self.protorolList.count <= 0) {
+                nextStatus ++;
+            }
+        }
+        
+        if (nextStatus > JTUserStatusAuthPass) {
+            nextStatus = JTUserStatusAuthPass;
+        }
+        return nextStatus;
+    } else {
+        return JTUserStatusNeedLogin;
+    }
 }
 
-- (void)checkUpdateAuthStatusController
+- (void)checkToNextForStatus:(JTUserStatus)status
+{
+    JTUserStatus nextStatus = [self checkNextStatusWith:status];
+    if (nextStatus == JTUserStatusNeedCertifie) {
+        PUSH_VC(JTLoginAuthController);
+    } else if (nextStatus == JTUserStatusNeedSign) {
+        PUSH_VC(JTLoginAgreementController);
+    } else if (nextStatus == JTUserStatusAuthPass) {
+        if ([JTCommon mainController]) {
+            [[JTCommon topContainerController] dismissViewControllerAnimated:YES completion:nil];
+        } else {
+            [[BPAppPreference sharedInstance] setBool:YES forKey:JTUserManager_FIRST_AUTH_FINISH];
+            [JTCommon resetRootController];
+        }
+    }
+}
+
+- (void)checkUserAuthStatus
 {
     JTUserStatus status = [self userAuthStatus];
-    if (status == JTUserStatusNeedLogin || status == JTUserStatusAuthPass) {
-        [JTCommon resetRootController];
-    } else {
-        switch (status) {
-            case JTUserStatusNeedCertifie:
-            {
-                PUSH_VC(JTLoginAuthController);
-            }
-                break;
-            case JTUserStatusNeedSign:
-            {
-                PUSH_VC(JTLoginAgreementController);
-            }
-                break;
-            default:
-                break;
+    if (APP_DEBUG) {
+        if (status == JTUserStatusNeedCertifie) {
+            return;
         }
+    }
+    if (status == JTUserStatusNeedCertifie) {
+        PRESENT_VC(JTLoginAuthController);
+    } else if (status == JTUserStatusNeedSign) {
+        PRESENT_VC(JTLoginAgreementController);
+    } else if (status == JTUserStatusNeedLogin) {
+        PRESENT_VC(JTLoginHomeController);
+    }
+}
+
+- (void)setPhone:(NSString *)phone
+{
+    _phone = phone;
+    if (phone.length) {
+        [[BPAppPreference sharedInstance] setObject:phone forKey:JTUserManager_PHONE];
+    } else {
+        [[BPAppPreference sharedInstance] removeObjectForKey:JTUserManager_PHONE];
     }
 }
 
@@ -117,8 +165,10 @@ SHARED_INSTANCE_M
     if ([NSDictionary validDict:dict]) {
         self.ac_token = [dict stringForKey:@"ac_token"];
         self.rf_token = [dict stringForKey:@"rf_token"];
-        [[BPAppPreference sharedInstance] setObject:dict forKey:JTUserManager_ACTOKEN];
+        [[BPAppPreference sharedInstance] setObject:[dict JSONString] forKey:JTUserManager_ACTOKEN];
     } else {
+        self.ac_token = nil;
+        self.rf_token = nil;
         [[BPAppPreference sharedInstance] removeObjectForKey:JTUserManager_ACTOKEN];
     }
 }
@@ -146,24 +196,59 @@ SHARED_INSTANCE_M
     }
 }
 
-- (void)refreshUserInfo
+- (void)refreshUserInfo:(DTCommonBlock)block
 {
     if ([self isLogined]) {
         [JTService async:[JTUserRequest getUserInfo] config:^(WCDataResult *result) {
-            [self updateUserInfo:result.data];
+            if (result.success) {
+                [self updateUserInfo:result.data];
+            }
         } finish:^(WCDataResult *result) {
-            
+            if (block) {
+                block(result);
+            }
         }];
+    } else {
+        if (block) {
+            block(nil);
+        }
     }
 }
 
-- (void)refreshProtorol
+- (void)refreshProtorol:(DTCommonBlock)block
 {
     if ([self isLogined]) {
         [JTService async:[JTUserRequest get_unsigned_contracts] config:^(WCDataResult *result) {
-            [self updateProtorol:result.data];
+            if (result.success) {
+                [self updateProtorol:result.data];
+            }
         } finish:^(WCDataResult *result) {
-            
+            if (block) {
+                block(result);
+            }
+        }];
+    } else {
+        if (block) {
+            block(nil);
+        }
+    }
+}
+
+- (void)refreshUserInfoForLaunch
+{
+    if ([self isLogined]) {
+        __block int i = 0;
+        [self refreshUserInfo:^(id userInfo) {
+            i++;
+            if (i >= 2) {
+                [[NSNotificationCenter defaultCenter] postNotificationName:JTUserManager_LAUNCH_REFRESH object:nil];
+            }
+        }];
+        [self refreshProtorol:^(id userInfo) {
+            i++;
+            if (i >= 2) {
+                [[NSNotificationCenter defaultCenter] postNotificationName:JTUserManager_LAUNCH_REFRESH object:nil];
+            }
         }];
     }
 }
@@ -173,6 +258,13 @@ SHARED_INSTANCE_M
     [self updateAcToken:tokenDict];
     [self updateUserInfo:userDict];
     [self updateProtorol:protorolDict];
+}
+
+- (void)clearUserInfo
+{
+    [self updateAcToken:nil];
+    [self updateUserInfo:nil];
+    [self updateProtorol:nil];
 }
 
 + (void)loginAuth:(DTIntBlock)block
@@ -216,7 +308,6 @@ SHARED_INSTANCE_M
     };
     
     [JTService addBlockOnGlobalThread:^{
-        BOOL success = NO;
         WCDataResult *tokenResult = [JTService sync:[JTUserRequest loginWithMobile:phone password:password]];
         if (tokenResult.success) {
             NSString *token = [tokenResult.data stringForKey:@"ac_token"];
@@ -226,7 +317,7 @@ SHARED_INSTANCE_M
                 if (userResult.success) {
                     WCDataResult *protorolResult = [JTService sync:[JTUserRequest get_unsigned_contracts]];
                     if (protorolResult.success) {
-                        success = YES;
+                        [[self sharedInstance] setPhone:phone];
                         [[self sharedInstance] saveAcToken:tokenResult.data userInfo:userResult.data protorol:protorolResult.data];
                         loginFinish(userResult);
                     } else {
@@ -246,27 +337,40 @@ SHARED_INSTANCE_M
 
 + (void)logoutAction:(void (^)(void))block
 {
-    if (block) {
-        block();
-    }
+    [JTService addBlockOnGlobalThread:^{
+        [[self sharedInstance] clearUserInfo];
+        [JTService addBlockOnMainThread:^{
+            [[self sharedInstance] checkUserAuthStatus];
+            if (block) {
+                block();
+            }
+        }];
+    }];
 }
 
 + (UIViewController *)rootController
 {
-    JTUserStatus status = [[self sharedInstance] userAuthStatus];
-    switch (status) {
-        case JTUserStatusAuthPass:
-            return [[JTMainController alloc] init];
-            break;
-        case JTUserStatusNeedCertifie:
-            return [[JTLoginAuthController alloc] init];
-            break;
-        case JTUserStatusNeedSign:
-            return [[JTLoginAgreementController alloc] init];
-        default:
-            return [[JTLoginHomeController alloc] init];
-            break;
+    //启动：两者之一
+    if ([[self sharedInstance] isLogined]) {
+        return [[JTMainController alloc] init];
+    } else {
+        return [[JTLoginHomeController alloc] init];
     }
+    
+//    JTUserStatus status = [[self sharedInstance] userAuthStatus];
+//    switch (status) {
+//        case JTUserStatusAuthPass:
+//            return [[JTMainController alloc] init];
+//            break;
+//        case JTUserStatusNeedCertifie:
+//            return [[JTLoginAuthController alloc] init];
+//            break;
+//        case JTUserStatusNeedSign:
+//            return [[JTLoginAgreementController alloc] init];
+//        default:
+//            return [[JTLoginHomeController alloc] init];
+//            break;
+//    }
 }
 
 @end

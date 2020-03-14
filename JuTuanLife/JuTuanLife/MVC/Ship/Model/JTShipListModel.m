@@ -10,4 +10,18 @@
 
 @implementation JTShipListModel
 
+- (WCDataResult *)loadData
+{
+    return [JTService sync:[JTUserRequest getShipList]];
+}
+
+- (id)parseData:(id)data
+{
+    if ([NSDictionary validDict:data]) {
+        self.teachers = [JTShipItem itemsFromArray:[data objectForKey:@""]];
+        return [JTShipItem itemsFromArray:[data objectForKey:@""]];
+    }
+    return nil;
+}
+
 @end

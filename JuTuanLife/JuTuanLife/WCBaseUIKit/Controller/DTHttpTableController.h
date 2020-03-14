@@ -26,6 +26,7 @@
 @property (nonatomic, assign) BOOL needShowModelError;
 
 - (DTListDataModel *)createDataModel;
+- (id)Model;
 
 - (void)refresh;
 - (void)reloadData;
