@@ -11,6 +11,27 @@
 		6001C780240EB6C4006092BB /* JTUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001C77F240EB6C4006092BB /* JTUserManager.m */; };
 		6001C784240EB6FD006092BB /* JTCoreUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001C783240EB6FD006092BB /* JTCoreUtil.m */; };
 		6001C788240EB738006092BB /* JTCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001C787240EB738006092BB /* JTCommon.m */; };
+		603F9863241E18D200523CBD /* DTShareUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 603F9862241E18D200523CBD /* DTShareUtil.m */; };
+		603F9866241E18F300523CBD /* DTShareItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 603F9865241E18F300523CBD /* DTShareItem.m */; };
+		603F9869241E191100523CBD /* DTShareChannelItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 603F9868241E191100523CBD /* DTShareChannelItem.m */; };
+		603F99DC241E2F4600523CBD /* FFWechatManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 603F99DA241E2F4600523CBD /* FFWechatManager.m */; };
+		603F99E0241E2FDD00523CBD /* CLWXAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 603F99DF241E2FDD00523CBD /* CLWXAccess.m */; };
+		603F99F2241E646A00523CBD /* dt_share_txqq_c@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 603F99E2241E646800523CBD /* dt_share_txqq_c@2x.png */; };
+		603F99F3241E646A00523CBD /* dt_share_wx_c@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 603F99E3241E646800523CBD /* dt_share_wx_c@2x.png */; };
+		603F99F4241E646A00523CBD /* dt_share_sina_c@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 603F99E4241E646800523CBD /* dt_share_sina_c@2x.png */; };
+		603F99F5241E646A00523CBD /* dt_share_txqq@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 603F99E5241E646800523CBD /* dt_share_txqq@2x.png */; };
+		603F99F6241E646A00523CBD /* dt_share_wxfav@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 603F99E6241E646800523CBD /* dt_share_wxfav@2x.png */; };
+		603F99F7241E646A00523CBD /* dt_share_wxpyq_c@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 603F99E7241E646800523CBD /* dt_share_wxpyq_c@2x.png */; };
+		603F99F8241E646A00523CBD /* dt_share_safari@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 603F99E8241E646900523CBD /* dt_share_safari@2x.png */; };
+		603F99F9241E646A00523CBD /* dt_share_wxfav_c@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 603F99E9241E646900523CBD /* dt_share_wxfav_c@2x.png */; };
+		603F99FA241E646A00523CBD /* dt_share_copylink@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 603F99EA241E646900523CBD /* dt_share_copylink@2x.png */; };
+		603F99FB241E646A00523CBD /* dt_share_qzone_c@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 603F99EB241E646900523CBD /* dt_share_qzone_c@2x.png */; };
+		603F99FC241E646A00523CBD /* dt_share_wxpyq@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 603F99EC241E646900523CBD /* dt_share_wxpyq@2x.png */; };
+		603F99FD241E646A00523CBD /* dt_share_qzone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 603F99ED241E646900523CBD /* dt_share_qzone@2x.png */; };
+		603F99FE241E646A00523CBD /* dt_share_wx@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 603F99EE241E646900523CBD /* dt_share_wx@2x.png */; };
+		603F99FF241E646A00523CBD /* dt_share_download@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 603F99EF241E646900523CBD /* dt_share_download@2x.png */; };
+		603F9A00241E646A00523CBD /* dt_share_refresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 603F99F0241E646900523CBD /* dt_share_refresh@2x.png */; };
+		603F9A01241E646A00523CBD /* dt_share_sina@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 603F99F1241E646900523CBD /* dt_share_sina@2x.png */; };
 		606FE6F524101CCA00522B96 /* JTLoginForgetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE6F424101CCA00522B96 /* JTLoginForgetController.m */; };
 		606FE6F824101CFD00522B96 /* JTLoginAuthController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE6F724101CFD00522B96 /* JTLoginAuthController.m */; };
 		606FE6FB24101D2C00522B96 /* JTLoginAgreementController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE6FA24101D2C00522B96 /* JTLoginAgreementController.m */; };
@@ -199,6 +220,32 @@
 		6001C786240EB738006092BB /* JTCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTCommon.h; sourceTree = "<group>"; };
 		6001C787240EB738006092BB /* JTCommon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTCommon.m; sourceTree = "<group>"; };
 		6001C7A0240EBA1D006092BB /* JuTuanLife-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JuTuanLife-Prefix.pch"; sourceTree = "<group>"; };
+		603F9861241E18D200523CBD /* DTShareUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTShareUtil.h; sourceTree = "<group>"; };
+		603F9862241E18D200523CBD /* DTShareUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTShareUtil.m; sourceTree = "<group>"; };
+		603F9864241E18F300523CBD /* DTShareItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTShareItem.h; sourceTree = "<group>"; };
+		603F9865241E18F300523CBD /* DTShareItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTShareItem.m; sourceTree = "<group>"; };
+		603F9867241E191100523CBD /* DTShareChannelItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTShareChannelItem.h; sourceTree = "<group>"; };
+		603F9868241E191100523CBD /* DTShareChannelItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTShareChannelItem.m; sourceTree = "<group>"; };
+		603F99DA241E2F4600523CBD /* FFWechatManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFWechatManager.m; sourceTree = "<group>"; };
+		603F99DB241E2F4600523CBD /* FFWechatManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFWechatManager.h; sourceTree = "<group>"; };
+		603F99DE241E2FDD00523CBD /* CLWXAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLWXAccess.h; sourceTree = "<group>"; };
+		603F99DF241E2FDD00523CBD /* CLWXAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLWXAccess.m; sourceTree = "<group>"; };
+		603F99E2241E646800523CBD /* dt_share_txqq_c@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dt_share_txqq_c@2x.png"; sourceTree = "<group>"; };
+		603F99E3241E646800523CBD /* dt_share_wx_c@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dt_share_wx_c@2x.png"; sourceTree = "<group>"; };
+		603F99E4241E646800523CBD /* dt_share_sina_c@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dt_share_sina_c@2x.png"; sourceTree = "<group>"; };
+		603F99E5241E646800523CBD /* dt_share_txqq@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dt_share_txqq@2x.png"; sourceTree = "<group>"; };
+		603F99E6241E646800523CBD /* dt_share_wxfav@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dt_share_wxfav@2x.png"; sourceTree = "<group>"; };
+		603F99E7241E646800523CBD /* dt_share_wxpyq_c@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dt_share_wxpyq_c@2x.png"; sourceTree = "<group>"; };
+		603F99E8241E646900523CBD /* dt_share_safari@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dt_share_safari@2x.png"; sourceTree = "<group>"; };
+		603F99E9241E646900523CBD /* dt_share_wxfav_c@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dt_share_wxfav_c@2x.png"; sourceTree = "<group>"; };
+		603F99EA241E646900523CBD /* dt_share_copylink@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dt_share_copylink@2x.png"; sourceTree = "<group>"; };
+		603F99EB241E646900523CBD /* dt_share_qzone_c@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dt_share_qzone_c@2x.png"; sourceTree = "<group>"; };
+		603F99EC241E646900523CBD /* dt_share_wxpyq@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dt_share_wxpyq@2x.png"; sourceTree = "<group>"; };
+		603F99ED241E646900523CBD /* dt_share_qzone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dt_share_qzone@2x.png"; sourceTree = "<group>"; };
+		603F99EE241E646900523CBD /* dt_share_wx@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dt_share_wx@2x.png"; sourceTree = "<group>"; };
+		603F99EF241E646900523CBD /* dt_share_download@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dt_share_download@2x.png"; sourceTree = "<group>"; };
+		603F99F0241E646900523CBD /* dt_share_refresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dt_share_refresh@2x.png"; sourceTree = "<group>"; };
+		603F99F1241E646900523CBD /* dt_share_sina@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dt_share_sina@2x.png"; sourceTree = "<group>"; };
 		606FE6F324101CCA00522B96 /* JTLoginForgetController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTLoginForgetController.h; sourceTree = "<group>"; };
 		606FE6F424101CCA00522B96 /* JTLoginForgetController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTLoginForgetController.m; sourceTree = "<group>"; };
 		606FE6F624101CFD00522B96 /* JTLoginAuthController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTLoginAuthController.h; sourceTree = "<group>"; };
@@ -546,6 +593,7 @@
 		6001C781240EB6E7006092BB /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				603F9860241E18AC00523CBD /* ShareKit */,
 				606FE7B02413809300522B96 /* SourcesTable */,
 				6001C782240EB6FD006092BB /* JTCoreUtil.h */,
 				6001C783240EB6FD006092BB /* JTCoreUtil.m */,
@@ -733,6 +781,55 @@
 				60ED7631240EB25B0013CB8C /* Assets.xcassets */,
 			);
 			name = Base;
+			sourceTree = "<group>";
+		};
+		603F9860241E18AC00523CBD /* ShareKit */ = {
+			isa = PBXGroup;
+			children = (
+				603F99E1241E63F200523CBD /* Resource */,
+				603F99DD241E2FC300523CBD /* SDK */,
+				603F9861241E18D200523CBD /* DTShareUtil.h */,
+				603F9862241E18D200523CBD /* DTShareUtil.m */,
+				603F9864241E18F300523CBD /* DTShareItem.h */,
+				603F9865241E18F300523CBD /* DTShareItem.m */,
+				603F9867241E191100523CBD /* DTShareChannelItem.h */,
+				603F9868241E191100523CBD /* DTShareChannelItem.m */,
+			);
+			path = ShareKit;
+			sourceTree = "<group>";
+		};
+		603F99DD241E2FC300523CBD /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				603F99DE241E2FDD00523CBD /* CLWXAccess.h */,
+				603F99DF241E2FDD00523CBD /* CLWXAccess.m */,
+				603F99DB241E2F4600523CBD /* FFWechatManager.h */,
+				603F99DA241E2F4600523CBD /* FFWechatManager.m */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
+		603F99E1241E63F200523CBD /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				603F99EA241E646900523CBD /* dt_share_copylink@2x.png */,
+				603F99EF241E646900523CBD /* dt_share_download@2x.png */,
+				603F99EB241E646900523CBD /* dt_share_qzone_c@2x.png */,
+				603F99ED241E646900523CBD /* dt_share_qzone@2x.png */,
+				603F99F0241E646900523CBD /* dt_share_refresh@2x.png */,
+				603F99E8241E646900523CBD /* dt_share_safari@2x.png */,
+				603F99E4241E646800523CBD /* dt_share_sina_c@2x.png */,
+				603F99F1241E646900523CBD /* dt_share_sina@2x.png */,
+				603F99E2241E646800523CBD /* dt_share_txqq_c@2x.png */,
+				603F99E5241E646800523CBD /* dt_share_txqq@2x.png */,
+				603F99E3241E646800523CBD /* dt_share_wx_c@2x.png */,
+				603F99EE241E646900523CBD /* dt_share_wx@2x.png */,
+				603F99E9241E646900523CBD /* dt_share_wxfav_c@2x.png */,
+				603F99E6241E646800523CBD /* dt_share_wxfav@2x.png */,
+				603F99E7241E646800523CBD /* dt_share_wxpyq_c@2x.png */,
+				603F99EC241E646900523CBD /* dt_share_wxpyq@2x.png */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		606FE6FC24101DE700522B96 /* navbar */ = {
@@ -1281,22 +1378,31 @@
 				606FE74F241164F700522B96 /* login_password_see@2x.png in Resources */,
 				606FE7962413708500522B96 /* login_auth_bg@2x.png in Resources */,
 				606FE71C24101DE700522B96 /* nav_icon_redbag@2x.png in Resources */,
+				603F99FC241E646A00523CBD /* dt_share_wxpyq@2x.png in Resources */,
 				60B93B5D2414E0A3003147DC /* main_tab_task_sel@2x.png in Resources */,
 				60B93B582414E0A3003147DC /* main_tab_task@2x.png in Resources */,
 				60B93B5B2414E0A3003147DC /* main_tab_ship_sel@2x.png in Resources */,
+				603F99F7241E646A00523CBD /* dt_share_wxpyq_c@2x.png in Resources */,
 				60ECA79C241D1F3F0029C45A /* jt_ship_add@2x.png in Resources */,
 				606FE74A241164F700522B96 /* auth_idcard_2@2x.png in Resources */,
+				603F99F9241E646A00523CBD /* dt_share_wxfav_c@2x.png in Resources */,
+				603F99F4241E646A00523CBD /* dt_share_sina_c@2x.png in Resources */,
 				60B93B592414E0A3003147DC /* main_tab_home_sel@2x.png in Resources */,
 				606FE71224101DE700522B96 /* nav_close_b@2x.png in Resources */,
+				603F99FF241E646A00523CBD /* dt_share_download@2x.png in Resources */,
 				60B93B632414E111003147DC /* jt_nav_back@2x.png in Resources */,
 				606FE71F24101DE700522B96 /* nav_close@2x.png in Resources */,
+				603F99F6241E646A00523CBD /* dt_share_wxfav@2x.png in Resources */,
 				606FE72024101DE700522B96 /* nav_icon_store@2x.png in Resources */,
 				606FE71924101DE700522B96 /* nav_message@2x.png in Resources */,
+				603F99F2241E646A00523CBD /* dt_share_txqq_c@2x.png in Resources */,
 				60B939A82413E465003147DC /* user_home_jutui@2x.png in Resources */,
+				603F99FB241E646A00523CBD /* dt_share_qzone_c@2x.png in Resources */,
 				60D03C90240FF99600E7D7D1 /* launch_image@2x.png in Resources */,
 				606FE71A24101DE700522B96 /* nav_back_b@2x.png in Resources */,
 				60B939AC2413E465003147DC /* user_home_bank@2x.png in Resources */,
 				606FE71524101DE700522B96 /* nav_test_icon_settings@2x.png in Resources */,
+				603F9A01241E646A00523CBD /* dt_share_sina@2x.png in Resources */,
 				606FE71824101DE700522B96 /* nav_search@2x.png in Resources */,
 				606FE755241164F700522B96 /* logo_jtbang@2x.png in Resources */,
 				60B939AB2413E465003147DC /* user_home_protorol@2x.png in Resources */,
@@ -1306,12 +1412,15 @@
 				60B93B5F2414E0A3003147DC /* main_tab_mine@2x.png in Resources */,
 				606FE71424101DE700522B96 /* nav_share@2x.png in Resources */,
 				606FE74D241164F700522B96 /* protorol_agree@2x.png in Resources */,
+				603F99F3241E646A00523CBD /* dt_share_wx_c@2x.png in Resources */,
 				606FE71124101DE700522B96 /* nav_back_b2@2x.png in Resources */,
+				603F99FE241E646A00523CBD /* dt_share_wx@2x.png in Resources */,
 				606FE71324101DE700522B96 /* nav_setting_white@2x.png in Resources */,
 				606FE71724101DE700522B96 /* nav_more_b@2x.png in Resources */,
 				606FE71624101DE700522B96 /* nav_delete@2x.png in Resources */,
 				606FE74E241164F700522B96 /* auth_idcard_3@2x.png in Resources */,
 				60B939A62413E465003147DC /* user_home_avatar@2x.png in Resources */,
+				603F99FD241E646A00523CBD /* dt_share_qzone@2x.png in Resources */,
 				606FE74B241164F700522B96 /* login_password_close@2x.png in Resources */,
 				60B939A72413E465003147DC /* user_home_info@2x.png in Resources */,
 				60B93B622414E111003147DC /* cell_common_arrow@2x.png in Resources */,
@@ -1323,15 +1432,19 @@
 				606FE71D24101DE700522B96 /* nav_back@2x.png in Resources */,
 				606FE70F24101DE700522B96 /* nav_close_b2@2x.png in Resources */,
 				606FE753241164F700522B96 /* protorol_unagree@2x.png in Resources */,
+				603F99FA241E646A00523CBD /* dt_share_copylink@2x.png in Resources */,
 				60B93B5E2414E0A3003147DC /* main_tab_ship@2x.png in Resources */,
 				606FE71E24101DE700522B96 /* nav_share_b@2x.png in Resources */,
+				603F99F5241E646A00523CBD /* dt_share_txqq@2x.png in Resources */,
 				60B939A92413E465003147DC /* user_home_logout@2x.png in Resources */,
 				606FE71B24101DE700522B96 /* nav_message_white@2x.png in Resources */,
 				606FE752241164F700522B96 /* login_icon_code@2x.png in Resources */,
 				606FE750241164F700522B96 /* login_password_unsee@2x.png in Resources */,
 				60B93B5C2414E0A3003147DC /* main_tab_mine_sel@2x.png in Resources */,
+				603F99F8241E646A00523CBD /* dt_share_safari@2x.png in Resources */,
 				60B939AA2413E465003147DC /* user_home_camera@2x.png in Resources */,
 				60B93B5A2414E0A3003147DC /* main_tab_home@2x.png in Resources */,
+				603F9A00241E646A00523CBD /* dt_share_refresh@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1387,9 +1500,11 @@
 				60E2B129240ED5D800E4EA52 /* WCControllerUtil.m in Sources */,
 				60E2B121240ED5D800E4EA52 /* DTHttpTableController.m in Sources */,
 				60E2B111240ED5D800E4EA52 /* DTTabScorllContentCell.m in Sources */,
+				603F9869241E191100523CBD /* DTShareChannelItem.m in Sources */,
 				60E2B124240ED5D800E4EA52 /* WCMethodUtil.m in Sources */,
 				6071FF8424154F15009B617E /* JTMineYaJinCell.m in Sources */,
 				606FE73924115A5600522B96 /* JTService.m in Sources */,
+				603F9863241E18D200523CBD /* DTShareUtil.m in Sources */,
 				60E2B104240ED5D800E4EA52 /* DTUISegmentView.m in Sources */,
 				60E2B115240ED5D800E4EA52 /* DTHorizontalScrollView.m in Sources */,
 				60E2B11B240ED5D800E4EA52 /* DTHttpRefreshTableController.m in Sources */,
@@ -1463,6 +1578,8 @@
 				60E2B0FE240ED5D800E4EA52 /* BPOnePixLineView.m in Sources */,
 				60E2B10A240ED5D800E4EA52 /* DTBadgeView.m in Sources */,
 				60E2B119240ED5D800E4EA52 /* DTTitleIconItem.m in Sources */,
+				603F99DC241E2F4600523CBD /* FFWechatManager.m in Sources */,
+				603F9866241E18F300523CBD /* DTShareItem.m in Sources */,
 				6001C784240EB6FD006092BB /* JTCoreUtil.m in Sources */,
 				60E2B11F240ED5D800E4EA52 /* DTHttpRefreshInsetTabController.m in Sources */,
 				60E2B112240ED5D800E4EA52 /* DTTabBarView.m in Sources */,
@@ -1474,6 +1591,7 @@
 				606FE7852411730300522B96 /* JTLoginForgetCell.m in Sources */,
 				60E2B100240ED5D800E4EA52 /* DTTableButtonCell.m in Sources */,
 				60E2B11E240ED5D800E4EA52 /* DTNavigationController.m in Sources */,
+				603F99E0241E2FDD00523CBD /* CLWXAccess.m in Sources */,
 				60E2B11A240ED5D800E4EA52 /* DTHttpRefreshLoadMoreTableController.m in Sources */,
 				60E2B118240ED5D800E4EA52 /* DTTabItem.m in Sources */,
 				60E2B123240ED5D800E4EA52 /* DTHttpLoadMoreTableController.m in Sources */,

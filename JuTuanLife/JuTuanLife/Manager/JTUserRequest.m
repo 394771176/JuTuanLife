@@ -138,4 +138,9 @@
     return [self requestWithApi:@"" params:nil];
 }
 
++ (JTRequest *)getShareInfo
+{
+    return [self requestWithApi:@"sale/user/invite_share_info" params:nil];
+}
+
 @end

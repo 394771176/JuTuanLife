@@ -24,4 +24,9 @@
     }
 }
 
++ (BOOL)handleOpenURL:(NSURL *)url
+{
+    return NO;
+}
+
 @end

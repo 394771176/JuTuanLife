@@ -23,6 +23,11 @@
 #define APP_JT_SIGN             @"1234567"
 
 
+#pragma mark - url
+
+#define APP_DOWNLOAD_URL         @""
+
+
 #pragma mark - color
 
 #define APP_JT_BLUE_STRING              @"#137FFE"

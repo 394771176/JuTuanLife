@@ -14,6 +14,8 @@
 
 #import "WCBaseUIKit.h"
 
+#import "DTShareUtil.h"
+
 #import "JTAPPKey.h"
 #import "JTConstants.h"
 #import "JTDefine.h"

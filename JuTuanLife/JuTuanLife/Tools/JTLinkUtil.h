@@ -14,4 +14,6 @@
 
 + (void)openLink:(NSString *)link;
 
++ (BOOL)handleOpenURL:(NSURL *)url;
+
 @end

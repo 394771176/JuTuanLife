@@ -31,6 +31,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (JTRequest *)getShipList;
 
++ (JTRequest *)getShareInfo;
+
 @end
 
 NS_ASSUME_NONNULL_END

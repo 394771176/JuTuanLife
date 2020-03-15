@@ -92,7 +92,8 @@
 {
     NSLog(@"add");
     [JTCoreUtil showActionSheetWithTitle:nil message:nil cancelTitle:@"取消" confirmTitle:@"分享到微信好友" destructiveTitle:nil handler:^(UIAlertAction *action) {
-        NSLog(@"%@", action.title);
+        DTShareItem *item = [JTDataManager sharedInstance].shareItem;
+        [DTShareUtil shareItem:item channel:DTShareToWXHy];
     }];
 }
 
