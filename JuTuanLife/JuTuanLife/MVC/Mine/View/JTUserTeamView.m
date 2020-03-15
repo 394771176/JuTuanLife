@@ -21,6 +21,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         _labelList = [NSMutableArray array];
+        self.userInteractionEnabled = NO;
     }
     return self;
 }

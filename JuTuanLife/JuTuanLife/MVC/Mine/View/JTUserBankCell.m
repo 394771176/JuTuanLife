@@ -27,7 +27,7 @@
         self.height = self.contentView.height = 112;
         
         UICREATETo(_bodyView, DTControl, 16, 12, self.contentView.width - 16 * 2, self.contentView.height - 12, AAWH, self.contentView);
-        _bodyView.backgroundColor = [UIColor colorWithString:@"c9c9c9"];
+        _bodyView.backgroundColor = [UIColor colorWithString:@"#FD5E6A"];
         _bodyView.cornerRadius = 4;
         [_bodyView addTarget:self action:@selector(bodyAction)];
         

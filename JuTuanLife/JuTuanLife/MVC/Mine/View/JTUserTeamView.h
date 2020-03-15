@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JTUserTeamView : UIView
+@interface JTUserTeamView : UIControl
 
 @property (nonatomic, strong) NSArray *items;
 
