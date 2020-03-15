@@ -7,98 +7,107 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E766CE2DF4ABF3C3BC06A5924268C7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		B4599FAF7040051A24AC9267278E0EB2 /* Pods-JuTuanLife-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 733DB08030F14CF48B8601A564D134B5 /* Pods-JuTuanLife-dummy.m */; };
-		CF763DE4567E4ED537B6CC54B43A61C6 /* Pods-JuTuanLife-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 09D0FCE10061F1D1EDB32C328E5B7682 /* Pods-JuTuanLife-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D414510D09B69E0BC2C83A749D79C84 /* Pods-JuTuanLife-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 09D0FCE10061F1D1EDB32C328E5B7682 /* Pods-JuTuanLife-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7972AE72BCF46B297F4B09B4BCEA2F39 /* Pods-JuTuanLife-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 733DB08030F14CF48B8601A564D134B5 /* Pods-JuTuanLife-dummy.m */; };
+		9EBEF7DFAAF65E8DBC53C91E37B057C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0CE76F7C9DCD1F32503B0A6791881DE3 /* PBXContainerItemProxy */ = {
+		11E11F895D44FA827B0898A5D604FDCA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9842852273CDFA484BB48F3A3FB7B0D3 /* WCModel.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F7DEDB7C2195D421F161666F4E272F06;
-			remoteInfo = WCModel;
-		};
-		1B0B07566520E7E5DF33E0DF53545667 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D4698A476E12D9946F92253127376D73 /* WCPlugin.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 01AFCA77759CB1D1D1CC58ACCA461A08;
-			remoteInfo = WCPlugin;
-		};
-		49B782C85550E22334EB324A2E04446A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 136B54D28596141AF0D209D602529D4D /* WCCategory.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 6B7961D1A0411488E0B195CB1D0BA3CD;
-			remoteInfo = WCCategory;
-		};
-		7D32F8FD5305B53E821152CDE5FF91A3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6D085BB56A69CAB4F49D491C6826E22B /* WCNetKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D5E44FD668A7DC93AD34DDF4ECC1564C;
-			remoteInfo = WCNetKit;
-		};
-		946C9A160B59720922BAEAB1AA594BA2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 34F13FBCBB71833B43602F3B94FB22D9 /* WCModule.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 204C46C3B0BD2B353BAECF2B88EDFC36;
-			remoteInfo = WCModule;
-		};
-		D59B11635B9AA49F1348A9213D4C60ED /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B174B4B01DB9ED31C1650C8510C71C7B /* WCEncrypt.xcodeproj */;
+			containerPortal = E5C7E24240AC8009E284F48953884C1D /* WCEncrypt.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 1B6B0557A7BF1D49310AB076E55FAE59;
 			remoteInfo = WCEncrypt;
 		};
+		3250160E5D8CC62141EDA100C940067A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB9C826114C2BCCBC0508EB42283A56C /* WCModule.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 204C46C3B0BD2B353BAECF2B88EDFC36;
+			remoteInfo = WCModule;
+		};
+		35AD6995E8694E8564471C101DD7D8EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88FD26C9E09513FAF126226DAECC8F80 /* WechatOpenSDK_NoPay.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BD311BBC53FCC3F32885DC6B53A9278;
+			remoteInfo = WechatOpenSDK_NoPay;
+		};
+		49F631BBE052667ECEB9B9B1AD4460CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05575253D7FAC97E157AF4FC4806AF58 /* WCPlugin.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 01AFCA77759CB1D1D1CC58ACCA461A08;
+			remoteInfo = WCPlugin;
+		};
+		BCF3E06611CFC9A8B34AE37995E1A41C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FF87CFB9D60CB540EC7ED1FCE2A6CBC /* WCNetKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D5E44FD668A7DC93AD34DDF4ECC1564C;
+			remoteInfo = WCNetKit;
+		};
+		F9E3391212FD01BCA5D5F7CB069B18EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A089DDFDCDED37BB4ADC0AB751B3E78D /* WCModel.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F7DEDB7C2195D421F161666F4E272F06;
+			remoteInfo = WCModel;
+		};
+		FCBB2345C6983104396042AD694EEC9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73D9A0F0D41A019E3D676BEAE197683F /* WCCategory.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B7961D1A0411488E0B195CB1D0BA3CD;
+			remoteInfo = WCCategory;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05575253D7FAC97E157AF4FC4806AF58 /* WCPlugin */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WCPlugin; path = WCPlugin.xcodeproj; sourceTree = "<group>"; };
 		09D0FCE10061F1D1EDB32C328E5B7682 /* Pods-JuTuanLife-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JuTuanLife-umbrella.h"; sourceTree = "<group>"; };
-		136B54D28596141AF0D209D602529D4D /* WCCategory */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WCCategory; path = WCCategory.xcodeproj; sourceTree = "<group>"; };
 		269C1BCC08E362A14DCD2204FD50B91A /* Pods-JuTuanLife.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JuTuanLife.debug.xcconfig"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		34F13FBCBB71833B43602F3B94FB22D9 /* WCModule */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WCModule; path = WCModule.xcodeproj; sourceTree = "<group>"; };
 		3DA9EE5E2DB848CC86017ACA6F7B1279 /* Pods_JuTuanLife.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JuTuanLife.framework; path = "Pods-JuTuanLife.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E3CA8E6BD28F780A5FCA89D84FF9004 /* Pods-JuTuanLife-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JuTuanLife-frameworks.sh"; sourceTree = "<group>"; };
 		482B2A2FA76ED931AB3493747BA6DF72 /* Pods-JuTuanLife.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JuTuanLife.release.xcconfig"; sourceTree = "<group>"; };
+		4FF87CFB9D60CB540EC7ED1FCE2A6CBC /* WCNetKit */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WCNetKit; path = WCNetKit.xcodeproj; sourceTree = "<group>"; };
 		6124EDAE8283EBCF36E4C5DDE99A8EC4 /* Pods-JuTuanLife-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JuTuanLife-acknowledgements.markdown"; sourceTree = "<group>"; };
-		6D085BB56A69CAB4F49D491C6826E22B /* WCNetKit */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WCNetKit; path = WCNetKit.xcodeproj; sourceTree = "<group>"; };
 		733DB08030F14CF48B8601A564D134B5 /* Pods-JuTuanLife-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JuTuanLife-dummy.m"; sourceTree = "<group>"; };
-		9842852273CDFA484BB48F3A3FB7B0D3 /* WCModel */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WCModel; path = WCModel.xcodeproj; sourceTree = "<group>"; };
+		73D9A0F0D41A019E3D676BEAE197683F /* WCCategory */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WCCategory; path = WCCategory.xcodeproj; sourceTree = "<group>"; };
+		88FD26C9E09513FAF126226DAECC8F80 /* WechatOpenSDK_NoPay */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WechatOpenSDK_NoPay; path = WechatOpenSDK_NoPay.xcodeproj; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A089DDFDCDED37BB4ADC0AB751B3E78D /* WCModel */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WCModel; path = WCModel.xcodeproj; sourceTree = "<group>"; };
 		A6E5004C5344E6472AFF59A74C7AED99 /* Pods-JuTuanLife-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JuTuanLife-Info.plist"; sourceTree = "<group>"; };
-		B174B4B01DB9ED31C1650C8510C71C7B /* WCEncrypt */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WCEncrypt; path = WCEncrypt.xcodeproj; sourceTree = "<group>"; };
 		C66929E9E60975E885946E225BFD7CD0 /* Pods-JuTuanLife.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JuTuanLife.modulemap"; sourceTree = "<group>"; };
 		C8E78DBFF50E48288F437D2DF9EE3AF8 /* Pods-JuTuanLife-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JuTuanLife-acknowledgements.plist"; sourceTree = "<group>"; };
-		D4698A476E12D9946F92253127376D73 /* WCPlugin */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WCPlugin; path = WCPlugin.xcodeproj; sourceTree = "<group>"; };
+		E5C7E24240AC8009E284F48953884C1D /* WCEncrypt */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WCEncrypt; path = WCEncrypt.xcodeproj; sourceTree = "<group>"; };
+		EB9C826114C2BCCBC0508EB42283A56C /* WCModule */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WCModule; path = WCModule.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		988769D53EF33F95D9E08E1CF4574D8E /* Frameworks */ = {
+		D360B0000DA7E461C12CC525C531B727 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E766CE2DF4ABF3C3BC06A5924268C7E /* Foundation.framework in Frameworks */,
+				9EBEF7DFAAF65E8DBC53C91E37B057C7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		634E5DD25FDADE95071828C9847A14EF /* Pods */ = {
+		094D7A1589747649EBB36A5502A3A963 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				136B54D28596141AF0D209D602529D4D /* WCCategory */,
-				B174B4B01DB9ED31C1650C8510C71C7B /* WCEncrypt */,
-				9842852273CDFA484BB48F3A3FB7B0D3 /* WCModel */,
-				34F13FBCBB71833B43602F3B94FB22D9 /* WCModule */,
-				6D085BB56A69CAB4F49D491C6826E22B /* WCNetKit */,
-				D4698A476E12D9946F92253127376D73 /* WCPlugin */,
+				73D9A0F0D41A019E3D676BEAE197683F /* WCCategory */,
+				E5C7E24240AC8009E284F48953884C1D /* WCEncrypt */,
+				A089DDFDCDED37BB4ADC0AB751B3E78D /* WCModel */,
+				EB9C826114C2BCCBC0508EB42283A56C /* WCModule */,
+				4FF87CFB9D60CB540EC7ED1FCE2A6CBC /* WCNetKit */,
+				05575253D7FAC97E157AF4FC4806AF58 /* WCPlugin */,
+				88FD26C9E09513FAF126226DAECC8F80 /* WechatOpenSDK_NoPay */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -132,7 +141,7 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				634E5DD25FDADE95071828C9847A14EF /* Pods */,
+				094D7A1589747649EBB36A5502A3A963 /* Pods */,
 				89574E9FEC5011CE25F3B17A18BAC460 /* Products */,
 				887C928E382901C9D06E2A63DDDC6EEA /* Targets Support Files */,
 			);
@@ -166,11 +175,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2B5DBC0228C0A127D522BB3E8863C9C7 /* Headers */ = {
+		A9C5738063B781DF11B6A6C237476170 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF763DE4567E4ED537B6CC54B43A61C6 /* Pods-JuTuanLife-umbrella.h in Headers */,
+				4D414510D09B69E0BC2C83A749D79C84 /* Pods-JuTuanLife-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,22 +188,23 @@
 /* Begin PBXNativeTarget section */
 		D8DF8B9B9DABF490C54E598B566E8ABB /* Pods-JuTuanLife */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 61F66D634E941835C02113F927E29E1E /* Build configuration list for PBXNativeTarget "Pods-JuTuanLife" */;
+			buildConfigurationList = F9671CCF1273C52651AD91F7E9F3407C /* Build configuration list for PBXNativeTarget "Pods-JuTuanLife" */;
 			buildPhases = (
-				2B5DBC0228C0A127D522BB3E8863C9C7 /* Headers */,
-				33895F095EA9A2E1A0E4C3B43A6542BE /* Sources */,
-				988769D53EF33F95D9E08E1CF4574D8E /* Frameworks */,
-				D59F1870FFDCF507AA4DC9E943DD1F71 /* Resources */,
+				A9C5738063B781DF11B6A6C237476170 /* Headers */,
+				2E9E64AAEFC0472F9F10C88157770243 /* Sources */,
+				D360B0000DA7E461C12CC525C531B727 /* Frameworks */,
+				EB1E0577BD4C95136605049550163ABD /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6BDCCD911FBA5EAE54760260BA5F07B3 /* PBXTargetDependency */,
-				6BCBF6DD4A0A7BA8965AFEE2037C2F0B /* PBXTargetDependency */,
-				0625D03B9EFB322B0969250EB8A2D6D7 /* PBXTargetDependency */,
-				2ECE75EA295DB1E3F5C5BE131B080E63 /* PBXTargetDependency */,
-				6892244A7214854C023C442AEAD5044F /* PBXTargetDependency */,
-				7EC86EEFEA135F1DA95505DABF43E8FE /* PBXTargetDependency */,
+				5FE9C7133BE826C073551B31AF794126 /* PBXTargetDependency */,
+				FB071F75139C209B622170477C5B8C3E /* PBXTargetDependency */,
+				D54C72C651B2C3357AA993CCD08C25E5 /* PBXTargetDependency */,
+				6DCA48D2D71EA24E0D03F8D995467239 /* PBXTargetDependency */,
+				DB84215626AC05E2EC4C8A5B2497A00B /* PBXTargetDependency */,
+				6AFC4DBB61B293A2533E849CF7420DD2 /* PBXTargetDependency */,
+				C000D97A1AA55AC5A6064B422C2E0E1B /* PBXTargetDependency */,
 			);
 			name = "Pods-JuTuanLife";
 			productName = "Pods-JuTuanLife";
@@ -222,22 +232,25 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProjectRef = 136B54D28596141AF0D209D602529D4D /* WCCategory */;
+					ProjectRef = 73D9A0F0D41A019E3D676BEAE197683F /* WCCategory */;
 				},
 				{
-					ProjectRef = B174B4B01DB9ED31C1650C8510C71C7B /* WCEncrypt */;
+					ProjectRef = E5C7E24240AC8009E284F48953884C1D /* WCEncrypt */;
 				},
 				{
-					ProjectRef = 9842852273CDFA484BB48F3A3FB7B0D3 /* WCModel */;
+					ProjectRef = A089DDFDCDED37BB4ADC0AB751B3E78D /* WCModel */;
 				},
 				{
-					ProjectRef = 34F13FBCBB71833B43602F3B94FB22D9 /* WCModule */;
+					ProjectRef = EB9C826114C2BCCBC0508EB42283A56C /* WCModule */;
 				},
 				{
-					ProjectRef = 6D085BB56A69CAB4F49D491C6826E22B /* WCNetKit */;
+					ProjectRef = 4FF87CFB9D60CB540EC7ED1FCE2A6CBC /* WCNetKit */;
 				},
 				{
-					ProjectRef = D4698A476E12D9946F92253127376D73 /* WCPlugin */;
+					ProjectRef = 05575253D7FAC97E157AF4FC4806AF58 /* WCPlugin */;
+				},
+				{
+					ProjectRef = 88FD26C9E09513FAF126226DAECC8F80 /* WechatOpenSDK_NoPay */;
 				},
 			);
 			projectRoot = "";
@@ -248,7 +261,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D59F1870FFDCF507AA4DC9E943DD1F71 /* Resources */ = {
+		EB1E0577BD4C95136605049550163ABD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -258,53 +271,58 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		33895F095EA9A2E1A0E4C3B43A6542BE /* Sources */ = {
+		2E9E64AAEFC0472F9F10C88157770243 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4599FAF7040051A24AC9267278E0EB2 /* Pods-JuTuanLife-dummy.m in Sources */,
+				7972AE72BCF46B297F4B09B4BCEA2F39 /* Pods-JuTuanLife-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0625D03B9EFB322B0969250EB8A2D6D7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = WCModel;
-			targetProxy = 0CE76F7C9DCD1F32503B0A6791881DE3 /* PBXContainerItemProxy */;
-		};
-		2ECE75EA295DB1E3F5C5BE131B080E63 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = WCModule;
-			targetProxy = 946C9A160B59720922BAEAB1AA594BA2 /* PBXContainerItemProxy */;
-		};
-		6892244A7214854C023C442AEAD5044F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = WCNetKit;
-			targetProxy = 7D32F8FD5305B53E821152CDE5FF91A3 /* PBXContainerItemProxy */;
-		};
-		6BCBF6DD4A0A7BA8965AFEE2037C2F0B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = WCEncrypt;
-			targetProxy = D59B11635B9AA49F1348A9213D4C60ED /* PBXContainerItemProxy */;
-		};
-		6BDCCD911FBA5EAE54760260BA5F07B3 /* PBXTargetDependency */ = {
+		5FE9C7133BE826C073551B31AF794126 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = WCCategory;
-			targetProxy = 49B782C85550E22334EB324A2E04446A /* PBXContainerItemProxy */;
+			targetProxy = FCBB2345C6983104396042AD694EEC9A /* PBXContainerItemProxy */;
 		};
-		7EC86EEFEA135F1DA95505DABF43E8FE /* PBXTargetDependency */ = {
+		6AFC4DBB61B293A2533E849CF7420DD2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = WCPlugin;
-			targetProxy = 1B0B07566520E7E5DF33E0DF53545667 /* PBXContainerItemProxy */;
+			targetProxy = 49F631BBE052667ECEB9B9B1AD4460CA /* PBXContainerItemProxy */;
+		};
+		6DCA48D2D71EA24E0D03F8D995467239 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WCModule;
+			targetProxy = 3250160E5D8CC62141EDA100C940067A /* PBXContainerItemProxy */;
+		};
+		C000D97A1AA55AC5A6064B422C2E0E1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WechatOpenSDK_NoPay;
+			targetProxy = 35AD6995E8694E8564471C101DD7D8EA /* PBXContainerItemProxy */;
+		};
+		D54C72C651B2C3357AA993CCD08C25E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WCModel;
+			targetProxy = F9E3391212FD01BCA5D5F7CB069B18EB /* PBXContainerItemProxy */;
+		};
+		DB84215626AC05E2EC4C8A5B2497A00B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WCNetKit;
+			targetProxy = BCF3E06611CFC9A8B34AE37995E1A41C /* PBXContainerItemProxy */;
+		};
+		FB071F75139C209B622170477C5B8C3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WCEncrypt;
+			targetProxy = 11E11F895D44FA827B0898A5D604FDCA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0CEE7042231B82C43D35E9843F7A63DC /* Debug */ = {
+		177883FFA65CCDBA280714862D1E703B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 269C1BCC08E362A14DCD2204FD50B91A /* Pods-JuTuanLife.debug.xcconfig */;
+			baseConfigurationReference = 482B2A2FA76ED931AB3493747BA6DF72 /* Pods-JuTuanLife.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -334,10 +352,11 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		8F17DC3A99F99FBAD606CE6963886315 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -463,9 +482,9 @@
 			};
 			name = Debug;
 		};
-		EC028EBE8488ACA47706F2C7A718833E /* Release */ = {
+		AB6EF96333A5427D2BE67FDD15E9A8C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 482B2A2FA76ED931AB3493747BA6DF72 /* Pods-JuTuanLife.release.xcconfig */;
+			baseConfigurationReference = 269C1BCC08E362A14DCD2204FD50B91A /* Pods-JuTuanLife.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -495,11 +514,10 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -513,11 +531,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		61F66D634E941835C02113F927E29E1E /* Build configuration list for PBXNativeTarget "Pods-JuTuanLife" */ = {
+		F9671CCF1273C52651AD91F7E9F3407C /* Build configuration list for PBXNativeTarget "Pods-JuTuanLife" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0CEE7042231B82C43D35E9843F7A63DC /* Debug */,
-				EC028EBE8488ACA47706F2C7A718833E /* Release */,
+				AB6EF96333A5427D2BE67FDD15E9A8C1 /* Debug */,
+				177883FFA65CCDBA280714862D1E703B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

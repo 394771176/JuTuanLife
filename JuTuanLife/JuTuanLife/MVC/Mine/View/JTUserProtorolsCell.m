@@ -64,7 +64,7 @@
 {
     UIView *label = gesture.view;
     NSString *link = [_item.linkList safeObjectAtIndex:label.tag];
-    [JTCoreUtil openWithLink:link];
+    [JTLinkUtil openLink:link];
 }
 
 + (CGFloat)cellHeightWithItem:(JTUserProtorols *)item tableView:(UITableView *)tableView

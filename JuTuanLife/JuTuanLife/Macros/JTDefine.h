@@ -39,10 +39,23 @@ UIViewController *vc = [[_xxx_ alloc] init]; \
 
 #define KEY(str)        static NSString * const str = @#str;
 
-#ifndef __OPTIMIZE__
-#define NSLog(...) NSLog(__VA_ARGS__)
+//#ifndef __OPTIMIZE__
+//#define NSLog(...) NSLog(__VA_ARGS__)
+//#else
+//#define NSLog(...) {}
+//#endif
+
+#ifdef DEBUG
+
+#define NSLog(format, ...)  printf("class: <%p %s:(%d) > method: %s \n%s\n", \
+self, [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], \
+__LINE__, __PRETTY_FUNCTION__, \
+[[NSString stringWithFormat:(format), ##__VA_ARGS__] UTF8String])
+
 #else
+
 #define NSLog(...) {}
+
 #endif
 
 #endif /* JTDefine_h */

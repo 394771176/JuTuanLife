@@ -37,6 +37,8 @@ DTTableButtonCellDelegate
     if (self) {
         self.disableBackGesture = YES;
         self.disableBackBtn = YES;
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updatePhone:) name:JTLoginForgetController_PHONE object:nil];
     }
     return self;
 }
@@ -66,15 +68,16 @@ DTTableButtonCellDelegate
     _passwordCell = [[SCLoginPasswordCell alloc] init];
     _passwordCell.delegate = self;
     [_passwordCell setleftGap:59 textHeight:_phoneCell.contentView.height];
-    _passwordCell.placehloder = @"请输入6-12位数字、字母";
-    _passwordCell.maxTextLength = 18;
+    _passwordCell.placehloder = @"请输入6-12位字母、数字";
+    _passwordCell.maxTextLength = 12;
+    _passwordCell.textField.clearButtonMode = UITextFieldViewModeNever;
     
     _loginCell = [[DTTableButtonCell alloc] init];
     [_loginCell.submitBtn setTitle:@"登 录"];
     _loginCell.gray = APP_JT_GRAY_STRING;
     _loginCell.blue = APP_JT_BLUE_STRING;
     _loginCell.submitBtn.height = 48;
-    [_loginCell setButtonTop:128];
+    [_loginCell setButtonTop:88];
     _loginCell.style = DTTableButtonStyleGray;
     _loginCell.delegate = self;
     
@@ -105,9 +108,12 @@ DTTableButtonCellDelegate
     //15618197321 / d4071255
     NSString *phone = _phoneCell.text;
     NSString *password = _passwordCell.text;
-    if (APP_DEBUG) {
+    if (APP_DEBUG && phone.length <= 0) {
         phone = @"18800333031";
         password = @"wang@123";
+        
+//        phone = @"15618197321";
+//        password = @"d4071255";
     }
     [JTUserManager loginActionWithPhone:phone password:password completion:^(WCDataResult *result) {
         if (result.success) {
@@ -121,6 +127,7 @@ DTTableButtonCellDelegate
 - (void)forgetAction
 {
     JTLoginForgetController *vc = [JTLoginForgetController new];
+    vc.phone = _phoneCell.textField.text;
     [WCControllerUtil pushViewController:vc];
 }
 
@@ -146,7 +153,7 @@ DTTableButtonCellDelegate
             return 56;
             break;
         case 1:
-            return 176;
+            return 176 - 40;
             break;
         case 2:
         {
@@ -232,6 +239,15 @@ DTTableButtonCellDelegate
         [_loginCell setStyle:DTTableButtonStyleBlue];
     } else {
         [_loginCell setStyle:DTTableButtonStyleGray];
+    }
+}
+
+#pragma mark - updatePhone:
+
+- (void)updatePhone:(NSNotification *)n
+{
+    if ([n.object isKindOfClass:NSString.class]) {
+        _phoneCell.textField.text = n.object;
     }
 }
 

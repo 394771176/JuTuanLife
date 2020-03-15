@@ -22,4 +22,7 @@ pod 'WCModel'
 pod 'WCNetKit'
 pod 'WCPlugin'
 
+#pod 'WechatOpenSDK'
+pod 'WechatOpenSDK_NoPay'
+
 end

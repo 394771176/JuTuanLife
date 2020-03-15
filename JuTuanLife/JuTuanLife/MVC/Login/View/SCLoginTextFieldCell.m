@@ -376,6 +376,9 @@
 
 - (void)codeBtnAction:(UIButton *)sender
 {
+    if (_codeBtn.status == SCCodeBtnStatusWait || _codeBtn.status == SCCodeBtnStatusRequest) {
+        return;
+    }
     if (self.delegate && [self.delegate respondsToSelector:@selector(loginTextFieldCell:didCodeBtn:)]) {
         [self.delegate loginTextFieldCell:self didCodeBtn:_codeBtn];
     }
@@ -420,13 +423,13 @@
 - (void)setStatus:(SCCodeBtnStatus)status
 {
     _status = status;
-    self.enabled = (status != SCCodeBtnStatusRequest);
-    self.userInteractionEnabled = (status != SCCodeBtnStatusRequest && status != SCCodeBtnStatusWait);
+//    self.enabled = (status != SCCodeBtnStatusRequest);
+//    self.userInteractionEnabled = (status != SCCodeBtnStatusRequest && status != SCCodeBtnStatusWait);
     
     switch (status) {
         case SCCodeBtnStatusRequest:
         {
-            
+            [self setTitleColor:[UIColor colorWithString:@"494949" alpha:0.5]];
         }
             break;
         case SCCodeBtnStatusWait:
@@ -514,7 +517,7 @@
         [_secureBtn addTarget:self action:@selector(secureBtnAction:)];
         [_bodyView addSubview:_secureBtn];
         
-        self.textField.width = _secureBtn.left - self.textField.left - 15;
+        self.textField.width = _secureBtn.left - self.textField.left - 5;
 
         self.type = SCLoginTextFieldTypePassword;
         self.isSecure = YES;

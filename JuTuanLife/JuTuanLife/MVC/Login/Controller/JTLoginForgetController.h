@@ -8,10 +8,10 @@
 
 #import "DTTableController.h"
 
-NS_ASSUME_NONNULL_BEGIN
+KEY(JTLoginForgetController_PHONE)
 
 @interface JTLoginForgetController : DTTableController
 
-@end
+@property (nonatomic, strong) NSString *phone;
 
-NS_ASSUME_NONNULL_END
+@end

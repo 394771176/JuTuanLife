@@ -7,13 +7,9 @@
 //
 
 #import "JTCoreUtil.h"
+#import <WCModule/RegexKitLite.h>
 
 @implementation JTCoreUtil
-
-+ (void)openWithLink:(NSString *)link
-{
-    NSLog(@"open link : %@", link);
-}
 
 + (void)showAlertWithTitle:(NSString *)title message:(NSString *)message cancelTitle:(NSString *)cancelTitle confirmTitle:(NSString *)confirmTitle destructiveTitle:(NSString *)destructiveTitle handler:(void (^)(UIAlertAction *action))handler
 {
@@ -48,6 +44,16 @@
         }]];
     }
     [[WCControllerUtil topContainerController] presentViewController:alert animated:YES completion:nil];
+}
+
++ (BOOL)isValidPassword:(NSString *)passwrod
+{
+    //
+    if (!passwrod.length||![passwrod isMatchedByRegex:@"^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,12}$"]) {
+        return NO;
+    } else {
+        return YES;
+    }
 }
 
 @end
