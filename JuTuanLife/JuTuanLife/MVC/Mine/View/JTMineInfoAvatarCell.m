@@ -33,6 +33,11 @@
     [_avatarView setImageWithURL:URL(item.avatar) placeholderImage:[UIImage imageNamed:@"user_home_avatar"]];
 }
 
+- (void)setAvatar:(UIImage *)image
+{
+    _avatarView.image = image;
+}
+
 + (CGFloat)cellHeightWithItem:(id)item tableView:(UITableView *)tableView
 {
     return 104;

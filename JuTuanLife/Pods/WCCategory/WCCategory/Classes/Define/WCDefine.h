@@ -74,7 +74,8 @@
 #define SCALE_SCREEN_SIZE_PHONE(size)           ceil(MIN(SCREEN_WIDTH, 414.f)/375*(size))
 #define SCALE_SCREEN_SIZE_PAD(size)             ceil(MIN(SCREEN_WIDTH, 600.f)/375*(size))
 
-#define WEAK_SELF      __weak __typeof(&*self)weakSelf = self;
+#define WEAK_SELF        __weak   __typeof(&*self) weakSelf = self;
+#define STRONG_SELF      __strong __typeof(&*self) self = weakSelf;
 
 #define WC_Swizzle(_method1_, _method2_) \
 { \

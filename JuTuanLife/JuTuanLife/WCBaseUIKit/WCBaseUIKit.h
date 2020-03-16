@@ -65,4 +65,7 @@
 #import "DTNavigationController.h"
 #import "DTHttpRefreshInsetTabController.h"
 
+/*tools*/
+#import "DTImagePickerController.h"
+
 #endif /* WCUIKit_h */

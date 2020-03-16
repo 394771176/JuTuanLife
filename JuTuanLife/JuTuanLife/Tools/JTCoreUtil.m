@@ -23,6 +23,11 @@
 
 + (void)showAlertWithTitle:(NSString *)title message:(NSString *)message style:(UIAlertControllerStyle)style cancelTitle:(NSString *)cancelTitle confirmTitle:(NSString *)confirmTitle destructiveTitle:(NSString *)destructiveTitle handler:(void (^)(UIAlertAction *action))handler
 {
+    [self showAlertWithTitle:title message:message style:style handler:handler cancelTitle:cancelTitle destructiveTitle:destructiveTitle confirmTitle:confirmTitle];
+}
+
++ (void)showAlertWithTitle:(NSString *)title message:(NSString *)message style:(UIAlertControllerStyle)style handler:(void (^)(UIAlertAction *))handler cancelTitle:(NSString *)cancelTitle destructiveTitle:(NSString *)destructiveTitle confirmTitle:(NSString *)confirmTitle, ...
+{
     void (^handlerAction)(UIAlertAction *) = ^(UIAlertAction *action) {
         if (handler) {
             handler(action);
@@ -35,10 +40,20 @@
         }]];
     }
     if (confirmTitle.length) {
-        [alert addAction:[UIAlertAction actionWithTitle:confirmTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            handlerAction(action);
-        }]];
+//        [alert addAction:[UIAlertAction actionWithTitle:confirmTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//            handlerAction(action);
+//        }]];
+//
+        va_list args;
+        va_start(args, confirmTitle);
+        for (id currentObject = confirmTitle; currentObject != nil; currentObject = va_arg(args, id)) {
+            [alert addAction:[UIAlertAction actionWithTitle:currentObject style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                handlerAction(action);
+            }]];
+        }
+        va_end(args);
     }
+    
     if (cancelTitle.length) {
         [alert addAction:[UIAlertAction actionWithTitle:cancelTitle style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         }]];

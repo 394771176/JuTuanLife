@@ -32,6 +32,8 @@
 		603F99FF241E646A00523CBD /* dt_share_download@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 603F99EF241E646900523CBD /* dt_share_download@2x.png */; };
 		603F9A00241E646A00523CBD /* dt_share_refresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 603F99F0241E646900523CBD /* dt_share_refresh@2x.png */; };
 		603F9A01241E646A00523CBD /* dt_share_sina@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 603F99F1241E646900523CBD /* dt_share_sina@2x.png */; };
+		603F9A04241FE54100523CBD /* FFConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 603F9A03241FE54100523CBD /* FFConfiguration.m */; };
+		603F9A09241FEB3500523CBD /* DTImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603F9A07241FEB3500523CBD /* DTImagePickerController.m */; };
 		606FE6F524101CCA00522B96 /* JTLoginForgetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE6F424101CCA00522B96 /* JTLoginForgetController.m */; };
 		606FE6F824101CFD00522B96 /* JTLoginAuthController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE6F724101CFD00522B96 /* JTLoginAuthController.m */; };
 		606FE6FB24101D2C00522B96 /* JTLoginAgreementController.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE6FA24101D2C00522B96 /* JTLoginAgreementController.m */; };
@@ -246,6 +248,10 @@
 		603F99EF241E646900523CBD /* dt_share_download@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dt_share_download@2x.png"; sourceTree = "<group>"; };
 		603F99F0241E646900523CBD /* dt_share_refresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dt_share_refresh@2x.png"; sourceTree = "<group>"; };
 		603F99F1241E646900523CBD /* dt_share_sina@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dt_share_sina@2x.png"; sourceTree = "<group>"; };
+		603F9A02241FE54100523CBD /* FFConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFConfiguration.h; sourceTree = "<group>"; };
+		603F9A03241FE54100523CBD /* FFConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFConfiguration.m; sourceTree = "<group>"; };
+		603F9A07241FEB3500523CBD /* DTImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTImagePickerController.m; sourceTree = "<group>"; };
+		603F9A08241FEB3500523CBD /* DTImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTImagePickerController.h; sourceTree = "<group>"; };
 		606FE6F324101CCA00522B96 /* JTLoginForgetController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTLoginForgetController.h; sourceTree = "<group>"; };
 		606FE6F424101CCA00522B96 /* JTLoginForgetController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTLoginForgetController.m; sourceTree = "<group>"; };
 		606FE6F624101CFD00522B96 /* JTLoginAuthController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTLoginAuthController.h; sourceTree = "<group>"; };
@@ -832,6 +838,23 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		603F9A05241FEB1500523CBD /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				603F9A06241FEB1F00523CBD /* ImagePicker */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		603F9A06241FEB1F00523CBD /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				603F9A08241FEB3500523CBD /* DTImagePickerController.h */,
+				603F9A07241FEB3500523CBD /* DTImagePickerController.m */,
+			);
+			path = ImagePicker;
+			sourceTree = "<group>";
+		};
 		606FE6FC24101DE700522B96 /* navbar */ = {
 			isa = PBXGroup;
 			children = (
@@ -1124,6 +1147,7 @@
 		60E2B003240ED59900E4EA52 /* WCBaseUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				603F9A05241FEB1500523CBD /* Tools */,
 				606FE75724116C3D00522B96 /* Fixed */,
 				606FE727241149BC00522B96 /* OpenUDID */,
 				60E2B0D8240ED5D800E4EA52 /* Controller */,
@@ -1255,6 +1279,8 @@
 		60E2B0ED240ED5D800E4EA52 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				603F9A02241FE54100523CBD /* FFConfiguration.h */,
+				603F9A03241FE54100523CBD /* FFConfiguration.m */,
 				60E2B2B6240FE58100E4EA52 /* BPAppDelegate.h */,
 				60E2B2B5240FE58100E4EA52 /* BPAppDelegate.m */,
 				60E2B0FC240ED5D800E4EA52 /* CWStaticImageManager.h */,
@@ -1595,6 +1621,7 @@
 				60E2B11A240ED5D800E4EA52 /* DTHttpRefreshLoadMoreTableController.m in Sources */,
 				60E2B118240ED5D800E4EA52 /* DTTabItem.m in Sources */,
 				60E2B123240ED5D800E4EA52 /* DTHttpLoadMoreTableController.m in Sources */,
+				603F9A04241FE54100523CBD /* FFConfiguration.m in Sources */,
 				60ECA79A241D1E9C0029C45A /* JTShipItem.m in Sources */,
 				60E2B113240ED5D800E4EA52 /* DTTableCustomCell.m in Sources */,
 				606FE782241172EA00522B96 /* JTLoginProtorolCell.m in Sources */,
@@ -1602,6 +1629,7 @@
 				60E2B110240ED5D800E4EA52 /* DTPickerView.m in Sources */,
 				606FE736241157ED00522B96 /* JTUserRequest.m in Sources */,
 				60E2B102240ED5D800E4EA52 /* DTControl.m in Sources */,
+				603F9A09241FEB3500523CBD /* DTImagePickerController.m in Sources */,
 				60E2B10D240ED5D800E4EA52 /* DTGradientLabel.m in Sources */,
 				60B93B6C241520F6003147DC /* JTLinkUtil.m in Sources */,
 				60ED762A240EB25A0013CB8C /* AppDelegate.m in Sources */,

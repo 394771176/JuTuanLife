@@ -24,6 +24,8 @@
 #import <WCModule/DTReachabilityUtil.h>
 #endif
 
+#import "FFConfiguration.h"
+
 #import "DTPubUtil.h"
 #import "WCMethodUtil.h"
 #import "WCAppStyleUtil.h"

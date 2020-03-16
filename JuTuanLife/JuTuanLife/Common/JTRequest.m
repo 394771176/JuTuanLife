@@ -69,12 +69,12 @@
         [pairs safeAddObject:[self urlCodeValueForKey:@"_caller" params:system]];
     }
     
+    [pairs safeAddObject:[NSString stringWithFormat:@"_t=%.0f", WCTimeIntervalWithSecondsSince1970()]];
+    
     //有就带上
     if ([JTUserManager sharedInstance].ac_token) {
         [pairs safeAddObject:[NSString stringWithFormat:@"_ac_token=%@", FFURLEncode([JTUserManager sharedInstance].ac_token)]];
     }
-    
-    [pairs safeAddObject:[NSString stringWithFormat:@"_t=%.0f", WCTimeIntervalWithSecondsSince1970()]];
     
     NSString* queryPrefix = ([url rangeOfString:@"?"].length ? @"&" : @"?");
     

@@ -12,4 +12,6 @@
 
 @property (nonatomic, strong) JTUser *item;
 
+- (void)setAvatar:(UIImage *)image;
+
 @end
