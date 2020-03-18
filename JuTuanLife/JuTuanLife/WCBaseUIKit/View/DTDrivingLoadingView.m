@@ -36,7 +36,7 @@
         NSUInteger imageCount = 12;
         NSMutableArray *images = [NSMutableArray arrayWithCapacity:imageCount];
         for (int i = 1; i <= imageCount; i++) {
-            [images addObject:[UIImage imageNamed:[NSString stringWithFormat:@"driving_loading%d",i]]];
+            [images safeAddObject:[UIImage imageNamed:[NSString stringWithFormat:@"driving_loading%d",i]]];
         }
         imv.animationImages = images;
         imv.animationDuration = 1.5;

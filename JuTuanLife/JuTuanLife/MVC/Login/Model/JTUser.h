@@ -28,6 +28,7 @@ typedef NS_ENUM(NSUInteger, JTUserStatus) {
 @property (nonatomic, strong) NSString *avatar;
 
 @property (nonatomic, strong) NSString *phone;
+@property (nonatomic, strong) NSString *mobile;
 
 @property (nonatomic, strong) JTUserCert *cert;
 
@@ -77,6 +78,7 @@ typedef NS_ENUM(NSUInteger, JTUserStatus) {
 
 @property (nonatomic, strong) NSString *itemId;
 @property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *fullName;
 
 @end
 

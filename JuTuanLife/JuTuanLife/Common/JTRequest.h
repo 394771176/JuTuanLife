@@ -23,4 +23,6 @@ typedef NS_ENUM(NSUInteger, JTServerType) {
 + (id)requestWithApi:(NSString *)api params:(NSDictionary *)params httpMethod:(NSString *)httpMethod;
 + (id)requestWithApi:(NSString *)api params:(NSDictionary *)params httpMethod:(NSString *)httpMethod serverType:(JTServerType)serverType;
 
++ (NSMutableDictionary *)paramsWithPos:(NSString *)pos pageSize:(NSInteger)pageSize;
+
 @end

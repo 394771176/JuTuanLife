@@ -10,6 +10,6 @@
 
 @interface DTPosListDataModel : DTListDataModel
 
-@property (nonatomic, strong, readonly) NSString *pos;
+@property (nonatomic, strong) NSString *pos;
 
 @end

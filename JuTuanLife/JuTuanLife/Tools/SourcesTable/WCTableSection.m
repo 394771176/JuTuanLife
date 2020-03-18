@@ -15,6 +15,13 @@
     return [self sectionWithItems:items cellClass:NULL];
 }
 
++ (id)sectionWithItems:(NSArray *)items countBlock:(SectionRowCount)block
+{
+    WCTableSection *section = [WCTableSection sectionWithItems:items];
+    section.countBlock = block;
+    return section;
+}
+
 + (id)sectionWithItems:(NSArray *)items cellClass:(Class)cellClass
 {
     return [self sectionWithItems:items cellClass:cellClass height:0];
@@ -51,6 +58,26 @@
     return section;
 }
 
++ (id)sectionWithCells:(NSArray *)items click:(CellClick)click
+{
+    return [self sectionWithCells:items height:0 click:click];
+}
+
++ (id)sectionWithCells:(NSArray *)items height:(CGFloat)height click:(CellClick)click
+{
+    WCTableSection *section = [WCTableSection sectionWithItems:items cellClass:NULL height:height];
+    section.clickBlock = click;
+    return section;
+}
+
++ (id)sectionWithCells:(NSArray *)items heightBlock:(CellHeight)heightBlock click:(CellClick)click
+{
+    WCTableSection *section = [WCTableSection sectionWithItems:items cellClass:NULL height:0];
+    section.heightBlock = heightBlock;
+    section.clickBlock = click;
+    return section;
+}
+
 - (instancetype)init
 {
     self = [super init];
@@ -80,19 +107,22 @@
 
 - (id)dataAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [self.dataList safeObjectAtIndex:indexPath.row];
-}
-
-- (NSInteger)count
-{
-    return self.dataList.count;
+    id data = [self.dataList safeObjectAtIndex:indexPath.row];
+    if ([data isKindOfClass:WCTableRow.class]) {
+        return [data dataAtIndexPath:indexPath];
+    } else {
+        return data;
+    }
 }
 
 // MARK: - UITableViewDelegate -
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self count];
+    if (_countBlock) {
+        return _countBlock(section);
+    }
+    return self.dataList.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -121,11 +151,16 @@
 {
     id data = [self.dataList safeObjectAtIndex:indexPath.row];
     if ([data isKindOfClass:WCTableRow.class]) {
-        [data tableView:tableView didSelectRowAtIndexPath:indexPath];
+        if ([data clickBlock]) {
+            [data tableView:tableView didSelectRowAtIndexPath:indexPath];
+            return;
+        } else {
+            self.item = [(WCTableRow *)data item];
+        }
     } else {
         self.item = data;
-        [super tableView:tableView didSelectRowAtIndexPath:indexPath];
     }
+    [super tableView:tableView didSelectRowAtIndexPath:indexPath];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section

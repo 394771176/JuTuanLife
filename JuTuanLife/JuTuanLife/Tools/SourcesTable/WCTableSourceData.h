@@ -31,19 +31,20 @@
 - (void)addRowWithItem:(id)item cellClass:(Class)cellClass;
 - (void)addRowWithItem:(id)item cellClass:(Class)cellClass height:(CGFloat)height;
 
-- (void)addRowToLastSectionWithItem:(id)item cellClass:(Class)cellClass height:(CGFloat)height;
+- (void)addRowWithCell:(id)item height:(CGFloat)height;
+- (void)addRowWithCell:(id)item height:(CGFloat)height click:(CellClick)click;
+- (void)addRowWithCell:(id)item heightBlock:(CellHeight)heightBlock click:(CellClick)click;
+
+- (void)addRowItem:(WCTableRow *)row;
+- (void)addRowItemToNewSection:(WCTableRow *)row;
 
 - (void)addSectionWithItems:(NSArray *)items cellClass:(Class)cellClass;
 - (void)addSectionWithItems:(NSArray *)items cellClass:(Class)cellClass height:(CGFloat)height;
 
-- (void)addRowItem:(WCTableRow *)row;
-- (void)addRowItemToNewSection:(WCTableRow *)row;
-- (void)addRowItemToLastSection:(WCTableRow *)row;
+- (void)addSectionWithCells:(NSArray *)items height:(CGFloat)height click:(CellClick)click;
+- (void)addSectionWithCells:(NSArray *)items heightBlock:(CellHeight)heightBlock click:(CellClick)click;
 
 - (void)addSectionItem:(WCTableSection *)section;
-
-//- (void)insertRowItem:(WCTableRow *)row inSection:(NSInteger)section;
-//- (void)insertSectionItem:(WCTableSection *)row inSection:(NSInteger)section;
 
 - (void)setSection:(NSInteger)section headerHeight:(CGFloat)height;
 - (void)setSection:(NSInteger)section footerHeight:(CGFloat)height;

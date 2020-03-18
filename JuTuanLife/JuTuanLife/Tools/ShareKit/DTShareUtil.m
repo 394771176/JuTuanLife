@@ -25,6 +25,7 @@
     void (^callback)(BOOL success, id responseObject) = ^(BOOL success, id responseObject) {
         if (success) {
 //            [[NSNotificationCenter defaultCenter] postNotificationName:APP_EVENT_KJZ_SHARE_DID_SUCCESS object:nil];
+            [DTPubUtil showHUDSuccessHintInWindow:@"分享成功"];
         } else {
             if (responseObject&&[responseObject isKindOfClass:[NSString class]]) {
                 [DTPubUtil showHUDErrorHintInWindow:responseObject];

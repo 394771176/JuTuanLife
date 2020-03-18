@@ -43,8 +43,8 @@
     
     _headerView.item = item;
 
-    _dateLabel.text = @"2020-03-12 13:14";
-    _shipNumLabel.text = @"名下徒弟40人";
+    _dateLabel.text = [JTCoreUtil showDateWith:item.relatedTime];
+    _shipNumLabel.text = [NSString stringWithFormat:@"名下徒弟%zd人", item.apprentices];
 }
 
 - (void)awakeFromNib {

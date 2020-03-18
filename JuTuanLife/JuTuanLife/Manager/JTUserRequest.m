@@ -132,10 +132,10 @@
     return [self requestWithApi:@"sale/contract/sign_contracts" params:params httpMethod:WCHTTPMethodPOST];
 }
 
-+ (JTRequest *)getShipList
++ (JTRequest *)getShipList:(NSString *)pos pageSize:(NSInteger)pageSize
 {
-//    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    return [self requestWithApi:@"" params:nil];
+    NSMutableDictionary *params = [self paramsWithPos:pos pageSize:pageSize];
+    return [self requestWithApi:@"sale/user/master_and_apprentices" params:params];
 }
 
 + (JTRequest *)getShareInfo

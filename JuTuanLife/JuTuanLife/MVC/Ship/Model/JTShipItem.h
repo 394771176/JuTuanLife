@@ -11,7 +11,6 @@
 
 @interface JTShipItem : JTUser
 
-@property (nonatomic, strong) NSString *shipTime;
-@property (nonatomic, assign) NSInteger shipCount;
+@property (nonatomic, strong) NSString *relatedTime;
 
 @end

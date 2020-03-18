@@ -128,4 +128,12 @@
     return request;
 }
 
++ (NSMutableDictionary *)paramsWithPos:(NSString *)pos pageSize:(NSInteger)pageSize
+{
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params safeSetObject:pos forKey:@"fromPos"];
+    [params safeSetObject:STRING(pageSize) forKey:@"pageSize"];
+    return params;
+}
+
 @end

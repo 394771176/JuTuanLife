@@ -6,11 +6,13 @@
 //  Copyright © 2020 cheng. All rights reserved.
 //
 
-#import <WCModel/DTListDataModel.h>
+#import "JTPosListDataModel.h"
 #import "JTShipItem.h"
 
-@interface JTShipListModel : DTListDataModel
+@interface JTShipListModel : JTPosListDataModel
 
 @property (nonatomic, strong) NSArray<JTShipItem *> *teachers;
+@property (nonatomic, assign) NSInteger masterNum;
+@property (nonatomic, assign) NSInteger apprenticeNum;
 
 @end

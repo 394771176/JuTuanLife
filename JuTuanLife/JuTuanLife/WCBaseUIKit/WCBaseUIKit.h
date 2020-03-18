@@ -10,6 +10,7 @@
 
 #import <WCCategory/WCCategory.h>
 #import <WCModule/WCModule.h>
+#import <WCModel/WCModel.h>
 
 /*Entity*/
 #import "DTTabItem.h"

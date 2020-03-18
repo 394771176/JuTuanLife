@@ -20,11 +20,15 @@
     if (APP_DEBUG) {
         _bankNum = @"1234567890123344";
     }
+    _phone = _mobile;
     return YES;
 }
 
 - (NSString *)phone
 {
+    if (_mobile.length) {
+        return _mobile;
+    }
     if (!_phone) {
         _phone = [JTUserManager sharedInstance].phone;
     }
@@ -116,6 +120,22 @@
 + (NSDictionary<NSString *,id> *)modelCustomPropertyMapper
 {
     return @{@"itemId" : @"id"};
+}
+
+- (NSString *)fullName
+{
+    if (!_fullName.length) {
+//        if ([self.name isEqualToString:@"聚团"]) {
+//            return @"聚团生活";
+//        } else if ([self.name isEqualToString:@"聚推"]) {
+//            return @"聚推帮";
+//        } else {
+//            return _name;
+//        }
+        return _name;
+    } else {
+        return _fullName;
+    }
 }
 
 @end

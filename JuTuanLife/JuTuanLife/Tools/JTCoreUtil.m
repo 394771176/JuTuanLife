@@ -23,7 +23,7 @@
 
 + (void)showAlertWithTitle:(NSString *)title message:(NSString *)message style:(UIAlertControllerStyle)style cancelTitle:(NSString *)cancelTitle confirmTitle:(NSString *)confirmTitle destructiveTitle:(NSString *)destructiveTitle handler:(void (^)(UIAlertAction *action))handler
 {
-    [self showAlertWithTitle:title message:message style:style handler:handler cancelTitle:cancelTitle destructiveTitle:destructiveTitle confirmTitle:confirmTitle];
+    [self showAlertWithTitle:title message:message style:style handler:handler cancelTitle:cancelTitle destructiveTitle:destructiveTitle confirmTitle:confirmTitle, nil];
 }
 
 + (void)showAlertWithTitle:(NSString *)title message:(NSString *)message style:(UIAlertControllerStyle)style handler:(void (^)(UIAlertAction *))handler cancelTitle:(NSString *)cancelTitle destructiveTitle:(NSString *)destructiveTitle confirmTitle:(NSString *)confirmTitle, ...
@@ -69,6 +69,17 @@
     } else {
         return YES;
     }
+}
+
++ (NSString *)showDateWith:(NSString *)date
+{
+    if (date.length) {
+        NSArray *array = [date componentsSeparatedByString:@":"];
+        if (array.count == 3) {
+            return [[array subarrayWithRange:NSMakeRange(0, 2)] componentsJoinedByString:@":"];
+        }
+    }
+    return date;
 }
 
 @end

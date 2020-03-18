@@ -50,11 +50,11 @@ extern int CGFloatCompareWithFloat(CGFloat f1, CGFloat f2);
 
 extern CGFloat validValue(CGFloat f, CGFloat min, CGFloat max);
 
-//自动识别 btn 类型，
-extern id UICreate(Class uiClass, CGRect frame, UIAutoResizingType AA, UIView *toView);
-extern id UICreateLabel(Class uiClass, CGRect frame, UIAutoResizingType AA, NSString *text, id font, id color, UIView *toView);
-extern id UICreateImage(Class uiClass, CGRect frame, UIAutoResizingType AA, UIContetntModeType CC, id image, UIView *toView);
-extern id UICreateBtn(Class uiClass, CGRect frame, UIAutoResizingType AA, NSString *title, id font, id color, id target, SEL action, UIView *toView);
+////自动识别 btn 类型，
+//extern id UICreate(Class uiClass, CGRect frame, UIAutoResizingType AA, UIView *toView);
+//extern id UICreateLabel(Class uiClass, CGRect frame, UIAutoResizingType AA, NSString *text, id font, id color, UIView *toView);
+//extern id UICreateImage(Class uiClass, CGRect frame, UIAutoResizingType AA, UIContetntModeType CC, id image, UIView *toView);
+//extern id UICreateBtn(Class uiClass, CGRect frame, UIAutoResizingType AA, NSString *title, id font, id color, id target, SEL action, UIView *toView);
 
 @interface WCMethodUtil : NSObject
 

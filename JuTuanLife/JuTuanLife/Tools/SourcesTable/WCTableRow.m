@@ -59,6 +59,50 @@
     return row;
 }
 
+//+ (id)rowWithCell:(id)item config:(CellConfig)config click:(CellClick)click
+//{
+//    WCTableRow *row = [WCTableRow rowWithItem:item];
+//    [row setConfigBlock:config clickBlock:click];
+//    return row;
+//}
+
++ (id)rowWithCell:(id)item height:(CGFloat)height click:(CellClick)click
+{
+    WCTableRow *row = [WCTableRow rowWithItem:item cellClass:NULL height:height];
+    [row setConfigBlock:nil clickBlock:click];
+    return row;
+}
+
++ (id)rowWithCell:(id)item heightBlock:(CellHeight)heightBlock click:(CellClick)click
+{
+    WCTableRow *row = [WCTableRow rowWithItem:item cellClass:NULL heightBlock:heightBlock];
+    [row setConfigBlock:nil clickBlock:click];
+    return row;
+}
+
++ (id)rowWithCell:(id)item heightBlock:(CellHeight)heightBlock config:(CellConfig)config click:(CellClick)click
+{
+    WCTableRow *row = [WCTableRow rowWithItem:item cellClass:NULL heightBlock:heightBlock];
+    [row setConfigBlock:config clickBlock:click];
+    return row;
+}
+
++ (id)rowWithCellBlock:(CellItem)cellBlock height:(CGFloat)height click:(CellClick)click
+{
+    WCTableRow *row = [WCTableRow rowWithItem:nil cellClass:NULL height:height];
+    row.cellBlock = cellBlock;
+    row.clickBlock = click;
+    return row;
+}
+
++ (id)rowWithCellBlock:(CellItem)cellBlock heightBlock:(CellHeight)heightBlock click:(CellClick)click
+{
+    WCTableRow *row = [WCTableRow rowWithItem:nil cellClass:NULL heightBlock:heightBlock];
+    row.cellBlock = cellBlock;
+    row.clickBlock = click;
+    return row;
+}
+
 + (CGFloat)cellHeightWithItem:(id)item tableView:(UITableView *)tableView
 {
     return 0;

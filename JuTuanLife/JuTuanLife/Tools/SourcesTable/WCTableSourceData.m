@@ -68,21 +68,21 @@
     [self addRowItem:row];
 }
 
-- (void)addRowToLastSectionWithItem:(id)item cellClass:(Class)cellClass height:(CGFloat)height
+- (void)addRowWithCell:(id)item height:(CGFloat)height
 {
-    WCTableRow *row = [WCTableRow rowWithItem:item cellClass:cellClass height:height];
-    [self addRowItemToLastSection:row];
+    [self addRowWithCell:item height:height click:nil];
 }
 
-- (void)addSectionWithItems:(NSArray *)items cellClass:(Class)cellClass
+- (void)addRowWithCell:(id)item height:(CGFloat)height click:(CellClick)click
 {
-    [self addSectionWithItems:items cellClass:cellClass height:0];
+    WCTableRow *row = [WCTableRow rowWithCell:item height:height click:click];
+    [self addRowItem:row];
 }
 
-- (void)addSectionWithItems:(NSArray *)items cellClass:(Class)cellClass height:(CGFloat)height
+- (void)addRowWithCell:(id)item heightBlock:(CellHeight)heightBlock click:(CellClick)click
 {
-    WCTableSection *section = [WCTableSection sectionWithItems:items cellClass:cellClass height:height];
-    [self addSectionItem:section];
+    WCTableRow *row = [WCTableRow rowWithCell:item heightBlock:heightBlock click:click];
+    [self addRowItem:row];
 }
 
 - (void)addRowItem:(WCTableRow *)row
@@ -90,7 +90,7 @@
     if (![self isSectionData]) {
         [self.dataSource safeAddObject:row];
     } else {
-        [self addRowItemToNewSection:row];
+        [self addRowItemToLastSection:row];
     }
 }
 
@@ -119,6 +119,29 @@
             [(WCTableSection *)lastData addItemToDataList:row];
         }
     }
+}
+
+- (void)addSectionWithItems:(NSArray *)items cellClass:(Class)cellClass
+{
+    [self addSectionWithItems:items cellClass:cellClass height:0];
+}
+
+- (void)addSectionWithItems:(NSArray *)items cellClass:(Class)cellClass height:(CGFloat)height
+{
+    WCTableSection *section = [WCTableSection sectionWithItems:items cellClass:cellClass height:height];
+    [self addSectionItem:section];
+}
+
+- (void)addSectionWithCells:(NSArray *)items height:(CGFloat)height click:(CellClick)click
+{
+    WCTableSection *section = [WCTableSection sectionWithCells:items height:height click:click];
+    [self addSectionItem:section];
+}
+
+- (void)addSectionWithCells:(NSArray *)items heightBlock:(CellHeight)heightBlock click:(CellClick)click
+{
+    WCTableSection *section = [WCTableSection sectionWithCells:items heightBlock:heightBlock click:click];
+    [self addSectionItem:section];
 }
 
 - (void)addSectionItem:(WCTableSection *)section
@@ -246,18 +269,6 @@
     }
 }
 
-- (NSInteger)countForSection:(NSInteger)section
-{
-    id data = [self dataForSection:section];
-    if ([data isKindOfClass:NSArray.class]) {
-        return [data count];
-    } else if ([data isKindOfClass:WCTableSection.class]) {
-        return [(WCTableSection *)data count];
-    } else {
-        return 0;
-    }
-}
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     if ([self isSectionData]) {
@@ -271,7 +282,14 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self countForSection:section];
+    id data = [self dataForSection:section];
+    if ([data isKindOfClass:NSArray.class]) {
+        return [data count];
+    } else if ([data isKindOfClass:WCTableSection.class]) {
+        return [(WCTableSection *)data tableView:tableView numberOfRowsInSection:section];
+    } else {
+        return 0;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
