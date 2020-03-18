@@ -25,7 +25,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        UICREATEImgTo(_logoView, UIImageView, 0, 44, self.width, 80, AAW, CCCenter, @"", self);
+        UICREATEImageTo(_logoView, UIImageView, 0, 44, self.width, 80, AAW, CCCenter, @"", self);
 
         
     }

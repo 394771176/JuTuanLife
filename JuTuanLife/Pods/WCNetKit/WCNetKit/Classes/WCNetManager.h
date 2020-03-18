@@ -8,10 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <WCCategory/WCCategory.h>
-#import <WCEncrypt/NSString+md5.h>
-#import <WCModule/DTReachabilityUtil.h>
 #import "WCNetProtocol.h"
-#import "WCDataService.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

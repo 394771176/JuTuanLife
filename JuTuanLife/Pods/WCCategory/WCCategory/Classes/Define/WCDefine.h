@@ -77,6 +77,12 @@
 #define WEAK_SELF        __weak   __typeof(&*self) weakSelf = self;
 #define STRONG_SELF      __strong __typeof(&*self) self = weakSelf;
 
+#define kWeakObj(obj)   __weak typeof(obj) weak##obj = obj;
+#define kStrongObj(obj)    __strong typeof(obj) obj = weak##obj;
+
+#define PATH(name)  [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject stringByAppendingPathComponent:name]
+#define BUNDLE(name, type)  [[NSBundle mainBundle] pathForResource:name ofType:type]
+
 #define WC_Swizzle(_method1_, _method2_) \
 { \
 Method originalInitMethod = class_getInstanceMethod(self, _method1_); \

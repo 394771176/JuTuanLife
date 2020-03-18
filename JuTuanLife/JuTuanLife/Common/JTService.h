@@ -10,12 +10,4 @@
 
 @interface JTService : WCDataService
 
-+ (void)loadCache:(void (^)(WCDataResult *cache))cacheBlock
-           forKey:(NSString *)cacheKey;
-
-+ (void)async:(WCDataRequest *)request
-     cacheKey:(NSString *)cacheKey
-    loadCache:(void (^)(WCDataResult *cache))cacheBlock
-       finish:(void (^)(WCDataResult *result))finish;
-
 @end

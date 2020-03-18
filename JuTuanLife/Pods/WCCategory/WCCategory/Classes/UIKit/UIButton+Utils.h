@@ -53,7 +53,7 @@
 
 - (void)setImageWithImageName:(NSString *)imageName;
 - (void)setSelectedImageWithImageName:(NSString *)imageName;
-- (void)setHlightedImageWithImageName:(NSString *)imageName;
+- (void)setHighlightedImageWithImageName:(NSString *)imageName;
 - (void)setImageWithImageName:(NSString *)imageName selImageName:(NSString *)selImgName;
 - (void)setBackgroundImageWithImageName:(NSString *)imageName;
 

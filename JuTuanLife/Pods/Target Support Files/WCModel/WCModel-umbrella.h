@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "WCModel.h"
 #import "BPCacheManager.h"
 #import "BPLocalManager.h"
 #import "WCBaseEntity.h"

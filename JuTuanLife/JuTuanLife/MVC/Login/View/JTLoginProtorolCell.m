@@ -30,7 +30,7 @@
         //0,3 6,3  27 * 27
         UIImage *image = [[UIImage imageNamed:@"login_protorol_bg"] resizableImageWithCapInsets:UIEdgeInsetsMake(13, 13, 13, 13)];
         
-        UICREATEImg(UIImageView, 21, 12, self.contentView.width - 21 * 2, self.contentView.height - 12 - 6, AAWH, CCFill, image, self.contentView)
+        UICREATEImage(UIImageView, 21, 12, self.contentView.width - 21 * 2, self.contentView.height - 12 - 6, AAWH, CCFill, image, self.contentView)
         
         UICREATETo(_bodyView, DTControl, 24, 12, self.contentView.width - 24 * 2, self.contentView.height - 12 * 2, AAWH, self.contentView);
         [_bodyView addTarget:self action:@selector(clickAction)];

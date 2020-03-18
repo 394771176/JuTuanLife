@@ -7,47 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		23B31275C9720D67BC96EA2A5EEBA2EB /* WCModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78707581E04FBD13EEBFB697C2B33E48 /* WCModule.framework */; };
-		26E8F2871971E6DDE59EA271F0FE8870 /* BPURLRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = A2D9D95026C38D7A63CAFF28E2E0B1E1 /* BPURLRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		40D6F4DC2933473490E813BB05400317 /* BPURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BEC892B9B4E7B280609C5303628B8E /* BPURLRequest.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		53DE1FC14EA3B3B4D5B37557FA8EA28A /* WCDataService.h in Headers */ = {isa = PBXBuildFile; fileRef = A49B9B4307ADA7271C578BD42D532C34 /* WCDataService.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		60BE85C75FB4BB78270CA71DF288AAA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F270D3EAF45657B31A800D4E81FAC9 /* Foundation.framework */; };
-		7ADE4B97D110D6547DB4740D02107C84 /* WCNetManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E599E81BBE68E3A30F230187ABA526D /* WCNetManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A37C973CABE0AD735E651A0F6E0B72A7 /* WCDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D7A4A1A2A1792A65510A6EE9F94A97 /* WCDataRequest.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		B6B109B53ED4E565BD1BCEDE3DA67774 /* WCNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAF54EBBF08C73A5EA7E586231C0625 /* WCNetManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		B82395B850487D39D845473ECC3E45BC /* WCModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B0A15D4CBDAAA42E25E9210352E76CE /* WCModel.framework */; };
-		C256FB6A05B3A8C0143E6F7085EAE28C /* WCNetProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 385979CAEF0A59C7FAEBB9F68E8928E8 /* WCNetProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CCD86C172C4C692F2DD44F5FB22AA6F6 /* WCEncrypt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4C424861D226C3CABB37B7990DE97A /* WCEncrypt.framework */; };
-		D4CC39823539EC7C8BDE06C6C433BA9C /* WCNetKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 21E5486E1207D3AB3FB5A98299D03509 /* WCNetKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4A4253830A2E55F0DE68A779DB0EAAC /* WCCategory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9FE806C73928D39129C9CBB930545D /* WCCategory.framework */; };
-		E6E3C274F76E809854AC104CF4A05C82 /* WCDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = DA90948D70B87F00FC06BBA6522BAE7C /* WCDataService.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		EA4CF726B367F958163160AF1258AF1E /* WCNetKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E06E4BE32B91DA8B0B722A323DBD7153 /* WCNetKit-dummy.m */; };
-		EC4535C8EC5AE8E63548F4C5838A2D9C /* WCDataRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C2C17391E83D5B850A5DF8BDC0D1299 /* WCDataRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		06807837D74B874BBA2AB0D1F9162B45 /* WCNetProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C0A9DDC89DF54BA75C30FA72BFE3B90 /* WCNetProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07BCAF123916FD32DDAC063A0238F20D /* WCNetManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 59719AC34BF2EF7B6E84C7A6BF3B317F /* WCNetManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B8891F3C2A2EE19C4B6C1D8A1850101 /* WCDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C04319F7FFEECA050542E501A4EE74D5 /* WCDataRequest.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0F588B28C62C33947256AE2BB4136BB5 /* WCNetKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 878C3FF7149C1B1A33288FB8DD078A7D /* WCNetKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0FE942F9C0A805F59762E87C184B9B2A /* BPURLRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A437FCE1DC5C961313C171CB4CB930 /* BPURLRequest.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		287687C1AB0C3B6886B6F4E7A0B3E3BE /* WCNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 761997138E0276297EEAFAC3A6B4F63D /* WCNetManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3CE420F09512FF720C2B35AEBA964AB9 /* WCModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78707581E04FBD13EEBFB697C2B33E48 /* WCModule.framework */; };
+		628842256220ABF5E67CE9DD3FA2DE53 /* WCDataRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B870C6F9DD674D10BF720FAB6BFEF5 /* WCDataRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		68420AD5C04FA0729CD04E6CBE1D22F8 /* WCNetKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AC744604A8DCD6143D8DB162843E5CDC /* WCNetKit-dummy.m */; };
+		792DD400DA30C03FE5FC5FB0A24E6426 /* WCModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B0A15D4CBDAAA42E25E9210352E76CE /* WCModel.framework */; };
+		84422CBDAADD608D257E64E95A1F93FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06F270D3EAF45657B31A800D4E81FAC9 /* Foundation.framework */; };
+		9B71E557C23E54EE9B107A51842EBAFA /* WCDataService.h in Headers */ = {isa = PBXBuildFile; fileRef = 31FD52446FE7A6F6F23A3D0D98E2FBC4 /* WCDataService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9E09A3D7235B9A345E4D6D546DD25EF9 /* BPURLRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 536315E5DEAAC985B23E4292E202FC15 /* BPURLRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C08893E16F46252D20CE2A92B330537D /* WCCategory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9FE806C73928D39129C9CBB930545D /* WCCategory.framework */; };
+		CE1254D130A908D9065EB439F40A655A /* WCNetKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 12EFA064E4E00579447C423CC5292B52 /* WCNetKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6CADEB14632A4B632B96A5B91F29B16 /* WCEncrypt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4C424861D226C3CABB37B7990DE97A /* WCEncrypt.framework */; };
+		E7C0E66FDD2060493B5A44F28C584DAF /* WCDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AF86403A0D22C0605DE133A053ADD83 /* WCDataService.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		79EF8AB2F11D306A23F8B8C9EF305F99 /* PBXContainerItemProxy */ = {
+		071EC5CFC9A84E62DDDC8A71D77A3442 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8A3FB0DD220FAECEECCAA26F6A38F81F /* WCEncrypt.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 1B6B0557A7BF1D49310AB076E55FAE59;
 			remoteInfo = WCEncrypt;
 		};
-		914B061E2F408437484F255CFAB1AE23 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7A3164D6A096EAAE1693F73F46943294 /* WCCategory.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 6B7961D1A0411488E0B195CB1D0BA3CD;
-			remoteInfo = WCCategory;
-		};
-		A464B1B04A752917643AE6299CC23EAC /* PBXContainerItemProxy */ = {
+		199B2C6D1CDC6337B5515706F82F3229 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9977D05E983A32528B7A4E8672810205 /* WCModel.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = F7DEDB7C2195D421F161666F4E272F06;
 			remoteInfo = WCModel;
 		};
-		B4549B573B806F4D569D27FFA18FC0D9 /* PBXContainerItemProxy */ = {
+		5E7ED8E1B36E930C1D4DF17274A5110A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A3164D6A096EAAE1693F73F46943294 /* WCCategory.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B7961D1A0411488E0B195CB1D0BA3CD;
+			remoteInfo = WCCategory;
+		};
+		745AB365559FCF8B758108780E7CB829 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 59A1DB5E7204A1C8C786182153941107 /* WCModule.xcodeproj */;
 			proxyType = 1;
@@ -58,42 +59,43 @@
 
 /* Begin PBXFileReference section */
 		06F270D3EAF45657B31A800D4E81FAC9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		0C2C17391E83D5B850A5DF8BDC0D1299 /* WCDataRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WCDataRequest.h; path = WCNetKit/Classes/WCDataRequest.h; sourceTree = "<group>"; };
+		12EFA064E4E00579447C423CC5292B52 /* WCNetKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WCNetKit-umbrella.h"; sourceTree = "<group>"; };
 		1B0A15D4CBDAAA42E25E9210352E76CE /* WCModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WCModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		21E5486E1207D3AB3FB5A98299D03509 /* WCNetKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WCNetKit-umbrella.h"; sourceTree = "<group>"; };
-		385979CAEF0A59C7FAEBB9F68E8928E8 /* WCNetProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WCNetProtocol.h; path = WCNetKit/Classes/WCNetProtocol.h; sourceTree = "<group>"; };
+		2AF86403A0D22C0605DE133A053ADD83 /* WCDataService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WCDataService.m; path = WCNetKit/Classes/WCDataService.m; sourceTree = "<group>"; };
+		31FD52446FE7A6F6F23A3D0D98E2FBC4 /* WCDataService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WCDataService.h; path = WCNetKit/Classes/WCDataService.h; sourceTree = "<group>"; };
+		38B870C6F9DD674D10BF720FAB6BFEF5 /* WCDataRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WCDataRequest.h; path = WCNetKit/Classes/WCDataRequest.h; sourceTree = "<group>"; };
+		4C0A9DDC89DF54BA75C30FA72BFE3B90 /* WCNetProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WCNetProtocol.h; path = WCNetKit/Classes/WCNetProtocol.h; sourceTree = "<group>"; };
+		536315E5DEAAC985B23E4292E202FC15 /* BPURLRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BPURLRequest.h; path = WCNetKit/Classes/BPURLRequest.h; sourceTree = "<group>"; };
+		59719AC34BF2EF7B6E84C7A6BF3B317F /* WCNetManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WCNetManager.h; path = WCNetKit/Classes/WCNetManager.h; sourceTree = "<group>"; };
 		59A1DB5E7204A1C8C786182153941107 /* WCModule */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WCModule; path = WCModule.xcodeproj; sourceTree = "<group>"; };
-		5E599E81BBE68E3A30F230187ABA526D /* WCNetManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WCNetManager.h; path = WCNetKit/Classes/WCNetManager.h; sourceTree = "<group>"; };
-		669732E03B7440720B035ADBF4C32C70 /* WCNetKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WCNetKit-Info.plist"; sourceTree = "<group>"; };
-		71D7A4A1A2A1792A65510A6EE9F94A97 /* WCDataRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WCDataRequest.m; path = WCNetKit/Classes/WCDataRequest.m; sourceTree = "<group>"; };
+		761997138E0276297EEAFAC3A6B4F63D /* WCNetManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WCNetManager.m; path = WCNetKit/Classes/WCNetManager.m; sourceTree = "<group>"; };
 		78707581E04FBD13EEBFB697C2B33E48 /* WCModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WCModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A3164D6A096EAAE1693F73F46943294 /* WCCategory */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WCCategory; path = WCCategory.xcodeproj; sourceTree = "<group>"; };
+		878C3FF7149C1B1A33288FB8DD078A7D /* WCNetKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WCNetKit.h; path = WCNetKit/Classes/WCNetKit.h; sourceTree = "<group>"; };
+		89DFA71FBFA0AA63D7E64D3314D5CC09 /* WCNetKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WCNetKit-Info.plist"; sourceTree = "<group>"; };
 		8A3FB0DD220FAECEECCAA26F6A38F81F /* WCEncrypt */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WCEncrypt; path = WCEncrypt.xcodeproj; sourceTree = "<group>"; };
 		9977D05E983A32528B7A4E8672810205 /* WCModel */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WCModel; path = WCModel.xcodeproj; sourceTree = "<group>"; };
-		99A37A1FC44D036A47DEA47F2B578E01 /* WCNetKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WCNetKit.xcconfig; sourceTree = "<group>"; };
-		A2D9D95026C38D7A63CAFF28E2E0B1E1 /* BPURLRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BPURLRequest.h; path = WCNetKit/Classes/BPURLRequest.h; sourceTree = "<group>"; };
-		A49B9B4307ADA7271C578BD42D532C34 /* WCDataService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WCDataService.h; path = WCNetKit/Classes/WCDataService.h; sourceTree = "<group>"; };
-		A7BEC892B9B4E7B280609C5303628B8E /* BPURLRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BPURLRequest.m; path = WCNetKit/Classes/BPURLRequest.m; sourceTree = "<group>"; };
-		B3784DD2BA0B286511BBE1131D81C264 /* WCNetKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WCNetKit-prefix.pch"; sourceTree = "<group>"; };
+		99A437FCE1DC5C961313C171CB4CB930 /* BPURLRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BPURLRequest.m; path = WCNetKit/Classes/BPURLRequest.m; sourceTree = "<group>"; };
+		AC744604A8DCD6143D8DB162843E5CDC /* WCNetKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WCNetKit-dummy.m"; sourceTree = "<group>"; };
 		BACEFC8E409DA40CF26E38A38CFE354A /* WCNetKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WCNetKit.framework; path = WCNetKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA90948D70B87F00FC06BBA6522BAE7C /* WCDataService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WCDataService.m; path = WCNetKit/Classes/WCDataService.m; sourceTree = "<group>"; };
+		C04319F7FFEECA050542E501A4EE74D5 /* WCDataRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WCDataRequest.m; path = WCNetKit/Classes/WCDataRequest.m; sourceTree = "<group>"; };
+		CCA5EB24591BE50A8D782791EA0CC7E9 /* WCNetKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WCNetKit-prefix.pch"; sourceTree = "<group>"; };
+		CCBDF327F7086EDC8AE6B6D4B21FA3BA /* WCNetKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WCNetKit.xcconfig; sourceTree = "<group>"; };
 		DE4C424861D226C3CABB37B7990DE97A /* WCEncrypt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WCEncrypt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E06E4BE32B91DA8B0B722A323DBD7153 /* WCNetKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WCNetKit-dummy.m"; sourceTree = "<group>"; };
-		E18011A29B8E62B540D118B5D5000D81 /* WCNetKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WCNetKit.modulemap; sourceTree = "<group>"; };
+		DF68F942E62AEF24A8FF4F1F74A1A5B4 /* WCNetKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WCNetKit.modulemap; sourceTree = "<group>"; };
 		EB9FE806C73928D39129C9CBB930545D /* WCCategory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WCCategory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FCAF54EBBF08C73A5EA7E586231C0625 /* WCNetManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WCNetManager.m; path = WCNetKit/Classes/WCNetManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6E474B947EA6B956E6049FD9E68C1A14 /* Frameworks */ = {
+		EA4F00EE6181721DBF37E80B6A1AA3EA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60BE85C75FB4BB78270CA71DF288AAA4 /* Foundation.framework in Frameworks */,
-				E4A4253830A2E55F0DE68A779DB0EAAC /* WCCategory.framework in Frameworks */,
-				CCD86C172C4C692F2DD44F5FB22AA6F6 /* WCEncrypt.framework in Frameworks */,
-				B82395B850487D39D845473ECC3E45BC /* WCModel.framework in Frameworks */,
-				23B31275C9720D67BC96EA2A5EEBA2EB /* WCModule.framework in Frameworks */,
+				84422CBDAADD608D257E64E95A1F93FA /* Foundation.framework in Frameworks */,
+				C08893E16F46252D20CE2A92B330537D /* WCCategory.framework in Frameworks */,
+				E6CADEB14632A4B632B96A5B91F29B16 /* WCEncrypt.framework in Frameworks */,
+				792DD400DA30C03FE5FC5FB0A24E6426 /* WCModel.framework in Frameworks */,
+				3CE420F09512FF720C2B35AEBA964AB9 /* WCModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,26 +128,8 @@
 				EF3EB99A99467DE460F4F938143E0395 /* Dependencies */,
 				0C8F56D24C1EEABEA99B66F533BD7386 /* Frameworks */,
 				125D9FA4928A4AF004DA3F37DBDA86C6 /* Products */,
-				4B7C703704395F3C4435C9A267BC7FE1 /* WCNetKit */,
+				F5EC65113E90B5C7B6C769F268AEEC0F /* WCNetKit */,
 			);
-			sourceTree = "<group>";
-		};
-		4B7C703704395F3C4435C9A267BC7FE1 /* WCNetKit */ = {
-			isa = PBXGroup;
-			children = (
-				A2D9D95026C38D7A63CAFF28E2E0B1E1 /* BPURLRequest.h */,
-				A7BEC892B9B4E7B280609C5303628B8E /* BPURLRequest.m */,
-				0C2C17391E83D5B850A5DF8BDC0D1299 /* WCDataRequest.h */,
-				71D7A4A1A2A1792A65510A6EE9F94A97 /* WCDataRequest.m */,
-				A49B9B4307ADA7271C578BD42D532C34 /* WCDataService.h */,
-				DA90948D70B87F00FC06BBA6522BAE7C /* WCDataService.m */,
-				5E599E81BBE68E3A30F230187ABA526D /* WCNetManager.h */,
-				FCAF54EBBF08C73A5EA7E586231C0625 /* WCNetManager.m */,
-				385979CAEF0A59C7FAEBB9F68E8928E8 /* WCNetProtocol.h */,
-				DD13396A1DE7CAD3D1E623BF1205DE98 /* Support Files */,
-			);
-			name = WCNetKit;
-			path = WCNetKit;
 			sourceTree = "<group>";
 		};
 		9757C0F001482D384E2F1CADC48F5E17 /* iOS */ = {
@@ -156,15 +140,15 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		DD13396A1DE7CAD3D1E623BF1205DE98 /* Support Files */ = {
+		DCF27B9E7F52B2AA87FBC67EE03DFC27 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E18011A29B8E62B540D118B5D5000D81 /* WCNetKit.modulemap */,
-				99A37A1FC44D036A47DEA47F2B578E01 /* WCNetKit.xcconfig */,
-				E06E4BE32B91DA8B0B722A323DBD7153 /* WCNetKit-dummy.m */,
-				669732E03B7440720B035ADBF4C32C70 /* WCNetKit-Info.plist */,
-				B3784DD2BA0B286511BBE1131D81C264 /* WCNetKit-prefix.pch */,
-				21E5486E1207D3AB3FB5A98299D03509 /* WCNetKit-umbrella.h */,
+				DF68F942E62AEF24A8FF4F1F74A1A5B4 /* WCNetKit.modulemap */,
+				CCBDF327F7086EDC8AE6B6D4B21FA3BA /* WCNetKit.xcconfig */,
+				AC744604A8DCD6143D8DB162843E5CDC /* WCNetKit-dummy.m */,
+				89DFA71FBFA0AA63D7E64D3314D5CC09 /* WCNetKit-Info.plist */,
+				CCA5EB24591BE50A8D782791EA0CC7E9 /* WCNetKit-prefix.pch */,
+				12EFA064E4E00579447C423CC5292B52 /* WCNetKit-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/WCNetKit";
@@ -181,19 +165,39 @@
 			name = Dependencies;
 			sourceTree = "<group>";
 		};
+		F5EC65113E90B5C7B6C769F268AEEC0F /* WCNetKit */ = {
+			isa = PBXGroup;
+			children = (
+				536315E5DEAAC985B23E4292E202FC15 /* BPURLRequest.h */,
+				99A437FCE1DC5C961313C171CB4CB930 /* BPURLRequest.m */,
+				38B870C6F9DD674D10BF720FAB6BFEF5 /* WCDataRequest.h */,
+				C04319F7FFEECA050542E501A4EE74D5 /* WCDataRequest.m */,
+				31FD52446FE7A6F6F23A3D0D98E2FBC4 /* WCDataService.h */,
+				2AF86403A0D22C0605DE133A053ADD83 /* WCDataService.m */,
+				878C3FF7149C1B1A33288FB8DD078A7D /* WCNetKit.h */,
+				59719AC34BF2EF7B6E84C7A6BF3B317F /* WCNetManager.h */,
+				761997138E0276297EEAFAC3A6B4F63D /* WCNetManager.m */,
+				4C0A9DDC89DF54BA75C30FA72BFE3B90 /* WCNetProtocol.h */,
+				DCF27B9E7F52B2AA87FBC67EE03DFC27 /* Support Files */,
+			);
+			name = WCNetKit;
+			path = WCNetKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0CD913720FCAEFE47714E413375804D8 /* Headers */ = {
+		14C26A806DC4B66C991A2FB6E5C4F0E8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26E8F2871971E6DDE59EA271F0FE8870 /* BPURLRequest.h in Headers */,
-				EC4535C8EC5AE8E63548F4C5838A2D9C /* WCDataRequest.h in Headers */,
-				53DE1FC14EA3B3B4D5B37557FA8EA28A /* WCDataService.h in Headers */,
-				D4CC39823539EC7C8BDE06C6C433BA9C /* WCNetKit-umbrella.h in Headers */,
-				7ADE4B97D110D6547DB4740D02107C84 /* WCNetManager.h in Headers */,
-				C256FB6A05B3A8C0143E6F7085EAE28C /* WCNetProtocol.h in Headers */,
+				9E09A3D7235B9A345E4D6D546DD25EF9 /* BPURLRequest.h in Headers */,
+				628842256220ABF5E67CE9DD3FA2DE53 /* WCDataRequest.h in Headers */,
+				9B71E557C23E54EE9B107A51842EBAFA /* WCDataService.h in Headers */,
+				CE1254D130A908D9065EB439F40A655A /* WCNetKit-umbrella.h in Headers */,
+				0F588B28C62C33947256AE2BB4136BB5 /* WCNetKit.h in Headers */,
+				07BCAF123916FD32DDAC063A0238F20D /* WCNetManager.h in Headers */,
+				06807837D74B874BBA2AB0D1F9162B45 /* WCNetProtocol.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,20 +206,20 @@
 /* Begin PBXNativeTarget section */
 		D5E44FD668A7DC93AD34DDF4ECC1564C /* WCNetKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4A85976CB0BC4F7A45C39F1536E7A4AC /* Build configuration list for PBXNativeTarget "WCNetKit" */;
+			buildConfigurationList = D2752141E6728A419CA12C29F835F89B /* Build configuration list for PBXNativeTarget "WCNetKit" */;
 			buildPhases = (
-				0CD913720FCAEFE47714E413375804D8 /* Headers */,
-				DE60E3B2C2F9948952C101F0701D1AEB /* Sources */,
-				6E474B947EA6B956E6049FD9E68C1A14 /* Frameworks */,
-				8116172515E1121944E195F9F9CAF1E3 /* Resources */,
+				14C26A806DC4B66C991A2FB6E5C4F0E8 /* Headers */,
+				676E3B2DCF34BF6EF1B69AB51A0E2E3A /* Sources */,
+				EA4F00EE6181721DBF37E80B6A1AA3EA /* Frameworks */,
+				5F08A1171002AE347432A923B9223A76 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5AA7619C7456628163D1B68C18B5615B /* PBXTargetDependency */,
-				6D91A5F00788FDCDD3AECBB29E32A967 /* PBXTargetDependency */,
-				460BAAE179C77BABA02FF74F308614AC /* PBXTargetDependency */,
-				440E5BACCDD646A54DF0DCB23EFE2F0B /* PBXTargetDependency */,
+				1557B52C9ACC135AC759BB940E911677 /* PBXTargetDependency */,
+				B17271780CAEDBC782CB8F784DF7EF70 /* PBXTargetDependency */,
+				E6D0DAEF5E52D86461C70A95356168EC /* PBXTargetDependency */,
+				6399090DC17A9A4D4E8E322349D9E9A1 /* PBXTargetDependency */,
 			);
 			name = WCNetKit;
 			productName = WCNetKit;
@@ -263,7 +267,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8116172515E1121944E195F9F9CAF1E3 /* Resources */ = {
+		5F08A1171002AE347432A923B9223A76 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -273,47 +277,47 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		DE60E3B2C2F9948952C101F0701D1AEB /* Sources */ = {
+		676E3B2DCF34BF6EF1B69AB51A0E2E3A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40D6F4DC2933473490E813BB05400317 /* BPURLRequest.m in Sources */,
-				A37C973CABE0AD735E651A0F6E0B72A7 /* WCDataRequest.m in Sources */,
-				E6E3C274F76E809854AC104CF4A05C82 /* WCDataService.m in Sources */,
-				EA4CF726B367F958163160AF1258AF1E /* WCNetKit-dummy.m in Sources */,
-				B6B109B53ED4E565BD1BCEDE3DA67774 /* WCNetManager.m in Sources */,
+				0FE942F9C0A805F59762E87C184B9B2A /* BPURLRequest.m in Sources */,
+				0B8891F3C2A2EE19C4B6C1D8A1850101 /* WCDataRequest.m in Sources */,
+				E7C0E66FDD2060493B5A44F28C584DAF /* WCDataService.m in Sources */,
+				68420AD5C04FA0729CD04E6CBE1D22F8 /* WCNetKit-dummy.m in Sources */,
+				287687C1AB0C3B6886B6F4E7A0B3E3BE /* WCNetManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		440E5BACCDD646A54DF0DCB23EFE2F0B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = WCModule;
-			targetProxy = B4549B573B806F4D569D27FFA18FC0D9 /* PBXContainerItemProxy */;
-		};
-		460BAAE179C77BABA02FF74F308614AC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = WCModel;
-			targetProxy = A464B1B04A752917643AE6299CC23EAC /* PBXContainerItemProxy */;
-		};
-		5AA7619C7456628163D1B68C18B5615B /* PBXTargetDependency */ = {
+		1557B52C9ACC135AC759BB940E911677 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = WCCategory;
-			targetProxy = 914B061E2F408437484F255CFAB1AE23 /* PBXContainerItemProxy */;
+			targetProxy = 5E7ED8E1B36E930C1D4DF17274A5110A /* PBXContainerItemProxy */;
 		};
-		6D91A5F00788FDCDD3AECBB29E32A967 /* PBXTargetDependency */ = {
+		6399090DC17A9A4D4E8E322349D9E9A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WCModule;
+			targetProxy = 745AB365559FCF8B758108780E7CB829 /* PBXContainerItemProxy */;
+		};
+		B17271780CAEDBC782CB8F784DF7EF70 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = WCEncrypt;
-			targetProxy = 79EF8AB2F11D306A23F8B8C9EF305F99 /* PBXContainerItemProxy */;
+			targetProxy = 071EC5CFC9A84E62DDDC8A71D77A3442 /* PBXContainerItemProxy */;
+		};
+		E6D0DAEF5E52D86461C70A95356168EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WCModel;
+			targetProxy = 199B2C6D1CDC6337B5515706F82F3229 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		4112DB600EBF6F4ACC6879BB4C1C4406 /* Release */ = {
+		6790CFBC5AFEE92B49F5757471A49606 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 99A37A1FC44D036A47DEA47F2B578E01 /* WCNetKit.xcconfig */;
+			baseConfigurationReference = CCBDF327F7086EDC8AE6B6D4B21FA3BA /* WCNetKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -345,40 +349,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		4246F0E0A9090E8D33679FC5A4FD79A0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 99A37A1FC44D036A47DEA47F2B578E01 /* WCNetKit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/WCNetKit/WCNetKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/WCNetKit/WCNetKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/WCNetKit/WCNetKit.modulemap";
-				PRODUCT_MODULE_NAME = WCNetKit;
-				PRODUCT_NAME = WCNetKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		823B24765AB27E93AD832C724B5B5F3E /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -504,14 +474,48 @@
 			};
 			name = Release;
 		};
+		CD8A3DF1BB797BF3DFB526650459EB61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCBDF327F7086EDC8AE6B6D4B21FA3BA /* WCNetKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WCNetKit/WCNetKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WCNetKit/WCNetKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/WCNetKit/WCNetKit.modulemap";
+				PRODUCT_MODULE_NAME = WCNetKit;
+				PRODUCT_NAME = WCNetKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4A85976CB0BC4F7A45C39F1536E7A4AC /* Build configuration list for PBXNativeTarget "WCNetKit" */ = {
+		D2752141E6728A419CA12C29F835F89B /* Build configuration list for PBXNativeTarget "WCNetKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4246F0E0A9090E8D33679FC5A4FD79A0 /* Debug */,
-				4112DB600EBF6F4ACC6879BB4C1C4406 /* Release */,
+				CD8A3DF1BB797BF3DFB526650459EB61 /* Debug */,
+				6790CFBC5AFEE92B49F5757471A49606 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

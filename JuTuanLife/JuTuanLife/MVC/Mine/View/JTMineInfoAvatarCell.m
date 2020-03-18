@@ -20,7 +20,9 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        UICREATEImgTo(_avatarView, UIImageView, self.contentView.width - 116 / 2 - 80, self.contentView.height / 2 - 80 / 2, 80, 80, AAL | AATB, CCAFill, nil, self.contentView);
+        UICREATEImageTo(_avatarView, UIImageView, self.contentView.width - 116 / 2 - 80, self.contentView.height / 2 - 80 / 2, 80, 80, AAL | AATB, CCAFill, nil, self.contentView);
+        
+        _avatarView.cornerRadius = _avatarView.height / 2;
         
         [self setTitle:@"头 像"];
         [self showArrow:YES];

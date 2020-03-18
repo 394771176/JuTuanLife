@@ -7,17 +7,6 @@
 
 #import "WCMethodUtil.h"
 
-NSString * readTxtFromPath(NSString *path)
-{
-    NSString *string = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
-    return string;
-}
-
-void writeTxtToPath(NSString *text, NSString *path)
-{
-    [text writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:nil];
-}
-
 BOOL CGFloatEqualToFloat(CGFloat f1, CGFloat f2)
 {
     return fabs(f1 - f2) < 0.0001;

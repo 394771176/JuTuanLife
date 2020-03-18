@@ -1,33 +1,33 @@
 PODS:
-  - WCCategory (0.1.4):
-    - WCCategory/Define (= 0.1.4)
-    - WCCategory/Foundation (= 0.1.4)
-    - WCCategory/UIKit (= 0.1.4)
-  - WCCategory/Define (0.1.4)
-  - WCCategory/Foundation (0.1.4):
+  - WCCategory (0.1.5):
+    - WCCategory/Define (= 0.1.5)
+    - WCCategory/Foundation (= 0.1.5)
+    - WCCategory/UIKit (= 0.1.5)
+  - WCCategory/Define (0.1.5)
+  - WCCategory/Foundation (0.1.5):
     - WCCategory/Define
-  - WCCategory/UIKit (0.1.4):
+  - WCCategory/UIKit (0.1.5):
     - WCCategory/Foundation
   - WCEncrypt/MD5 (0.1.2)
-  - WCModel (0.1.1):
-    - WCModel/Cache (= 0.1.1)
-    - WCModel/Entity (= 0.1.1)
-    - WCModel/File (= 0.1.1)
-    - WCModel/Model (= 0.1.1)
-    - WCModel/Plist (= 0.1.1)
-  - WCModel/Cache (0.1.1):
+  - WCModel (0.1.2):
+    - WCModel/Cache (= 0.1.2)
+    - WCModel/Entity (= 0.1.2)
+    - WCModel/File (= 0.1.2)
+    - WCModel/Model (= 0.1.2)
+    - WCModel/Plist (= 0.1.2)
+  - WCModel/Cache (0.1.2):
     - WCModel/File
     - WCModule/FMDB
-  - WCModel/Entity (0.1.1):
+  - WCModel/Entity (0.1.2):
     - WCCategory
-  - WCModel/File (0.1.1):
+  - WCModel/File (0.1.2):
     - WCCategory
     - WCModule/RegexKitLite
-  - WCModel/Model (0.1.1):
+  - WCModel/Model (0.1.2):
     - WCCategory
     - WCModel/Cache
     - WCModel/Entity
-  - WCModel/Plist (0.1.1):
+  - WCModel/Plist (0.1.2):
     - WCCategory
     - WCModel/File
   - WCModule (0.1.6):
@@ -44,9 +44,10 @@ PODS:
   - WCModule/SDWebImageUtil (0.1.6):
     - WCCategory
     - WCModule/SDWebImage
-  - WCNetKit (0.1.2):
+  - WCNetKit (0.1.3):
     - WCCategory
     - WCEncrypt/MD5
+    - WCModel/Cache
     - WCModel/Entity
     - WCModule/ASIHttpRequest
   - WCPlugin (0.1.3):
@@ -75,11 +76,11 @@ SPEC REPOS:
     - WechatOpenSDK_NoPay
 
 SPEC CHECKSUMS:
-  WCCategory: 5dddb6a3ce3d5ec6931358b1bdea7b30afe6be01
+  WCCategory: 9c97b0396f4e96f2bf8e8fa8b9cbef8bfd945f97
   WCEncrypt: b86d93453f6a4bbf1a09dc922082b2d2d6699978
-  WCModel: 9d8bee0cff43028eea166b7d946290d6d02da245
+  WCModel: c613e3ec9de9b6558589d80ca44ba678e940e77f
   WCModule: 968b93fd10c2f545603c498a3a9113791d66ad12
-  WCNetKit: 486a3602eccc0ad6f631bee8856cbd9c24e445d0
+  WCNetKit: 6b3342af4199629e923efe823a614bd747912aa0
   WCPlugin: 46a39341f494bcc8dccffd1a9749addfa62885c5
   WechatOpenSDK_NoPay: 27366a152202a6a7c8a15fad4d07261e87fb2389
 

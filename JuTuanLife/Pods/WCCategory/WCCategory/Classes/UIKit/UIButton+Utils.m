@@ -257,7 +257,7 @@ static char leftNameKey;
     }
 }
 
-- (void)setHlightedImageWithImageName:(NSString *)imageName
+- (void)setHighlightedImageWithImageName:(NSString *)imageName
 {
     if (imageName) {
         [self setImage:[UIImage imageNamed:imageName] forState:UIControlStateHighlighted];

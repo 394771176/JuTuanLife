@@ -72,11 +72,9 @@
 {
     @autoreleasepool {
         @try {
-            BOOL success = [dict writeToFile:filePath atomically:YES];
-            NSLog(@"save data %@", (success ? @"success" : @"error"));
+            [dict writeToFile:filePath atomically:YES];
         } @catch (NSException *exception) {
             //nothing to do
-            NSLog(@"%@", exception);
         }
     }
 }

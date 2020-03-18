@@ -20,7 +20,7 @@
 
 #define APP_JT_SERVER           SERVER(@"http://api-daily.jutuanlife.com/api", @"http://api-daily.jutuanlife.com/api")
 
-#define APP_JT_SIGN             @"1234567"
+#define APP_JT_SIGN             @"ilwhaGnGKdFxY1cK"
 
 
 #pragma mark - url

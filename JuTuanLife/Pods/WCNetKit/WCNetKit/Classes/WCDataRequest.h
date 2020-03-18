@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BPURLRequest.h"
 #import <WCModel/WCDataResult.h>
+#import "BPURLRequest.h"
 
 #define WCHTTPMethodGET   @"GET"
 #define WCHTTPMethodPOST  @"POST"

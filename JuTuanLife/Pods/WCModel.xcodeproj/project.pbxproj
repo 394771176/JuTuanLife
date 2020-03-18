@@ -7,54 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0211DF246B733A67DF9E076736C47535 /* BPFileUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 038FE364C46C17B76B90786FCDA5400E /* BPFileUtil.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		0D24A207A78F2B6B833BEAE53624CACD /* BPAppPreference.m in Sources */ = {isa = PBXBuildFile; fileRef = 19195B1D82298A0D9BEDAD63ACC70B79 /* BPAppPreference.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		0F741D4D1B7467D20C95836228437DB2 /* VGEListDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE4B9E759E6A7AC4405D35579F45341B /* VGEListDataModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		14D7F996B01B122DECF7C437A48F4DF6 /* DTFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F2F323E71FFD651A413CFF9216A5674 /* DTFileManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1767CE63A171493988D331212D20415D /* WCModel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CBAEEF3301879D89CC20A1AA8A41649D /* WCModel-dummy.m */; };
-		1B90A7C49B2A674C71BDBF452E1FD262 /* DTPosListDataModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 78590F0F90FC905511103C0E91847E8D /* DTPosListDataModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		21B0B2C0A196C7869E084376BADC8773 /* DTAppPreferenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B210A50238A1D3B77F4CF8C30E2B55 /* DTAppPreferenceManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		28DC974104CCD799E5FE291F0542B8AB /* VGEListDataModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D88122CA570FD33AF60AFA9E536605A /* VGEListDataModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2944C5B19126DBC60CACE82191131BEF /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 66684EFD8A93EC339C459FA315C1211F /* NSObject+YYModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		2C6D024FD7D8F8ACE3B125FFB486F28D /* BPCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D1587E330474C4E33FA678515F0AB66F /* BPCacheManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3211C3711B18BDA325E22530093AA778 /* YYModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FEEF543BC2E760CFE0A7EC01CDF63A2 /* YYModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		32DDC5A9F1360B018CD7B94F1493E52E /* VGEDataModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E3DDC8E0E97BF5362DA0C18C9B80B5D /* VGEDataModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		43CCFFD1FDF401BB76E4B6592D417077 /* VGEDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB606313F386D4C26BDB9D1607EC75 /* VGEDataModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		4814048459D42D68C41A01900BA26079 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA95BBDA98678708A95406B6A4DCA31 /* YYClassInfo.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		50D149050D8E128455BC72382A0F145F /* WCBaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC08E634DADB3FC737EE30162AC1F9F /* WCBaseEntity.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		5567831ABF2D2800ACA590B2964596C8 /* BPAppPreference.h in Headers */ = {isa = PBXBuildFile; fileRef = AAFEBA7CE0CA20B0418ABD02E1E73C38 /* BPAppPreference.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5AF024DE12F9337A1981923BBDE749CE /* DTAppPreferenceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C3EBB49720C6A75F453CB2D6E4F38E3 /* DTAppPreferenceManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		63596BFCDDE491057EEA030B8AFF67C9 /* WCModel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 44F8A3CD73A05F98FE70CC8769B479DD /* WCModel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		65860B4FA5F2808B9F3D4E7CB1D5B0F5 /* WCDataResult.h in Headers */ = {isa = PBXBuildFile; fileRef = B11F59CC3FC7EC9E4BE49ACF76B6934C /* WCDataResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6B3E1ABFD82C276EA98010EBDA30CDF1 /* WCCategory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF6B8FA9C37EAF4BC9A2EFFC15885FA3 /* WCCategory.framework */; };
-		7ABE104B3477797254AF94A608538075 /* BPLocalManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EF2A9497A4A615CECBC4E27EAE5447 /* BPLocalManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		7AD226B20A942899E565877D5AB03A52 /* WCModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B596209C7E286AA9658DB17C0D68C53C /* WCModule.framework */; };
-		839A40F1849C7D8AA54B294D63815667 /* NSObject+YYModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 70300BBCCA9F0C217C3E22F892B6FFE3 /* NSObject+YYModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		86D3A9EAA68ED692BA9B27381444060F /* YYClassInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 91FF6B31CEA0CB596F4E4429DEDEF326 /* YYClassInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		882ABB1E7BE28AA671D73AD58180F126 /* BPLocalManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D77042ED2E90209E0CB4F8664DCB36D3 /* BPLocalManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		98B0F654B6DB070D52E76AFD3A4D2BB3 /* BPCacheManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3360CE4B42A20FA731893D651E2A774B /* BPCacheManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		98B25122A2A704C5CD369474A79370AD /* VGEDataModel-Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 35B4A67EC94D461E957DC7050206389D /* VGEDataModel-Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		98EB400AA515875C19A566E44DFA58FC /* DTFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F116299E34315B517AAAA7F43E8D9C22 /* DTFileManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		9B9FBF8756C98BC47CCE397336B40911 /* DTTodayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A5CFAB1BCFA03DD109B8B7DF60F982 /* DTTodayManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		A68145907A5C4AE93FCE3189C5623C3E /* DTListDataModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 596A6F9C814BA9DBE83A9E09C7D7807E /* DTListDataModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AF790886EA9EB0E6ED9162A88EDFFE4A /* DTPosListDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E744267EC170BC07DC16E2BD56137848 /* DTPosListDataModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		C4D781DC2720AF39648025D3083B9B49 /* DTTodayManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D14A85B8421C490BB0476C318EF1BA17 /* DTTodayManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D7623824BBDBE0D2221BEDD3280213B2 /* WCDataResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC0611BDD31466824BF8C2C9135B0DB /* WCDataResult.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		DA0C25B8F9518E526820EA205113E938 /* WCBaseEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = D6F8EAA0D55FE915F7E26F3A74C20F91 /* WCBaseEntity.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E0915D2586A873237E9D386B356957BB /* DTListDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B97ACBF60F37351FA7EA387D4B585C /* DTListDataModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		ECBCC2A6E9C120A6B3BB86B5F352A495 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5808D976127EF90B1BF77254F646C23D /* Foundation.framework */; };
-		F5905011CD7E8BC28BD42EB8A7EFF86D /* BPFileUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = DC7F4C094989E268586BECD0B3CA0B0A /* BPFileUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00EEB114BF72CC949C5292E27A38E6D4 /* BPCacheManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D0D234BCF9111BD59C0789CA5A182CD1 /* BPCacheManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		02C3160A8FE843CE387B2E6624408A8B /* WCModel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 31D5AC9006E78EA99F6E9C3C7DE8FD79 /* WCModel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D1D64CA59CEC660B46F3B85AB47C5EE /* DTTodayManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A9C8C7ED2C9E7E1C9F85276F3FDAAA3 /* DTTodayManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1114E2E78A35635F19FA5DA3D5AD5A6E /* YYClassInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4706A52EE4AFA882220EEEA896FAA1F2 /* YYClassInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1781A902AECC1A33B86F73BCC0524984 /* DTListDataModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 875BD2E91B87398BA883667C37E2476A /* DTListDataModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1E39ED7B0912C259357807DDF49CDEAF /* VGEListDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE36500DABBAD613BBD14E2924F4508 /* VGEListDataModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		25178AB36F05DB9FE28A3E720D5AFFE8 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BECFCBEB97E4A71AF8BE50358D17BD1 /* YYClassInfo.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2D73E60DC03057F69C0F386652A63517 /* BPLocalManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F653E10C1286E0B7A2EC27FB08CB1A11 /* BPLocalManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		368C61DCCADE5DB7E0B31DF50C37906A /* WCBaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = F35C91A36903A24C39EB19ECA1E50769 /* WCBaseEntity.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3B22073C207EFDA72BAAEF5FE394B3EB /* DTFileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AB660A78D4B68864A4DD646DF8BF7F9B /* DTFileManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C8ECB38ED32FFA5877F364B033C010B /* WCModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B596209C7E286AA9658DB17C0D68C53C /* WCModule.framework */; };
+		3CF4D7E634EAB6BB38F3008567CC4F21 /* VGEDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CA2DA5152D47A5F276B7E551B63E5266 /* VGEDataModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4D73297B735F3DCB52CEA435E6CBD0E2 /* DTPosListDataModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FEB7C23619F62F835903534056F022D /* DTPosListDataModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4E9937AEA520623EA4C77BD9A1D587FF /* DTFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3128F3EBCD8E0E5F0A20C59C12EF93 /* DTFileManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		58948356EBF68FDD869C43533055DDC4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5808D976127EF90B1BF77254F646C23D /* Foundation.framework */; };
+		593AA9D5796DB0D6DD07D3677FA8D850 /* WCDataResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DE6717D18C514CA3263DCA3A02BE423C /* WCDataResult.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		5A4A51C16D53AB97211EB782154DB2E4 /* WCModel.h in Headers */ = {isa = PBXBuildFile; fileRef = B55654F6E52F616C3E470C100C4D24D5 /* WCModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61536E9D8814DD4E6037FE69B25CCE38 /* DTPosListDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F94BFE539E5D9DE18BDFE799600845 /* DTPosListDataModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		66C7DE5F05DF7098C49C38C8FA22D574 /* NSObject+YYModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 14F443D050E2400A100E65DFD24A3DCE /* NSObject+YYModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		726D07777182FF432E7A6944F9B9C2DD /* BPFileUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = FF25DE1326B763E327B57274ED3C90DA /* BPFileUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7385E6DD6D065D13D576BE9FB15CC97D /* WCCategory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF6B8FA9C37EAF4BC9A2EFFC15885FA3 /* WCCategory.framework */; };
+		76F154F170207F88CAF9ED7A97333D3D /* DTAppPreferenceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 079BA99761922A63AA60992AA66C20ED /* DTAppPreferenceManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B9AABFE51F1C93BB222F03A664C459C /* DTAppPreferenceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F4A0C9F27211D19608B62F3C2BC2AC /* DTAppPreferenceManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		8535681DCB685FD165CA171A9C6553D5 /* VGEListDataModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 5045B21B7DF659C74AAE3E7C1AA500A7 /* VGEListDataModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		881ACDE18FE4EE25A8B71F6CE9A3C4FC /* WCBaseEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F229EB2DA96F809EAE0B32A94FBB312 /* WCBaseEntity.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B6F951208A216F56597D34AE51B98EC /* YYModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 156B6F2C1FFE8EE474807C6FD4A11D13 /* YYModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D8575B1C7291B806D12B693AD3BFF3C /* DTListDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B37D35876D0A78D0F3DF575C8110314 /* DTListDataModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		958DB55163EF982099E4073FDEED1A3C /* BPAppPreference.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DCF5E1EDE2ED24B6398EB844BE5EDD3 /* BPAppPreference.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A830F0C622C287E901E4245AA8245E8F /* BPFileUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F81266E2C5795335D2940D006AAB3C9 /* BPFileUtil.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B8E0FB8AE3351314DF34A3ECAAB9482F /* VGEDataModel-Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C2BB8592B93225FCB98F0773494B3DBF /* VGEDataModel-Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9C1516EE3976EB72F8FA237B6E12416 /* WCModel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 41EBCC49E8C3B23F99E39156A96EA652 /* WCModel-dummy.m */; };
+		DAEE65B2AE4AE7F398CFB8180E7DA061 /* WCDataResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 1247E9FBF4F9380D29A9159F5E58BF8C /* WCDataResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E2E5FE7AB8093356C339A2B62BE6F393 /* BPAppPreference.h in Headers */ = {isa = PBXBuildFile; fileRef = 4ACF49A2DFE4993CA860286C2F987094 /* BPAppPreference.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E320CDCD41A83EEF1CF7D9248A57A559 /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B63D4716A5DDFA6DA7A53A7465E9EAA /* NSObject+YYModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E4284FA0D5A9383C26C2EC921FDA27E2 /* VGEDataModel.h in Headers */ = {isa = PBXBuildFile; fileRef = AA6CC5CFF3BFC12A693F668E76F1A103 /* VGEDataModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECCD17B88D9B1A295C10371E403233B9 /* BPLocalManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 000DDF2BEC98DB8826249B810E7DE09A /* BPLocalManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF476F02A9CDA50E06A9CBA4F2375DE5 /* DTTodayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A67BB9FEB3263740BA3C1002E20A224F /* DTTodayManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FF2EFF43780B2E941FEBF21E2F6A5E78 /* BPCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 074CC9E38BB7AE713DB0A5DF6CD18703 /* BPCacheManager.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		02B4CF35CB799D6F0FA646FB0B5BE847 /* PBXContainerItemProxy */ = {
+		9C5C431E166D4E9D2D5A2C069B2956DF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 624F978997B7C445B11AAC3B52940CFA /* WCModule.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 204C46C3B0BD2B353BAECF2B88EDFC36;
 			remoteInfo = WCModule;
 		};
-		3DD0EF4905A4455C9BE71126743CF51C /* PBXContainerItemProxy */ = {
+		E83E6D1B413382873EBC9081E90F94B5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EF826512E041E41DE8E8DFA8031C92EE /* WCCategory.xcodeproj */;
 			proxyType = 1;
@@ -64,102 +65,96 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		038FE364C46C17B76B90786FCDA5400E /* BPFileUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BPFileUtil.m; path = WCModel/Classes/File/BPFileUtil.m; sourceTree = "<group>"; };
-		04EF2A9497A4A615CECBC4E27EAE5447 /* BPLocalManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BPLocalManager.m; path = WCModel/Classes/Cache/BPLocalManager.m; sourceTree = "<group>"; };
-		19195B1D82298A0D9BEDAD63ACC70B79 /* BPAppPreference.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BPAppPreference.m; path = WCModel/Classes/Plist/BPAppPreference.m; sourceTree = "<group>"; };
-		1F2F323E71FFD651A413CFF9216A5674 /* DTFileManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTFileManager.h; path = WCModel/Classes/File/DTFileManager.h; sourceTree = "<group>"; };
-		2BC08E634DADB3FC737EE30162AC1F9F /* WCBaseEntity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WCBaseEntity.m; path = WCModel/Classes/Entity/WCBaseEntity.m; sourceTree = "<group>"; };
-		3360CE4B42A20FA731893D651E2A774B /* BPCacheManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BPCacheManager.h; path = WCModel/Classes/Cache/BPCacheManager.h; sourceTree = "<group>"; };
-		35B4A67EC94D461E957DC7050206389D /* VGEDataModel-Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "VGEDataModel-Private.h"; path = "WCModel/Classes/Model/VGEDataModel-Private.h"; sourceTree = "<group>"; };
-		40B210A50238A1D3B77F4CF8C30E2B55 /* DTAppPreferenceManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTAppPreferenceManager.m; path = WCModel/Classes/Plist/DTAppPreferenceManager.m; sourceTree = "<group>"; };
-		44F8A3CD73A05F98FE70CC8769B479DD /* WCModel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WCModel-umbrella.h"; sourceTree = "<group>"; };
-		46EB606313F386D4C26BDB9D1607EC75 /* VGEDataModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VGEDataModel.m; path = WCModel/Classes/Model/VGEDataModel.m; sourceTree = "<group>"; };
-		4C3EBB49720C6A75F453CB2D6E4F38E3 /* DTAppPreferenceManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTAppPreferenceManager.h; path = WCModel/Classes/Plist/DTAppPreferenceManager.h; sourceTree = "<group>"; };
-		52A5CFAB1BCFA03DD109B8B7DF60F982 /* DTTodayManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTTodayManager.m; path = WCModel/Classes/Plist/DTTodayManager.m; sourceTree = "<group>"; };
+		000DDF2BEC98DB8826249B810E7DE09A /* BPLocalManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BPLocalManager.h; path = WCModel/Classes/Cache/BPLocalManager.h; sourceTree = "<group>"; };
+		074CC9E38BB7AE713DB0A5DF6CD18703 /* BPCacheManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BPCacheManager.m; path = WCModel/Classes/Cache/BPCacheManager.m; sourceTree = "<group>"; };
+		079BA99761922A63AA60992AA66C20ED /* DTAppPreferenceManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTAppPreferenceManager.h; path = WCModel/Classes/Plist/DTAppPreferenceManager.h; sourceTree = "<group>"; };
+		0F229EB2DA96F809EAE0B32A94FBB312 /* WCBaseEntity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WCBaseEntity.h; path = WCModel/Classes/Entity/WCBaseEntity.h; sourceTree = "<group>"; };
+		1247E9FBF4F9380D29A9159F5E58BF8C /* WCDataResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WCDataResult.h; path = WCModel/Classes/Entity/WCDataResult.h; sourceTree = "<group>"; };
+		14F443D050E2400A100E65DFD24A3DCE /* NSObject+YYModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+YYModel.h"; path = "WCModel/Classes/Entity/YYModel/NSObject+YYModel.h"; sourceTree = "<group>"; };
+		156B6F2C1FFE8EE474807C6FD4A11D13 /* YYModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYModel.h; path = WCModel/Classes/Entity/YYModel/YYModel.h; sourceTree = "<group>"; };
+		2A9C8C7ED2C9E7E1C9F85276F3FDAAA3 /* DTTodayManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTTodayManager.h; path = WCModel/Classes/Plist/DTTodayManager.h; sourceTree = "<group>"; };
+		2F81266E2C5795335D2940D006AAB3C9 /* BPFileUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BPFileUtil.m; path = WCModel/Classes/File/BPFileUtil.m; sourceTree = "<group>"; };
+		31D5AC9006E78EA99F6E9C3C7DE8FD79 /* WCModel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WCModel-umbrella.h"; sourceTree = "<group>"; };
+		41EBCC49E8C3B23F99E39156A96EA652 /* WCModel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WCModel-dummy.m"; sourceTree = "<group>"; };
+		4706A52EE4AFA882220EEEA896FAA1F2 /* YYClassInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYClassInfo.h; path = WCModel/Classes/Entity/YYModel/YYClassInfo.h; sourceTree = "<group>"; };
+		4ACF49A2DFE4993CA860286C2F987094 /* BPAppPreference.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BPAppPreference.h; path = WCModel/Classes/Plist/BPAppPreference.h; sourceTree = "<group>"; };
+		5045B21B7DF659C74AAE3E7C1AA500A7 /* VGEListDataModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VGEListDataModel.h; path = WCModel/Classes/Model/VGEListDataModel.h; sourceTree = "<group>"; };
+		57F94BFE539E5D9DE18BDFE799600845 /* DTPosListDataModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTPosListDataModel.m; path = WCModel/Classes/Model/DTPosListDataModel.m; sourceTree = "<group>"; };
 		5808D976127EF90B1BF77254F646C23D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		596A6F9C814BA9DBE83A9E09C7D7807E /* DTListDataModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTListDataModel.h; path = WCModel/Classes/Model/DTListDataModel.h; sourceTree = "<group>"; };
-		5FEEF543BC2E760CFE0A7EC01CDF63A2 /* YYModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYModel.h; path = WCModel/Classes/Entity/YYModel/YYModel.h; sourceTree = "<group>"; };
-		601F306E4BC70E8D9E8DF12C8BE5C99E /* WCModel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WCModel-prefix.pch"; sourceTree = "<group>"; };
+		5FEB7C23619F62F835903534056F022D /* DTPosListDataModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTPosListDataModel.h; path = WCModel/Classes/Model/DTPosListDataModel.h; sourceTree = "<group>"; };
 		624F978997B7C445B11AAC3B52940CFA /* WCModule */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WCModule; path = WCModule.xcodeproj; sourceTree = "<group>"; };
-		66684EFD8A93EC339C459FA315C1211F /* NSObject+YYModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+YYModel.m"; path = "WCModel/Classes/Entity/YYModel/NSObject+YYModel.m"; sourceTree = "<group>"; };
-		70300BBCCA9F0C217C3E22F892B6FFE3 /* NSObject+YYModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+YYModel.h"; path = "WCModel/Classes/Entity/YYModel/NSObject+YYModel.h"; sourceTree = "<group>"; };
-		78590F0F90FC905511103C0E91847E8D /* DTPosListDataModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTPosListDataModel.h; path = WCModel/Classes/Model/DTPosListDataModel.h; sourceTree = "<group>"; };
-		7E3DDC8E0E97BF5362DA0C18C9B80B5D /* VGEDataModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VGEDataModel.h; path = WCModel/Classes/Model/VGEDataModel.h; sourceTree = "<group>"; };
-		8BD0802330D9421AE83892419A51E86D /* WCModel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WCModel.xcconfig; sourceTree = "<group>"; };
-		91FF6B31CEA0CB596F4E4429DEDEF326 /* YYClassInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYClassInfo.h; path = WCModel/Classes/Entity/YYModel/YYClassInfo.h; sourceTree = "<group>"; };
-		9D88122CA570FD33AF60AFA9E536605A /* VGEListDataModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VGEListDataModel.h; path = WCModel/Classes/Model/VGEListDataModel.h; sourceTree = "<group>"; };
-		9EC0611BDD31466824BF8C2C9135B0DB /* WCDataResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WCDataResult.m; path = WCModel/Classes/Entity/WCDataResult.m; sourceTree = "<group>"; };
+		68F502776F463B50398B9F0EDDF66CA9 /* WCModel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WCModel.xcconfig; sourceTree = "<group>"; };
+		7C3128F3EBCD8E0E5F0A20C59C12EF93 /* DTFileManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTFileManager.m; path = WCModel/Classes/File/DTFileManager.m; sourceTree = "<group>"; };
+		7DCF5E1EDE2ED24B6398EB844BE5EDD3 /* BPAppPreference.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BPAppPreference.m; path = WCModel/Classes/Plist/BPAppPreference.m; sourceTree = "<group>"; };
+		85598E33B70F5702C776C4F3A1B28A0D /* WCModel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WCModel-Info.plist"; sourceTree = "<group>"; };
+		875BD2E91B87398BA883667C37E2476A /* DTListDataModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTListDataModel.h; path = WCModel/Classes/Model/DTListDataModel.h; sourceTree = "<group>"; };
+		8A952A90CD1948139B24E6FED6EC423D /* WCModel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WCModel-prefix.pch"; sourceTree = "<group>"; };
+		8B37D35876D0A78D0F3DF575C8110314 /* DTListDataModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTListDataModel.m; path = WCModel/Classes/Model/DTListDataModel.m; sourceTree = "<group>"; };
+		9B63D4716A5DDFA6DA7A53A7465E9EAA /* NSObject+YYModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+YYModel.m"; path = "WCModel/Classes/Entity/YYModel/NSObject+YYModel.m"; sourceTree = "<group>"; };
+		9BECFCBEB97E4A71AF8BE50358D17BD1 /* YYClassInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYClassInfo.m; path = WCModel/Classes/Entity/YYModel/YYClassInfo.m; sourceTree = "<group>"; };
 		A47B33DB01F940770246B3D5E1B6808B /* WCModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WCModel.framework; path = WCModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AAFEBA7CE0CA20B0418ABD02E1E73C38 /* BPAppPreference.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BPAppPreference.h; path = WCModel/Classes/Plist/BPAppPreference.h; sourceTree = "<group>"; };
-		B11F59CC3FC7EC9E4BE49ACF76B6934C /* WCDataResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WCDataResult.h; path = WCModel/Classes/Entity/WCDataResult.h; sourceTree = "<group>"; };
+		A67BB9FEB3263740BA3C1002E20A224F /* DTTodayManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTTodayManager.m; path = WCModel/Classes/Plist/DTTodayManager.m; sourceTree = "<group>"; };
+		AA6CC5CFF3BFC12A693F668E76F1A103 /* VGEDataModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VGEDataModel.h; path = WCModel/Classes/Model/VGEDataModel.h; sourceTree = "<group>"; };
+		AB660A78D4B68864A4DD646DF8BF7F9B /* DTFileManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTFileManager.h; path = WCModel/Classes/File/DTFileManager.h; sourceTree = "<group>"; };
+		B55654F6E52F616C3E470C100C4D24D5 /* WCModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WCModel.h; path = WCModel/Classes/WCModel.h; sourceTree = "<group>"; };
 		B596209C7E286AA9658DB17C0D68C53C /* WCModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WCModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE4B9E759E6A7AC4405D35579F45341B /* VGEListDataModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VGEListDataModel.m; path = WCModel/Classes/Model/VGEListDataModel.m; sourceTree = "<group>"; };
-		C2AB751166F2C8077140C4BEFCB77D99 /* WCModel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WCModel.modulemap; sourceTree = "<group>"; };
-		CBAEEF3301879D89CC20A1AA8A41649D /* WCModel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WCModel-dummy.m"; sourceTree = "<group>"; };
-		CDA95BBDA98678708A95406B6A4DCA31 /* YYClassInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYClassInfo.m; path = WCModel/Classes/Entity/YYModel/YYClassInfo.m; sourceTree = "<group>"; };
-		D14A85B8421C490BB0476C318EF1BA17 /* DTTodayManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTTodayManager.h; path = WCModel/Classes/Plist/DTTodayManager.h; sourceTree = "<group>"; };
-		D1587E330474C4E33FA678515F0AB66F /* BPCacheManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BPCacheManager.m; path = WCModel/Classes/Cache/BPCacheManager.m; sourceTree = "<group>"; };
-		D6F8EAA0D55FE915F7E26F3A74C20F91 /* WCBaseEntity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WCBaseEntity.h; path = WCModel/Classes/Entity/WCBaseEntity.h; sourceTree = "<group>"; };
-		D77042ED2E90209E0CB4F8664DCB36D3 /* BPLocalManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BPLocalManager.h; path = WCModel/Classes/Cache/BPLocalManager.h; sourceTree = "<group>"; };
-		DC7F4C094989E268586BECD0B3CA0B0A /* BPFileUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BPFileUtil.h; path = WCModel/Classes/File/BPFileUtil.h; sourceTree = "<group>"; };
-		E6B97ACBF60F37351FA7EA387D4B585C /* DTListDataModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTListDataModel.m; path = WCModel/Classes/Model/DTListDataModel.m; sourceTree = "<group>"; };
-		E744267EC170BC07DC16E2BD56137848 /* DTPosListDataModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTPosListDataModel.m; path = WCModel/Classes/Model/DTPosListDataModel.m; sourceTree = "<group>"; };
+		B69EB554EA52A7EC88097EC60625B06B /* WCModel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WCModel.modulemap; sourceTree = "<group>"; };
+		BDE36500DABBAD613BBD14E2924F4508 /* VGEListDataModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VGEListDataModel.m; path = WCModel/Classes/Model/VGEListDataModel.m; sourceTree = "<group>"; };
+		C2BB8592B93225FCB98F0773494B3DBF /* VGEDataModel-Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "VGEDataModel-Private.h"; path = "WCModel/Classes/Model/VGEDataModel-Private.h"; sourceTree = "<group>"; };
+		CA2DA5152D47A5F276B7E551B63E5266 /* VGEDataModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VGEDataModel.m; path = WCModel/Classes/Model/VGEDataModel.m; sourceTree = "<group>"; };
+		D0D234BCF9111BD59C0789CA5A182CD1 /* BPCacheManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BPCacheManager.h; path = WCModel/Classes/Cache/BPCacheManager.h; sourceTree = "<group>"; };
+		DE6717D18C514CA3263DCA3A02BE423C /* WCDataResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WCDataResult.m; path = WCModel/Classes/Entity/WCDataResult.m; sourceTree = "<group>"; };
+		E5F4A0C9F27211D19608B62F3C2BC2AC /* DTAppPreferenceManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTAppPreferenceManager.m; path = WCModel/Classes/Plist/DTAppPreferenceManager.m; sourceTree = "<group>"; };
 		EF826512E041E41DE8E8DFA8031C92EE /* WCCategory */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WCCategory; path = WCCategory.xcodeproj; sourceTree = "<group>"; };
-		F116299E34315B517AAAA7F43E8D9C22 /* DTFileManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTFileManager.m; path = WCModel/Classes/File/DTFileManager.m; sourceTree = "<group>"; };
-		F2F5E53D5B9AA2520E34E147C571FC1C /* WCModel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WCModel-Info.plist"; sourceTree = "<group>"; };
+		F35C91A36903A24C39EB19ECA1E50769 /* WCBaseEntity.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = WCBaseEntity.m; path = WCModel/Classes/Entity/WCBaseEntity.m; sourceTree = "<group>"; };
+		F653E10C1286E0B7A2EC27FB08CB1A11 /* BPLocalManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BPLocalManager.m; path = WCModel/Classes/Cache/BPLocalManager.m; sourceTree = "<group>"; };
+		FF25DE1326B763E327B57274ED3C90DA /* BPFileUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BPFileUtil.h; path = WCModel/Classes/File/BPFileUtil.h; sourceTree = "<group>"; };
 		FF6B8FA9C37EAF4BC9A2EFFC15885FA3 /* WCCategory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WCCategory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		00252377FD38CC09E177D56C9429BCF0 /* Frameworks */ = {
+		75D623A7500B38D825FF745D8B342503 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECBCC2A6E9C120A6B3BB86B5F352A495 /* Foundation.framework in Frameworks */,
-				6B3E1ABFD82C276EA98010EBDA30CDF1 /* WCCategory.framework in Frameworks */,
-				7AD226B20A942899E565877D5AB03A52 /* WCModule.framework in Frameworks */,
+				58948356EBF68FDD869C43533055DDC4 /* Foundation.framework in Frameworks */,
+				7385E6DD6D065D13D576BE9FB15CC97D /* WCCategory.framework in Frameworks */,
+				3C8ECB38ED32FFA5877F364B033C010B /* WCModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		067FBACC05222587B8F6D0DCDBFC7E41 /* WCModel */ = {
+		1782348D6772625119F6A9A5C7C2B485 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CC7D9605A1FB9727F3175B911CC634C8 /* Cache */,
-				FC5516FCBC391F038C6D6E814DF5197B /* Entity */,
-				207DC29027AE25D8836C3DC488C5916B /* File */,
-				4570344D9C48B5174F457E0F1E5AEF71 /* Model */,
-				15AD30E34A1793173DE44576A392CD2B /* Plist */,
-				3E8C6CFACA6010DE2B416D90CFCD3EF2 /* Support Files */,
+				875BD2E91B87398BA883667C37E2476A /* DTListDataModel.h */,
+				8B37D35876D0A78D0F3DF575C8110314 /* DTListDataModel.m */,
+				5FEB7C23619F62F835903534056F022D /* DTPosListDataModel.h */,
+				57F94BFE539E5D9DE18BDFE799600845 /* DTPosListDataModel.m */,
+				AA6CC5CFF3BFC12A693F668E76F1A103 /* VGEDataModel.h */,
+				CA2DA5152D47A5F276B7E551B63E5266 /* VGEDataModel.m */,
+				C2BB8592B93225FCB98F0773494B3DBF /* VGEDataModel-Private.h */,
+				5045B21B7DF659C74AAE3E7C1AA500A7 /* VGEListDataModel.h */,
+				BDE36500DABBAD613BBD14E2924F4508 /* VGEListDataModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		21DC13057157B471A9B227EA285DB8CA /* WCModel */ = {
+			isa = PBXGroup;
+			children = (
+				B55654F6E52F616C3E470C100C4D24D5 /* WCModel.h */,
+				537357CA6FA4BF08D66FB02C73036299 /* Cache */,
+				AEDF69443746B98B56D6DE96DE0DE103 /* Entity */,
+				89E73147784CFBA041668E33F50A439E /* File */,
+				1782348D6772625119F6A9A5C7C2B485 /* Model */,
+				6B4C7FDAA120FBDE8EBC7E30D1A76616 /* Plist */,
+				A0AD6589F80F304ED531C25BFC0F37E9 /* Support Files */,
 			);
 			name = WCModel;
 			path = WCModel;
-			sourceTree = "<group>";
-		};
-		15AD30E34A1793173DE44576A392CD2B /* Plist */ = {
-			isa = PBXGroup;
-			children = (
-				AAFEBA7CE0CA20B0418ABD02E1E73C38 /* BPAppPreference.h */,
-				19195B1D82298A0D9BEDAD63ACC70B79 /* BPAppPreference.m */,
-				4C3EBB49720C6A75F453CB2D6E4F38E3 /* DTAppPreferenceManager.h */,
-				40B210A50238A1D3B77F4CF8C30E2B55 /* DTAppPreferenceManager.m */,
-				D14A85B8421C490BB0476C318EF1BA17 /* DTTodayManager.h */,
-				52A5CFAB1BCFA03DD109B8B7DF60F982 /* DTTodayManager.m */,
-			);
-			name = Plist;
-			sourceTree = "<group>";
-		};
-		207DC29027AE25D8836C3DC488C5916B /* File */ = {
-			isa = PBXGroup;
-			children = (
-				DC7F4C094989E268586BECD0B3CA0B0A /* BPFileUtil.h */,
-				038FE364C46C17B76B90786FCDA5400E /* BPFileUtil.m */,
-				1F2F323E71FFD651A413CFF9216A5674 /* DTFileManager.h */,
-				F116299E34315B517AAAA7F43E8D9C22 /* DTFileManager.m */,
-			);
-			name = File;
 			sourceTree = "<group>";
 		};
 		2F315AEE54EB3B19D7303CC8D32F72EE /* Dependencies */ = {
@@ -171,42 +166,12 @@
 			name = Dependencies;
 			sourceTree = "<group>";
 		};
-		3E8C6CFACA6010DE2B416D90CFCD3EF2 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C2AB751166F2C8077140C4BEFCB77D99 /* WCModel.modulemap */,
-				8BD0802330D9421AE83892419A51E86D /* WCModel.xcconfig */,
-				CBAEEF3301879D89CC20A1AA8A41649D /* WCModel-dummy.m */,
-				F2F5E53D5B9AA2520E34E147C571FC1C /* WCModel-Info.plist */,
-				601F306E4BC70E8D9E8DF12C8BE5C99E /* WCModel-prefix.pch */,
-				44F8A3CD73A05F98FE70CC8769B479DD /* WCModel-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/WCModel";
-			sourceTree = "<group>";
-		};
 		44E3C8B39D147312FB8BE97C9B53D434 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
 				5808D976127EF90B1BF77254F646C23D /* Foundation.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		4570344D9C48B5174F457E0F1E5AEF71 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				596A6F9C814BA9DBE83A9E09C7D7807E /* DTListDataModel.h */,
-				E6B97ACBF60F37351FA7EA387D4B585C /* DTListDataModel.m */,
-				78590F0F90FC905511103C0E91847E8D /* DTPosListDataModel.h */,
-				E744267EC170BC07DC16E2BD56137848 /* DTPosListDataModel.m */,
-				7E3DDC8E0E97BF5362DA0C18C9B80B5D /* VGEDataModel.h */,
-				46EB606313F386D4C26BDB9D1607EC75 /* VGEDataModel.m */,
-				35B4A67EC94D461E957DC7050206389D /* VGEDataModel-Private.h */,
-				9D88122CA570FD33AF60AFA9E536605A /* VGEListDataModel.h */,
-				BE4B9E759E6A7AC4405D35579F45341B /* VGEListDataModel.m */,
-			);
-			name = Model;
 			sourceTree = "<group>";
 		};
 		48AC6377AFDA42A98CF25B50397E9590 /* Frameworks */ = {
@@ -219,14 +184,79 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		537357CA6FA4BF08D66FB02C73036299 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				D0D234BCF9111BD59C0789CA5A182CD1 /* BPCacheManager.h */,
+				074CC9E38BB7AE713DB0A5DF6CD18703 /* BPCacheManager.m */,
+				000DDF2BEC98DB8826249B810E7DE09A /* BPLocalManager.h */,
+				F653E10C1286E0B7A2EC27FB08CB1A11 /* BPLocalManager.m */,
+			);
+			name = Cache;
+			sourceTree = "<group>";
+		};
+		6B4C7FDAA120FBDE8EBC7E30D1A76616 /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				4ACF49A2DFE4993CA860286C2F987094 /* BPAppPreference.h */,
+				7DCF5E1EDE2ED24B6398EB844BE5EDD3 /* BPAppPreference.m */,
+				079BA99761922A63AA60992AA66C20ED /* DTAppPreferenceManager.h */,
+				E5F4A0C9F27211D19608B62F3C2BC2AC /* DTAppPreferenceManager.m */,
+				2A9C8C7ED2C9E7E1C9F85276F3FDAAA3 /* DTTodayManager.h */,
+				A67BB9FEB3263740BA3C1002E20A224F /* DTTodayManager.m */,
+			);
+			name = Plist;
+			sourceTree = "<group>";
+		};
+		89E73147784CFBA041668E33F50A439E /* File */ = {
+			isa = PBXGroup;
+			children = (
+				FF25DE1326B763E327B57274ED3C90DA /* BPFileUtil.h */,
+				2F81266E2C5795335D2940D006AAB3C9 /* BPFileUtil.m */,
+				AB660A78D4B68864A4DD646DF8BF7F9B /* DTFileManager.h */,
+				7C3128F3EBCD8E0E5F0A20C59C12EF93 /* DTFileManager.m */,
+			);
+			name = File;
+			sourceTree = "<group>";
+		};
 		9CAB01E979A142941DF4980C6419D670 = {
 			isa = PBXGroup;
 			children = (
 				2F315AEE54EB3B19D7303CC8D32F72EE /* Dependencies */,
 				48AC6377AFDA42A98CF25B50397E9590 /* Frameworks */,
 				C9530C323196C2C5A8D34169D6B6972B /* Products */,
-				067FBACC05222587B8F6D0DCDBFC7E41 /* WCModel */,
+				21DC13057157B471A9B227EA285DB8CA /* WCModel */,
 			);
+			sourceTree = "<group>";
+		};
+		A0AD6589F80F304ED531C25BFC0F37E9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B69EB554EA52A7EC88097EC60625B06B /* WCModel.modulemap */,
+				68F502776F463B50398B9F0EDDF66CA9 /* WCModel.xcconfig */,
+				41EBCC49E8C3B23F99E39156A96EA652 /* WCModel-dummy.m */,
+				85598E33B70F5702C776C4F3A1B28A0D /* WCModel-Info.plist */,
+				8A952A90CD1948139B24E6FED6EC423D /* WCModel-prefix.pch */,
+				31D5AC9006E78EA99F6E9C3C7DE8FD79 /* WCModel-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/WCModel";
+			sourceTree = "<group>";
+		};
+		AEDF69443746B98B56D6DE96DE0DE103 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				14F443D050E2400A100E65DFD24A3DCE /* NSObject+YYModel.h */,
+				9B63D4716A5DDFA6DA7A53A7465E9EAA /* NSObject+YYModel.m */,
+				0F229EB2DA96F809EAE0B32A94FBB312 /* WCBaseEntity.h */,
+				F35C91A36903A24C39EB19ECA1E50769 /* WCBaseEntity.m */,
+				1247E9FBF4F9380D29A9159F5E58BF8C /* WCDataResult.h */,
+				DE6717D18C514CA3263DCA3A02BE423C /* WCDataResult.m */,
+				4706A52EE4AFA882220EEEA896FAA1F2 /* YYClassInfo.h */,
+				9BECFCBEB97E4A71AF8BE50358D17BD1 /* YYClassInfo.m */,
+				156B6F2C1FFE8EE474807C6FD4A11D13 /* YYModel.h */,
+			);
+			name = Entity;
 			sourceTree = "<group>";
 		};
 		C9530C323196C2C5A8D34169D6B6972B /* Products */ = {
@@ -237,58 +267,32 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CC7D9605A1FB9727F3175B911CC634C8 /* Cache */ = {
-			isa = PBXGroup;
-			children = (
-				3360CE4B42A20FA731893D651E2A774B /* BPCacheManager.h */,
-				D1587E330474C4E33FA678515F0AB66F /* BPCacheManager.m */,
-				D77042ED2E90209E0CB4F8664DCB36D3 /* BPLocalManager.h */,
-				04EF2A9497A4A615CECBC4E27EAE5447 /* BPLocalManager.m */,
-			);
-			name = Cache;
-			sourceTree = "<group>";
-		};
-		FC5516FCBC391F038C6D6E814DF5197B /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				70300BBCCA9F0C217C3E22F892B6FFE3 /* NSObject+YYModel.h */,
-				66684EFD8A93EC339C459FA315C1211F /* NSObject+YYModel.m */,
-				D6F8EAA0D55FE915F7E26F3A74C20F91 /* WCBaseEntity.h */,
-				2BC08E634DADB3FC737EE30162AC1F9F /* WCBaseEntity.m */,
-				B11F59CC3FC7EC9E4BE49ACF76B6934C /* WCDataResult.h */,
-				9EC0611BDD31466824BF8C2C9135B0DB /* WCDataResult.m */,
-				91FF6B31CEA0CB596F4E4429DEDEF326 /* YYClassInfo.h */,
-				CDA95BBDA98678708A95406B6A4DCA31 /* YYClassInfo.m */,
-				5FEEF543BC2E760CFE0A7EC01CDF63A2 /* YYModel.h */,
-			);
-			name = Entity;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		B977748A343491C5633EB59A4D2C24C0 /* Headers */ = {
+		62911B7B121332B870C25E50B6CFB7B2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5567831ABF2D2800ACA590B2964596C8 /* BPAppPreference.h in Headers */,
-				98B0F654B6DB070D52E76AFD3A4D2BB3 /* BPCacheManager.h in Headers */,
-				F5905011CD7E8BC28BD42EB8A7EFF86D /* BPFileUtil.h in Headers */,
-				882ABB1E7BE28AA671D73AD58180F126 /* BPLocalManager.h in Headers */,
-				5AF024DE12F9337A1981923BBDE749CE /* DTAppPreferenceManager.h in Headers */,
-				14D7F996B01B122DECF7C437A48F4DF6 /* DTFileManager.h in Headers */,
-				A68145907A5C4AE93FCE3189C5623C3E /* DTListDataModel.h in Headers */,
-				1B90A7C49B2A674C71BDBF452E1FD262 /* DTPosListDataModel.h in Headers */,
-				C4D781DC2720AF39648025D3083B9B49 /* DTTodayManager.h in Headers */,
-				839A40F1849C7D8AA54B294D63815667 /* NSObject+YYModel.h in Headers */,
-				98B25122A2A704C5CD369474A79370AD /* VGEDataModel-Private.h in Headers */,
-				32DDC5A9F1360B018CD7B94F1493E52E /* VGEDataModel.h in Headers */,
-				28DC974104CCD799E5FE291F0542B8AB /* VGEListDataModel.h in Headers */,
-				DA0C25B8F9518E526820EA205113E938 /* WCBaseEntity.h in Headers */,
-				65860B4FA5F2808B9F3D4E7CB1D5B0F5 /* WCDataResult.h in Headers */,
-				63596BFCDDE491057EEA030B8AFF67C9 /* WCModel-umbrella.h in Headers */,
-				86D3A9EAA68ED692BA9B27381444060F /* YYClassInfo.h in Headers */,
-				3211C3711B18BDA325E22530093AA778 /* YYModel.h in Headers */,
+				E2E5FE7AB8093356C339A2B62BE6F393 /* BPAppPreference.h in Headers */,
+				00EEB114BF72CC949C5292E27A38E6D4 /* BPCacheManager.h in Headers */,
+				726D07777182FF432E7A6944F9B9C2DD /* BPFileUtil.h in Headers */,
+				ECCD17B88D9B1A295C10371E403233B9 /* BPLocalManager.h in Headers */,
+				76F154F170207F88CAF9ED7A97333D3D /* DTAppPreferenceManager.h in Headers */,
+				3B22073C207EFDA72BAAEF5FE394B3EB /* DTFileManager.h in Headers */,
+				1781A902AECC1A33B86F73BCC0524984 /* DTListDataModel.h in Headers */,
+				4D73297B735F3DCB52CEA435E6CBD0E2 /* DTPosListDataModel.h in Headers */,
+				0D1D64CA59CEC660B46F3B85AB47C5EE /* DTTodayManager.h in Headers */,
+				66C7DE5F05DF7098C49C38C8FA22D574 /* NSObject+YYModel.h in Headers */,
+				B8E0FB8AE3351314DF34A3ECAAB9482F /* VGEDataModel-Private.h in Headers */,
+				E4284FA0D5A9383C26C2EC921FDA27E2 /* VGEDataModel.h in Headers */,
+				8535681DCB685FD165CA171A9C6553D5 /* VGEListDataModel.h in Headers */,
+				881ACDE18FE4EE25A8B71F6CE9A3C4FC /* WCBaseEntity.h in Headers */,
+				DAEE65B2AE4AE7F398CFB8180E7DA061 /* WCDataResult.h in Headers */,
+				02C3160A8FE843CE387B2E6624408A8B /* WCModel-umbrella.h in Headers */,
+				5A4A51C16D53AB97211EB782154DB2E4 /* WCModel.h in Headers */,
+				1114E2E78A35635F19FA5DA3D5AD5A6E /* YYClassInfo.h in Headers */,
+				8B6F951208A216F56597D34AE51B98EC /* YYModel.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,18 +301,18 @@
 /* Begin PBXNativeTarget section */
 		F7DEDB7C2195D421F161666F4E272F06 /* WCModel */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 94FC5E8EDD29CD0BBA58EF7630DDA886 /* Build configuration list for PBXNativeTarget "WCModel" */;
+			buildConfigurationList = 678374293F6B541071849A7C3C6DFB7B /* Build configuration list for PBXNativeTarget "WCModel" */;
 			buildPhases = (
-				B977748A343491C5633EB59A4D2C24C0 /* Headers */,
-				9384D6432F82D34BC85CEFC0506ECAB0 /* Sources */,
-				00252377FD38CC09E177D56C9429BCF0 /* Frameworks */,
-				C43B1615BCEB3994970DD8DF34BF9090 /* Resources */,
+				62911B7B121332B870C25E50B6CFB7B2 /* Headers */,
+				5DC65C48A7A7C15238BA0C994C897EA1 /* Sources */,
+				75D623A7500B38D825FF745D8B342503 /* Frameworks */,
+				7EACFA62FA5ECD46C8E98F4E731B9B90 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2F6532D5F663EFEABC142B1C5BCF8CEB /* PBXTargetDependency */,
-				F91C74B22147301217878E76F36544D0 /* PBXTargetDependency */,
+				A2160628CFF08E322F9EDF1D824EF477 /* PBXTargetDependency */,
+				28471FE913CAE061B96BF50CF0F08950 /* PBXTargetDependency */,
 			);
 			name = WCModel;
 			productName = WCModel;
@@ -350,7 +354,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C43B1615BCEB3994970DD8DF34BF9090 /* Resources */ = {
+		7EACFA62FA5ECD46C8E98F4E731B9B90 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -360,41 +364,41 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9384D6432F82D34BC85CEFC0506ECAB0 /* Sources */ = {
+		5DC65C48A7A7C15238BA0C994C897EA1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D24A207A78F2B6B833BEAE53624CACD /* BPAppPreference.m in Sources */,
-				2C6D024FD7D8F8ACE3B125FFB486F28D /* BPCacheManager.m in Sources */,
-				0211DF246B733A67DF9E076736C47535 /* BPFileUtil.m in Sources */,
-				7ABE104B3477797254AF94A608538075 /* BPLocalManager.m in Sources */,
-				21B0B2C0A196C7869E084376BADC8773 /* DTAppPreferenceManager.m in Sources */,
-				98EB400AA515875C19A566E44DFA58FC /* DTFileManager.m in Sources */,
-				E0915D2586A873237E9D386B356957BB /* DTListDataModel.m in Sources */,
-				AF790886EA9EB0E6ED9162A88EDFFE4A /* DTPosListDataModel.m in Sources */,
-				9B9FBF8756C98BC47CCE397336B40911 /* DTTodayManager.m in Sources */,
-				2944C5B19126DBC60CACE82191131BEF /* NSObject+YYModel.m in Sources */,
-				43CCFFD1FDF401BB76E4B6592D417077 /* VGEDataModel.m in Sources */,
-				0F741D4D1B7467D20C95836228437DB2 /* VGEListDataModel.m in Sources */,
-				50D149050D8E128455BC72382A0F145F /* WCBaseEntity.m in Sources */,
-				D7623824BBDBE0D2221BEDD3280213B2 /* WCDataResult.m in Sources */,
-				1767CE63A171493988D331212D20415D /* WCModel-dummy.m in Sources */,
-				4814048459D42D68C41A01900BA26079 /* YYClassInfo.m in Sources */,
+				958DB55163EF982099E4073FDEED1A3C /* BPAppPreference.m in Sources */,
+				FF2EFF43780B2E941FEBF21E2F6A5E78 /* BPCacheManager.m in Sources */,
+				A830F0C622C287E901E4245AA8245E8F /* BPFileUtil.m in Sources */,
+				2D73E60DC03057F69C0F386652A63517 /* BPLocalManager.m in Sources */,
+				7B9AABFE51F1C93BB222F03A664C459C /* DTAppPreferenceManager.m in Sources */,
+				4E9937AEA520623EA4C77BD9A1D587FF /* DTFileManager.m in Sources */,
+				8D8575B1C7291B806D12B693AD3BFF3C /* DTListDataModel.m in Sources */,
+				61536E9D8814DD4E6037FE69B25CCE38 /* DTPosListDataModel.m in Sources */,
+				EF476F02A9CDA50E06A9CBA4F2375DE5 /* DTTodayManager.m in Sources */,
+				E320CDCD41A83EEF1CF7D9248A57A559 /* NSObject+YYModel.m in Sources */,
+				3CF4D7E634EAB6BB38F3008567CC4F21 /* VGEDataModel.m in Sources */,
+				1E39ED7B0912C259357807DDF49CDEAF /* VGEListDataModel.m in Sources */,
+				368C61DCCADE5DB7E0B31DF50C37906A /* WCBaseEntity.m in Sources */,
+				593AA9D5796DB0D6DD07D3677FA8D850 /* WCDataResult.m in Sources */,
+				D9C1516EE3976EB72F8FA237B6E12416 /* WCModel-dummy.m in Sources */,
+				25178AB36F05DB9FE28A3E720D5AFFE8 /* YYClassInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2F6532D5F663EFEABC142B1C5BCF8CEB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = WCCategory;
-			targetProxy = 3DD0EF4905A4455C9BE71126743CF51C /* PBXContainerItemProxy */;
-		};
-		F91C74B22147301217878E76F36544D0 /* PBXTargetDependency */ = {
+		28471FE913CAE061B96BF50CF0F08950 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = WCModule;
-			targetProxy = 02B4CF35CB799D6F0FA646FB0B5BE847 /* PBXContainerItemProxy */;
+			targetProxy = 9C5C431E166D4E9D2D5A2C069B2956DF /* PBXContainerItemProxy */;
+		};
+		A2160628CFF08E322F9EDF1D824EF477 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WCCategory;
+			targetProxy = E83E6D1B413382873EBC9081E90F94B5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -463,9 +467,43 @@
 			};
 			name = Debug;
 		};
-		57CAE852FFD9A453F2D8B57313FA0EE8 /* Release */ = {
+		7B3A71D64C91F0F36824458A2F0B14E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8BD0802330D9421AE83892419A51E86D /* WCModel.xcconfig */;
+			baseConfigurationReference = 68F502776F463B50398B9F0EDDF66CA9 /* WCModel.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WCModel/WCModel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WCModel/WCModel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/WCModel/WCModel.modulemap";
+				PRODUCT_MODULE_NAME = WCModel;
+				PRODUCT_NAME = WCModel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BCCD58ECA12619D46D016816FE38AE9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68F502776F463B50398B9F0EDDF66CA9 /* WCModel.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -558,48 +596,14 @@
 			};
 			name = Release;
 		};
-		FCF8CB0A24C233F45706247B1EB30728 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8BD0802330D9421AE83892419A51E86D /* WCModel.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/WCModel/WCModel-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/WCModel/WCModel-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/WCModel/WCModel.modulemap";
-				PRODUCT_MODULE_NAME = WCModel;
-				PRODUCT_NAME = WCModel;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		94FC5E8EDD29CD0BBA58EF7630DDA886 /* Build configuration list for PBXNativeTarget "WCModel" */ = {
+		678374293F6B541071849A7C3C6DFB7B /* Build configuration list for PBXNativeTarget "WCModel" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FCF8CB0A24C233F45706247B1EB30728 /* Debug */,
-				57CAE852FFD9A453F2D8B57313FA0EE8 /* Release */,
+				7B3A71D64C91F0F36824458A2F0B14E4 /* Debug */,
+				BCCD58ECA12619D46D016816FE38AE9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

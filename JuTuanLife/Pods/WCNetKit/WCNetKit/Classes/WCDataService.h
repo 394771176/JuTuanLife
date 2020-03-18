@@ -7,9 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BPURLRequest.h"
 #import "WCDataRequest.h"
-#import <WCModel/WCDataResult.h>
 
 @interface WCDataService : NSObject
 
@@ -32,6 +30,14 @@
 
 + (void)asyncBlock:(WCDataRequest * (^)(void))request
        config:(void (^)(WCDataResult *result))config
+       finish:(void (^)(WCDataResult *result))finish;
+
++ (void)loadCache:(void (^)(WCDataResult *cache))cacheBlock
+           forKey:(NSString *)cacheKey;
+
++ (void)async:(WCDataRequest *)request
+     cacheKey:(NSString *)cacheKey
+    loadCache:(void (^)(WCDataResult *cache))cacheBlock
        finish:(void (^)(WCDataResult *result))finish;
 
 //提供一些常用方法，比如b拼接系统参数， 拼接分页参数等
