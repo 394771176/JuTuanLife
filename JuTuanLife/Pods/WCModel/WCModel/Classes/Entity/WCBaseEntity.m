@@ -50,6 +50,14 @@
     return mArray;
 }
 
++ (NSArray *)itemsFromDict:(NSDictionary *)dict forKey:(NSString *)key
+{
+    if ([NSDictionary validArrayFromDict:dict forKey:key]) {
+        return [self itemsFromArray:[dict objectForKey:key]];
+    }
+    return nil;
+}
+
 + (NSArray *)arrayFromItems:(NSArray *)array {
     if (array == nil) return nil;
     

@@ -10,8 +10,9 @@
 #import "JTMineHeaderView.h"
 #import "JTHomeFenrunCell.h"
 #import "JTHomeBusinessCell.h"
+#import "JTHomeListModel.h"
 
-@interface JTHomeController () {
+@interface JTHomeController () <DTTabBarViewDelegate> {
     JTMineHeaderView *_headerView;
     
     JTHomeFenrunCell *_fenrunCell;
@@ -37,16 +38,30 @@
     }
 }
 
+- (DTListDataModel *)createDataModel
+{
+    JTHomeListModel *model = [[JTHomeListModel alloc] initWithDelegate:self];
+    [model loadCache];
+    return model;
+}
+
 - (void)reloadTableView
 {
     _headerView.user = [JTUserManager sharedInstance].user;
+    _fenrunCell.item = [self.Model fenrun];
+    self.tableSourceData = [self setupTableSourceData];
     [super reloadTableView];
 }
 
 - (WCTableSourceData *)setupTableSourceData
 {
     WCTableSourceData *source = [WCTableSourceData new];
-    _fenrunCell = [[JTHomeFenrunCell alloc] init];
+    if (!_fenrunCell) {
+        _fenrunCell = [[JTHomeFenrunCell alloc] init];
+        _fenrunCell.delegate = self;
+        _fenrunCell.period = 0;
+        [_fenrunCell showArrow:YES];
+    }
     
     WCTableRow *row = [WCTableRow rowWithItem:_fenrunCell cellClass:[JTHomeFenrunCell class]];
     row.clickBlock = ^(id data, NSIndexPath *indexPath) {
@@ -54,11 +69,9 @@
     };
     [source addRowItem:row];
     
-    WCTableSection *section = [WCTableSection sectionWithItems:@[@"汇来米", @"保险"] cellClass:[JTHomeBusinessCell class]];
-    [section setConfigBlock:^(JTHomeBusinessCell * cell, id data, NSIndexPath *indexPath) {
-        [cell setTitle:data];
-    } clickBlock:^(JTBusinessItem *data, NSIndexPath *indexPath) {
-        [JTLinkUtil openLink:data.jump_url];
+    WCTableSection *section = [WCTableSection sectionWithItems:self.dataModel.data cellClass:[JTHomeBusinessCell class]];
+    [section setConfigBlock:nil clickBlock:^(JTBusinessItem *data, NSIndexPath *indexPath) {
+        [JTLinkUtil openLink:data.entryUrl];
     }];
     section.headerBlock = ^UIView *(NSInteger section) {
         UIView *view = [WCTableSection tableView:self.tableView headerFooterViewWithHeight:50];
@@ -69,6 +82,13 @@
     [source addSectionItem:section];
     
     return source;
+}
+
+#pragma mark - DTTabBarViewDelegate
+
+- (void)tabBarViewDidSelectIndex:(NSInteger)index
+{
+    NSLog(@"%zd", index);
 }
 
 @end

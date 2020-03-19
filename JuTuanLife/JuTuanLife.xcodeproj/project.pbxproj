@@ -159,6 +159,9 @@
 		60DF0F0A242289C400BB0F88 /* driving_loading5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60DF0EFE242289C300BB0F88 /* driving_loading5@2x.png */; };
 		60DF0F0B242289C400BB0F88 /* driving_loading9@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60DF0EFF242289C300BB0F88 /* driving_loading9@2x.png */; };
 		60DF0F0E24228B4D00BB0F88 /* JTShipAddCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60DF0F0D24228B4D00BB0F88 /* JTShipAddCell.m */; };
+		60DF0F112423C75C00BB0F88 /* JTHomeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60DF0F102423C75C00BB0F88 /* JTHomeListModel.m */; };
+		60DF0F142423D05B00BB0F88 /* JTFenRunOverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60DF0F132423D05B00BB0F88 /* JTFenRunOverView.m */; };
+		60DF0F172423D0E500BB0F88 /* JTFenRunOverItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 60DF0F162423D0E500BB0F88 /* JTFenRunOverItem.m */; };
 		60E2B0FD240ED5D800E4EA52 /* CCCommentStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B09F240ED5D800E4EA52 /* CCCommentStarView.m */; };
 		60E2B0FE240ED5D800E4EA52 /* BPOnePixLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0A2240ED5D800E4EA52 /* BPOnePixLineView.m */; };
 		60E2B0FF240ED5D800E4EA52 /* DTLoadMoreCommonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0A5240ED5D800E4EA52 /* DTLoadMoreCommonCell.m */; };
@@ -453,6 +456,12 @@
 		60DF0EFF242289C300BB0F88 /* driving_loading9@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "driving_loading9@2x.png"; sourceTree = "<group>"; };
 		60DF0F0C24228B4D00BB0F88 /* JTShipAddCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTShipAddCell.h; sourceTree = "<group>"; };
 		60DF0F0D24228B4D00BB0F88 /* JTShipAddCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTShipAddCell.m; sourceTree = "<group>"; };
+		60DF0F0F2423C75C00BB0F88 /* JTHomeListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTHomeListModel.h; sourceTree = "<group>"; };
+		60DF0F102423C75C00BB0F88 /* JTHomeListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTHomeListModel.m; sourceTree = "<group>"; };
+		60DF0F122423D05B00BB0F88 /* JTFenRunOverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTFenRunOverView.h; sourceTree = "<group>"; };
+		60DF0F132423D05B00BB0F88 /* JTFenRunOverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTFenRunOverView.m; sourceTree = "<group>"; };
+		60DF0F152423D0E500BB0F88 /* JTFenRunOverItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTFenRunOverItem.h; sourceTree = "<group>"; };
+		60DF0F162423D0E500BB0F88 /* JTFenRunOverItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTFenRunOverItem.m; sourceTree = "<group>"; };
 		60E2B09A240ED5D800E4EA52 /* WCBaseUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCBaseUIKit.h; sourceTree = "<group>"; };
 		60E2B09C240ED5D800E4EA52 /* DTScrollLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTScrollLabel.h; sourceTree = "<group>"; };
 		60E2B09D240ED5D800E4EA52 /* DTGradientLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTGradientLabel.h; sourceTree = "<group>"; };
@@ -711,6 +720,10 @@
 			children = (
 				60ECA790241D02CC0029C45A /* JTBusinessItem.h */,
 				60ECA791241D02CC0029C45A /* JTBusinessItem.m */,
+				60DF0F0F2423C75C00BB0F88 /* JTHomeListModel.h */,
+				60DF0F102423C75C00BB0F88 /* JTHomeListModel.m */,
+				60DF0F152423D0E500BB0F88 /* JTFenRunOverItem.h */,
+				60DF0F162423D0E500BB0F88 /* JTFenRunOverItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -722,6 +735,8 @@
 				60ECA61E241CEEE20029C45A /* JTHomeFenrunCell.m */,
 				60ECA620241CEF840029C45A /* JTHomeBusinessCell.h */,
 				60ECA621241CEF840029C45A /* JTHomeBusinessCell.m */,
+				60DF0F122423D05B00BB0F88 /* JTFenRunOverView.h */,
+				60DF0F132423D05B00BB0F88 /* JTFenRunOverView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1613,6 +1628,7 @@
 				60E2B124240ED5D800E4EA52 /* WCMethodUtil.m in Sources */,
 				6071FF8424154F15009B617E /* JTMineYaJinCell.m in Sources */,
 				606FE73924115A5600522B96 /* JTService.m in Sources */,
+				60DF0F172423D0E500BB0F88 /* JTFenRunOverItem.m in Sources */,
 				603F9863241E18D200523CBD /* DTShareUtil.m in Sources */,
 				60DF0D4A242275A800BB0F88 /* JTPosListDataModel.m in Sources */,
 				60E2B104240ED5D800E4EA52 /* DTUISegmentView.m in Sources */,
@@ -1699,9 +1715,11 @@
 				606FE72624113DE600522B96 /* JTRequest.m in Sources */,
 				60E2B12A240ED5D800E4EA52 /* WCBarItemUtil.m in Sources */,
 				606FE7852411730300522B96 /* JTLoginForgetCell.m in Sources */,
+				60DF0F112423C75C00BB0F88 /* JTHomeListModel.m in Sources */,
 				60E2B100240ED5D800E4EA52 /* DTTableButtonCell.m in Sources */,
 				60E2B11E240ED5D800E4EA52 /* DTNavigationController.m in Sources */,
 				603F99E0241E2FDD00523CBD /* CLWXAccess.m in Sources */,
+				60DF0F142423D05B00BB0F88 /* JTFenRunOverView.m in Sources */,
 				60E2B11A240ED5D800E4EA52 /* DTHttpRefreshLoadMoreTableController.m in Sources */,
 				60E2B118240ED5D800E4EA52 /* DTTabItem.m in Sources */,
 				60E2B123240ED5D800E4EA52 /* DTHttpLoadMoreTableController.m in Sources */,

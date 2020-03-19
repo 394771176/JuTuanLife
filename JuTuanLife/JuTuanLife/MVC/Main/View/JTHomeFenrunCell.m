@@ -8,8 +8,14 @@
 
 #import "JTHomeFenrunCell.h"
 
-@interface JTHomeFenrunCell () {
+@interface JTHomeFenrunCell () <DTTabBarViewDelegate> {
+    UIImageView *_bodyView;
+    DTTabBarView *_tabBar;
+    UILabel *_dateLabel;
+    UILabel *_fenRunLabel;
+    UILabel *_detailLabel;
     
+    NSArray *_fenrunPeriods;
 }
 
 @end
@@ -20,15 +26,78 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        //24 * 24, 6 7 8 7
+        UIImage *image = [[UIImage imageNamed:@"login_auth_bg"] resizableImageWithCapInsets:UIEdgeInsetsMake(12, 12, 11, 11)];
+        UICREATEImageTo(_bodyView, UIImageView, 9, 6, self.contentView.width - 18, self.contentView.height - 14, AAWH, CCFill, image, self.contentView);
+        _bodyView.userInteractionEnabled = YES;
         
+        //64 + 352 + 64 + 40 = 64 + 20 + 176
+        UICREATETo(_tabBar, DTTabBarView, _bodyView.width / 2 - 260 / 2, 6 + 9, 260, 30, AALR, _bodyView);
+        [_tabBar setNormalColor:COLOR(333333)];
+        [_tabBar setSelectColor:COLOR(#FA3F3F)];
+        _tabBar.selectedLine.hidden = YES;
+        _tabBar.bottomLine.hidden = YES;
+        _tabBar.delegate = self;
+        
+        UICREATELabel2To(_dateLabel, UILabel, 10, _tabBar.bottom + 2, _bodyView.width - 20, 30, AAW, TTCenter, nil, @"16", @"999999", _bodyView);
+        
+        UICREATELabel2To(_fenRunLabel, UILabel, _dateLabel.left, _dateLabel.bottom, _dateLabel.width, 50, AAW, TTCenter, nil, @"32", @"000000", _bodyView);
+        
+        UICREATELabel2To(_detailLabel, UILabel, _dateLabel.left, _fenRunLabel.bottom + 8, _dateLabel.width, 30, AAW, TTCenter, nil, @"16", @"333333", _bodyView);
+        
+        [self setSelectionStyleClear];
     }
     return self;
 }
 
-- (void)setItem:(id)item
+- (UIImageView *)createArrowImage
+{
+    UIImageView *v = [super createArrowImage];
+    v.frame = CGRectMake(_bodyView.width - (self.contentView.width - v.right) - v.width - 7, _fenRunLabel.top, v.width, _fenRunLabel.height);
+    v.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
+    return v;
+}
+
+- (void)setOnlyFixPeriod:(BOOL)onlyFixPeriod
+{
+    NSMutableArray *titles = [NSMutableArray array];
+    if (onlyFixPeriod) {
+        _fenrunPeriods = @[@(JTFenRunPeriodFixDay), @(JTFenRunPeriodFixMonth), @(JTFenRunPeriodFixYear)];
+    } else {
+        _fenrunPeriods = @[@(JTFenRunPeriodYesterday), @(JTFenRunPeriodWeek), @(JTFenRunPeriodMonth), @(JTFenRunPeriodQuarter), @(JTFenRunPeriodYear)];
+    }
+    for (id i in _fenrunPeriods) {
+        [titles safeAddObject:[JTFenRunOverItem titleForPeriod:[i integerValue]]];
+    }
+    _tabBar.items = titles;
+}
+
+- (void)setPeriod:(JTFenRunPeriod)period
+{
+    _period = period;
+    if (!_fenrunPeriods) {
+        self.onlyFixPeriod = _onlyFixPeriod;
+    }
+    NSInteger index = [_fenrunPeriods indexOfObject:@(period)];
+    if (index == NSNotFound) {
+        index = 0;
+    }
+    _tabBar.selectIndex = index;
+}
+
+- (void)setItem:(JTFenRunOverItem *)item
 {
     _item = item;
-    
+    _dateLabel.text = [NSString stringWithFormat:@"%@ - %@", [JTCoreUtil showDateWith:item.dateFrom], [JTCoreUtil showDateWith:item.dateTo]];
+    _fenRunLabel.text = [NSString stringWithFormat:@"%.2f", item.totalCommAmt];
+    _detailLabel.text = [NSString stringWithFormat:@"%.2f（自己）+ %.2f（徒弟/孙）", item.myCommAmt, item.descendantCommAmt];
+}
+
+#pragma mark - DTTabBarViewDelegate
+
+- (void)tabBarViewDidSelectIndex:(NSInteger)index
+{
+    [DTPubUtil sendTagert:self.delegate action:@selector(tabBarViewDidSelectIndex:) object:@(index)];
 }
 
 - (void)awakeFromNib {
@@ -44,7 +113,7 @@
 
 + (CGFloat)cellHeightWithItem:(id)item tableView:(UITableView *)tableView
 {
-    return 184;
+    return 204;
 }
 
 @end

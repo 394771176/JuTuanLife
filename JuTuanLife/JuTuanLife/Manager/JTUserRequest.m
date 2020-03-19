@@ -132,6 +132,18 @@
     return [self requestWithApi:@"sale/contract/sign_contracts" params:params httpMethod:WCHTTPMethodPOST];
 }
 
++ (JTRequest *)get_business_list
+{
+    return [self requestWithApi:@"sale/business/get_business_list" params:nil];
+}
+
++ (JTRequest *)get_commission_stats:(NSInteger)period
+{
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params safeSetObject:STRING(period) forKey:@"dateType"];
+    return [self requestWithApi:@"sale/business/get_commission_stats" params:params];
+}
+
 + (JTRequest *)getShipList:(NSString *)pos pageSize:(NSInteger)pageSize
 {
     NSMutableDictionary *params = [self paramsWithPos:pos pageSize:pageSize];

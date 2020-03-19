@@ -17,9 +17,9 @@ UICREATEView(uiClass, x, y, w, h, AA, nil, toView)
 [uiClass Create:RECT(x, y, w, h) autoResizing:AA bgColor:_bgColor addToView:toView];
 
 #define UICREATELabel(uiClass, x, y, w, h, AA, _text, _font, _color, toView) \
-UICREATELabel2(uiClass, x, y, w, h, AA, _text, TTLeft, _font, _color, toView)
+UICREATELabel2(uiClass, x, y, w, h, AA, TTLeft, _text, _font, _color, toView)
 
-#define UICREATELabel2(uiClass, x, y, w, h, AA, _text, TT, _font, _color, toView) \
+#define UICREATELabel2(uiClass, x, y, w, h, AA, TT, _text, _font, _color, toView) \
 [uiClass Create:RECT(x, y, w, h) autoResizing:AA text:_text alignment:TT font:_font color:_color addToView:toView];
 
 #define UICREATEImage(uiClass, x, y, w, h, AA, CC, _image, toView) \
@@ -45,8 +45,8 @@ view = UICREATEView(uiClass, x, y, w, h, AA, bgColor, toView)
 #define UICREATELabelTo(label, uiClass, x, y, w, h, AA, text, font, color, toView) \
 label = UICREATELabel(uiClass, x, y, w, h, AA, text, font, color, toView)
 
-#define UICREATELabel2To(label, uiClass, x, y, w, h, AA, text, TT, font, color, toView) \
-label = UICREATELabel2(uiClass, x, y, w, h, AA, text, TT, font, color, toView)
+#define UICREATELabel2To(label, uiClass, x, y, w, h, AA, TT, text, font, color, toView) \
+label = UICREATELabel2(uiClass, x, y, w, h, AA, TT, text, font, color, toView)
 
 #define UICREATEImageTo(imageV, uiClass, x, y, w, h, AA, CC, image, toView) \
 imageV = UICREATEImage(uiClass, x, y, w, h, AA, CC, image, toView)

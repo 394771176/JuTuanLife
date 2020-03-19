@@ -7,9 +7,15 @@
 //
 
 #import "DTTableCustomCell.h"
+#import "JTFenRunOverItem.h"
 
 @interface JTHomeFenrunCell : DTTableCustomCell
 
-@property (nonatomic, strong) id item;
+@property (nonatomic, assign) JTFenRunPeriod period;
+@property (nonatomic, strong) JTFenRunOverItem *item;
+
+@property (nonatomic, assign) BOOL onlyFixPeriod;
+
+@property (nonatomic, weak) id<DTTabBarViewDelegate> delegate;
 
 @end

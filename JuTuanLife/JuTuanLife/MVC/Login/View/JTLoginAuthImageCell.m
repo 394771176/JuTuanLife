@@ -26,7 +26,7 @@
         //625 - 348
         self.height = self.contentView.height = 478 / 2.f + 20;
         
-        //6,7 8,7  24 * 24
+        //24 * 24 镂空:6,7,8,7  
         UIImage *image = [[UIImage imageNamed:@"login_auth_bg"] resizableImageWithCapInsets:UIEdgeInsetsMake(12, 12, 11, 11)];
         UICREATEImage(UIImageView, 9, 4, self.contentView.width - 9 * 2, self.contentView.height - 4 - 2, AAWH, CCFill, image, self.contentView);
         

@@ -13,4 +13,6 @@
 
 @property (nonatomic, strong) NSString *relatedTime;
 
+@property (nonatomic, assign) NSInteger relationType;
+
 @end

@@ -32,7 +32,7 @@
         UICREATETo(_bodyView, UIView, 0, self.contentView.height/2-108/2, self.contentView.width, 108, AATB|AAW, self.contentView);
         
         //16 + 24 + 20 + 48 +20 = 128;
-        UICREATELabel2To(_titleLabel, UILabel, 10, 16, _bodyView.width - 20, 24, AAW, @"您暂时还没有徒弟，快去分享招小徒弟吧！", TTCenter, @"12", @"999999", _bodyView);
+        UICREATELabel2To(_titleLabel, UILabel, 10, 16, _bodyView.width - 20, 24, AAW, TTCenter, @"您暂时还没有徒弟，快去分享招小徒弟吧！", @"12", @"999999", _bodyView);
         
         UICREATEBtnTo(_addBtn, UIButton, _bodyView.width / 2 - 176 / 2, _titleLabel.bottom + 20, 176, 48, AALR, @" 加入聚推", @"16", @"333333", self, @selector(addBtnAction), _bodyView);
         [_addBtn setImageWithImageName:@"jt_ship_add"];

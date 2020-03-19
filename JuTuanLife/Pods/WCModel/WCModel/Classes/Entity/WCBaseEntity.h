@@ -12,6 +12,9 @@
 
 + (id)itemFromDict:(NSDictionary *)dict;
 + (NSArray *)itemsFromArray:(NSArray *)array;
+
++ (NSArray *)itemsFromDict:(NSDictionary *)dict forKey:(NSString *)key;
+
 + (NSDictionary *)itemsDictFromDict:(NSDictionary *)dict;
 
 + (NSDictionary *)dictFromItem:(WCBaseEntity *)item;

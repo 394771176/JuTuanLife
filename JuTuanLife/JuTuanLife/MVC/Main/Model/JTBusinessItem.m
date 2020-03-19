@@ -12,7 +12,7 @@
 
 + (NSDictionary<NSString *,id> *)modelCustomPropertyMapper
 {
-    return @{@"itemId" : @"id"};
+    return @{};
 }
 
 @end

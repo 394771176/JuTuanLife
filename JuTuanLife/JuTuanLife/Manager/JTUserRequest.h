@@ -29,6 +29,9 @@ NS_ASSUME_NONNULL_BEGIN
 + (JTRequest *)get_unsigned_contracts;
 + (JTRequest *)sign_contracts:(NSArray *)array;
 
++ (JTRequest *)get_business_list;
++ (JTRequest *)get_commission_stats:(NSInteger)period;
+
 + (JTRequest *)getShipList:(NSString *)pos pageSize:(NSInteger)pageSize;
 
 + (JTRequest *)getShareInfo;
