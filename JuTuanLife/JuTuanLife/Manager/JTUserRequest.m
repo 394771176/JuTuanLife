@@ -137,10 +137,19 @@
     return [self requestWithApi:@"sale/business/get_business_list" params:nil];
 }
 
-+ (JTRequest *)get_commission_stats:(NSInteger)period
++ (JTRequest *)get_all_commission_stats
 {
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    return [self requestWithApi:@"sale/business/get_all_commission_stats" params:nil];
+}
+
++ (JTRequest *)get_commission_stats:(NSInteger)period date:(NSString *)date pos:(NSString *)pos pageSize:(NSInteger)pageSize
+{
+    NSMutableDictionary *params = [self paramsWithPos:pos pageSize:pageSize];
     [params safeSetObject:STRING(period) forKey:@"dateType"];
+    if (date) {
+        [params safeSetObject:date forKey:@"date"];
+    }
+    [params safeSetObject:@"true" forKey:@"includePersonal"];
     return [self requestWithApi:@"sale/business/get_commission_stats" params:params];
 }
 
@@ -153,6 +162,17 @@
 + (JTRequest *)getShareInfo
 {
     return [self requestWithApi:@"sale/user/invite_share_info" params:nil];
+}
+
++ (JTRequest *)unread_msg_num
+{
+    return [self requestWithApi:@"user/message/unread_msg_num" params:@{@"userType" : @"1"}];
+}
++ (JTRequest *)user_msg_list:(NSString *)pos pageSize:(NSInteger)pageSize
+{
+    NSMutableDictionary *params = [self paramsWithPos:pos pageSize:pageSize];
+    [params safeSetObject:@"1" forKey:@"userType"];
+    return [self requestWithApi:@"user/message/user_msg_list" params:params];
 }
 
 @end

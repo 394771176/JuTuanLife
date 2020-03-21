@@ -10,22 +10,16 @@
 
 @implementation JTHomeListModel
 
-KEY(JTHomeListModel_cacheKey)
 KEY(JTHomeListModel_cacheKey_fenrun)
 
 - (NSString *)cacheKey
 {
-    return JTHomeListModel_cacheKey;
-}
-
-- (NSString *)cacheKeyFenrun
-{
-    return [NSString stringWithFormat:@"%@_%zd", JTHomeListModel_cacheKey_fenrun, _period];
+    return @"JTHomeListModel_cacheKey";
 }
 
 - (void)loadCache
 {
-    WCDataResult *result = [[BPCacheManager sharedInstance] cacheForKey:[self cacheKeyFenrun]];
+    WCDataResult *result = [[BPCacheManager sharedInstance] cacheForKey:JTHomeListModel_cacheKey_fenrun];
     [self parseFenrunData:result.data];
     [super loadCache];
     
@@ -42,9 +36,9 @@ KEY(JTHomeListModel_cacheKey_fenrun)
 - (WCDataResult *)loadData
 {
     {
-        WCDataResult *result = [JTService sync:[JTUserRequest get_commission_stats:_period]];
+        WCDataResult *result = [JTService sync:[JTUserRequest get_all_commission_stats]];
         if (result.success) {
-            [[BPCacheManager sharedInstance] setCache:result forKey:[self cacheKeyFenrun]];
+            [[BPCacheManager sharedInstance] setCache:result forKey:JTHomeListModel_cacheKey_fenrun trait:self.trait];
             [self parseFenrunData:result.data];
         }
     }
@@ -61,7 +55,8 @@ KEY(JTHomeListModel_cacheKey_fenrun)
 
 - (void)parseFenrunData:(id)data
 {
-    self.fenrun = [JTFenRunOverItem itemFromDict:data];
+//    self.fenrun = [JTFenRunOverItem itemFromDict:data];
+    self.fenrunForAll = [JTFenRunOverItem itemsFromDict:data forKey:@"stats"];
 }
 
 @end

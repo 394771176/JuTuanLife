@@ -13,7 +13,7 @@
 @interface AppDelegate ()
 <UIDocumentInteractionControllerDelegate>
 {
-    
+    NSTimeInterval _minDuration;
 }
 
 @end
@@ -62,21 +62,25 @@
     
 }
 
-
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    
+    [[NSNotificationCenter defaultCenter] postNotificationName:JTUIApplicationDidEnterBackgroundNotification object:nil];
 }
-
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    
+    if (_minDuration < 1) {
+        _minDuration = 60;
+        [[NSNotificationCenter defaultCenter] postNotificationName:JTUIApplicationWillEnterForegroundNotification object:nil];
+        WEAK_SELF
+        [DTPubUtil addBlock:^{
+            STRONG_SELF
+            self -> _minDuration = 0;
+        } withDelay:_minDuration];
+    }
 }
-
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     
 }
-
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     

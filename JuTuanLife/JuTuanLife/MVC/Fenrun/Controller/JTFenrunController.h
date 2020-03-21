@@ -6,12 +6,10 @@
 //  Copyright © 2020 cheng. All rights reserved.
 //
 
-#import "DTHttpTableController.h"
+#import "DTHttpRefreshLoadMoreTableController.h"
 
-NS_ASSUME_NONNULL_BEGIN
+@interface JTFenrunController : DTHttpRefreshLoadMoreTableController
 
-@interface JTFenrunController : DTHttpTableController
+@property (nonatomic, strong) NSArray *fenrunForAll;
 
 @end
-
-NS_ASSUME_NONNULL_END

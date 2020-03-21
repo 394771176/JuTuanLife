@@ -7,6 +7,8 @@
 //
 
 #import "JTMessageCenterController.h"
+#import "JTMessageListModel.h"
+#import "JTMessageListCell.h"
 
 @interface JTMessageCenterController ()
 
@@ -16,17 +18,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.title = @"消息中心";
+    [self reloadData];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (DTListDataModel *)createDataModel
+{
+    JTMessageListModel *model = [[JTMessageListModel alloc] initWithFetchLimit:20 delegate:self];
+    [model loadCache];
+    return model;
 }
-*/
+
+- (void)reloadData
+{
+    
+    [super reloadData];
+}
+
+- (WCTableSourceData *)setupTableSourceData
+{
+    WCTableSourceData *source = [WCTableSourceData new];
+    {
+        [source addSectionWithItems:self.dataModel.data cellClass:[JTMessageListCell class]];
+    }
+    
+    {
+        WCTableSection *section = [WCTableSection sectionWithItems:@[self.loadMoreCell] countBlock:^NSInteger(NSInteger section) {
+            return (self.dataModel.canLoadMore ? 1 : 0);
+        }];
+        [source addSectionItem:section];
+    }
+    return source;
+}
 
 @end

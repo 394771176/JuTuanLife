@@ -14,6 +14,8 @@
 @property (nonatomic, assign) JTFenRunPeriod period;
 @property (nonatomic, strong) JTFenRunOverItem *item;
 
+@property (nonatomic, strong) NSArray *itemList;
+
 @property (nonatomic, assign) BOOL onlyFixPeriod;
 
 @property (nonatomic, weak) id<DTTabBarViewDelegate> delegate;

@@ -7,7 +7,14 @@
 //
 
 #import "JTPosListDataModel.h"
+#import "JTFenRunOverItem.h"
+#import "JTShipItem.h"
 
 @interface JTFenRunModel : JTPosListDataModel
+
+@property (nonatomic, assign) JTFenRunPeriod period;
+@property (nonatomic, strong) NSString *selectedDate;
+
+@property (nonatomic, strong) JTFenRunOverItem *fenrun;
 
 @end

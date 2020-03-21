@@ -148,9 +148,9 @@
     } else {
         //有缓存 或者model中多个接口请求，部分请求正常
         [self reloadData];
-        if ([model.result isKindOfClass:[WCDataResult class]]) {
-            [DTPubUtil showHUDErrorHintInWindow:model.result.msg];
-        }
+    }
+    if ([model.result isKindOfClass:[WCDataResult class]]) {
+        [DTPubUtil showHUDErrorHintInWindow:model.result.msg];
     }
 }
 

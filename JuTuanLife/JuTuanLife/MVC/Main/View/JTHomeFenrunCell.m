@@ -28,7 +28,7 @@
     if (self) {
         //24 * 24, 6 7 8 7
         UIImage *image = [[UIImage imageNamed:@"login_auth_bg"] resizableImageWithCapInsets:UIEdgeInsetsMake(12, 12, 11, 11)];
-        UICREATEImageTo(_bodyView, UIImageView, 9, 6, self.contentView.width - 18, self.contentView.height - 14, AAWH, CCFill, image, self.contentView);
+        UICREATEImageTo(_bodyView, UIImageView, 9, 0, self.contentView.width - 18, self.contentView.height, AAWH, CCFill, image, self.contentView);
         _bodyView.userInteractionEnabled = YES;
         
         //64 + 352 + 64 + 40 = 64 + 20 + 176
@@ -43,10 +43,10 @@
         
         UICREATELabel2To(_fenRunLabel, UILabel, _dateLabel.left, _dateLabel.bottom, _dateLabel.width, 50, AAW, TTCenter, nil, @"32", @"000000", _bodyView);
         
-        UICREATELabel2To(_detailLabel, UILabel, _dateLabel.left, _fenRunLabel.bottom + 6, _dateLabel.width, 30, AAW, TTCenter, nil, @"16", @"333333", _bodyView);
+        UICREATELabel2To(_detailLabel, UILabel, _dateLabel.left, _fenRunLabel.bottom + 10, _dateLabel.width, 30, AAW, TTCenter, nil, @"16", @"333333", _bodyView);
         
         [self setSelectionStyleClear];
-        
+
 //        [self.contentView showSubView];
     }
     return self;
@@ -85,6 +85,18 @@
         index = 0;
     }
     _tabBar.selectIndex = index;
+    
+    if (index < _itemList.count) {
+        self.item = [_itemList safeObjectAtIndex:index];
+    }
+}
+
+- (void)setItemList:(NSArray *)itemList
+{
+    _itemList = itemList;
+    if (itemList.count) {
+        self.period = _period;
+    }
 }
 
 - (void)setItem:(JTFenRunOverItem *)item
@@ -99,11 +111,10 @@
 
 - (void)tabBarViewDidSelectIndex:(NSInteger)index
 {
-    _period = [[_fenrunPeriods safeObjectAtIndex:index] integerValue];
-    self.item = _item;
-//    if (self.delegate && [self.delegate respondsToSelector:@selector(tabBarViewDidSelectIndex:)]) {
-//        [self.delegate tabBarViewDidSelectIndex:index];
-//    }
+    self.period = [[_fenrunPeriods safeObjectAtIndex:index] integerValue];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(tabBarViewDidSelectIndex:)]) {
+        [self.delegate tabBarViewDidSelectIndex:index];
+    }
 }
 
 - (void)awakeFromNib {
@@ -119,7 +130,7 @@
 
 + (CGFloat)cellHeightWithItem:(id)item tableView:(UITableView *)tableView
 {
-    return 200;
+    return 198;
 }
 
 @end

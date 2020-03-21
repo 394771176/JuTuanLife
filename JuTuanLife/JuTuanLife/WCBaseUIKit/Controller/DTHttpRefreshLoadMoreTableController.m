@@ -32,10 +32,10 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    
     _loadMoreCell = [self createLoadMoreCell];
     _loadMoreCell.delegate = self;
+    
+    [super viewDidLoad];
 }
 
 - (DTLoadMoreCommonCell *)createLoadMoreCell

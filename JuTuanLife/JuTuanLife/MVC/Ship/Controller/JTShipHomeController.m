@@ -146,7 +146,6 @@
     } else {
         self.tableView.tableHeaderView = _headerSearchView;
     }
-    self.tableSourceData = [self setupTableSourceData];
     [super reloadData];
 }
 

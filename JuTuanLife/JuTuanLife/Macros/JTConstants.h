@@ -41,4 +41,9 @@
 #define APP_JT_GRAY_BGSTRING              @"#F9F9F9"
 #define APP_JT_GRAY_BGCOLOR               COLORS(APP_JT_GRAY_BGSTRING)
 
+#pragma mark - Notification KEY
+
+#define JTUIApplicationWillEnterForegroundNotification  @"JT_UIApplicationWillEnterForegroundNotification"
+#define JTUIApplicationDidEnterBackgroundNotification   @"JT_UIApplicationDidEnterBackgroundNotification"
+
 #endif /* JTConstants_h */

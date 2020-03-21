@@ -10,4 +10,30 @@
 
 @implementation JTFenRunModel
 
+- (NSString *)cacheKey
+{
+    return @"JTFenRunModel_cacheKey";
+}
+
+- (WCDataResult *)loadData
+{
+    NSString *date = nil;
+    if (_period >= JTFenRunPeriodFixDay) {
+        date = self.selectedDate;
+    }
+    WCDataResult *result = [JTService sync:[JTUserRequest get_commission_stats:_period date:date pos:self.pos pageSize:self.fetchLimit]];
+    return [self cacheResult:result];
+}
+
+- (id)parseData:(id)data
+{
+    [super parseData:data];
+    
+    if (self.isReload || self.isLoadCache) {
+        self.fenrun = [JTFenRunOverItem itemFromDict:data];
+    }
+    
+    return [JTShipItem itemsFromDict:data forKey:@"personalCommStats"];
+}
+
 @end

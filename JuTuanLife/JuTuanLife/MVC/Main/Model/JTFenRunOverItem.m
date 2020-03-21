@@ -10,44 +10,55 @@
 
 @implementation JTFenRunOverItem
 
-+ (NSDictionary<NSString *,id> *)modelContainerPropertyGenericClass
-{
-    return @{@"personalCommStats" : [JTShipItem class]};
-}
+//+ (NSDictionary<NSString *,id> *)modelContainerPropertyGenericClass
+//{
+//    return @{@"personalCommStats" : [JTShipItem class]};
+//}
 
 - (NSString *)dateStrForPeriod:(JTFenRunPeriod)period
 {
-    switch (period) {
-        case JTFenRunPeriodYesterday:
-        case JTFenRunPeriodFixDay:
-            return [JTCoreUtil showDateWith:self.dateFrom];
-            break;
-        case JTFenRunPeriodMonth:
-        case JTFenRunPeriodFixMonth:
-        {
-            return [JTCoreUtil showDateWith:self.dateFrom];
-        }
-            break;
-        case JTFenRunPeriodYear:
-        case JTFenRunPeriodFixYear:
-        {
-            return [JTCoreUtil showDateWith:self.dateFrom];
-        }
-            break;
-        case JTFenRunPeriodWeek:
-        {
+    if (self.dateFrom && self.dateTo) {
+        if (![self.dateFrom isEqualToString:self.dateTo]) {
             return [NSString stringWithFormat:@"%@ - %@", self.dateFrom, self.dateTo];
         }
-            break;
-        case JTFenRunPeriodQuarter:
-        {
-            return [NSString stringWithFormat:@"%@ - %@", self.dateFrom, self.dateTo];
-        }
-            break;
-        default:
-            break;
     }
-    return [JTCoreUtil showDateWith:self.dateFrom];
+    if (self.dateFrom) {
+        return self.dateFrom;
+    } else if (self.dateTo) {
+        return self.dateTo;
+    }
+    return nil;
+//    switch (period) {
+//        case JTFenRunPeriodYesterday:
+//        case JTFenRunPeriodFixDay:
+//            return [JTCoreUtil showDateWith:self.dateFrom];
+//            break;
+//        case JTFenRunPeriodMonth:
+//        case JTFenRunPeriodFixMonth:
+//        {
+//            return [JTCoreUtil showDateWith:self.dateFrom];
+//        }
+//            break;
+//        case JTFenRunPeriodYear:
+//        case JTFenRunPeriodFixYear:
+//        {
+//            return [JTCoreUtil showDateWith:self.dateFrom];
+//        }
+//            break;
+//        case JTFenRunPeriodWeek:
+//        {
+//            return [NSString stringWithFormat:@"%@ - %@", self.dateFrom, self.dateTo];
+//        }
+//            break;
+//        case JTFenRunPeriodQuarter:
+//        {
+//            return [NSString stringWithFormat:@"%@ - %@", self.dateFrom, self.dateTo];
+//        }
+//            break;
+//        default:
+//            break;
+//    }
+//    return [JTCoreUtil showDateWith:self.dateFrom];
 }
 
 + (NSString *)titleForPeriod:(JTFenRunPeriod)period

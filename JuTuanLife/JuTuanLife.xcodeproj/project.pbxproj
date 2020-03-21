@@ -16,6 +16,9 @@
 		60386ACB2425232C00B7C0BD /* DTWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60386ACA2425232C00B7C0BD /* DTWebViewController.m */; };
 		60386C5A2425307A00B7C0BD /* WCWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60386C592425307A00B7C0BD /* WCWKWebView.m */; };
 		60386C5D2425E95C00B7C0BD /* WCLinkUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 60386C5C2425E95C00B7C0BD /* WCLinkUtil.m */; };
+		60386C5F24266A7300B7C0BD /* message_center_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60386C5E24266A7300B7C0BD /* message_center_icon@2x.png */; };
+		60386C6224266A8F00B7C0BD /* JTMessageBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 60386C6124266A8F00B7C0BD /* JTMessageBtn.m */; };
+		60386C652426798B00B7C0BD /* JTMessageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 60386C642426798B00B7C0BD /* JTMessageItem.m */; };
 		603F9863241E18D200523CBD /* DTShareUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 603F9862241E18D200523CBD /* DTShareUtil.m */; };
 		603F9866241E18F300523CBD /* DTShareItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 603F9865241E18F300523CBD /* DTShareItem.m */; };
 		603F9869241E191100523CBD /* DTShareChannelItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 603F9868241E191100523CBD /* DTShareChannelItem.m */; };
@@ -257,6 +260,11 @@
 		60386C592425307A00B7C0BD /* WCWKWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCWKWebView.m; sourceTree = "<group>"; };
 		60386C5B2425E95C00B7C0BD /* WCLinkUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCLinkUtil.h; sourceTree = "<group>"; };
 		60386C5C2425E95C00B7C0BD /* WCLinkUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCLinkUtil.m; sourceTree = "<group>"; };
+		60386C5E24266A7300B7C0BD /* message_center_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "message_center_icon@2x.png"; sourceTree = "<group>"; };
+		60386C6024266A8F00B7C0BD /* JTMessageBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTMessageBtn.h; sourceTree = "<group>"; };
+		60386C6124266A8F00B7C0BD /* JTMessageBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTMessageBtn.m; sourceTree = "<group>"; };
+		60386C632426798B00B7C0BD /* JTMessageItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTMessageItem.h; sourceTree = "<group>"; };
+		60386C642426798B00B7C0BD /* JTMessageItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTMessageItem.m; sourceTree = "<group>"; };
 		603F9861241E18D200523CBD /* DTShareUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTShareUtil.h; sourceTree = "<group>"; };
 		603F9862241E18D200523CBD /* DTShareUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTShareUtil.m; sourceTree = "<group>"; };
 		603F9864241E18F300523CBD /* DTShareItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTShareItem.h; sourceTree = "<group>"; };
@@ -1238,6 +1246,8 @@
 			children = (
 				60B939CD2414D104003147DC /* JTMessageListModel.h */,
 				60B939CE2414D104003147DC /* JTMessageListModel.m */,
+				60386C632426798B00B7C0BD /* JTMessageItem.h */,
+				60386C642426798B00B7C0BD /* JTMessageItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1245,6 +1255,8 @@
 		60B939C52414D06E003147DC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				60386C6024266A8F00B7C0BD /* JTMessageBtn.h */,
+				60386C6124266A8F00B7C0BD /* JTMessageBtn.m */,
 				60B939CA2414D0E8003147DC /* JTMessageListCell.h */,
 				60B939CB2414D0E8003147DC /* JTMessageListCell.m */,
 			);
@@ -1254,6 +1266,7 @@
 		60B939C62414D06E003147DC /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				60386C5E24266A7300B7C0BD /* message_center_icon@2x.png */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -1597,6 +1610,7 @@
 				603F99F6241E646A00523CBD /* dt_share_wxfav@2x.png in Resources */,
 				606FE72024101DE700522B96 /* nav_icon_store@2x.png in Resources */,
 				606FE71924101DE700522B96 /* nav_message@2x.png in Resources */,
+				60386C5F24266A7300B7C0BD /* message_center_icon@2x.png in Resources */,
 				60DF0F0B242289C400BB0F88 /* driving_loading9@2x.png in Resources */,
 				603F99F2241E646A00523CBD /* dt_share_txqq_c@2x.png in Resources */,
 				60B939A82413E465003147DC /* user_home_jutui@2x.png in Resources */,
@@ -1794,6 +1808,7 @@
 				60E2B0FF240ED5D800E4EA52 /* DTLoadMoreCommonCell.m in Sources */,
 				60B939C12414D041003147DC /* JTTaskHomeController.m in Sources */,
 				60E2B0FE240ED5D800E4EA52 /* BPOnePixLineView.m in Sources */,
+				60386C6224266A8F00B7C0BD /* JTMessageBtn.m in Sources */,
 				60E2B10A240ED5D800E4EA52 /* DTBadgeView.m in Sources */,
 				60E2B119240ED5D800E4EA52 /* DTTitleIconItem.m in Sources */,
 				603F99DC241E2F4600523CBD /* FFWechatManager.m in Sources */,
@@ -1819,6 +1834,7 @@
 				60ECA79A241D1E9C0029C45A /* JTShipItem.m in Sources */,
 				60E2B113240ED5D800E4EA52 /* DTTableCustomCell.m in Sources */,
 				606FE782241172EA00522B96 /* JTLoginProtorolCell.m in Sources */,
+				60386C652426798B00B7C0BD /* JTMessageItem.m in Sources */,
 				606FE7942412C2CB00522B96 /* DTTableIconCell.m in Sources */,
 				60E2B110240ED5D800E4EA52 /* DTPickerView.m in Sources */,
 				606FE736241157ED00522B96 /* JTUserRequest.m in Sources */,

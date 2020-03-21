@@ -11,11 +11,15 @@
 #import "JTHomeFenrunCell.h"
 #import "JTHomeBusinessCell.h"
 #import "JTHomeListModel.h"
+#import "JTFenrunController.h"
+#import "JTMessageBtn.h"
 
 @interface JTHomeController () <DTTabBarViewDelegate> {
     JTMineHeaderView *_headerView;
     
     JTHomeFenrunCell *_fenrunCell;
+    
+    JTMessageBtn *_messageBtn;
 }
 
 @end
@@ -35,6 +39,9 @@
     if (!_headerView) {
         UICREATETo(_headerView, JTMineHeaderView, 0, 0, self.width, 155 + SAFE_BOTTOM_VIEW_HEIGHT, AAW, nil);
         self.tableView.tableHeaderView = _headerView;
+        
+        UICREATEBtnImgTo(_messageBtn, JTMessageBtn, _headerView.width - 40 - 15, _headerView.headerView.top - 5, 40, 40, AAL, nil, nil, nil, self);
+        [_messageBtn updateMessageCount];
     }
 }
 
@@ -48,8 +55,7 @@
 - (void)reloadTableView
 {
     _headerView.user = [JTUserManager sharedInstance].user;
-    _fenrunCell.item = [self.Model fenrun];
-    self.tableSourceData = [self setupTableSourceData];
+    _fenrunCell.itemList = [self.Model fenrunForAll];
     [super reloadTableView];
 }
 
@@ -65,7 +71,7 @@
     
     WCTableRow *row = [WCTableRow rowWithItem:_fenrunCell cellClass:[JTHomeFenrunCell class]];
     row.clickBlock = ^(id data, NSIndexPath *indexPath) {
-        NSLog(@"%@", data);
+        PUSH_VC_WITH(JTFenrunController, vc.fenrunForAll = [self.Model fenrunForAll]);
     };
     [source addRowItem:row];
     
@@ -83,6 +89,8 @@
     
     return source;
 }
+
+#pragma mark - action
 
 #pragma mark - DTTabBarViewDelegate
 

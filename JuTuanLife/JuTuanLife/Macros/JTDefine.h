@@ -25,9 +25,18 @@ UIViewController *vc = [[_xxx_ alloc] init]; \
 [WCControllerUtil pushViewController:vc]; \
 }
 
+#define PUSH_VC_WITH(_xxx_, _block_)  \
+{ \
+_xxx_ *vc = [[_xxx_ alloc] init]; \
+{ \
+_block_; \
+} \
+[WCControllerUtil pushViewController:vc]; \
+}
+
 #define PRESENT_VC(_xxx_)  \
 { \
-UIViewController *vc = [[_xxx_ alloc] init]; \
+_xxx_ *vc = [[_xxx_ alloc] init]; \
 [WCControllerUtil presentViewController:vc]; \
 }
 

@@ -9,13 +9,13 @@
 #import "JTRequest.h"
 #import "JTUserManager.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface JTUserRequest : JTRequest
 
 //MARK: - base
 
 + (JTRequest *)getBaseConfig;
++ (JTRequest *)getShareInfo;
+
 
 //MARK: - login
 
@@ -30,12 +30,13 @@ NS_ASSUME_NONNULL_BEGIN
 + (JTRequest *)sign_contracts:(NSArray *)array;
 
 + (JTRequest *)get_business_list;
-+ (JTRequest *)get_commission_stats:(NSInteger)period;
++ (JTRequest *)get_all_commission_stats;
++ (JTRequest *)get_commission_stats:(NSInteger)period date:(NSString *)date pos:(NSString *)pos pageSize:(NSInteger)pageSize;
 
 + (JTRequest *)getShipList:(NSString *)pos pageSize:(NSInteger)pageSize;
 
-+ (JTRequest *)getShareInfo;
+//MARK: - Message
++ (JTRequest *)unread_msg_num;
++ (JTRequest *)user_msg_list:(NSString *)pos pageSize:(NSInteger)pageSize;
 
 @end
-
-NS_ASSUME_NONNULL_END

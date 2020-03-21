@@ -6,12 +6,9 @@
 //  Copyright © 2020 cheng. All rights reserved.
 //
 
-#import <WCModel/DTListDataModel.h>
+#import "JTPosListDataModel.h"
+#import "JTMessageItem.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
-@interface JTMessageListModel : DTListDataModel
+@interface JTMessageListModel : JTPosListDataModel
 
 @end
-
-NS_ASSUME_NONNULL_END

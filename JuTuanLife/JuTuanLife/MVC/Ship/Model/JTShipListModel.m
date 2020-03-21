@@ -8,13 +8,11 @@
 
 #import "JTShipListModel.h"
 
-KEY(JTShipListModel_cacheKey)
-
 @implementation JTShipListModel
 
 - (NSString *)cacheKey
 {
-    return JTShipListModel_cacheKey;
+    return @"JTShipListModel_cacheKey";
 }
 
 - (NSString *)trait

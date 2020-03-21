@@ -52,8 +52,6 @@
 {
     [super viewDidLoad];
 
-    self.tableSourceData = [self setupTableSourceData];
-    
 //    _tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:self.tableViewStyle];
     _tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -84,6 +82,10 @@
 
 - (void)reloadTableView
 {
+    if (self.tableSourceData) {
+        [self.tableSourceData clearDataSource];
+    }
+    self.tableSourceData = [self setupTableSourceData];
     [self.tableView reloadData];
 }
 

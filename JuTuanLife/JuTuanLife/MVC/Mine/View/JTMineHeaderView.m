@@ -7,10 +7,9 @@
 //
 
 #import "JTMineHeaderView.h"
-#import "JTUserHeaderView.h"
 
 @interface JTMineHeaderView () {
-    JTUserHeaderView *_headerView;
+//    JTUserHeaderView *_headerView;
 }
 
 @end

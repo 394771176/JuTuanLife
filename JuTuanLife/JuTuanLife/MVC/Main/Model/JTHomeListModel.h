@@ -13,6 +13,7 @@
 @interface JTHomeListModel : DTListDataModel
 
 @property (nonatomic, assign) JTFenRunPeriod period;
-@property (nonatomic, strong) JTFenRunOverItem *fenrun;
+//@property (nonatomic, strong) JTFenRunOverItem *fenrun;
+@property (nonatomic, strong) NSArray *fenrunForAll;//针对首页，各种类型的分润
 
 @end
