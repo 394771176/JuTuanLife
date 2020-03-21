@@ -8,12 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface JTLinkUtil : NSObject
-
-+ (DTViewController *)getControllerWithLink:(NSString *)link;
-
-+ (void)openLink:(NSString *)link;
-
-+ (BOOL)handleOpenURL:(NSURL *)url;
+@interface JTLinkUtil : WCLinkUtil
 
 @end

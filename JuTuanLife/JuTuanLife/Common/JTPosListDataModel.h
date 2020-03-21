@@ -7,7 +7,6 @@
 //
 
 #import <WCModel/WCModel.h>
-#import <WCModel/DTPosListDataModel.h>
 
 @interface JTPosListDataModel : DTPosListDataModel
 

@@ -18,7 +18,6 @@ KEY(JTHomeListModel_cacheKey_fenrun)
     return JTHomeListModel_cacheKey;
 }
 
-
 - (NSString *)cacheKeyFenrun
 {
     return [NSString stringWithFormat:@"%@_%zd", JTHomeListModel_cacheKey_fenrun, _period];
@@ -29,6 +28,10 @@ KEY(JTHomeListModel_cacheKey_fenrun)
     WCDataResult *result = [[BPCacheManager sharedInstance] cacheForKey:[self cacheKeyFenrun]];
     [self parseFenrunData:result.data];
     [super loadCache];
+    
+    if (self.data) {
+        NSLog(@"%zd = %@", self.itemCount, self.data);
+    }
 }
 
 - (NSString *)trait

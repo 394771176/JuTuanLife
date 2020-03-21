@@ -43,9 +43,11 @@
         
         UICREATELabel2To(_fenRunLabel, UILabel, _dateLabel.left, _dateLabel.bottom, _dateLabel.width, 50, AAW, TTCenter, nil, @"32", @"000000", _bodyView);
         
-        UICREATELabel2To(_detailLabel, UILabel, _dateLabel.left, _fenRunLabel.bottom + 8, _dateLabel.width, 30, AAW, TTCenter, nil, @"16", @"333333", _bodyView);
+        UICREATELabel2To(_detailLabel, UILabel, _dateLabel.left, _fenRunLabel.bottom + 6, _dateLabel.width, 30, AAW, TTCenter, nil, @"16", @"333333", _bodyView);
         
         [self setSelectionStyleClear];
+        
+//        [self.contentView showSubView];
     }
     return self;
 }
@@ -53,7 +55,7 @@
 - (UIImageView *)createArrowImage
 {
     UIImageView *v = [super createArrowImage];
-    v.frame = CGRectMake(_bodyView.width - (self.contentView.width - v.right) - v.width - 7, _fenRunLabel.top, v.width, _fenRunLabel.height);
+    v.frame = CGRectMake(_bodyView.right - (self.contentView.width - v.right) - v.width - 7, _fenRunLabel.top + _bodyView.top, v.width, _fenRunLabel.height);
     v.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
     return v;
 }
@@ -88,7 +90,7 @@
 - (void)setItem:(JTFenRunOverItem *)item
 {
     _item = item;
-    _dateLabel.text = [NSString stringWithFormat:@"%@ - %@", [JTCoreUtil showDateWith:item.dateFrom], [JTCoreUtil showDateWith:item.dateTo]];
+    _dateLabel.text = [item dateStrForPeriod:_period];
     _fenRunLabel.text = [NSString stringWithFormat:@"%.2f", item.totalCommAmt];
     _detailLabel.text = [NSString stringWithFormat:@"%.2f（自己）+ %.2f（徒弟/孙）", item.myCommAmt, item.descendantCommAmt];
 }
@@ -97,7 +99,11 @@
 
 - (void)tabBarViewDidSelectIndex:(NSInteger)index
 {
-    [DTPubUtil sendTagert:self.delegate action:@selector(tabBarViewDidSelectIndex:) object:@(index)];
+    _period = [[_fenrunPeriods safeObjectAtIndex:index] integerValue];
+    self.item = _item;
+//    if (self.delegate && [self.delegate respondsToSelector:@selector(tabBarViewDidSelectIndex:)]) {
+//        [self.delegate tabBarViewDidSelectIndex:index];
+//    }
 }
 
 - (void)awakeFromNib {
@@ -113,7 +119,7 @@
 
 + (CGFloat)cellHeightWithItem:(id)item tableView:(UITableView *)tableView
 {
-    return 204;
+    return 200;
 }
 
 @end

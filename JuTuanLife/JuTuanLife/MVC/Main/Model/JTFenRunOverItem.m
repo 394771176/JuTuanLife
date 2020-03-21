@@ -15,6 +15,41 @@
     return @{@"personalCommStats" : [JTShipItem class]};
 }
 
+- (NSString *)dateStrForPeriod:(JTFenRunPeriod)period
+{
+    switch (period) {
+        case JTFenRunPeriodYesterday:
+        case JTFenRunPeriodFixDay:
+            return [JTCoreUtil showDateWith:self.dateFrom];
+            break;
+        case JTFenRunPeriodMonth:
+        case JTFenRunPeriodFixMonth:
+        {
+            return [JTCoreUtil showDateWith:self.dateFrom];
+        }
+            break;
+        case JTFenRunPeriodYear:
+        case JTFenRunPeriodFixYear:
+        {
+            return [JTCoreUtil showDateWith:self.dateFrom];
+        }
+            break;
+        case JTFenRunPeriodWeek:
+        {
+            return [NSString stringWithFormat:@"%@ - %@", self.dateFrom, self.dateTo];
+        }
+            break;
+        case JTFenRunPeriodQuarter:
+        {
+            return [NSString stringWithFormat:@"%@ - %@", self.dateFrom, self.dateTo];
+        }
+            break;
+        default:
+            break;
+    }
+    return [JTCoreUtil showDateWith:self.dateFrom];
+}
+
 + (NSString *)titleForPeriod:(JTFenRunPeriod)period
 {
     switch (period) {

@@ -52,7 +52,7 @@
 - (instancetype)initWithTableStyle:(UITableViewStyle)tableViewStyle;
 
 // 无数据情况
-- (void)showNoDataViewWithType:(int)type msg:(NSString *)msg gifImageName:(NSString *)gifName btnTitle:(NSString *)btnTitle;
+//- (void)showNoDataViewWithType:(int)type msg:(NSString *)msg gifImageName:(NSString *)gifName btnTitle:(NSString *)btnTitle;
 - (void)showNoDataViewWithType:(int)type msg:(NSString *)msg image:(UIImage *)image;
 - (void)showNoDataViewWithTop:(float)top msg:(NSString *)msg image:(UIImage *)image;
 - (void)showNoDataView;
@@ -63,7 +63,5 @@
 
 - (BOOL)isViewRealAppear;
 - (void)didViewRealAppear;
-
-- (CGFloat)tableHeightForIndexPath:(NSIndexPath *)indexPath;
 
 @end

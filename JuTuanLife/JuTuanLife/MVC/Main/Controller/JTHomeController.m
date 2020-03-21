@@ -27,7 +27,7 @@
     
     [self setupTableHeader];
     
-    [self reloadTableView];
+    [self reloadData];
 }
 
 - (void)setupTableHeader
@@ -71,7 +71,7 @@
     
     WCTableSection *section = [WCTableSection sectionWithItems:self.dataModel.data cellClass:[JTHomeBusinessCell class]];
     [section setConfigBlock:nil clickBlock:^(JTBusinessItem *data, NSIndexPath *indexPath) {
-        [JTLinkUtil openLink:data.entryUrl];
+        [JTLinkUtil openWithLink:data.entryUrl];
     }];
     section.headerBlock = ^UIView *(NSInteger section) {
         UIView *view = [WCTableSection tableView:self.tableView headerFooterViewWithHeight:50];

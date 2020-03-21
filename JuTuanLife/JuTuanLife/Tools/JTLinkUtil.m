@@ -11,22 +11,6 @@
 
 @implementation JTLinkUtil
 
-+ (DTViewController *)getControllerWithLink:(NSString *)link
-{
-    return nil;
-}
 
-+ (void)openLink:(NSString *)link
-{
-    DTViewController *vc = [self getControllerWithLink:link];
-    if (vc) {
-        [JTCommon pushViewController:vc];
-    }
-}
-
-+ (BOOL)handleOpenURL:(NSURL *)url
-{
-    return NO;
-}
 
 @end

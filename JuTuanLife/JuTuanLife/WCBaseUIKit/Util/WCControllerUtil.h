@@ -32,6 +32,8 @@
 
 + (void)pushViewController:(UIViewController *)controller;
 
++ (void)pushViewController:(UIViewController *)controller popOne:(BOOL)popOne;
+
 + (void)presentViewController:(UIViewController *)controller;
 
 @end

@@ -30,6 +30,7 @@
 #import "WCMethodUtil.h"
 #import "WCAppStyleUtil.h"
 #import "WCControllerUtil.h"
+#import "WCLinkUtil.h"
 #import "WCBarItemUtil.h"
 #import "CWStaticImageManager.h"
 
@@ -44,11 +45,5 @@
 
 #define APP_CONST_PINK_STRING                @"fc3670"
 #define APP_CONST_PINK_COLOR                 [UIColor colorWithHexString:APP_CONST_PINK_STRING]      // 粉色
-
-#pragma mark - block
-
-typedef void (^DTVoidBlock)(void);
-typedef void (^DTCommonBlock)(id userInfo);
-typedef void (^DTIntBlock)(NSInteger num);
 
 #endif /* WCHeader_h */

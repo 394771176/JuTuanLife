@@ -7,6 +7,12 @@
 
 #import <Foundation/Foundation.h>
 
+#pragma mark - block
+
+typedef void (^DTVoidBlock)(void);
+typedef void (^DTCommonBlock)(id userInfo);
+typedef void (^DTIntBlock)(NSInteger num);
+
 @interface DTPubUtil : NSObject
 
 #pragma mark - Device

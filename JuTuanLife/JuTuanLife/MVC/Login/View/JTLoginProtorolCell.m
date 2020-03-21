@@ -53,7 +53,7 @@
 
 - (void)clickAction
 {
-    [JTLinkUtil openLink:_item.contentUrl];
+    [JTLinkUtil openWithLink:_item.contentUrl];
 //    [DTPubUtil sendTagert:self.delegate action:@selector(tableButtonCellDidClickAction:) object:self];
 }
 

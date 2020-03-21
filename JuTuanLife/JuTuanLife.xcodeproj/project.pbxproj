@@ -11,6 +11,11 @@
 		6001C780240EB6C4006092BB /* JTUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001C77F240EB6C4006092BB /* JTUserManager.m */; };
 		6001C784240EB6FD006092BB /* JTCoreUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001C783240EB6FD006092BB /* JTCoreUtil.m */; };
 		6001C788240EB738006092BB /* JTCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001C787240EB738006092BB /* JTCommon.m */; };
+		60386AC5242522AA00B7C0BD /* JTFenrunController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60386AC4242522AA00B7C0BD /* JTFenrunController.m */; };
+		60386AC8242522D200B7C0BD /* JTFenRunModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60386AC7242522D200B7C0BD /* JTFenRunModel.m */; };
+		60386ACB2425232C00B7C0BD /* DTWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60386ACA2425232C00B7C0BD /* DTWebViewController.m */; };
+		60386C5A2425307A00B7C0BD /* WCWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60386C592425307A00B7C0BD /* WCWKWebView.m */; };
+		60386C5D2425E95C00B7C0BD /* WCLinkUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 60386C5C2425E95C00B7C0BD /* WCLinkUtil.m */; };
 		603F9863241E18D200523CBD /* DTShareUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 603F9862241E18D200523CBD /* DTShareUtil.m */; };
 		603F9866241E18F300523CBD /* DTShareItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 603F9865241E18F300523CBD /* DTShareItem.m */; };
 		603F9869241E191100523CBD /* DTShareChannelItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 603F9868241E191100523CBD /* DTShareChannelItem.m */; };
@@ -162,6 +167,7 @@
 		60DF0F112423C75C00BB0F88 /* JTHomeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60DF0F102423C75C00BB0F88 /* JTHomeListModel.m */; };
 		60DF0F142423D05B00BB0F88 /* JTFenRunOverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60DF0F132423D05B00BB0F88 /* JTFenRunOverView.m */; };
 		60DF0F172423D0E500BB0F88 /* JTFenRunOverItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 60DF0F162423D0E500BB0F88 /* JTFenRunOverItem.m */; };
+		60DF0F3924251D6D00BB0F88 /* UIView+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = 60DF0F3824251D6D00BB0F88 /* UIView+Debug.m */; };
 		60E2B0FD240ED5D800E4EA52 /* CCCommentStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B09F240ED5D800E4EA52 /* CCCommentStarView.m */; };
 		60E2B0FE240ED5D800E4EA52 /* BPOnePixLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0A2240ED5D800E4EA52 /* BPOnePixLineView.m */; };
 		60E2B0FF240ED5D800E4EA52 /* DTLoadMoreCommonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0A5240ED5D800E4EA52 /* DTLoadMoreCommonCell.m */; };
@@ -241,6 +247,16 @@
 		6001C786240EB738006092BB /* JTCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTCommon.h; sourceTree = "<group>"; };
 		6001C787240EB738006092BB /* JTCommon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTCommon.m; sourceTree = "<group>"; };
 		6001C7A0240EBA1D006092BB /* JuTuanLife-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JuTuanLife-Prefix.pch"; sourceTree = "<group>"; };
+		60386AC3242522AA00B7C0BD /* JTFenrunController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTFenrunController.h; sourceTree = "<group>"; };
+		60386AC4242522AA00B7C0BD /* JTFenrunController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTFenrunController.m; sourceTree = "<group>"; };
+		60386AC6242522D200B7C0BD /* JTFenRunModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTFenRunModel.h; sourceTree = "<group>"; };
+		60386AC7242522D200B7C0BD /* JTFenRunModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTFenRunModel.m; sourceTree = "<group>"; };
+		60386AC92425232C00B7C0BD /* DTWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTWebViewController.h; sourceTree = "<group>"; };
+		60386ACA2425232C00B7C0BD /* DTWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTWebViewController.m; sourceTree = "<group>"; };
+		60386C582425307A00B7C0BD /* WCWKWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCWKWebView.h; sourceTree = "<group>"; };
+		60386C592425307A00B7C0BD /* WCWKWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCWKWebView.m; sourceTree = "<group>"; };
+		60386C5B2425E95C00B7C0BD /* WCLinkUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCLinkUtil.h; sourceTree = "<group>"; };
+		60386C5C2425E95C00B7C0BD /* WCLinkUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCLinkUtil.m; sourceTree = "<group>"; };
 		603F9861241E18D200523CBD /* DTShareUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTShareUtil.h; sourceTree = "<group>"; };
 		603F9862241E18D200523CBD /* DTShareUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTShareUtil.m; sourceTree = "<group>"; };
 		603F9864241E18F300523CBD /* DTShareItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTShareItem.h; sourceTree = "<group>"; };
@@ -462,6 +478,9 @@
 		60DF0F132423D05B00BB0F88 /* JTFenRunOverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTFenRunOverView.m; sourceTree = "<group>"; };
 		60DF0F152423D0E500BB0F88 /* JTFenRunOverItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTFenRunOverItem.h; sourceTree = "<group>"; };
 		60DF0F162423D0E500BB0F88 /* JTFenRunOverItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTFenRunOverItem.m; sourceTree = "<group>"; };
+		60DF0F3724251D6D00BB0F88 /* UIView+Debug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Debug.h"; sourceTree = "<group>"; };
+		60DF0F3824251D6D00BB0F88 /* UIView+Debug.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Debug.m"; sourceTree = "<group>"; };
+		60DF0F3A24251E3100BB0F88 /* WCDebugKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCDebugKit.h; sourceTree = "<group>"; };
 		60E2B09A240ED5D800E4EA52 /* WCBaseUIKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCBaseUIKit.h; sourceTree = "<group>"; };
 		60E2B09C240ED5D800E4EA52 /* DTScrollLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTScrollLabel.h; sourceTree = "<group>"; };
 		60E2B09D240ED5D800E4EA52 /* DTGradientLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTGradientLabel.h; sourceTree = "<group>"; };
@@ -642,6 +661,7 @@
 		6001C781240EB6E7006092BB /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				60DF0F3624251D4700BB0F88 /* WCDebugKit */,
 				603F9860241E18AC00523CBD /* ShareKit */,
 				606FE7B02413809300522B96 /* SourcesTable */,
 				6001C782240EB6FD006092BB /* JTCoreUtil.h */,
@@ -672,6 +692,7 @@
 		6001C789240EB755006092BB /* MVC */ = {
 			isa = PBXGroup;
 			children = (
+				60386A68242521FD00B7C0BD /* Fenrun */,
 				6001C791240EB755006092BB /* Main */,
 				60B939B72414D01B003147DC /* Ship */,
 				60B939B22414D01B003147DC /* Task */,
@@ -840,6 +861,60 @@
 			name = Base;
 			sourceTree = "<group>";
 		};
+		60386A68242521FD00B7C0BD /* Fenrun */ = {
+			isa = PBXGroup;
+			children = (
+				60386AC12425226500B7C0BD /* Controller */,
+				60386ABF2425226500B7C0BD /* Model */,
+				60386AC02425226500B7C0BD /* Resource */,
+				60386AC22425226500B7C0BD /* View */,
+			);
+			path = Fenrun;
+			sourceTree = "<group>";
+		};
+		60386ABF2425226500B7C0BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				60386AC6242522D200B7C0BD /* JTFenRunModel.h */,
+				60386AC7242522D200B7C0BD /* JTFenRunModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		60386AC02425226500B7C0BD /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		60386AC12425226500B7C0BD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				60386AC3242522AA00B7C0BD /* JTFenrunController.h */,
+				60386AC4242522AA00B7C0BD /* JTFenrunController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		60386AC22425226500B7C0BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		60386C392425302F00B7C0BD /* WebKit */ = {
+			isa = PBXGroup;
+			children = (
+				60386AC92425232C00B7C0BD /* DTWebViewController.h */,
+				60386ACA2425232C00B7C0BD /* DTWebViewController.m */,
+				60386C582425307A00B7C0BD /* WCWKWebView.h */,
+				60386C592425307A00B7C0BD /* WCWKWebView.m */,
+			);
+			path = WebKit;
+			sourceTree = "<group>";
+		};
 		603F9860241E18AC00523CBD /* ShareKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -892,6 +967,7 @@
 		603F9A05241FEB1500523CBD /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				60386C392425302F00B7C0BD /* WebKit */,
 				603F9A06241FEB1F00523CBD /* ImagePicker */,
 			);
 			path = Tools;
@@ -1225,6 +1301,16 @@
 			path = Refresh;
 			sourceTree = "<group>";
 		};
+		60DF0F3624251D4700BB0F88 /* WCDebugKit */ = {
+			isa = PBXGroup;
+			children = (
+				60DF0F3724251D6D00BB0F88 /* UIView+Debug.h */,
+				60DF0F3824251D6D00BB0F88 /* UIView+Debug.m */,
+				60DF0F3A24251E3100BB0F88 /* WCDebugKit.h */,
+			);
+			path = WCDebugKit;
+			sourceTree = "<group>";
+		};
 		60E2B003240ED59900E4EA52 /* WCBaseUIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -1381,6 +1467,8 @@
 				60E2B0F7240ED5D800E4EA52 /* WCMethodUtil.h */,
 				60E2B0EE240ED5D800E4EA52 /* WCMethodUtil.m */,
 				60E2B0F8240ED5D800E4EA52 /* WCUICommon.h */,
+				60386C5B2425E95C00B7C0BD /* WCLinkUtil.h */,
+				60386C5C2425E95C00B7C0BD /* WCLinkUtil.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -1645,6 +1733,8 @@
 				60E2B2B7240FE58100E4EA52 /* BPAppDelegate.m in Sources */,
 				606FE78E2412C29900522B96 /* DTTableContentCell.m in Sources */,
 				60D03C93240FF9F100E7D7D1 /* JTLoginHomeController.m in Sources */,
+				60386ACB2425232C00B7C0BD /* DTWebViewController.m in Sources */,
+				60386AC8242522D200B7C0BD /* JTFenRunModel.m in Sources */,
 				60E2B114240ED5D800E4EA52 /* DTScrollTabView.m in Sources */,
 				607101032417F221009B617E /* JTUserInfoEditController.m in Sources */,
 				606FE72F241149BC00522B96 /* CKOldOpenUDID.m in Sources */,
@@ -1673,6 +1763,7 @@
 				60E2B109240ED5D800E4EA52 /* DTScrollListViewCell.m in Sources */,
 				606FE72E241149BC00522B96 /* CKUDIDManager.m in Sources */,
 				60E2B10E240ED5D800E4EA52 /* DTNoDataView.m in Sources */,
+				60386AC5242522AA00B7C0BD /* JTFenrunController.m in Sources */,
 				60E2B116240ED5D800E4EA52 /* DTPullRefreshHeadView.m in Sources */,
 				60D03C96240FFA9900E7D7D1 /* JTUser.m in Sources */,
 				606FE730241149BC00522B96 /* CKOpenUDID.m in Sources */,
@@ -1685,6 +1776,7 @@
 				60B939DE2414D289003147DC /* JTHomeController.m in Sources */,
 				60E2B103240ED5D800E4EA52 /* CLDatePickerView.m in Sources */,
 				6071FF81241547CB009B617E /* JTMineInfoAvatarCell.m in Sources */,
+				60DF0F3924251D6D00BB0F88 /* UIView+Debug.m in Sources */,
 				60D03C99240FFE9400E7D7D1 /* JTLoginHeaderView.m in Sources */,
 				606FE6F524101CCA00522B96 /* JTLoginForgetController.m in Sources */,
 				6001C788240EB738006092BB /* JTCommon.m in Sources */,
@@ -1746,6 +1838,8 @@
 				60D03C9C2410046600E7D7D1 /* SCLoginTextFieldCell.m in Sources */,
 				606FE7912412C2AD00522B96 /* DTTitleContentCell.m in Sources */,
 				60ECA61F241CEEE20029C45A /* JTHomeFenrunCell.m in Sources */,
+				60386C5A2425307A00B7C0BD /* WCWKWebView.m in Sources */,
+				60386C5D2425E95C00B7C0BD /* WCLinkUtil.m in Sources */,
 				60BDC41C241CEB4C00CEAA56 /* JTUserHeaderView.m in Sources */,
 				606FE73C2411607700522B96 /* JTDataResult.m in Sources */,
 			);

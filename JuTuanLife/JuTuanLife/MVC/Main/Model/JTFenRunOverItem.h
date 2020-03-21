@@ -30,6 +30,8 @@ typedef NS_ENUM(NSUInteger, JTFenRunPeriod) {
 @property (nonatomic, assign) CGFloat descendantCommAmt;
 @property (nonatomic, strong) NSArray<JTShipItem *> *personalCommStats;
 
+- (NSString *)dateStrForPeriod:(JTFenRunPeriod)period;
+
 + (NSString *)titleForPeriod:(JTFenRunPeriod)period;
 
 @end

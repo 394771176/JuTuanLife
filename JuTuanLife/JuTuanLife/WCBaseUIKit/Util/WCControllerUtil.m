@@ -59,10 +59,19 @@
 
 + (void)pushViewController:(UIViewController *)controller
 {
+    [self pushViewController:controller popOne:NO];
+}
+
++ (void)pushViewController:(UIViewController *)controller popOne:(BOOL)popOne
+{
     id top = [self topContainerController];
     if (top && controller) {
         if ([top isKindOfClass:UINavigationController.class]) {
-            [top pushViewController:controller animated:YES];
+            if (popOne) {
+                [top pushViewControllerWithPopOneController:controller];
+            } else {
+                [top pushViewController:controller animated:YES];
+            }
         } else {
             [self presentViewController:controller base:top];
         }
