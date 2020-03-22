@@ -14,11 +14,14 @@
 @interface DTViewController : UIViewController {
     @protected
     DTDrivingLoadingView *_loadingView;
+    
 }
 
 @property (nonatomic) BOOL disableBackBtn;
 @property (nonatomic) BOOL disableBackGesture;
 @property (nonatomic) BOOL hiddenNavBar;
+
+@property (nonatomic, readonly) BOOL hadViewDidAppear;
 
 @property (nonatomic, weak) id superDTController;
 

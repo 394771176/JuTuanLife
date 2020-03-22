@@ -158,7 +158,13 @@
 
 + (JTRequest *)getShipList:(NSString *)pos pageSize:(NSInteger)pageSize
 {
+    return [self getShipList:pos pageSize:pageSize searchText:nil];
+}
+
++ (JTRequest *)getShipList:(NSString *)pos pageSize:(NSInteger)pageSize searchText:(NSString *)searchText
+{
     NSMutableDictionary *params = [self paramsWithPos:pos pageSize:pageSize];
+    [params safeSetObject:searchText forKey:@"searchText"];
     return [self requestWithApi:@"sale/user/master_and_apprentices" params:params];
 }
 

@@ -13,8 +13,6 @@
     NSMutableArray<DTCommonBlock> *_blockListForDidAppear;
 }
 
-@property (nonatomic, assign) BOOL hadViewDidAppear;
-
 @end
 
 @implementation DTViewController

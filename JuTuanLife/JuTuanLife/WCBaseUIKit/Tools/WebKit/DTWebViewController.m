@@ -32,6 +32,9 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    if (!self.hadViewDidAppear) {
+        [self loadRequest];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -41,7 +44,7 @@
 
 - (void)viewDidFirstAppear
 {
-    [self loadRequest];
+//    [self loadRequest];
 }
 
 - (void)viewDidLoad {

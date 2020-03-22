@@ -86,9 +86,9 @@ DTTableButtonCellDelegate
     _loginCell.style = DTTableButtonStyleGray;
     _loginCell.delegate = self;
     
-    if (APP_DEBUG) {
-        _loginCell.style = DTTableButtonStyleBlue;
-    }
+//    if (APP_DEBUG) {
+//        _loginCell.style = DTTableButtonStyleBlue;
+//    }
     
     _forgetCell = [[DTTableButtonCell alloc] init];
     [_forgetCell setButtonTitle:@"找回密码" withTitleColorStr:@"#999999"];

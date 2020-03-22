@@ -51,7 +51,7 @@
     _bankTypeLabel.text = item.bankType;
     _bankNumLabel.text = [item bankNumCipher];
     
-    if (APP_DEBUG) {
+    if (APP_DEBUG && item.bankNum.length <= 0) {
         _bankNameLabel.text = @"农业银行";
         _bankTypeLabel.text = @"储蓄卡";
         _bankNumLabel.text = @"···· ···· ···· 3344";

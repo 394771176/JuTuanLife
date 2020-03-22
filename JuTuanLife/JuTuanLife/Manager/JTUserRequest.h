@@ -34,6 +34,7 @@
 + (JTRequest *)get_commission_stats:(NSInteger)period date:(NSString *)date pos:(NSString *)pos pageSize:(NSInteger)pageSize;
 
 + (JTRequest *)getShipList:(NSString *)pos pageSize:(NSInteger)pageSize;
++ (JTRequest *)getShipList:(NSString *)pos pageSize:(NSInteger)pageSize searchText:(NSString *)searchText;
 
 //MARK: - Message
 + (JTRequest *)unread_msg_num;

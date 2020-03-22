@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JTHomeController : DTHttpTableController
+@interface JTHomeController : DTHttpRefreshTableController
 
 @end
 
