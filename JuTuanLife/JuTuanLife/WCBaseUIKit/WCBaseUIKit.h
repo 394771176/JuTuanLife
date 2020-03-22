@@ -18,6 +18,7 @@
 
 /*Util*/
 #import "WCUICommon.h"
+#import "FFFix.h"
 
 /*view*/
 #import "BPOnePixLineView.h"

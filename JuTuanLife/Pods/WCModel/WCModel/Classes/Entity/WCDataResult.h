@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface WCDataResult : WCBaseEntity
 
-@property (nonatomic, assign) int code;
+@property (nonatomic, assign) NSInteger code;
 @property (nonatomic, assign) BOOL success;
 @property (nonatomic, strong) NSString *msg;
 @property (nonatomic, strong) id data;

@@ -34,7 +34,7 @@
         [item hiddenIcon:YES];
         [item setleftGap:59 textHeight:34];
         if (_phone.length) {
-            item.textField.text = _phone;
+            item.text = _phone;
         }
         item.delegate = self;
         [_cellList safeAddObject:item];
@@ -107,7 +107,7 @@
 - (void)backAction
 {
     if (_phoneCell.text.length == 11) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:JTLoginForgetController_PHONE object:_phoneCell.textField.text];
+        [[NSNotificationCenter defaultCenter] postNotificationName:JTLoginForgetController_PHONE object:_phoneCell.text];
     }
     [super backAction];
 }

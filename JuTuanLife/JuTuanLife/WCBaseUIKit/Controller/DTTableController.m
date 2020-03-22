@@ -63,6 +63,8 @@
     _tableView.showsVerticalScrollIndicator = NO;
     
     [self.view addSubview:_tableView];
+    
+    [self reloadTableView];
 }
 
 - (BOOL)isViewRealAppear

@@ -65,6 +65,11 @@ DTTableButtonCellDelegate
     _phoneCell.textField.returnKeyType = UIReturnKeyNext;
     [_phoneCell setleftGap:59 textHeight:_phoneCell.contentView.height];
     
+    NSString *phone = [JTUserManager sharedInstance].phone;
+    if (phone.length) {
+        _phoneCell.text = phone;
+    }
+    
     _passwordCell = [[SCLoginPasswordCell alloc] init];
     _passwordCell.delegate = self;
     [_passwordCell setleftGap:59 textHeight:_phoneCell.contentView.height];
@@ -108,12 +113,12 @@ DTTableButtonCellDelegate
     //15618197321 / d4071255
     NSString *phone = _phoneCell.text;
     NSString *password = _passwordCell.text;
-    if (APP_DEBUG && phone.length <= 0) {
+    if (APP_DEBUG && password.length <= 0) {
         phone = @"18800333031";
         password = @"wang@123";
         
-//        phone = @"15618197321";
-//        password = @"d4071255";
+        phone = @"15618197321";
+        password = @"d4071255";
     }
     [JTUserManager loginActionWithPhone:phone password:password completion:^(WCDataResult *result) {
         if (result.success) {
@@ -127,7 +132,7 @@ DTTableButtonCellDelegate
 - (void)forgetAction
 {
     JTLoginForgetController *vc = [JTLoginForgetController new];
-    vc.phone = _phoneCell.textField.text;
+    vc.phone = _phoneCell.text;
     [WCControllerUtil pushViewController:vc];
 }
 
@@ -158,7 +163,6 @@ DTTableButtonCellDelegate
         case 2:
         {
             CGFloat height = [tableView totalHeightToSection:indexPath.section target:self];
-            height += _loginHeader.height;
             height = self.tableView.height - height;
             if (height < 100) {
                 height = 100;
@@ -247,7 +251,7 @@ DTTableButtonCellDelegate
 - (void)updatePhone:(NSNotification *)n
 {
     if ([n.object isKindOfClass:NSString.class]) {
-        _phoneCell.textField.text = n.object;
+        _phoneCell.text = n.object;
     }
 }
 

@@ -7,9 +7,11 @@
 //
 
 #import "DTHttpRefreshLoadMoreTableController.h"
+#import "JTFenRunOverItem.h"
 
 @interface JTFenrunController : DTHttpRefreshLoadMoreTableController
 
+@property (nonatomic, assign) JTFenRunPeriod period;
 @property (nonatomic, strong) NSArray *fenrunForAll;
 
 @end

@@ -63,6 +63,7 @@
 - (void)setURL:(NSURL *)URL
 {
     _URL = URL;
+    NSLog(@"H5 ：%@", URL.absoluteString);
     [self loadRequest];
 }
 

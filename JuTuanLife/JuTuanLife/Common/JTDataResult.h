@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JTDataResult : WCDataResult
 
-@property (nonatomic, assign) NSInteger status;
+@property (nonatomic, assign) NSString *status;
 
 @end
 

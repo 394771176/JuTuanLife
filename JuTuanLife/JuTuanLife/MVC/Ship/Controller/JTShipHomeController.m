@@ -11,10 +11,17 @@
 #import "JTShipListCell.h"
 #import "JTShipAddCell.h"
 
-@interface JTShipHomeController () <DTTableButtonCellDelegate> {
+@interface JTShipHomeController ()
+<
+DTTableButtonCellDelegate
+, UISearchBarDelegate
+>
+{
     UIView *_headerSearchView;
     
     UIBarButtonItem *_rightBarItem;
+    
+    UISearchBar *_searchBar;
 }
 
 @end
@@ -34,6 +41,7 @@
     
     [self setupTableHeader];
     
+    self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
     [self reloadTableView];
 }
 
@@ -43,6 +51,16 @@
         UICREATETo(_headerSearchView, UIView, 0, 0, self.view.width, 60, AAW, nil);
         _headerSearchView.backgroundColor = [UIColor clearColor];
         self.tableView.tableHeaderView = _headerSearchView;
+        
+        _searchBar = [[UISearchBar alloc] initWithFrame:_headerSearchView.bounds];
+        [_searchBar setPlaceholder:@"按照姓名或手机号查询"];
+        _searchBar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        [_headerSearchView addSubview:_searchBar];
+        _searchBar.delegate = self;
+        
+        _searchBar.backgroundColor = [UIColor clearColor];
+        [_searchBar setBackgroundImage:[UIImage imageWithColor:[UIColor clearColor]]];
+        [_searchBar.searchField setTextAlignment:NSTextAlignmentCenter];
     }
 }
 
@@ -70,7 +88,8 @@
         section.headerBlock = ^UIView *(NSInteger section) {
             UIView *view = [WCTableSection tableView:self.tableView headerFooterViewWithHeight:55];
             UILabel *label = UICREATELabel(UILabel, 20, 0, view.width - 40, view.height, AAWH, nil, @"16", @"333333", view);
-            label.text = [NSString stringWithFormat:@"师傅（%zd）", [self.Model masterNum]];
+            label.text = [NSString stringWithFormat:@"师傅（%zd人）", [self.Model masterNum]];
+            view.backgroundColor = self.view.backgroundColor;
             return view;
         };
         section.headerHeight = 56;
@@ -104,7 +123,8 @@
             section.headerBlock = ^UIView *(NSInteger section) {
                 UIView *view = [WCTableSection tableView:self.tableView headerFooterViewWithHeight:55];
                 UILabel *label = UICREATELabel(UILabel, 20, 0, view.width - 40, view.height, AAWH, nil, @"16", @"333333", view);
-                label.text = [NSString stringWithFormat:@"徒弟（%zd）", [self.Model apprenticeNum]];
+                label.text = [NSString stringWithFormat:@"徒弟（%zd人）", [self.Model apprenticeNum]];
+                view.backgroundColor = self.view.backgroundColor;
                 return view;
             };
             section.headerHeight = 56;
@@ -163,6 +183,57 @@
 - (void)tableButtonCellDidClickAction:(DTTableCustomCell *)cell
 {
     [self addShipAction];
+}
+
+#pragma mark - UISearchBarDelegate
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+    
+}
+
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar
+{
+    searchBar.showsCancelButton = YES;
+//    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    return YES;
+}
+
+- (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar
+{
+    searchBar.showsCancelButton = NO;
+//    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    return YES;
+}
+
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
+{
+    
+}
+
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar
+{
+    
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    [searchBar resignFirstResponder];
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    [searchBar resignFirstResponder];
+}
+
+#pragma mark - DTPullRefreshHeadViewDelegate
+
+- (BOOL)pullRefreshTableHeaderDataSourceIsLoading:(DTPushRefreshHeadView *)view
+{
+    if (_searchBar.isFirstResponder) {
+        return YES;
+    }
+    return [super pullRefreshTableHeaderDataSourceIsLoading:view];
 }
 
 @end

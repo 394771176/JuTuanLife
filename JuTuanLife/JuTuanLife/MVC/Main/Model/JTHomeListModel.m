@@ -43,7 +43,6 @@ KEY(JTHomeListModel_cacheKey_fenrun)
         }
     }
     WCDataResult *result = [JTService sync:[JTUserRequest get_business_list]];
-    
     return [self cacheResult:result];
 }
 
@@ -56,6 +55,7 @@ KEY(JTHomeListModel_cacheKey_fenrun)
 - (void)parseFenrunData:(id)data
 {
 //    self.fenrun = [JTFenRunOverItem itemFromDict:data];
+    self.defaultStat = [data integerForKey:@"defaultStat"];
     self.fenrunForAll = [JTFenRunOverItem itemsFromDict:data forKey:@"stats"];
 }
 

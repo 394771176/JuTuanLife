@@ -28,14 +28,14 @@
     [self.tableView setTableHeaderHeight:10];
 }
 
-- (BOOL)haveCacheOrData
-{
-    return YES;
-}
+//- (BOOL)haveCacheOrData
+//{
+//    return YES;
+//}
 
 - (DTListDataModel *)createDataModel
 {
-    return [self modelForPeriod:0];
+    return [self modelForPeriod:_period];
 }
 
 - (JTFenRunModel *)modelForPeriod:(JTFenRunPeriod)period
@@ -46,10 +46,17 @@
     JTFenRunModel *model = [_modelDict objectForKey:@(period)];
     if (!model) {
         model = [[JTFenRunModel alloc] initWithFetchLimit:20 delegate:self];
+        model.period = period;
         [model loadCache];
         [_modelDict safeSetObject:model forKey:@(period)];
     }
     return model;
+}
+
+- (void)showNoDataView
+{
+    self.noDataViewTopOff = [self.tableView totalHeightToSection:1 target:self];
+    [super showNoDataView];
 }
 
 - (void)reloadData
@@ -71,7 +78,7 @@
         if (!_fenrunCell) {
             _fenrunCell = [[JTHomeFenrunCell alloc] init];
             _fenrunCell.delegate = self;
-            _fenrunCell.period = 0;
+            _fenrunCell.period = _period;
         }
         WCTableSection *section = [WCTableSection sectionWithCells:@[_fenrunCell] click:^(id data, NSIndexPath *indexPath) {
             
@@ -101,7 +108,8 @@
 
 - (void)tabBarViewDidSelectIndex:(NSInteger)index
 {
-    JTFenRunModel *model = [self modelForPeriod:index];
+    _period = (JTFenRunPeriod)index;
+    JTFenRunModel *model = [self modelForPeriod:_period];
     [self resetDataModel:model];
     [self reloadData];
     if (!model.hasLoadData) {

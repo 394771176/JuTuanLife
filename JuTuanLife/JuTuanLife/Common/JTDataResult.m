@@ -23,8 +23,8 @@
 
 - (BOOL)modelCustomTransformFromDictionary:(NSDictionary *)dic
 {
-    self.code = (int)_status;
-    self.success = (_status == 20000202);
+    self.code = [_status intValue];
+    self.success = (_status.length && [_status hasPrefix:@"2"]);
     return YES;
 }
 

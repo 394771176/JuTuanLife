@@ -31,8 +31,8 @@
         _msgLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, _imgView.bottom+20, self.width-80, 30)];
         _msgLabel.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
         _msgLabel.backgroundColor = [UIColor clearColor];
-//        _msgLabel.textColor = [UIColor colorWithHexString:@"cbcbcb" alpha:1];
-        _msgLabel.textColor = APP_CONST_BLUE_COLOR;
+        _msgLabel.textColor = [UIColor colorWithHexString:@"cbcbcb" alpha:1];
+//        _msgLabel.textColor = APP_CONST_BLUE_COLOR;
         _msgLabel.font = [UIFont systemFontOfSize:16.f];
         _msgLabel.numberOfLines = 0;
         [self addSubview:_msgLabel];

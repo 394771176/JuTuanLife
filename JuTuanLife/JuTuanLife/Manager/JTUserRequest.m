@@ -17,7 +17,10 @@
 
 + (JTRequest *)getBaseConfig
 {
-    return [self requestWithApi:@"basic/get_app_config" params:nil];
+    NSArray *array = @[@"biz_conf_image", @"ios_jutuan_version"];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params safeSetObject:array forKey:@"classcode"];
+    return [self requestWithApi:@"basic/get_app_config" params:params];
 }
 
 + (JTRequest *)loginWithMobile:(NSString *)mobile password:(NSString *)password
@@ -123,12 +126,12 @@
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     NSMutableArray *ids = [NSMutableArray array];
     [array enumerateObjectsUsingBlock:^(JTProtorolItem *obj, NSUInteger idx, BOOL * _Nonnull stop) {
-//        [params safeSetObject:obj.itemId forKey:[NSString stringWithFormat:@"contractId[%zd]", idx]];
         [ids safeAddObject:obj.itemId];
     }];
-    if (ids.count) {
-        [params safeSetObject:[ids componentsJoinedByString:@","] forKey:@"contractIds"];
-    }
+//    if (ids.count) {
+//        [params safeSetObject:[ids componentsJoinedByString:@","] forKey:@"contractIds"];
+//    }
+    [params safeSetObject:ids forKey:@"contractId"];
     return [self requestWithApi:@"sale/contract/sign_contracts" params:params httpMethod:WCHTTPMethodPOST];
 }
 

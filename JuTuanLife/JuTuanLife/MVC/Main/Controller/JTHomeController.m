@@ -20,6 +20,7 @@
     JTHomeFenrunCell *_fenrunCell;
     
     JTMessageBtn *_messageBtn;
+    BOOL _hadSetDefaultForNetData;
 }
 
 @end
@@ -55,6 +56,13 @@
 - (void)reloadTableView
 {
     _headerView.user = [JTUserManager sharedInstance].user;
+    if (_fenrunCell.itemList == nil || _hadSetDefaultForNetData == NO) {
+        _fenrunCell.period = [self.Model defaultStat];
+    }
+    
+    if ([self.Model hasLoadData] && [self.dataModel.result success]) {
+        _hadSetDefaultForNetData = YES;
+    }
     _fenrunCell.itemList = [self.Model fenrunForAll];
     [super reloadTableView];
 }
@@ -69,9 +77,11 @@
         [_fenrunCell showArrow:YES];
     }
     
+    WEAK_SELF
     WCTableRow *row = [WCTableRow rowWithItem:_fenrunCell cellClass:[JTHomeFenrunCell class]];
     row.clickBlock = ^(id data, NSIndexPath *indexPath) {
-        PUSH_VC_WITH(JTFenrunController, vc.fenrunForAll = [self.Model fenrunForAll]);
+        STRONG_SELF
+        PUSH_VC_WITH(JTFenrunController, vc.fenrunForAll = [self.Model fenrunForAll]; vc.period = self ->_fenrunCell.period);
     };
     [source addRowItem:row];
     

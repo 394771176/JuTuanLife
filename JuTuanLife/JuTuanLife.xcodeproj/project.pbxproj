@@ -151,6 +151,9 @@
 		60D03C96240FFA9900E7D7D1 /* JTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D03C95240FFA9900E7D7D1 /* JTUser.m */; };
 		60D03C99240FFE9400E7D7D1 /* JTLoginHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D03C98240FFE9400E7D7D1 /* JTLoginHeaderView.m */; };
 		60D03C9C2410046600E7D7D1 /* SCLoginTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D03C9B2410046600E7D7D1 /* SCLoginTextFieldCell.m */; };
+		60D7675324274D6D00E2B317 /* JTBaseConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D7675224274D6D00E2B317 /* JTBaseConfig.m */; };
+		60D767562427758700E2B317 /* JTUserCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D767552427758700E2B317 /* JTUserCenterController.m */; };
+		60D76759242775F000E2B317 /* JTUserCenterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D76758242775F000E2B317 /* JTUserCenterModel.m */; };
 		60DF0D4A242275A800BB0F88 /* JTPosListDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60DF0D49242275A800BB0F88 /* JTPosListDataModel.m */; };
 		60DF0ED4242288B100BB0F88 /* dashboard_pointer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60DF0ED2242288B100BB0F88 /* dashboard_pointer@2x.png */; };
 		60DF0ED5242288B100BB0F88 /* dashboard_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60DF0ED3242288B100BB0F88 /* dashboard_bg@2x.png */; };
@@ -462,6 +465,12 @@
 		60D03C98240FFE9400E7D7D1 /* JTLoginHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTLoginHeaderView.m; sourceTree = "<group>"; };
 		60D03C9A2410046600E7D7D1 /* SCLoginTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLoginTextFieldCell.h; sourceTree = "<group>"; };
 		60D03C9B2410046600E7D7D1 /* SCLoginTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLoginTextFieldCell.m; sourceTree = "<group>"; };
+		60D7675124274D6D00E2B317 /* JTBaseConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTBaseConfig.h; sourceTree = "<group>"; };
+		60D7675224274D6D00E2B317 /* JTBaseConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTBaseConfig.m; sourceTree = "<group>"; };
+		60D767542427758700E2B317 /* JTUserCenterController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTUserCenterController.h; sourceTree = "<group>"; };
+		60D767552427758700E2B317 /* JTUserCenterController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTUserCenterController.m; sourceTree = "<group>"; };
+		60D76757242775F000E2B317 /* JTUserCenterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTUserCenterModel.h; sourceTree = "<group>"; };
+		60D76758242775F000E2B317 /* JTUserCenterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTUserCenterModel.m; sourceTree = "<group>"; };
 		60DF0D48242275A700BB0F88 /* JTPosListDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTPosListDataModel.h; sourceTree = "<group>"; };
 		60DF0D49242275A800BB0F88 /* JTPosListDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTPosListDataModel.m; sourceTree = "<group>"; };
 		60DF0ED2242288B100BB0F88 /* dashboard_pointer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dashboard_pointer@2x.png"; sourceTree = "<group>"; };
@@ -662,6 +671,8 @@
 				606FE7322411550200522B96 /* JTNetManager.m */,
 				606FE734241157ED00522B96 /* JTUserRequest.h */,
 				606FE735241157ED00522B96 /* JTUserRequest.m */,
+				60D7675124274D6D00E2B317 /* JTBaseConfig.h */,
+				60D7675224274D6D00E2B317 /* JTBaseConfig.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -885,6 +896,8 @@
 			children = (
 				60386AC6242522D200B7C0BD /* JTFenRunModel.h */,
 				60386AC7242522D200B7C0BD /* JTFenRunModel.m */,
+				60D76757242775F000E2B317 /* JTUserCenterModel.h */,
+				60D76758242775F000E2B317 /* JTUserCenterModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -901,6 +914,8 @@
 			children = (
 				60386AC3242522AA00B7C0BD /* JTFenrunController.h */,
 				60386AC4242522AA00B7C0BD /* JTFenrunController.m */,
+				60D767542427758700E2B317 /* JTUserCenterController.h */,
+				60D767552427758700E2B317 /* JTUserCenterController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1786,6 +1801,7 @@
 				606FE7882412B10C00522B96 /* JTProtorolItem.m in Sources */,
 				60B939CC2414D0E8003147DC /* JTMessageListCell.m in Sources */,
 				60ED7638240EB25B0013CB8C /* main.m in Sources */,
+				60D7675324274D6D00E2B317 /* JTBaseConfig.m in Sources */,
 				60E2B10B240ED5D800E4EA52 /* DTButton.m in Sources */,
 				60B939DE2414D289003147DC /* JTHomeController.m in Sources */,
 				60E2B103240ED5D800E4EA52 /* CLDatePickerView.m in Sources */,
@@ -1821,6 +1837,7 @@
 				606FE6F824101CFD00522B96 /* JTLoginAuthController.m in Sources */,
 				606FE72624113DE600522B96 /* JTRequest.m in Sources */,
 				60E2B12A240ED5D800E4EA52 /* WCBarItemUtil.m in Sources */,
+				60D76759242775F000E2B317 /* JTUserCenterModel.m in Sources */,
 				606FE7852411730300522B96 /* JTLoginForgetCell.m in Sources */,
 				60DF0F112423C75C00BB0F88 /* JTHomeListModel.m in Sources */,
 				60E2B100240ED5D800E4EA52 /* DTTableButtonCell.m in Sources */,
@@ -1836,6 +1853,7 @@
 				606FE782241172EA00522B96 /* JTLoginProtorolCell.m in Sources */,
 				60386C652426798B00B7C0BD /* JTMessageItem.m in Sources */,
 				606FE7942412C2CB00522B96 /* DTTableIconCell.m in Sources */,
+				60D767562427758700E2B317 /* JTUserCenterController.m in Sources */,
 				60E2B110240ED5D800E4EA52 /* DTPickerView.m in Sources */,
 				606FE736241157ED00522B96 /* JTUserRequest.m in Sources */,
 				60E2B102240ED5D800E4EA52 /* DTControl.m in Sources */,
@@ -2000,9 +2018,9 @@
 			baseConfigurationReference = 22D0A58BFCB7D41C914AE223 /* Pods-JuTuanLife.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development: xiaoqing zhang (A393228H63)";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = JZWZRKY2YQ;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JuTuanLife/JuTuanLife-Prefix.pch";
 				INFOPLIST_FILE = JuTuanLife/Info.plist;
@@ -2013,7 +2031,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jtlife.jutuan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = AnyApp_Dev;
+				PROVISIONING_PROFILE_SPECIFIER = JuTuan_Dev;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -2023,9 +2041,9 @@
 			baseConfigurationReference = 252ACCD2D3E36346102AC1B4 /* Pods-JuTuanLife.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "Apple Distribution: xiaoqing zhang (58R245ZW57)";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = JZWZRKY2YQ;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JuTuanLife/JuTuanLife-Prefix.pch";
 				INFOPLIST_FILE = JuTuanLife/Info.plist;
@@ -2036,7 +2054,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jtlife.jutuan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = AnyAPP_AdHoc;
+				PROVISIONING_PROFILE_SPECIFIER = JuTuan_Dist;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

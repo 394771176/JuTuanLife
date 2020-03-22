@@ -38,10 +38,15 @@ NSString *const APP_EVENT_NETWORK_ERROR = @"app.event.network.error";
     if (httpMethod && [httpMethod isEqualToString:@"POST"]) {
         asiRequest = [ASIFormDataRequest requestWithURL:[NSURL URLWithString:url]];
         for (NSString *key in params.allKeys) {
-            if ([[params objectForKey:key] isKindOfClass:[NSData class]]) {
-                [asiRequest setData:[params objectForKey:key] forKey:key];
+            id obj = [params objectForKey:key];
+            if ([obj isKindOfClass:[NSData class]]) {
+                [asiRequest setData:obj forKey:key];
+            } else if ([obj isKindOfClass:NSArray.class]) {
+                for (id subObj in (NSArray *)obj) {
+                    [asiRequest addPostValue:subObj forKey:key];
+                }
             } else {
-                [asiRequest setPostValue:[params objectForKey:key] forKey:key];
+                [asiRequest setPostValue:obj forKey:key];
             }
         }
     } else {
@@ -233,6 +238,14 @@ NSString *const APP_EVENT_NETWORK_ERROR = @"app.event.network.error";
     [self startLog];
     
     //设置cookie
+    
+    
+#ifdef DEBUG
+    if ([asiRequest.requestMethod isEqualToString:@"POST"]) {
+        NSLog(@"POST BODY : \n%@", asiRequest.postBody);
+        NSLog(@"POST DATA : \n%@", asiRequest.postBody);
+    }
+#endif
     
     //发起同步请求
     [asiRequest startSynchronous];

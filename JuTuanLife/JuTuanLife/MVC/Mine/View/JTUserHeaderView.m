@@ -45,7 +45,7 @@
     JTUser *user = item;
     [_headerBtn setImageWithURL:URL(user.avatar) placeholderImage:[UIImage imageNamed:@"user_home_avatar"]];
     
-    NSString *city = [NSString stringWithFormat:@"(%@)", user.bizCityName];
+    NSString *city = [NSString stringWithFormat:@"(%@)", user.bizCityNameShort];
     [_nameLabel setText:[NSString stringWithFormat:@"%@ %@", user.name, (user.bizCityName.length ? city: @"")]];
     
     _teamView.items = item.teams;

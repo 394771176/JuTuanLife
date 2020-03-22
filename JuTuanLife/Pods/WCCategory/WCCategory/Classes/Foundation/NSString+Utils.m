@@ -445,8 +445,13 @@ NSString *FFURLEncode(NSString *input) {
         } else if ([obj isKindOfClass:NSNumber.class]) {
             obj = [obj stringValue];
         }
-        
-        [pairs addObject:[NSString stringWithFormat:@"%@=%@", key, [obj urlEncoded]]];
+        if ([obj isKindOfClass:NSArray.class]) {
+            for (id subObj in (NSArray *)obj) {
+                [pairs addObject:[NSString stringWithFormat:@"%@=%@", key, [subObj urlEncoded]]];
+            }
+        } else {
+            [pairs addObject:[NSString stringWithFormat:@"%@=%@", key, [obj urlEncoded]]];
+        }
     }
     
     if (pairs.count) {

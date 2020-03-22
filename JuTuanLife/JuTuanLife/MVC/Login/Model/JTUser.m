@@ -10,6 +10,48 @@
 
 @implementation JTUser
 
++ (NSDictionary<NSString *,id> *)modelCustomPropertyMapper
+{
+    return @{@"name" : @[@"name", @"userName"]};
+}
+
+/*
+ apprentices = 12;
+ avatar = "";
+ birthday = "";
+ bizCityCode = 310100;
+ bizCityName = "\U4e0a\U6d77\U5e02";
+ certAddress = "\U4e0a\U6d77\U5e02\U677e\U6c5f\U533a\U5e7f\U5bcc\U6797\U8def1188\U5f04154\U53f71604\U5ba4";
+ certAuth = 1;
+ certAuthTime = "2020-03-08 00:14:26";
+ certBack = "images/2020/03/07/901fee96023b30456c0bc8d002c46c4cad17.jpeg";
+ certExpire = "";
+ certFront = "images/2020/03/07/a2e7861b0edc404340097440977129bef6df.jpg";
+ certIssuer = "";
+ certNo = 340104198307163038;
+ certType = 1;
+ createTime = "2020-03-07 13:58:00";
+ depositPaid = 0;
+ depositTotal = 100000;
+ gender = 1;
+ jobNo = JTB0000001;
+ mobile = 15618197321;
+ name = "\U5218\U5065";
+ nation = "\U6c49";
+ shippingAddress = "\U4e0a\U6d77\U5e02\U677e\U6c5f\U533a\U5e7f\U5bcc\U6797\U8def1155\U5f0412\U53f71202\U5ba4";
+ teams =     (
+ {
+ id = 1;
+ name = "\U805a\U56e2";
+ },
+ {
+ id = 2;
+ name = "\U805a\U63a8";
+ }
+ );
+ userNo = U120200307210893057585152;
+ */
+
 + (NSDictionary<NSString *,id> *)modelContainerPropertyGenericClass
 {
     return @{@"teams" : [JTUserTeam class]};
@@ -21,6 +63,7 @@
         _bankNum = @"1234567890123344";
     }
     _phone = _mobile;
+    self.cert = [JTUserCert itemFromDict:dic];
     return YES;
 }
 
@@ -77,6 +120,14 @@
     }
 }
 
+- (NSString *)bizCityNameShort
+{
+    if (_bizCityName && [_bizCityName hasSuffix:@"市"] && _bizCityName.length > 2) {
+        return [_bizCityName substringToIndex:_bizCityName.length - 1];
+    }
+    return _bizCityName;
+}
+
 + (NSString *)replaceString:(NSString *)string withStr:(NSString *)str inRange:(NSRange)range
 {
     if (string.length && str.length && range.location + range.length < string.length) {
@@ -107,6 +158,20 @@
 }
 
 @end
+
+
+@interface JTUserCert () {
+    
+}
+
+@end
+
+
+@implementation JTUserCert
+
+
+@end
+
 
 @interface JTUserTeam ()
 {

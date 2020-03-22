@@ -155,8 +155,6 @@ SHARED_INSTANCE_M
     _phone = phone;
     if (phone.length) {
         [[BPAppPreference sharedInstance] setObject:phone forKey:JTUserManager_PHONE];
-    } else {
-        [[BPAppPreference sharedInstance] removeObjectForKey:JTUserManager_PHONE];
     }
 }
 

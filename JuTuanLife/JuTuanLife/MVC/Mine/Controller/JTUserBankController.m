@@ -24,29 +24,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"结算银行卡";
-    
-    [self reloadTableView];
 }
 
 - (WCTableSourceData *)setupTableSourceData;
 {
-    return [WCTableSourceData new];
+    WCTableSourceData *source = [WCTableSourceData new];
+
+    if ([JTUserManager sharedInstance].user.bankNum.length || _showBank) {
+        [source addRowWithItem:nil cellClass:[JTUserBankCell class]];
+        WEAK_SELF
+        [source setConfigBlock:^(JTUserBankCell *cell, id data, NSIndexPath *indexPath) {
+            cell.delegate = weakSelf;
+        }];
+    }
+    
+    return source;
 }
 
 - (void)reloadTableView
 {
-    [self.tableSourceData clearDataSource];
-    if ([JTUserManager sharedInstance].user.bankNum.length || _showBank) {
+    [super reloadTableView];
+    if (self.tableSourceData.dataSource.count) {
         [self hideNoDataView];
-        [self.tableSourceData addRowWithItem:nil cellClass:[JTUserBankCell class]];
-        WEAK_SELF
-        [self.tableSourceData setConfigBlock:^(JTUserBankCell *cell, id data, NSIndexPath *indexPath) {
-            cell.delegate = weakSelf;
-        }];
     } else {
         [self showNoDataView];
     }
-    [super reloadTableView];
 }
 
 - (void)showNoDataView

@@ -16,4 +16,7 @@
 //@property (nonatomic, strong) JTFenRunOverItem *fenrun;
 @property (nonatomic, strong) NSArray *fenrunForAll;//针对首页，各种类型的分润
 
+//服务端返回
+@property (nonatomic, assign) JTFenRunPeriod defaultStat;
+
 @end
