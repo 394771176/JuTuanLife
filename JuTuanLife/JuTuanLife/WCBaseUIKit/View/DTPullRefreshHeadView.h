@@ -67,6 +67,8 @@ typedef void (^DTPullRefreshFinishBlock)(void);
 @property (nonatomic) BOOL needDelay;//是否需要延迟， 目前gif动画 default is YES
 @property (nonatomic, strong) DTPullRefreshFinishBlock finishBlock;
 
+@property (nonatomic, assign) CGFloat minOffsetY;
+
 - (void)viewWillAppear;
 
 - (void)setState:(DTPullRefreshState)aState;

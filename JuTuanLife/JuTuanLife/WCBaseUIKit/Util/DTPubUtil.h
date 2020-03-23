@@ -43,4 +43,6 @@ typedef void (^DTIntBlock)(NSInteger num);
 + (void)addBlockOnBackgroundThread:(void (^)(void))block;
 + (void)runBlockInBackground:(void (^)(void))block;
 
++ (void)callPhoneNumber:(NSString *)phone;
+
 @end

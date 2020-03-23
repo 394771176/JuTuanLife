@@ -12,6 +12,8 @@
 #import <WCModule/WCModule.h>
 #import <WCModel/WCModel.h>
 
+#import "WCBaseUICategory.h"
+
 /*Entity*/
 #import "DTTabItem.h"
 #import "DTTitleIconItem.h"
@@ -54,7 +56,6 @@
 #import "DTTitleContentCell.h"
 #import "DTUISegmentView.h"
 
-
 /*controller*/
 #import "DTViewController.h"
 #import "DTTableController.h"
@@ -69,5 +70,6 @@
 
 /*tools*/
 #import "DTImagePickerController.h"
+#import "DTWebViewController.h"
 
 #endif /* WCUIKit_h */

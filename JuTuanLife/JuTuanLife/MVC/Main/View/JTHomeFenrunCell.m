@@ -32,14 +32,16 @@
         _bodyView.userInteractionEnabled = YES;
         
         //64 + 352 + 64 + 40 = 64 + 20 + 176
-        UICREATETo(_tabBar, DTTabBarView, _bodyView.width / 2 - 260 / 2, 6 + 9, 260, 30, AALR, _bodyView);
+        UICREATETo(_tabBar, DTTabBarView, _bodyView.width / 2 - 260 / 2, 6 + 4, 260, 44, AALR, _bodyView);
         [_tabBar setNormalColor:COLOR(333333)];
         [_tabBar setSelectColor:COLOR(#FA3F3F)];
         _tabBar.selectedLine.hidden = YES;
         _tabBar.bottomLine.hidden = YES;
         _tabBar.delegate = self;
+        _tabBar.fontSize = 18;
+        _tabBar.zoomAnimation = YES;
         
-        UICREATELabel2To(_dateLabel, UILabel, 10, _tabBar.bottom + 2, _bodyView.width - 20, 30, AAW, TTCenter, nil, @"16", @"999999", _bodyView);
+        UICREATELabel2To(_dateLabel, UILabel, 10, _tabBar.bottom - 4, _bodyView.width - 20, 30, AAW, TTCenter, nil, @"16", @"999999", _bodyView);
         
         UICREATELabel2To(_fenRunLabel, UILabel, _dateLabel.left, _dateLabel.bottom, _dateLabel.width, 50, AAW, TTCenter, nil, @"32", @"000000", _bodyView);
         
@@ -72,6 +74,11 @@
         [titles safeAddObject:[JTFenRunOverItem titleForPeriod:[i integerValue]]];
     }
     _tabBar.items = titles;
+    
+    if (_onlyFixPeriod) {
+        //刷新一下布局
+        self.item = _item;
+    }
 }
 
 - (void)setPeriod:(JTFenRunPeriod)period
@@ -102,9 +109,19 @@
 - (void)setItem:(JTFenRunOverItem *)item
 {
     _item = item;
-    _dateLabel.text = [item dateStrForPeriod:_period];
-    _fenRunLabel.text = [NSString stringWithFormat:@"%.2f", item.totalCommAmt];
-    _detailLabel.text = [NSString stringWithFormat:@"%.2f（自己）+ %.2f（徒弟/孙）", item.myCommAmt, item.descendantCommAmt];
+    
+    if (_onlyFixPeriod) {
+        //item 为nil 仅显示 年月日
+        BOOL hidden = (item == nil);
+        _dateLabel.hidden = hidden;
+        _fenRunLabel.hidden = hidden;
+        _detailLabel.hidden = hidden;
+    }
+    if (item) {
+        _dateLabel.text = [item dateStrForPeriod:_period];
+        _fenRunLabel.text = [NSString stringWithFormat:@"%.2f", item.totalCommAmt];
+        _detailLabel.text = [NSString stringWithFormat:@"%.2f（自己）+ %.2f（徒弟/孙）", item.myCommAmt, item.descendantCommAmt];
+    }
 }
 
 #pragma mark - DTTabBarViewDelegate
@@ -130,7 +147,16 @@
 
 + (CGFloat)cellHeightWithItem:(id)item tableView:(UITableView *)tableView
 {
-    return 198;
+    return [self cellHeightWithItem:item tableView:tableView onlyFixPeriod:NO];
+}
+
++ (CGFloat)cellHeightWithItem:(id)item tableView:(UITableView *)tableView onlyFixPeriod:(BOOL)onlyFixPeriod
+{
+    if (item == nil && onlyFixPeriod) {
+        return 70;
+    } else {
+        return 198;
+    }
 }
 
 @end

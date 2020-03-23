@@ -20,4 +20,6 @@
 
 @property (nonatomic, weak) id<DTTabBarViewDelegate> delegate;
 
++ (CGFloat)cellHeightWithItem:(id)item tableView:(UITableView *)tableView onlyFixPeriod:(BOOL)onlyFixPeriod;
+
 @end

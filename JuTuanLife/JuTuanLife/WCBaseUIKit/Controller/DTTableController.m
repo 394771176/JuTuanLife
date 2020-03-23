@@ -32,6 +32,8 @@
         _noDataImgTopOff = 0;
         _noDataLabTopOff = 0;
         self.tableViewStyle = tableViewStyle;
+        
+        
     }
     return self;
 }
@@ -253,6 +255,9 @@
 {
     if (_noDataMsg.length <= 0) {
         self.noDataMsg = @"暂无内容";
+    }
+    if (_noDataImg == nil) {
+        _noDataImg = [UIImage imageNamed:@"jt_no_data_img"];
     }
     
     [self showNoDataViewWithType:0 msg:_noDataMsg image:_noDataImg];

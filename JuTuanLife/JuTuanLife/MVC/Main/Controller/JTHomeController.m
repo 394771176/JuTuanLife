@@ -30,6 +30,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _refreshHeadView.minOffsetY = 20 + 60 + SAFE_BOTTOM_VIEW_HEIGHT;
+    
     [self setupTableHeader];
     
     [self reloadData];
@@ -41,7 +43,7 @@
         UICREATETo(_headerView, JTMineHeaderView, 0, 0, self.width, 155 + SAFE_BOTTOM_VIEW_HEIGHT, AAW, nil);
         self.tableView.tableHeaderView = _headerView;
         
-        UICREATEBtnImgTo(_messageBtn, JTMessageBtn, _headerView.width - 40 - 15, _headerView.headerView.top - 5, 40, 40, AAL, nil, nil, nil, self);
+        UICREATEBtnImgTo(_messageBtn, JTMessageBtn, _headerView.width - 40 - 15, _headerView.headerView.top - 5, 40, 40, AAL, nil, nil, nil, _headerView);
         [_messageBtn updateMessageCount];
     }
 }

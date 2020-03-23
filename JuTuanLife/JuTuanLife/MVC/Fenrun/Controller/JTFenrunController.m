@@ -10,6 +10,8 @@
 #import "JTHomeFenrunCell.h"
 #import "JTShipListCell.h"
 #import "JTFenRunModel.h"
+#import "JTUserCenterController.h"
+#import "JTFenrunQueryController.h"
 
 @interface JTFenrunController () <DTTabBarViewDelegate> {
     JTHomeFenrunCell *_fenrunCell;
@@ -26,6 +28,8 @@
     self.title = @"分润";
     
     [self.tableView setTableHeaderHeight:10];
+    
+    [self setRightBarItem:[WCBarItemUtil barButtonItemWithImage:[UIImage imageNamed:@"jt_fenrun_rili"] target:self action:@selector(rightBarAction)]];
 }
 
 //- (BOOL)haveCacheOrData
@@ -67,6 +71,9 @@
     } else {
         _fenrunCell.itemList = self.fenrunForAll;
     }
+    if (self.dataModel.itemCount) {
+        [self hideNoDataView];
+    }
     [super reloadData];
 }
 
@@ -87,9 +94,18 @@
     }
     
     {
-        WCTableSection *section = [WCTableSection sectionWithItems:[self.dataModel data] cellClass:[JTShipListCell class]];
-        section.clickBlock = ^(id data, NSIndexPath *indexPath) {
-            
+        WCTableSection *section = [WCTableSection sectionWithItems:[self.dataModel data] cellClass:NULL];
+        section.cellBlock = ^UITableViewCell *(id data, NSIndexPath *indexPath) {
+            KEY(JTShipListCell_key)
+            JTShipListCell *cell = [self.tableView dequeueReusableCellWithIdentifier:JTShipListCell_key];
+            if (!cell) {
+                cell = [[JTShipListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:JTShipListCell_key];
+                cell.cellType = JTShipCellTypeFenrun;
+            }
+            return cell;
+        };
+        section.clickBlock = ^(JTShipItem *data, NSIndexPath *indexPath) {
+            PUSH_VC_WITH(JTUserCenterController , vc.userNo = data.userNo);
         };
         [source addSectionItem:section];
     }
@@ -102,6 +118,13 @@
     }
     
     return source;
+}
+
+#pragma mark - action
+
+- (void)rightBarAction
+{
+    PUSH_VC_WITH(JTFenrunQueryController, vc.period = _period);
 }
 
 #pragma mark - DTTabBarViewDelegate

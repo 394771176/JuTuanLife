@@ -40,7 +40,7 @@
     _badge = badge;
     if (badge > 0) {
         if (!_badgeView) {
-            UICREATETo(_badgeView, DTBadgeView, self.width - 18, 0, 18, 14, AAL, self);
+            UICREATETo(_badgeView, DTBadgeView, self.width - 18+2, 2, 18, 14, AAL, self);
             _badgeView.badgeColor = [UIColor colorWithString:@"#E73030"];
             _badgeView.font = FONT(12);
         }

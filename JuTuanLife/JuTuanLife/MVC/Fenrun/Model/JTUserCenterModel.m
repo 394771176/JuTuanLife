@@ -10,4 +10,21 @@
 
 @implementation JTUserCenterModel
 
+- (NSString *)cacheKey
+{
+    return @"JTUserCenterModel_cacheKey";
+}
+
+- (WCDataResult *)loadData
+{
+    WCDataResult *result = nil;
+    
+    return [self cacheResult:result];
+}
+
+- (id)parseData:(id)data
+{
+    return data;
+}
+
 @end

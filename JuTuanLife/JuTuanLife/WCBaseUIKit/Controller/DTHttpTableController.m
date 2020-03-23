@@ -139,11 +139,15 @@
 
 - (void)dataModelDidFail:(VGEDataModel *)model
 {
-    if (![self haveCacheOrData]) {        
-        if ([model.result isKindOfClass:[WCDataResult class]]) {
-            
+    if (![self haveCacheOrData]) {
+        if (!model.result) {
+            [self showNoDataView];
         } else {
-//            [self showFailedViewWithMsg:@"网络不给力，点击重试" image:[UIImage imageNamed:@"table_no_data_net"]];
+            if ([model.result isKindOfClass:[WCDataResult class]]) {
+                
+            } else {
+                //            [self showFailedViewWithMsg:@"网络不给力，点击重试" image:[UIImage imageNamed:@"table_no_data_net"]];
+            }
         }
     } else {
         //有缓存 或者model中多个接口请求，部分请求正常

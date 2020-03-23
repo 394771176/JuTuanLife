@@ -10,6 +10,7 @@
 
 @interface JTUserHeaderView () {
     UIButton *_headerBtn;
+    UILabel *_relationLabel;
 }
 
 @end
@@ -49,6 +50,29 @@
     [_nameLabel setText:[NSString stringWithFormat:@"%@ %@", user.name, (user.bizCityName.length ? city: @"")]];
     
     _teamView.items = item.teams;
+}
+
+- (void)setRelationType:(NSInteger)relationType
+{
+    _relationType = relationType;
+    NSString *name = [JTShipItem relationTypeName:relationType];
+    if (name.length) {
+        if (!_relationLabel) {
+            UICREATELabelTo(_relationLabel, UILabel, _nameLabel.left, _teamView.top, 26, _teamView.height, AAR, nil, @"12", @"999999", self);
+        }
+        _relationLabel.hidden = NO;
+        [_relationLabel setLabelWidthWithString:name];
+        
+        _teamView.left = _relationLabel.right + 8;
+    } else {
+        _relationLabel.hidden = YES;
+        _teamView.left = _nameLabel.left + 2;
+    }
+}
+
+- (CGFloat)getTeamsViewRight
+{
+    return _teamView.left + [_teamView teamsContentWidth];
 }
 
 - (void)headerBtnAction

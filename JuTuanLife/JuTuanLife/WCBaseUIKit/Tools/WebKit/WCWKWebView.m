@@ -26,7 +26,6 @@ WKUIDelegate
     self.UIDelegate = nil;
     self.navigationDelegate = nil;
     self.scrollView.delegate = nil;
-    self.delegate = nil;
 
     [self removeObserver:self forKeyPath:@"estimatedProgress"];
 }

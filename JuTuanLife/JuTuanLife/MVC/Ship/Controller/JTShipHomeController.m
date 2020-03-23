@@ -60,7 +60,7 @@ DTTableButtonCellDelegate
         
         _searchBar.backgroundColor = [UIColor clearColor];
         [_searchBar setBackgroundImage:[UIImage imageWithColor:[UIColor clearColor]]];
-        [_searchBar.searchField setTextAlignment:NSTextAlignmentCenter];
+//        [_searchBar.searchField setTextAlignment:NSTextAlignmentCenter];
     }
 }
 
@@ -79,11 +79,11 @@ DTTableButtonCellDelegate
 - (WCTableSourceData *)setupTableSourceData
 {
     WCTableSourceData *source = [WCTableSourceData new];
-    
+    WEAK_SELF
     if ([self.Model teachers].count) {
         WCTableSection *section = [WCTableSection sectionWithItems:[self.Model teachers] cellClass:[JTShipListCell class]];
-        section.clickBlock = ^(id data, NSIndexPath *indexPath) {
-            
+        section.clickBlock = ^(JTShipItem *data, NSIndexPath *indexPath) {
+            [weakSelf clickItem:data];
         };
         section.headerBlock = ^UIView *(NSInteger section) {
             UIView *view = [WCTableSection tableView:self.tableView headerFooterViewWithHeight:55];
@@ -101,8 +101,8 @@ DTTableButtonCellDelegate
         WCTableSection *section = nil;
         if ([self.Model itemCount]) {
             section = [WCTableSection sectionWithItems:[self.Model data] cellClass:[JTShipListCell class]];
-            section.clickBlock = ^(id data, NSIndexPath *indexPath) {
-                
+            section.clickBlock = ^(JTShipItem *data, NSIndexPath *indexPath) {
+                [weakSelf clickItem:data];
             };
         } else {
             section = [WCTableSection sectionWithItems:[NSArray arrayWithObjects:[JTUserManager sharedInstance].user, nil] cellClass:JTShipAddCell.class heightBlock:^CGFloat(id data, NSIndexPath *indexPath) {
@@ -176,6 +176,11 @@ DTTableButtonCellDelegate
         DTShareItem *item = [JTDataManager sharedInstance].shareItem;
         [DTShareUtil shareItem:item channel:DTShareToWXHy];
     }];
+}
+
+- (void)clickItem:(JTShipItem *)item
+{
+//    [DTPubUtil callPhoneNumber:item.mobile];
 }
 
 #pragma mark - DTTableButtonCellDelegate

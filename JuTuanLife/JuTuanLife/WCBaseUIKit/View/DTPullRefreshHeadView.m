@@ -275,8 +275,9 @@
 {
     self = [super init];
     if (self) {
-//        NSData *imageData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"dt_refresh_loading@2x" ofType:@"gif"]];
-//        _aniImage = [[FLAnimatedImage alloc] initWithAnimatedGIFData:imageData];
+        //bgcolor f2f2f2
+        NSData *imageData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"dt_refresh_loading@2x" ofType:@"gif"]];
+        _aniImage = [[FLAnimatedImage alloc] initWithAnimatedGIFData:imageData];
         
         [self setVelocity:PULLREFRESH_ANIMATION_VELOCITY];
     }
@@ -319,6 +320,8 @@
     DTEnrollProgressView *_progressView;
     
     double _animationBegin;
+    
+    CGFloat _minGapY;
 }
 
 @end
@@ -334,6 +337,8 @@
 //        _activeBodyView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 //        _activeBodyView.backgroundColor = [UIColor clearColor];
 //        [self addSubview:_activeBodyView];
+        
+        _minOffsetY = 60.f;
         
         DTEnrollProgressView *progressView = [DTEnrollProgressView new];
         progressView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -409,16 +414,16 @@
 {
     float offset = scrollView.contentOffset.y;
     
-    if (offset<-60) {
-        _activeBodyView.top = offset+60;
+    if (offset<-_minOffsetY) {
+        _activeBodyView.top = offset+_minOffsetY;
     } else {
         _activeBodyView.top = 0;
     }
     
     if (_state != DTPullRefreshLoading) {
         CGFloat progress;
-        if (offset<-30) {
-            progress = (-offset-60)/60+0.5;
+        if (offset<-_minOffsetY / 2 && _minOffsetY > 0) {
+            progress = (-offset-_minOffsetY)/_minOffsetY+0.5;
         } else {
             progress = 0.f;
         }
@@ -428,14 +433,15 @@
     
     if (_state == DTPullRefreshLoading) {
         float offset = MAX((scrollView.contentOffset.y+_defaultContentInset.top) * -1, 0);
-        offset = MIN(offset, 60)+_defaultContentInset.top;
+        offset = MIN(offset, _minOffsetY)+_defaultContentInset.top;
         scrollView.contentInset = UIEdgeInsetsMake(offset, _defaultContentInset.left, _defaultContentInset.bottom, _defaultContentInset.right);
     } else if (scrollView.isDragging) {
-        if (_state == DTPullRefreshPulling && scrollView.contentOffset.y > -65.0f-_defaultContentInset.top && scrollView.contentOffset.y < -_defaultContentInset.top) {
+        CGFloat minOffset = _minGapY + _minOffsetY;
+        if (_state == DTPullRefreshPulling && scrollView.contentOffset.y > -minOffset-_defaultContentInset.top && scrollView.contentOffset.y < -_defaultContentInset.top) {
             if (![self isTableModelLoading]) {
                 [self setState:DTPullRefreshNormal];
             }
-        } else if (_state == DTPullRefreshNormal && scrollView.contentOffset.y < -65.0f-_defaultContentInset.top) {
+        } else if (_state == DTPullRefreshNormal && scrollView.contentOffset.y < -minOffset-_defaultContentInset.top) {
             if (![self isTableModelLoading]) {
                 [self setState:DTPullRefreshPulling];
             }
@@ -448,7 +454,7 @@
 }
 
 - (void)pullRefreshScrollViewDidEndDragging:(UIScrollView *)scrollView {
-    if (scrollView.contentOffset.y < -65.0f-_defaultContentInset.top) {
+    if (scrollView.contentOffset.y < -_minOffsetY - _minGapY -_defaultContentInset.top) {
         if (![self isTableModelLoading]) {
             if ([_delegate respondsToSelector:@selector(pullRefreshTableHeaderDidTriggerRefresh:)]) {
                 [_delegate pullRefreshTableHeaderDidTriggerRefresh:self];
@@ -457,7 +463,7 @@
             CGPoint offset = scrollView.contentOffset;
             [UIView beginAnimations:nil context:NULL];
             [UIView setAnimationDuration:0.3];
-            scrollView.contentInset = UIEdgeInsetsMake(_defaultContentInset.top+60, _defaultContentInset.left, _defaultContentInset.bottom, _defaultContentInset.right);
+            scrollView.contentInset = UIEdgeInsetsMake(_defaultContentInset.top+_minOffsetY, _defaultContentInset.left, _defaultContentInset.bottom, _defaultContentInset.right);
             scrollView.contentOffset = offset;
             [UIView commitAnimations];
         }
@@ -472,11 +478,11 @@
         if ([_delegate respondsToSelector:@selector(pullRefreshTableHeaderDidTriggerRefresh:)]) {
             [_delegate pullRefreshTableHeaderDidTriggerRefresh:self];
         }
-        scrollView.contentInset = UIEdgeInsetsMake(_defaultContentInset.top+60, _defaultContentInset.left, _defaultContentInset.bottom, _defaultContentInset.right);
+        scrollView.contentInset = UIEdgeInsetsMake(_defaultContentInset.top+_minGapY, _defaultContentInset.left, _defaultContentInset.bottom, _defaultContentInset.right);
         [self setState:DTPullRefreshLoading];
         [UIView beginAnimations:nil context:NULL];
         [UIView setAnimationDuration:0.3];
-        scrollView.contentOffset = CGPointMake(0, -_defaultContentInset.top-60);
+        scrollView.contentOffset = CGPointMake(0, -_defaultContentInset.top-_minOffsetY);
         [UIView commitAnimations];
     }
 }

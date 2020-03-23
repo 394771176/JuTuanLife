@@ -8,10 +8,8 @@
 
 #import "JTPosListDataModel.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 @interface JTUserCenterModel : JTPosListDataModel
 
-@end
+@property (nonatomic, strong) NSString *userNo;
 
-NS_ASSUME_NONNULL_END
+@end

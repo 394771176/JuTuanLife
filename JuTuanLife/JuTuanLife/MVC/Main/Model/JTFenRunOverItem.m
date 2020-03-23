@@ -15,6 +15,14 @@
 //    return @{@"personalCommStats" : [JTShipItem class]};
 //}
 
+- (BOOL)modelCustomTransformFromDictionary:(NSDictionary *)dic
+{
+    self.totalCommAmt = _totalCommAmt / 100;
+    self.myCommAmt = _myCommAmt / 100;
+    self.descendantCommAmt = _descendantCommAmt / 100;
+    return YES;
+}
+
 - (NSString *)dateStrForPeriod:(JTFenRunPeriod)period
 {
     if (self.dateFrom && self.dateTo) {

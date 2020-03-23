@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define IMAGE_URL(url, type)   [[JTDataManager sharedInstance] imageUrl:url forType:type]
+#define JTIMAGEURL(url, type)   [[JTDataManager sharedInstance] imageUrl:url forType:type]
 
 typedef NS_ENUM(NSUInteger, JTImageType) {
     JTImageTypeOrig,

@@ -41,7 +41,7 @@
 {
     if ([item isKindOfClass:JTBusinessItem.class]) {
         JTBusinessItem *bitem = (id)item;
-        [self.iconView setImageWithURL:[NSURL URLWithString:bitem.icon] placeholderImage:[UIImage imageWithColorString:@"e9e9e9" cornerRadius:4]];
+        [self.iconView setImageWithURLStr:bitem.icon placeholderImage:[UIImage imageWithColorString:@"e9e9e9" cornerRadius:4]];
         [self setTitle:bitem.name content:bitem.slogan];
     } else {
         [super setItem:item];

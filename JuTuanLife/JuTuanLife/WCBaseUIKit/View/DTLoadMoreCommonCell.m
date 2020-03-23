@@ -115,4 +115,9 @@
     [_delegate loadMoreCellDidStartLoad:self];
 }
 
++ (CGFloat)cellHeightWithItem:(id)item tableView:(UITableView *)tableView
+{
+    return 50 + SAFE_BOTTOM_VIEW_HEIGHT;
+}
+
 @end

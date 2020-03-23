@@ -7,9 +7,11 @@
 //
 
 #import "DTWebViewController.h"
+#import "WCWebBackBarView.h"
 
 @interface DTWebViewController () <WCWKWebViewDelegate> {
     WCWKWebView *_webView;
+    WCWebBackBarView *_backBarView;
 }
 
 @property (nonatomic, assign) BOOL hasStartLoad;
@@ -20,7 +22,7 @@
 
 - (void)dealloc
 {
-    
+    _webView.delegate = nil;
 }
 
 - (void)setStrTitle:(NSString *)strTitle
@@ -44,10 +46,17 @@
 
 - (void)viewDidFirstAppear
 {
-//    [self loadRequest];
+
 }
 
 - (void)viewDidLoad {
+    self.disableBackBtn = YES;
+    
+    _backBarView = [WCWebBackBarView view];
+    [_backBarView addTarget:self withBackAction:@selector(backAction)];
+    [_backBarView addTarget:self withCloseAction:@selector(closeAction)];
+    [self setLeftBarItem:WCBarItem(_backBarView)];
+    
     [super viewDidLoad];
     
     _webView = [[WCWKWebView alloc] initWithFrame:self.view.bounds withDelegate:self];
@@ -83,6 +92,21 @@
 - (void)refresh
 {
     [_webView reload];
+}
+
+- (void)backAction
+{
+    if ([_webView canGoBack]) {
+        [_webView goBack];
+        _backBarView.showCloseBtn = YES;
+    } else {
+        [self closeAction];
+    }
+}
+
+- (void)closeAction
+{
+    [super backAction];
 }
 
 #pragma mark - WCWKWebViewDelegate

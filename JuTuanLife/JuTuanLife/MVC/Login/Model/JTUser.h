@@ -34,6 +34,7 @@ typedef NS_ENUM(NSUInteger, JTUserStatus) {
 
 @property (nonatomic, strong) NSString *bizCityCode;
 @property (nonatomic, strong) NSString *bizCityName;
+
 @property (nonatomic, strong) NSString *createTime;
 
 //收货地址

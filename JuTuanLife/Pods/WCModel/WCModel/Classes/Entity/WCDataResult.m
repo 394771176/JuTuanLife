@@ -15,7 +15,7 @@
     return @{@"msg" : @[@"msg", @"message"]};
 }
 
-- (BOOL)modelCustomTransformToDictionary:(NSMutableDictionary *)dic
+- (BOOL)modelCustomTransformFromDictionary:(NSDictionary *)dic
 {
     if (![dic objectForKey:@"success"]) {
         self.success = (self.code==1);
@@ -62,7 +62,7 @@
 
 @implementation WCZeroDataResult
 
-- (BOOL)modelCustomTransformToDictionary:(NSMutableDictionary *)dic
+- (BOOL)modelCustomTransformFromDictionary:(NSDictionary *)dic
 {
     if (![dic objectForKey:@"success"]) {
         self.success = (self.code==0);

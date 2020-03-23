@@ -11,5 +11,6 @@
 @interface JTUserTeamView : UIControl
 
 @property (nonatomic, strong) NSArray *items;
+@property (nonatomic, readonly) CGFloat teamsContentWidth;
 
 @end

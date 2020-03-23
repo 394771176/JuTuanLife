@@ -10,7 +10,8 @@
 
 #define APP_CONST_NAVBAR_BGCOLOR             @"ffffff"
 #define APP_CONST_NAVBAR_TITLECOLOR          @"111111"
-#define APP_CONST_BASE_CONTROLLER_BGCOLOR          @"f9f9f9"
+//#define APP_CONST_BASE_CONTROLLER_BGCOLOR          @"f9f9f9"
+#define APP_CONST_BASE_CONTROLLER_BGCOLOR          @"f2f2f2"
 
 @implementation WCAppStyleUtil
 

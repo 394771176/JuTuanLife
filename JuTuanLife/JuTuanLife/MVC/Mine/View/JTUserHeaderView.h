@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "JTUserTeamView.h"
 #import "JTUser.h"
+#import "JTShipItem.h"
+
 
 @interface JTUserHeaderView : UIView
 
@@ -18,7 +20,10 @@
 
 @property (nonatomic, strong) JTUser *item;
 
+@property (nonatomic, assign) NSInteger relationType;
+
 - (void)setNameFont:(UIFont *)font;
+- (CGFloat)getTeamsViewRight;
 
 @end
 

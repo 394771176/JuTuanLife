@@ -118,4 +118,25 @@
     }
 }
 
++ (void)callPhoneNumber:(NSString *)phone
+{
+    if (phone.length<=0) {
+        [self showHUDErrorHintInWindow:@"电话号码不能为空"];
+        return;
+    }
+    //telprompt:
+    //NSURL *url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"telprompt:%@",phone]];
+    NSString *strDeviceType = [UIDevice currentDevice].model;
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"tel://%@", phone]];
+    BOOL canMakeCall = YES;
+    if ([strDeviceType isEqualToString:@"iPod touch"] || [strDeviceType isEqualToString:@"iPad"] || [strDeviceType isEqualToString:@"iPhone Simulator"]) {
+        canMakeCall = NO;
+    }
+    if (canMakeCall && [[UIApplication sharedApplication] canOpenURL:url]) {
+        [[UIApplication sharedApplication] openURL:url];
+    } else {
+        [self showHUDErrorHintInWindow:@"该设备不支持拨号服务"];
+    }
+}
+
 @end

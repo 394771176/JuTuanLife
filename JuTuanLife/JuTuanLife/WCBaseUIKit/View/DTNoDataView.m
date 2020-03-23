@@ -19,7 +19,7 @@
         
         _imgOffset = 0;
         _btnOffset = 0;
-        _labOffset = 0;
+        _labOffset = 20;
         
         self.backgroundColor = [UIColor clearColor];
         
@@ -31,7 +31,7 @@
         _msgLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, _imgView.bottom+20, self.width-80, 30)];
         _msgLabel.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
         _msgLabel.backgroundColor = [UIColor clearColor];
-        _msgLabel.textColor = [UIColor colorWithHexString:@"cbcbcb" alpha:1];
+        _msgLabel.textColor = [UIColor colorWithHexString:@"999999" alpha:1];
 //        _msgLabel.textColor = APP_CONST_BLUE_COLOR;
         _msgLabel.font = [UIFont systemFontOfSize:16.f];
         _msgLabel.numberOfLines = 0;
@@ -64,9 +64,6 @@
     _msgLabel.textAlignment = NSTextAlignmentCenter;
     
     CGFloat top = floorf((self.height-100-_labOffset-size.height)/2) - 70 + _imgOffset;
-    if (top > 0) {
-        NSLog(@"");
-    }
     _imgView.top = top;
     _msgLabel.top = _imgView.bottom + _labOffset;
     if(_btn){

@@ -35,15 +35,17 @@
     }
     
     CGFloat left = 0;
+    _teamsContentWidth = 0;
     for (NSInteger i=0; i < _labelList.count; i++) {
         DTTagLabel *label = [_labelList safeObjectAtIndex:i];
         if (i < items.count) {
             JTUserTeam *team = [items safeObjectAtIndex:i];
             label.left = left;
-            label.text = team.name;
+            label.text = team.name;//自动适应宽度
             [label setBackgroundColor:([team.itemId integerValue] % 2 == 1 ? COLOR(#FA3F3F) : COLOR(#FFA703)) cornerRadius:1];
             label.hidden = NO;
             left = label.right + 7;
+            _teamsContentWidth = label.right;
         } else {
             label.hidden = YES;
         }
