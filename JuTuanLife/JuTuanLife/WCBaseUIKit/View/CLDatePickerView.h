@@ -13,7 +13,10 @@
 @protocol CLDatePickerViewDelegate <NSObject>
 
 - (void)datePickerView:(CLDatePickerView *)pickerView selectedDate:(NSDate *)date;
-- (void)dismissDatePickerViewAction:(CLDatePickerView *)pickerView;
+
+- (void)datePickerViewDidCancelAction:(CLDatePickerView *)pickerView;
+
+- (void)datePickerViewDidDismissAction:(CLDatePickerView *)pickerView;
 
 @end
 
@@ -24,9 +27,12 @@
 @property (nonatomic, strong) NSDate *maxDate;
 @property (nonatomic, strong) NSDate *date;
 
-@property (copy) void (^finishBlock)(BOOL success,NSString *date);
+@property (nonatomic) UIDatePickerMode datePickerMode;//default is UIDatePickerModeDate
 
-@property (nonatomic) UIDatePickerMode datePickerMode;
+@property (nonatomic, assign) CGFloat bgAlpha;//default is 0.5
+@property (nonatomic, assign) BOOL tapDismiss;//default is YES;
+
+@property (copy) void (^finishBlock)(BOOL success,NSString *date);
 
 - (id)initWithDelegate:(id<CLDatePickerViewDelegate>)delegate date:(NSDate *)date;
 - (void)setDate:(NSDate *)date animated:(BOOL)animated;

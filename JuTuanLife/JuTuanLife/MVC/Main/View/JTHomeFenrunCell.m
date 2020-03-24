@@ -64,6 +64,7 @@
 
 - (void)setOnlyFixPeriod:(BOOL)onlyFixPeriod
 {
+    _onlyFixPeriod = onlyFixPeriod;
     NSMutableArray *titles = [NSMutableArray array];
     if (onlyFixPeriod) {
         _fenrunPeriods = @[@(JTFenRunPeriodFixDay), @(JTFenRunPeriodFixMonth), @(JTFenRunPeriodFixYear)];

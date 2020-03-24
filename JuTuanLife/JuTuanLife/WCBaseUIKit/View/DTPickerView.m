@@ -47,17 +47,11 @@
         UIBarButtonItem * cancelBtn = nil;
         UIBarButtonItem * doneBtn = nil;
         
-        if (iOS(7)) {
-            cancelBtn = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(dismissPickerView)];
-            [cancelBtn setTitleTextAttributes:@{NSForegroundColorAttributeName :[UIColor colorWithHexString:@"666666" alpha:1], NSFontAttributeName:[UIFont systemFontOfSize:15.f]} forState:UIControlStateNormal];
-            doneBtn = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStylePlain target:self action:@selector(doneBtnAction)];
-            [doneBtn setTitleTextAttributes:@{NSForegroundColorAttributeName:APP_CONST_BLUE_COLOR, NSFontAttributeName:[UIFont systemFontOfSize:15.f]} forState:UIControlStateNormal];
-        } else {
-            cancelBtn = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStyleBordered target:self action:@selector(dismissPickerView)];
-            [cancelBtn setTitleTextAttributes:@{UITextAttributeTextColor:[UIColor whiteColor],UITextAttributeFont:[UIFont systemFontOfSize:15.f]} forState:UIControlStateNormal];
-            doneBtn = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStyleBordered target:self action:@selector(doneBtnAction)];
-            [doneBtn setTitleTextAttributes:@{UITextAttributeTextColor:[UIColor whiteColor],UITextAttributeFont:[UIFont systemFontOfSize:15.f]} forState:UIControlStateNormal];
-        }
+        cancelBtn = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(cancelAction)];
+        [cancelBtn setTitleTextAttributes:@{NSForegroundColorAttributeName :[UIColor colorWithHexString:@"666666" alpha:1], NSFontAttributeName:[UIFont systemFontOfSize:15.f]} forState:UIControlStateNormal];
+        doneBtn = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStylePlain target:self action:@selector(doneBtnAction)];
+        [doneBtn setTitleTextAttributes:@{NSForegroundColorAttributeName:APP_CONST_BLUE_COLOR, NSFontAttributeName:[UIFont systemFontOfSize:15.f]} forState:UIControlStateNormal];
+        
         UIBarButtonItem * btnSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
         NSArray * buttons = nil;
         if (iOS(7)) {
@@ -81,6 +75,7 @@
         _pickerView.showsSelectionIndicator = YES;
         [_containView addSubview:_pickerView];
         
+        _tapDismiss = YES;
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
         tap.cancelsTouchesInView = NO;
         [self addGestureRecognizer:tap];
@@ -116,10 +111,45 @@
 - (void)setSource:(NSArray *)source
 {
     _source = source;
+    _componentSource = [NSArray arrayWithObjects:source, nil];
     [_pickerView reloadAllComponents];
-    if (_selectedIndex < _source.count && _selectedIndex >= 0) {
+    if (_selectedIndex < _source.count && _selectedIndex > 0) {
         [_pickerView selectRow:_selectedIndex inComponent:0 animated:NO];
     }
+}
+
+- (void)setComponentSource:(NSArray *)componentSource
+{
+    if (componentSource.count) {
+        if (![componentSource.firstObject isKindOfClass:NSArray.class]) {
+            self.source = componentSource;
+            return;
+        }
+    }
+    _componentSource = componentSource;
+    [_pickerView reloadAllComponents];
+    NSArray *array = [_componentSource safeObjectAtIndex:0];
+    if (_selectedIndex < array.count && _selectedIndex > 0) {
+        [_pickerView selectRow:_selectedIndex inComponent:0 animated:NO];
+    }
+}
+
+- (void)setSelectedContents:(NSArray *)selectedContents
+{
+    for (int i = 0; i < selectedContents.count && i < _componentSource.count; i++) {
+        NSString *content = [selectedContents safeObjectAtIndex:i];
+        NSArray *array = [_componentSource safeObjectAtIndex:i];
+        if ([array containsObject:content]) {
+            NSInteger index = [array indexOfObject:content];
+            [_pickerView selectRow:index inComponent:i animated:NO];
+        }
+    }
+}
+
+- (void)setBgAlpha:(CGFloat)bgAlpha
+{
+    _bgAlpha = bgAlpha;
+    _bgView.alpha = bgAlpha;
 }
 
 - (void)showInView:(UIView *)view
@@ -131,12 +161,15 @@
     
     [UIView animateWithDuration:.3f animations:^{
         _containView.top = self.height-_containView.height;
-        _bgView.alpha = 1.f;
+        _bgView.alpha = _bgAlpha;
     }];
 }
 
 - (void)removeFromSuperviewWithAnimated:(BOOL)animated
 {
+    if (_delegate && [_delegate respondsToSelector:@selector(pickerViewDidDismissAction:)]) {
+        [_delegate pickerViewDidDismissAction:self];
+    }
     [UIView animateWithDuration:.3f animations:^{
         _containView.top = self.height;
         _bgView.alpha = .0f;
@@ -151,48 +184,89 @@
 
 - (void)tapAction:(UIGestureRecognizer *)recognizer
 {
+    if (!_tapDismiss) {
+        return;
+    }
     CGPoint location = [recognizer locationInView:self];
     if (location.y<_containView.top) {
-        [self removeFromSuperviewWithAnimated:YES];
+        [self cancelAction];
     }
 }
 
 - (void)doneBtnAction
 {
-    [_delegate pickerViewSelectedRow:self content:[_source safeObjectAtIndex:_selectedIndex] selectedRow:_selectedIndex];
-    if (!_needSelectedToSubmit||_selectedIndex!=0) {
-        [self removeFromSuperviewWithAnimated:YES];
+    if (_delegate && [_delegate respondsToSelector:@selector(pickerViewSelectedRow:content:selectedRow:)]) {
+        NSArray *array = [_componentSource safeObjectAtIndex:0];
+        [_delegate pickerViewSelectedRow:self content:[array safeObjectAtIndex:_selectedIndex] selectedRow:_selectedIndex];
     }
+    
+    if (_delegate && [_delegate respondsToSelector:@selector(pickerViewSelectedRow:contents:selectedRows:)]) {
+        NSMutableArray *contents = [NSMutableArray array];
+        NSMutableArray *rows = [NSMutableArray array];
+        for (int i = 0; i < _componentSource.count; i++) {
+            NSInteger row = [_pickerView selectedRowInComponent:i];
+            NSArray *array = [_componentSource safeObjectAtIndex:i];
+            NSString *content = [array safeObjectAtIndex:row];
+            [contents safeAddObject:content];
+            [rows safeAddObject:@(row)];
+        }
+        [_delegate pickerViewSelectedRow:self contents:contents selectedRows:rows];
+    }
+    
+    if ([self isSingleComponent]) {
+        if (_needSelectedToSubmit && _selectedIndex==0) {
+            return;
+        }
+    }
+    
+    [self removeFromSuperviewWithAnimated:YES];
 }
 
-- (void)dismissPickerView
+- (void)cancelAction
 {
+    if (_delegate && [_delegate respondsToSelector:@selector(pickerViewDidCancelAction:)]) {
+        [_delegate pickerViewDidCancelAction:self];
+    }
     [self removeFromSuperviewWithAnimated:YES];
 }
 
 #pragma mark - UIPickerViewDelegate&&UIPickerViewDataSource
 
+- (BOOL)isSingleComponent
+{
+    return _componentSource.count <= 1;
+}
+
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
-    return 1;
+    return _componentSource.count;
 }
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-    return _source.count;
+    NSArray *array = [_componentSource safeObjectAtIndex:component];
+    return array.count;
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    return [_source safeObjectAtIndex:row];
+    NSArray *array = [_componentSource safeObjectAtIndex:component];
+    return [array safeObjectAtIndex:row];
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
-    _selectedIndex = row;
+    NSArray *array = [_componentSource safeObjectAtIndex:component];
     
-    if ([_delegate respondsToSelector:@selector(pickerViewRowDidChange:content:row:)]) {
-        [_delegate pickerViewRowDidChange:self content:[_source safeObjectAtIndex:row] row:row];
+    if (component == 0) {
+        _selectedIndex = row;
+        if ([_delegate respondsToSelector:@selector(pickerViewRowDidChange:content:row:)]) {
+            [_delegate pickerViewRowDidChange:self content:[array safeObjectAtIndex:row] row:row];
+        }
+    }
+    
+    if ([_delegate respondsToSelector:@selector(pickerViewRowDidChange:content:row:component:)]) {
+        [_delegate pickerViewRowDidChange:self content:[array safeObjectAtIndex:row] row:row component:component];
     }
 }
 

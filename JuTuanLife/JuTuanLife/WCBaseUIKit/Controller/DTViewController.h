@@ -8,13 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "DTDrivingLoadingView.h"
+#import "XLBallLoading.h"
 
 #define viewTopWithoutNavBar (iOS(7)?20.0f:.0f)
 
 @interface DTViewController : UIViewController {
     @protected
     DTDrivingLoadingView *_loadingView;
-    
+    XLBallLoading *_ballLoadingView;
 }
 
 @property (nonatomic) BOOL disableBackBtn;

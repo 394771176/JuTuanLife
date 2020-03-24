@@ -894,6 +894,8 @@
 		60FD864024291D3A0030E232 /* XLBallLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLBallLoading.m; sourceTree = "<group>"; };
 		60FD864124291D3A0030E232 /* XLBallLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLBallLoading.h; sourceTree = "<group>"; };
 		60FD8644242920360030E232 /* jt_ship_phone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jt_ship_phone@2x.png"; sourceTree = "<group>"; };
+		60FD87B4242A7B840030E232 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		60FD87B5242A7B840030E232 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		87291E484A5B51B2A86BD0CE /* Pods_JuTuanLife.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JuTuanLife.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -1872,8 +1874,8 @@
 		60FD863F24291D3A0030E232 /* XLBallLoading */ = {
 			isa = PBXGroup;
 			children = (
-				60FD864024291D3A0030E232 /* XLBallLoading.m */,
 				60FD864124291D3A0030E232 /* XLBallLoading.h */,
+				60FD864024291D3A0030E232 /* XLBallLoading.m */,
 			);
 			path = XLBallLoading;
 			sourceTree = "<group>";
@@ -1940,6 +1942,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 60ED761C240EB25A0013CB8C;
 			productRefGroup = 60ED7626240EB25A0013CB8C /* Products */;
@@ -2548,6 +2551,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				60ED762F240EB25A0013CB8C /* Base */,
+				60FD87B5242A7B840030E232 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -2556,6 +2560,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				60ED7634240EB25B0013CB8C /* Base */,
+				60FD87B4242A7B840030E232 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -2613,6 +2618,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -2672,6 +2678,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

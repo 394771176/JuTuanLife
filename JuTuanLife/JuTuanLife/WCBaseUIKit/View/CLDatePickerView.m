@@ -31,25 +31,18 @@
         [self addSubview:_bgView];
         
         _containView = [[UIView alloc] initWithFrame:CGRectMake(0, self.height-216-44, self.width, 260)];
-        _containView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+        _containView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
         [self addSubview:_containView];
         
         UIToolbar * topView = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, self.width, 44)];
         UIBarButtonItem * cancelBtn = nil;
         UIBarButtonItem * doneBtn = nil;
         
-        if (iOS(7)) {
-            cancelBtn = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(dismissPickerView)];
-            [cancelBtn setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"666666" alpha:1],NSFontAttributeName:[UIFont systemFontOfSize:15.f]} forState:UIControlStateNormal];
-            doneBtn = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStylePlain target:self action:@selector(doneBtnAction)];
-            [doneBtn setTitleTextAttributes:@{NSForegroundColorAttributeName:APP_CONST_BLUE_COLOR,NSFontAttributeName:[UIFont systemFontOfSize:15.f]} forState:UIControlStateNormal];
-        } else {
-            
-            cancelBtn = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStyleBordered target:self action:@selector(dismissPickerView)];
-            [cancelBtn setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont systemFontOfSize:15.f]} forState:UIControlStateNormal];
-            doneBtn = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStyleBordered target:self action:@selector(doneBtnAction)];
-            [doneBtn setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont systemFontOfSize:15.f]} forState:UIControlStateNormal];
-        }
+        cancelBtn = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(cancelAction)];
+        [cancelBtn setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"666666" alpha:1],NSFontAttributeName:[UIFont systemFontOfSize:15.f]} forState:UIControlStateNormal];
+        doneBtn = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStylePlain target:self action:@selector(doneBtnAction)];
+        [doneBtn setTitleTextAttributes:@{NSForegroundColorAttributeName:APP_CONST_BLUE_COLOR,NSFontAttributeName:[UIFont systemFontOfSize:15.f]} forState:UIControlStateNormal];
+        
         UIBarButtonItem * btnSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
         NSArray * buttons = nil;
         if (iOS(7)) {
@@ -71,6 +64,7 @@
         _datePicker.datePickerMode = UIDatePickerModeDate;
         [_containView addSubview:_datePicker];
         
+        _tapDismiss = YES;
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
         tap.cancelsTouchesInView = NO;
         [self addGestureRecognizer:tap];
@@ -110,6 +104,12 @@
     [_datePicker setDate:date animated:animated];
 }
 
+- (void)setBgAlpha:(CGFloat)bgAlpha
+{
+    _bgAlpha = bgAlpha;
+    _bgView.alpha = bgAlpha;
+}
+
 - (void)showInView:(UIView *)view
 {
     self.frame = CGRectMake(0, 0, view.width, view.height);
@@ -118,14 +118,13 @@
     _bgView.alpha = .0f;
     [UIView animateWithDuration:.3f animations:^{
         _containView.top = self.height-_containView.height;
-        _bgView.alpha = 1.f;
+        _bgView.alpha = _bgAlpha;
     }];
 }
 
 - (void)removeFromSuperviewWithAnimated:(BOOL)animated
 {
     if (_finishBlock) {
-        
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         if (_datePickerMode == UIDatePickerModeDate) {
             [formatter setDateFormat:@"yyyy-MM-dd"];
@@ -135,7 +134,9 @@
         NSString *date = [formatter stringFromDate:_datePicker.date];
         _finishBlock(_chooseDate,date);
     }
-    [_delegate dismissDatePickerViewAction:self];
+    if (_delegate && [_delegate respondsToSelector:@selector(datePickerViewDidDismissAction:)]) {
+        [_delegate datePickerViewDidDismissAction:self];
+    }
     [UIView animateWithDuration:.3f animations:^{
         _containView.top = self.height;
         _bgView.alpha = .0f;
@@ -150,10 +151,13 @@
 
 - (void)tapAction:(UIGestureRecognizer *)recognizer
 {
-    _chooseDate = NO;
+    if (!_tapDismiss) {
+        return;
+    }
+    
     CGPoint location = [recognizer locationInView:self];
     if (location.y<_containView.top) {
-        [self removeFromSuperviewWithAnimated:YES];
+        [self cancelAction];
     }
 }
 
@@ -164,9 +168,12 @@
     [self removeFromSuperviewWithAnimated:YES];
 }
 
-- (void)dismissPickerView
+- (void)cancelAction
 {
     _chooseDate = NO;
+    if (_delegate && [_delegate respondsToSelector:@selector(datePickerViewDidCancelAction:)]) {
+        [_delegate datePickerViewDidCancelAction:self];
+    }
     [self removeFromSuperviewWithAnimated:YES];
 }
 

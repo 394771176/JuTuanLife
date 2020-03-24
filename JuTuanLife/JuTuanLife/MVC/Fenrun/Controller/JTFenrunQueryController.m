@@ -11,12 +11,23 @@
 #import "JTShipListCell.h"
 #import "JTFenRunModel.h"
 #import "JTUserCenterController.h"
+#import "DTPickerView.h"
+#import "CLDatePickerView.h"
 
 @interface JTFenrunQueryController ()
-<DTTabBarViewDelegate>
+<
+DTTabBarViewDelegate
+, CLDatePickerViewDelegate
+, DTPickerViewDelegate
+>
 {
     JTHomeFenrunCell *_fenrunCell;
     NSMutableDictionary *_modelDict;
+    
+    CLDatePickerView *_datePicker;
+    DTPickerView *_pickerView;
+    
+    NSDate *_today;
 }
 
 @end
@@ -43,19 +54,25 @@
     }
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self showPickerView];
+}
+
 - (void)viewDidLoad {
     
-    self.autoCreateModel = NO;
+    self.autoRefresh = NO;
     
     [super viewDidLoad];
     self.title = @"分润查询";
     
-    [self reloadData];
+    _today = [NSDate date];
     
-    if (APP_DEBUG) {
-        self.noDataMsg = @"敬请期待，马上就做";
-        [self showNoDataView];
-    }
+    [self.tableView setTableHeaderHeight:10];
+    
+    [self reloadData];
 }
 
 - (void)showNoDataView
@@ -67,7 +84,10 @@
 - (void)reloadData
 {
     _fenrunCell.item = [self.Model fenrun];
-    if (self.dataModel.itemCount) {
+    
+    if (self.dataModel.hasLoadData && self.dataModel.itemCount <= 0) {
+        [self showNoDataView];
+    } else {
         [self hideNoDataView];
     }
     [super reloadData];
@@ -143,15 +163,69 @@
     return source;
 }
 
-- (void)didQueryAction
+- (void)showPickerView
 {
-    [self.Model setSelectedDate:@"2020-03"];
+    if (_period == JTFenRunPeriodFixDay) {
+        [_pickerView removeFromSuperview];
+        
+        if (!_datePicker) {
+            CLDatePickerView *picker = [[CLDatePickerView alloc] initWithDelegate:self date:_today];
+            picker.tapDismiss = NO;
+            picker.bgAlpha = 0;
+            picker.minDate = [NSDate dateWithTimeIntervalSince1970:0];
+            picker.maxDate = _today;
+            _datePicker = picker;
+        }
+        [_datePicker showInView:self.view];
+        _datePicker.frame = CGRectMake(0, 80, self.view.width, self.height - 80);
+        _datePicker.date = _today;
+    } else {
+        [_datePicker removeFromSuperview];
+        
+        NSMutableArray *array = [NSMutableArray arrayWithObjects:[self yearsArray], nil];
+        if (_period == JTFenRunPeriodFixMonth) {
+            [array safeAddObject:@[@"1月", @"2月", @"3月", @"4月",  @"5月",  @"6月",
+                                   @"7月", @"8月", @"9月", @"10月", @"11月", @"12月"]];
+        }
+        if (!_pickerView) {
+            DTPickerView *picker = [[DTPickerView alloc] initWithDelegate:self selectedRow:0];
+            picker.tapDismiss = NO;
+            picker.bgAlpha = 0;
+            _pickerView = picker;
+        }
+        [_pickerView showInView:self.view];
+        _pickerView.frame = CGRectMake(0, 80, self.view.width, self.height - 80);
+        _pickerView.componentSource = array;
+        [_pickerView setSelectedContents:@[[NSString stringWithFormat:@"%zd年", _today.year],
+                                           [NSString stringWithFormat:@"%zd月", _today.month]]];
+    }
+}
+
+- (NSArray *)yearsArray
+{
+    NSMutableArray *array = [NSMutableArray array];
+    for (NSInteger i=1970; i <= _today.year; i++) {
+        [array safeAddObject:[NSString stringWithFormat:@"%zd年", i]];
+    }
+    return array;
+}
+
+- (void)didQueryAction:(NSString *)selectedDate
+{
+    JTFenRunModel *model = [self modelForPeriod:_period];
+    if (self.dataModel != model) {
+        [self resetDataModel:model];
+    }
+    [self.Model setSelectedDate:selectedDate];
     [self refresh];
 }
 
 - (void)didCancelQuery
 {
-    if (![self haveCacheOrData]) {
+    if ([self.Model period] != _period) {
+        _fenrunCell.period = [self.Model period];
+    }
+    if (!self.dataModel.hasLoadData) {
         [self backAction];
     }
 }
@@ -162,12 +236,57 @@
 {
     _period = (JTFenRunPeriod)(index + JTFenRunPeriodFixDay);
     JTFenRunModel *model = [self modelForPeriod:_period];
-    [self resetDataModel:model];
-    [self reloadData];
-    
-    if (APP_DEBUG) {
-        [self didQueryAction];
+    if (model.itemCount || model.hasLoadData)
+    {
+        [self resetDataModel:model];
+        [self reloadData];
     }
+    
+    [self showPickerView];
+}
+
+#pragma mark - , CLDatePickerViewDelegate
+
+- (void)datePickerView:(CLDatePickerView *)pickerView selectedDate:(NSDate *)date
+{
+    [self didQueryAction:date.dayString];
+}
+
+- (void)datePickerViewDidCancelAction:(CLDatePickerView *)pickerView
+{
+    [self didCancelQuery];
+}
+
+#pragma mark - , DTPickerViewDelegate
+
+- (void)pickerViewSelectedRow:(DTPickerView *)pickerView contents:(NSArray *)contents selectedRows:(NSArray *)rows
+{
+    NSMutableString *dateStr = [NSMutableString string];
+    [contents enumerateObjectsUsingBlock:^(NSString *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSString *string = nil;
+        if ([obj hasSuffix:@"年"] || [obj hasSuffix:@"月"]) {
+            string = [obj substringToIndex:obj.length - 1];
+        } else {
+            string = obj;
+        }
+            
+        if (dateStr.length) {
+            [dateStr appendFormat:@"-%@", string];
+        } else {
+            [dateStr appendFormat:@"%@", string];
+        }
+    }];
+    JTFenRunModel *model = [self modelForPeriod:_period];
+    if (self.dataModel != model) {
+        [self resetDataModel:model];
+    }
+    
+    [self didQueryAction:dateStr];
+}
+
+- (void)pickerViewDidCancelAction:(DTPickerView *)pickerView
+{
+    [self didCancelQuery];
 }
 
 @end
