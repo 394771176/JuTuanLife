@@ -25,6 +25,14 @@
 
 - (void)pickerViewDidDismissAction:(DTPickerView *)pickerView;
 
+/**
+ 有些特殊的需要根据 其他的数据制约，
+ 比如年份 + 月份这种:
+ 年份是当前年份，但月份不允许超过当前月份
+ 年份是过去年份，则可以随意选1 ~ 12 个月份
+ **/
+- (NSInteger)pickerView:(DTPickerView *)pickerView countForComponent:(NSInteger)component withSource:(NSArray *)source;
+
 @end
 
 @interface DTPickerView : UIView
@@ -39,6 +47,8 @@
 
 @property (nonatomic, assign) CGFloat bgAlpha;
 @property (nonatomic, assign) BOOL tapDismiss;//default is YES;
+
+@property (nonatomic, strong) NSString *confirmTitle;
 
 - (id)initWithDelegate:(id<DTPickerViewDelegate>)delegate selectedRow:(NSInteger)row;
 - (void)showInView:(UIView *)view;

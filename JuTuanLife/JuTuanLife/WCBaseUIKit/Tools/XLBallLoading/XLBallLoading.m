@@ -8,8 +8,6 @@
 
 #import "XLBallLoading.h"
 
-static CGFloat ballScale = 1.5f;
-
 @interface XLBallLoading ()<CAAnimationDelegate> {
     
     UIVisualEffectView *_ballContainer;
@@ -21,6 +19,8 @@ static CGFloat ballScale = 1.5f;
     UIView *_ball3;
     
     BOOL _stopAnimationByUser;
+    
+    NSTimeInterval _beginTime;
 }
 @end
 
@@ -28,6 +28,10 @@ static CGFloat ballScale = 1.5f;
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
+        _duration = 1.f;
+        _ballDistance = 32;
+        _ballScale = 1.5f;
+        _ballContainerSize = CGSizeMake(120, 120);
         [self initUI];
     }
     return self;
@@ -35,11 +39,12 @@ static CGFloat ballScale = 1.5f;
 
 -(void)initUI{
     _ballContainer = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight]];
-    _ballContainer.frame = CGRectMake(0, 0, 100, 100);
+    _ballContainer.frame = CGRectMake(0, 0, _ballContainerSize.width, _ballContainerSize.height);
     _ballContainer.center = CGPointMake(self.bounds.size.width/2.0f, self.bounds.size.height/2.0f);
     _ballContainer.layer.cornerRadius = 10.0f;
     _ballContainer.layer.masksToBounds = true;
-    _ballContainer.backgroundColor = [UIColor clearColor];
+    _ballContainer.backgroundColor = [UIColor whiteColor];
+    _ballContainer.alpha = 0.9;
     [self addSubview:_ballContainer];
     
     CGFloat ballWidth = 13.0f;
@@ -62,21 +67,39 @@ static CGFloat ballScale = 1.5f;
     _ball3.layer.cornerRadius = ballWidth/2.0f;
     _ball3.backgroundColor = [UIColor colorWithRed:234/255.0 green:67/255.0 blue:69/255.0 alpha:1];
     [_ballContainer.contentView addSubview:_ball3];
+    
+    self.ballDistance = _ballDistance;
+}
+
+- (void)setBallDistance:(CGFloat)ballDistance
+{
+    _ballDistance = ballDistance;
+    _ball1.centerX = _ball2.centerX - ballDistance;
+    _ball3.centerX = _ball2.centerX + ballDistance;
+}
+
+- (void)setBallContainerSize:(CGSize)ballContainerSize
+{
+    _ballContainerSize = ballContainerSize;
+    _ballContainer.frame = CGRectMake(0, 0, _ballContainerSize.width, _ballContainerSize.height);
+    _ballContainer.center = CGPointMake(self.bounds.size.width/2.0f, self.bounds.size.height/2.0f);
 }
 
 -(void)startPathAnimate{
     
     //-------第一个球的动画
     CGFloat width = _ballContainer.bounds.size.width;
+    
     //小圆半径
-    CGFloat r = (_ball1.bounds.size.width)*ballScale/2.0f;
+    CGFloat r = (_ball1.bounds.size.width)*_ballScale/2.0f;
     //大圆半径
     CGFloat R = (width/2 + r)/2.0;
+    R = _ballDistance;
     
     UIBezierPath *path1 = [UIBezierPath bezierPath];
     [path1 moveToPoint:_ball1.center];
     //画大圆
-    [path1 addArcWithCenter:CGPointMake(R + r, width/2) radius:R startAngle:M_PI endAngle:M_PI*2 clockwise:NO];
+    [path1 addArcWithCenter:CGPointMake(width / 2, width/2) radius:R startAngle:M_PI endAngle:M_PI*2 clockwise:NO];
     //画小圆
     UIBezierPath *path1_1 = [UIBezierPath bezierPath];
     [path1_1 addArcWithCenter:CGPointMake(width/2, width/2) radius:r*2 startAngle:M_PI*2 endAngle:M_PI clockwise:NO];
@@ -96,7 +119,7 @@ static CGFloat ballScale = 1.5f;
     UIBezierPath *path3 = [UIBezierPath bezierPath];
     [path3 moveToPoint:_ball3.center];
     //画大圆
-    [path3 addArcWithCenter:CGPointMake(width - (R + r), width/2) radius:R startAngle:2*M_PI endAngle:M_PI clockwise:NO];
+    [path3 addArcWithCenter:CGPointMake(width / 2, width/2) radius:R startAngle:2*M_PI endAngle:M_PI clockwise:NO];
     //画小圆
     UIBezierPath *path3_1 = [UIBezierPath bezierPath];
     [path3_1 addArcWithCenter:CGPointMake(width/2, width/2) radius:r*2 startAngle:M_PI endAngle:M_PI*2 clockwise:NO];
@@ -117,9 +140,10 @@ static CGFloat ballScale = 1.5f;
 //放大缩小动画
 -(void)animationDidStart:(CAAnimation *)anim{
     
-    CGFloat delay = 0.3f;
-    CGFloat duration = [self animationDuration]/2 - delay;
-    
+    CGFloat duration = [self animationDuration]/2;
+    CGFloat delay = duration / 8 * 3;
+    duration -= delay;
+    CGFloat ballScale = _ballScale;
     [UIView animateWithDuration:duration delay:delay options:UIViewAnimationOptionCurveEaseOut| UIViewAnimationOptionBeginFromCurrentState animations:^{
         _ball1.transform = CGAffineTransformMakeScale(ballScale, ballScale);
         _ball2.transform = CGAffineTransformMakeScale(ballScale, ballScale);
@@ -139,17 +163,30 @@ static CGFloat ballScale = 1.5f;
 }
 
 - (CGFloat)animationDuration {
-    return 1.6f;
+    return _duration;
 }
 
 #pragma mark -
 #pragma mark 显示隐藏方法
 - (void)start {
+    _beginTime = CACurrentMediaTime();
     [self startPathAnimate];
     _stopAnimationByUser = false;
 }
 
 - (void)stop {
+    if (_minDuration >= 0.1) {
+        NSTimeInterval time = CACurrentMediaTime() - _beginTime;
+        if (time < _minDuration) {
+            WEAK_SELF
+            [DTPubUtil addBlock:^{
+                if (weakSelf) {
+                    [weakSelf stop];
+                }
+            } withDelay:_minDuration - time];
+            return;
+        }
+    }
     _stopAnimationByUser = true;
     [_ball1.layer removeAllAnimations];
     [_ball1 removeFromSuperview];
@@ -157,11 +194,20 @@ static CGFloat ballScale = 1.5f;
     [_ball2 removeFromSuperview];
     [_ball3.layer removeAllAnimations];
     [_ball3 removeFromSuperview];
+    
+    [self removeFromSuperview];
 }
 
-+(void)showInView:(UIView *)view{
-    [self hideInView:view];
++ (void)showInView:(UIView *)view
+{
+    [self showInView:view minDuration:0.f];
+}
+
++(void)showInView:(UIView *)view minDuration:(CGFloat)minDuration
+{
+    [self hideInViewImmediately:view];
     XLBallLoading *loading = [[XLBallLoading alloc] initWithFrame:view.bounds];
+    loading.minDuration = minDuration;
     [view addSubview:loading];
     [loading start];
 }
@@ -170,7 +216,16 @@ static CGFloat ballScale = 1.5f;
     for (XLBallLoading *loading in view.subviews) {
         if ([loading isKindOfClass:[XLBallLoading class]]) {
             [loading stop];
-            [loading removeFromSuperview];
+        }
+    }
+}
+
++ (void)hideInViewImmediately:(UIView *)view
+{
+    for (XLBallLoading *loading in view.subviews) {
+        if ([loading isKindOfClass:[XLBallLoading class]]) {
+            loading.minDuration = 0.f;
+            [loading stop];
         }
     }
 }

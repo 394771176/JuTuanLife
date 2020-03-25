@@ -13,6 +13,8 @@
     UIView *_bgView, *_containView;
     UIDatePicker *_datePicker;
     BOOL _chooseDate;
+    
+    UIBarButtonItem *_doneBarItem, *_cancelBarItem;
 }
 
 @end
@@ -39,9 +41,12 @@
         UIBarButtonItem * doneBtn = nil;
         
         cancelBtn = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(cancelAction)];
-        [cancelBtn setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"666666" alpha:1],NSFontAttributeName:[UIFont systemFontOfSize:15.f]} forState:UIControlStateNormal];
+        [cancelBtn setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"666666" alpha:1],NSFontAttributeName:[UIFont systemFontOfSize:16.f]} forState:UIControlStateNormal];
         doneBtn = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStylePlain target:self action:@selector(doneBtnAction)];
-        [doneBtn setTitleTextAttributes:@{NSForegroundColorAttributeName:APP_CONST_BLUE_COLOR,NSFontAttributeName:[UIFont systemFontOfSize:15.f]} forState:UIControlStateNormal];
+        [doneBtn setTitleTextAttributes:@{NSForegroundColorAttributeName:APP_CONST_BLUE_COLOR,NSFontAttributeName:[UIFont systemFontOfSize:16.f]} forState:UIControlStateNormal];
+        
+        _doneBarItem = doneBtn;
+        _cancelBarItem = cancelBtn;
         
         UIBarButtonItem * btnSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
         NSArray * buttons = nil;
@@ -108,6 +113,15 @@
 {
     _bgAlpha = bgAlpha;
     _bgView.alpha = bgAlpha;
+}
+
+- (void)setConfirmTitle:(NSString *)confirmTitle
+{
+    if (confirmTitle.length) {
+        [_doneBarItem setTitle:confirmTitle];
+    } else {
+        [_doneBarItem setTitle:@"完成"];
+    }
 }
 
 - (void)showInView:(UIView *)view

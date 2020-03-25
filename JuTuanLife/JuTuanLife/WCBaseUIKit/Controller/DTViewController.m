@@ -255,10 +255,7 @@
 //        }
 //        [_loadingView startAnimating];
         
-        if (!_ballLoadingView) {
-            _ballLoadingView = [[XLBallLoading alloc] initWithFrame:self.view.bounds];
-        }
-        [_ballLoadingView start];
+        [XLBallLoading showInView:self.view minDuration:1.f];
         _isShowLoadingIndicator = YES;
     } else {
         [self stopLoadingIndicator];
@@ -272,10 +269,18 @@
         [_loadingView removeFromSuperview];
         _loadingView = nil;
     }
-    if (_ballLoadingView) {
-        [_ballLoadingView stop];
-    }
+    [XLBallLoading hideInView:self.view];
     _isShowLoadingIndicator = NO;
+}
+
+- (void)stopLoadingIndicatorByDelay:(CGFloat)delay
+{
+    WEAK_SELF
+    [DTPubUtil addBlock:^{
+        if (weakSelf) {
+            [weakSelf stopLoadingIndicator];
+        }
+    } withDelay:delay];
 }
 
 - (void)startHUDLoading:(NSString *)text

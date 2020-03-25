@@ -15,7 +15,6 @@
 @interface DTViewController : UIViewController {
     @protected
     DTDrivingLoadingView *_loadingView;
-    XLBallLoading *_ballLoadingView;
 }
 
 @property (nonatomic) BOOL disableBackBtn;
@@ -56,6 +55,7 @@
 - (BOOL)canShowLoadingIndicator;//default is YES
 - (void)startLoadingIndicator;
 - (void)stopLoadingIndicator;
+- (void)stopLoadingIndicatorByDelay:(CGFloat)delay;
 
 - (void)startHUDLoading:(NSString *)text;
 - (void)stopHUDLoading;

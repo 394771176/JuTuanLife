@@ -83,6 +83,9 @@ DTTabBarViewDelegate
 
 - (void)reloadData
 {
+    if ([self.Model selectedDate].length <= 0) {
+        return;
+    }
     _fenrunCell.item = [self.Model fenrun];
     
     if (self.dataModel.hasLoadData && self.dataModel.itemCount <= 0) {
@@ -174,6 +177,7 @@ DTTabBarViewDelegate
             picker.bgAlpha = 0;
             picker.minDate = [NSDate dateWithTimeIntervalSince1970:0];
             picker.maxDate = _today;
+            picker.confirmTitle = @"查询";
             _datePicker = picker;
         }
         [_datePicker showInView:self.view];
@@ -191,13 +195,16 @@ DTTabBarViewDelegate
             DTPickerView *picker = [[DTPickerView alloc] initWithDelegate:self selectedRow:0];
             picker.tapDismiss = NO;
             picker.bgAlpha = 0;
+            picker.confirmTitle = @"查询";
             _pickerView = picker;
         }
+        _pickerView.componentSource = array;
         [_pickerView showInView:self.view];
         _pickerView.frame = CGRectMake(0, 80, self.view.width, self.height - 80);
-        _pickerView.componentSource = array;
-        [_pickerView setSelectedContents:@[[NSString stringWithFormat:@"%zd年", _today.year],
-                                           [NSString stringWithFormat:@"%zd月", _today.month]]];
+        [JTService addBlockOnMainThread:^{
+            [_pickerView setSelectedContents:@[[NSString stringWithFormat:@"%zd年", _today.year],
+                                               [NSString stringWithFormat:@"%zd月", _today.month]]];
+        }];
     }
 }
 
@@ -287,6 +294,20 @@ DTTabBarViewDelegate
 - (void)pickerViewDidCancelAction:(DTPickerView *)pickerView
 {
     [self didCancelQuery];
+}
+
+- (NSInteger)pickerView:(DTPickerView *)pickerView countForComponent:(NSInteger)component withSource:(NSArray *)source
+{
+    if (component == 1) {
+        UIPickerView *picker = pickerView.pickerView;
+        if ([picker selectedRowInComponent:0] == [picker numberOfRowsInComponent:0] - 1) {
+            return _today.month;
+        } else {
+            return source.count;
+        }
+    } else {
+        return source.count;
+    }
 }
 
 @end

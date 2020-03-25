@@ -32,6 +32,8 @@
 @property (nonatomic, assign) CGFloat bgAlpha;//default is 0.5
 @property (nonatomic, assign) BOOL tapDismiss;//default is YES;
 
+@property (nonatomic, strong) NSString *confirmTitle;
+
 @property (copy) void (^finishBlock)(BOOL success,NSString *date);
 
 - (id)initWithDelegate:(id<CLDatePickerViewDelegate>)delegate date:(NSDate *)date;

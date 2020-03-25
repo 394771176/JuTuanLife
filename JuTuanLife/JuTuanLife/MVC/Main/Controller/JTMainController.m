@@ -167,6 +167,9 @@
 {
     if (index == _selectedIndex) {
         [self currentControllerScrollToTop];
+        
+        [self startLoadingIndicator];
+        [self stopLoadingIndicatorByDelay:2];
     } else {
         self.selectedIndex = index;
     }

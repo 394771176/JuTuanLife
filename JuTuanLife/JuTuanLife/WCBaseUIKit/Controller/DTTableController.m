@@ -66,6 +66,10 @@
     
     [self.view addSubview:_tableView];
     
+    if ([DTPubUtil isIPhoneX]) {
+        [self.tableView setTableFooterHeight:SAFE_BOTTOM_VIEW_HEIGHT];
+    }
+    
     [self reloadTableView];
 }
 

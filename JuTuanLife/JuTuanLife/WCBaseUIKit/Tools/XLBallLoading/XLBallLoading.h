@@ -10,12 +10,21 @@
 
 @interface XLBallLoading : UIView
 
+@property (nonatomic, assign) CGFloat duration;
+@property (nonatomic, assign) CGFloat ballDistance;
+@property (nonatomic, assign) CGFloat ballScale;
+@property (nonatomic, assign) CGSize ballContainerSize;
+
+@property (nonatomic, assign) CGFloat minDuration;//default is 0
+
 -(void)start;
 
 -(void)stop;
 
 +(void)showInView:(UIView*)view;
++(void)showInView:(UIView*)view minDuration:(CGFloat)minDuration;
 
 +(void)hideInView:(UIView*)view;
++(void)hideInViewImmediately:(UIView*)view;
 
 @end

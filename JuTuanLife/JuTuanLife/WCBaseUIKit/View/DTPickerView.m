@@ -10,11 +10,14 @@
 #import "WCUICommon.h"
 
 @interface DTPickerView () <UIPickerViewDelegate, UIPickerViewDataSource> {
+    
     UIView *_bgView, *_containView;
     NSUInteger _selectedIndex;
     
     UILabel *_titleLabel;
     UIToolbar *_topView;
+    
+    UIBarButtonItem *_doneBarItem, *_cancelBarItem;
 }
 
 @end
@@ -48,9 +51,12 @@
         UIBarButtonItem * doneBtn = nil;
         
         cancelBtn = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(cancelAction)];
-        [cancelBtn setTitleTextAttributes:@{NSForegroundColorAttributeName :[UIColor colorWithHexString:@"666666" alpha:1], NSFontAttributeName:[UIFont systemFontOfSize:15.f]} forState:UIControlStateNormal];
+        [cancelBtn setTitleTextAttributes:@{NSForegroundColorAttributeName :[UIColor colorWithHexString:@"666666" alpha:1], NSFontAttributeName:[UIFont systemFontOfSize:16.f]} forState:UIControlStateNormal];
         doneBtn = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStylePlain target:self action:@selector(doneBtnAction)];
-        [doneBtn setTitleTextAttributes:@{NSForegroundColorAttributeName:APP_CONST_BLUE_COLOR, NSFontAttributeName:[UIFont systemFontOfSize:15.f]} forState:UIControlStateNormal];
+        [doneBtn setTitleTextAttributes:@{NSForegroundColorAttributeName:APP_CONST_BLUE_COLOR, NSFontAttributeName:[UIFont systemFontOfSize:16.f]} forState:UIControlStateNormal];
+        
+        _cancelBarItem = cancelBtn;
+        _doneBarItem = doneBtn;
         
         UIBarButtonItem * btnSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
         NSArray * buttons = nil;
@@ -108,6 +114,15 @@
     _titleLabel.text = _title;
 }
 
+- (void)setConfirmTitle:(NSString *)confirmTitle
+{
+    if (confirmTitle.length) {
+        [_doneBarItem setTitle:confirmTitle];
+    } else {
+        [_doneBarItem setTitle:@"完成"];
+    }
+}
+
 - (void)setSource:(NSArray *)source
 {
     _source = source;
@@ -144,6 +159,7 @@
             [_pickerView selectRow:index inComponent:i animated:NO];
         }
     }
+    [_pickerView reloadAllComponents];
 }
 
 - (void)setBgAlpha:(CGFloat)bgAlpha
@@ -245,6 +261,9 @@
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
     NSArray *array = [_componentSource safeObjectAtIndex:component];
+    if (_delegate && [_delegate respondsToSelector:@selector(pickerView:countForComponent:withSource:)]) {
+        return [_delegate pickerView:self countForComponent:component withSource:array];
+    }
     return array.count;
 }
 
@@ -267,6 +286,9 @@
     
     if ([_delegate respondsToSelector:@selector(pickerViewRowDidChange:content:row:component:)]) {
         [_delegate pickerViewRowDidChange:self content:[array safeObjectAtIndex:row] row:row component:component];
+    }
+    if (component + 1 < [self numberOfComponentsInPickerView:pickerView] && _delegate && [_delegate respondsToSelector:@selector(pickerView:countForComponent:withSource:)]) {
+        [pickerView reloadComponent:component + 1];
     }
 }
 
