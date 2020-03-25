@@ -8,10 +8,12 @@
 
 #import "DTWebViewController.h"
 #import "WCWebBackBarView.h"
+#import "DTURLWhiteList.h"
 
 @interface DTWebViewController () <WCWKWebViewDelegate> {
     WCWKWebView *_webView;
     WCWebBackBarView *_backBarView;
+    NSString *_rightItemUrl;
 }
 
 @property (nonatomic, assign) BOOL hasStartLoad;
@@ -76,6 +78,9 @@
 {
     _URL = URL;
     NSLog(@"H5 ：%@", URL.absoluteString);
+    
+    [DTURLWhiteList insertCookieForUrl:URL];
+    
     [self loadRequest];
 }
 
@@ -111,9 +116,76 @@
 
 #pragma mark - WCWKWebViewDelegate
 
+- (BOOL)checkWebViewScheme:(NSString *)urlStr
+{
+    // 强制当前页打开
+    if ([urlStr rangeOfString:@"://webview/back"].length) {
+        [self backAction];
+        return YES;
+    } else if ([urlStr rangeOfString:@"://webview/close"].length) {
+        [self closeAction];
+        return YES;
+    } else if ([urlStr rangeOfString:@"://webview/login"].length) {
+        
+        return YES;
+    } else if ([urlStr rangeOfString:@"://webview/logout"].length) {
+        [JTUserManager logoutAction:^{
+            
+        }];
+        return YES;
+    } else if ([urlStr rangeOfString:@"://webview/loading"].length) {
+        NSString *message = [urlStr getUrlParamValueForkey:@"message"];
+        NSInteger type = [urlStr getUrlParamIntForkey:@"type"];
+        BOOL stop = [urlStr getUrlParamBoolForkey:@"stop"];
+        if (stop) {
+            [DTPubUtil stopHUDLoading];
+            [self stopLoadingIndicator];
+        } else {
+            if (type == 0) {
+                [DTPubUtil startHUDLoading:message];
+                [DTPubUtil stopHUDLoading:10];
+            } else {
+                [self startLoadingIndicator];
+                [self stopLoadingIndicatorByDelay:10];
+            }
+        }
+        return YES;
+    } else if ([urlStr rangeOfString:@"://webview/rightBarItem"].length) {
+        NSString *title = [urlStr getUrlParamValueForkey:@"title"];
+        if (title.length) {
+            _rightItemUrl = [urlStr getUrlParamValueForkey:@"url"];
+            [self setRightBarItem:[WCBarItemUtil barButtonItemWithTitle:title target:self action:@selector(rightItemAction)]];
+        } else {
+            _rightItemUrl = nil;
+            [self setRightBarItem:nil];
+        }
+        return YES;
+    } else if ([urlStr rangeOfString:@"://webview/"].length) {
+        
+        return YES;
+    }
+    return NO;
+}
+
+- (void)rightItemAction
+{
+    [WCLinkUtil openWithLink:_rightItemUrl];
+}
+
 - (BOOL)webView:(WCWKWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(WKNavigationType)navigationType
 {
-    NSLog(@"%s", __func__);
+    NSString *urlStr = request.URL.absoluteString;
+    
+    if ([urlStr rangeOfString:@"__target=__self"].length) {
+        return YES;
+    } else if ([urlStr rangeOfString:@"about:blank"].length) {
+        return YES;
+    }
+    
+    if ([self checkWebViewScheme:urlStr]) {
+        return NO;
+    }
+    
     return YES;
 }
 

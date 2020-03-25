@@ -12,6 +12,8 @@
 #define APP_CONST_DEBUG         1
 #define APP_SERVER_DEBUG        1
 
+#define APP_PROJECT_NAME         @"JuTuiBang"
+
 #define APP_DEBUG               ([JTCommon APPDebug])
 
 #pragma mark - server

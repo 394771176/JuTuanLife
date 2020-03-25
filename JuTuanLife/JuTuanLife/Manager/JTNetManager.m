@@ -47,8 +47,8 @@
         NSMutableDictionary *params = [NSMutableDictionary dictionary];
         [params safeSetObject:@"app" forKey:@"_platform"];
         [params safeSetObject:@"ios" forKey:@"_os"];
-        [params safeSetObject:@"JuTuiBang" forKey:@"_caller"];
-        [params safeSetObject:[self.class bundleShortVersion] forKey:@"_appVersion"];
+        [params safeSetObject:APP_PROJECT_NAME forKey:@"_caller"];
+        [params safeSetObject:APP_VERSION_SHORT forKey:@"_appVersion"];
         [params safeSetObject:[UIDevice currentDevice].systemVersion forKey:@"_sysVersion"];
         [params safeSetObject:[self.class machineModel] forKey:@"_model"];
         [params safeSetObject:[self.class openUDID] forKey:@"_openUDID"];
@@ -63,6 +63,21 @@
         //        }
         _systemParams = params;
     }
+}
+
+- (NSString *)osVersion
+{
+    return [_systemParams stringForKey:@"_sysVersion"];
+}
+
+- (NSString *)deviceModel
+{
+    return [_systemParams stringForKey:@"_model"];
+}
+
+- (NSString *)openUDID
+{
+    return [_systemParams stringForKey:@"_openUDID"];
 }
 
 #pragma mark - WCNetManagerProtocol

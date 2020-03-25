@@ -17,6 +17,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)setupNetManager;
 
+@property (nonatomic, strong) NSString *deviceModel;
+@property (nonatomic, strong) NSString *osVersion;
+@property (nonatomic, strong) NSString *openUDID;
+
 @end
 
 NS_ASSUME_NONNULL_END

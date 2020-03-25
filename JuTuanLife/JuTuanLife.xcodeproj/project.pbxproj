@@ -488,6 +488,8 @@
 		60FD864324291D3A0030E232 /* XLBallLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FD864024291D3A0030E232 /* XLBallLoading.m */; };
 		60FD8645242920360030E232 /* jt_ship_phone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60FD8644242920360030E232 /* jt_ship_phone@2x.png */; };
 		60FD8646242920360030E232 /* jt_ship_phone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60FD8644242920360030E232 /* jt_ship_phone@2x.png */; };
+		60FD87B8242BD2680030E232 /* DTURLWhiteList.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FD87B7242BD2680030E232 /* DTURLWhiteList.m */; };
+		60FD87B9242BD2680030E232 /* DTURLWhiteList.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FD87B7242BD2680030E232 /* DTURLWhiteList.m */; };
 		D2068D9F20BB2156C5736722 /* Pods_JuTuanLife.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87291E484A5B51B2A86BD0CE /* Pods_JuTuanLife.framework */; };
 /* End PBXBuildFile section */
 
@@ -896,6 +898,8 @@
 		60FD8644242920360030E232 /* jt_ship_phone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jt_ship_phone@2x.png"; sourceTree = "<group>"; };
 		60FD87B4242A7B840030E232 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		60FD87B5242A7B840030E232 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		60FD87B6242BD2680030E232 /* DTURLWhiteList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTURLWhiteList.h; sourceTree = "<group>"; };
+		60FD87B7242BD2680030E232 /* DTURLWhiteList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTURLWhiteList.m; sourceTree = "<group>"; };
 		87291E484A5B51B2A86BD0CE /* Pods_JuTuanLife.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JuTuanLife.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -1228,6 +1232,8 @@
 				60386C592425307A00B7C0BD /* WCWKWebView.m */,
 				6065F0492427C99A0066B84B /* WCWebBackBarView.h */,
 				6065F04A2427C99A0066B84B /* WCWebBackBarView.m */,
+				60FD87B6242BD2680030E232 /* DTURLWhiteList.h */,
+				60FD87B7242BD2680030E232 /* DTURLWhiteList.m */,
 			);
 			path = WebKit;
 			sourceTree = "<group>";
@@ -2357,6 +2363,7 @@
 				60D767CD2427A66900E2B317 /* FFConfiguration.m in Sources */,
 				60D767CE2427A66900E2B317 /* JTShipItem.m in Sources */,
 				60D767CF2427A66900E2B317 /* DTTableCustomCell.m in Sources */,
+				60FD87B9242BD2680030E232 /* DTURLWhiteList.m in Sources */,
 				60D767D02427A66900E2B317 /* JTLoginProtorolCell.m in Sources */,
 				60D767D12427A66900E2B317 /* JTMessageItem.m in Sources */,
 				60D767D22427A66900E2B317 /* DTTableIconCell.m in Sources */,
@@ -2513,6 +2520,7 @@
 				603F9A04241FE54100523CBD /* FFConfiguration.m in Sources */,
 				60ECA79A241D1E9C0029C45A /* JTShipItem.m in Sources */,
 				60E2B113240ED5D800E4EA52 /* DTTableCustomCell.m in Sources */,
+				60FD87B8242BD2680030E232 /* DTURLWhiteList.m in Sources */,
 				606FE782241172EA00522B96 /* JTLoginProtorolCell.m in Sources */,
 				60386C652426798B00B7C0BD /* JTMessageItem.m in Sources */,
 				606FE7942412C2CB00522B96 /* DTTableIconCell.m in Sources */,
