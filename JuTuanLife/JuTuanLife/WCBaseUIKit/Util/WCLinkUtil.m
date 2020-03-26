@@ -18,6 +18,11 @@
     return vc;
 }
 
++ (UIViewController *)getNativeControllerWith:(NSString *)link
+{
+    return nil;
+}
+
 + (UIViewController *)getControllerWithLink:(NSString *)link
 {
     return [self getControllerWithLink:link forcePush:YES];
@@ -28,8 +33,9 @@
     link = [link stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     if (([link hasPrefix:@"http://"] || [link hasPrefix:@"https://"]) && forcePush) {
         return [self getWebControllerWith:link];
+    } else {
+        return [self getNativeControllerWith:link];
     }
-    return nil;
 }
 
 //是否允许打开链接，如

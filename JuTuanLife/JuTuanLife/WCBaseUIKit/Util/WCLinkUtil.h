@@ -14,6 +14,7 @@
 @interface WCLinkUtil : NSObject
 
 + (DTWebViewController *)getWebControllerWith:(NSString *)link;
++ (UIViewController *)getNativeControllerWith:(NSString *)link;
 
 + (UIViewController *)getControllerWithLink:(NSString *)link;
 + (UIViewController *)getControllerWithLink:(NSString *)link forcePush:(BOOL)forcePush;

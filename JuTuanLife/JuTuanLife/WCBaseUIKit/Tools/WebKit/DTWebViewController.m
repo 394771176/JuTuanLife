@@ -160,9 +160,6 @@
             [self setRightBarItem:nil];
         }
         return YES;
-    } else if ([urlStr rangeOfString:@"://webview/"].length) {
-        
-        return YES;
     }
     return NO;
 }
@@ -184,6 +181,19 @@
     
     if ([self checkWebViewScheme:urlStr]) {
         return NO;
+    }
+    
+    if (!self.fromLinkUtil) {
+        BOOL popOne = [urlStr getUrlParamBoolForkey:@"jt_popone"];
+        BOOL needPush = [urlStr getUrlParamBoolForkey:@"jt_push"];
+        UIViewController *vc = [JTLinkUtil getControllerWithLink:urlStr forcePush:self.forcePush || popOne || needPush];
+        if (vc) {
+            [JTLinkUtil checkOpenController:vc withLink:urlStr popOne:popOne];
+            return NO;
+        }
+    } else {
+        //该属性用过后就失效，需要重置
+        self.fromLinkUtil = NO;
     }
     
     return YES;

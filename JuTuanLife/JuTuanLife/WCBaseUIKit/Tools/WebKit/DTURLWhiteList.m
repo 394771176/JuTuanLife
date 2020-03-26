@@ -70,7 +70,7 @@
         [storage setCookie:[self createCookieWithKey:@"jt_osVersion" value:[JTNetManager sharedInstance].osVersion domain:cookieDomain]];
         if (isLogin) {
             NSString *token = [JTUserManager sharedInstance].ac_token;
-            [storage setCookie:[self createCookieWithKey:@"jt_user_token" value:token domain:cookieDomain]];
+            [storage setCookie:[self createCookieWithKey:@"jt_userToken" value:token domain:cookieDomain]];
         }
         return YES;
     }
