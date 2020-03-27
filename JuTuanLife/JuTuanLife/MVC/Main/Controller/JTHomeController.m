@@ -13,6 +13,7 @@
 #import "JTHomeListModel.h"
 #import "JTFenrunController.h"
 #import "JTMessageBtn.h"
+#import "JTUserCenterController.h"
 
 @interface JTHomeController () <DTTabBarViewDelegate> {
     JTMineHeaderView *_headerView;
@@ -42,6 +43,7 @@
     if (!_headerView) {
         UICREATETo(_headerView, JTMineHeaderView, 0, 0, self.width, 155 + SAFE_BOTTOM_VIEW_HEIGHT, AAW, nil);
         self.tableView.tableHeaderView = _headerView;
+        [_headerView addTarget:self singleTapAction:@selector(clickHeaderView)];
         
         UICREATEBtnImgTo(_messageBtn, JTMessageBtn, _headerView.width - 40 - 15, _headerView.headerView.top - 5, 40, 40, AAL, nil, nil, nil, _headerView);
         [_messageBtn updateMessageCount];
@@ -103,6 +105,11 @@
 }
 
 #pragma mark - action
+
+- (void)clickHeaderView
+{
+    PUSH_VC_WITH(JTUserCenterController, vc.period = _fenrunCell.period;)
+}
 
 #pragma mark - DTTabBarViewDelegate
 

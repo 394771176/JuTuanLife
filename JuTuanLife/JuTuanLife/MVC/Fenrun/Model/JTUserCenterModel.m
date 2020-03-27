@@ -12,19 +12,20 @@
 
 - (NSString *)cacheKey
 {
-    return @"JTUserCenterModel_cacheKey";
+    return [NSString stringWithFormat:@"JTUserCenterModel_cacheKey_%@_%zd", _userNo, _period];
 }
 
 - (WCDataResult *)loadData
 {
-    WCDataResult *result = nil;
+    WCDataResult *result = [JTService sync:[JTUserRequest get_performance_stats:_period userNo:_userNo]];
     
     return [self cacheResult:result];
 }
 
 - (id)parseData:(id)data
 {
-    return data;
+    self.fenrun = [JTFenRunOverItem itemFromDict:data];
+    return [JTFenRunOverItem itemsFromDict:data forKey:@"performanceStats"];
 }
 
 @end

@@ -99,6 +99,24 @@
     }
 }
 
+- (void)setCellType:(JTFenrunCellType)cellType
+{
+    _cellType = cellType;
+    if (cellType == JTFenrunCellTypeBar) {
+        _dateLabel.hidden = YES;
+        _fenRunLabel.hidden = YES;
+        _detailLabel.hidden = YES;
+    } else if (cellType == JTFenrunCellTypeBarDate) {
+        _dateLabel.hidden = NO;
+        _fenRunLabel.hidden = YES;
+        _detailLabel.hidden = YES;
+    } else if (cellType == JTFenrunCellTypeNormal) {
+        _dateLabel.hidden = NO;
+        _fenRunLabel.hidden = NO;
+        _detailLabel.hidden = NO;
+    }
+}
+
 - (void)setItemList:(NSArray *)itemList
 {
     _itemList = itemList;
@@ -113,10 +131,11 @@
     
     if (_onlyFixPeriod) {
         //item 为nil 仅显示 年月日
-        BOOL hidden = (item == nil);
-        _dateLabel.hidden = hidden;
-        _fenRunLabel.hidden = hidden;
-        _detailLabel.hidden = hidden;
+        if (item == nil) {
+            self.cellType = JTFenrunCellTypeBar;
+        } else {
+            self.cellType = JTFenrunCellTypeNormal;
+        }
     }
     if (item) {
         _dateLabel.text = [item dateStrForPeriod:_period];
@@ -148,15 +167,26 @@
 
 + (CGFloat)cellHeightWithItem:(id)item tableView:(UITableView *)tableView
 {
-    return [self cellHeightWithItem:item tableView:tableView onlyFixPeriod:NO];
+    return [self cellHeightWithItem:item tableView:tableView type:JTFenrunCellTypeNormal];
+}
+
++ (CGFloat)cellHeightWithItem:(id)item tableView:(UITableView *)tableView type:(JTFenrunCellType)type
+{
+    if (type == JTFenrunCellTypeBar) {
+        return 70;
+    } else if (type == JTFenrunCellTypeBarDate) {
+        return 94;
+    } else {
+        return 198;
+    }
 }
 
 + (CGFloat)cellHeightWithItem:(id)item tableView:(UITableView *)tableView onlyFixPeriod:(BOOL)onlyFixPeriod
 {
     if (item == nil && onlyFixPeriod) {
-        return 70;
+        return [self cellHeightWithItem:item tableView:tableView type:JTFenrunCellTypeBar];
     } else {
-        return 198;
+        return [self cellHeightWithItem:item tableView:tableView type:JTFenrunCellTypeNormal];
     }
 }
 

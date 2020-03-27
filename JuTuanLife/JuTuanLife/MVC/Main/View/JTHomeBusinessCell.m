@@ -9,8 +9,7 @@
 #import "JTHomeBusinessCell.h"
 
 @interface JTHomeBusinessCell () {
-    
-    
+    UILabel *_fenrunLabel;
 }
 
 @end
@@ -40,12 +39,24 @@
 - (void)setItem:(DTTitleIconItem *)item
 {
     if ([item isKindOfClass:JTBusinessItem.class]) {
-        JTBusinessItem *bitem = (id)item;
-        [self.iconView setImageWithURLStr:bitem.icon placeholderImage:[UIImage imageWithColorString:@"e9e9e9" cornerRadius:4]];
-        [self setTitle:bitem.name content:bitem.slogan];
+        [self setBusinessItem:(id)item];
+    } else if ([item isKindOfClass:JTFenRunOverItem.class]) {
+        JTFenRunOverItem *fenrun = (id)item;
+        [self setBusinessItem:fenrun.business];
+        [self setContent:[NSString stringWithFormat:@"业绩总金额：%.2f", fenrun.totalOrderAmt]];
+        if (!_fenrunLabel) {
+            UICREATELabel2To(_fenrunLabel, UILabel, self.titleLabel.left, 0, self.contentView.width - self.titleLabel.left - 12, self.contentView.height, AAWH, TTRight, nil, @"20", @"333333", self.contentView);
+        }
+        _fenrunLabel.text = [NSString stringWithFormat:@"%.2f", fenrun.myCommAmt];
     } else {
         [super setItem:item];
     }
+}
+
+- (void)setBusinessItem:(JTBusinessItem *)bitem
+{
+    [self.iconView setImageWithURLStr:bitem.icon placeholderImage:[UIImage imageWithColorString:@"e9e9e9" cornerRadius:4]];
+    [self setTitle:bitem.name content:bitem.slogan];
 }
 
 - (void)awakeFromNib {

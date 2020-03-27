@@ -13,6 +13,7 @@
 #import "JTUserCenterController.h"
 #import "DTPickerView.h"
 #import "CLDatePickerView.h"
+#import "JTUserFenrunController.h"
 
 @interface JTFenrunQueryController ()
 <
@@ -119,7 +120,7 @@ DTTabBarViewDelegate
 
 - (WCTableSourceData *)setupTableSourceData
 {
-//    WEAK_SELF
+    WEAK_SELF
     WCTableSourceData *source = [WCTableSourceData new];
     
     {
@@ -151,7 +152,7 @@ DTTabBarViewDelegate
             return cell;
         };
         section.clickBlock = ^(JTShipItem *data, NSIndexPath *indexPath) {
-            PUSH_VC_WITH(JTUserCenterController , vc.userNo = data.userNo);
+            PUSH_VC_WITH(JTUserFenrunController , vc.user = data; vc.period = weakSelf.period;);
         };
         [source addSectionItem:section];
     }

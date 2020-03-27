@@ -1,8 +1,8 @@
 //
-//  JTUserCenterModel.h
+//  JTFenrunDetailModel.h
 //  JuTuanLife
 //
-//  Created by cheng on 2020/3/22.
+//  Created by cheng on 2020/3/27.
 //  Copyright © 2020 cheng. All rights reserved.
 //
 
@@ -11,7 +11,7 @@
 #import "JTShipItem.h"
 #import "JTBusinessItem.h"
 
-@interface JTUserCenterModel : JTPosListDataModel
+@interface JTUserFenrunModel : JTPosListDataModel
 
 @property (nonatomic, strong) NSString *userNo;
 

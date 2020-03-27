@@ -8,6 +8,7 @@
 
 #import <WCModel/WCModel.h>
 #import "JTShipItem.h"
+#import "JTBusinessItem.h"
 
 typedef NS_ENUM(NSUInteger, JTFenRunPeriod) {
     JTFenRunPeriodYesterday,
@@ -30,8 +31,13 @@ typedef NS_ENUM(NSUInteger, JTFenRunPeriod) {
 @property (nonatomic, assign) CGFloat descendantCommAmt;
 //@property (nonatomic, strong) NSArray<JTShipItem *> *personalCommStats;
 
+@property (nonatomic, assign) CGFloat totalOrderAmt;
+@property (nonatomic, strong) JTBusinessItem *business;
+
 - (NSString *)dateStrForPeriod:(JTFenRunPeriod)period;
 
 + (NSString *)titleForPeriod:(JTFenRunPeriod)period;
 
 @end
+
+

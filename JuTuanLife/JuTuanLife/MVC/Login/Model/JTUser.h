@@ -22,8 +22,8 @@ typedef NS_ENUM(NSUInteger, JTUserStatus) {
 
 @interface JTUser : WCBaseEntity
 
-@property (nonatomic, assign) NSString *userNo;
-@property (nonatomic, assign) NSString *jobNo;
+@property (nonatomic, strong) NSString *userNo;
+@property (nonatomic, strong) NSString *jobNo;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *avatar;
 

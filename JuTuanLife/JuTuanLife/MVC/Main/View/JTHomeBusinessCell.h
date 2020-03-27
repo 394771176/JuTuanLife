@@ -9,6 +9,7 @@
 #import "DTTableCustomCell.h"
 #import "DTTableIconCell.h"
 #import "JTBusinessItem.h"
+#import "JTFenRunOverItem.h"
 
 @interface JTHomeBusinessCell : DTTableIconCell
 

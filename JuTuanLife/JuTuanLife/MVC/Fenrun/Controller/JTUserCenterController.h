@@ -7,9 +7,12 @@
 //
 
 #import "DTHttpTableController.h"
+#import "JTUserCenterModel.h"
 
 @interface JTUserCenterController : DTHttpTableController
 
+@property (nonatomic, assign) JTFenRunPeriod period;
 @property (nonatomic, strong) NSString *userNo;
+@property (nonatomic, strong) JTUser *user;
 
 @end

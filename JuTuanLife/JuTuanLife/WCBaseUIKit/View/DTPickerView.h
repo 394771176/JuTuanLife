@@ -22,7 +22,6 @@
 - (void)pickerViewRowDidChange:(DTPickerView *)pickerView content:(NSString *)content row:(NSInteger)row component:(NSInteger)component;
 
 - (void)pickerViewDidCancelAction:(DTPickerView *)pickerView;
-
 - (void)pickerViewDidDismissAction:(DTPickerView *)pickerView;
 
 /**

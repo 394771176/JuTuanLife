@@ -12,6 +12,8 @@
 
 @protocol CLDatePickerViewDelegate <NSObject>
 
+@optional
+
 - (void)datePickerView:(CLDatePickerView *)pickerView selectedDate:(NSDate *)date;
 
 - (void)datePickerViewDidCancelAction:(CLDatePickerView *)pickerView;

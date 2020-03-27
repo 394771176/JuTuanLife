@@ -135,6 +135,11 @@
     return [self requestWithApi:@"sale/contract/sign_contracts" params:params httpMethod:WCHTTPMethodPOST];
 }
 
++ (JTRequest *)get_user_deposit_logs
+{
+    return [self requestWithApi:@"/sale/business/get_user_deposit_logs" params:nil];
+}
+
 + (JTRequest *)get_business_list
 {
     return [self requestWithApi:@"sale/business/get_business_list" params:nil];
@@ -154,6 +159,30 @@
     }
     [params safeSetObject:@"true" forKey:@"includePersonal"];
     return [self requestWithApi:@"sale/business/get_commission_stats" params:params];
+}
+
++ (JTRequest *)get_biz_contrib_commissions:(NSString *)userNo dateType:(NSInteger)period
+{
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params safeSetObject:STRING(period) forKey:@"dateType"];
+    [params safeSetObject:userNo forKey:@"byUserNo"];
+    return [self requestWithApi:@"sale/business/get_biz_contrib_commissions" params:params];
+}
+
++ (JTRequest *)get_performance_stats:(NSInteger)period userNo:(NSString *)userNo
+{
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params safeSetObject:STRING(period) forKey:@"dateType"];
+    [params safeSetObject:userNo forKey:@"forUserNo"];
+    return [self requestWithApi:@"sale/business/get_performance_stats" params:params];
+}
+
++ (JTRequest *)get_performance_details:(NSString *)businessCode dateType:(NSInteger)period pos:(NSString *)pos pageSize:(NSInteger)pageSize
+{
+    NSMutableDictionary *params = [self paramsWithPos:pos pageSize:pageSize];
+    [params safeSetObject:businessCode forKey:@"businessCode"];
+    [params safeSetObject:STRING(period) forKey:@"dateType"];
+    return [self requestWithApi:@"sale/business/get_performance_details" params:params];
 }
 
 + (JTRequest *)getShipList:(NSString *)pos pageSize:(NSInteger)pageSize

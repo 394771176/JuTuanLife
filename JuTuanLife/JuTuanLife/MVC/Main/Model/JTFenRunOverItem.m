@@ -20,6 +20,7 @@
     self.totalCommAmt = _totalCommAmt / 100;
     self.myCommAmt = _myCommAmt / 100;
     self.descendantCommAmt = _descendantCommAmt / 100;
+    self.totalOrderAmt = _totalCommAmt / 100;
     return YES;
 }
 
