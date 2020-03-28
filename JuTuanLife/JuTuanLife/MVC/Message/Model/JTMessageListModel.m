@@ -25,6 +25,13 @@
 - (id)parseData:(id)data
 {
     [super parseData:data];
+    if (self.isReload || self.isLoadCache) {
+        if ([data objectForKey:@"lastReadMsgId"]) {
+            self.lastReadMsgId = [data integerForKey:@"lastReadMsgId"];
+        } else {
+            self.lastReadMsgId = -1;
+        }
+    }
     return [JTMessageItem itemsFromDict:data forKey:@"messages"];
 }
 

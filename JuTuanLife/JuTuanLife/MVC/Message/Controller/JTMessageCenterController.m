@@ -19,6 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"消息中心";
+    
+    [self.tableView setTableHeaderHeight:16];
+    
     [self reloadData];
 }
 
@@ -40,6 +43,12 @@
     WCTableSourceData *source = [WCTableSourceData new];
     {
         [source addSectionWithItems:self.dataModel.data cellClass:[JTMessageListCell class]];
+        [source setLastSectionConfigBlock:^(JTMessageListCell *cell, id data, NSIndexPath *indexPath) {
+            cell.lastReadMsgId = [self.Model lastReadMsgId];
+            cell.item = data;
+        } clickBlock:^(id data, NSIndexPath *indexPath) {
+            
+        }];
     }
     
     {

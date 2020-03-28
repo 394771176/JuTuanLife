@@ -9,6 +9,8 @@
 #ifndef WCBaseUICategory_h
 #define WCBaseUICategory_h
 
+#import "NSDate+FormatUtil.h"
+
 #import "UIImage+WebImageUI.h"
 #import "UIImageView+WebImage.h"
 #import "UIButton+WebImage.h"

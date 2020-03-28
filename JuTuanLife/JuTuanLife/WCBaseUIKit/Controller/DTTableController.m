@@ -68,6 +68,8 @@
     
     if ([DTPubUtil isIPhoneX]) {
         [self.tableView setTableFooterHeight:SAFE_BOTTOM_VIEW_HEIGHT];
+    } else {
+        [self.tableView setTableFooterHeight:12];
     }
     
     [self reloadTableView];

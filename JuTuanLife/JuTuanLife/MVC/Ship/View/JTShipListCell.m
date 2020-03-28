@@ -46,7 +46,7 @@
         _headerView.relationType = item.relationType;
         [_fenrunLabel setText:[NSString stringWithFormat:@"%.2f", item.commAmt]];
     } else {
-        _dateLabel.text = [JTCoreUtil showDateWith:item.relatedTime];
+        _dateLabel.text = [NSDate dayHourMinStr:item.relatedTime];
         _shipNumLabel.left = _headerView.left + [_headerView getTeamsViewRight] + 12;
         _shipNumLabel.text = [NSString stringWithFormat:@"名下徒弟%zd人", item.apprentices];
     }

@@ -71,15 +71,4 @@
     }
 }
 
-+ (NSString *)showDateWith:(NSString *)date
-{
-    if (date.length) {
-        NSArray *array = [date componentsSeparatedByString:@":"];
-        if (array.count == 3) {
-            return [[array subarrayWithRange:NSMakeRange(0, 2)] componentsJoinedByString:@":"];
-        }
-    }
-    return date;
-}
-
 @end

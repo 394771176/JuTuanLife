@@ -26,9 +26,14 @@ DTTabBarViewDelegate
     NSMutableDictionary *_modelDict;
     
     CLDatePickerView *_datePicker;
-    DTPickerView *_pickerView;
+    DTPickerView *_yeaderPicker;
+    DTPickerView *_yearMonthPicker;
     
     NSDate *_today;
+    
+    BOOL _isFirstAppear;
+    
+    NSMutableDictionary *_pickerDict;
 }
 
 @end
@@ -40,6 +45,8 @@ DTTabBarViewDelegate
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         _period = JTFenRunPeriodFixDay;
+        
+        _isFirstAppear = YES;
     }
     return self;
 }
@@ -59,7 +66,10 @@ DTTabBarViewDelegate
 {
     [super viewWillAppear:animated];
     
-    [self showPickerView];
+    if (_isFirstAppear) {
+        _isFirstAppear = NO;
+        [self showPickerView];
+    }
 }
 
 - (void)viewDidLoad {
@@ -153,7 +163,7 @@ DTTabBarViewDelegate
             return cell;
         };
         section.clickBlock = ^(JTShipItem *data, NSIndexPath *indexPath) {
-            PUSH_VC_WITH(JTUserFenrunController , vc.user = data; vc.period = weakSelf.period; );
+            PUSH_VC_WITH(JTUserFenrunController , vc.user = data; vc.period = weakSelf.period; vc.selectedDate = [self.Model selectedDate]);
         };
         [source addSectionItem:section];
     }
@@ -168,11 +178,9 @@ DTTabBarViewDelegate
     return source;
 }
 
-- (void)showPickerView
+- (void)createPickerView
 {
     if (_period == JTFenRunPeriodFixDay) {
-        [_pickerView removeFromSuperview];
-        
         if (!_datePicker) {
             CLDatePickerView *picker = [[CLDatePickerView alloc] initWithDelegate:self date:_today];
             picker.tapDismiss = NO;
@@ -180,33 +188,63 @@ DTTabBarViewDelegate
             picker.minDate = [NSDate dateWithTimeIntervalSince1970:0];
             picker.maxDate = _today;
             picker.confirmTitle = @"查询";
+            picker.date = _today;
             _datePicker = picker;
         }
-        [_datePicker showInView:self.view];
-        _datePicker.frame = CGRectMake(0, 80, self.view.width, self.height - 80);
-        _datePicker.date = _today;
     } else {
-        [_datePicker removeFromSuperview];
+        if (_period == JTFenRunPeriodFixMonth && _yearMonthPicker) {
+            return;
+        } else if (_period == JTFenRunPeriodFixYear && _yeaderPicker) {
+            return;
+        }
         
         NSMutableArray *array = [NSMutableArray arrayWithObjects:[self yearsArray], nil];
         if (_period == JTFenRunPeriodFixMonth) {
             [array safeAddObject:@[@"1月", @"2月", @"3月", @"4月",  @"5月",  @"6月",
                                    @"7月", @"8月", @"9月", @"10月", @"11月", @"12月"]];
         }
-        if (!_pickerView) {
-            DTPickerView *picker = [[DTPickerView alloc] initWithDelegate:self selectedRow:0];
-            picker.tapDismiss = NO;
-            picker.bgAlpha = 0;
-            picker.confirmTitle = @"查询";
-            _pickerView = picker;
+        
+        DTPickerView *picker = [[DTPickerView alloc] initWithDelegate:self selectedRow:0];
+        picker.tapDismiss = NO;
+        picker.bgAlpha = 0;
+        picker.confirmTitle = @"查询";
+        picker.componentSource = array;
+        if (_period == JTFenRunPeriodFixMonth) {
+            _yearMonthPicker = picker;
+        } else {
+            _yeaderPicker = picker;
         }
-        _pickerView.componentSource = array;
-        [_pickerView showInView:self.view];
-        _pickerView.frame = CGRectMake(0, 80, self.view.width, self.height - 80);
+        WEAK_SELF
         [JTService addBlockOnMainThread:^{
-            [_pickerView setSelectedContents:@[[NSString stringWithFormat:@"%zd年", _today.year],
-                                               [NSString stringWithFormat:@"%zd月", _today.month]]];
+            if (weakSelf) {
+                [picker setSelectedContents:@[[NSString stringWithFormat:@"%zd年", self->_today.year],
+                                              [NSString stringWithFormat:@"%zd月", self->_today.month]]];
+            }
         }];
+    }
+}
+
+- (void)showPickerView
+{
+    [self createPickerView];
+    
+    if (_period == JTFenRunPeriodFixDay) {
+        [_yeaderPicker removeFromSuperview];
+        [_yearMonthPicker removeFromSuperview];
+        [_datePicker showInView:self.view];
+        _datePicker.frame = CGRectMake(0, 80, self.view.width, self.height - 80);
+    } else {
+        [_datePicker removeFromSuperview];
+        
+        if (_period == JTFenRunPeriodFixMonth) {
+            [_yeaderPicker removeFromSuperview];
+            [_yearMonthPicker showInView:self.view];
+            _yearMonthPicker.frame = CGRectMake(0, 80, self.view.width, self.height - 80);
+        } else {
+            [_yearMonthPicker removeFromSuperview];
+            [_yeaderPicker showInView:self.view];
+            _yeaderPicker.frame = CGRectMake(0, 80, self.view.width, self.height - 80);
+        }
     }
 }
 

@@ -18,6 +18,4 @@
 
 + (BOOL)isValidPassword:(NSString *)passwrod;
 
-+ (NSString *)showDateWith:(NSString *)date;
-
 @end

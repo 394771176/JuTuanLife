@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "JTMessageItem.h"
+#import "DTTitleContentCell.h"
 
-@interface JTMessageListCell : DTTableCustomCell
+@interface JTMessageListCell : DTTitleContentCell
 
 @property (nonatomic, strong) JTMessageItem *item;
+@property (nonatomic, assign) NSInteger lastReadMsgId;
 
 @end
