@@ -11,8 +11,11 @@
 
 @interface JTShipListModel : JTPosListDataModel
 
+@property (nonatomic, strong) NSString *searchText;
+
 @property (nonatomic, strong) NSArray<JTShipItem *> *teachers;
 @property (nonatomic, assign) NSInteger masterNum;
 @property (nonatomic, assign) NSInteger apprenticeNum;
+
 
 @end

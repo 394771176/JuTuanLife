@@ -10,4 +10,7 @@
 
 @interface JTShipHomeController : DTHttpRefreshLoadMoreTableController
 
+@property (nonatomic, strong) NSString *searchText;
+@property (nonatomic, assign) BOOL isSearch;
+
 @end

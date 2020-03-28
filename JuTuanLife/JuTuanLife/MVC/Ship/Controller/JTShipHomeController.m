@@ -22,6 +22,8 @@ DTTableButtonCellDelegate
     UIBarButtonItem *_rightBarItem;
     
     UISearchBar *_searchBar;
+    
+    JTShipHomeController *_searchResultVC;
 }
 
 @end
@@ -47,6 +49,10 @@ DTTableButtonCellDelegate
 
 - (void)setupTableHeader
 {
+    if (_isSearch) {
+        _refreshHeadView.hidden = YES;
+        return;
+    }
     if (!_headerSearchView) {
         UICREATETo(_headerSearchView, UIView, 0, 0, self.view.width, 60, AAW, nil);
         _headerSearchView.backgroundColor = [UIColor clearColor];
@@ -64,9 +70,19 @@ DTTableButtonCellDelegate
     }
 }
 
+- (void)setSearchText:(NSString *)searchText
+{
+    _searchText = searchText;
+    if (self.dataModel) {
+        [self.Model setSearchText:searchText];
+        [self refresh];
+    }
+}
+
 - (DTListDataModel *)createDataModel
 {
     JTShipListModel *model = [[JTShipListModel alloc] initWithFetchLimit:20 delegate:self];
+    model.searchText = _searchText;
     [model loadCache];
     return model;
 }
@@ -96,7 +112,7 @@ DTTableButtonCellDelegate
         [source addSectionItem:section];
     }
     
-//    if ([self.Model itemCount])
+    if (!_isSearch || [self.Model itemCount])
     {
         WCTableSection *section = nil;
         if ([self.Model itemCount]) {
@@ -192,9 +208,42 @@ DTTableButtonCellDelegate
 
 #pragma mark - UISearchBarDelegate
 
+- (void)didSearchText
+{
+    NSString *searchText = _searchBar.text;
+    if (searchText.length) {
+        _searchResultVC.searchText = searchText;
+    }
+}
+
+- (void)checkResultView
+{
+    [self cancelSearch];
+    NSString *searchText = _searchBar.text;
+    if (searchText.length) {
+        if (!_searchResultVC) {
+            _searchResultVC = [[JTShipHomeController alloc] init];
+            _searchResultVC.isSearch = YES;
+        }
+        if (!_searchResultVC.view.superview) {
+            _searchResultVC.view.frame = RECT(0, _headerSearchView.bottom, self.view.width, self.view.height - _headerSearchView.bottom);
+            _searchResultVC.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+            [self.view addSubview:_searchResultVC.view];
+        }
+    } else {
+        [_searchResultVC.view removeFromSuperview];
+    }
+}
+
+- (void)cancelSearch
+{
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(didSearchText) object:nil];
+}
+
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {
-    
+    [self checkResultView];
+    [self performSelector:@selector(didSearchText) withObject:nil afterDelay:0.5];
 }
 
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar
@@ -224,18 +273,22 @@ DTTableButtonCellDelegate
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
     [searchBar resignFirstResponder];
+    [self checkResultView];
+    [self didSearchText];
 }
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
 {
+    searchBar.text = nil;
     [searchBar resignFirstResponder];
+    [self checkResultView];
 }
 
 #pragma mark - DTPullRefreshHeadViewDelegate
 
 - (BOOL)pullRefreshTableHeaderDataSourceIsLoading:(DTPushRefreshHeadView *)view
 {
-    if (_searchBar.isFirstResponder) {
+    if (_searchBar.isFirstResponder || _isSearch) {
         return YES;
     }
     return [super pullRefreshTableHeaderDataSourceIsLoading:view];

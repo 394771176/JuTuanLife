@@ -27,7 +27,7 @@
 
 - (WCDataResult *)loadData
 {
-    WCDataResult *result = [JTService sync:[JTUserRequest getShipList:self.pos pageSize:self.fetchLimit]];
+    WCDataResult *result = [JTService sync:[JTUserRequest getShipList:self.pos pageSize:self.fetchLimit searchText:_searchText]];
     return [self cacheResult:result];
 }
 
