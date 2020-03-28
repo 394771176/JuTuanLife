@@ -39,6 +39,11 @@ DTTableButtonCellDelegate
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    if (_isSearch) {
+        self.noDataMsg = @"没有搜索到结果";
+        self.noDataImgTopOff = -30;
+    }
+    
     _rightBarItem = [WCBarItemUtil barButtonItemWithImage:[UIImage imageNamed:@"jt_ship_add"] target:self action:@selector(addShipAction)];
     
     [self setupTableHeader];
@@ -70,6 +75,14 @@ DTTableButtonCellDelegate
     }
 }
 
+- (BOOL)canShowLoadingIndicator
+{
+    if (_isSearch) {
+        return NO;
+    }
+    return [super canShowLoadingIndicator];
+}
+
 - (void)setSearchText:(NSString *)searchText
 {
     _searchText = searchText;
@@ -89,6 +102,9 @@ DTTableButtonCellDelegate
 
 - (BOOL)haveCacheOrData
 {
+    if (_isSearch && [self.dataModel hasLoadData]) {
+        return [super haveCacheOrData];
+    }
     return YES;
 }
 
@@ -102,13 +118,13 @@ DTTableButtonCellDelegate
             [weakSelf clickItem:data];
         };
         section.headerBlock = ^UIView *(NSInteger section) {
-            UIView *view = [WCTableSection tableView:self.tableView headerFooterViewWithHeight:55];
+            UIView *view = [WCTableSection tableView:self.tableView headerFooterViewWithHeight:50];
             UILabel *label = UICREATELabel(UILabel, 20, 0, view.width - 40, view.height, AAWH, nil, @"16", @"333333", view);
             label.text = [NSString stringWithFormat:@"师傅（%zd人）", [self.Model masterNum]];
             view.backgroundColor = self.view.backgroundColor;
             return view;
         };
-        section.headerHeight = 56;
+        section.headerHeight = 50;
         [source addSectionItem:section];
     }
     
@@ -137,13 +153,13 @@ DTTableButtonCellDelegate
         
         if ([self.Model teachers].count || [self.Model itemCount]) {
             section.headerBlock = ^UIView *(NSInteger section) {
-                UIView *view = [WCTableSection tableView:self.tableView headerFooterViewWithHeight:55];
+                UIView *view = [WCTableSection tableView:self.tableView headerFooterViewWithHeight:50];
                 UILabel *label = UICREATELabel(UILabel, 20, 0, view.width - 40, view.height, AAWH, nil, @"16", @"333333", view);
                 label.text = [NSString stringWithFormat:@"徒弟（%zd人）", [self.Model apprenticeNum]];
                 view.backgroundColor = self.view.backgroundColor;
                 return view;
             };
-            section.headerHeight = 56;
+            section.headerHeight = 50;
         }
         
         [source addSectionItem:section];
