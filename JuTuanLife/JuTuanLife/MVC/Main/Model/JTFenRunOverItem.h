@@ -31,10 +31,15 @@ typedef NS_ENUM(NSUInteger, JTFenRunPeriod) {
 @property (nonatomic, assign) CGFloat descendantCommAmt;
 //@property (nonatomic, strong) NSArray<JTShipItem *> *personalCommStats;
 
-@property (nonatomic, assign) CGFloat totalOrderAmt;
+@property (nonatomic, assign) CGFloat totalOrderAmt;//总订单金额
+@property (nonatomic, assign) NSInteger totalOrders;//总笔数
+
+@property (nonatomic, assign) CGFloat commAmt;//业务分润
+
 @property (nonatomic, strong) JTBusinessItem *business;
 
-- (NSString *)dateStrForPeriod:(JTFenRunPeriod)period;
+- (NSString *)dateStr;
+//- (NSString *)dateStrForPeriod:(JTFenRunPeriod)period;
 
 + (NSString *)titleForPeriod:(JTFenRunPeriod)period;
 

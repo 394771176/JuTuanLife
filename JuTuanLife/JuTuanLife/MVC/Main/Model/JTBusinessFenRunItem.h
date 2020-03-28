@@ -8,7 +8,7 @@
 
 #import <WCModel/WCModel.h>
 
-@interface JTBusinessFenRunItem : WCBaseEntity
+@interface JTBusinessFenRunTitleItem : WCBaseEntity
 
 /*dateFrom    string
  日期范围开始
@@ -41,9 +41,13 @@
 @property (nonatomic, strong) NSString *explanation;
 @property (nonatomic, strong) NSArray *performanceTitles;
 
+- (NSString *)dateStr;
+
 @end
 
-@interface JTBusinessFenRunListItem : WCBaseEntity
+@interface JTBusinessFenRunItem : WCBaseEntity
+
+@property (nonatomic, strong) NSArray *values;
 
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, assign) CGFloat total;

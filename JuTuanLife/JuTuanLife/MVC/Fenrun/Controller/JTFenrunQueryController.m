@@ -69,6 +69,7 @@ DTTabBarViewDelegate
     [super viewDidLoad];
     self.title = @"分润查询";
     
+    //标记当前选中，再次查询默认选中当前
     _today = [NSDate date];
     
     [self.tableView setTableHeaderHeight:10];

@@ -11,6 +11,12 @@
 		6001C780240EB6C4006092BB /* JTUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001C77F240EB6C4006092BB /* JTUserManager.m */; };
 		6001C784240EB6FD006092BB /* JTCoreUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001C783240EB6FD006092BB /* JTCoreUtil.m */; };
 		6001C788240EB738006092BB /* JTCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 6001C787240EB738006092BB /* JTCommon.m */; };
+		60200D17242F29B700481B41 /* JTBusinessFenrunCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60200D16242F29B700481B41 /* JTBusinessFenrunCell.m */; };
+		60200D18242F29B700481B41 /* JTBusinessFenrunCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60200D16242F29B700481B41 /* JTBusinessFenrunCell.m */; };
+		60200D1B242F319C00481B41 /* JTBusinessFenrunHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60200D1A242F319C00481B41 /* JTBusinessFenrunHeaderCell.m */; };
+		60200D1C242F319C00481B41 /* JTBusinessFenrunHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60200D1A242F319C00481B41 /* JTBusinessFenrunHeaderCell.m */; };
+		60200D1F242F416C00481B41 /* JTUserFenrunCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60200D1E242F416C00481B41 /* JTUserFenrunCell.m */; };
+		60200D20242F416C00481B41 /* JTUserFenrunCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60200D1E242F416C00481B41 /* JTUserFenrunCell.m */; };
 		60386AC5242522AA00B7C0BD /* JTFenrunController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60386AC4242522AA00B7C0BD /* JTFenrunController.m */; };
 		60386AC8242522D200B7C0BD /* JTFenRunModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60386AC7242522D200B7C0BD /* JTFenRunModel.m */; };
 		60386ACB2425232C00B7C0BD /* DTWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60386ACA2425232C00B7C0BD /* DTWebViewController.m */; };
@@ -518,6 +524,12 @@
 		6001C786240EB738006092BB /* JTCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTCommon.h; sourceTree = "<group>"; };
 		6001C787240EB738006092BB /* JTCommon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTCommon.m; sourceTree = "<group>"; };
 		6001C7A0240EBA1D006092BB /* JuTuanLife-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JuTuanLife-Prefix.pch"; sourceTree = "<group>"; };
+		60200D15242F29B700481B41 /* JTBusinessFenrunCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTBusinessFenrunCell.h; sourceTree = "<group>"; };
+		60200D16242F29B700481B41 /* JTBusinessFenrunCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTBusinessFenrunCell.m; sourceTree = "<group>"; };
+		60200D19242F319C00481B41 /* JTBusinessFenrunHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTBusinessFenrunHeaderCell.h; sourceTree = "<group>"; };
+		60200D1A242F319C00481B41 /* JTBusinessFenrunHeaderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTBusinessFenrunHeaderCell.m; sourceTree = "<group>"; };
+		60200D1D242F416C00481B41 /* JTUserFenrunCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTUserFenrunCell.h; sourceTree = "<group>"; };
+		60200D1E242F416C00481B41 /* JTUserFenrunCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTUserFenrunCell.m; sourceTree = "<group>"; };
 		60386AC3242522AA00B7C0BD /* JTFenrunController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTFenrunController.h; sourceTree = "<group>"; };
 		60386AC4242522AA00B7C0BD /* JTFenrunController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTFenrunController.m; sourceTree = "<group>"; };
 		60386AC6242522D200B7C0BD /* JTFenRunModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTFenRunModel.h; sourceTree = "<group>"; };
@@ -1248,6 +1260,12 @@
 		60386AC22425226500B7C0BD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				60200D15242F29B700481B41 /* JTBusinessFenrunCell.h */,
+				60200D16242F29B700481B41 /* JTBusinessFenrunCell.m */,
+				60200D19242F319C00481B41 /* JTBusinessFenrunHeaderCell.h */,
+				60200D1A242F319C00481B41 /* JTBusinessFenrunHeaderCell.m */,
+				60200D1D242F416C00481B41 /* JTUserFenrunCell.h */,
+				60200D1E242F416C00481B41 /* JTUserFenrunCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2275,6 +2293,7 @@
 				60D7675D2427A66900E2B317 /* CWStaticImageManager.m in Sources */,
 				60D7675E2427A66900E2B317 /* JTUserProtorolsController.m in Sources */,
 				60D7675F2427A66900E2B317 /* WCControllerUtil.m in Sources */,
+				60200D1C242F319C00481B41 /* JTBusinessFenrunHeaderCell.m in Sources */,
 				60D767602427A66900E2B317 /* JTShipAddCell.m in Sources */,
 				60D767612427A66900E2B317 /* DTHttpTableController.m in Sources */,
 				60D767622427A66900E2B317 /* DTTabScorllContentCell.m in Sources */,
@@ -2373,6 +2392,7 @@
 				60D767B52427A66900E2B317 /* BPOnePixLineView.m in Sources */,
 				60D767B62427A66900E2B317 /* JTMessageBtn.m in Sources */,
 				60D767B72427A66900E2B317 /* DTBadgeView.m in Sources */,
+				60200D18242F29B700481B41 /* JTBusinessFenrunCell.m in Sources */,
 				60D767B82427A66900E2B317 /* DTTitleIconItem.m in Sources */,
 				60D767B92427A66900E2B317 /* FFWechatManager.m in Sources */,
 				60D767BA2427A66900E2B317 /* DTShareItem.m in Sources */,
@@ -2418,6 +2438,7 @@
 				60D767DE2427A66900E2B317 /* JTUserBankCell.m in Sources */,
 				60D767DF2427A66900E2B317 /* DTTabViewController.m in Sources */,
 				60D767E02427A66900E2B317 /* JTUserBankController.m in Sources */,
+				60200D20242F416C00481B41 /* JTUserFenrunCell.m in Sources */,
 				60D767E12427A66900E2B317 /* DTScrollLabel.m in Sources */,
 				60D767E22427A66900E2B317 /* JTUserInfoController.m in Sources */,
 				60D767E32427A66900E2B317 /* SCLoginTextFieldCell.m in Sources */,
@@ -2437,6 +2458,7 @@
 				60E2B125240ED5D800E4EA52 /* CWStaticImageManager.m in Sources */,
 				606FE7A924137B2D00522B96 /* JTUserProtorolsController.m in Sources */,
 				60E2B129240ED5D800E4EA52 /* WCControllerUtil.m in Sources */,
+				60200D1B242F319C00481B41 /* JTBusinessFenrunHeaderCell.m in Sources */,
 				60DF0F0E24228B4D00BB0F88 /* JTShipAddCell.m in Sources */,
 				60E2B121240ED5D800E4EA52 /* DTHttpTableController.m in Sources */,
 				60E2B111240ED5D800E4EA52 /* DTTabScorllContentCell.m in Sources */,
@@ -2535,6 +2557,7 @@
 				60E2B0FE240ED5D800E4EA52 /* BPOnePixLineView.m in Sources */,
 				60386C6224266A8F00B7C0BD /* JTMessageBtn.m in Sources */,
 				60E2B10A240ED5D800E4EA52 /* DTBadgeView.m in Sources */,
+				60200D17242F29B700481B41 /* JTBusinessFenrunCell.m in Sources */,
 				60E2B119240ED5D800E4EA52 /* DTTitleIconItem.m in Sources */,
 				603F99DC241E2F4600523CBD /* FFWechatManager.m in Sources */,
 				603F9866241E18F300523CBD /* DTShareItem.m in Sources */,
@@ -2580,6 +2603,7 @@
 				6071FF8A241697F6009B617E /* JTUserBankCell.m in Sources */,
 				60E2B11C240ED5D800E4EA52 /* DTTabViewController.m in Sources */,
 				606FE7A624137B1800522B96 /* JTUserBankController.m in Sources */,
+				60200D1F242F416C00481B41 /* JTUserFenrunCell.m in Sources */,
 				60E2B10F240ED5D800E4EA52 /* DTScrollLabel.m in Sources */,
 				606FE7A324137B0200522B96 /* JTUserInfoController.m in Sources */,
 				60D03C9C2410046600E7D7D1 /* SCLoginTextFieldCell.m in Sources */,

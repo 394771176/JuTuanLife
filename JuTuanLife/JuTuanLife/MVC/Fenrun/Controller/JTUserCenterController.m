@@ -51,6 +51,8 @@ DTTabBarViewDelegate
     [super viewDidLoad];
     self.title = @"个人主页";
     
+    [self.tableView setTableHeaderHeight:10 footerHeight:10];
+    
     [self setupTableHeader];
     
     [self reloadData];

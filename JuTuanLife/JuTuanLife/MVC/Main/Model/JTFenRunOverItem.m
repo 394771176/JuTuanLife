@@ -20,11 +20,12 @@
     self.totalCommAmt = _totalCommAmt / 100;
     self.myCommAmt = _myCommAmt / 100;
     self.descendantCommAmt = _descendantCommAmt / 100;
-    self.totalOrderAmt = _totalCommAmt / 100;
+    self.totalOrderAmt = _totalOrderAmt / 100;
+    self.commAmt = _commAmt / 100;
     return YES;
 }
 
-- (NSString *)dateStrForPeriod:(JTFenRunPeriod)period
+- (NSString *)dateStr
 {
     if (self.dateFrom && self.dateTo) {
         if (![self.dateFrom isEqualToString:self.dateTo]) {
@@ -37,6 +38,10 @@
         return self.dateTo;
     }
     return nil;
+}
+
+//- (NSString *)dateStrForPeriod:(JTFenRunPeriod)period
+//{
 //    switch (period) {
 //        case JTFenRunPeriodYesterday:
 //        case JTFenRunPeriodFixDay:
@@ -68,7 +73,7 @@
 //            break;
 //    }
 //    return [JTCoreUtil showDateWith:self.dateFrom];
-}
+//}
 
 + (NSString *)titleForPeriod:(JTFenRunPeriod)period
 {

@@ -37,6 +37,13 @@
 //    return YES;
 //}
 
+- (DTLoadMoreCommonCell *)createLoadMoreCell
+{
+    DTLoadMoreCommonCell *cell = [super createLoadMoreCell];
+    [cell setSelectionStyleClear];
+    return cell;
+}
+
 - (DTListDataModel *)createDataModel
 {
     return [self modelForPeriod:_period];

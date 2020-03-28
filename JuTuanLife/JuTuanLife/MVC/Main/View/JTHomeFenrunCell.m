@@ -138,7 +138,7 @@
         }
     }
     if (item) {
-        _dateLabel.text = [item dateStrForPeriod:_period];
+        _dateLabel.text = [item dateStr];
         _fenRunLabel.text = [NSString stringWithFormat:@"%.2f", item.totalCommAmt];
         _detailLabel.text = [NSString stringWithFormat:@"%.2f（自己）+ %.2f（徒弟/孙）", item.myCommAmt, item.descendantCommAmt];
     }

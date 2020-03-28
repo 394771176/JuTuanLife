@@ -43,7 +43,7 @@
     } else if ([item isKindOfClass:JTFenRunOverItem.class]) {
         JTFenRunOverItem *fenrun = (id)item;
         [self setBusinessItem:fenrun.business];
-        [self setContent:[NSString stringWithFormat:@"业绩总金额：%.2f", fenrun.totalOrderAmt]];
+        [self setContent:[NSString stringWithFormat:@"业务总金额：%.2f", fenrun.totalOrderAmt]];
         if (!_fenrunLabel) {
             UICREATELabel2To(_fenrunLabel, UILabel, self.titleLabel.left, 0, self.contentView.width - self.titleLabel.left - 12, self.contentView.height, AAWH, TTRight, nil, @"20", @"333333", self.contentView);
         }

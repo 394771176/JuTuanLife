@@ -8,10 +8,33 @@
 
 #import "JTBusinessFenRunItem.h"
 
-@implementation JTBusinessFenRunItem
+@implementation JTBusinessFenRunTitleItem
+
+- (NSString *)dateStr
+{
+    if (self.dateFrom && self.dateTo) {
+        if (![self.dateFrom isEqualToString:self.dateTo]) {
+            return [NSString stringWithFormat:@"%@ - %@", self.dateFrom, self.dateTo];
+        }
+    }
+    
+    return [NSString stringWithFormat:@"%@ - %@", self.dateFrom, self.dateTo];
+}
 
 @end
 
-@implementation JTBusinessFenRunListItem
+@implementation JTBusinessFenRunItem
+
+- (BOOL)modelCustomTransformFromDictionary:(NSDictionary *)dic
+{
+    self.title = [_values safeObjectAtIndex:0];
+    
+    self.total = [[_values safeObjectAtIndex:1] floatValue];
+    self.fenrunMon = [[_values safeObjectAtIndex:2] floatValue];
+    
+    self.date = [_values safeObjectAtIndex:3];
+    
+    return YES;
+}
 
 @end

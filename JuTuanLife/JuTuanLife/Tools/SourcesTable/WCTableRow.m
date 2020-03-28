@@ -143,7 +143,7 @@
     } else if ([self.item isKindOfClass:UITableViewCell.class]) {
         id cell = self.item;
         if ([[cell class] respondsToSelector:@selector(cellHeightWithItem:tableView:)]) {
-            return [[cell class] cellHeightWithItem:self.item tableView:tableView];
+            return [[cell class] cellHeightWithItem:nil tableView:tableView];
         }
     }
     return 0;

@@ -24,9 +24,18 @@
 - (id)parseData:(id)data
 {
     if (self.isReload || self.isLoadCache) {
-        self.businessFenRun = [JTBusinessFenRunItem itemFromDict:data];
+        self.businessFenRunTitle = [JTBusinessFenRunTitleItem itemFromDict:data];
     }
-    return [JTBusinessFenRunListItem itemsFromDict:data forKey:@"performanceTitles"];
+//    NSArray *array = [data objectForKey:@"performanceDetails"];
+//    if ([NSArray validArray:array]) {
+//        NSMutableArray *values = [NSMutableArray array];
+//        [array enumerateObjectsUsingBlock:^(NSDictionary *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//            [values safeAddObject:[obj objectForKey:@"values"]];
+//        }];
+//        return [JTBusinessFenRunItem itemsFromArray:values];
+//    }
+
+    return [JTBusinessFenRunItem itemsFromDict:data forKey:@"performanceDetails"];
 }
 
 @end

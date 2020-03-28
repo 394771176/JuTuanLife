@@ -16,6 +16,6 @@
 @property (nonatomic, strong) NSString *businessCode;
 @property (nonatomic, assign) JTFenRunPeriod period;
 
-@property (nonatomic, strong) JTBusinessFenRunItem *businessFenRun;
+@property (nonatomic, strong) JTBusinessFenRunTitleItem *businessFenRunTitle;
 
 @end

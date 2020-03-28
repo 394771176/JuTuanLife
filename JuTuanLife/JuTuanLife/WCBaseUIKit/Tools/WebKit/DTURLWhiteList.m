@@ -16,7 +16,7 @@
         return NO;
     }
     
-    const NSArray *whiteUrlStrList = @[@"jutuanlife.com", @"jutuibang.cn", @"jutuib.cn"];
+    const NSArray *whiteUrlStrList = @[@"jutuanlife.com", @"jutuibang.cn", @"jutuib.cn", @"192.168.18.157"];
     
     NSArray *tags = [url.host componentsSeparatedByString:@"."];
     if (tags.count<2) {

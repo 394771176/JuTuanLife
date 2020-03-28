@@ -7,9 +7,12 @@
 //
 
 #import "JTUserFenrunController.h"
+#import "JTUserFenrunCell.h"
 
 @interface JTUserFenrunController () {
     BOOL _isUserSelf;
+    
+    DTTitleContentCell *_headerCell;
 }
 
 @property (nonatomic, strong) NSString *userNo;
@@ -19,6 +22,10 @@
 @implementation JTUserFenrunController
 
 - (void)viewDidLoad {
+    
+    _headerCell = [[JTUserFenrunCell alloc] init];
+    [_headerCell setLineStyle:DTCellLineBottom];
+    
     [super viewDidLoad];
     if ([self.userNo isEqualToString:[JTUserManager sharedInstance].user.userNo]) {
         _isUserSelf = YES;
@@ -46,11 +53,15 @@
 
 - (WCTableSourceData *)setupTableSourceData
 {
-    WEAK_SELF
+//    WEAK_SELF
     WCTableSourceData *source = [WCTableSourceData new];
     
+    if (_headerCell) {
+        [source addSectionWithCells:@[_headerCell] height:46 click:nil];
+    }
+    
     {
-        
+        [source addSectionWithItems:self.dataModel.data cellClass:JTUserFenrunCell.class height:46];
     }
     
     return source;
@@ -58,9 +69,8 @@
 
 - (void)reloadData
 {
+    [_headerCell setTitle:_user.name content:[self.Model fenrun].dateStr];
     [super reloadData];
 }
-
-
 
 @end
