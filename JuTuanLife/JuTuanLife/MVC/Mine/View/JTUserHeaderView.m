@@ -24,6 +24,7 @@
 //        _headerBtn = UICreateBtn([UIButton class], RECT(16, 48+SAFE_BOTTOM_VIEW_HEIGHT, 72, 72), AAR, nil, nil, nil, self, @selector(headerBtnAction), self);
         UICREATEBtnTo(_headerBtn, UIButton, 0, 0, self.height, self.height, AAR, nil, nil, nil, self, @selector(headerBtnAction), self);
         _headerBtn.cornerRadius = _headerBtn.height / 2;
+        _headerBtn.userInteractionEnabled = NO;
         
         CGFloat gap = 12 + (self.height - 60) / 12 * 8;
         gap = validValue(gap, 10, 20);
