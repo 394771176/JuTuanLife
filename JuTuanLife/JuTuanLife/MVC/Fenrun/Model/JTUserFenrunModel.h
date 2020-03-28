@@ -16,7 +16,7 @@
 @property (nonatomic, strong) NSString *userNo;
 
 @property (nonatomic, assign) JTFenRunPeriod period;
-//@property (nonatomic, strong) NSString *selectedDate;
+@property (nonatomic, strong) NSString *selectedDate;
 
 @property (nonatomic, strong) JTFenRunOverItem *fenrun;
 

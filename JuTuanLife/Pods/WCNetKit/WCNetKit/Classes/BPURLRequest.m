@@ -206,9 +206,9 @@ NSString *const APP_EVENT_NETWORK_ERROR = @"app.event.network.error";
              result[8], result[9], result[10], result[11], result[12], result[13], result[14], result[15]
              ];
             NSString *sign = [[getSign stringByAppendingString:[[bodyMD5 stringByAppendingString:_signKey] md5Hash]] md5Hash];
-            asiRequest.url = [NSURL URLWithString:[NSString stringWithFormat:@"%@&sign=%@", link, sign]];
+            asiRequest.url = [NSURL URLWithString:[NSString stringWithFormat:@"%@&_sign=%@", link, sign]];
         } else {
-            asiRequest.url = [NSURL URLWithString:[NSString stringWithFormat:@"%@&sign=%@", link, getSign]];
+            asiRequest.url = [NSURL URLWithString:[NSString stringWithFormat:@"%@&_sign=%@", link, getSign]];
         }
     }
 }

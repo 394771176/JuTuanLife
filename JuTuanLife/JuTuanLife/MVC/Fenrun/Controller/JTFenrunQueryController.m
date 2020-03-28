@@ -153,7 +153,7 @@ DTTabBarViewDelegate
             return cell;
         };
         section.clickBlock = ^(JTShipItem *data, NSIndexPath *indexPath) {
-            PUSH_VC_WITH(JTUserFenrunController , vc.user = data; vc.period = weakSelf.period;);
+            PUSH_VC_WITH(JTUserFenrunController , vc.user = data; vc.period = weakSelf.period; );
         };
         [source addSectionItem:section];
     }

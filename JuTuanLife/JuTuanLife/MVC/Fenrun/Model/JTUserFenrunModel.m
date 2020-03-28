@@ -17,7 +17,7 @@
 
 - (WCDataResult *)loadData
 {
-    WCDataResult *result = [JTService sync:[JTUserRequest get_biz_contrib_commissions:_userNo dateType:_period]];
+    WCDataResult *result = [JTService sync:[JTUserRequest get_biz_contrib_commissions:_userNo dateType:_period date:_selectedDate]];
     return [self cacheResult:result];
 }
 

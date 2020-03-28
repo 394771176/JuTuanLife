@@ -47,6 +47,7 @@
     JTUserFenrunModel *model = [[JTUserFenrunModel alloc] initWithDelegate:self];
     model.userNo = _userNo;
     model.period = _period;
+    model.selectedDate = _selectedDate;
     [model loadCache];
     return model;
 }

@@ -41,7 +41,7 @@
 + (JTRequest *)get_commission_stats:(NSInteger)period date:(NSString *)date pos:(NSString *)pos pageSize:(NSInteger)pageSize;
 
 //用户分润，按业务统计
-+ (JTRequest *)get_biz_contrib_commissions:(NSString *)userNo dateType:(NSInteger)period;
++ (JTRequest *)get_biz_contrib_commissions:(NSString *)userNo dateType:(NSInteger)period date:(NSString *)date;
 
 //个人主页业绩列表
 + (JTRequest *)get_performance_stats:(NSInteger)period userNo:(NSString *)userNo;

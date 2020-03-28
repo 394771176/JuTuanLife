@@ -12,6 +12,8 @@
 @interface JTUserFenrunController : DTHttpRefreshLoadMoreTableController
 
 @property (nonatomic, assign) JTFenRunPeriod period;
+@property (nonatomic, strong) NSString *selectedDate;
+
 @property (nonatomic, strong) JTUser *user;
 
 @end

@@ -154,18 +154,17 @@
 {
     NSMutableDictionary *params = [self paramsWithPos:pos pageSize:pageSize];
     [params safeSetObject:STRING(period) forKey:@"dateType"];
-    if (date) {
-        [params safeSetObject:date forKey:@"date"];
-    }
+    [params safeSetObject:date forKey:@"date"];
     [params safeSetObject:@"true" forKey:@"includePersonal"];
     return [self requestWithApi:@"sale/business/get_commission_stats" params:params];
 }
 
-+ (JTRequest *)get_biz_contrib_commissions:(NSString *)userNo dateType:(NSInteger)period
++ (JTRequest *)get_biz_contrib_commissions:(NSString *)userNo dateType:(NSInteger)period date:(NSString *)date
 {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    [params safeSetObject:STRING(period) forKey:@"dateType"];
     [params safeSetObject:userNo forKey:@"byUserNo"];
+    [params safeSetObject:STRING(period) forKey:@"dateType"];
+    [params safeSetObject:date forKey:@"date"];
     return [self requestWithApi:@"sale/business/get_biz_contrib_commissions" params:params];
 }
 
