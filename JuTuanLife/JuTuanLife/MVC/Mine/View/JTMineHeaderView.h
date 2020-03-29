@@ -16,4 +16,7 @@
 
 @property (nonatomic, strong) JTUser *user;
 
+//额外的Y
+- (void)setHeaderViewOffsetY:(CGFloat)offsetY;
+
 @end

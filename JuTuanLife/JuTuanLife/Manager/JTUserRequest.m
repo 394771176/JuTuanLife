@@ -121,6 +121,11 @@
     return [self requestWithApi:@"sale/contract/get_unsigned_contracts" params:nil];
 }
 
++ (JTRequest *)get_signed_contracts
+{
+    return [self requestWithApi:@"sale/contract/get_signed_contracts" params:nil];
+}
+
 + (JTRequest *)sign_contracts:(NSArray *)array
 {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];

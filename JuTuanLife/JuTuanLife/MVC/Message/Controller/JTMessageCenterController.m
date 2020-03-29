@@ -32,6 +32,13 @@
     return model;
 }
 
+- (DTLoadMoreCommonCell *)loadMoreCell
+{
+    DTLoadMoreCommonCell *cell = [super loadMoreCell];
+    [cell setSelectionStyleClear];
+    return cell;
+}
+
 - (void)reloadData
 {
     

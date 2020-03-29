@@ -51,15 +51,16 @@
         [items addObject:[DTTitleIconItem itemWithTitle:@"身份信息" iconName:@"user_home_info" scheme:@"info"]];
         [items addObject:[DTTitleIconItem itemWithTitle:@"银行卡" iconName:@"user_home_bank" scheme:@"bank"]];
         [items addObject:[DTTitleIconItem itemWithTitle:@"协议合同" iconName:@"user_home_protorol" scheme:@"protorol"]];
-        [source addSectionWithItems:items cellClass:[DTTableIconCell class] height:44];
+        [source addSectionWithItems:items cellClass:[DTTableIconCell class] height:55];
         [source setLastSectionHeaderHeight:12 footerHeight:4];
     }
     
     {
         NSMutableArray *items = [NSMutableArray array];
+        [items addObject:[DTTitleIconItem itemWithTitle:@"分享APP" iconName:@"user_home_share" scheme:@"share"]];
         [items addObject:[DTTitleIconItem itemWithTitle:@"关于聚推帮" iconName:@"user_home_jutui" scheme:@"about"]];
         [items addObject:[DTTitleIconItem itemWithTitle:@"退出登录" iconName:@"user_home_logout" scheme:@"logout"]];
-        [source addSectionWithItems:items cellClass:[DTTableIconCell class] height:44];
+        [source addSectionWithItems:items cellClass:[DTTableIconCell class] height:55];
         [source setLastSectionHeaderHeight:12 footerHeight:4];
     }
     
@@ -83,6 +84,8 @@
                 PUSH_VC(JTAboutUsController);
             } else if ([data.openSchemeUrl isEqualToString:@"logout"]) {
                 [self logoutAction];
+            } else if ([data.openSchemeUrl isEqualToString:@"share"]) {
+                [self shareAction];
             }
         }
     }];
@@ -91,6 +94,14 @@
 }
 
 #pragma mark - action
+
+- (void)shareAction
+{
+    [JTCoreUtil showActionSheetWithTitle:nil message:nil cancelTitle:@"取消" confirmTitle:@"分享到微信好友" destructiveTitle:nil handler:^(UIAlertAction *action) {
+        DTShareItem *item = [JTDataManager sharedInstance].shareItem;
+        [DTShareUtil shareItem:item channel:DTShareToWXHy];
+    }];
+}
 
 - (void)logoutAction
 {

@@ -25,6 +25,11 @@
     return self;
 }
 
+- (void)setHeaderViewOffsetY:(CGFloat)offsetY
+{
+    _headerView.top = 64 + SAFE_BOTTOM_VIEW_HEIGHT + offsetY;
+}
+
 - (void)setUser:(JTUser *)user
 {
     _user = user;

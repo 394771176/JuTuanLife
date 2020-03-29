@@ -9,6 +9,7 @@
 #import "JTUserProtorolsController.h"
 #import "JTMineInfoListCell.h"
 #import "JTUserProtorolsCell.h"
+#import "JTUserProtorolsModel.h"
 
 @interface JTUserProtorolsController ()
 
@@ -20,6 +21,13 @@
     [super viewDidLoad];
     self.title = @"协议合同";
     
+}
+
+- (DTListDataModel *)createDataModel
+{
+    JTUserProtorolsModel *model = [[JTUserProtorolsModel alloc] initWithDelegate:self];
+    [model loadCache];
+    return model;
 }
 
 - (WCTableSourceData *)setupTableSourceData

@@ -7,11 +7,8 @@
 //
 
 #import "DTTableController.h"
+#import "DTHttpTableController.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
-@interface JTUserProtorolsController : DTTableController
+@interface JTUserProtorolsController : DTHttpTableController
 
 @end
-
-NS_ASSUME_NONNULL_END

@@ -15,6 +15,8 @@
     UILabel *_addBankTip;
     
     BOOL _showBank;
+    
+    UIBarButtonItem *_rightBarItem;
 }
 
 @end
@@ -22,6 +24,8 @@
 @implementation JTUserBankController
 
 - (void)viewDidLoad {
+    _rightBarItem = [WCBarItemUtil barButtonItemWithTitle:@"变更" target:self action:@selector(changeBankCard)];
+    
     [super viewDidLoad];
     self.title = @"结算银行卡";
 }
@@ -45,9 +49,11 @@
 {
     [super reloadTableView];
     if (self.tableSourceData.dataSource.count) {
+        [self setRightBarItem:_rightBarItem];
         [self hideNoDataView];
     } else {
         [self showNoDataView];
+        [self setRightBarItem:nil];
     }
 }
 
@@ -78,6 +84,11 @@
         _showBank = YES;
         [self reloadTableView];
     }
+}
+
+- (void)changeBankCard
+{
+    PUSH_VC(JTUserAddBankController);
 }
 
 #pragma mark - DTTableButtonCellDelegate

@@ -31,6 +31,9 @@
         } else {
             self.lastReadMsgId = -1;
         }
+        if (APP_DEBUG) {
+            self.lastReadMsgId = 20;
+        }
     }
     return [JTMessageItem itemsFromDict:data forKey:@"messages"];
 }

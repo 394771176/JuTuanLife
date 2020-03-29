@@ -21,6 +21,9 @@
         self.bottomLine.top = 0;
         self.bottomLine.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
         
+        self.normalColor = [UIColor colorWithString:@"#333333"];
+        self.selectColor = [UIColor colorWithString:@"#FF6464"];
+        
         self.selectedLine.hidden = YES;
     }
     return self;

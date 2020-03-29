@@ -28,6 +28,7 @@
 
 //协议
 + (JTRequest *)get_unsigned_contracts;
++ (JTRequest *)get_signed_contracts;
 + (JTRequest *)sign_contracts:(NSArray *)array;
 
 //用户押金
