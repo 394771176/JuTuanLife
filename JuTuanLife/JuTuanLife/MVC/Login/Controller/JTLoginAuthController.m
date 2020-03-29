@@ -9,6 +9,7 @@
 #import "JTLoginAuthController.h"
 #import "JTLoginAuthImageCell.h"
 #import "JTLoginAgreementController.h"
+#import "RPSDKManager.h"
 
 @interface JTLoginAuthController ()
 <
@@ -74,8 +75,25 @@ DTTableButtonCellDelegate
 
 - (void)nextStepAction
 {
-    [[JTUserManager sharedInstance] checkToNextForStatus:JTUserStatusNeedCertifie];
-//    PUSH_VC(JTLoginAgreementController)
+    [RPSDKManager startAuthWithCompletion:^(BOOL success, id userInfo) {
+        if (success) {
+            [DTPubUtil startHUDLoading:@"校验认证信息"];
+            [RPSDKManager getAndUploadVerifyResultWith:^(WCDataResult *result) {
+                if (result.success) {
+                    [DTPubUtil stopHUDLoading];
+                    [[JTUserManager sharedInstance] checkToNextForStatus:JTUserStatusAuthPass];
+                } else {
+                    [DTPubUtil showHUDErrorHintInWindow:result.msg];
+                }
+            }];
+        } else {
+            if ([userInfo isKindOfClass:NSString.class]) {
+                [DTPubUtil showHUDErrorHintInWindow:userInfo];
+            }
+        }
+    }];
+    
+//    [[JTUserManager sharedInstance] checkToNextForStatus:JTUserStatusNeedCertifie];
 }
 
 #pragma mark - UITableViewDataSource & UITableViewDelegate

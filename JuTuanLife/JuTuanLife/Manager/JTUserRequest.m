@@ -52,68 +52,24 @@
     return [self requestWithApi:@"sale/user/get_user_info" params:nil];
 }
 
-+ (JTRequest *)uploadUserAuthInfo:(JTUserCert *)cert
++ (JTRequest *)get_ali_verify_token
 {
-    /*certType *
-     integer
-     (query)
-     证件类型, 1: 身份证
-     
-     certNo *
-     string
-     (query)
-     证件号
-     
-     certAddress
-     string
-     (query)
-     证件地址
-     
-     certExpire
-     string
-     (query)
-     证件有效期
-     
-     certIssuer
-     string
-     (query)
-     证件签发机构
-     
-     certFront *
-     string
-     (query)
-     证件正面图片
-     
-     certBack *
-     string
-     (query)
-     证件反面图片
-     
-     faceImg *
-     string
-     (query)
-     人脸图片
-     
-     name *
-     string
-     (query)
-     姓名
-     
-     birthday
-     string
-     (query)
-     生日，格式: 1983-03-02
-     
-     nation
-     string
-     (query)
-     民族
-     
-     gender
-     integer
-     (query)
-     */
-    return nil;
+    return [self requestWithApi:@"user/rpcert/get_ali_verify_token" params:nil httpMethod:WCHTTPMethodPOST];
+}
+
++ (JTRequest *)get_ali_verify_result:(NSString *)bizId
+{
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params safeSetObject:bizId forKey:@"bizId"];
+    return [self requestWithApi:@"user/rpcert/get_ali_verify_result" params:params httpMethod:WCHTTPMethodPOST];
+}
+
++ (JTRequest *)upload_auth_info:(JTUserCert *)cert
+{
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params addEntriesFromDictionary:[cert dictItem]];
+    [params removeObjectForKey:@"certAuth"];
+    return [self requestWithApi:@"sale/user/upload_auth_info" params:params httpMethod:WCHTTPMethodPOST];
 }
 
 + (JTRequest *)get_unsigned_contracts

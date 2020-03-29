@@ -12,6 +12,7 @@
 typedef void (^DTVoidBlock)(void);
 typedef void (^DTCommonBlock)(id userInfo);
 typedef void (^DTIntBlock)(NSInteger num);
+typedef void (^DTSuccessBlock)(BOOL success, id userInfo);//userinfo 可以是error信息
 
 @interface DTPubUtil : NSObject
 

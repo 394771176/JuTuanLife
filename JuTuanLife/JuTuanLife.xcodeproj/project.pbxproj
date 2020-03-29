@@ -19,6 +19,50 @@
 		601E06DE242FC0FA002840D8 /* user_home_share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 601E06DC242FC0FA002840D8 /* user_home_share@2x.png */; };
 		601E06E1242FC29A002840D8 /* JTUserProtorolsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 601E06E0242FC29A002840D8 /* JTUserProtorolsModel.m */; };
 		601E06E2242FC29A002840D8 /* JTUserProtorolsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 601E06E0242FC29A002840D8 /* JTUserProtorolsModel.m */; };
+		601E06F424306A4F002840D8 /* SGSecurityBody.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E06E524306A4E002840D8 /* SGSecurityBody.framework */; };
+		601E06F524306A4F002840D8 /* WindMix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E06E624306A4E002840D8 /* WindMix.framework */; };
+		601E06F624306A4F002840D8 /* AliyunOSSiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E06E724306A4E002840D8 /* AliyunOSSiOS.framework */; };
+		601E06F724306A4F002840D8 /* SecurityGuardSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E06E824306A4E002840D8 /* SecurityGuardSDK.framework */; };
+		601E06F824306A4F002840D8 /* WindVaneBasic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E06E924306A4E002840D8 /* WindVaneBasic.framework */; };
+		601E06F924306A4F002840D8 /* WindVaneCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E06EA24306A4E002840D8 /* WindVaneCore.framework */; };
+		601E06FA24306A4F002840D8 /* TScheduleProtocol.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E06EB24306A4E002840D8 /* TScheduleProtocol.framework */; };
+		601E06FB24306A4F002840D8 /* WindmillWeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E06EC24306A4E002840D8 /* WindmillWeaver.framework */; };
+		601E06FC24306A4F002840D8 /* AliAPMInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E06ED24306A4E002840D8 /* AliAPMInterface.framework */; };
+		601E06FD24306A4F002840D8 /* WindVane.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E06EE24306A4E002840D8 /* WindVane.framework */; };
+		601E06FE24306A4F002840D8 /* WindmillBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E06EF24306A4F002840D8 /* WindmillBridge.framework */; };
+		601E06FF24306A4F002840D8 /* AliReachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E06F024306A4F002840D8 /* AliReachability.framework */; };
+		601E070024306A4F002840D8 /* TBJSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E06F124306A4F002840D8 /* TBJSONModel.framework */; };
+		601E070124306A4F002840D8 /* SGMain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E06F224306A4F002840D8 /* SGMain.framework */; };
+		601E070224306A4F002840D8 /* RPSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E06F324306A4F002840D8 /* RPSDK.framework */; };
+		601E070824306AC4002840D8 /* yw_1222_0769.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 601E070524306A79002840D8 /* yw_1222_0769.jpg */; };
+		601E070924306AC9002840D8 /* RPSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 601E070324306A6F002840D8 /* RPSDK.bundle */; };
+		601E070B24306B10002840D8 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E070A24306B10002840D8 /* CoreMotion.framework */; };
+		601E070D24306B17002840D8 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E070C24306B17002840D8 /* libc++.tbd */; };
+		601E070F24306B1E002840D8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E070E24306B1E002840D8 /* libz.tbd */; };
+		601E071124306B26002840D8 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E071024306B26002840D8 /* libresolv.tbd */; };
+		601E071624306FD5002840D8 /* RPSDKManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 601E071524306FD5002840D8 /* RPSDKManager.m */; };
+		601E071724306FD5002840D8 /* RPSDKManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 601E071524306FD5002840D8 /* RPSDKManager.m */; };
+		601E0718243087FF002840D8 /* RPSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E06F324306A4F002840D8 /* RPSDK.framework */; };
+		601E071924308803002840D8 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E071024306B26002840D8 /* libresolv.tbd */; };
+		601E071A24308806002840D8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E070E24306B1E002840D8 /* libz.tbd */; };
+		601E071B24308809002840D8 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E070C24306B17002840D8 /* libc++.tbd */; };
+		601E071C2430880C002840D8 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E070A24306B10002840D8 /* CoreMotion.framework */; };
+		601E071D2430880F002840D8 /* AliAPMInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E06ED24306A4E002840D8 /* AliAPMInterface.framework */; };
+		601E071E24308812002840D8 /* AliReachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E06F024306A4F002840D8 /* AliReachability.framework */; };
+		601E071F24308816002840D8 /* AliyunOSSiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E06E724306A4E002840D8 /* AliyunOSSiOS.framework */; };
+		601E07202430881C002840D8 /* SecurityGuardSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E06E824306A4E002840D8 /* SecurityGuardSDK.framework */; };
+		601E07212430881F002840D8 /* SGMain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E06F224306A4F002840D8 /* SGMain.framework */; };
+		601E072224308822002840D8 /* SGSecurityBody.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E06E524306A4E002840D8 /* SGSecurityBody.framework */; };
+		601E072324308826002840D8 /* TBJSONModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E06F124306A4F002840D8 /* TBJSONModel.framework */; };
+		601E07242430882A002840D8 /* TScheduleProtocol.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E06EB24306A4E002840D8 /* TScheduleProtocol.framework */; };
+		601E07252430882D002840D8 /* WindmillBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E06EF24306A4F002840D8 /* WindmillBridge.framework */; };
+		601E072624308830002840D8 /* WindmillWeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E06EC24306A4E002840D8 /* WindmillWeaver.framework */; };
+		601E072724308834002840D8 /* WindMix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E06E624306A4E002840D8 /* WindMix.framework */; };
+		601E072824308837002840D8 /* WindVane.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E06EE24306A4E002840D8 /* WindVane.framework */; };
+		601E07292430883A002840D8 /* WindVaneBasic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E06E924306A4E002840D8 /* WindVaneBasic.framework */; };
+		601E072A2430883D002840D8 /* WindVaneCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601E06EA24306A4E002840D8 /* WindVaneCore.framework */; };
+		601E072B24308848002840D8 /* yw_1222_0769.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 601E070524306A79002840D8 /* yw_1222_0769.jpg */; };
+		601E072C2430884B002840D8 /* RPSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 601E070324306A6F002840D8 /* RPSDK.bundle */; };
 		60200D17242F29B700481B41 /* JTBusinessFenrunCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60200D16242F29B700481B41 /* JTBusinessFenrunCell.m */; };
 		60200D18242F29B700481B41 /* JTBusinessFenrunCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60200D16242F29B700481B41 /* JTBusinessFenrunCell.m */; };
 		60200D1B242F319C00481B41 /* JTBusinessFenrunHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60200D1A242F319C00481B41 /* JTBusinessFenrunHeaderCell.m */; };
@@ -538,6 +582,29 @@
 		601E06DC242FC0FA002840D8 /* user_home_share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_home_share@2x.png"; sourceTree = "<group>"; };
 		601E06DF242FC29A002840D8 /* JTUserProtorolsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTUserProtorolsModel.h; sourceTree = "<group>"; };
 		601E06E0242FC29A002840D8 /* JTUserProtorolsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTUserProtorolsModel.m; sourceTree = "<group>"; };
+		601E06E524306A4E002840D8 /* SGSecurityBody.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SGSecurityBody.framework; path = "../../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client/SGSecurityBody.framework"; sourceTree = "<group>"; };
+		601E06E624306A4E002840D8 /* WindMix.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WindMix.framework; path = "../../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client/WindMix.framework"; sourceTree = "<group>"; };
+		601E06E724306A4E002840D8 /* AliyunOSSiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AliyunOSSiOS.framework; path = "../../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client/AliyunOSSiOS.framework"; sourceTree = "<group>"; };
+		601E06E824306A4E002840D8 /* SecurityGuardSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SecurityGuardSDK.framework; path = "../../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client/SecurityGuardSDK.framework"; sourceTree = "<group>"; };
+		601E06E924306A4E002840D8 /* WindVaneBasic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WindVaneBasic.framework; path = "../../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client/WindVaneBasic.framework"; sourceTree = "<group>"; };
+		601E06EA24306A4E002840D8 /* WindVaneCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WindVaneCore.framework; path = "../../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client/WindVaneCore.framework"; sourceTree = "<group>"; };
+		601E06EB24306A4E002840D8 /* TScheduleProtocol.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TScheduleProtocol.framework; path = "../../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client/TScheduleProtocol.framework"; sourceTree = "<group>"; };
+		601E06EC24306A4E002840D8 /* WindmillWeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WindmillWeaver.framework; path = "../../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client/WindmillWeaver.framework"; sourceTree = "<group>"; };
+		601E06ED24306A4E002840D8 /* AliAPMInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AliAPMInterface.framework; path = "../../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client/AliAPMInterface.framework"; sourceTree = "<group>"; };
+		601E06EE24306A4E002840D8 /* WindVane.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WindVane.framework; path = "../../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client/WindVane.framework"; sourceTree = "<group>"; };
+		601E06EF24306A4F002840D8 /* WindmillBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WindmillBridge.framework; path = "../../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client/WindmillBridge.framework"; sourceTree = "<group>"; };
+		601E06F024306A4F002840D8 /* AliReachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AliReachability.framework; path = "../../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client/AliReachability.framework"; sourceTree = "<group>"; };
+		601E06F124306A4F002840D8 /* TBJSONModel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TBJSONModel.framework; path = "../../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client/TBJSONModel.framework"; sourceTree = "<group>"; };
+		601E06F224306A4F002840D8 /* SGMain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SGMain.framework; path = "../../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client/SGMain.framework"; sourceTree = "<group>"; };
+		601E06F324306A4F002840D8 /* RPSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RPSDK.framework; path = "../../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client/RPSDK.framework"; sourceTree = "<group>"; };
+		601E070324306A6F002840D8 /* RPSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RPSDK.bundle; sourceTree = "<group>"; };
+		601E070524306A79002840D8 /* yw_1222_0769.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yw_1222_0769.jpg; sourceTree = "<group>"; };
+		601E070A24306B10002840D8 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		601E070C24306B17002840D8 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		601E070E24306B1E002840D8 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		601E071024306B26002840D8 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		601E071424306FD5002840D8 /* RPSDKManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RPSDKManager.h; sourceTree = "<group>"; };
+		601E071524306FD5002840D8 /* RPSDKManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RPSDKManager.m; sourceTree = "<group>"; };
 		60200D15242F29B700481B41 /* JTBusinessFenrunCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTBusinessFenrunCell.h; sourceTree = "<group>"; };
 		60200D16242F29B700481B41 /* JTBusinessFenrunCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTBusinessFenrunCell.m; sourceTree = "<group>"; };
 		60200D19242F319C00481B41 /* JTBusinessFenrunHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTBusinessFenrunHeaderCell.h; sourceTree = "<group>"; };
@@ -955,6 +1022,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				60D767EB2427A66900E2B317 /* Pods_JuTuanLife.framework in Frameworks */,
+				601E071F24308816002840D8 /* AliyunOSSiOS.framework in Frameworks */,
+				601E07212430881F002840D8 /* SGMain.framework in Frameworks */,
+				601E072A2430883D002840D8 /* WindVaneCore.framework in Frameworks */,
+				601E071C2430880C002840D8 /* CoreMotion.framework in Frameworks */,
+				601E071D2430880F002840D8 /* AliAPMInterface.framework in Frameworks */,
+				601E071B24308809002840D8 /* libc++.tbd in Frameworks */,
+				601E071E24308812002840D8 /* AliReachability.framework in Frameworks */,
+				601E071A24308806002840D8 /* libz.tbd in Frameworks */,
+				601E072724308834002840D8 /* WindMix.framework in Frameworks */,
+				601E07242430882A002840D8 /* TScheduleProtocol.framework in Frameworks */,
+				601E072224308822002840D8 /* SGSecurityBody.framework in Frameworks */,
+				601E0718243087FF002840D8 /* RPSDK.framework in Frameworks */,
+				601E072824308837002840D8 /* WindVane.framework in Frameworks */,
+				601E07252430882D002840D8 /* WindmillBridge.framework in Frameworks */,
+				601E071924308803002840D8 /* libresolv.tbd in Frameworks */,
+				601E07202430881C002840D8 /* SecurityGuardSDK.framework in Frameworks */,
+				601E07292430883A002840D8 /* WindVaneBasic.framework in Frameworks */,
+				601E072624308830002840D8 /* WindmillWeaver.framework in Frameworks */,
+				601E072324308826002840D8 /* TBJSONModel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -962,7 +1048,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				601E071124306B26002840D8 /* libresolv.tbd in Frameworks */,
+				601E070F24306B1E002840D8 /* libz.tbd in Frameworks */,
+				601E070D24306B17002840D8 /* libc++.tbd in Frameworks */,
+				601E070B24306B10002840D8 /* CoreMotion.framework in Frameworks */,
 				D2068D9F20BB2156C5736722 /* Pods_JuTuanLife.framework in Frameworks */,
+				601E06F424306A4F002840D8 /* SGSecurityBody.framework in Frameworks */,
+				601E06F524306A4F002840D8 /* WindMix.framework in Frameworks */,
+				601E06F624306A4F002840D8 /* AliyunOSSiOS.framework in Frameworks */,
+				601E06F724306A4F002840D8 /* SecurityGuardSDK.framework in Frameworks */,
+				601E06F824306A4F002840D8 /* WindVaneBasic.framework in Frameworks */,
+				601E06F924306A4F002840D8 /* WindVaneCore.framework in Frameworks */,
+				601E06FA24306A4F002840D8 /* TScheduleProtocol.framework in Frameworks */,
+				601E06FB24306A4F002840D8 /* WindmillWeaver.framework in Frameworks */,
+				601E06FC24306A4F002840D8 /* AliAPMInterface.framework in Frameworks */,
+				601E06FD24306A4F002840D8 /* WindVane.framework in Frameworks */,
+				601E06FE24306A4F002840D8 /* WindmillBridge.framework in Frameworks */,
+				601E06FF24306A4F002840D8 /* AliReachability.framework in Frameworks */,
+				601E070024306A4F002840D8 /* TBJSONModel.framework in Frameworks */,
+				601E070124306A4F002840D8 /* SGMain.framework in Frameworks */,
+				601E070224306A4F002840D8 /* RPSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -972,6 +1077,25 @@
 		2CA7162FEE8B1DB5CA998BAB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				601E071024306B26002840D8 /* libresolv.tbd */,
+				601E070E24306B1E002840D8 /* libz.tbd */,
+				601E070C24306B17002840D8 /* libc++.tbd */,
+				601E070A24306B10002840D8 /* CoreMotion.framework */,
+				601E06ED24306A4E002840D8 /* AliAPMInterface.framework */,
+				601E06F024306A4F002840D8 /* AliReachability.framework */,
+				601E06E724306A4E002840D8 /* AliyunOSSiOS.framework */,
+				601E06F324306A4F002840D8 /* RPSDK.framework */,
+				601E06E824306A4E002840D8 /* SecurityGuardSDK.framework */,
+				601E06F224306A4F002840D8 /* SGMain.framework */,
+				601E06E524306A4E002840D8 /* SGSecurityBody.framework */,
+				601E06F124306A4F002840D8 /* TBJSONModel.framework */,
+				601E06EB24306A4E002840D8 /* TScheduleProtocol.framework */,
+				601E06EF24306A4F002840D8 /* WindmillBridge.framework */,
+				601E06EC24306A4E002840D8 /* WindmillWeaver.framework */,
+				601E06E624306A4E002840D8 /* WindMix.framework */,
+				601E06EE24306A4E002840D8 /* WindVane.framework */,
+				601E06E924306A4E002840D8 /* WindVaneBasic.framework */,
+				601E06EA24306A4E002840D8 /* WindVaneCore.framework */,
 				87291E484A5B51B2A86BD0CE /* Pods_JuTuanLife.framework */,
 			);
 			name = Frameworks;
@@ -1218,6 +1342,40 @@
 				60ED7631240EB25B0013CB8C /* Assets.xcassets */,
 			);
 			name = Base;
+			sourceTree = "<group>";
+		};
+		601E06E424306A24002840D8 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		601E070724306A90002840D8 /* RPSDK */ = {
+			isa = PBXGroup;
+			children = (
+				601E071324306F43002840D8 /* Resource */,
+				601E071424306FD5002840D8 /* RPSDKManager.h */,
+				601E071524306FD5002840D8 /* RPSDKManager.m */,
+			);
+			path = RPSDK;
+			sourceTree = "<group>";
+		};
+		601E071224306B9E002840D8 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				601E070724306A90002840D8 /* RPSDK */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
+		601E071324306F43002840D8 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				601E070524306A79002840D8 /* yw_1222_0769.jpg */,
+				601E070324306A6F002840D8 /* RPSDK.bundle */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		60386A68242521FD00B7C0BD /* Fenrun */ = {
@@ -1927,6 +2085,8 @@
 		60ED7627240EB25A0013CB8C /* JuTuanLife */ = {
 			isa = PBXGroup;
 			children = (
+				601E071224306B9E002840D8 /* SDK */,
+				601E06E424306A24002840D8 /* Resource */,
 				60E2B003240ED59900E4EA52 /* WCBaseUIKit */,
 				60ED7628240EB25A0013CB8C /* AppDelegate.h */,
 				60ED7629240EB25A0013CB8C /* AppDelegate.m */,
@@ -2067,6 +2227,7 @@
 				60D768082427A66900E2B317 /* message_center_icon@2x.png in Resources */,
 				60D768092427A66900E2B317 /* driving_loading9@2x.png in Resources */,
 				60D7680A2427A66900E2B317 /* dt_share_txqq_c@2x.png in Resources */,
+				601E072C2430884B002840D8 /* RPSDK.bundle in Resources */,
 				60D7680B2427A66900E2B317 /* user_home_jutui@2x.png in Resources */,
 				6065F1C22427CDAA0066B84B /* web_nav_back@2x.png in Resources */,
 				6065F1C72427D32E0066B84B /* jt_no_data_img@2x.png in Resources */,
@@ -2092,6 +2253,7 @@
 				60D7681F2427A66900E2B317 /* nav_setting_white@2x.png in Resources */,
 				60D768202427A66900E2B317 /* nav_more_b@2x.png in Resources */,
 				601E06DE242FC0FA002840D8 /* user_home_share@2x.png in Resources */,
+				601E072B24308848002840D8 /* yw_1222_0769.jpg in Resources */,
 				60D768212427A66900E2B317 /* driving_loading5@2x.png in Resources */,
 				60D768222427A66900E2B317 /* driving_loading6@2x.png in Resources */,
 				60D768232427A66900E2B317 /* nav_delete@2x.png in Resources */,
@@ -2134,6 +2296,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				601E070924306AC9002840D8 /* RPSDK.bundle in Resources */,
+				601E070824306AC4002840D8 /* yw_1222_0769.jpg in Resources */,
 				60ED7635240EB25B0013CB8C /* LaunchScreen.storyboard in Resources */,
 				606FE754241164F700522B96 /* auth_idcard_1@2x.png in Resources */,
 				6065F1C32427CDAA0066B84B /* web_nav_close@2x.png in Resources */,
@@ -2322,6 +2486,7 @@
 				60D767612427A66900E2B317 /* DTHttpTableController.m in Sources */,
 				60D767622427A66900E2B317 /* DTTabScorllContentCell.m in Sources */,
 				60D767632427A66900E2B317 /* DTShareChannelItem.m in Sources */,
+				601E071724306FD5002840D8 /* RPSDKManager.m in Sources */,
 				60D767642427A66900E2B317 /* WCMethodUtil.m in Sources */,
 				6065F04C2427C99A0066B84B /* WCWebBackBarView.m in Sources */,
 				60D767652427A66900E2B317 /* JTMineYaJinCell.m in Sources */,
@@ -2489,6 +2654,7 @@
 				60E2B121240ED5D800E4EA52 /* DTHttpTableController.m in Sources */,
 				60E2B111240ED5D800E4EA52 /* DTTabScorllContentCell.m in Sources */,
 				603F9869241E191100523CBD /* DTShareChannelItem.m in Sources */,
+				601E071624306FD5002840D8 /* RPSDKManager.m in Sources */,
 				60E2B124240ED5D800E4EA52 /* WCMethodUtil.m in Sources */,
 				6065F04B2427C99A0066B84B /* WCWebBackBarView.m in Sources */,
 				6071FF8424154F15009B617E /* JTMineYaJinCell.m in Sources */,
@@ -2676,6 +2842,24 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Peng Wang (PDX44H9Z79)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JuTuanLife/JuTuanLife-Prefix.pch";
 				INFOPLIST_FILE = JuTuanLife/Info_ent.plist;
@@ -2699,6 +2883,24 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Shanghai Chelun Internet Services Co., Ltd.";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JuTuanLife/JuTuanLife-Prefix.pch";
 				INFOPLIST_FILE = JuTuanLife/Info_ent.plist;
@@ -2836,6 +3038,24 @@
 				CODE_SIGN_IDENTITY = "Apple Development: xiaoqing zhang (A393228H63)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JuTuanLife/JuTuanLife-Prefix.pch";
 				INFOPLIST_FILE = JuTuanLife/Info.plist;
@@ -2859,6 +3079,24 @@
 				CODE_SIGN_IDENTITY = "Apple Distribution: xiaoqing zhang (58R245ZW57)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+					"$(USER_LIBRARY_DIR)/Containers/com.tencent.xinWeChat/Data/Library/Application\\ Support/com.tencent.xinWeChat/2.0b4.0.9/b410f99e441542c6c4dfdc5876925b8d/Message/MessageTemp/36287a8b49fd410f54d1ecf103f0109b/File/阿里云认证SDK-IOS/client",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JuTuanLife/JuTuanLife-Prefix.pch";
 				INFOPLIST_FILE = JuTuanLife/Info.plist;

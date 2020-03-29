@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (BOOL)insertCookieForUrl:(NSURL *)URL;
 
++ (NSMutableURLRequest *)setFirstRequestCookies:(NSURLRequest *)request;
+
 @end
 
 NS_ASSUME_NONNULL_END

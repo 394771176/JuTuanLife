@@ -56,8 +56,24 @@ typedef NS_ENUM(NSUInteger, JTUserStatus) {
 //身份证
 @interface JTUserCert : WCBaseEntity
 
+/*
+ certType * integer 证件类型, 1: 身份证
+ certNo * string   证件号
+ certAddress string   证件地址
+ certExpire string   证件有效期
+ certIssuer string   证件签发机构
+ certFront * string   证件正面图片
+ certBack * string   证件反面图片
+ faceImg * string   人脸图片
+ name * string   姓名
+ birthday string   生日，格式: 1983-03-02
+ nation string   民族
+ gender integer   性别, 1：男，2：女
+ */
+
 @property (nonatomic, assign) NSInteger certType;
 @property (nonatomic, strong) NSString *certNo;
+@property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *certAddress;
 @property (nonatomic, strong) NSString *certFront;
 @property (nonatomic, strong) NSString *certBack;
@@ -71,6 +87,8 @@ typedef NS_ENUM(NSUInteger, JTUserStatus) {
 
 @property (nonatomic, assign) BOOL certAuth;
 @property (nonatomic, strong) NSString *certAuthTime;
+
++ (JTUserCert *)itemFromVerifyData:(NSDictionary *)dict;
 
 @end
 

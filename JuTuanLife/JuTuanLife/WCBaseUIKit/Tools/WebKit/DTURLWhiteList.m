@@ -77,4 +77,52 @@
     return NO;
 }
 
++ (NSMutableURLRequest *)setFirstRequestCookies:(NSURLRequest *)request
+{
+    NSMutableURLRequest *originalRequest = [request mutableCopy];
+    NSString *validDomain = request.URL.host;
+    const BOOL requestIsSecure = [request.URL.scheme isEqualToString:@"https"];
+    
+    NSMutableArray *array = [NSMutableArray array];
+    if (validDomain != nil) {
+        for (NSHTTPCookie *cookie in [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies]) {
+            // Don't even bother with values containing a `'`
+            if ([cookie.name rangeOfString:@"'"].location != NSNotFound) {
+//                BPLoggerSkipping(@"Skipping %@ because it contains a '", cookie.properties);
+                continue;
+            }
+            
+            // Is the cookie for current domain?
+            if (![cookie.domain hasSuffix:validDomain]) {
+//                BPLoggerSkipping(@"Skipping %@ (because not %@)", cookie.properties, validDomain);
+                continue;
+            }
+            
+            // Are we secure only?
+            if (cookie.secure && !requestIsSecure) {
+//                BPLoggerSkipping(@"Skipping %@ (because %@ not secure)", cookie.properties, request.URL.absoluteString);
+                continue;
+            }
+            
+            // 过期处理
+//            BOOL canDelete = [[[CKUIManager sharedManager] getConfigParams:@"wk_del_expires_cookie"] boolValue];
+//            if (canDelete) {
+//                if ([[NSDate date] compare:cookie.expiresDate] == NSOrderedDescending) {
+//                    BPLoggerSkipping(@"Skipping %@ (because cookie hax expires) for url :%@", cookie.properties, request.URL.absoluteString);
+//                    continue;
+//                }
+//            }
+            
+            NSString *value = [NSString stringWithFormat:@"%@=%@", cookie.name, cookie.value];
+            [array addObject:value];
+        }
+    }
+    
+    NSString *header = [array componentsJoinedByString:@";"];
+    if (array.count && header.length) {
+        [originalRequest setValue:header forHTTPHeaderField:@"Cookie"];
+    }
+    return originalRequest;
+}
+
 @end

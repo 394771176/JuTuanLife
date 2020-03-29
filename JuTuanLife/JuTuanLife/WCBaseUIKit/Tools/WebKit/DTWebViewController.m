@@ -87,8 +87,8 @@
 - (void)loadRequest
 {
     if (self.viewLoaded) {
-        NSURLRequest *request = [[NSURLRequest alloc] initWithURL:self.URL];
-        [_webView loadRequest:request];
+        NSURLRequest *request = [[NSURLRequest alloc] initWithURL:self.URL cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30];
+        [_webView loadRequest:[DTURLWhiteList setFirstRequestCookies:request]];
         
         self.hasStartLoad = YES;
     }

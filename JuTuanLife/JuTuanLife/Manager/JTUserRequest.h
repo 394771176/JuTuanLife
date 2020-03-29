@@ -24,7 +24,11 @@
 
 //用户信息
 + (JTRequest *)getUserInfo;
-+ (JTRequest *)uploadUserAuthInfo:(JTUserCert *)cert;
+
++ (JTRequest *)get_ali_verify_token;
++ (JTRequest *)get_ali_verify_result:(NSString *)bizId;
+
++ (JTRequest *)upload_auth_info:(JTUserCert *)cert;
 
 //协议
 + (JTRequest *)get_unsigned_contracts;

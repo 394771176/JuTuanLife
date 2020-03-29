@@ -169,6 +169,65 @@
 
 @implementation JTUserCert
 
+/*
+ certType * integer 证件类型, 1: 身份证
+ certNo * string   证件号
+ certAddress string   证件地址
+ certExpire string   证件有效期
+ certIssuer string   证件签发机构
+ certFront * string   证件正面图片
+ certBack * string   证件反面图片
+ faceImg * string   人脸图片
+ name * string   姓名
+ birthday string   生日，格式: 1983-03-02
+ nation string   民族
+ gender integer   性别, 1：男，2：女
+ */
+
+/*
+ 
+ "verifyStatus": "1",
+ "cardNo": "汪志成",
+ "cardName": "汪志成",
+ "address": "江西省上饶市婺源县紫阳镇梅林占坑岭背村0)20号",
+ "nation": "汉",
+ "issuer": "婺源县公安局",
+ "gender": "Male",
+ "birthday": "19900825",
+ "startDate": "20170724",
+ "endDate": "20370724",
+ "faceImgUrl": "https://cloudauth-zhangjiakou.oss-cn-zhangjiakou.aliyuncs.com/prod/hammal/1092974733057047/d6a8c769a8954c27ab0812ab53e95406/f7c52299512b4a719ac97521aa6ccfcb.jpg?Expires=1585472310&OSSAccessKeyId=H4sp5QfNbuDghquU&Signature=h74oej9SvGwq9ICNeHEJCYJBFeg%3D",
+ "cardFrontImgUrl": "https://cloudauth-zhangjiakou.oss-cn-zhangjiakou.aliyuncs.com/prod/hammal/1092974733057047/d6a8c769a8954c27ab0812ab53e95406/p-779fbd4e1f714054bdb9114f1a78890f.jpg?Expires=1585472310&OSSAccessKeyId=H4sp5QfNbuDghquU&Signature=zjXFdSF1gpqYPUI6RxSFTlx%2FjYA%3D",
+ "cardBackImgUrl": "https://cloudauth-zhangjiakou.oss-cn-zhangjiakou.aliyuncs.com/prod/hammal/1092974733057047/d6a8c769a8954c27ab0812ab53e95406/p-d1db481c191f45eea9a080746d5d0ab2.jpg?Expires=1585472310&OSSAccessKeyId=H4sp5QfNbuDghquU&Signature=oyf0CbpLvcL3ku3q%2BzVg8tlyuFg%3D"
+*/
+
++ (JTUserCert *)itemFromVerifyData:(NSDictionary *)dict
+{
+    if (![NSDictionary validDict:dict]) {
+        return nil;
+    }
+    JTUserCert *item = [JTUserCert new];
+    item.certType = 1;
+    item.certNo = [dict stringForKey:@"cardNo"];
+    item.name = [dict stringForKey:@"cardName"];
+    item.certAddress = [dict stringForKey:@"address"];
+    item.certFront = [dict stringForKey:@"cardFrontImgUrl"];
+    item.certBack = [dict stringForKey:@"cardBackImgUrl"];
+    item.certExpire = [dict stringForKey:@"endDate"];
+    item.certIssuer = [dict stringForKey:@"issuer"];
+    item.birthday = [dict stringForKey:@"birthday"];
+    item.nation = [dict stringForKey:@"nation"];
+    
+    NSString *gender = [dict stringForKey:@"gender"];
+    if ([gender.lowercaseString isEqualToString:@"male"]) {
+        item.gender = 1;
+    } else {
+        item.gender = 2;
+    }
+    
+    item.faceImg = [dict stringForKey:@"faceImgUrl"];
+    return item;
+}
 
 @end
 
