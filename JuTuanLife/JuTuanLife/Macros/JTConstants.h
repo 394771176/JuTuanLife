@@ -21,6 +21,7 @@
 #define SERVER(_pro, _test)     ([JTCommon serverForPro:_pro test:_test])
 
 #define APP_JT_SERVER           SERVER(@"http://api-daily.jutuanlife.com/api", @"http://api-daily.jutuanlife.com/api")
+#define APP_JT_SERVER_UPLOAD    SERVER(@"http://api-daily.jutuanlife.com/file", @"http://api-daily.jutuanlife.com/file")
 
 #define APP_JT_SIGN             @"ilwhaGnGKdFxY1cK"
 

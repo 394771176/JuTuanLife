@@ -22,7 +22,8 @@
             break;
         case JTServerType2:
         {
-            
+            self.serverUrl = APP_JT_SERVER_UPLOAD;
+            self.signKey = APP_JT_SIGN;
         }
             break;
         case JTServerType3:
@@ -125,6 +126,17 @@
 {
     JTRequest *request = [self requestWithUrl:nil api:api params:params httpMethod:httpMethod];
     request.serverType = serverType;
+    return request;
+}
+
++ (id)uploadImage:(UIImage *)image
+{
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    NSData *data = UIImageJPEGRepresentation(image, 0.9);
+    [params setObject:data forKey:@"file"];
+    
+    JTRequest *request = [self requestWithUrl:nil api:@"upload_image" params:params httpMethod:WCHTTPMethodPOST signKey:nil contentType:WCHTTPContentTypeImage];
+    request.serverType = JTServerType2;
     return request;
 }
 

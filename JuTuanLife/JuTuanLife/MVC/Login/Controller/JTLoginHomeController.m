@@ -115,7 +115,7 @@ DTTableButtonCellDelegate
     NSString *password = _passwordCell.text;
     if (APP_DEBUG && password.length <= 0) {
         phone = @"18800333031";
-        password = @"wang@123";
+        password = @"qqq123";
         
         phone = @"15618197321";
         password = @"d4071255";

@@ -142,8 +142,15 @@
     UIImage *image = [info valueForKey:UIImagePickerControllerEditedImage];
     [picker dismissViewControllerAnimated:YES completion:nil];
     image = [image resizeWithMaxSize:CGSizeMake(640.0f, 640.0f)];
-    
     [_avatarCell setAvatar:image];
+    
+    [JTService async:[JTRequest uploadImage:image] finish:^(WCDataResult *result) {
+        if (result.success) {
+            
+        } else {
+            [DTPubUtil showHUDErrorHintInWindow:result.msg];
+        }
+    }];
 }
 
 @end
