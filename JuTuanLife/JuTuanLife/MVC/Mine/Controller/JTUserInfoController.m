@@ -34,11 +34,8 @@
     [source addRowWithItem:user cellClass:[JTMineInfoAvatarCell class]];
     [source setLastRowConfigBlock:^(id cell, id data, NSIndexPath *indexPath) {
         if (weakSelf) {
-//            STRONG_SELF
             self->_avatarCell = cell;
-            if (APP_DEBUG) {
-                [self -> _avatarCell setAvatar:[UIImage imageNamed:@"user_home_avatar"]];
-            }
+            self->_avatarCell.item = data;
         }
     } clickBlock:^(id data, NSIndexPath *indexPath) {
         [JTCoreUtil showAlertWithTitle:nil message:nil style:UIAlertControllerStyleActionSheet handler:^(UIAlertAction *action) {
@@ -142,11 +139,16 @@
     UIImage *image = [info valueForKey:UIImagePickerControllerEditedImage];
     [picker dismissViewControllerAnimated:YES completion:nil];
     image = [image resizeWithMaxSize:CGSizeMake(640.0f, 640.0f)];
-    [_avatarCell setAvatar:image];
     
+    WEAK_SELF
     [JTService async:[JTRequest uploadImage:image] finish:^(WCDataResult *result) {
-        if (result.success) {
-            
+        if (result.success && [NSDictionary validDict:result.data]) {
+            NSString *path = [result.data objectForKey:@"path"];
+            [JTService async:[JTUserRequest update_user_infoAvatar:path address:nil] finish:^(WCDataResult *result) {
+                if (weakSelf) {
+                    [self->_avatarCell setAvatar:image];
+                }
+            }];
         } else {
             [DTPubUtil showHUDErrorHintInWindow:result.msg];
         }

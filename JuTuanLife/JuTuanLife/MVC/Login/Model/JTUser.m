@@ -226,6 +226,15 @@
     }
     
     item.faceImg = [dict stringForKey:@"faceImgUrl"];
+    
+    if (APP_DEBUG && [item.certNo containsString:@"362334"]) {
+        item.certNo = @"362333199010080010";
+        item.certAddress = [item.certAddress substringToIndex:item.certAddress.length / 2];
+//        item.certFront = [item.certFront substringToIndex:(int)(item.certFront.length / 1.5)];
+//        item.certBack = [item.certFront substringToIndex:(int)(item.certFront.length / 1.5)];
+//        item.faceImg = [item.faceImg substringToIndex:(int)(item.certFront.length / 1.5)];
+    }
+    
     return item;
 }
 

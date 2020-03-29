@@ -76,6 +76,9 @@
     if ([JTUserManager sharedInstance].ac_token) {
         [pairs safeAddObject:[NSString stringWithFormat:@"_ac_token=%@", FFURLEncode([JTUserManager sharedInstance].ac_token)]];
     }
+#ifdef DEBUG
+    [pairs safeAddObject:@"__intern__show-error-mesg=true"];
+#endif
     
     NSString* queryPrefix = ([url rangeOfString:@"?"].length ? @"&" : @"?");
     

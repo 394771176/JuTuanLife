@@ -136,11 +136,11 @@ SHARED_INSTANCE_M
 - (void)checkUserAuthStatus
 {
     JTUserStatus status = [self userAuthStatus];
-    if (APP_DEBUG) {
-        if (status == JTUserStatusNeedCertifie) {
-            return;
-        }
-    }
+//    if (APP_DEBUG) {
+//        if (status == JTUserStatusNeedCertifie) {
+//            return;
+//        }
+//    }
     if (status == JTUserStatusNeedCertifie) {
         PRESENT_VC(JTLoginAuthController);
     } else if (status == JTUserStatusNeedSign) {

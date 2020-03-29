@@ -52,6 +52,14 @@
     return [self requestWithApi:@"sale/user/get_user_info" params:nil];
 }
 
++ (JTRequest *)update_user_infoAvatar:(NSString *)avatar address:(NSString *)address
+{
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params safeSetObject:avatar forKey:@"avatar"];
+    [params safeSetObject:address forKey:@"shippingAddress"];
+    return [self requestWithApi:@"sale/user/update_user_info" params:params];
+}
+
 + (JTRequest *)get_ali_verify_token
 {
     return [self requestWithApi:@"user/rpcert/get_ali_verify_token" params:nil httpMethod:WCHTTPMethodPOST];

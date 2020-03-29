@@ -24,6 +24,7 @@
 
 //用户信息
 + (JTRequest *)getUserInfo;
++ (JTRequest *)update_user_infoAvatar:(NSString *)avatar address:(NSString *)address;
 
 + (JTRequest *)get_ali_verify_token;
 + (JTRequest *)get_ali_verify_result:(NSString *)bizId;
