@@ -8,7 +8,6 @@
 
 #import "DTWebViewController.h"
 #import "WCWebBackBarView.h"
-#import "DTURLWhiteList.h"
 
 @interface DTWebViewController () <WCWKWebViewDelegate> {
     WCWKWebView *_webView;
@@ -79,17 +78,14 @@
     _URL = URL;
     NSLog(@"H5 ：%@", URL.absoluteString);
     
-    [DTURLWhiteList insertCookieForUrl:URL];
-    
     [self loadRequest];
 }
 
 - (void)loadRequest
 {
     if (self.viewLoaded) {
-        NSURLRequest *request = [[NSURLRequest alloc] initWithURL:self.URL cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30];
-        [_webView loadRequest:[DTURLWhiteList setFirstRequestCookies:request]];
-        
+        [WCCookieManager insertCookieForUrl:self.URL];
+        [_webView loadRequestForURL:self.URL];
         self.hasStartLoad = YES;
     }
 }

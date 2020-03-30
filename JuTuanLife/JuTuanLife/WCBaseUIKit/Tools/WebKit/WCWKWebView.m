@@ -94,6 +94,14 @@ WKUIDelegate
     }
 }
 
+- (void)loadRequestForURL:(NSURL *)URL
+{
+    NSMutableURLRequest *request = [WCCookieManager getCookieRequestWithURL:URL forWKWebView:self];
+    request.cachePolicy = NSURLRequestUseProtocolCachePolicy;
+    request.timeoutInterval = 30;
+    [self loadRequest:request];
+}
+
 #pragma mark - action for delegate
 
 - (BOOL)shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(WKNavigationType)navigationType
@@ -123,6 +131,10 @@ WKUIDelegate
             }
         }
     }];
+    
+//    [self evaluateJavaScript:@"document.cookie" completionHandler:^(id obj, NSError * error) {
+//        NSLog(@"cookie: %@", obj);
+//    }];
 }
 
 - (void)webViewDidFailLoadWithError:(NSError *)error

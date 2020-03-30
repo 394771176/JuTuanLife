@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
+#import "WCCookieManager.h"
 
 @class WCWKWebView;
 
@@ -33,5 +34,7 @@
 @property (nonatomic, assign) BOOL isServerRedirect;
 
 - (instancetype)initWithFrame:(CGRect)frame withDelegate:(id<WCWKWebViewDelegate>)delegate;
+
+- (void)loadRequestForURL:(NSURL *)URL;
 
 @end
