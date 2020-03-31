@@ -28,8 +28,8 @@
 
 - (id)parseData:(id)data
 {
-    
-    return data;
+    NSArray *array = [JTUserProtorols itemsFromDict:data forKey:@"contracts"];
+    return [JTUserProtorols groupForDateWithItems:array];
 }
 
 @end

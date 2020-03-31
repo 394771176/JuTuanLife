@@ -33,7 +33,7 @@
 
 - (void)setItem:(JTUser *)item
 {
-    [_avatarView setImageWithURL:URL(item.avatar) placeholderImage:[UIImage imageNamed:@"user_home_avatar"]];
+    [_avatarView setImageWithURLStr:item.avatar placeholderImage:[UIImage imageNamed:@"user_home_avatar"]];
 }
 
 - (void)setAvatar:(UIImage *)image

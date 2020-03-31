@@ -60,9 +60,16 @@
 - (BOOL)modelCustomTransformFromDictionary:(NSDictionary *)dic
 {
     if (APP_DEBUG) {
-        _bankNum = @"1234567890123344";
+//        _bankNum = @"1234567890123344";
     }
     _phone = _mobile;
+    
+    self.depositPaid = _depositPaid / 100;
+    self.depositTotal = _depositTotal / 100;
+    
+    if (!_depositTips.length) {
+        _depositTips = @"总押金为从每个月分润金额内扣除，按每月总分润的5%扣除，扣到1000元结束离职后，退还押金。";
+    }
     self.cert = [JTUserCert itemFromDict:dic];
     return YES;
 }
@@ -109,16 +116,16 @@
     }
 }
 
-- (NSString *)bankNumCipher
-{
-    if (_bankNum.length > 4) {
-//        return [_bankNum stringByReplacingCharactersInRange:NSMakeRange(0, _bankNum.length - 4) withString:@"·"];
-        NSString *str = [self.class replaceString:_bankNum withStr:@"·" inRange:NSMakeRange(0, _bankNum.length - 4)];
-        return [self.class insertSpaceForString:str withLength:4];
-    } else {
-        return _bankNum;
-    }
-}
+//- (NSString *)bankNumCipher
+//{
+//    if (_bankNum.length > 4) {
+////        return [_bankNum stringByReplacingCharactersInRange:NSMakeRange(0, _bankNum.length - 4) withString:@"·"];
+//        NSString *str = [self.class replaceString:_bankNum withStr:@"·" inRange:NSMakeRange(0, _bankNum.length - 4)];
+//        return [self.class insertSpaceForString:str withLength:4];
+//    } else {
+//        return _bankNum;
+//    }
+//}
 
 - (NSString *)bizCityNameShort
 {

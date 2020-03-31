@@ -25,7 +25,7 @@
 - (void)setItem:(JTFenRunOverItem *)item
 {
     _item = item;
-    [self setTitle:[NSString stringWithFormat:@"%@ 业务分润：", item.business.name] content:[NSString stringWithFormat:@"%.2f", item.commAmt]];
+    [self setTitle:[NSString stringWithFormat:@"%@", item.business.name] content:[NSString stringWithFormat:@"%.2f", item.commAmt]];
 }
 
 + (CGFloat)cellHeightWithItem:(id)item tableView:(UITableView *)tableView

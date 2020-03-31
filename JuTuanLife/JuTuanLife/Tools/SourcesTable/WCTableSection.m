@@ -105,6 +105,11 @@
     [_dataList safeAddObject:item];
 }
 
+- (void)addToDataListFromArray:(NSArray *)array
+{
+    [_dataList safeAddObjectsFromArray:array];
+}
+
 - (id)dataAtIndexPath:(NSIndexPath *)indexPath
 {
     id data = [self.dataList safeObjectAtIndex:indexPath.row];

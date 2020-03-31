@@ -20,7 +20,7 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        _iconView = [[UIImageView alloc] initWithFrame:CGRectMake(9, 0, 20, self.contentView.height)];
+        _iconView = [[UIImageView alloc] initWithFrame:CGRectMake(16, 0, 20, self.contentView.height)];
         _iconView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
         _iconView.contentMode = UIViewContentModeScaleAspectFit;
         [self.contentView addSubview:_iconView];

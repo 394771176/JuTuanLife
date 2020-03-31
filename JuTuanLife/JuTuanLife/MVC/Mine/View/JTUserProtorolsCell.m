@@ -30,22 +30,21 @@
     return self;
 }
 
-- (void)setItem:(JTUserProtorols *)item
+- (void)setItem:(NSArray<JTUserProtorols *> *)item
 {
     _item = item;
     
-    if (APP_DEBUG) {
-        item = [JTUserProtorols new];
-        item.list = @[@"《12333333》", @"《3433454555》", @"《454354364536457467》", @"《899999999999999999》"];
-        item.date = @"2020-1-20 13:45";
+    if (item.count) {
+        NSString *dateStr = [NSDate dayHourMinStr:[item.firstObject signedTime]];
+        [_titleLabel setText:[NSString stringWithFormat:@"签署人本人于 %@ \n签署了以下协议合同：", dateStr] withLineSpace:12];
+    } else {
+        _titleLabel.text = @"";
     }
-    
-    [_titleLabel setText:[NSString stringWithFormat:@"签署人本人于 %@ \n签署了以下协议合同：", item.date] withLineSpace:12];
     
     if (!_protorolsList) {
         _protorolsList = [NSMutableArray array];
     }
-    for (NSInteger i = _protorolsList.count; i < item.list.count; i++) {
+    for (NSInteger i = _protorolsList.count; i < item.count; i++) {
         UILabel *label = UICREATELabel(UILabel, _titleLabel.left, _titleLabel.bottom + 5 + 36 * i, _titleLabel.width, 36, AAW, nil, @"15", @"999999", self.contentView);
         label.tag = i;
         [label addTarget:self singleTapAction:@selector(protorolClick:)];
@@ -53,9 +52,10 @@
     }
     
     [_protorolsList enumerateObjectsUsingBlock:^(UILabel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        obj.hidden = idx >= item.list.count;
-        if (idx < item.list.count) {
-            obj.text = [item.list safeObjectAtIndex:idx];
+        obj.hidden = idx >= item.count;
+        if (idx < item.count) {
+            JTUserProtorols *pro = [item safeObjectAtIndex:idx];
+            obj.text = [NSString stringWithFormat:@"《%@》", pro.name];
         }
     }];
 }
@@ -63,17 +63,13 @@
 - (void)protorolClick:(UITapGestureRecognizer *)gesture
 {
     UIView *label = gesture.view;
-    NSString *link = [_item.linkList safeObjectAtIndex:label.tag];
-    [JTLinkUtil openWithLink:link];
+    JTUserProtorols *item = [_item safeObjectAtIndex:label.tag];
+    [JTLinkUtil openWithLink:item.contentUrl];
 }
 
-+ (CGFloat)cellHeightWithItem:(JTUserProtorols *)item tableView:(UITableView *)tableView
++ (CGFloat)cellHeightWithItem:(NSArray *)item tableView:(UITableView *)tableView
 {
-    //todo
-    CGFloat height = 64 + 5 + 36 * item.list.count + 40;
-    if (APP_DEBUG) {
-        height = 64 + 5 + 36 * 4 + 40;
-    }
+    CGFloat height = 64 + 5 + 36 * item.count + 16;
     return height;
 }
 

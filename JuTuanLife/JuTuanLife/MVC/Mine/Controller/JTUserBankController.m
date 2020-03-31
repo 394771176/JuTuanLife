@@ -9,6 +9,7 @@
 #import "JTUserBankController.h"
 #import "JTUserBankCell.h"
 #import "JTUserAddBankController.h"
+#import "JTUserBankModel.h"
 
 @interface JTUserBankController () <DTTableButtonCellDelegate> {
     UIButton *_addBankBtn;
@@ -28,14 +29,23 @@
     
     [super viewDidLoad];
     self.title = @"结算银行卡";
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refresh) name:JTUserAddBankController_ADD_BANK object:nil];
+}
+
+- (DTListDataModel *)createDataModel
+{
+    JTUserBankModel *model = [[JTUserBankModel alloc] initWithDelegate:self];
+    [model loadCache];
+    return model;
 }
 
 - (WCTableSourceData *)setupTableSourceData;
 {
     WCTableSourceData *source = [WCTableSourceData new];
 
-    if ([JTUserManager sharedInstance].user.bankNum.length || _showBank) {
-        [source addRowWithItem:nil cellClass:[JTUserBankCell class]];
+    {
+        [source addSectionWithItems:self.dataModel.data cellClass:[JTUserBankCell class]];
         WEAK_SELF
         [source setConfigBlock:^(JTUserBankCell *cell, id data, NSIndexPath *indexPath) {
             cell.delegate = weakSelf;
@@ -47,14 +57,14 @@
 
 - (void)reloadTableView
 {
-    [super reloadTableView];
-    if (self.tableSourceData.dataSource.count) {
+    if (self.dataModel.itemCount) {
         [self setRightBarItem:_rightBarItem];
         [self hideNoDataView];
     } else {
         [self showNoDataView];
         [self setRightBarItem:nil];
     }
+    [super reloadTableView];
 }
 
 - (void)showNoDataView
@@ -97,10 +107,6 @@
 {
     [JTCoreUtil showActionSheetWithTitle:nil message:nil cancelTitle:@"取消" confirmTitle:@"解除绑定" destructiveTitle:nil handler:^(UIAlertAction *action) {
         NSLog(@"%@", action.title);
-        if (APP_DEBUG) {
-            _showBank = NO;
-            [self reloadTableView];
-        }
     }];
 }
 

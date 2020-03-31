@@ -80,6 +80,26 @@
     return [self requestWithApi:@"sale/user/upload_auth_info" params:params httpMethod:WCHTTPMethodPOST];
 }
 
++ (JTRequest *)get_bank_cards
+{
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    
+    return [self requestWithApi:@"user/bankcard/get_bank_cards" params:params];
+}
+
++ (JTRequest *)add_bank_card:(JTUserBank *)bank
+{
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    return [self requestWithApi:@"user/bankcard/add_bank_card" params:params];
+}
+
++ (JTRequest *)update_bank_card:(JTUserBank *)bank
+{
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    
+    return [self requestWithApi:@"user/bankcard/update_bank_card" params:params];
+}
+
 + (JTRequest *)get_unsigned_contracts
 {
     return [self requestWithApi:@"sale/contract/get_unsigned_contracts" params:nil];

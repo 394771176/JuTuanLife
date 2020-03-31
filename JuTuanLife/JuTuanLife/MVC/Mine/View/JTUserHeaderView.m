@@ -45,7 +45,7 @@
 {
     _item = item;
     JTUser *user = item;
-    [_headerBtn setImageWithURL:URL(user.avatar) placeholderImage:[UIImage imageNamed:@"user_home_avatar"]];
+    [_headerBtn setImageWithURLStr:user.avatar placeholderImage:[UIImage imageNamed:@"user_home_avatar"]];
     
     NSString *city = [NSString stringWithFormat:@"(%@)", user.bizCityNameShort];
     [_nameLabel setText:[NSString stringWithFormat:@"%@ %@", user.name, (user.bizCityName.length ? city: @"")]];

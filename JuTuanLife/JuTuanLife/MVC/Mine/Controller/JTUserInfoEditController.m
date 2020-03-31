@@ -8,6 +8,7 @@
 
 #import "JTUserInfoEditController.h"
 #import "JTMineInfoListCell.h"
+#import "DTTextViewEditCell.h"
 
 @interface JTUserInfoEditController () <SCLoginTextFieldCellDelegate> {
     NSString *_address;

@@ -8,6 +8,7 @@
 
 #import <WCModel/WCBaseEntity.h>
 #import "JTProtorolItem.h"
+#import "JTUserBank.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -38,10 +39,14 @@ typedef NS_ENUM(NSUInteger, JTUserStatus) {
 @property (nonatomic, strong) NSString *createTime;
 
 //收货地址
-@property (nonatomic, strong) NSString *address;
+@property (nonatomic, strong) NSString *shippingAddress;
 
-@property (nonatomic, strong) NSString *bankNum;
-@property (nonatomic, strong) NSString *yajinTip;
+//@property (nonatomic, strong) NSString *bankNum;
+
+//押金
+@property (nonatomic, assign) CGFloat depositPaid;
+@property (nonatomic, assign) CGFloat depositTotal;
+@property (nonatomic, strong) NSString *depositTips;
 
 @property (nonatomic, assign) NSInteger apprentices;
 @property (nonatomic, strong) NSArray<JTUserTeam *> *teams;

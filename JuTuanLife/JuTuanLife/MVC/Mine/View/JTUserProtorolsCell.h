@@ -11,6 +11,6 @@
 
 @interface JTUserProtorolsCell : DTTableCustomCell
 
-@property (nonatomic, strong) JTUserProtorols *item;
+@property (nonatomic, strong) NSArray <JTUserProtorols *> *item;
 
 @end

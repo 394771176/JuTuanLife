@@ -30,38 +30,35 @@
         [self.contentLabel setTop:self.titleLabel.top andHeight:self.titleLabel.height];
         self.contentLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         
-        [self setTitle:@"总押金："];
+        [self setTitle:@"总  押  金："];
         
         [self setContentColor:self.titleLabel.textColor withFont:self.titleLabel.font];
         
-        UICREATELabelTo(_titleLabel2, UILabel, self.titleLabel.left, self.titleLabel.bottom, self.titleLabel.width, self.titleLabel.height, (NSInteger)self.titleLabel.autoresizingMask, @"已扣除：", self.titleLabel.font, self.titleLabel.textColor, self.contentView);
+        UICREATELabelTo(_titleLabel2, UILabel, self.titleLabel.left, self.titleLabel.bottom, self.titleLabel.width, self.titleLabel.height, (NSInteger)self.titleLabel.autoresizingMask, @"已  扣  除：", self.titleLabel.font, self.titleLabel.textColor, self.contentView);
         
         UICREATELabelTo(_contentLabel2, UILabel, self.contentLabel.left, _titleLabel2.top, self.contentLabel.width, self.contentLabel.height, (NSInteger)self.contentLabel.autoresizingMask, nil, self.contentLabel.font, self.contentLabel.textColor, self.contentView);
         
-        UICREATELabelTo(_tipLabel, UILabel, 24, _titleLabel2.bottom + 10, self.contentView.width - 24 - 20, 40, AAW, nil, @"12", @"999999", self.contentView);
+        UICREATELabelTo(_tipLabel, UILabel, 24, _titleLabel2.bottom + 10, self.contentView.width - 24 - 75, 40, AAW, nil, @"12", @"999999", self.contentView);
         _tipLabel.numberOfLines = 0;
         
-        [self setSelectionStyleNoneLine];
+        [self setLineStyle:DTCellLineNone];
+        
+        [self showArrow:YES];
     }
     return self;
 }
 
 - (void)setItem:(JTUser *)item
 {
-    [self setContent:@"1000元"];
-    _contentLabel2.text = @"980.34元";
+    [self setContent:[NSString stringWithFormat:@"%.2f元", item.depositTotal]];
+    _contentLabel2.text = [NSString stringWithFormat:@"%.2f元", item.depositPaid];
     
-    [_tipLabel setLabelHeightWithString:@"总押金为从每个月分润金额内扣除，按每月总分润的5%扣除，"
-     "扣到1000元结束离职后，退还押金。"];
+    [_tipLabel setLabelHeightWithString:item.depositTips];
 }
 
 + (CGFloat)cellHeightWithItem:(JTUser *)item tableView:(UITableView *)tableView
 {
-    CGFloat height = [item.yajinTip sizeWithFont:[UIFont systemFontOfSize:12] constrainedToSize:CGSizeMake(tableView.width - 24 - 20, FLT_MAX)].height;
-    if (APP_DEBUG) {
-        height = [@"总押金为从每个月分润金额内扣除，按每月总分润的5%扣除，"
-         "扣到1000元结束离职后，退还押金。" sizeWithFont:[UIFont systemFontOfSize:12] constrainedToSize:CGSizeMake(tableView.width - 24 - 20, FLT_MAX)].height;
-    }
+    CGFloat height = [item.depositTips sizeWithFont:[UIFont systemFontOfSize:12] constrainedToSize:CGSizeMake(tableView.width - 24 - 75, FLT_MAX)].height;
     return 6 + 34 + 34 + 10 + height + 18;
 }
 

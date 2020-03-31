@@ -48,14 +48,8 @@
     _item = item;
     
     _bankNameLabel.text = item.bankName;
-    _bankTypeLabel.text = item.bankType;
+    _bankTypeLabel.text = item.bankBranch;
     _bankNumLabel.text = [item bankNumCipher];
-    
-    if (APP_DEBUG && item.bankNum.length <= 0) {
-        _bankNameLabel.text = @"农业银行";
-        _bankTypeLabel.text = @"储蓄卡";
-        _bankNumLabel.text = @"···· ···· ···· 3344";
-    }
 }
 
 - (void)bodyAction

@@ -31,6 +31,11 @@
 
 + (JTRequest *)upload_auth_info:(JTUserCert *)cert;
 
+//银行卡
++ (JTRequest *)get_bank_cards;
++ (JTRequest *)add_bank_card:(JTUserBank *)bank;
++ (JTRequest *)update_bank_card:(JTUserBank *)bank;
+
 //协议
 + (JTRequest *)get_unsigned_contracts;
 + (JTRequest *)get_signed_contracts;

@@ -24,13 +24,14 @@
 + (UIBarButtonItem *)barButtonItemWithTitle:(NSString *)title target:(id)target action:(SEL)action
 {
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:target action:action];
+    item.tintColor = [WCAppStyleUtil navBarItemColor];
     return item;
 }
 
 + (UIBarButtonItem *)barButtonItemWithImage:(UIImage *)image target:(id)target action:(SEL)action
 {
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:target action:action];
-    item.tintColor = [UIColor colorWithString:@"333333"];
+    item.tintColor = [WCAppStyleUtil navBarItemColor];
     return item;
 }
 

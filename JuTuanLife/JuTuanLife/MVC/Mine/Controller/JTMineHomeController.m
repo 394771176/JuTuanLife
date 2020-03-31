@@ -33,12 +33,14 @@
     [self setupTableHeader];
     
     [self reloadTableView];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateUserInfo) name:JTUserManager_USERINFO_UPDATE object:nil];
 }
 
 - (void)setupTableHeader
 {
     if (!_headerView) {
-        UICREATETo(_headerView, JTMineHeaderView, 0, 0, self.width, 180 + SAFE_BOTTOM_VIEW_HEIGHT, AAW, nil);
+        UICREATETo(_headerView, JTMineHeaderView, 0, 0, self.width, 160 + SAFE_BOTTOM_VIEW_HEIGHT, AAW, nil);
         self.tableView.tableHeaderView = _headerView;
     }
 }
@@ -121,6 +123,13 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     [super scrollViewDidScroll:scrollView];
+}
+
+#pragma mark - notice
+
+- (void)updateUserInfo
+{
+    _headerView.user = [JTUserManager sharedInstance].user;
 }
 
 @end

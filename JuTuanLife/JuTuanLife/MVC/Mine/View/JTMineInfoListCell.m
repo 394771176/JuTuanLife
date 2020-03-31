@@ -31,7 +31,7 @@
         self.contentLabel.textAlignment = NSTextAlignmentLeft;
         
         [self setTitleColorString:@"333333" withFontSize:16];
-        [self setContentColorString:@"999999" withFontSize:15];
+        [self setContentColorString:@"333333" withFontSize:16];
         
         [self setSeparatorLineWithLeft:self.contentLabel.left andRight:(self.contentView.width - self.contentLabel.right)];
         

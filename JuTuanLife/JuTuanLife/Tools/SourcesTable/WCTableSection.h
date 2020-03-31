@@ -29,6 +29,7 @@ typedef UIView * (^SectionHeaderFooter)(NSInteger section);
 
 //item 可以是数据对象，也可以是WCTableRow，但不能是WCTableSection了
 - (void)addItemToDataList:(id)item;
+- (void)addToDataListFromArray:(NSArray *)array;
 
 + (id)sectionWithItems:(NSArray *)items;
 + (id)sectionWithItems:(NSArray *)items countBlock:(SectionRowCount)block;

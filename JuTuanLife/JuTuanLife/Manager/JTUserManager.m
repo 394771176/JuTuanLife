@@ -64,6 +64,10 @@ SHARED_INSTANCE_M
             NSArray *list = [protorolDict arrayForKey:@"contracts"];
             _protorolList = [JTProtorolItem itemsFromArray:list];
         }
+        
+        [JTService loadCache:^(WCDataResult *cache) {
+            self.unreadMsgCount = [cache.data integerForKey:@"num"];
+        } forKey:JTUserRequest_unread_msg_num];
     }
 }
 
@@ -202,6 +206,7 @@ SHARED_INSTANCE_M
                 [self updateUserInfo:result.data];
             }
         } finish:^(WCDataResult *result) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:JTUserManager_USERINFO_UPDATE object:nil];
             if (block) {
                 block(result);
             }
@@ -221,6 +226,7 @@ SHARED_INSTANCE_M
                 [self updateProtorol:result.data];
             }
         } finish:^(WCDataResult *result) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:JTUserManager_USER_PROTROLS object:nil];
             if (block) {
                 block(result);
             }
@@ -232,22 +238,32 @@ SHARED_INSTANCE_M
     }
 }
 
-- (void)refreshUserInfoForLaunch
+- (void)setUnreadMsgCount:(NSInteger)unreadMsgCount
+{
+    _unreadMsgCount = unreadMsgCount;
+    if (unreadMsgCount == 0) {
+        [[BPCacheManager sharedInstance] removeCache:JTUserRequest_unread_msg_num];
+    }
+}
+
+- (void)refreshMessageUnreadCount
+{
+    [JTService async:[JTUserRequest unread_msg_num] cacheKey:JTUserRequest_unread_msg_num loadCache:nil finish:^(WCDataResult *result) {
+        if (result.success && [NSDictionary validDict:result.data]) {
+            self.unreadMsgCount = [result.data integerForKey:@"num"];
+            [[NSNotificationCenter defaultCenter] postNotificationName:JTUserRequest_unread_msg_num object:nil];
+        }
+    }];
+}
+
+- (void)refreshForLaunch:(BOOL)isLaunch
 {
     if ([self isLogined]) {
-        __block int i = 0;
-        [self refreshUserInfo:^(id userInfo) {
-            i++;
-            if (i >= 2) {
-                [[NSNotificationCenter defaultCenter] postNotificationName:JTUserManager_LAUNCH_REFRESH object:nil];
-            }
-        }];
-        [self refreshProtorol:^(id userInfo) {
-            i++;
-            if (i >= 2) {
-                [[NSNotificationCenter defaultCenter] postNotificationName:JTUserManager_LAUNCH_REFRESH object:nil];
-            }
-        }];
+        [self refreshUserInfo:nil];
+        [self refreshMessageUnreadCount];
+        if (isLaunch) {
+            [self refreshProtorol:nil];
+        }
     }
 }
 
@@ -256,6 +272,10 @@ SHARED_INSTANCE_M
     [self updateAcToken:tokenDict];
     [self updateUserInfo:userDict];
     [self updateProtorol:protorolDict];
+    
+    [JTService addBlockOnMainThread:^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:JTUserManager_USER_SESSION object:nil];
+    }];
 }
 
 - (void)clearUserInfo
@@ -263,6 +283,10 @@ SHARED_INSTANCE_M
     [self updateAcToken:nil];
     [self updateUserInfo:nil];
     [self updateProtorol:nil];
+    self.unreadMsgCount = 0;
+    [JTService addBlockOnMainThread:^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:JTUserManager_USER_SESSION object:nil];
+    }];
 }
 
 + (void)loginAuth:(DTIntBlock)block

@@ -8,6 +8,8 @@
 
 #import "DTTableController.h"
 
+KEY(JTUserAddBankController_ADD_BANK)
+
 @interface JTUserAddBankController : DTTableController
 
 @end

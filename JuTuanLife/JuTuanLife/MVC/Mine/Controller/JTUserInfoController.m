@@ -54,21 +54,11 @@
     
     {
         WEAK_SELF
-        __weak JTUser *user = [JTUserManager sharedInstance].user;
-        WCTableSection *section = [WCTableSection sectionWithItems:@[@"姓 名：", @"手 机：", @"身份证号：", @"拓业城市：", @"收货地址："] cellClass:[JTMineInfoListCell class]];
-        section.heightBlock = ^CGFloat(id data, NSIndexPath *indexPath) {
-            if (indexPath.row == 4) {
-                return [JTMineInfoListCell cellHeightWithItem:user.address tableView:weakSelf.tableView];
-            } else {
-                return [JTMineInfoListCell cellHeightWithItem:nil tableView:weakSelf.tableView];
-            }
-        };
+        WCTableSection *section = [WCTableSection sectionWithItems:@[@"姓        名：", @"手        机：", @"身份证号：", @"拓业城市：", @"聚  推  号："] cellClass:[JTMineInfoListCell class]];
         section.configBlock = ^(JTMineInfoListCell *cell, NSString *data, NSIndexPath *indexPath) {
             cell.title = data;
-            [cell showArrow:indexPath.row > 2];
             if (cell.isShowArrow) {
-                [cell setLineStyle:DTCellLineCustom];
-                [cell setSelectionStyleDefault];
+                
             } else {
                 [cell setSelectionStyleNoneLine];
             }
@@ -95,32 +85,49 @@
                     break;
                 case 4:
                 {
-                    [cell setContent:[user address]];
+                    [cell setContent:[user jobNo]];
                 }
                     break;
                 default:
                     break;
             }
         };
-        section.clickBlock = ^(id data, NSIndexPath *indexPath) {
-            if (indexPath.row == 0) {
-                
-            } else if (indexPath.row > 2) {
-                PUSH_VC(JTUserInfoEditController)
-            }
-        };
         
-        WCTableRow *row = [WCTableRow rowWithItem:nil cellClass:[DTTableCustomCell class] height:30];
-        row.configBlock = ^(DTTableCustomCell *cell, id data, NSIndexPath *indexPath) {
-            [cell setSelectionStyleNoneLine];
-        };
-        [section addItemToDataList:row];
+//        WCTableRow *row = [WCTableRow rowWithItem:nil cellClass:[DTTableCustomCell class] height:30];
+//        row.configBlock = ^(DTTableCustomCell *cell, id data, NSIndexPath *indexPath) {
+//            [cell setSelectionStyleNoneLine];
+//        };
+//        [section addItemToDataList:row];
+        section.headerHeight = 12;
         [source addSectionItem:section];
-        [source setLastSectionHeaderHeight:12 footerHeight:0];
     }
     
     {
-        [source addRowWithItem:nil cellClass:[JTMineYaJinCell class]];
+        WCTableSection *section = [WCTableSection sectionWithItems:@[@"收货地址："] cellClass:[JTMineInfoListCell class]];
+        section.reuseCellId = @"JTMineInfoListCell_address";
+        section.heightBlock = ^CGFloat(id data, NSIndexPath *indexPath) {
+            CGFloat height = [JTMineInfoListCell cellHeightWithItem:user.shippingAddress tableView:weakSelf.tableView];
+            if (height < 55) {
+                height = 55;
+            }
+            return height;
+        };
+        [section setConfigBlock:^(JTMineInfoListCell *cell, id data, NSIndexPath *indexPath) {
+            cell.title = data;
+            [cell setContent:[user shippingAddress]];
+            [cell setLineStyle:DTCellLineNone];
+            [cell showArrow:YES];
+            [cell setSelectionStyleDefault];
+        } clickBlock:^(id data, NSIndexPath *indexPath) {
+            PUSH_VC(JTUserInfoEditController)
+        }];
+        section.headerHeight = 12;
+        [source addSectionItem:section];
+    }
+    
+    {
+        WCTableRow *row = [WCTableRow rowWithItem:user cellClass:[JTMineYaJinCell class]];
+        [source addRowItemToNewSection:row];
         [source setLastSectionHeaderHeight:12 footerHeight:0];
     }
     
@@ -147,6 +154,7 @@
             [JTService async:[JTUserRequest update_user_infoAvatar:path address:nil] finish:^(WCDataResult *result) {
                 if (weakSelf) {
                     [self->_avatarCell setAvatar:image];
+                    [[JTUserManager sharedInstance] refreshUserInfo:nil];
                 }
             }];
         } else {

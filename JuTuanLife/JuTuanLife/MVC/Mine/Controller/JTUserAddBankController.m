@@ -54,9 +54,15 @@
         [cell setLineStyle:DTCellLineNone];
     } clickBlock:^(id data, NSIndexPath *indexPath) {
         NSLog(@"%@", data);
+        
     }];
     [source setLastSectionHeaderHeight:16 footerHeight:0];
     return source;
+}
+
+- (void)addBankAction
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:JTUserAddBankController_ADD_BANK object:nil];
 }
 
 @end

@@ -6,8 +6,9 @@
 //  Copyright © 2020 cheng. All rights reserved.
 //
 
-#import "DTTableController.h"
+#import "DTHttpTableController.h"
 
-@interface JTUserBankController : DTTableController
+
+@interface JTUserBankController : DTHttpTableController
 
 @end

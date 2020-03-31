@@ -30,7 +30,7 @@
     if (self) {
         [JTCommon setMainController:self];
         
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshUserInfoForLaunch) name:JTUserManager_LAUNCH_REFRESH object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateUserProtrols) name:JTUserManager_USER_PROTROLS object:nil];
     }
     return self;
 }
@@ -177,7 +177,7 @@
 
 #pragma mark - notice
 
-- (void)refreshUserInfoForLaunch
+- (void)updateUserProtrols
 {
     [self addBlockWhenFirstDidAppear:^(id userInfo) {
         [[JTUserManager sharedInstance] checkUserAuthStatus];

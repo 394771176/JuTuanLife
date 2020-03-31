@@ -50,7 +50,7 @@
     DTNavigationController *navC = [[DTNavigationController alloc] initWithRootViewController:root];
     self.window.rootViewController = navC;
     
-    [[JTUserManager sharedInstance] refreshUserInfoForLaunch];
+    [[JTUserManager sharedInstance] refreshForLaunch:YES];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -69,6 +69,7 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     if (_minDuration < 1) {
         _minDuration = 60;
+        [[JTUserManager sharedInstance] refreshForLaunch:NO];
         [[NSNotificationCenter defaultCenter] postNotificationName:JTUIApplicationWillEnterForegroundNotification object:nil];
         WEAK_SELF
         [DTPubUtil addBlock:^{

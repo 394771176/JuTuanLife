@@ -36,6 +36,8 @@
     [self setupTableHeader];
     
     [self reloadData];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateUserInfo) name:JTUserManager_USERINFO_UPDATE object:nil];
 }
 
 - (void)setupTableHeader
@@ -46,7 +48,6 @@
         [_headerView addTarget:self singleTapAction:@selector(clickHeaderView)];
         
         UICREATEBtnImgTo(_messageBtn, JTMessageBtn, _headerView.width - 40 - 15, _headerView.headerView.top - 5, 40, 40, AAL, nil, nil, nil, _headerView);
-        [_messageBtn updateMessageCount];
     }
 }
 
@@ -55,6 +56,12 @@
     JTHomeListModel *model = [[JTHomeListModel alloc] initWithDelegate:self];
     [model loadCache];
     return model;
+}
+
+- (void)refresh
+{
+    [[JTUserManager sharedInstance] refreshMessageUnreadCount];
+    [super refresh];
 }
 
 - (void)reloadTableView
@@ -116,6 +123,13 @@
 - (void)tabBarViewDidSelectIndex:(NSInteger)index
 {
     NSLog(@"%zd", index);
+}
+
+#pragma mark - notice
+
+- (void)updateUserInfo
+{
+    _headerView.user = [JTUserManager sharedInstance].user;
 }
 
 @end

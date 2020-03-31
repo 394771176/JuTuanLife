@@ -30,7 +30,7 @@
         
         [self addTarget:self action:@selector(btnAction)];
         
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateMessageCount) name:JTUIApplicationWillEnterForegroundNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateMessageCount) name:JTUserRequest_unread_msg_num object:nil];
     }
     return self;
 }
@@ -52,23 +52,13 @@
 
 - (void)updateMessageCount
 {
-    [JTService async:[JTUserRequest unread_msg_num] cacheKey:@"JTUserRequest_unread_msg_num" loadCache:^(WCDataResult *cache) {
-        [self parseData:cache.data];
-    } finish:^(WCDataResult *result) {
-        [self parseData:result.data];
-    }];
-}
-
-- (void)parseData:(NSDictionary *)data
-{
-    if ([NSDictionary validDict:data]) {
-        self.badge = [data integerForKey:@"num"];
-    }
+    self.badge = [JTUserManager sharedInstance].unreadMsgCount;
 }
 
 - (void)btnAction
 {
     self.badge = 0;
+    [JTUserManager sharedInstance].unreadMsgCount = 0;
     PUSH_VC(JTMessageCenterController);
 }
 

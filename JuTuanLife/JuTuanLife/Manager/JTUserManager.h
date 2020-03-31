@@ -11,6 +11,12 @@
 #import "JTUser.h"
 
 KEY(JTUserManager_LAUNCH_REFRESH)
+KEY(JTUserManager_USERINFO_UPDATE)
+KEY(JTUserManager_USER_SESSION)
+
+KEY(JTUserManager_USER_PROTROLS)
+
+KEY(JTUserRequest_unread_msg_num)
 
 typedef NS_ENUM(NSUInteger, JTLoginType) {
     JTLoginTypeLoginedBefore = 0,//之前已经登录
@@ -30,6 +36,7 @@ typedef NS_ENUM(NSUInteger, JTLoginType) {
 
 @property (nonatomic, strong) JTUser *user;
 @property (nonatomic, strong) NSArray <JTProtorolItem *> *protorolList;
+@property (nonatomic, assign) NSInteger unreadMsgCount;
 
 @property (nonatomic, strong) DTIntBlock loginBlock;
 
@@ -40,9 +47,11 @@ SHARED_INSTANCE_H
 
 - (void)refreshUserInfo:(DTCommonBlock)block;
 - (void)refreshProtorol:(DTCommonBlock)block;
+- (void)refreshMessageUnreadCount;
 
 //启动时刷新
-- (void)refreshUserInfoForLaunch;
+- (void)refreshForLaunch;
+- (void)refreshForLaunch:(BOOL)isLaunch;
 
 - (void)checkUserAuthStatus;
 
