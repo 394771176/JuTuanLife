@@ -12,9 +12,13 @@
 #import "JTMineYaJinCell.h"
 #import "JTUserInfoEditController.h"
 
-@interface JTUserInfoController () <UIImagePickerControllerDelegate>
+@interface JTUserInfoController ()
+<
+UIImagePickerControllerDelegate
+, JTUserInfoEditControllerDelegate>
 {
     JTMineInfoAvatarCell *_avatarCell;
+    JTMineInfoListCell *_addressCell;
 }
 
 @end
@@ -106,7 +110,7 @@
         WCTableSection *section = [WCTableSection sectionWithItems:@[@"收货地址："] cellClass:[JTMineInfoListCell class]];
         section.reuseCellId = @"JTMineInfoListCell_address";
         section.heightBlock = ^CGFloat(id data, NSIndexPath *indexPath) {
-            CGFloat height = [JTMineInfoListCell cellHeightWithItem:user.shippingAddress tableView:weakSelf.tableView];
+            CGFloat height = [JTMineInfoListCell cellHeightWithItem:user.shippingAddress tableView:weakSelf.tableView] + 12;
             if (height < 55) {
                 height = 55;
             }
@@ -114,12 +118,29 @@
         };
         [section setConfigBlock:^(JTMineInfoListCell *cell, id data, NSIndexPath *indexPath) {
             cell.title = data;
-            [cell setContent:[user shippingAddress]];
+            if (user.shippingAddress.length) {
+                [cell setContent:user.shippingAddress];
+                [cell setContentColor:[UIColor colorWithString:@"333333"]];
+                [cell.contentLabel setTextAlignment:NSTextAlignmentLeft];
+            } else {
+                [cell setContent:@"请填写收货地址"];
+                [cell.contentLabel setTextAlignment:NSTextAlignmentRight];
+                [cell setContentColor:[UIColor colorWithString:@"999999"]];
+            }
+            
             [cell setLineStyle:DTCellLineNone];
             [cell showArrow:YES];
             [cell setSelectionStyleDefault];
+            if (weakSelf) {
+                self -> _addressCell = cell;
+            }
         } clickBlock:^(id data, NSIndexPath *indexPath) {
-            PUSH_VC(JTUserInfoEditController)
+            PUSH_VC_WITH(JTUserInfoEditController, {
+                vc.delegate = self;
+                vc.title = @"收货地址";
+                vc.placeholder = @"请输入收货地址";
+                vc.orignalText = user.shippingAddress;
+            })
         }];
         section.headerHeight = 12;
         [source addSectionItem:section];
@@ -132,6 +153,25 @@
     }
     
     return source;
+}
+
+#pragma mark - JTUserInfoEditControllerDelegate
+
+- (void)userInfoEditController:(JTUserInfoEditController *)controller changeText:(NSString *)text
+{
+    WEAK_SELF
+    [JTService async:[JTUserRequest update_user_infoAvatar:nil address:text] finish:^(WCDataResult *result) {
+        if (weakSelf) {
+            if (result.success) {
+                [JTUserManager sharedInstance].user.shippingAddress = text;
+                [self->_addressCell setContent:text];
+                [self reloadTableView];
+                [[JTUserManager sharedInstance] refreshUserInfo:nil];
+            } else {
+                [DTPubUtil showHUDErrorHintInWindow:result.msg];
+            }
+        }
+    }];
 }
 
 #pragma mark - UIImagePickerControllerDelegate
@@ -153,8 +193,12 @@
             NSString *path = [result.data objectForKey:@"path"];
             [JTService async:[JTUserRequest update_user_infoAvatar:path address:nil] finish:^(WCDataResult *result) {
                 if (weakSelf) {
-                    [self->_avatarCell setAvatar:image];
-                    [[JTUserManager sharedInstance] refreshUserInfo:nil];
+                    if (result.success) {
+                        [self->_avatarCell setAvatar:image];
+                        [[JTUserManager sharedInstance] refreshUserInfo:nil];
+                    } else {
+                        [DTPubUtil showHUDErrorHintInWindow:result.msg];
+                    }
                 }
             }];
         } else {

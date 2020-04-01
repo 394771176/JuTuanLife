@@ -15,4 +15,8 @@
 @property (nonatomic, assign) BOOL showCamera;
 @property (nonatomic, weak) id<SCLoginTextFieldCellDelegate> delegate;
 
+@property (nonatomic, strong) UITextView *textView;
+
+@property (nonatomic, assign) CGFloat topOffset;
+
 @end

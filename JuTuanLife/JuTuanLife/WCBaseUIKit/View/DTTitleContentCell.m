@@ -73,7 +73,33 @@
 - (void)showArrow:(BOOL)show
 {
     [super showArrow:show];
-    _contentLabel.width = self.contentView.width-_contentLabel.left-(show?28:15);
+    
+    [self resetContentLabelFrameWhenShowArrow];
+}
+
+- (void)resetContentLabelFrameWhenShowArrow
+{
+    _contentLabel.width = self.contentView.width-_contentLabel.left-([self isShowArrow]?(self.contentView.width - _arrow.left + 10):15);
+}
+
++ (CGFloat)cellHeightWithItem:(id)item tableView:(UITableView *)tableView
+{
+    return [self cellHeightWithItem:item tableView:tableView contentGap:30];
+}
+
++ (CGFloat)cellHeightWithItem:(id)item tableView:(UITableView *)tableView contentGap:(CGFloat)conentGap
+{
+    return [self cellHeightWithItem:item tableView:tableView contentGap:conentGap font:[UIFont systemFontOfSize:12]];
+}
+
++ (CGFloat)cellHeightWithItem:(id)item tableView:(UITableView *)tableView contentGap:(CGFloat)conentGap font:(UIFont *)font
+{
+    if ([item isKindOfClass:NSString.class]) {
+        CGFloat height = [item sizeWithFont:font constrainedToSize:CGSizeMake(tableView.width - conentGap, FLT_MAX)].height;
+        height = MAX(height + 24, 44);
+        return height;
+    }
+    return 44;
 }
 
 @end

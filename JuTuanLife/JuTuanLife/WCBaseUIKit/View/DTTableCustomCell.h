@@ -34,7 +34,10 @@ typedef enum {
 } DTCellLineStyle;
 
 @interface DTTableCustomCell : UITableViewCell
-
+{
+    @protected
+    UIImageView *_arrow;
+}
 @property (nonatomic, strong, readonly) BPOnePixLineView *separatorView;
 @property (nonatomic) DTTableViewCellStyle cellBaseStyle;//旧属性
 @property (nonatomic) CGFloat lineGap;//deafult is 12
@@ -65,6 +68,9 @@ typedef enum {
 - (void)setArrowWithRighPadding:(CGFloat)rightPadding;
 
 - (void)showArrow:(BOOL)show;
+
+//右侧边缘距离（包含自身宽度），便于子类计算label 高度
++ (CGFloat)defaultArrowRightEadge;
 
 + (CGFloat)cellHeightWithItem:(id)item tableView:(UITableView *)tableView;
 

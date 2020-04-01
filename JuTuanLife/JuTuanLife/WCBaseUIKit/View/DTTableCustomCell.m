@@ -9,7 +9,7 @@
 #import "DTTableCustomCell.h"
 
 @implementation DTTableCustomCell {
-    UIImageView *_arrow;
+    
 }
 
 //兼容xib的cell --owen
@@ -194,6 +194,11 @@
 {
     [super setBackgroundColor:backgroundColor];
     self.backgroundView.backgroundColor = backgroundColor;
+}
+
++ (CGFloat)defaultArrowRightEadge
+{
+    return 28 + 8 + 10;
 }
 
 + (CGFloat)cellHeightWithItem:(id)item tableView:(UITableView *)tableView

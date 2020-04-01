@@ -12,8 +12,11 @@
 
 @property (nonatomic, strong) NSString *placeholder;
 @property (nonatomic, strong) NSString *orignalText;
-@property (nonatomic, strong) NSString *tips;
 
-@property (nonatomic) int textCount;
+@property (nonatomic, readonly) NSString *text;
+
+//@property (nonatomic, strong) NSString *tips;
+//
+//@property (nonatomic) int textCount;
 
 @end

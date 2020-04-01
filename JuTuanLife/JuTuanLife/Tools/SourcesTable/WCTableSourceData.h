@@ -44,6 +44,7 @@
 - (void)addSectionWithCells:(NSArray *)items height:(CGFloat)height click:(CellClick)click;
 - (void)addSectionWithCells:(NSArray *)items heightBlock:(CellHeight)heightBlock click:(CellClick)click;
 
+- (void)addNewSection;
 - (void)addSectionItem:(WCTableSection *)section;
 
 - (void)setSection:(NSInteger)section headerHeight:(CGFloat)height;

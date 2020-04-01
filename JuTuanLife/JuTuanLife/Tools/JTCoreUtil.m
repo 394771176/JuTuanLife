@@ -13,12 +13,37 @@
 
 + (void)showAlertWithTitle:(NSString *)title message:(NSString *)message cancelTitle:(NSString *)cancelTitle confirmTitle:(NSString *)confirmTitle destructiveTitle:(NSString *)destructiveTitle handler:(void (^)(UIAlertAction *action))handler
 {
-    [self showAlertWithTitle:title message:message style:UIAlertControllerStyleAlert cancelTitle:cancelTitle confirmTitle:confirmTitle destructiveTitle:destructiveTitle handler:handler];
+    [self showAlertWithTitle:title message:message cancelTitle:cancelTitle confirmTitle:confirmTitle destructiveTitle:destructiveTitle handler:handler cancel:nil];
+}
+
++ (void)showAlertWithTitle:(NSString *)title message:(NSString *)message cancelTitle:(NSString *)cancelTitle confirmTitle:(NSString *)confirmTitle destructiveTitle:(NSString *)destructiveTitle handler:(void (^)(UIAlertAction *action))handler cancel:(void (^)(UIAlertAction *))cancelHandler
+{
+    [self showAlertWithTitle:title message:message style:UIAlertControllerStyleAlert cancelTitle:cancelTitle confirmTitle:confirmTitle destructiveTitle:destructiveTitle handler:^(UIAlertAction *action) {
+        if (action.style == UIAlertActionStyleCancel) {
+            if (cancelHandler) {
+                cancelHandler(action);
+            }
+        } else {
+            if (handler) {
+                handler(action);
+            }
+        }
+    }];
 }
 
 + (void)showActionSheetWithTitle:(NSString *)title message:(NSString *)message cancelTitle:(NSString *)cancelTitle confirmTitle:(NSString *)confirmTitle destructiveTitle:(NSString *)destructiveTitle handler:(void (^)(UIAlertAction *action))handler
 {
-    [self showAlertWithTitle:title message:message style:UIAlertControllerStyleActionSheet cancelTitle:cancelTitle confirmTitle:confirmTitle destructiveTitle:destructiveTitle handler:handler];
+    [self showAlertWithTitle:title message:message style:UIAlertControllerStyleActionSheet cancelTitle:cancelTitle confirmTitle:confirmTitle destructiveTitle:destructiveTitle handler:^(UIAlertAction *action) {
+        if (action.style == UIAlertActionStyleCancel) {
+//            if (cancelHandler) {
+//                cancelHandler(action);
+//            }
+        } else {
+            if (handler) {
+                handler(action);
+            }
+        }
+    }];
 }
 
 + (void)showAlertWithTitle:(NSString *)title message:(NSString *)message style:(UIAlertControllerStyle)style cancelTitle:(NSString *)cancelTitle confirmTitle:(NSString *)confirmTitle destructiveTitle:(NSString *)destructiveTitle handler:(void (^)(UIAlertAction *action))handler
@@ -56,6 +81,7 @@
     
     if (cancelTitle.length) {
         [alert addAction:[UIAlertAction actionWithTitle:cancelTitle style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            handlerAction(action);
         }]];
     }
     [[WCControllerUtil topContainerController] presentViewController:alert animated:YES completion:nil];

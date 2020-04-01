@@ -45,7 +45,7 @@
         _protorolsList = [NSMutableArray array];
     }
     for (NSInteger i = _protorolsList.count; i < item.count; i++) {
-        UILabel *label = UICREATELabel(UILabel, _titleLabel.left, _titleLabel.bottom + 5 + 36 * i, _titleLabel.width, 36, AAW, nil, @"15", @"999999", self.contentView);
+        UILabel *label = UICREATELabel(UILabel, _titleLabel.left, _titleLabel.bottom + 5 + 36 * i, _titleLabel.width, 36, AAW, nil, @"15", @"333333", self.contentView);
         label.tag = i;
         [label addTarget:self singleTapAction:@selector(protorolClick:)];
         [_protorolsList safeAddObject:label];

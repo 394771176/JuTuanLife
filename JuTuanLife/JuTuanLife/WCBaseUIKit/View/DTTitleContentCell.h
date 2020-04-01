@@ -22,4 +22,9 @@
 
 - (void)setTitle:(NSString *)title content:(NSString *)content;
 
+- (void)resetContentLabelFrameWhenShowArrow;
+
++ (CGFloat)cellHeightWithItem:(id)item tableView:(UITableView *)tableView contentGap:(CGFloat)conentGap;
++ (CGFloat)cellHeightWithItem:(id)item tableView:(UITableView *)tableView contentGap:(CGFloat)conentGap font:(UIFont *)font;
+
 @end

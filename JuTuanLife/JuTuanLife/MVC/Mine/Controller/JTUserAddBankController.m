@@ -10,6 +10,17 @@
 #import "JTMineInfoListCell.h"
 
 @interface JTUserAddBankController ()
+<
+SCLoginTextFieldCellDelegate
+>
+{
+    JTMineInfoListCell *_bankCell;
+    JTMineInfoListCell *_kaihuCell;
+    JTMineInfoListCell *_cardNoCell;
+    JTMineInfoListCell *_userNameCell;
+    
+    NSString *_kaihuText;
+}
 
 @end
 
@@ -26,43 +37,136 @@
     WEAK_SELF
     WCTableSourceData *source = [WCTableSourceData new];
     
-    WCTableSection *section = [WCTableSection sectionWithItems:@[@"银行名称：", @"开户行：", @"银行卡号：", @"账户姓名："] cellClass:[JTMineInfoListCell class] heightBlock:^CGFloat(id data, NSIndexPath *indexPath) {
+    if (!_bankCell) {
+        NSArray *array = @[@"银行名称：", @"开  户  行：", @"银行卡号：", @"账户姓名："];
+        {
+            JTMineInfoListCell *cell = [[JTMineInfoListCell alloc] init];
+            cell.delegate = self;
+            cell.title = [array safeObjectAtIndex:0];
+            cell.canEdit = YES;
+            [cell.textView setReturnKeyType:UIReturnKeyNext];
+            _bankCell = cell;
+        }
+        {
+            JTMineInfoListCell *cell = [[JTMineInfoListCell alloc] init];
+            cell.delegate = self;
+            cell.title = [array safeObjectAtIndex:1];
+            cell.canEdit = YES;
+            [cell.textView setReturnKeyType:UIReturnKeyNext];
+            cell.topOffset = 5;
+            _kaihuCell = cell;
+        }
+        {
+            JTMineInfoListCell *cell = [[JTMineInfoListCell alloc] init];
+            cell.delegate = self;
+            cell.title = [array safeObjectAtIndex:2];
+            cell.canEdit = YES;
+            [cell.textView setReturnKeyType:UIReturnKeyNext];
+            _cardNoCell = cell;
+        }
+        {
+            JTMineInfoListCell *cell = [[JTMineInfoListCell alloc] init];
+            cell.delegate = self;
+            cell.title = [array safeObjectAtIndex:3];
+            cell.canEdit = YES;
+            [cell.textView setReturnKeyType:UIReturnKeyDone];
+            _userNameCell = cell;
+        }
+    }
+    
+    WCTableSection *section = [WCTableSection sectionWithCells:@[_bankCell, _kaihuCell, _cardNoCell, _userNameCell] heightBlock:^CGFloat(id data, NSIndexPath *indexPath) {
         if (indexPath.row == 1) {
-            return [JTMineInfoListCell cellHeightWithItem:nil tableView:weakSelf.tableView];
+            return [JTMineInfoListCell cellHeightWithItem:self->_kaihuText tableView:weakSelf.tableView] + 5;
         } else {
             return [JTMineInfoListCell cellHeightWithItem:nil tableView:weakSelf.tableView];
         }
+    } click:^(id data, NSIndexPath *indexPath) {
+        
     }];
-    [section setConfigBlock:^(JTMineInfoListCell *cell, id data, NSIndexPath *indexPath) {
-        [cell setCanEdit:YES];
-        [cell setTitle:data];
-        [cell setShowCamera:indexPath.row == 2];
-    } clickBlock:^(id data, NSIndexPath *indexPath) {
-        NSLog(@"%@", data);
-    }];
+    
     DTTableCustomCell *cell = [DTTableCustomCell new];
     [cell setSelectionStyleNoneLine];
-    [section addItemToDataList:[WCTableRow rowWithItem:cell cellClass:NULL height:30]];
+    [section addItemToDataList:[WCTableRow rowWithItem:cell cellClass:NULL height:12]];
     [source addSectionItem:section];
     [source setLastSectionHeaderHeight:12 footerHeight:0];
+    
+    [source addNewSection];
     
     [source addRowWithItem:@"提 交" cellClass:[DTTableTitleCell class] height:48];
     [source setLastRowConfigBlock:^(DTTableTitleCell *cell, id data, NSIndexPath *indexPath) {
         cell.titleLabel.textAlignment = NSTextAlignmentCenter;
-        [cell.titleLabel setFontSize:18 colorString:APP_JT_BTN_BLUE];
+        [cell.titleLabel setFontSize:18 colorString:@"333333"];
         [cell setTitle:data];
         [cell setLineStyle:DTCellLineNone];
     } clickBlock:^(id data, NSIndexPath *indexPath) {
-        NSLog(@"%@", data);
-        
+        [self addBankAction];
     }];
-    [source setLastSectionHeaderHeight:16 footerHeight:0];
+    [source setLastSectionHeaderHeight:12 footerHeight:0];
     return source;
 }
 
 - (void)addBankAction
 {
-    [[NSNotificationCenter defaultCenter] postNotificationName:JTUserAddBankController_ADD_BANK object:nil];
+    if (_bankCell.textView.text.length <= 0) {
+        [DTPubUtil showHUDMessageInWindow:@"请输入银行名称"];
+        return;
+    }
+    if (_kaihuCell.textView.text.length <= 0) {
+        [DTPubUtil showHUDMessageInWindow:@"请输入开户行"];
+        return;
+    }
+    if (_cardNoCell.textView.text.length <= 0) {
+        [DTPubUtil showHUDMessageInWindow:@"请输入银行卡号"];
+        return;
+    }
+    if (_userNameCell.textView.text.length <= 0) {
+        [DTPubUtil showHUDMessageInWindow:@"请输入账户姓名"];
+        return;
+    }
+    
+    JTUserBank *bank = [JTUserBank new];
+    bank.bankName = _bankCell.textView.text;
+    bank.bankBranch = _kaihuCell.textView.text;
+    bank.cardNo = _cardNoCell.textView.text;
+    bank.holder = _userNameCell.textView.text;
+    
+    [DTPubUtil startHUDLoading:@"提交中"];
+    [JTService async:[JTUserRequest add_bank_card:bank] finish:^(WCDataResult *result) {
+        if (result.success) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:JTUserAddBankController_ADD_BANK object:nil];
+            [DTPubUtil addBlock:^{
+                [DTPubUtil showHUDSuccessHintInWindow:@"添加成功"];
+                [self backAction];
+            } withDelay:0.5];
+        } else {
+            [DTPubUtil showHUDErrorHintInWindow:result.msg];
+        }
+    }];
+    
+}
+
+#pragma mark - SCLoginTextFieldCellDelegate
+
+- (void)loginTextFieldCell:(SCLoginTextFieldCell *)cell textFieldDidChange:(UITextField *)textField
+{
+    if (cell == (id)_kaihuCell) {
+        _kaihuText = textField.text;
+    }
+    [self.tableView beginUpdates];
+    [self.tableView endUpdates];
+}
+
+- (void)loginTextFieldCell:(SCLoginTextFieldCell *)cell textFieldDidReturn:(UITextField *)textField
+{
+    if (textField == (id)_bankCell) {
+        [_kaihuCell.textView becomeFirstResponder];
+    } else if (textField == (id)_kaihuCell) {
+        [_cardNoCell.textView becomeFirstResponder];
+    } else if (textField == (id)_cardNoCell) {
+        [_userNameCell.textView becomeFirstResponder];
+    } else if (textField == (id)_userNameCell) {
+        
+    }
 }
 
 @end

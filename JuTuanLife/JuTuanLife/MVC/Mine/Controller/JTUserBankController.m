@@ -33,6 +33,11 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refresh) name:JTUserAddBankController_ADD_BANK object:nil];
 }
 
+- (BOOL)canShowLoadingIndicator
+{
+    return NO;
+}
+
 - (DTListDataModel *)createDataModel
 {
     JTUserBankModel *model = [[JTUserBankModel alloc] initWithDelegate:self];

@@ -10,7 +10,6 @@
 
 @interface JTMineInfoListCell () <UITextViewDelegate> {
 //    UITextField *_textField;
-    UITextView *_textView;
     UIButton *_cameraBtn;
 }
 
@@ -25,7 +24,7 @@
         self.titleLabel.frame = RECT(28, 0, 80, self.contentView.height);
         self.titleLabel.autoresizingMask = UIViewAutoresizingFlexibleHeight;
         
-        self.contentLabel.frame = RECT(self.titleLabel.right + 8, 0, self.contentView.width - self.titleLabel.right - 8 - 92, self.contentView.height);
+        self.contentLabel.frame = RECT(self.titleLabel.right + 8, 0, self.contentView.width - self.titleLabel.right - 8 - 62, self.contentView.height);
         self.contentLabel.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
         self.contentLabel.numberOfLines = 0;
         self.contentLabel.textAlignment = NSTextAlignmentLeft;
@@ -53,9 +52,11 @@
 //    _textField.hidden = !canEdit;
 
     if (canEdit && !_textView) {
-        UICREATETo(_textView, UITextView, self.contentLabel.left, self.contentLabel.top, self.contentLabel.width, self.contentLabel.height, AAWH, self.contentView);
+        self.titleLabel.frame = CGRectMake(self.titleLabel.left, 5, self.titleLabel.width, self.contentView.height - 5);
+        UICREATETo(_textView, UITextView, self.contentLabel.left, self.titleLabel.top, self.contentLabel.width, self.titleLabel.height, AAWH, self.contentView);
         [_textView setTextColor:self.contentLabel.textColor];
         [_textView setFont:self.contentLabel.font];
+        [_textView setBackgroundColor:[UIColor clearColor]];
         _textView.text = self.content;
         _textView.delegate = self;
     }
@@ -64,6 +65,11 @@
     self.contentLabel.hidden = canEdit;
     
     [self setLineStyle:(_canEdit ? DTCellLineCustom : DTCellLineNone)];
+}
+
+- (id)editView
+{
+    return _textView;
 }
 
 - (void)setShowCamera:(BOOL)showCamera
@@ -86,23 +92,44 @@
     }
 }
 
+- (void)resetContentLabelFrameWhenShowArrow
+{
+    //阻止父类方法执行
+}
+
 - (void)cameraAction
 {
     NSLog(@"camera");
 }
 
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    if (_topOffset > 0.1) {
+        self.titleLabel.frame = CGRectMake(self.titleLabel.left, _topOffset, self.titleLabel.width, self.contentView.height - _topOffset);
+        if (_textView) {
+            _textView.frame = CGRectMake(self.titleLabel.right + 8, self.titleLabel.top, self.contentView.width - self.titleLabel.right - 8 - 62, self.titleLabel.height);
+        }
+    }
+}
+
 #pragma mark - UITextViewDelegate
 
-//- (BOOL)textViewShouldEndEditing:(UITextView *)textView
-//{
-//    if (_canEdit) {
-//        return NO;
-//    }
-//    return YES;
-//}
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+    if (_delegate && [_delegate respondsToSelector:@selector(loginTextFieldCell:textFieldDidReturn:)]) {
+        [_delegate loginTextFieldCell:(id)self textFieldDidReturn:(id)textView];
+    }
+}
 
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
 {
+    if ([text isEqualToString:@"\n"]) {
+        
+        [textView resignFirstResponder];
+        return NO;
+    }
     return YES;
 }
 
@@ -141,14 +168,10 @@
     }
 }
 
-+ (CGFloat)cellHeightWithItem:(NSString *)item tableView:(UITableView *)tableView
++ (CGFloat)cellHeightWithItem:(id)item tableView:(UITableView *)tableView
 {
-    if (item) {
-        CGFloat height = [item sizeWithFont:[UIFont systemFontOfSize:15] constrainedToSize:CGSizeMake(tableView.width - 28 - 8 - 92, FLT_MAX)].height;
-        
-        return MAX(44, height + 24);
-    }
-    return 44;
+    //gap 额外加4 因为textView 本身不是贴边输入文字的
+    return [self cellHeightWithItem:item tableView:tableView contentGap:28 + 80 + 8 + 62 + 4 font:[UIFont systemFontOfSize:16]];
 }
 
 @end

@@ -144,6 +144,12 @@
     [self addSectionItem:section];
 }
 
+- (void)addNewSection
+{
+    WCTableSection *section = [WCTableSection new];
+    [self addSectionItem:section];
+}
+
 - (void)addSectionItem:(WCTableSection *)section
 {
     [self checkMustSectionData];
