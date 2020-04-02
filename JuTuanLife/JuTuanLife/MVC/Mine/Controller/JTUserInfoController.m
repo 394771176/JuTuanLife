@@ -11,6 +11,7 @@
 #import "JTMineInfoAvatarCell.h"
 #import "JTMineYaJinCell.h"
 #import "JTUserInfoEditController.h"
+#import "JTUserYajinController.h"
 
 @interface JTUserInfoController ()
 <
@@ -148,6 +149,9 @@ UIImagePickerControllerDelegate
     
     {
         WCTableRow *row = [WCTableRow rowWithItem:user cellClass:[JTMineYaJinCell class]];
+        row.clickBlock = ^(id data, NSIndexPath *indexPath) {
+            PUSH_VC(JTUserYajinController)
+        };
         [source addRowItemToNewSection:row];
         [source setLastSectionHeaderHeight:12 footerHeight:0];
     }

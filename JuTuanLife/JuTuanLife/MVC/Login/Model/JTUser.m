@@ -74,6 +74,11 @@
     return YES;
 }
 
+- (NSString *)depositTips
+{
+    return [JTDataManager sharedInstance].baseConfig.deposit_deduct_text;
+}
+
 - (NSString *)phone
 {
     if (_mobile.length) {
@@ -96,7 +101,7 @@
 //            [str appendString:@"*"];
 //        }
 //        return [_phone stringByReplacingCharactersInRange:NSMakeRange(left, _phone.length - left - right) withString:str];
-        return [self.class replaceString:_phone withStr:@"*" inRange:NSMakeRange(left, _phone.length - left - right)];
+        return [NSString replaceString:_phone withStr:@"*" inRange:NSMakeRange(left, _phone.length - left - right)];
     } else {
         return _phone;
     }
@@ -110,7 +115,7 @@
     }
     if (num.length > 5) {
 //        return [num stringByReplacingCharactersInRange:NSMakeRange(1, num.length - 5) withString:@"·"];
-        return [self.class replaceString:num withStr:@"·" inRange:NSMakeRange(1, num.length - 5)];
+        return [NSString replaceString:num withStr:@"·" inRange:NSMakeRange(1, num.length - 5)];
     } else {
         return num;
     }
@@ -133,35 +138,6 @@
         return [_bizCityName substringToIndex:_bizCityName.length - 1];
     }
     return _bizCityName;
-}
-
-+ (NSString *)replaceString:(NSString *)string withStr:(NSString *)str inRange:(NSRange)range
-{
-    if (string.length && str.length && range.location + range.length < string.length) {
-        NSMutableString *mStr = [NSMutableString string];
-        for (NSInteger i = 0; i < range.length; i++) {
-            [mStr appendString:str];
-        }
-        return [string stringByReplacingCharactersInRange:range withString:mStr];
-    }
-    return string;
-}
-
-+ (NSString *)insertSpaceForString:(NSString *)string withLength:(NSInteger)length
-{
-    if (string.length > length) {
-        NSMutableArray *array = [NSMutableArray array];
-        NSString *str = [string mutableCopy];
-        while (str.length > length) {
-            [array safeAddObject:[str substringToIndex:length]];
-            str = [str substringFromIndex:length];
-        }
-        if (str.length) {
-            [array safeAddObject:str];
-        }
-        return [array componentsJoinedByString:@" "];
-    }
-    return string;
 }
 
 @end

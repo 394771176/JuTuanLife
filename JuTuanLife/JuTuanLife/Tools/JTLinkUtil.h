@@ -10,4 +10,6 @@
 
 @interface JTLinkUtil : WCLinkUtil
 
++ (void)openAboutUsURL;
+
 @end

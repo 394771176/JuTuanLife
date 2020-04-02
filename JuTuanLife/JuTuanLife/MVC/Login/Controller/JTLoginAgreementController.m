@@ -106,7 +106,7 @@
 - (void)submitAction
 {
     NSLog(@"submit");
-    [JTService async:[JTUserRequest sign_contracts:_protorolsList] finish:^(WCDataResult *result) {
+    [JTService async:[JTUserRequest sign_contractsWithList:_protorolsList] finish:^(WCDataResult *result) {
         if (result.success) {
             [[JTUserManager sharedInstance] updateProtorol:nil];
             [[JTUserManager sharedInstance] checkToNextForStatus:JTUserStatusNeedSign];

@@ -69,6 +69,10 @@
 		601E073824325285002840D8 /* WCCookieManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 601E073624325285002840D8 /* WCCookieManager.m */; };
 		601E073B2433BC49002840D8 /* DTTextViewEditCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 601E073A2433BC49002840D8 /* DTTextViewEditCell.m */; };
 		601E073C2433BC49002840D8 /* DTTextViewEditCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 601E073A2433BC49002840D8 /* DTTextViewEditCell.m */; };
+		601E073F24363DAB002840D8 /* JTUserYajinController.m in Sources */ = {isa = PBXBuildFile; fileRef = 601E073E24363DAB002840D8 /* JTUserYajinController.m */; };
+		601E074024363DAB002840D8 /* JTUserYajinController.m in Sources */ = {isa = PBXBuildFile; fileRef = 601E073E24363DAB002840D8 /* JTUserYajinController.m */; };
+		601E074324363DCD002840D8 /* JTUserYajinListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 601E074224363DCD002840D8 /* JTUserYajinListCell.m */; };
+		601E074424363DCD002840D8 /* JTUserYajinListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 601E074224363DCD002840D8 /* JTUserYajinListCell.m */; };
 		60200D17242F29B700481B41 /* JTBusinessFenrunCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60200D16242F29B700481B41 /* JTBusinessFenrunCell.m */; };
 		60200D18242F29B700481B41 /* JTBusinessFenrunCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60200D16242F29B700481B41 /* JTBusinessFenrunCell.m */; };
 		60200D1B242F319C00481B41 /* JTBusinessFenrunHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60200D1A242F319C00481B41 /* JTBusinessFenrunHeaderCell.m */; };
@@ -106,6 +110,12 @@
 		603F9A01241E646A00523CBD /* dt_share_sina@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 603F99F1241E646900523CBD /* dt_share_sina@2x.png */; };
 		603F9A04241FE54100523CBD /* FFConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 603F9A03241FE54100523CBD /* FFConfiguration.m */; };
 		603F9A09241FEB3500523CBD /* DTImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 603F9A07241FEB3500523CBD /* DTImagePickerController.m */; };
+		605F835C24363F3400CFC7BD /* JTUserYajinModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 605F835B24363F3400CFC7BD /* JTUserYajinModel.m */; };
+		605F835D24363F3400CFC7BD /* JTUserYajinModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 605F835B24363F3400CFC7BD /* JTUserYajinModel.m */; };
+		605F836024363F4B00CFC7BD /* JTUserYajin.m in Sources */ = {isa = PBXBuildFile; fileRef = 605F835F24363F4B00CFC7BD /* JTUserYajin.m */; };
+		605F836124363F4B00CFC7BD /* JTUserYajin.m in Sources */ = {isa = PBXBuildFile; fileRef = 605F835F24363F4B00CFC7BD /* JTUserYajin.m */; };
+		605F8364243650B600CFC7BD /* NSString+FormatUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 605F8363243650B600CFC7BD /* NSString+FormatUtil.m */; };
+		605F8365243650B600CFC7BD /* NSString+FormatUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 605F8363243650B600CFC7BD /* NSString+FormatUtil.m */; };
 		6065F0392427B7D20066B84B /* UIButton+WebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6065F0382427B7D20066B84B /* UIButton+WebImage.m */; };
 		6065F03A2427B7D20066B84B /* UIButton+WebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6065F0382427B7D20066B84B /* UIButton+WebImage.m */; };
 		6065F03D2427B7F60066B84B /* UIImageView+WebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6065F03C2427B7F60066B84B /* UIImageView+WebImage.m */; };
@@ -615,6 +625,10 @@
 		601E073624325285002840D8 /* WCCookieManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCCookieManager.m; sourceTree = "<group>"; };
 		601E07392433BC49002840D8 /* DTTextViewEditCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTTextViewEditCell.h; sourceTree = "<group>"; };
 		601E073A2433BC49002840D8 /* DTTextViewEditCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTTextViewEditCell.m; sourceTree = "<group>"; };
+		601E073D24363DAB002840D8 /* JTUserYajinController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTUserYajinController.h; sourceTree = "<group>"; };
+		601E073E24363DAB002840D8 /* JTUserYajinController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTUserYajinController.m; sourceTree = "<group>"; };
+		601E074124363DCD002840D8 /* JTUserYajinListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTUserYajinListCell.h; sourceTree = "<group>"; };
+		601E074224363DCD002840D8 /* JTUserYajinListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTUserYajinListCell.m; sourceTree = "<group>"; };
 		60200D15242F29B700481B41 /* JTBusinessFenrunCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTBusinessFenrunCell.h; sourceTree = "<group>"; };
 		60200D16242F29B700481B41 /* JTBusinessFenrunCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTBusinessFenrunCell.m; sourceTree = "<group>"; };
 		60200D19242F319C00481B41 /* JTBusinessFenrunHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTBusinessFenrunHeaderCell.h; sourceTree = "<group>"; };
@@ -666,6 +680,12 @@
 		603F9A03241FE54100523CBD /* FFConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFConfiguration.m; sourceTree = "<group>"; };
 		603F9A07241FEB3500523CBD /* DTImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTImagePickerController.m; sourceTree = "<group>"; };
 		603F9A08241FEB3500523CBD /* DTImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTImagePickerController.h; sourceTree = "<group>"; };
+		605F835A24363F3400CFC7BD /* JTUserYajinModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTUserYajinModel.h; sourceTree = "<group>"; };
+		605F835B24363F3400CFC7BD /* JTUserYajinModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTUserYajinModel.m; sourceTree = "<group>"; };
+		605F835E24363F4B00CFC7BD /* JTUserYajin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTUserYajin.h; sourceTree = "<group>"; };
+		605F835F24363F4B00CFC7BD /* JTUserYajin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTUserYajin.m; sourceTree = "<group>"; };
+		605F8362243650B600CFC7BD /* NSString+FormatUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+FormatUtil.h"; sourceTree = "<group>"; };
+		605F8363243650B600CFC7BD /* NSString+FormatUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+FormatUtil.m"; sourceTree = "<group>"; };
 		6065F0372427B7D20066B84B /* UIButton+WebImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+WebImage.h"; sourceTree = "<group>"; };
 		6065F0382427B7D20066B84B /* UIButton+WebImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WebImage.m"; sourceTree = "<group>"; };
 		6065F03B2427B7F60066B84B /* UIImageView+WebImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebImage.h"; sourceTree = "<group>"; };
@@ -1539,6 +1559,8 @@
 			children = (
 				601E06D8242FA7F2002840D8 /* NSDate+FormatUtil.h */,
 				601E06D9242FA7F2002840D8 /* NSDate+FormatUtil.m */,
+				605F8362243650B600CFC7BD /* NSString+FormatUtil.h */,
+				605F8363243650B600CFC7BD /* NSString+FormatUtil.m */,
 				6065F0372427B7D20066B84B /* UIButton+WebImage.h */,
 				6065F0382427B7D20066B84B /* UIButton+WebImage.m */,
 				6065F03B2427B7F60066B84B /* UIImageView+WebImage.h */,
@@ -1626,6 +1648,10 @@
 				601E06E0242FC29A002840D8 /* JTUserProtorolsModel.m */,
 				601E07312430CD0E002840D8 /* JTUserBankModel.h */,
 				601E07322430CD0E002840D8 /* JTUserBankModel.m */,
+				605F835A24363F3400CFC7BD /* JTUserYajinModel.h */,
+				605F835B24363F3400CFC7BD /* JTUserYajinModel.m */,
+				605F835E24363F4B00CFC7BD /* JTUserYajin.h */,
+				605F835F24363F4B00CFC7BD /* JTUserYajin.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1645,6 +1671,8 @@
 				6071FF862416912A009B617E /* JTUserAddBankController.m */,
 				606FE7A724137B2D00522B96 /* JTUserProtorolsController.h */,
 				606FE7A824137B2D00522B96 /* JTUserProtorolsController.m */,
+				601E073D24363DAB002840D8 /* JTUserYajinController.h */,
+				601E073E24363DAB002840D8 /* JTUserYajinController.m */,
 				606FE7AA24137B8300522B96 /* JTAboutUsController.h */,
 				606FE7AB24137B8300522B96 /* JTAboutUsController.m */,
 			);
@@ -1689,6 +1717,8 @@
 				607100FC2417DD4B009B617E /* JTUserProtorolsCell.m */,
 				601E07392433BC49002840D8 /* DTTextViewEditCell.h */,
 				601E073A2433BC49002840D8 /* DTTextViewEditCell.m */,
+				601E074124363DCD002840D8 /* JTUserYajinListCell.h */,
+				601E074224363DCD002840D8 /* JTUserYajinListCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2600,6 +2630,7 @@
 				60D767B72427A66900E2B317 /* DTBadgeView.m in Sources */,
 				60200D18242F29B700481B41 /* JTBusinessFenrunCell.m in Sources */,
 				60D767B82427A66900E2B317 /* DTTitleIconItem.m in Sources */,
+				601E074024363DAB002840D8 /* JTUserYajinController.m in Sources */,
 				60D767B92427A66900E2B317 /* FFWechatManager.m in Sources */,
 				60D767BA2427A66900E2B317 /* DTShareItem.m in Sources */,
 				60D767BB2427A66900E2B317 /* JTCoreUtil.m in Sources */,
@@ -2620,6 +2651,8 @@
 				60D767C92427A66900E2B317 /* JTFenRunOverView.m in Sources */,
 				60D767CA2427A66900E2B317 /* DTHttpRefreshLoadMoreTableController.m in Sources */,
 				60D767CB2427A66900E2B317 /* DTTabItem.m in Sources */,
+				601E074424363DCD002840D8 /* JTUserYajinListCell.m in Sources */,
+				605F835D24363F3400CFC7BD /* JTUserYajinModel.m in Sources */,
 				60D767CC2427A66900E2B317 /* DTHttpLoadMoreTableController.m in Sources */,
 				60D767CD2427A66900E2B317 /* FFConfiguration.m in Sources */,
 				60D767CE2427A66900E2B317 /* JTShipItem.m in Sources */,
@@ -2630,6 +2663,7 @@
 				60D767D32427A66900E2B317 /* JTUserCenterController.m in Sources */,
 				6065F03E2427B7F60066B84B /* UIImageView+WebImage.m in Sources */,
 				60D767D42427A66900E2B317 /* DTPickerView.m in Sources */,
+				605F836124363F4B00CFC7BD /* JTUserYajin.m in Sources */,
 				6065F0422427BDD70066B84B /* UIImage+WebImageUI.m in Sources */,
 				60D767D52427A66900E2B317 /* JTUserRequest.m in Sources */,
 				60D767D62427A66900E2B317 /* DTControl.m in Sources */,
@@ -2640,6 +2674,7 @@
 				60D767DB2427A66900E2B317 /* JTViewController.m in Sources */,
 				60D767DC2427A66900E2B317 /* WCTableSourceData.m in Sources */,
 				60D767DD2427A66900E2B317 /* DTDrivingLoadingView.m in Sources */,
+				605F8365243650B600CFC7BD /* NSString+FormatUtil.m in Sources */,
 				60D767DE2427A66900E2B317 /* JTUserBankCell.m in Sources */,
 				60D767DF2427A66900E2B317 /* DTTabViewController.m in Sources */,
 				60D767E02427A66900E2B317 /* JTUserBankController.m in Sources */,
@@ -2770,6 +2805,7 @@
 				60E2B10A240ED5D800E4EA52 /* DTBadgeView.m in Sources */,
 				60200D17242F29B700481B41 /* JTBusinessFenrunCell.m in Sources */,
 				60E2B119240ED5D800E4EA52 /* DTTitleIconItem.m in Sources */,
+				601E073F24363DAB002840D8 /* JTUserYajinController.m in Sources */,
 				603F99DC241E2F4600523CBD /* FFWechatManager.m in Sources */,
 				603F9866241E18F300523CBD /* DTShareItem.m in Sources */,
 				6001C784240EB6FD006092BB /* JTCoreUtil.m in Sources */,
@@ -2790,6 +2826,8 @@
 				60DF0F142423D05B00BB0F88 /* JTFenRunOverView.m in Sources */,
 				60E2B11A240ED5D800E4EA52 /* DTHttpRefreshLoadMoreTableController.m in Sources */,
 				60E2B118240ED5D800E4EA52 /* DTTabItem.m in Sources */,
+				601E074324363DCD002840D8 /* JTUserYajinListCell.m in Sources */,
+				605F835C24363F3400CFC7BD /* JTUserYajinModel.m in Sources */,
 				60E2B123240ED5D800E4EA52 /* DTHttpLoadMoreTableController.m in Sources */,
 				603F9A04241FE54100523CBD /* FFConfiguration.m in Sources */,
 				60ECA79A241D1E9C0029C45A /* JTShipItem.m in Sources */,
@@ -2800,6 +2838,7 @@
 				60D767562427758700E2B317 /* JTUserCenterController.m in Sources */,
 				6065F03D2427B7F60066B84B /* UIImageView+WebImage.m in Sources */,
 				60E2B110240ED5D800E4EA52 /* DTPickerView.m in Sources */,
+				605F836024363F4B00CFC7BD /* JTUserYajin.m in Sources */,
 				6065F0412427BDD70066B84B /* UIImage+WebImageUI.m in Sources */,
 				606FE736241157ED00522B96 /* JTUserRequest.m in Sources */,
 				60E2B102240ED5D800E4EA52 /* DTControl.m in Sources */,
@@ -2810,6 +2849,7 @@
 				60ACA3A7241CCE1B0023ECB4 /* JTViewController.m in Sources */,
 				606FE7B9241385BE00522B96 /* WCTableSourceData.m in Sources */,
 				60E2B101240ED5D800E4EA52 /* DTDrivingLoadingView.m in Sources */,
+				605F8364243650B600CFC7BD /* NSString+FormatUtil.m in Sources */,
 				6071FF8A241697F6009B617E /* JTUserBankCell.m in Sources */,
 				60E2B11C240ED5D800E4EA52 /* DTTabViewController.m in Sources */,
 				606FE7A624137B1800522B96 /* JTUserBankController.m in Sources */,

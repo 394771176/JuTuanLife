@@ -53,7 +53,7 @@ typedef NS_ENUM(NSUInteger, JTUserStatus) {
 
 - (NSString *)phoneCipher;
 - (NSString *)IDNumCipher;
-- (NSString *)bankNumCipher;
+//- (NSString *)bankNumCipher;
 - (NSString *)bizCityNameShort;
 
 @end

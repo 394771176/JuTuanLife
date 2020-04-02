@@ -21,6 +21,8 @@
     [self setupTableHeader];
     
     [self reloadTableView];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTableView) name:JTUserManager_USER_SESSION object:nil];
 }
 
 - (void)setupTableHeader

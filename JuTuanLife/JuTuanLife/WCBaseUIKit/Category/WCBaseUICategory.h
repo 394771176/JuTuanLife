@@ -10,6 +10,7 @@
 #define WCBaseUICategory_h
 
 #import "NSDate+FormatUtil.h"
+#import "NSString+FormatUtil.h"
 
 #import "UIImage+WebImageUI.h"
 #import "UIImageView+WebImage.h"

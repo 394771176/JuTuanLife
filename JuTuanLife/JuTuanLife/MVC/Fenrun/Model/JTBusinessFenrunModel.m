@@ -17,7 +17,7 @@
 
 - (WCDataResult *)loadData
 {
-    WCDataResult *result = [JTService sync:[JTUserRequest get_performance_details:_businessCode dateType:_period pos:self.pos pageSize:self.fetchLimit]];
+    WCDataResult *result = [JTService sync:[JTUserRequest get_performance_detailsWithCode:_businessCode dateType:_period pos:self.pos pageSize:self.fetchLimit]];
     return [self cacheResult:result];
 }
 

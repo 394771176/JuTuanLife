@@ -17,12 +17,14 @@
 
 @property (nonatomic, assign) CGFloat minDuration;//default is 0
 
+@property (nonatomic, assign) CGFloat offsetY;
+
 -(void)start;
 
 -(void)stop;
 
-+(void)showInView:(UIView*)view;
-+(void)showInView:(UIView*)view minDuration:(CGFloat)minDuration;
++(id)showInView:(UIView*)view;
++(id)showInView:(UIView*)view minDuration:(CGFloat)minDuration;
 
 +(void)hideInView:(UIView*)view;
 +(void)hideInViewImmediately:(UIView*)view;

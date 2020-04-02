@@ -15,13 +15,24 @@
     return @{@"itemId" : @"id"};
 }
 
+//- (NSString *)bankNumCipher
+//{
+//    if (_cardNo.length) {
+//        return [_cardNo stringByReplacingCharactersInRange:NSMakeRange(0, _cardNo.length - 4) withString:@"·"];
+//    } else {
+//        return _cardNo;
+//    }
+//}
+
 - (NSString *)bankNumCipher
 {
-    if (_cardNo.length) {
-        return [_cardNo stringByReplacingCharactersInRange:NSMakeRange(0, _cardNo.length - 4) withString:@"·"];
+    if (_cardNo.length > 4) {
+        NSString *str = [NSString replaceString:_cardNo withStr:@"·" inRange:NSMakeRange(0, _cardNo.length - 4)];
+        return [NSString insertSpaceForString:str withLength:4];
     } else {
         return _cardNo;
     }
 }
+
 
 @end

@@ -49,41 +49,17 @@ SHARED_INSTANCE_M
     }
 }
 
-+ (void)getVerifyResultWith:(DTCommonBlock)block
-{
-    [JTService asyncBlock:^WCDataRequest *{
-        NSString *bizId = [[self sharedInstance] bizId];
-        return [JTUserRequest get_ali_verify_result:bizId];
-    } finish:^(WCDataResult *result) {
-        if (block) {
-            block(result);
-        }
-    }];
-}
-
-+ (void)uploadVerifyResultWith:(DTCommonBlock)block
-{
-    [JTService asyncBlock:^WCDataRequest *{
-        NSString *bizId = [[self sharedInstance] bizId];
-        return [JTUserRequest get_ali_verify_result:bizId];
-    } finish:^(WCDataResult *result) {
-        if (block) {
-            block(result);
-        }
-    }];
-}
-
 + (void)getAndUploadVerifyResultWith:(DTCommonBlock)block
 {
     [JTService addBlockOnGlobalThread:^{
         NSString *bizId = [[self sharedInstance] bizId];
         WCDataResult *result = nil;
-        WCDataResult *authResult = [JTService sync:[JTUserRequest get_ali_verify_result:bizId]];
+        WCDataResult *authResult = [JTService sync:[JTUserRequest get_ali_verify_resultWithBizId:bizId]];
         result = authResult;
         if (result.success) {
             JTUserCert *cert = [JTUserCert itemFromVerifyData:result.data];
             if (cert) {
-                WCDataResult *uploadResult = [JTService sync:[JTUserRequest upload_auth_info:cert]];
+                WCDataResult *uploadResult = [JTService sync:[JTUserRequest upload_auth_infoWithCert:cert]];
                 result = uploadResult;
             }
         }

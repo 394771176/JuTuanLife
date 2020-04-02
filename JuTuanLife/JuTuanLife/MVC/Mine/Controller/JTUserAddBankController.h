@@ -7,9 +7,12 @@
 //
 
 #import "DTTableController.h"
+#import "JTUserBank.h"
 
 KEY(JTUserAddBankController_ADD_BANK)
 
 @interface JTUserAddBankController : DTTableController
+
+@property (nonatomic, strong) JTUserBank *bank;
 
 @end

@@ -25,10 +25,6 @@ SHARED_INSTANCE_H
 
 + (void)checkVerifyTokenWith:(DTSuccessBlock)block;
 
-+ (void)getVerifyResultWith:(DTCommonBlock)block;
-
-+ (void)uploadVerifyResultWith:(DTCommonBlock)block;
-
 + (void)getAndUploadVerifyResultWith:(DTCommonBlock)block;
 
 //实人认证

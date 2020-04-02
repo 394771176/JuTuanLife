@@ -16,7 +16,13 @@
         return NO;
     }
     
-    const NSArray *whiteUrlStrList = @[@"jutuanlife.com", @"jutuibang.cn", @"jutuib.cn", @"192.168.18.157"];
+    NSArray *whiteList = nil;
+    
+    whiteList = [JTDataManager sharedInstance].baseConfig.h5_domain_whitelist;
+    
+    if (!whiteList.count) {
+        return NO;
+    }
     
     NSArray *tags = [url.host componentsSeparatedByString:@"."];
     if (tags.count<2) {
@@ -28,7 +34,7 @@
     NSMutableString *host = [NSMutableString stringWithString:[tags lastObject]];
     for (NSInteger i=tags.count-2; i>=0; i--) {
         [host insertString:[NSString stringWithFormat:@"%@.", tags[i]] atIndex:0];
-        if ([whiteUrlStrList containsObject:host]) {
+        if ([whiteList containsObject:host]) {
             resultDomain = [NSString stringWithString:host];
             result = YES;
             break;

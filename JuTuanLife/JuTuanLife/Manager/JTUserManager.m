@@ -263,6 +263,8 @@ SHARED_INSTANCE_M
         [self refreshMessageUnreadCount];
         if (isLaunch) {
             [self refreshProtorol:nil];
+        } else {
+            [[JTDataManager sharedInstance] updateBaseConfig];
         }
     }
 }

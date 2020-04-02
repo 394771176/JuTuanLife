@@ -8,7 +8,15 @@
 
 #import "JTDataManager.h"
 
+@interface JTDataManager () {
+    NSTimeInterval _markSetServerTime;
+}
+
+@end
+
 @implementation JTDataManager
+
+@synthesize current_server_time = _current_server_time;
 
 SHARED_INSTANCE_M
 
@@ -28,21 +36,42 @@ SHARED_INSTANCE_M
 
 - (NSTimeInterval)current_server_time
 {
-    if (self.baseConfig && [self.baseConfig objectForKey:@"current_server_time"]) {
-        return [self.baseConfig doubleForKey:@"current_server_time"];
+//    if (self.baseConfig && [self.baseConfig objectForKey:@"current_server_time"]) {
+//        return [self.baseConfig doubleForKey:@"current_server_time"];
+//    }
+    if (_current_server_time > 0) {
+        return _current_server_time + (WCTimeIntervalWithSecondsSince1970() - _markSetServerTime);
     }
     return WCTimeIntervalWithSecondsSince1970();
+}
+
+- (void)setCurrent_server_time:(NSTimeInterval)current_server_time
+{
+    _markSetServerTime = WCTimeIntervalWithSecondsSince1970();
+    _current_server_time = current_server_time;
+}
+
+- (void)setBaseConfigDict:(NSDictionary *)baseConfigDict
+{
+    if ([NSDictionary validDict:baseConfigDict]) {
+        _baseConfigDict = baseConfigDict;
+        if ([self.baseConfigDict objectForKey:@"current_server_time"]) {
+            self.current_server_time = [self.baseConfigDict doubleForKey:@"current_server_time"];
+        }
+        
+        self.baseConfig = [JTBaseConfig itemFromDict:baseConfigDict];
+    }
 }
 
 - (void)updateBaseConfig
 {
     [JTService async:[JTUserRequest getBaseConfig] cacheKey:@"JTUserRequest_getBaseConfig" loadCache:^(WCDataResult *cache) {
-        if (cache.success && [NSDictionary validDict:cache.data]) {
-            self.baseConfig = cache.data;
+        if (cache.success) {
+            self.baseConfigDict = cache.data;
         }
     } finish:^(WCDataResult *result) {
-        if (result.success && [NSDictionary validDict:result.data]) {
-            self.baseConfig = result.data;
+        if (result.success) {
+            self.baseConfigDict = result.data;
         }
     }];
     [JTService async:[JTUserRequest getShareInfo] cacheKey:@"JTUserRequest_getShareInfo" loadCache:^(WCDataResult *cache) {
@@ -91,7 +120,7 @@ SHARED_INSTANCE_M
     
     NSString *imageUrl = nil;
     if (key) {
-        imageUrl = [self.baseConfig objectForKey:imageUrl];
+        imageUrl = [self.baseConfigDict objectForKey:imageUrl];
     }
     
     if (!imageUrl || [imageUrl rangeOfString:@"{image}"].length <= 0) {

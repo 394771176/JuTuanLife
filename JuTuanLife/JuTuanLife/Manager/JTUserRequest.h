@@ -27,44 +27,43 @@
 + (JTRequest *)update_user_infoAvatar:(NSString *)avatar address:(NSString *)address;
 
 + (JTRequest *)get_ali_verify_token;
-+ (JTRequest *)get_ali_verify_result:(NSString *)bizId;
++ (JTRequest *)get_ali_verify_resultWithBizId:(NSString *)bizId;
 
-+ (JTRequest *)upload_auth_info:(JTUserCert *)cert;
++ (JTRequest *)upload_auth_infoWithCert:(JTUserCert *)cert;
 
 //银行卡
 + (JTRequest *)get_bank_cards;
-+ (JTRequest *)add_bank_card:(JTUserBank *)bank;
-+ (JTRequest *)update_bank_card:(JTUserBank *)bank;
+//添加或更改银行卡
++ (JTRequest *)addOrUpdate_bank_cardWithBank:(JTUserBank *)bank;
 
 //协议
 + (JTRequest *)get_unsigned_contracts;
 + (JTRequest *)get_signed_contracts;
-+ (JTRequest *)sign_contracts:(NSArray *)array;
++ (JTRequest *)sign_contractsWithList:(NSArray *)array;
 
 //用户押金
-+ (JTRequest *)get_user_deposit_logs;
++ (JTRequest *)get_user_deposit_logsWithPos:(NSString *)pos pageSize:(NSInteger)pageSize;
 
 //首页产品业务列表
 + (JTRequest *)get_business_list;
 
 //首页用户分润
 + (JTRequest *)get_all_commission_stats;
-+ (JTRequest *)get_commission_stats:(NSInteger)period date:(NSString *)date pos:(NSString *)pos pageSize:(NSInteger)pageSize;
++ (JTRequest *)get_commission_statsWithPeriod:(NSInteger)period date:(NSString *)date pos:(NSString *)pos pageSize:(NSInteger)pageSize;
 
 //用户分润，按业务统计
-+ (JTRequest *)get_biz_contrib_commissions:(NSString *)userNo dateType:(NSInteger)period date:(NSString *)date;
++ (JTRequest *)get_biz_contrib_commissionsWithUserNo:(NSString *)userNo dateType:(NSInteger)period date:(NSString *)date;
 
 //个人主页业绩列表
-+ (JTRequest *)get_performance_stats:(NSInteger)period userNo:(NSString *)userNo;
++ (JTRequest *)get_performance_statsWithPeriod:(NSInteger)period userNo:(NSString *)userNo;
 //用户业绩明细
-+ (JTRequest *)get_performance_details:(NSString *)businessCode dateType:(NSInteger)period pos:(NSString *)pos pageSize:(NSInteger)pageSize;
++ (JTRequest *)get_performance_detailsWithCode:(NSString *)businessCode dateType:(NSInteger)period pos:(NSString *)pos pageSize:(NSInteger)pageSize;
 
 //师徒列表
-+ (JTRequest *)getShipList:(NSString *)pos pageSize:(NSInteger)pageSize;
-+ (JTRequest *)getShipList:(NSString *)pos pageSize:(NSInteger)pageSize searchText:(NSString *)searchText;
++ (JTRequest *)getShipListWithPos:(NSString *)pos pageSize:(NSInteger)pageSize searchText:(NSString *)searchText;
 
 //MARK: - Message
 + (JTRequest *)unread_msg_num;
-+ (JTRequest *)user_msg_list:(NSString *)pos pageSize:(NSInteger)pageSize;
++ (JTRequest *)user_msg_listWithPos:(NSString *)pos pageSize:(NSInteger)pageSize;
 
 @end

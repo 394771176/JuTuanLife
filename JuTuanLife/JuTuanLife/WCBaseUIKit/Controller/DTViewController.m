@@ -255,7 +255,8 @@
 //        }
 //        [_loadingView startAnimating];
         
-        [XLBallLoading showInView:self.view minDuration:0.5f];
+        XLBallLoading *view = [XLBallLoading showInView:self.view minDuration:0.5f];
+        view.offsetY = -20;
         _isShowLoadingIndicator = YES;
     } else {
         [self stopLoadingIndicator];

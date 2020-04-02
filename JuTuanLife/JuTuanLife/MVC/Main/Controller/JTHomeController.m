@@ -38,6 +38,7 @@
     [self reloadData];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateUserInfo) name:JTUserManager_USERINFO_UPDATE object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refresh) name:JTUserManager_USER_SESSION object:nil];
 }
 
 - (void)setupTableHeader

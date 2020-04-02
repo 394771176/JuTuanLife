@@ -21,7 +21,7 @@
     if (_period >= JTFenRunPeriodFixDay) {
         date = self.selectedDate;
     }
-    WCDataResult *result = [JTService sync:[JTUserRequest get_commission_stats:_period date:date pos:self.pos pageSize:self.fetchLimit]];
+    WCDataResult *result = [JTService sync:[JTUserRequest get_commission_statsWithPeriod:_period date:date pos:self.pos pageSize:self.fetchLimit]];
     return [self cacheResult:result];
 }
 

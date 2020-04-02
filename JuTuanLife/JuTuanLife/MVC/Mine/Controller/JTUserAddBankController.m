@@ -72,6 +72,13 @@ SCLoginTextFieldCellDelegate
             [cell.textView setReturnKeyType:UIReturnKeyDone];
             _userNameCell = cell;
         }
+        
+        if (_bank) {
+            _bankCell.textView.text = _bank.bankName;
+            _kaihuCell.textView.text = _bank.bankBranch;
+            _cardNoCell.textView.text = _bank.cardNo;
+            _userNameCell.textView.text = _bank.holder;
+        }
     }
     
     WCTableSection *section = [WCTableSection sectionWithCells:@[_bankCell, _kaihuCell, _cardNoCell, _userNameCell] heightBlock:^CGFloat(id data, NSIndexPath *indexPath) {
@@ -124,25 +131,34 @@ SCLoginTextFieldCellDelegate
         return;
     }
     
-    JTUserBank *bank = [JTUserBank new];
+    JTUserBank *bank = nil;
+    if (_bank) {
+        bank = _bank;
+    } else {
+        bank = [JTUserBank new];
+    }
     bank.bankName = _bankCell.textView.text;
     bank.bankBranch = _kaihuCell.textView.text;
     bank.cardNo = _cardNoCell.textView.text;
     bank.holder = _userNameCell.textView.text;
     
     [DTPubUtil startHUDLoading:@"提交中"];
-    [JTService async:[JTUserRequest add_bank_card:bank] finish:^(WCDataResult *result) {
+    [JTService async:[JTUserRequest addOrUpdate_bank_cardWithBank:bank] finish:^(WCDataResult *result) {
         if (result.success) {
             [[NSNotificationCenter defaultCenter] postNotificationName:JTUserAddBankController_ADD_BANK object:nil];
             [DTPubUtil addBlock:^{
-                [DTPubUtil showHUDSuccessHintInWindow:@"添加成功"];
+                if (bank.itemId) {
+                    [DTPubUtil showHUDSuccessHintInWindow:@"更新成功"];
+                } else {
+                    [DTPubUtil showHUDSuccessHintInWindow:@"添加成功"];
+                }
+                
                 [self backAction];
             } withDelay:0.5];
         } else {
             [DTPubUtil showHUDErrorHintInWindow:result.msg];
         }
     }];
-    
 }
 
 #pragma mark - SCLoginTextFieldCellDelegate

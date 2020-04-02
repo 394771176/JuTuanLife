@@ -17,7 +17,7 @@
 
 - (WCDataResult *)loadData
 {
-    WCDataResult *result = [JTService sync:[JTUserRequest user_msg_list:self.pos pageSize:self.fetchLimit]];
+    WCDataResult *result = [JTService sync:[JTUserRequest user_msg_listWithPos:self.pos pageSize:self.fetchLimit]];
     
     return [self cacheResult:result];
 }

@@ -17,7 +17,7 @@
 
 - (WCDataResult *)loadData
 {
-    WCDataResult *result = [JTService sync:[JTUserRequest get_performance_stats:_period userNo:_userNo]];
+    WCDataResult *result = [JTService sync:[JTUserRequest get_performance_statsWithPeriod:_period userNo:_userNo]];
     
     return [self cacheResult:result];
 }

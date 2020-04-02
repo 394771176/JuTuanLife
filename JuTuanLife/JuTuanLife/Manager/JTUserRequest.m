@@ -17,7 +17,7 @@
 
 + (JTRequest *)getBaseConfig
 {
-    NSArray *array = @[@"biz_conf_image", @"ios_jutuan_version"];
+    NSArray *array = @[@"biz_conf_image", @"ios_jutuan_version", @"app_jutuan_conf"];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params safeSetObject:array forKey:@"classcode"];
     return [self requestWithApi:@"basic/get_app_config" params:params];
@@ -65,14 +65,14 @@
     return [self requestWithApi:@"user/rpcert/get_ali_verify_token" params:nil httpMethod:WCHTTPMethodPOST];
 }
 
-+ (JTRequest *)get_ali_verify_result:(NSString *)bizId
++ (JTRequest *)get_ali_verify_resultWithBizId:(NSString *)bizId
 {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params safeSetObject:bizId forKey:@"bizId"];
     return [self requestWithApi:@"user/rpcert/get_ali_verify_result" params:params httpMethod:WCHTTPMethodPOST];
 }
 
-+ (JTRequest *)upload_auth_info:(JTUserCert *)cert
++ (JTRequest *)upload_auth_infoWithCert:(JTUserCert *)cert
 {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params addEntriesFromDictionary:[cert dictItem]];
@@ -87,17 +87,19 @@
     return [self requestWithApi:@"user/bankcard/get_bank_cards" params:params];
 }
 
-+ (JTRequest *)add_bank_card:(JTUserBank *)bank
++ (JTRequest *)addOrUpdate_bank_cardWithBank:(JTUserBank *)bank
 {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    return [self requestWithApi:@"user/bankcard/add_bank_card" params:params];
-}
-
-+ (JTRequest *)update_bank_card:(JTUserBank *)bank
-{
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    
-    return [self requestWithApi:@"user/bankcard/update_bank_card" params:params];
+    [params safeSetObject:bank.itemId forKey:@"id"];
+    [params safeSetObject:bank.cardNo forKey:@"cardNo"];
+    [params safeSetObject:bank.bankName forKey:@"bankName"];
+    [params safeSetObject:bank.bankBranch forKey:@"bankBranch"];
+    [params safeSetObject:bank.holder forKey:@"holder"];
+    if (bank.itemId) {
+        return [self requestWithApi:@"user/bankcard/update_bank_card" params:params];
+    } else {
+        return [self requestWithApi:@"user/bankcard/add_bank_card" params:params];
+    }
 }
 
 + (JTRequest *)get_unsigned_contracts
@@ -110,7 +112,7 @@
     return [self requestWithApi:@"sale/contract/get_signed_contracts" params:nil];
 }
 
-+ (JTRequest *)sign_contracts:(NSArray *)array
++ (JTRequest *)sign_contractsWithList:(NSArray *)array
 {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     NSMutableArray *ids = [NSMutableArray array];
@@ -124,9 +126,10 @@
     return [self requestWithApi:@"sale/contract/sign_contracts" params:params httpMethod:WCHTTPMethodPOST];
 }
 
-+ (JTRequest *)get_user_deposit_logs
++ (JTRequest *)get_user_deposit_logsWithPos:(NSString *)pos pageSize:(NSInteger)pageSize
 {
-    return [self requestWithApi:@"/sale/business/get_user_deposit_logs" params:nil];
+    NSMutableDictionary *params = [self paramsWithPos:pos pageSize:pageSize];
+    return [self requestWithApi:@"/sale/business/get_user_deposit_logs" params:params];
 }
 
 + (JTRequest *)get_business_list
@@ -139,7 +142,7 @@
     return [self requestWithApi:@"sale/business/get_all_commission_stats" params:nil];
 }
 
-+ (JTRequest *)get_commission_stats:(NSInteger)period date:(NSString *)date pos:(NSString *)pos pageSize:(NSInteger)pageSize
++ (JTRequest *)get_commission_statsWithPeriod:(NSInteger)period date:(NSString *)date pos:(NSString *)pos pageSize:(NSInteger)pageSize
 {
     NSMutableDictionary *params = [self paramsWithPos:pos pageSize:pageSize];
     [params safeSetObject:STRING(period) forKey:@"dateType"];
@@ -148,7 +151,7 @@
     return [self requestWithApi:@"sale/business/get_commission_stats" params:params];
 }
 
-+ (JTRequest *)get_biz_contrib_commissions:(NSString *)userNo dateType:(NSInteger)period date:(NSString *)date
++ (JTRequest *)get_biz_contrib_commissionsWithUserNo:(NSString *)userNo dateType:(NSInteger)period date:(NSString *)date
 {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params safeSetObject:userNo forKey:@"byUserNo"];
@@ -157,7 +160,7 @@
     return [self requestWithApi:@"sale/business/get_biz_contrib_commissions" params:params];
 }
 
-+ (JTRequest *)get_performance_stats:(NSInteger)period userNo:(NSString *)userNo
++ (JTRequest *)get_performance_statsWithPeriod:(NSInteger)period userNo:(NSString *)userNo
 {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params safeSetObject:STRING(period) forKey:@"dateType"];
@@ -165,7 +168,7 @@
     return [self requestWithApi:@"sale/business/get_performance_stats" params:params];
 }
 
-+ (JTRequest *)get_performance_details:(NSString *)businessCode dateType:(NSInteger)period pos:(NSString *)pos pageSize:(NSInteger)pageSize
++ (JTRequest *)get_performance_detailsWithCode:(NSString *)businessCode dateType:(NSInteger)period pos:(NSString *)pos pageSize:(NSInteger)pageSize
 {
     NSMutableDictionary *params = [self paramsWithPos:pos pageSize:pageSize];
     [params safeSetObject:businessCode forKey:@"businessCode"];
@@ -173,12 +176,7 @@
     return [self requestWithApi:@"sale/business/get_performance_details" params:params];
 }
 
-+ (JTRequest *)getShipList:(NSString *)pos pageSize:(NSInteger)pageSize
-{
-    return [self getShipList:pos pageSize:pageSize searchText:nil];
-}
-
-+ (JTRequest *)getShipList:(NSString *)pos pageSize:(NSInteger)pageSize searchText:(NSString *)searchText
++ (JTRequest *)getShipListWithPos:(NSString *)pos pageSize:(NSInteger)pageSize searchText:(NSString *)searchText
 {
     NSMutableDictionary *params = [self paramsWithPos:pos pageSize:pageSize];
     [params safeSetObject:searchText forKey:@"searchText"];
@@ -194,7 +192,7 @@
 {
     return [self requestWithApi:@"user/message/unread_msg_num" params:@{@"userType" : @"1"}];
 }
-+ (JTRequest *)user_msg_list:(NSString *)pos pageSize:(NSInteger)pageSize
++ (JTRequest *)user_msg_listWithPos:(NSString *)pos pageSize:(NSInteger)pageSize
 {
     NSMutableDictionary *params = [self paramsWithPos:pos pageSize:pageSize];
     [params safeSetObject:@"1" forKey:@"userType"];

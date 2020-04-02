@@ -82,7 +82,12 @@
 {
     _ballContainerSize = ballContainerSize;
     _ballContainer.frame = CGRectMake(0, 0, _ballContainerSize.width, _ballContainerSize.height);
-    _ballContainer.center = CGPointMake(self.bounds.size.width/2.0f, self.bounds.size.height/2.0f);
+    _ballContainer.center = CGPointMake(self.frame.size.width/2.0f, self.frame.size.height/2.0f);
+}
+
+- (void)setOffsetY:(CGFloat)offsetY
+{
+    _ballContainer.center = CGPointMake(self.frame.size.width/2.0f, self.frame.size.height/2.0f + _offsetY);
 }
 
 -(void)startPathAnimate{
@@ -198,18 +203,19 @@
     [self removeFromSuperview];
 }
 
-+ (void)showInView:(UIView *)view
++ (id)showInView:(UIView *)view
 {
-    [self showInView:view minDuration:0.f];
+    return [self showInView:view minDuration:0.f];
 }
 
-+(void)showInView:(UIView *)view minDuration:(CGFloat)minDuration
++(id)showInView:(UIView *)view minDuration:(CGFloat)minDuration
 {
     [self hideInViewImmediately:view];
     XLBallLoading *loading = [[XLBallLoading alloc] initWithFrame:view.bounds];
     loading.minDuration = minDuration;
     [view addSubview:loading];
     [loading start];
+    return loading;
 }
 
 +(void)hideInView:(UIView *)view{

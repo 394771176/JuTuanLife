@@ -103,15 +103,23 @@
 
 - (void)changeBankCard
 {
-    PUSH_VC(JTUserAddBankController);
+    JTUserBank *bank = [self.dataModel itemAtIndex:0];
+    [self changeBankCardWithCard:bank];
+}
+
+- (void)changeBankCardWithCard:(JTUserBank *)card
+{
+    PUSH_VC_WITH(JTUserAddBankController, vc.bank = card)
 }
 
 #pragma mark - DTTableButtonCellDelegate
 
 - (void)tableButtonCellDidClickAction:(DTTableCustomCell *)cell
 {
-    [JTCoreUtil showActionSheetWithTitle:nil message:nil cancelTitle:@"取消" confirmTitle:@"解除绑定" destructiveTitle:nil handler:^(UIAlertAction *action) {
-        NSLog(@"%@", action.title);
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    [JTCoreUtil showActionSheetWithTitle:nil message:nil cancelTitle:@"取消" confirmTitle:@"变更" destructiveTitle:nil handler:^(UIAlertAction *action) {
+        JTUserBank *bank = [self.dataModel itemAtIndex:indexPath.row];
+        [self changeBankCardWithCard:bank];
     }];
 }
 

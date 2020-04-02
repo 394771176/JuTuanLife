@@ -50,6 +50,8 @@ DTTableButtonCellDelegate
     
     self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
     [self reloadTableView];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refresh) name:JTUserManager_USER_SESSION object:nil];
 }
 
 - (void)setupTableHeader

@@ -83,7 +83,8 @@
             } else if ([data.openSchemeUrl isEqualToString:@"protorol"]) {
                 PUSH_VC(JTUserProtorolsController);
             } else if ([data.openSchemeUrl isEqualToString:@"about"]) {
-                PUSH_VC(JTAboutUsController);
+//                PUSH_VC(JTAboutUsController);
+                [JTLinkUtil openAboutUsURL];
             } else if ([data.openSchemeUrl isEqualToString:@"logout"]) {
                 [self logoutAction];
             } else if ([data.openSchemeUrl isEqualToString:@"share"]) {

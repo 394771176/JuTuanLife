@@ -45,4 +45,9 @@
     return nil;
 }
 
++ (void)openAboutUsURL
+{
+    [self openWithLink:[JTDataManager sharedInstance].baseConfig.about_us_url];
+}
+
 @end
