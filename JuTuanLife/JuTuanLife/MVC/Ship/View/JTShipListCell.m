@@ -11,6 +11,7 @@
 #import "JTUserHeaderView.h"
 
 @interface JTShipListCell () {
+    UIView *_bodyView;
     JTUserHeaderView *_headerView;
     UILabel *_dateLabel;
     UILabel *_shipNumLabel;
@@ -28,7 +29,11 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         
-        UICREATETo(_headerView, JTUserHeaderView, 20, 16, self.contentView.width - 40, 60, AAW, self.contentView);
+        self.height = self.contentView.height = 90;
+        
+        UICREATETo(_bodyView, UIView, 0, self.contentView.height / 2 - 60 / 2, self.contentView.width, 60, AAW | AATB, self.contentView);
+        
+        UICREATETo(_headerView, JTUserHeaderView, 20, 0, self.contentView.width - 40, _bodyView.height, AAW, _bodyView);
         [_headerView setNameFont:[UIFont systemFontOfSize:16]];
         
         self.cellType = JTShipCellTypeShip;
@@ -59,12 +64,12 @@
         case JTShipCellTypeShip:
         {
             if (!_phoneBtn) {
-                UICREATELabelTo(_dateLabel, UILabel, self.contentView.width - 120 - 20, _headerView.nameLabel.top + _headerView.top, 120, _headerView.nameLabel.height, AAL, nil, @"12", @"999999", self.contentView);
+                UICREATELabelTo(_dateLabel, UILabel, _bodyView.width - 120 - 20, _headerView.nameLabel.top + _headerView.top, 120, _headerView.nameLabel.height, AAL, nil, @"12", @"999999", _bodyView);
                 _dateLabel.textAlignment = NSTextAlignmentRight;
                 
-                UICREATELabelTo(_shipNumLabel, UILabel, [_headerView getTeamsViewRight], _headerView.teamView.top + _headerView.top, 200, _headerView.teamView.height, AAL, nil, @"12", @"999999", self.contentView);
+                UICREATELabelTo(_shipNumLabel, UILabel, [_headerView getTeamsViewRight], _headerView.teamView.top + _headerView.top, 200, _headerView.teamView.height, AAL, nil, @"12", @"999999", _bodyView);
                 
-                UICREATEBtnImgTo(_phoneBtn, UIButton, self.contentView.width - 40 - 12, _shipNumLabel.top - 8 - 2, 40, 40, AAL, @"jt_ship_phone", self, @selector(phoneAction), self.contentView);
+                UICREATEBtnImgTo(_phoneBtn, UIButton, _bodyView.width - 40 - 12, _shipNumLabel.top - 8 - 2, 40, 40, AAL, @"jt_ship_phone", self, @selector(phoneAction), _bodyView);
             }
             _fenrunLabel.hidden = YES;
             _phoneBtn.hidden = NO;
@@ -74,7 +79,7 @@
         case JTShipCellTypeFenrun:
         {
             if (!_fenrunLabel) {
-                UICREATELabel2To(_fenrunLabel, UILabel, self.contentView.width - 160, 0, 120, self.contentView.height, AAWH|AAL, TTRight, nil, @"16", @"333333", self.contentView);
+                UICREATELabel2To(_fenrunLabel, UILabel, _bodyView.width - 160, 0, 120, _bodyView.height, AAWH|AAL, TTRight, nil, @"16", @"333333", _bodyView);
             }
             _fenrunLabel.hidden = NO;
             _phoneBtn.hidden = YES;
@@ -106,7 +111,7 @@
 
 + (CGFloat)cellHeightWithItem:(id)item tableView:(UITableView *)tableView
 {
-    return 92;
+    return 84;
 }
 
 @end
