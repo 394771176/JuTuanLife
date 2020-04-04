@@ -60,7 +60,14 @@ SHARED_INSTANCE_M
         }
         
         self.baseConfig = [JTBaseConfig itemFromDict:baseConfigDict];
+        self.versionConfig = [JTVersionConfig itemFromDict:baseConfigDict];
     }
+}
+
+- (void)setVersionConfig:(JTVersionConfig *)versionConfig
+{
+    _versionConfig = versionConfig;
+    [self checkAPPVersionForUpgrade];
 }
 
 - (void)updateBaseConfig
@@ -145,17 +152,36 @@ SHARED_INSTANCE_M
     return item;
 }
 
-+ (void)checkVersion:(void (^)(void))block
+- (void)checkAPPVersionForUpgrade
 {
-    /*
-     "current_server_time" = 1584862623;
-     "ios_jutuan_version.download_url" = "http://xxxxxxx/ios";
-     "ios_jutuan_version.force_update_version" = "v1.0.0";
-     "ios_jutuan_version.latest_version" = "v1.0.0";
-     "ios_jutuan_version.size" = 4000000;
-     "ios_jutuan_version.version_desc" = "1.0.0\U7248\U672c\U5185\U5bb9\U5982\U4e0b\Uff1a#1.\U521d\U59cb\U53d1\U5e03";
-    */
+    [JTVersionConfig checkVersion:self.versionConfig withBlock:^(JTVersionStatus status) {
+        [JTDataManager showAppUpgradeAlert:self.versionConfig status:status];
+    }];
+}
+
++ (void)showAppUpgradeAlert:(JTVersionConfig *)config status:(JTVersionStatus)status
+{
+    if (status == JTVersionStatusNewest) {
+        return ;
+    }
+    BOOL force = status == JTVersionStatusForceUpgrade;
+    NSString *cancelTitle = nil;
+    if (!force) {
+        cancelTitle = @"取消";
+    }
     
+    [JTCoreUtil showAlertWithTitle:@"发现新版本" message:config.version_desc cancelTitle:cancelTitle confirmTitle:@"去更新" destructiveTitle:nil handler:^(UIAlertAction *action) {
+        if (config.download_url.length) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:config.download_url]];
+        }
+        if (force) {
+            [self showAppUpgradeAlert:config status:status];
+        } else {
+            [config saveAlertLatestVersion];
+        }
+    } cancel:^(UIAlertAction *action) {
+        [config saveAlertLatestVersion];
+    }];
 }
 
 @end

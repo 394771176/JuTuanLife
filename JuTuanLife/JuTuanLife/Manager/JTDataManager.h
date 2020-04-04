@@ -24,6 +24,7 @@ typedef NS_ENUM(NSUInteger, JTImageType) {
 @property (nonatomic, assign) NSTimeInterval current_server_time;
 @property (nonatomic, strong) NSDictionary *baseConfigDict;
 @property (nonatomic, strong) JTBaseConfig *baseConfig;
+@property (nonatomic, strong) JTVersionConfig *versionConfig;
 
 @property (nonatomic, strong) NSDictionary *shareDict;
 
@@ -34,13 +35,13 @@ SHARED_INSTANCE_H
 //用户数据，基础配置关
 + (void)setupManager;
 
+//基础配置
 - (void)updateBaseConfig;
 
-- (NSString *)imageUrl:(NSString *)url forType:(JTImageType)type;
+//APP版本升级
+- (void)checkAPPVersionForUpgrade;
 
-- (NSString *)about_us_url;
-- (NSString *)h5_domain_whitelist;
-- (NSString *)deposit_deduct_text;
+- (NSString *)imageUrl:(NSString *)url forType:(JTImageType)type;
 
 + (void)checkVersion:(void (^)(void))block;
 
