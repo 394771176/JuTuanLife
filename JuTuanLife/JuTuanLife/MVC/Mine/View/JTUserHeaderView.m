@@ -11,6 +11,8 @@
 @interface JTUserHeaderView () {
     UIButton *_headerBtn;
     UILabel *_relationLabel;
+    UILabel *_jobNoLabel;
+    UILabel *_relationNumLabel;//徒弟 + 成就
 }
 
 @end
@@ -51,6 +53,13 @@
     [_nameLabel setText:[NSString stringWithFormat:@"%@ %@", user.name, (user.bizCityName.length ? city: @"")]];
     
     _teamView.items = item.teams;
+    
+    if (_showJobNo) {
+        self.showJobNo = _showJobNo;
+    }
+    if (_showRelationNum) {
+        self.showRelationNum = _showRelationNum;
+    }
 }
 
 - (void)setRelationType:(NSInteger)relationType
@@ -71,6 +80,41 @@
     }
 }
 
+- (void)setShowJobNo:(BOOL)showJobNo
+{
+    _showJobNo = showJobNo;
+    if (_showJobNo) {
+        if (!_jobNoLabel) {
+            UICREATELabelTo(_jobNoLabel, UILabel, _nameLabel.left, _teamView.top, 120, _teamView.height, AAR, nil, @"12", @"333333", self);
+            [_jobNoLabel addTarget:self longPressAction:@selector(longPressAction:)];
+        }
+        _jobNoLabel.hidden = NO;
+        [_jobNoLabel setLabelWidthWithString:[NSString stringWithFormat:@"工号：%@", _item.jobNo]];
+        
+        _teamView.left = _jobNoLabel.right + 12;
+    } else {
+        _jobNoLabel.hidden = YES;
+    }
+}
+
+- (void)setShowRelationNum:(BOOL)showRelationNum
+{
+    _showRelationNum = showRelationNum;
+    if (_showRelationNum) {
+        _nameLabel.height = self.height / 5 * 2;
+        _teamView.top = _nameLabel.bottom;
+        _jobNoLabel.top = _teamView.top;
+        if (!_relationNumLabel) {
+            UICREATELabelTo(_relationNumLabel, UILabel, _nameLabel.left, _teamView.bottom + 2, _nameLabel.width, 23, AAW, nil, @"16", @"333333", self);
+        }
+        _relationNumLabel.hidden = NO;
+        NSString *string = [NSString stringWithFormat:@"%zd 徒弟      %d 成就", _item.apprentices, 0];
+        [_relationNumLabel setText:string highLightTextArray:@[@"徒弟", @"成就"] withColor:nil font:FONT(12)];
+    } else {
+        _relationNumLabel.hidden = YES;
+    }
+}
+
 - (CGFloat)getTeamsViewRight
 {
     return _teamView.left + [_teamView teamsContentWidth];
@@ -79,6 +123,16 @@
 - (void)headerBtnAction
 {
     NSLog(@"action");
+}
+
+- (void)longPressAction:(UILongPressGestureRecognizer *)gesture
+{
+    if (gesture.state == UIGestureRecognizerStateBegan) {
+        if (_item.jobNo.length) {
+            [UIPasteboard generalPasteboard].string = _item.jobNo;
+            [DTPubUtil showHUDSuccessHintInWindow:@"工号已复制到粘贴板"];
+        }
+    }
 }
 
 @end

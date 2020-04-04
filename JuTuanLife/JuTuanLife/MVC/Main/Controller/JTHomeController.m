@@ -76,6 +76,9 @@
         _hadSetDefaultForNetData = YES;
     }
     _fenrunCell.itemList = [self.Model fenrunForAll];
+
+    [JTDataManager sharedInstance].currentPeriod = _fenrunCell.period;
+    
     [super reloadTableView];
 }
 
@@ -124,6 +127,7 @@
 - (void)tabBarViewDidSelectIndex:(NSInteger)index
 {
     NSLog(@"%zd", index);
+    [JTDataManager sharedInstance].currentPeriod = _fenrunCell.period;
 }
 
 #pragma mark - notice

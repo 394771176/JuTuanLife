@@ -22,6 +22,9 @@
 
 @property (nonatomic, assign) NSInteger relationType;
 
+@property (nonatomic, assign) BOOL showJobNo;
+@property (nonatomic, assign) BOOL showRelationNum;
+
 - (void)setNameFont:(UIFont *)font;
 - (CGFloat)getTeamsViewRight;
 

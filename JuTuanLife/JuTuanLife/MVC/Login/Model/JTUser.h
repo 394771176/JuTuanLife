@@ -48,7 +48,7 @@ typedef NS_ENUM(NSUInteger, JTUserStatus) {
 @property (nonatomic, assign) CGFloat depositTotal;
 @property (nonatomic, strong) NSString *depositTips;
 
-@property (nonatomic, assign) NSInteger apprentices;
+@property (nonatomic, assign) NSInteger apprentices;//徒弟数
 @property (nonatomic, strong) NSArray<JTUserTeam *> *teams;
 
 - (NSString *)phoneCipher;

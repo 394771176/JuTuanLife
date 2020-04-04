@@ -12,6 +12,7 @@
 #import "JTUserBankController.h"
 #import "JTUserProtorolsController.h"
 #import "JTAboutUsController.h"
+#import "JTUserCenterController.h"
 
 @interface JTMineHomeController () {
     JTMineHeaderView *_headerView;
@@ -40,7 +41,8 @@
 - (void)setupTableHeader
 {
     if (!_headerView) {
-        UICREATETo(_headerView, JTMineHeaderView, 0, 0, self.width, 160 + SAFE_BOTTOM_VIEW_HEIGHT, AAW, nil);
+        UICREATETo(_headerView, JTMineHeaderView, 0, 0, self.width, 155 + SAFE_BOTTOM_VIEW_HEIGHT, AAW, nil);
+        [_headerView addTarget:self singleTapAction:@selector(clickHeaderView)];
         self.tableView.tableHeaderView = _headerView;
     }
 }
@@ -54,7 +56,7 @@
         [items addObject:[DTTitleIconItem itemWithTitle:@"银行卡" iconName:@"user_home_bank" scheme:@"bank"]];
         [items addObject:[DTTitleIconItem itemWithTitle:@"协议合同" iconName:@"user_home_protorol" scheme:@"protorol"]];
         [source addSectionWithItems:items cellClass:[DTTableIconCell class] height:55];
-        [source setLastSectionHeaderHeight:12 footerHeight:4];
+        [source setLastSectionHeaderHeight:6 footerHeight:16];
     }
     
     {
@@ -63,7 +65,7 @@
         [items addObject:[DTTitleIconItem itemWithTitle:@"关于聚推帮" iconName:@"user_home_jutui" scheme:@"about"]];
         [items addObject:[DTTitleIconItem itemWithTitle:@"退出登录" iconName:@"user_home_logout" scheme:@"logout"]];
         [source addSectionWithItems:items cellClass:[DTTableIconCell class] height:55];
-        [source setLastSectionHeaderHeight:12 footerHeight:4];
+        [source setLastSectionHeaderHeight:0 footerHeight:16];
     }
     
     WEAK_SELF
@@ -97,6 +99,11 @@
 }
 
 #pragma mark - action
+
+- (void)clickHeaderView
+{
+    PUSH_VC_WITH(JTUserCenterController, vc.period = [JTDataManager sharedInstance].currentPeriod)
+}
 
 - (void)shareAction
 {

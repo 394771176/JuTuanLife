@@ -175,7 +175,7 @@
     if (type == JTFenrunCellTypeBar) {
         return 70;
     } else if (type == JTFenrunCellTypeBarDate) {
-        return 94;
+        return 96;
     } else {
         return 198;
     }

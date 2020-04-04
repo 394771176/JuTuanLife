@@ -68,8 +68,10 @@ DTTabBarViewDelegate
 - (void)setupTableHeader
 {
     if (!_headerView) {
-        UICREATETo(_headerView, JTMineHeaderView, 0, 0, self.width, 165 + SAFE_BOTTOM_VIEW_HEIGHT, AAW, nil);
-        [_headerView setHeaderViewOffsetY:10];
+        UICREATETo(_headerView, JTMineHeaderView, 0, 0, self.width, 155 + 15 + SAFE_BOTTOM_VIEW_HEIGHT, AAW, nil);
+        [_headerView setHeaderViewOffsetY:15];
+        _headerView.headerView.showJobNo = YES;
+        _headerView.headerView.showRelationNum = YES;
         self.tableView.tableHeaderView = _headerView;
         
         UICREATEBtnImgTo(_backBtn, UIButton, 12, STATUSBAR_HEIGHT + 4, 40, 40, AAR, @"nav_back_b", self, @selector(backAction), _headerView);

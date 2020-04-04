@@ -27,6 +27,8 @@ typedef NS_ENUM(NSUInteger, JTImageType) {
 
 @property (nonatomic, strong) NSDictionary *shareDict;
 
+@property (nonatomic, assign) NSInteger currentPeriod;
+
 SHARED_INSTANCE_H
 
 //用户数据，基础配置关
