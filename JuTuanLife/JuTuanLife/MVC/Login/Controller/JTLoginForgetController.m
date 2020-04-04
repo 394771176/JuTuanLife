@@ -48,7 +48,7 @@
         [item setleftGap:59 textHeight:34];
         [item hiddenIcon:YES];
         item.delegate = self;
-        item.codeBtn.normalColor = [UIColor colorWithString:APP_JT_BTN_BG_RED];
+        item.codeBtn.normalColor = [UIColor colorWithString:APP_JT_BTN_TITLE_BLUE];
         item.maxTextLength = 6;
         item.textField.clearButtonMode = UITextFieldViewModeNever;
         [_cellList safeAddObject:item];
@@ -72,13 +72,14 @@
     {
         CREATE_ITEM(DTTableButtonCell);
         item.height = item.contentView.height = 150;
-        [item setButtonTop:89];
+        [item setButtonTop:55];
         item.submitBtn.height = 48;
-        [item setButtonHorGap:59];
-//        [item setStyle:DTTableButtonStyleBlue];
+//        [item setButtonHorGap:59];
+        item.gray = APP_JT_BTN_BG_GRAY;
+        item.red = APP_JT_BTN_BG_RED;
         [item setStyle:DTTableButtonStyleGray];
         item.delegate = self;
-        [item.submitBtn setTitle:@"提 交" fontSize:18 colorString:@"ffffff"];
+        [item.submitBtn setTitle:@"提 交"];
         [_cellList safeAddObject:item];
         _submitCell = item;
     }
@@ -90,7 +91,7 @@
     
     self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
     
-    [self.tableView setTableHeaderHeight:45];
+    [self.tableView setTableHeaderHeight:25];
 }
 
 - (DTTableTitleCell *)titleCell:(NSString *)title
@@ -196,7 +197,7 @@
     }
     
     if (_phoneCell.text.length == 11 && _codeCell.text.length >= 4 && _passwordCell.text.length >= 6) {
-        [_submitCell setStyle:DTTableButtonStyleBlue];
+        [_submitCell setStyle:DTTableButtonStyleRed];
     } else {
         [_submitCell setStyle:DTTableButtonStyleGray];
     }

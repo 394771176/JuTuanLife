@@ -28,7 +28,7 @@
         _submitBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         _submitBtn.frame = CGRectMake(30, self.contentView.height/2-20, self.contentView.width-60, 40);
         [_submitBtn addTarget:self action:@selector(submitBtnAction) forControlEvents:UIControlEventTouchUpInside];
-        _submitBtn.titleLabel.font = [UIFont systemFontOfSize:16];
+        _submitBtn.titleLabel.font = [UIFont systemFontOfSize:18];
         _submitBtn.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleBottomMargin;
         [_submitBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [self.contentView addSubview:_submitBtn];
