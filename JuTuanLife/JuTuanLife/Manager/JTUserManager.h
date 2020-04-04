@@ -50,7 +50,7 @@ SHARED_INSTANCE_H
 - (void)refreshMessageUnreadCount;
 
 //启动时刷新
-- (void)refreshForLaunch;
+//- (void)refreshForLaunch;
 - (void)refreshForLaunch:(BOOL)isLaunch;
 
 - (void)checkUserAuthStatus;

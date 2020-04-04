@@ -9,7 +9,7 @@
 #import "JTUserManager.h"
 #import "JTMainController.h"
 #import "JTLoginHomeController.h"
-#import "JTLoginAuthController.h"
+#import "JTLoginAuth2Controller.h"
 #import "JTLoginAgreementController.h"
 #import "JTViewController.h"
 
@@ -23,6 +23,8 @@ KEY(JTUserManager_PROTOROL)
 KEY(JTUserManager_FIRST_AUTH_FINISH)
 
 KEY(JTUserManager_PHONE)
+
+KEY(JTUserManager_refresh_token)
 
 @interface JTUserManager () {
     
@@ -99,6 +101,9 @@ SHARED_INSTANCE_M
 - (JTUserStatus)checkNextStatusWith:(JTUserStatus)status
 {
     JTUserStatus nextStatus = status + 1;
+//#if DEBUG
+//    return nextStatus;
+//#endif
     if ([self isLogined]) {
         if (nextStatus == JTUserStatusNeedCertifie) {
             if (self.user.cert.certAuth) {
@@ -124,7 +129,7 @@ SHARED_INSTANCE_M
 {
     JTUserStatus nextStatus = [self checkNextStatusWith:status];
     if (nextStatus == JTUserStatusNeedCertifie) {
-        PUSH_VC(JTLoginAuthController);
+        PUSH_VC(JTLoginAuth2Controller);
     } else if (nextStatus == JTUserStatusNeedSign) {
         PUSH_VC(JTLoginAgreementController);
     } else if (nextStatus == JTUserStatusAuthPass) {
@@ -141,12 +146,13 @@ SHARED_INSTANCE_M
 {
     JTUserStatus status = [self userAuthStatus];
 //    if (APP_DEBUG) {
+//        status = JTUserStatusNeedCertifie + 1;
 //        if (status == JTUserStatusNeedCertifie) {
 //            return;
 //        }
 //    }
     if (status == JTUserStatusNeedCertifie) {
-        PRESENT_VC(JTLoginAuthController);
+        PRESENT_VC(JTLoginAuth2Controller);
     } else if (status == JTUserStatusNeedSign) {
         PRESENT_VC(JTLoginAgreementController);
     } else if (status == JTUserStatusNeedLogin) {
@@ -269,11 +275,29 @@ SHARED_INSTANCE_M
     }
 }
 
+- (void)checkRefreshAcToken
+{
+    //todo
+    //每七天刷一次
+    if (![[DTTodayManager sharedInstance] isValidKeyEX:JTUserManager_refresh_token forDays:7]) {
+        [self refreshAcToken];
+    } else {
+        //一天内要过期了， 刷一次
+    }
+}
+
+- (void)refreshAcToken
+{
+    [[DTTodayManager sharedInstance] updateDayForKey:JTUserManager_refresh_token];
+}
+
 - (void)saveAcToken:(NSDictionary *)tokenDict userInfo:(NSDictionary *)userDict protorol:(NSDictionary *)protorolDict
 {
     [self updateAcToken:tokenDict];
     [self updateUserInfo:userDict];
     [self updateProtorol:protorolDict];
+    
+    [[DTTodayManager sharedInstance] updateDayForKey:JTUserManager_refresh_token];
     
     [JTService addBlockOnMainThread:^{
         [[NSNotificationCenter defaultCenter] postNotificationName:JTUserManager_USER_SESSION object:nil];
@@ -302,7 +326,7 @@ SHARED_INSTANCE_M
             switch (status) {
                 case JTUserStatusNeedCertifie:
                 {
-                    PUSH_VC(JTLoginAuthController);
+                    PUSH_VC(JTLoginAuth2Controller);
                 }
                     break;
                 case JTUserStatusNeedSign:
@@ -387,7 +411,7 @@ SHARED_INSTANCE_M
 //            return [[JTMainController alloc] init];
 //            break;
 //        case JTUserStatusNeedCertifie:
-//            return [[JTLoginAuthController alloc] init];
+//            return [[JTLoginAuth2Controller alloc] init];
 //            break;
 //        case JTUserStatusNeedSign:
 //            return [[JTLoginAgreementController alloc] init];

@@ -48,7 +48,7 @@
         [item setleftGap:59 textHeight:34];
         [item hiddenIcon:YES];
         item.delegate = self;
-        item.codeBtn.normalColor = APP_JT_BLUE_COLOR;
+        item.codeBtn.normalColor = [UIColor colorWithString:APP_JT_BTN_BG_RED];
         item.maxTextLength = 6;
         item.textField.clearButtonMode = UITextFieldViewModeNever;
         [_cellList safeAddObject:item];

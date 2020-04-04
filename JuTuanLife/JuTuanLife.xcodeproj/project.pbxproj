@@ -246,6 +246,12 @@
 		60B93B692414FBD5003147DC /* JTMineInfoListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B93B682414FBD5003147DC /* JTMineInfoListCell.m */; };
 		60B93B6C241520F6003147DC /* JTLinkUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B93B6B241520F6003147DC /* JTLinkUtil.m */; };
 		60BDC41C241CEB4C00CEAA56 /* JTUserHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BDC41B241CEB4C00CEAA56 /* JTUserHeaderView.m */; };
+		60CDC7592438D58A00A905D5 /* JTLoginAuth2Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CDC7582438D58900A905D5 /* JTLoginAuth2Controller.m */; };
+		60CDC75A2438D58A00A905D5 /* JTLoginAuth2Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CDC7582438D58900A905D5 /* JTLoginAuth2Controller.m */; };
+		60CDC75D2438D5C900A905D5 /* JTLoginAuthUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CDC75C2438D5C900A905D5 /* JTLoginAuthUserCell.m */; };
+		60CDC75E2438D5C900A905D5 /* JTLoginAuthUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CDC75C2438D5C900A905D5 /* JTLoginAuthUserCell.m */; };
+		60CDC7602438D63E00A905D5 /* login_auth_face@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60CDC75F2438D63E00A905D5 /* login_auth_face@2x.png */; };
+		60CDC7612438D63E00A905D5 /* login_auth_face@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60CDC75F2438D63E00A905D5 /* login_auth_face@2x.png */; };
 		60D03C90240FF99600E7D7D1 /* launch_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60D03C8F240FF99600E7D7D1 /* launch_image@2x.png */; };
 		60D03C93240FF9F100E7D7D1 /* JTLoginHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D03C92240FF9F100E7D7D1 /* JTLoginHomeController.m */; };
 		60D03C96240FFA9900E7D7D1 /* JTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D03C95240FFA9900E7D7D1 /* JTUser.m */; };
@@ -867,6 +873,11 @@
 		60B93B6B241520F6003147DC /* JTLinkUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTLinkUtil.m; sourceTree = "<group>"; };
 		60BDC41A241CEB4C00CEAA56 /* JTUserHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTUserHeaderView.h; sourceTree = "<group>"; };
 		60BDC41B241CEB4C00CEAA56 /* JTUserHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTUserHeaderView.m; sourceTree = "<group>"; };
+		60CDC7572438D58900A905D5 /* JTLoginAuth2Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTLoginAuth2Controller.h; sourceTree = "<group>"; };
+		60CDC7582438D58900A905D5 /* JTLoginAuth2Controller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTLoginAuth2Controller.m; sourceTree = "<group>"; };
+		60CDC75B2438D5C900A905D5 /* JTLoginAuthUserCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTLoginAuthUserCell.h; sourceTree = "<group>"; };
+		60CDC75C2438D5C900A905D5 /* JTLoginAuthUserCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTLoginAuthUserCell.m; sourceTree = "<group>"; };
+		60CDC75F2438D63E00A905D5 /* login_auth_face@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_auth_face@2x.png"; sourceTree = "<group>"; };
 		60D03C8F240FF99600E7D7D1 /* launch_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch_image@2x.png"; sourceTree = "<group>"; };
 		60D03C91240FF9F100E7D7D1 /* JTLoginHomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTLoginHomeController.h; sourceTree = "<group>"; };
 		60D03C92240FF9F100E7D7D1 /* JTLoginHomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTLoginHomeController.m; sourceTree = "<group>"; };
@@ -1302,6 +1313,8 @@
 				60D03C92240FF9F100E7D7D1 /* JTLoginHomeController.m */,
 				606FE6F624101CFD00522B96 /* JTLoginAuthController.h */,
 				606FE6F724101CFD00522B96 /* JTLoginAuthController.m */,
+				60CDC7572438D58900A905D5 /* JTLoginAuth2Controller.h */,
+				60CDC7582438D58900A905D5 /* JTLoginAuth2Controller.m */,
 				606FE6F924101D2C00522B96 /* JTLoginAgreementController.h */,
 				606FE6FA24101D2C00522B96 /* JTLoginAgreementController.m */,
 				606FE6F324101CCA00522B96 /* JTLoginForgetController.h */,
@@ -1330,6 +1343,8 @@
 				60D03C9B2410046600E7D7D1 /* SCLoginTextFieldCell.m */,
 				606FE77D241172D500522B96 /* JTLoginAuthImageCell.h */,
 				606FE77E241172D500522B96 /* JTLoginAuthImageCell.m */,
+				60CDC75B2438D5C900A905D5 /* JTLoginAuthUserCell.h */,
+				60CDC75C2438D5C900A905D5 /* JTLoginAuthUserCell.m */,
 				606FE780241172EA00522B96 /* JTLoginProtorolCell.h */,
 				606FE781241172EA00522B96 /* JTLoginProtorolCell.m */,
 				606FE7832411730300522B96 /* JTLoginForgetCell.h */,
@@ -1341,6 +1356,7 @@
 		6001C79C240EB755006092BB /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				60CDC75F2438D63E00A905D5 /* login_auth_face@2x.png */,
 				606FE749241164F700522B96 /* auth_cam@2x.png */,
 				606FE747241164F700522B96 /* auth_idcard_1@2x.png */,
 				606FE73D241164F500522B96 /* auth_idcard_2@2x.png */,
@@ -2311,6 +2327,7 @@
 				60D7682D2427A66900E2B317 /* nav_setting@2x.png in Resources */,
 				60D7682E2427A66900E2B317 /* Main.storyboard in Resources */,
 				60D7682F2427A66900E2B317 /* nav_back@2x.png in Resources */,
+				60CDC7612438D63E00A905D5 /* login_auth_face@2x.png in Resources */,
 				60D768312427A66900E2B317 /* protorol_unagree@2x.png in Resources */,
 				60D768322427A66900E2B317 /* dt_share_copylink@2x.png in Resources */,
 				60D768332427A66900E2B317 /* main_tab_ship@2x.png in Resources */,
@@ -2413,6 +2430,7 @@
 				606FE71024101DE700522B96 /* nav_setting@2x.png in Resources */,
 				60ED7630240EB25A0013CB8C /* Main.storyboard in Resources */,
 				606FE71D24101DE700522B96 /* nav_back@2x.png in Resources */,
+				60CDC7602438D63E00A905D5 /* login_auth_face@2x.png in Resources */,
 				606FE753241164F700522B96 /* protorol_unagree@2x.png in Resources */,
 				603F99FA241E646A00523CBD /* dt_share_copylink@2x.png in Resources */,
 				60B93B5E2414E0A3003147DC /* main_tab_ship@2x.png in Resources */,
@@ -2606,6 +2624,7 @@
 				60D767A32427A66900E2B317 /* JTMineInfoAvatarCell.m in Sources */,
 				6085348F242E6ABA00858E04 /* JTBusinessFenRunItem.m in Sources */,
 				60D767A42427A66900E2B317 /* UIView+Debug.m in Sources */,
+				60CDC75E2438D5C900A905D5 /* JTLoginAuthUserCell.m in Sources */,
 				60D767A52427A66900E2B317 /* JTLoginHeaderView.m in Sources */,
 				60FD87BD242D1A610030E232 /* JTUserFenrunController.m in Sources */,
 				60D767A62427A66900E2B317 /* JTLoginForgetController.m in Sources */,
@@ -2669,6 +2688,7 @@
 				60D767D62427A66900E2B317 /* DTControl.m in Sources */,
 				60D767D72427A66900E2B317 /* DTImagePickerController.m in Sources */,
 				60D767D82427A66900E2B317 /* DTGradientLabel.m in Sources */,
+				60CDC75A2438D58A00A905D5 /* JTLoginAuth2Controller.m in Sources */,
 				60D767D92427A66900E2B317 /* JTLinkUtil.m in Sources */,
 				60D767DA2427A66900E2B317 /* AppDelegate.m in Sources */,
 				60D767DB2427A66900E2B317 /* JTViewController.m in Sources */,
@@ -2781,6 +2801,7 @@
 				6071FF81241547CB009B617E /* JTMineInfoAvatarCell.m in Sources */,
 				6085348E242E6ABA00858E04 /* JTBusinessFenRunItem.m in Sources */,
 				60DF0F3924251D6D00BB0F88 /* UIView+Debug.m in Sources */,
+				60CDC75D2438D5C900A905D5 /* JTLoginAuthUserCell.m in Sources */,
 				60D03C99240FFE9400E7D7D1 /* JTLoginHeaderView.m in Sources */,
 				60FD87BC242D1A610030E232 /* JTUserFenrunController.m in Sources */,
 				606FE6F524101CCA00522B96 /* JTLoginForgetController.m in Sources */,
@@ -2844,6 +2865,7 @@
 				60E2B102240ED5D800E4EA52 /* DTControl.m in Sources */,
 				603F9A09241FEB3500523CBD /* DTImagePickerController.m in Sources */,
 				60E2B10D240ED5D800E4EA52 /* DTGradientLabel.m in Sources */,
+				60CDC7592438D58A00A905D5 /* JTLoginAuth2Controller.m in Sources */,
 				60B93B6C241520F6003147DC /* JTLinkUtil.m in Sources */,
 				60ED762A240EB25A0013CB8C /* AppDelegate.m in Sources */,
 				60ACA3A7241CCE1B0023ECB4 /* JTViewController.m in Sources */,

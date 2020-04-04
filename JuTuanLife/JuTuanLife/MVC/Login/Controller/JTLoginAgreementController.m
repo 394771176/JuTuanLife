@@ -56,7 +56,7 @@
         btn.frame = CGRectMake(24, _bottomView.height - 16 - 48 - SAFE_BOTTOM_VIEW_HEIGHT, _bottomView.width - 24 * 2, 48);
         btn.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
         [btn addTarget:self action:@selector(submitAction)];
-        [btn setBackgroundImageAndHightlightWithColorHex:APP_JT_GRAY_STRING cornerRadius:5];
+        [btn setBackgroundImageAndHightlightWithColorHex:APP_JT_BTN_BG_GRAY cornerRadius:5];
         [btn setTitle:@"同意并提交签署" fontSize:18 colorString:@"ffffff"];
         [_bottomView addSubview:btn];
         _submitBtn = btn;
@@ -122,9 +122,9 @@
     [sender setSelected:_agree];
     _submitBtn.userInteractionEnabled = _agree;
     if (_agree) {
-        [_submitBtn setBackgroundImageAndHightlightWithColorHex:APP_JT_BLUE_STRING cornerRadius:5];
+        [_submitBtn setBackgroundImageAndHightlightWithColorHex:APP_JT_BTN_BG_RED cornerRadius:5];
     } else {
-        [_submitBtn setBackgroundImageAndHightlightWithColorHex:APP_JT_GRAY_STRING cornerRadius:5];
+        [_submitBtn setBackgroundImageAndHightlightWithColorHex:APP_JT_BTN_BG_GRAY cornerRadius:5];
     }
 }
 

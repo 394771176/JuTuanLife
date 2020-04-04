@@ -80,7 +80,7 @@
 //    [source addRowWithItem:@"提 交" cellClass:[DTTableTitleCell class] height:48];
 //    [source setLastRowConfigBlock:^(DTTableTitleCell *cell, id data, NSIndexPath *indexPath) {
 //        cell.titleLabel.textAlignment = NSTextAlignmentCenter;
-//        [cell.titleLabel setFontSize:18 colorString:APP_JT_BTN_BLUE];
+//        [cell.titleLabel setFontSize:18 colorString:APP_JT_BTN_TITLE_BLUE];
 //        [cell setTitle:data];
 //        [cell setLineStyle:DTCellLineNone];
 //    } clickBlock:^(id data, NSIndexPath *indexPath) {

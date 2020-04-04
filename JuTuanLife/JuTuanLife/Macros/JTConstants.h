@@ -33,16 +33,12 @@
 
 #pragma mark - color
 
-#define APP_JT_BLUE_STRING              @"#137FFE"
-#define APP_JT_BLUE_COLOR               COLORS(APP_JT_BLUE_STRING)
+#define APP_JT_BTN_BG_BLUE              @"#137FFE"
+#define APP_JT_BTN_BG_RED               @"#FF6464"
+#define APP_JT_BTN_BG_GRAY              @"#CFCFCF"
 
-#define APP_JT_BTN_BLUE                 @"#107CF8"
+#define APP_JT_BTN_TITLE_BLUE                 @"#107CF8"
 
-#define APP_JT_GRAY_STRING              @"#CFCFCF"
-#define APP_JT_GRAY_COLOR               COLORS(APP_JT_GRAY_STRING)
-
-#define APP_JT_GRAY_BGSTRING              @"#F9F9F9"
-#define APP_JT_GRAY_BGCOLOR               COLORS(APP_JT_GRAY_BGSTRING)
 
 #pragma mark - Notification KEY
 

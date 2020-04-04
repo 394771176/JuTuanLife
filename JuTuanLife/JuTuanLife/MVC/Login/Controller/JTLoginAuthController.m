@@ -64,7 +64,7 @@ DTTableButtonCellDelegate
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         btn.frame = CGRectMake(24, 13, _bottomView.width - 48, 48);
         btn.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-        [btn setBackgroundImageAndHightlightWithColorHex:APP_JT_BLUE_STRING cornerRadius:5];
+        [btn setBackgroundImageAndHightlightWithColorHex:APP_JT_BTN_BG_RED cornerRadius:5];
         [btn addTarget:self action:@selector(nextStepAction)];
         [btn setTitle:@"下一步" fontSize:18 colorString:@"FFFFFF"];
         [_bottomView addSubview:btn];

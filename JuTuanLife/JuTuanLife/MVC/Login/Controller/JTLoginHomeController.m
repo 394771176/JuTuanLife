@@ -9,8 +9,6 @@
 #import "JTLoginHomeController.h"
 #import "SCLoginTextFieldCell.h"
 #import "JTLoginHeaderView.h"
-#import "JTLoginAuthController.h"
-#import "JTLoginAgreementController.h"
 #import "JTLoginForgetController.h"
 
 @interface JTLoginHomeController ()
@@ -19,8 +17,8 @@ SCLoginTextFieldCellDelegate,
 DTTableButtonCellDelegate
 >
 {
-    JTLoginHeaderView *_loginHeader;
-    
+//    JTLoginHeaderView *_loginHeader;
+    UIView *_headerView;
     SCLoginPhoneCell *_phoneCell;
     SCLoginPasswordCell *_passwordCell;
     DTTableButtonCell *_loginCell;
@@ -48,16 +46,13 @@ DTTableButtonCellDelegate
     return YES;
 }
 
-- (UIStatusBarStyle)statusBarStyle
-{
-    return UIStatusBarStyleLightContent;
-}
+//- (UIStatusBarStyle)statusBarStyle
+//{
+//    return UIStatusBarStyleLightContent;
+//}
 
 - (void)viewDidLoad
 {
-    _loginHeader = [[JTLoginHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.width, 204 + 55 + SAFE_BOTTOM_VIEW_HEIGHT)];
-    _loginHeader.showLogo = YES;
-    
     _phoneCell = [[SCLoginPhoneCell alloc] init];
     _phoneCell.delegate = self;
     _phoneCell.phoneTextStyle = YES;
@@ -79,15 +74,15 @@ DTTableButtonCellDelegate
     
     _loginCell = [[DTTableButtonCell alloc] init];
     [_loginCell.submitBtn setTitle:@"登 录"];
-    _loginCell.gray = APP_JT_GRAY_STRING;
-    _loginCell.blue = APP_JT_BLUE_STRING;
+    _loginCell.gray = APP_JT_BTN_BG_GRAY;
+    _loginCell.red = APP_JT_BTN_BG_RED;
     _loginCell.submitBtn.height = 48;
-    [_loginCell setButtonTop:88];
+    [_loginCell setButtonTop:58];
     _loginCell.style = DTTableButtonStyleGray;
     _loginCell.delegate = self;
     
 #ifdef DEBUG
-    _loginCell.style = DTTableButtonStyleBlue;
+    _loginCell.style = DTTableButtonStyleRed;
 #endif
     
     _forgetCell = [[DTTableButtonCell alloc] init];
@@ -102,8 +97,25 @@ DTTableButtonCellDelegate
     self.title = @"登录";
     self.backgroundColor = [UIColor whiteColor];
     
-    self.tableView.tableHeaderView = _loginHeader;
+    self.tableView.tableHeaderView = [self headerView];
     self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
+}
+
+- (UIView *)headerView
+{
+//    _loginHeader = [[JTLoginHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.width, 204 + 55 + SAFE_BOTTOM_VIEW_HEIGHT)];
+//    _loginHeader.showLogo = YES;
+
+    if (!_headerView) {
+        UICREATETo(_headerView, UIView, 0, 0, self.view.width, 200 + STATUSBAR_HEIGHT, AAW, self);
+        
+        UICREATELabelTo(UILabel *label1, UILabel, 36, 60+STATUSBAR_HEIGHT, self.view.width - 46, 45, AAW, APP_DISPLAY_NAME, FONT_B(32), @"000000", _headerView);
+        
+        UICREATELabelTo(UILabel *label2, UILabel, label1.left,label1.bottom + 4, label1.width, 30, AAW, @"生活服务线下销售运营平台", FONT(20), @"000000", _headerView);
+        
+        label2.left = label1.left;
+    }
+    return _headerView;
 }
 
 #pragma mark - action
@@ -158,7 +170,7 @@ DTTableButtonCellDelegate
             return 56;
             break;
         case 1:
-            return 176 - 40;
+            return 110;
             break;
         case 2:
         {
@@ -212,7 +224,7 @@ DTTableButtonCellDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     [super scrollViewDidScroll:scrollView];
-    [_loginHeader setContentOffset:scrollView.contentOffset];
+//    [_loginHeader setContentOffset:scrollView.contentOffset];
 }
 
 #pragma mark - DTTableButtonCellDelegate
@@ -240,7 +252,7 @@ DTTableButtonCellDelegate
 - (void)loginTextFieldCell:(SCLoginTextFieldCell *)cell textFieldDidChange:(UITextField *)textField
 {
     if (_phoneCell.text.length>=11 && _passwordCell.text.length>=6) {
-        [_loginCell setStyle:DTTableButtonStyleBlue];
+        [_loginCell setStyle:DTTableButtonStyleRed];
     } else {
         [_loginCell setStyle:DTTableButtonStyleGray];
     }

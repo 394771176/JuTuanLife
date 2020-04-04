@@ -76,7 +76,7 @@
 {
     self.tableView.hidden = YES;
     if (!_addBankBtn) {
-        UICREATEBtnTo(_addBankBtn, UIButton, self.width / 2 - 128 / 2, 84, 128, 40, AALR, @"＋添加银行卡", @"16", APP_JT_BTN_BLUE, self, @selector(addBankAction), self.view);
+        UICREATEBtnTo(_addBankBtn, UIButton, self.width / 2 - 128 / 2, 84, 128, 40, AALR, @"＋添加银行卡", @"16", APP_JT_BTN_TITLE_BLUE, self, @selector(addBankAction), self.view);
         _addBankBtn.backgroundColor = [UIColor whiteColor];
         _addBankBtn.cornerRadius = 3;
         
