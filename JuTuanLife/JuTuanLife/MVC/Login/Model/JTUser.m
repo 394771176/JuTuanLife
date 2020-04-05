@@ -92,16 +92,17 @@
 
 - (NSString *)phoneCipher
 {
-    if (self.phone.length) {
-        NSInteger right = MIN(_phone.length / 3, 3);
-        NSInteger left = MIN((_phone.length - right) / 2, 3);
+    if (self.phone.length > 7) {
+//        NSInteger right = MIN(_phone.length / 3, 3);
+//        NSInteger left = MIN((_phone.length - right) / 2, 3);
         
 //        NSMutableString *str = [NSMutableString string];
 //        for (int i=0; i < _phone.length - left - right; i++) {
 //            [str appendString:@"*"];
 //        }
 //        return [_phone stringByReplacingCharactersInRange:NSMakeRange(left, _phone.length - left - right) withString:str];
-        return [NSString replaceString:_phone withStr:@"*" inRange:NSMakeRange(left, _phone.length - left - right)];
+//        return [NSString replaceString:_phone withStr:@"*" inRange:NSMakeRange(left, _phone.length - left - right)];
+        return [NSString replaceString:_phone withStr:@"*" inRange:NSMakeRange(3, _phone.length - 7)];
     } else {
         return _phone;
     }
@@ -110,12 +111,9 @@
 - (NSString *)IDNumCipher
 {
     NSString *num = self.cert.certNo;
-    if (APP_DEBUG) {
-        num = @"362334199008253112";
-    }
-    if (num.length > 5) {
+    if (num.length > 7) {
 //        return [num stringByReplacingCharactersInRange:NSMakeRange(1, num.length - 5) withString:@"·"];
-        return [NSString replaceString:num withStr:@"·" inRange:NSMakeRange(1, num.length - 5)];
+        return [NSString replaceString:num withStr:@"·" inRange:NSMakeRange(3, num.length - 7)];
     } else {
         return num;
     }

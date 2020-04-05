@@ -301,6 +301,7 @@ SHARED_INSTANCE_M
     
     [JTService addBlockOnMainThread:^{
         [[NSNotificationCenter defaultCenter] postNotificationName:JTUserManager_USER_SESSION object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:JTUserManager_USERINFO_UPDATE object:nil];
     }];
 }
 
@@ -311,7 +312,8 @@ SHARED_INSTANCE_M
     [self updateProtorol:nil];
     self.unreadMsgCount = 0;
     [JTService addBlockOnMainThread:^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:JTUserManager_USER_SESSION object:nil];
+//        [[NSNotificationCenter defaultCenter] postNotificationName:JTUserManager_USER_SESSION object:nil];
+//        [[NSNotificationCenter defaultCenter] postNotificationName:JTUserManager_USERINFO_UPDATE object:nil];
     }];
 }
 

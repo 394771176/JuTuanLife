@@ -26,8 +26,8 @@
 
 - (NSString *)bankNumCipher
 {
-    if (_cardNo.length > 4) {
-        NSString *str = [NSString replaceString:_cardNo withStr:@"·" inRange:NSMakeRange(0, _cardNo.length - 4)];
+    if (_cardNo.length > 7) {
+        NSString *str = [NSString replaceString:_cardNo withStr:@"·" inRange:NSMakeRange(3, _cardNo.length - 7)];
         return [NSString insertSpaceForString:str withLength:4];
     } else {
         return _cardNo;

@@ -42,7 +42,7 @@
             JTUserTeam *team = [items safeObjectAtIndex:i];
             label.left = left;
             label.text = team.name;//自动适应宽度
-            [label setBackgroundColor:([team.itemId integerValue] % 2 == 1 ? COLOR(#FA3F3F) : COLOR(#FFA703)) cornerRadius:1];
+            [label setBackgroundColor:([team.itemId integerValue] % 2 == 1 ? COLOR(#FFA703) : COLOR(#FA3F3F)) cornerRadius:1];
             label.hidden = NO;
             left = label.right + 7;
             _teamsContentWidth = label.right;

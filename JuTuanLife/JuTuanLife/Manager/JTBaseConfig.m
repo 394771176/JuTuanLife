@@ -92,7 +92,7 @@ KEY(saveAlertLatestVersion);
             showOnceForThreeDay = [[DTTodayManager sharedInstance] isValidKeyEX:saveAlertLatestVersion forDays:2];
             count = [[BPAppPreference sharedInstance] integerForKey:saveAlertLatestVersion];
         }
-        if (count < 2 && showOnceForThreeDay) {
+        if (count < 3 && showOnceForThreeDay) {
             status = JTVersionStatusNeedUpgrade;
         }
     }

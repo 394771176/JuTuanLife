@@ -214,7 +214,7 @@ DTTableButtonCellDelegate
 
 - (void)clickItem:(JTShipItem *)item
 {
-//    [DTPubUtil callPhoneNumber:item.mobile];
+    [DTPubUtil callPhoneNumber:item.mobile];
 }
 
 #pragma mark - DTTableButtonCellDelegate
