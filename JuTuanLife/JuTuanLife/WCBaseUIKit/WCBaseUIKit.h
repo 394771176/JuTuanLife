@@ -39,7 +39,7 @@
 #import "DTMainTabBarView.h"
 #import "DTNoDataView.h"
 #import "DTPickerView.h"
-#import "DTPullRefreshHeadView.h"
+#import "DTTableRefreshHeaderView.h"
 #import "DTScrollLabel.h"
 #import "DTScrollListViewCell.h"
 #import "DTScrollTabView.h"

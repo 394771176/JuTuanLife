@@ -7,7 +7,6 @@
 //
 
 #import "DTHttpTableController.h"
-#import "DTPullRefreshHeadView.h"
 #import "DTTableRefreshHeaderView.h"
 
 @interface DTHttpRefreshTableController : DTHttpTableController <DTPullRefreshHeadViewDelegate> {

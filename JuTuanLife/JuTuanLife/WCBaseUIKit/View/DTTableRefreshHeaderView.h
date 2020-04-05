@@ -7,7 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DTPullRefreshHeadView.h"
+#import "WCUICommon.h"
+
+typedef enum {
+    DTPullRefreshPulling = 0,
+    DTPullRefreshNormal,
+    DTPullRefreshLoading,
+} DTPullRefreshState;
+
+typedef void (^DTPullRefreshFinishBlock)(void);
+
+@class DTTableRefreshHeaderView;
+
+@protocol DTPullRefreshHeadViewDelegate <NSObject>
+
+- (void)pullRefreshTableHeaderDidTriggerRefresh:(DTTableRefreshHeaderView *)view;
+- (BOOL)pullRefreshTableHeaderDataSourceIsLoading:(DTTableRefreshHeaderView *)view;
+
+@end
 
 @interface DTTableRefreshHeaderView : UIView
 

@@ -304,7 +304,7 @@ DTTableButtonCellDelegate
 
 #pragma mark - DTPullRefreshHeadViewDelegate
 
-- (BOOL)pullRefreshTableHeaderDataSourceIsLoading:(DTPushRefreshHeadView *)view
+- (BOOL)pullRefreshTableHeaderDataSourceIsLoading:(DTTableRefreshHeaderView *)view
 {
     if (_searchBar.isFirstResponder || _isSearch) {
         return YES;

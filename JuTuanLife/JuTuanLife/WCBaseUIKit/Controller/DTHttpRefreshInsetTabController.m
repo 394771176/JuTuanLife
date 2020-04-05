@@ -164,7 +164,7 @@ NSString *const CONTENT_OFFSET = @"contentOffset";
 
 #pragma mark - DTPullRefreshHeadViewDelegate
 
-- (BOOL)pullRefreshTableHeaderDataSourceIsLoading:(DTPushRefreshHeadView *)view
+- (BOOL)pullRefreshTableHeaderDataSourceIsLoading:(DTTableRefreshHeaderView *)view
 {
     if ([[self currentController] respondsToSelector:@selector(pullRefreshTableHeaderDataSourceIsLoading:)]) {
         return [(DTHttpRefreshTableController *)[self currentController] pullRefreshTableHeaderDataSourceIsLoading:view] && [super pullRefreshTableHeaderDataSourceIsLoading:view];

@@ -115,7 +115,7 @@
 
 #pragma mark - DTPullRefreshHeadViewDelegate
 
-- (BOOL)pullRefreshTableHeaderDataSourceIsLoading:(DTPushRefreshHeadView *)view
+- (BOOL)pullRefreshTableHeaderDataSourceIsLoading:(DTTableRefreshHeaderView *)view
 {
     if (!self.dataModel) {
         return YES;
@@ -123,7 +123,7 @@
     return [self.dataModel loading];
 }
 
-- (void)pullRefreshTableHeaderDidTriggerRefresh:(DTPushRefreshHeadView *)view
+- (void)pullRefreshTableHeaderDidTriggerRefresh:(DTTableRefreshHeaderView *)view
 {
     _isPullRefresh = YES;
     [self refresh];
