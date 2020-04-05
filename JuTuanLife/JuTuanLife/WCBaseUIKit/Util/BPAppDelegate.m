@@ -30,20 +30,22 @@ NSString *const APP_KEY_COM_BUNDLE_VERSION  =  @"app.key.com.bundle.version";
         }
     }
     
+    _launchType = APPLaunchTypeNormal;
+    
     [self launchWillInit:launchOptions];
     
     NSString *curVer = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
     if (![[BPAppPreference sharedInstance] boolForKey:APP_KEY_COM_FIRST_LOAD]) {
-        if ([self firstSetUp]) {
-            [[BPAppPreference sharedInstance] setBool:YES forKey:APP_KEY_COM_FIRST_LOAD];
-            [[BPAppPreference sharedInstance] setObject:curVer forKey:APP_KEY_COM_BUNDLE_VERSION];
-        }
+        _launchType = APPLaunchTypeInstall;
+        [self appFirstInstall];
+        [[BPAppPreference sharedInstance] setBool:YES forKey:APP_KEY_COM_FIRST_LOAD];
+        [[BPAppPreference sharedInstance] setObject:curVer forKey:APP_KEY_COM_BUNDLE_VERSION];
     } else {
         NSString *lastVer = [[BPAppPreference sharedInstance] stringForKey:APP_KEY_COM_BUNDLE_VERSION];
         if ([NSString checkIsEmpty:lastVer] || ![lastVer isEqualToString:curVer]) {
-            if ([self appUpgrade]) {
-                [[BPAppPreference sharedInstance] setObject:curVer forKey:APP_KEY_COM_BUNDLE_VERSION];
-            }
+            _launchType = APPLaunchTypeUpgrade;
+            [self appUpgrade];
+            [[BPAppPreference sharedInstance] setObject:curVer forKey:APP_KEY_COM_BUNDLE_VERSION];
         }
     }
     
@@ -61,22 +63,12 @@ NSString *const APP_KEY_COM_BUNDLE_VERSION  =  @"app.key.com.bundle.version";
     return YES;
 }
 
-- (void)applicationDidBecomeActive:(UIApplication *)application
+- (void)appFirstInstall
 {
-    [self appActive];
+    
 }
 
-- (BOOL)firstSetUp
-{
-    return YES;
-}
-
-- (BOOL)appUpgrade
-{
-    return YES;
-}
-
-- (void)appActive
+- (void)appUpgrade
 {
     
 }

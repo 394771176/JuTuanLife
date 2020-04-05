@@ -1,0 +1,295 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		E664A2360C5840A7C159D13DCFB22EED /* UMCCommonLog */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 74CB8BC6C09CDBEEC30DE39D43671EEC /* Build configuration list for PBXAggregateTarget "UMCCommonLog" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = UMCCommonLog;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXFileReference section */
+		78A2F7668D820EEB210685CA91841CDB /* UMCCommonLog.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UMCCommonLog.xcconfig; sourceTree = "<group>"; };
+		989D1959DE8D70182BA93474BC21FE1D /* UMCommonLog.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UMCommonLog.framework; path = UMCommonLog/UMCommonLog.framework; sourceTree = "<group>"; };
+		E9B32C72B00CA1DA4EF43AE5E923EA9B /* UMCommonLog.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = UMCommonLog.bundle; path = UMCommonLog/UMCommonLog.bundle; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		2E2B5236464AA18E12EE67778DA64313 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				78A2F7668D820EEB210685CA91841CDB /* UMCCommonLog.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UMCCommonLog";
+			sourceTree = "<group>";
+		};
+		3EDB0B6354C462EAFC359715F3F4D836 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E9B32C72B00CA1DA4EF43AE5E923EA9B /* UMCommonLog.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5E45DCE18FD518FDAF07C835AE3095C7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9616AB2546E2601357ED13F82C868A94 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		96ED4B53DDFDBE711AEB04A0AB82A806 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				989D1959DE8D70182BA93474BC21FE1D /* UMCommonLog.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5E9D5970A5B78D7EB194E4C9EB1193D = {
+			isa = PBXGroup;
+			children = (
+				9616AB2546E2601357ED13F82C868A94 /* Frameworks */,
+				5E45DCE18FD518FDAF07C835AE3095C7 /* Products */,
+				AFF5EB12286BE4EAEB8C46CED6D59BF4 /* UMCCommonLog */,
+			);
+			sourceTree = "<group>";
+		};
+		AFF5EB12286BE4EAEB8C46CED6D59BF4 /* UMCCommonLog */ = {
+			isa = PBXGroup;
+			children = (
+				96ED4B53DDFDBE711AEB04A0AB82A806 /* Frameworks */,
+				3EDB0B6354C462EAFC359715F3F4D836 /* Resources */,
+				2E2B5236464AA18E12EE67778DA64313 /* Support Files */,
+			);
+			name = UMCCommonLog;
+			path = UMCCommonLog;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		356501EF7772E5299160CC830DA289EB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 73CC4150F7A9F1F7310686E2FF185F1C /* Build configuration list for PBXProject "UMCCommonLog" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A5E9D5970A5B78D7EB194E4C9EB1193D;
+			productRefGroup = 5E45DCE18FD518FDAF07C835AE3095C7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E664A2360C5840A7C159D13DCFB22EED /* UMCCommonLog */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		1D1335FBAD3D48FEA174FA8077451D72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		2AB61C065CB889E0339A5E78E26CECAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78A2F7668D820EEB210685CA91841CDB /* UMCCommonLog.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BF0D35A74698BFF56F7EF8E40A05A7B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78A2F7668D820EEB210685CA91841CDB /* UMCCommonLog.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E7C3A1E62596A295B3D9BD8D4C2F3742 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		73CC4150F7A9F1F7310686E2FF185F1C /* Build configuration list for PBXProject "UMCCommonLog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7C3A1E62596A295B3D9BD8D4C2F3742 /* Debug */,
+				1D1335FBAD3D48FEA174FA8077451D72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74CB8BC6C09CDBEEC30DE39D43671EEC /* Build configuration list for PBXAggregateTarget "UMCCommonLog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AB61C065CB889E0339A5E78E26CECAF /* Debug */,
+				BF0D35A74698BFF56F7EF8E40A05A7B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 356501EF7772E5299160CC830DA289EB /* Project object */;
+}

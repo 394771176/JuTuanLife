@@ -145,6 +145,8 @@
     controller.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
     self.title = [_titleList safeObjectAtIndex:_selectedIndex];
+    
+    [FFUMengManager event:@"100_main_tab" title:self.title];
 }
 
 #pragma mark - Private Method
@@ -167,9 +169,8 @@
 {
     if (index == _selectedIndex) {
         [self currentControllerScrollToTop];
-        
-        [self startLoadingIndicator];
-        [self stopLoadingIndicatorByDelay:2];
+//        [self startLoadingIndicator];
+//        [self stopLoadingIndicatorByDelay:2];
     } else {
         self.selectedIndex = index;
     }

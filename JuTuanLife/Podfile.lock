@@ -1,4 +1,8 @@
 PODS:
+  - UMCAnalytics (6.0.5):
+    - UMCCommon
+  - UMCCommon (2.1.1)
+  - UMCCommonLog (1.0.0)
   - WCCategory (0.1.5):
     - WCCategory/Define (= 0.1.5)
     - WCCategory/Foundation (= 0.1.5)
@@ -59,6 +63,8 @@ PODS:
   - WechatOpenSDK_NoPay (1.8.0)
 
 DEPENDENCIES:
+  - UMCAnalytics
+  - UMCCommonLog
   - WCModel
   - WCModule
   - WCNetKit
@@ -67,6 +73,9 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - UMCAnalytics
+    - UMCCommon
+    - UMCCommonLog
     - WCCategory
     - WCEncrypt
     - WCModel
@@ -76,6 +85,9 @@ SPEC REPOS:
     - WechatOpenSDK_NoPay
 
 SPEC CHECKSUMS:
+  UMCAnalytics: 045be2cd1ec05aa95ad62405a850757f932e2d59
+  UMCCommon: 971f324a5a99c9d662ae040a815e7e3d7ef8b2a8
+  UMCCommonLog: 05a2d5de21858e3d870551562cff405c1366d244
   WCCategory: 9c97b0396f4e96f2bf8e8fa8b9cbef8bfd945f97
   WCEncrypt: b86d93453f6a4bbf1a09dc922082b2d2d6699978
   WCModel: c613e3ec9de9b6558589d80ca44ba678e940e77f
@@ -84,6 +96,6 @@ SPEC CHECKSUMS:
   WCPlugin: 46a39341f494bcc8dccffd1a9749addfa62885c5
   WechatOpenSDK_NoPay: 27366a152202a6a7c8a15fad4d07261e87fb2389
 
-PODFILE CHECKSUM: 1a2e45746f32275913c4a15d2a7781d918a1bedf
+PODFILE CHECKSUM: 8aa9d2730ac9b4dcc74912eac934a40ae3b5d49d
 
 COCOAPODS: 1.7.5

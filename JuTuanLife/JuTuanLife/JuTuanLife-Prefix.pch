@@ -16,6 +16,8 @@
 
 #import "WCDebugKit.h"
 
+#import "FFUMengManager.h"
+
 #import "DTShareUtil.h"
 
 #import "JTAPPKey.h"

@@ -15,4 +15,7 @@
 #define APP_WX_APPID                    @"wx698c217b2ca22e7b"
 #define APP_WX_APPSECRET                @"443b3742854488312152850dc9907354"
 
+//UMeng
+#define APP_UMENG_KEY                   @"5e8a1881167eddb6620002fc"
+
 #endif /* JTAPPKey_h */

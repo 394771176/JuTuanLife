@@ -20,14 +20,14 @@
 
 @implementation AppDelegate
 
-- (BOOL)firstSetUp
+- (void)appFirstInstall
 {
-    return YES;
+    
 }
 
-- (BOOL)appUpgrade
+- (void)appUpgrade
 {
-    return YES;
+    
 }
 
 - (void)windowWillInit:(NSDictionary *)launchOptions
@@ -36,6 +36,7 @@
     
     [JTDataManager setupManager];
     
+    [FFUMengManager configWithAppKey:APP_UMENG_KEY channel:@"APP Store"];
     [[FFWechatManager sharedInstance] configWithAppKey:APP_WX_APPID appSecret:APP_WX_APPSECRET];
 }
 
@@ -51,6 +52,14 @@
     self.window.rootViewController = navC;
     
     [[JTUserManager sharedInstance] refreshForLaunch:YES];
+    
+    if (self.launchType == APPLaunchTypeInstall) {
+        [FFUMengManager event:@"100_app_launch" title:@"新安装"];
+    } else if (self.launchType == APPLaunchTypeUpgrade) {
+        [FFUMengManager event:@"100_app_launch" title:@"升级"];
+    } else {
+        [FFUMengManager event:@"100_app_launch" title:@"启动"];
+    }
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

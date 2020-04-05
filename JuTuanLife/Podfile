@@ -9,8 +9,10 @@ inhibit_all_warnings!
 
 # Uncomment the next line to define a global platform for your project
 platform :ios, '9.0'
-
-target 'JuTuanLife' do
+targetsArray = ['JuTuanLife', 'JuTuanLife_ent']
+# 循环
+targetsArray.each do |t|
+  target t do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
@@ -22,7 +24,13 @@ pod 'WCModel'
 pod 'WCNetKit'
 pod 'WCPlugin'
 
+#微信分享
 #pod 'WechatOpenSDK'
 pod 'WechatOpenSDK_NoPay'
 
+#友盟统计、日志
+pod 'UMCAnalytics'
+pod 'UMCCommonLog'
+
+  end
 end

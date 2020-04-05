@@ -256,6 +256,8 @@
 		60CDC8D22439FBF500A905D5 /* NJKWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CDC8D02439FBF500A905D5 /* NJKWebViewProgressView.m */; };
 		60CDC8D5243A091200A905D5 /* DTTableRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CDC8D4243A091200A905D5 /* DTTableRefreshHeaderView.m */; };
 		60CDC8D6243A091200A905D5 /* DTTableRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CDC8D4243A091200A905D5 /* DTTableRefreshHeaderView.m */; };
+		60CDCA6B243A510100A905D5 /* FFUMengManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CDCA6A243A510100A905D5 /* FFUMengManager.m */; };
+		60CDCA6C243A510100A905D5 /* FFUMengManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CDCA6A243A510100A905D5 /* FFUMengManager.m */; };
 		60D03C90240FF99600E7D7D1 /* launch_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60D03C8F240FF99600E7D7D1 /* launch_image@2x.png */; };
 		60D03C93240FF9F100E7D7D1 /* JTLoginHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D03C92240FF9F100E7D7D1 /* JTLoginHomeController.m */; };
 		60D03C96240FFA9900E7D7D1 /* JTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D03C95240FFA9900E7D7D1 /* JTUser.m */; };
@@ -403,7 +405,6 @@
 		60D767E72427A66900E2B317 /* WCLinkUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 60386C5C2425E95C00B7C0BD /* WCLinkUtil.m */; };
 		60D767E82427A66900E2B317 /* JTUserHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BDC41B241CEB4C00CEAA56 /* JTUserHeaderView.m */; };
 		60D767E92427A66900E2B317 /* JTDataResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE73B2411607700522B96 /* JTDataResult.m */; };
-		60D767EB2427A66900E2B317 /* Pods_JuTuanLife.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87291E484A5B51B2A86BD0CE /* Pods_JuTuanLife.framework */; };
 		60D767ED2427A66900E2B317 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60ED7633240EB25B0013CB8C /* LaunchScreen.storyboard */; };
 		60D767EE2427A66900E2B317 /* auth_idcard_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 606FE747241164F700522B96 /* auth_idcard_1@2x.png */; };
 		60D767EF2427A66900E2B317 /* login_password_see@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 606FE742241164F600522B96 /* login_password_see@2x.png */; };
@@ -548,12 +549,13 @@
 		60FD87BD242D1A610030E232 /* JTUserFenrunController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FD87BB242D1A610030E232 /* JTUserFenrunController.m */; };
 		60FD87C0242D1B440030E232 /* JTUserFenrunModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FD87BF242D1B440030E232 /* JTUserFenrunModel.m */; };
 		60FD87C1242D1B440030E232 /* JTUserFenrunModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FD87BF242D1B440030E232 /* JTUserFenrunModel.m */; };
-		D2068D9F20BB2156C5736722 /* Pods_JuTuanLife.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87291E484A5B51B2A86BD0CE /* Pods_JuTuanLife.framework */; };
+		63BD4E99B8CA7511212C6044 /* Pods_JuTuanLife.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87291E484A5B51B2A86BD0CE /* Pods_JuTuanLife.framework */; };
+		BC525302961C6709478415E3 /* Pods_JuTuanLife_ent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C06209A40040583E8CCC30B /* Pods_JuTuanLife_ent.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		22D0A58BFCB7D41C914AE223 /* Pods-JuTuanLife.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JuTuanLife.debug.xcconfig"; path = "Target Support Files/Pods-JuTuanLife/Pods-JuTuanLife.debug.xcconfig"; sourceTree = "<group>"; };
-		252ACCD2D3E36346102AC1B4 /* Pods-JuTuanLife.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JuTuanLife.release.xcconfig"; path = "Target Support Files/Pods-JuTuanLife/Pods-JuTuanLife.release.xcconfig"; sourceTree = "<group>"; };
+		009A7B26437EF6AAC98774B0 /* Pods-JuTuanLife.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JuTuanLife.debug.xcconfig"; path = "Target Support Files/Pods-JuTuanLife/Pods-JuTuanLife.debug.xcconfig"; sourceTree = "<group>"; };
+		0C06209A40040583E8CCC30B /* Pods_JuTuanLife_ent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JuTuanLife_ent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6001C60A240EB54F006092BB /* JTDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTDefine.h; sourceTree = "<group>"; };
 		6001C60B240EB56A006092BB /* JTAPPKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTAPPKey.h; sourceTree = "<group>"; };
 		6001C779240EB5F0006092BB /* JTConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTConstants.h; sourceTree = "<group>"; };
@@ -852,6 +854,8 @@
 		60CDC8D02439FBF500A905D5 /* NJKWebViewProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgressView.m; sourceTree = "<group>"; };
 		60CDC8D3243A091200A905D5 /* DTTableRefreshHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTTableRefreshHeaderView.h; sourceTree = "<group>"; };
 		60CDC8D4243A091200A905D5 /* DTTableRefreshHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTTableRefreshHeaderView.m; sourceTree = "<group>"; };
+		60CDCA69243A510100A905D5 /* FFUMengManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFUMengManager.h; sourceTree = "<group>"; };
+		60CDCA6A243A510100A905D5 /* FFUMengManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFUMengManager.m; sourceTree = "<group>"; };
 		60D03C8F240FF99600E7D7D1 /* launch_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch_image@2x.png"; sourceTree = "<group>"; };
 		60D03C91240FF9F100E7D7D1 /* JTLoginHomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTLoginHomeController.h; sourceTree = "<group>"; };
 		60D03C92240FF9F100E7D7D1 /* JTLoginHomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTLoginHomeController.m; sourceTree = "<group>"; };
@@ -1008,6 +1012,9 @@
 		60FD87BE242D1B440030E232 /* JTUserFenrunModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTUserFenrunModel.h; sourceTree = "<group>"; };
 		60FD87BF242D1B440030E232 /* JTUserFenrunModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTUserFenrunModel.m; sourceTree = "<group>"; };
 		87291E484A5B51B2A86BD0CE /* Pods_JuTuanLife.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JuTuanLife.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE7658F3E36FA276881CE035 /* Pods-JuTuanLife_ent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JuTuanLife_ent.release.xcconfig"; path = "Target Support Files/Pods-JuTuanLife_ent/Pods-JuTuanLife_ent.release.xcconfig"; sourceTree = "<group>"; };
+		F6E30FF9DF1DE133D1A17F01 /* Pods-JuTuanLife.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JuTuanLife.release.xcconfig"; path = "Target Support Files/Pods-JuTuanLife/Pods-JuTuanLife.release.xcconfig"; sourceTree = "<group>"; };
+		FA8B6AAE33F1D584A6D5A9A0 /* Pods-JuTuanLife_ent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JuTuanLife_ent.debug.xcconfig"; path = "Target Support Files/Pods-JuTuanLife_ent/Pods-JuTuanLife_ent.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1015,7 +1022,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60D767EB2427A66900E2B317 /* Pods_JuTuanLife.framework in Frameworks */,
 				601E071F24308816002840D8 /* AliyunOSSiOS.framework in Frameworks */,
 				601E07212430881F002840D8 /* SGMain.framework in Frameworks */,
 				601E072A2430883D002840D8 /* WindVaneCore.framework in Frameworks */,
@@ -1035,6 +1041,7 @@
 				601E07292430883A002840D8 /* WindVaneBasic.framework in Frameworks */,
 				601E072624308830002840D8 /* WindmillWeaver.framework in Frameworks */,
 				601E072324308826002840D8 /* TBJSONModel.framework in Frameworks */,
+				BC525302961C6709478415E3 /* Pods_JuTuanLife_ent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1046,7 +1053,6 @@
 				601E070F24306B1E002840D8 /* libz.tbd in Frameworks */,
 				601E070D24306B17002840D8 /* libc++.tbd in Frameworks */,
 				601E070B24306B10002840D8 /* CoreMotion.framework in Frameworks */,
-				D2068D9F20BB2156C5736722 /* Pods_JuTuanLife.framework in Frameworks */,
 				601E06F424306A4F002840D8 /* SGSecurityBody.framework in Frameworks */,
 				601E06F524306A4F002840D8 /* WindMix.framework in Frameworks */,
 				601E06F624306A4F002840D8 /* AliyunOSSiOS.framework in Frameworks */,
@@ -1062,6 +1068,7 @@
 				601E070024306A4F002840D8 /* TBJSONModel.framework in Frameworks */,
 				601E070124306A4F002840D8 /* SGMain.framework in Frameworks */,
 				601E070224306A4F002840D8 /* RPSDK.framework in Frameworks */,
+				63BD4E99B8CA7511212C6044 /* Pods_JuTuanLife.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1091,6 +1098,7 @@
 				601E06E924306A4E002840D8 /* WindVaneBasic.framework */,
 				601E06EA24306A4E002840D8 /* WindVaneCore.framework */,
 				87291E484A5B51B2A86BD0CE /* Pods_JuTuanLife.framework */,
+				0C06209A40040583E8CCC30B /* Pods_JuTuanLife_ent.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1098,8 +1106,10 @@
 		52E4E7697BEB7133F1E4828C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				22D0A58BFCB7D41C914AE223 /* Pods-JuTuanLife.debug.xcconfig */,
-				252ACCD2D3E36346102AC1B4 /* Pods-JuTuanLife.release.xcconfig */,
+				009A7B26437EF6AAC98774B0 /* Pods-JuTuanLife.debug.xcconfig */,
+				F6E30FF9DF1DE133D1A17F01 /* Pods-JuTuanLife.release.xcconfig */,
+				FA8B6AAE33F1D584A6D5A9A0 /* Pods-JuTuanLife_ent.debug.xcconfig */,
+				BE7658F3E36FA276881CE035 /* Pods-JuTuanLife_ent.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -1363,6 +1373,7 @@
 		601E071224306B9E002840D8 /* SDK */ = {
 			isa = PBXGroup;
 			children = (
+				60CDCA68243A50E100A905D5 /* UMeng */,
 				601E070724306A90002840D8 /* RPSDK */,
 			);
 			path = SDK;
@@ -1874,6 +1885,15 @@
 			path = mainTab;
 			sourceTree = "<group>";
 		};
+		60CDCA68243A50E100A905D5 /* UMeng */ = {
+			isa = PBXGroup;
+			children = (
+				60CDCA69243A510100A905D5 /* FFUMengManager.h */,
+				60CDCA6A243A510100A905D5 /* FFUMengManager.m */,
+			);
+			path = UMeng;
+			sourceTree = "<group>";
+		};
 		60DF0F3624251D4700BB0F88 /* WCDebugKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -2103,11 +2123,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 60D768452427A66900E2B317 /* Build configuration list for PBXNativeTarget "JuTuanLife_ent" */;
 			buildPhases = (
-				60D7675B2427A66900E2B317 /* [CP] Check Pods Manifest.lock */,
+				057663385FE90442091C7E60 /* [CP] Check Pods Manifest.lock */,
 				60D7675C2427A66900E2B317 /* Sources */,
 				60D767EA2427A66900E2B317 /* Frameworks */,
 				60D767EC2427A66900E2B317 /* Resources */,
-				60D768442427A66900E2B317 /* [CP] Embed Pods Frameworks */,
+				31D7A1EDB6E67C15A47A3568 /* [CP] Embed Pods Frameworks */,
+				676A11FC6FCC41E9FD593B2E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2127,6 +2148,7 @@
 				60ED7622240EB25A0013CB8C /* Frameworks */,
 				60ED7623240EB25A0013CB8C /* Resources */,
 				4EEDD0DF4DB52313366421C5 /* [CP] Embed Pods Frameworks */,
+				F63164EC3CA500D988AB14FC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2351,6 +2373,43 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		057663385FE90442091C7E60 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JuTuanLife_ent-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31D7A1EDB6E67C15A47A3568 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JuTuanLife_ent/Pods-JuTuanLife_ent-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4EEDD0DF4DB52313366421C5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2366,41 +2425,19 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JuTuanLife/Pods-JuTuanLife-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		60D7675B2427A66900E2B317 /* [CP] Check Pods Manifest.lock */ = {
+		676A11FC6FCC41E9FD593B2E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-JuTuanLife-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		60D768442427A66900E2B317 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JuTuanLife/Pods-JuTuanLife-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JuTuanLife_ent/Pods-JuTuanLife_ent-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6C60D42B4CD2A74C173FFDF7 /* [CP] Check Pods Manifest.lock */ = {
@@ -2423,6 +2460,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F63164EC3CA500D988AB14FC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JuTuanLife/Pods-JuTuanLife-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -2500,6 +2552,7 @@
 				60853487242E674200858E04 /* JTBusinessFenrunController.m in Sources */,
 				60D767952427A66900E2B317 /* DTNoDataView.m in Sources */,
 				60D767962427A66900E2B317 /* JTFenrunController.m in Sources */,
+				60CDCA6C243A510100A905D5 /* FFUMengManager.m in Sources */,
 				60D767982427A66900E2B317 /* JTUser.m in Sources */,
 				60D767992427A66900E2B317 /* CKOpenUDID.m in Sources */,
 				601E06DB242FA7F2002840D8 /* NSDate+FormatUtil.m in Sources */,
@@ -2677,6 +2730,7 @@
 				60853486242E673B00858E04 /* JTBusinessFenrunController.m in Sources */,
 				60E2B10E240ED5D800E4EA52 /* DTNoDataView.m in Sources */,
 				60386AC5242522AA00B7C0BD /* JTFenrunController.m in Sources */,
+				60CDCA6B243A510100A905D5 /* FFUMengManager.m in Sources */,
 				60D03C96240FFA9900E7D7D1 /* JTUser.m in Sources */,
 				606FE730241149BC00522B96 /* CKOpenUDID.m in Sources */,
 				601E06DA242FA7F2002840D8 /* NSDate+FormatUtil.m in Sources */,
@@ -2808,7 +2862,7 @@
 /* Begin XCBuildConfiguration section */
 		60D768462427A66900E2B317 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22D0A58BFCB7D41C914AE223 /* Pods-JuTuanLife.debug.xcconfig */;
+			baseConfigurationReference = FA8B6AAE33F1D584A6D5A9A0 /* Pods-JuTuanLife_ent.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Peng Wang (PDX44H9Z79)";
@@ -2849,7 +2903,7 @@
 		};
 		60D768472427A66900E2B317 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 252ACCD2D3E36346102AC1B4 /* Pods-JuTuanLife.release.xcconfig */;
+			baseConfigurationReference = BE7658F3E36FA276881CE035 /* Pods-JuTuanLife_ent.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Shanghai Chelun Internet Services Co., Ltd.";
@@ -3004,7 +3058,7 @@
 		};
 		60ED763C240EB25B0013CB8C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22D0A58BFCB7D41C914AE223 /* Pods-JuTuanLife.debug.xcconfig */;
+			baseConfigurationReference = 009A7B26437EF6AAC98774B0 /* Pods-JuTuanLife.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development: xiaoqing zhang (A393228H63)";
@@ -3045,7 +3099,7 @@
 		};
 		60ED763D240EB25B0013CB8C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 252ACCD2D3E36346102AC1B4 /* Pods-JuTuanLife.release.xcconfig */;
+			baseConfigurationReference = F6E30FF9DF1DE133D1A17F01 /* Pods-JuTuanLife.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Distribution: xiaoqing zhang (58R245ZW57)";
