@@ -22,6 +22,9 @@
 + (JTRequest *)getSmsCodeWithMobile:(NSString *)mobile;
 + (JTRequest *)resetPasswordWithMobile:(NSString *)mobile password:(NSString *)password smsCode:(NSString *)smsCode;
 
+//刷新token
++ (JTRequest *)refreshUserToken:(NSString *)rfToken;
+
 //用户信息
 + (JTRequest *)getUserInfo;
 + (JTRequest *)update_user_infoAvatar:(NSString *)avatar address:(NSString *)address;

@@ -64,12 +64,6 @@ SHARED_INSTANCE_M
     }
 }
 
-- (void)setVersionConfig:(JTVersionConfig *)versionConfig
-{
-    _versionConfig = versionConfig;
-    [self checkAPPVersionForUpgrade];
-}
-
 - (void)updateBaseConfig
 {
     [JTService async:[JTUserRequest getBaseConfig] cacheKey:@"JTUserRequest_getBaseConfig" loadCache:^(WCDataResult *cache) {
@@ -80,6 +74,7 @@ SHARED_INSTANCE_M
         if (result.success) {
             self.baseConfigDict = result.data;
         }
+        [self checkAPPVersionForUpgrade];
     }];
     [JTService async:[JTUserRequest getShareInfo] cacheKey:@"JTUserRequest_getShareInfo" loadCache:^(WCDataResult *cache) {
         if (cache.success && [NSDictionary validDict:cache.data]) {

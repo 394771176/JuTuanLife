@@ -173,10 +173,13 @@ SHARED_INSTANCE_M
     if ([NSDictionary validDict:dict]) {
         self.ac_token = [dict stringForKey:@"ac_token"];
         self.rf_token = [dict stringForKey:@"rf_token"];
+        self.token_expire_at = [dict doubleForKey:@"token_expire_at"];
         [[BPAppPreference sharedInstance] setObject:[dict JSONString] forKey:JTUserManager_ACTOKEN];
+        [[DTTodayManager sharedInstance] updateDayForKey:JTUserManager_refresh_token];
     } else {
         self.ac_token = nil;
         self.rf_token = nil;
+        self.token_expire_at = 0.f;
         [[BPAppPreference sharedInstance] removeObjectForKey:JTUserManager_ACTOKEN];
     }
 }
@@ -269,6 +272,7 @@ SHARED_INSTANCE_M
         [self refreshMessageUnreadCount];
         if (isLaunch) {
             [self refreshProtorol:nil];
+            [self checkRefreshAcToken];
         } else {
             [[JTDataManager sharedInstance] updateBaseConfig];
         }
@@ -277,18 +281,33 @@ SHARED_INSTANCE_M
 
 - (void)checkRefreshAcToken
 {
-    //todo
-    //每七天刷一次
-    if (![[DTTodayManager sharedInstance] isValidKeyEX:JTUserManager_refresh_token forDays:7]) {
-        [self refreshAcToken];
+    NSTimeInterval now = [JTDataManager sharedInstance].current_server_time;
+    if (self.token_expire_at < now) {
+        //已经过期 登出
+        [self.class logoutAction:nil];
     } else {
-        //一天内要过期了， 刷一次
+        //每七天刷一次
+        if (![[DTTodayManager sharedInstance] isValidKeyEX:JTUserManager_refresh_token forDays:7]) {
+            [self refreshAcToken];
+        } else {
+            //一天内要过期了， 刷一次
+            if (self.token_expire_at < now + 24 * 60 * 60) {
+                [self refreshAcToken];
+            }
+        }
     }
 }
 
 - (void)refreshAcToken
 {
-    [[DTTodayManager sharedInstance] updateDayForKey:JTUserManager_refresh_token];
+    [JTService async:[JTUserRequest refreshUserToken:self.rf_token] config:^(WCDataResult *result) {
+        if (result.success) {
+            [self updateAcToken:result.data];
+        }
+    } finish:^(WCDataResult *result) {
+        
+    }];
+    
 }
 
 - (void)saveAcToken:(NSDictionary *)tokenDict userInfo:(NSDictionary *)userDict protorol:(NSDictionary *)protorolDict
@@ -296,8 +315,6 @@ SHARED_INSTANCE_M
     [self updateAcToken:tokenDict];
     [self updateUserInfo:userDict];
     [self updateProtorol:protorolDict];
-    
-    [[DTTodayManager sharedInstance] updateDayForKey:JTUserManager_refresh_token];
     
     [JTService addBlockOnMainThread:^{
         [[NSNotificationCenter defaultCenter] postNotificationName:JTUserManager_USER_SESSION object:nil];

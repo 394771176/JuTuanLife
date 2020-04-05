@@ -87,6 +87,7 @@ DTTableButtonCellDelegate
     
     _forgetCell = [[DTTableButtonCell alloc] init];
     [_forgetCell setButtonTitle:@"找回密码" withTitleColorStr:@"#999999"];
+    [_forgetCell.submitBtn setTitleFontSize:16];
     _forgetCell.style = DTTableButtonStyleNone;
     _forgetCell.height = _forgetCell.contentView.height = 100;
     _forgetCell.submitBtn.bottom = _forgetCell.contentView.height - (40);

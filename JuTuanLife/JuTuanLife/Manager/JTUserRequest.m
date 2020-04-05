@@ -47,6 +47,13 @@
     return [self requestWithApi:@"sale/user/reset_passwd" params:params httpMethod:WCHTTPMethodPOST];
 }
 
++ (JTRequest *)refreshUserToken:(NSString *)rfToken
+{
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params safeSetObject:rfToken forKey:@"rf_token"];
+    return [self requestWithApi:@"token/refresh_token" params:params httpMethod:WCHTTPMethodPOST];
+}
+
 + (JTRequest *)getUserInfo
 {
     return [self requestWithApi:@"sale/user/get_user_info" params:nil];

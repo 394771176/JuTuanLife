@@ -12,6 +12,12 @@
 
 - (id)parseData:(id)data
 {
+    if (self.result.code == 40008201 || self.result.code == 40009201) {
+        [JTService addBlockOnMainThread:^{
+            [DTPubUtil showHUDErrorHintInWindow:@"登录信息已过期，请重新登录"];
+            [JTUserManager logoutAction:nil];
+        }];
+    }
     if ([NSDictionary validDict:data]) {
         self.pos = [data stringForKey:@"lastPos"];
     }

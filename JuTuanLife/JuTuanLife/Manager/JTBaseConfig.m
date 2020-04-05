@@ -78,24 +78,28 @@ KEY(saveAlertLatestVersion);
 
 + (void)checkVersion:(JTVersionConfig *)config withBlock:(void (^)(JTVersionStatus))block
 {
-    NSInteger version = [self versionValue:APP_VERSION_SHORT];
-    NSInteger latest = [self versionValue:config.latest_version];
-    NSInteger force = [self versionValue:config.force_update_version];
     JTVersionStatus status = JTVersionStatusNewest;
-    if (version < force) {
-        status = JTVersionStatusForceUpgrade;
-    } else if (version < latest) {
-        NSInteger count = 0;
-        BOOL showOnceForThreeDay = YES;
-        NSString *saveLatest = [[DTTodayManager sharedInstance] objectForKey:saveAlertLatestVersion];
-        if (saveLatest && [saveLatest isEqualToString:config.latest_version]) {
-            showOnceForThreeDay = [[DTTodayManager sharedInstance] isValidKeyEX:saveAlertLatestVersion forDays:2];
-            count = [[BPAppPreference sharedInstance] integerForKey:saveAlertLatestVersion];
-        }
-        if (count < 3 && showOnceForThreeDay) {
-            status = JTVersionStatusNeedUpgrade;
+    if (config) {
+        NSInteger version = [self versionValue:APP_VERSION_SHORT];
+        NSInteger latest = [self versionValue:config.latest_version];
+        NSInteger force = [self versionValue:config.force_update_version];
+        
+        if (version < force) {
+            status = JTVersionStatusForceUpgrade;
+        } else if (version < latest) {
+            NSInteger count = 0;
+            BOOL showOnceForThreeDay = YES;
+            NSString *saveLatest = [[DTTodayManager sharedInstance] objectForKey:saveAlertLatestVersion];
+            if (saveLatest && [saveLatest isEqualToString:config.latest_version]) {
+                showOnceForThreeDay = [[DTTodayManager sharedInstance] isValidKeyEX:saveAlertLatestVersion forDays:2];
+                count = [[BPAppPreference sharedInstance] integerForKey:saveAlertLatestVersion];
+            }
+            if (count < 3 && showOnceForThreeDay) {
+                status = JTVersionStatusNeedUpgrade;
+            }
         }
     }
+    
     if (block) {
         block(status);
     }

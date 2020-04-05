@@ -28,6 +28,7 @@ typedef NS_ENUM(NSUInteger, JTLoginType) {
 
 @property (nonatomic, strong) NSString *ac_token;
 @property (nonatomic, strong) NSString *rf_token;
+@property (nonatomic, assign) NSTimeInterval token_expire_at;
 
 @property (nonatomic, strong) NSString *phone;
 
@@ -52,6 +53,8 @@ SHARED_INSTANCE_H
 //启动时刷新
 //- (void)refreshForLaunch;
 - (void)refreshForLaunch:(BOOL)isLaunch;
+
+- (void)checkRefreshAcToken;
 
 - (void)checkUserAuthStatus;
 
