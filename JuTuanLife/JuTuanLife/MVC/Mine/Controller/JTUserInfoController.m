@@ -53,7 +53,7 @@ UIImagePickerControllerDelegate
             [DTImagePickerController showInViewController:self sourceType:type config:^(DTImagePickerController *picker) {
                 picker.allowsEditing = YES;
             }];
-        } cancelTitle:@"取消" destructiveTitle:nil confirmTitle:@"拍照", @"相册", nil];
+        } cancel:nil cancelTitle:@"取消" destructiveTitle:nil confirmTitle:@"拍照", @"相册", nil];
     }];
     [source setLastSectionHeaderHeight:12 footerHeight:0];
     

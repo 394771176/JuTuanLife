@@ -254,6 +254,8 @@
 		60CDC7612438D63E00A905D5 /* login_auth_face@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60CDC75F2438D63E00A905D5 /* login_auth_face@2x.png */; };
 		60CDC8D12439FBF500A905D5 /* NJKWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CDC8D02439FBF500A905D5 /* NJKWebViewProgressView.m */; };
 		60CDC8D22439FBF500A905D5 /* NJKWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CDC8D02439FBF500A905D5 /* NJKWebViewProgressView.m */; };
+		60CDC8D5243A091200A905D5 /* DTTableRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CDC8D4243A091200A905D5 /* DTTableRefreshHeaderView.m */; };
+		60CDC8D6243A091200A905D5 /* DTTableRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CDC8D4243A091200A905D5 /* DTTableRefreshHeaderView.m */; };
 		60D03C90240FF99600E7D7D1 /* launch_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60D03C8F240FF99600E7D7D1 /* launch_image@2x.png */; };
 		60D03C93240FF9F100E7D7D1 /* JTLoginHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D03C92240FF9F100E7D7D1 /* JTLoginHomeController.m */; };
 		60D03C96240FFA9900E7D7D1 /* JTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D03C95240FFA9900E7D7D1 /* JTUser.m */; };
@@ -856,6 +858,8 @@
 		60CDC75F2438D63E00A905D5 /* login_auth_face@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_auth_face@2x.png"; sourceTree = "<group>"; };
 		60CDC8CF2439FBF500A905D5 /* NJKWebViewProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgressView.h; sourceTree = "<group>"; };
 		60CDC8D02439FBF500A905D5 /* NJKWebViewProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgressView.m; sourceTree = "<group>"; };
+		60CDC8D3243A091200A905D5 /* DTTableRefreshHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DTTableRefreshHeaderView.h; sourceTree = "<group>"; };
+		60CDC8D4243A091200A905D5 /* DTTableRefreshHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTTableRefreshHeaderView.m; sourceTree = "<group>"; };
 		60D03C8F240FF99600E7D7D1 /* launch_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch_image@2x.png"; sourceTree = "<group>"; };
 		60D03C91240FF9F100E7D7D1 /* JTLoginHomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTLoginHomeController.h; sourceTree = "<group>"; };
 		60D03C92240FF9F100E7D7D1 /* JTLoginHomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTLoginHomeController.m; sourceTree = "<group>"; };
@@ -1957,6 +1961,8 @@
 				60E2B0C2240ED5D800E4EA52 /* DTPickerView.m */,
 				60E2B0B4240ED5D800E4EA52 /* DTPullRefreshHeadView.h */,
 				60E2B0CD240ED5D800E4EA52 /* DTPullRefreshHeadView.m */,
+				60CDC8D3243A091200A905D5 /* DTTableRefreshHeaderView.h */,
+				60CDC8D4243A091200A905D5 /* DTTableRefreshHeaderView.m */,
 				60E2B09C240ED5D800E4EA52 /* DTScrollLabel.h */,
 				60E2B0C0240ED5D800E4EA52 /* DTScrollLabel.m */,
 				60E2B0A3240ED5D800E4EA52 /* DTScrollListViewCell.h */,
@@ -2567,6 +2573,7 @@
 				60D767B52427A66900E2B317 /* BPOnePixLineView.m in Sources */,
 				60D767B62427A66900E2B317 /* JTMessageBtn.m in Sources */,
 				60D767B72427A66900E2B317 /* DTBadgeView.m in Sources */,
+				60CDC8D6243A091200A905D5 /* DTTableRefreshHeaderView.m in Sources */,
 				60200D18242F29B700481B41 /* JTBusinessFenrunCell.m in Sources */,
 				60D767B82427A66900E2B317 /* DTTitleIconItem.m in Sources */,
 				601E074024363DAB002840D8 /* JTUserYajinController.m in Sources */,
@@ -2744,6 +2751,7 @@
 				60E2B0FE240ED5D800E4EA52 /* BPOnePixLineView.m in Sources */,
 				60386C6224266A8F00B7C0BD /* JTMessageBtn.m in Sources */,
 				60E2B10A240ED5D800E4EA52 /* DTBadgeView.m in Sources */,
+				60CDC8D5243A091200A905D5 /* DTTableRefreshHeaderView.m in Sources */,
 				60200D17242F29B700481B41 /* JTBusinessFenrunCell.m in Sources */,
 				60E2B119240ED5D800E4EA52 /* DTTitleIconItem.m in Sources */,
 				601E073F24363DAB002840D8 /* JTUserYajinController.m in Sources */,

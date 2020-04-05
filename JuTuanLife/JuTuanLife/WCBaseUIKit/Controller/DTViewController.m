@@ -265,11 +265,11 @@
 
 - (void)stopLoadingIndicator
 {
-    if (_loadingView) {
-        [_loadingView stopAnimating];
-        [_loadingView removeFromSuperview];
-        _loadingView = nil;
-    }
+//    if (_loadingView) {
+//        [_loadingView stopAnimating];
+//        [_loadingView removeFromSuperview];
+//        _loadingView = nil;
+//    }
     [XLBallLoading hideInView:self.view];
     _isShowLoadingIndicator = NO;
 }

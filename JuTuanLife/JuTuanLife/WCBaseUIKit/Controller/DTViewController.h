@@ -13,7 +13,7 @@
 
 @interface DTViewController : UIViewController {
     @protected
-    DTDrivingLoadingView *_loadingView;
+    
 }
 
 @property (nonatomic) BOOL disableBackBtn;

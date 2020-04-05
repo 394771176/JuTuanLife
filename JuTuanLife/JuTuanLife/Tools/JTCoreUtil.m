@@ -18,40 +18,20 @@
 
 + (void)showAlertWithTitle:(NSString *)title message:(NSString *)message cancelTitle:(NSString *)cancelTitle confirmTitle:(NSString *)confirmTitle destructiveTitle:(NSString *)destructiveTitle handler:(void (^)(UIAlertAction *action))handler cancel:(void (^)(UIAlertAction *))cancelHandler
 {
-    [self showAlertWithTitle:title message:message style:UIAlertControllerStyleAlert cancelTitle:cancelTitle confirmTitle:confirmTitle destructiveTitle:destructiveTitle handler:^(UIAlertAction *action) {
-        if (action.style == UIAlertActionStyleCancel) {
-            if (cancelHandler) {
-                cancelHandler(action);
-            }
-        } else {
-            if (handler) {
-                handler(action);
-            }
-        }
-    }];
+    [self showAlertWithTitle:title message:message style:UIAlertControllerStyleAlert cancelTitle:cancelTitle confirmTitle:confirmTitle destructiveTitle:destructiveTitle handler:handler cancel:cancelHandler];
 }
 
 + (void)showActionSheetWithTitle:(NSString *)title message:(NSString *)message cancelTitle:(NSString *)cancelTitle confirmTitle:(NSString *)confirmTitle destructiveTitle:(NSString *)destructiveTitle handler:(void (^)(UIAlertAction *action))handler
 {
-    [self showAlertWithTitle:title message:message style:UIAlertControllerStyleActionSheet cancelTitle:cancelTitle confirmTitle:confirmTitle destructiveTitle:destructiveTitle handler:^(UIAlertAction *action) {
-        if (action.style == UIAlertActionStyleCancel) {
-//            if (cancelHandler) {
-//                cancelHandler(action);
-//            }
-        } else {
-            if (handler) {
-                handler(action);
-            }
-        }
-    }];
+    [self showAlertWithTitle:title message:message style:UIAlertControllerStyleActionSheet cancelTitle:cancelTitle confirmTitle:confirmTitle destructiveTitle:destructiveTitle handler:handler cancel:nil];
 }
 
-+ (void)showAlertWithTitle:(NSString *)title message:(NSString *)message style:(UIAlertControllerStyle)style cancelTitle:(NSString *)cancelTitle confirmTitle:(NSString *)confirmTitle destructiveTitle:(NSString *)destructiveTitle handler:(void (^)(UIAlertAction *action))handler
++ (void)showAlertWithTitle:(NSString *)title message:(NSString *)message style:(UIAlertControllerStyle)style cancelTitle:(NSString *)cancelTitle confirmTitle:(NSString *)confirmTitle destructiveTitle:(NSString *)destructiveTitle handler:(void (^)(UIAlertAction *action))handler cancel:(void (^)(UIAlertAction *action))cancelHandler
 {
-    [self showAlertWithTitle:title message:message style:style handler:handler cancelTitle:cancelTitle destructiveTitle:destructiveTitle confirmTitle:confirmTitle, nil];
+    [self showAlertWithTitle:title message:message style:style handler:handler cancel:cancelHandler cancelTitle:cancelTitle destructiveTitle:destructiveTitle confirmTitle:confirmTitle, nil];
 }
 
-+ (void)showAlertWithTitle:(NSString *)title message:(NSString *)message style:(UIAlertControllerStyle)style handler:(void (^)(UIAlertAction *))handler cancelTitle:(NSString *)cancelTitle destructiveTitle:(NSString *)destructiveTitle confirmTitle:(NSString *)confirmTitle, ...
++ (void)showAlertWithTitle:(NSString *)title message:(NSString *)message style:(UIAlertControllerStyle)style handler:(void (^)(UIAlertAction *))handler cancel:(void (^)(UIAlertAction *))cancelHandler cancelTitle:(NSString *)cancelTitle destructiveTitle:(NSString *)destructiveTitle confirmTitle:(NSString *)confirmTitle, ...
 {
     void (^handlerAction)(UIAlertAction *) = ^(UIAlertAction *action) {
         if (handler) {
@@ -65,10 +45,6 @@
         }]];
     }
     if (confirmTitle.length) {
-//        [alert addAction:[UIAlertAction actionWithTitle:confirmTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-//            handlerAction(action);
-//        }]];
-//
         va_list args;
         va_start(args, confirmTitle);
         for (id currentObject = confirmTitle; currentObject != nil; currentObject = va_arg(args, id)) {
@@ -81,7 +57,9 @@
     
     if (cancelTitle.length) {
         [alert addAction:[UIAlertAction actionWithTitle:cancelTitle style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-            handlerAction(action);
+            if (cancelHandler) {
+                cancelHandler(action);
+            }
         }]];
     }
     [[WCControllerUtil topContainerController] presentViewController:alert animated:YES completion:nil];
@@ -89,7 +67,6 @@
 
 + (BOOL)isValidPassword:(NSString *)passwrod
 {
-    //
     if (!passwrod.length||![passwrod isMatchedByRegex:@"^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,12}$"]) {
         return NO;
     } else {

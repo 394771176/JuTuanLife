@@ -55,10 +55,6 @@ SHARED_INSTANCE_M
 {
     if ([NSDictionary validDict:baseConfigDict]) {
         _baseConfigDict = baseConfigDict;
-        if ([self.baseConfigDict objectForKey:@"current_server_time"]) {
-            self.current_server_time = [self.baseConfigDict doubleForKey:@"current_server_time"];
-        }
-        
         self.baseConfig = [JTBaseConfig itemFromDict:baseConfigDict];
         self.versionConfig = [JTVersionConfig itemFromDict:baseConfigDict];
     }
@@ -73,6 +69,9 @@ SHARED_INSTANCE_M
     } finish:^(WCDataResult *result) {
         if (result.success) {
             self.baseConfigDict = result.data;
+            if ([self.baseConfigDict objectForKey:@"current_server_time"]) {
+                self.current_server_time = [self.baseConfigDict doubleForKey:@"current_server_time"];
+            }
         }
         [self checkAPPVersionForUpgrade];
     }];

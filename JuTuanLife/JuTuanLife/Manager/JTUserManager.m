@@ -30,6 +30,8 @@ KEY(JTUserManager_refresh_token)
     
 }
 
+@property (nonatomic, assign) JTUserStatus currentStatus;
+
 @end
 
 @implementation JTUserManager
@@ -40,6 +42,7 @@ SHARED_INSTANCE_M
 {
     self = [super init];
     if (self) {
+        _currentStatus = JTUserStatusUnknow;
         _hadFirstAuthFinish = [[BPAppPreference sharedInstance] boolForKey:JTUserManager_FIRST_AUTH_FINISH];
         [self setupUserInfo];
     }
@@ -58,6 +61,7 @@ SHARED_INSTANCE_M
         if (tokenDict) {
             _ac_token = [tokenDict objectForKey:@"ac_token"];
             _rf_token = [tokenDict objectForKey:@"rf_token"];
+            _token_expire_at = [tokenDict doubleForKey:@"token_expire_at"];
         }
         if (userDict) {
             _user = [JTUser itemFromDict:[userDict objectForKey:@"user"]];
@@ -128,6 +132,10 @@ SHARED_INSTANCE_M
 - (void)checkToNextForStatus:(JTUserStatus)status
 {
     JTUserStatus nextStatus = [self checkNextStatusWith:status];
+    if (_currentStatus == nextStatus) {
+        return;
+    }
+    self.currentStatus = nextStatus;
     if (nextStatus == JTUserStatusNeedCertifie) {
         PUSH_VC(JTLoginAuth2Controller);
     } else if (nextStatus == JTUserStatusNeedSign) {
@@ -145,12 +153,10 @@ SHARED_INSTANCE_M
 - (void)checkUserAuthStatus
 {
     JTUserStatus status = [self userAuthStatus];
-//    if (APP_DEBUG) {
-//        status = JTUserStatusNeedCertifie + 1;
-//        if (status == JTUserStatusNeedCertifie) {
-//            return;
-//        }
-//    }
+    if (_currentStatus == status) {
+        return;
+    }
+    self.currentStatus = status;
     if (status == JTUserStatusNeedCertifie) {
         PRESENT_VC(JTLoginAuth2Controller);
     } else if (status == JTUserStatusNeedSign) {
@@ -287,7 +293,7 @@ SHARED_INSTANCE_M
         [self.class logoutAction:nil];
     } else {
         //每七天刷一次
-        if (![[DTTodayManager sharedInstance] isValidKeyEX:JTUserManager_refresh_token forDays:7]) {
+        if ([[DTTodayManager sharedInstance] isValidKeyEX:JTUserManager_refresh_token forDays:7]) {
             [self refreshAcToken];
         } else {
             //一天内要过期了， 刷一次
@@ -307,7 +313,6 @@ SHARED_INSTANCE_M
     } finish:^(WCDataResult *result) {
         
     }];
-    
 }
 
 - (void)saveAcToken:(NSDictionary *)tokenDict userInfo:(NSDictionary *)userDict protorol:(NSDictionary *)protorolDict
@@ -404,15 +409,23 @@ SHARED_INSTANCE_M
 
 + (void)logoutAction:(void (^)(void))block
 {
-    [JTService addBlockOnGlobalThread:^{
-        [[self sharedInstance] clearUserInfo];
-        [JTService addBlockOnMainThread:^{
-            [[self sharedInstance] checkUserAuthStatus];
-            if (block) {
-                block();
-            }
+    static BOOL onlyOnce = NO;
+    if (onlyOnce) {
+        return;
+    }
+    if ([[self sharedInstance] isLogined]) {
+        onlyOnce = YES;
+        [JTService addBlockOnGlobalThread:^{
+            [[self sharedInstance] clearUserInfo];
+            [JTService addBlockOnMainThread:^{
+                [[self sharedInstance] checkUserAuthStatus];
+                onlyOnce = NO;
+                if (block) {
+                    block();
+                }
+            }];
         }];
-    }];
+    }
 }
 
 + (UIViewController *)rootController

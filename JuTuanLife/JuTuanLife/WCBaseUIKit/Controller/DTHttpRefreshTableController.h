@@ -8,10 +8,11 @@
 
 #import "DTHttpTableController.h"
 #import "DTPullRefreshHeadView.h"
+#import "DTTableRefreshHeaderView.h"
 
 @interface DTHttpRefreshTableController : DTHttpTableController <DTPullRefreshHeadViewDelegate> {
     @protected
-    DTPushRefreshHeadView *_refreshHeadView;
+    DTTableRefreshHeaderView *_refreshHeadView;
 }
 
 - (void)didPullRefresh;

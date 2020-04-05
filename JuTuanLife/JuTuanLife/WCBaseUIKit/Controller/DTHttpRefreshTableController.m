@@ -34,7 +34,8 @@
 
 - (void)viewDidLoad
 {
-    _refreshHeadView = [[DTPushRefreshHeadView alloc] initWithFrame:CGRectMake(0, -60, self.view.width, 60)];
+//    _refreshHeadView = [[DTPushRefreshHeadView alloc] initWithFrame:CGRectMake(0, -60, self.view.width, 60)];
+    _refreshHeadView = [[DTTableRefreshHeaderView alloc] initWithFrame:CGRectMake(0, -60, self.view.width, 60)];
     _refreshHeadView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     _refreshHeadView.delegate = self;
     
