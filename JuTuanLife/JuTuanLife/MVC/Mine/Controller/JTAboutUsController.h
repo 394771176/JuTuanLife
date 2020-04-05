@@ -6,11 +6,8 @@
 //  Copyright © 2020 cheng. All rights reserved.
 //
 
-#import "DTTableController.h"
-NS_ASSUME_NONNULL_BEGIN
+#import "DTWebViewController.h"
 
-@interface JTAboutUsController : DTTableController
+@interface JTAboutUsController : DTWebViewController
 
 @end
-
-NS_ASSUME_NONNULL_END
