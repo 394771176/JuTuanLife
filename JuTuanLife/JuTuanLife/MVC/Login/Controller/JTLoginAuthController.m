@@ -81,7 +81,7 @@ DTTableButtonCellDelegate
             [RPSDKManager getAndUploadVerifyResultWith:^(WCDataResult *result) {
                 if (result.success) {
                     [DTPubUtil stopHUDLoading];
-                    [[JTUserManager sharedInstance] checkToNextForStatus:JTUserStatusAuthPass];
+                    [[JTUserManager sharedInstance] checkToNextForStatus:JTUserStatusNeedCertifie];
                 } else {
                     [DTPubUtil showHUDErrorHintInWindow:result.msg];
                 }

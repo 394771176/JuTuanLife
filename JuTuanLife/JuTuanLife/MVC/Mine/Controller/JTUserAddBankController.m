@@ -126,6 +126,12 @@ SCLoginTextFieldCellDelegate
         [DTPubUtil showHUDMessageInWindow:@"请输入银行卡号"];
         return;
     }
+    
+    if (_cardNoCell.textView.text.length < 14) {
+        [DTPubUtil showHUDMessageInWindow:@"请输入正确的银行卡号"];
+        return;
+    }
+    
     if (_userNameCell.textView.text.length <= 0) {
         [DTPubUtil showHUDMessageInWindow:@"请输入账户姓名"];
         return;

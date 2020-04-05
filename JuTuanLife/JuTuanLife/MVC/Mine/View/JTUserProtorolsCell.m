@@ -35,7 +35,7 @@
     _item = item;
     
     if (item.count) {
-        NSString *dateStr = [NSDate dayHourMinStr:[item.firstObject signedTime]];
+        NSString *dateStr = [item.firstObject signedTime];
         [_titleLabel setText:[NSString stringWithFormat:@"签署人本人于 %@ \n签署了以下协议合同：", dateStr] withLineSpace:12];
     } else {
         _titleLabel.text = @"";

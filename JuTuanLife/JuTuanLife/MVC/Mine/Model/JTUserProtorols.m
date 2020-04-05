@@ -20,11 +20,14 @@
     NSMutableArray *result = [NSMutableArray array];
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     [items enumerateObjectsUsingBlock:^(JTUserProtorols * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        NSString *day = [NSDate dayStr:obj.signedTime];
-        NSMutableArray *array = [dict objectForKey:day];
+        NSString *key = obj.signedTime;
+        if ([key rangeOfString:@":"].length) {
+            key = [key componentsSeparatedByString:@":"].firstObject;
+        }
+        NSMutableArray *array = [dict objectForKey:key];
         if (!array) {
             array = [NSMutableArray array];
-            [dict safeSetObject:array forKey:day];
+            [dict safeSetObject:array forKey:key];
             [result safeAddObject:array];
         }
         [array addObject:obj];

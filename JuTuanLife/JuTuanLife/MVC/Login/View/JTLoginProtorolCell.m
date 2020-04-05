@@ -37,7 +37,7 @@
         
         CREATE_UI_VV(_titleLabel, UILabel, 15, 3, _bodyView.width - 30, _bodyView.height - 3);
         _titleLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-        [_titleLabel setFontSize:16 colorString:APP_JT_BTN_BG_RED];
+        [_titleLabel setFontSize:16 colorString:@"333333"];
         [_bodyView addSubview:_titleLabel];
         
         [self setSelectionStyleClear];
@@ -48,7 +48,7 @@
 - (void)setItem:(JTProtorolItem *)item
 {
     _item = item;
-    _titleLabel.text = item.name;
+    _titleLabel.text = [NSString stringWithFormat:@"《%@》", item.name];
 }
 
 - (void)clickAction

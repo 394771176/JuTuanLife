@@ -81,11 +81,11 @@
 {
     NSMutableString *text = [NSMutableString stringWithString:@"       我已阅读并同意签署"];
     [_protorolsList enumerateObjectsUsingBlock:^(JTProtorolItem *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSString *trail = (idx == _protorolsList.count - 1 ? @"。" : @"，");
         if (obj.name.length) {
-            [text appendFormat:@"，%@", obj.name];
+            [text appendFormat:@"《%@》%@", obj.name, trail];
         }
     }];
-    [text appendString:@"。"];
     
     [_protorolsLabel setText:text withLineSpace:5];
     
