@@ -252,6 +252,8 @@
 		60CDC75E2438D5C900A905D5 /* JTLoginAuthUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CDC75C2438D5C900A905D5 /* JTLoginAuthUserCell.m */; };
 		60CDC7602438D63E00A905D5 /* login_auth_face@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60CDC75F2438D63E00A905D5 /* login_auth_face@2x.png */; };
 		60CDC7612438D63E00A905D5 /* login_auth_face@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60CDC75F2438D63E00A905D5 /* login_auth_face@2x.png */; };
+		60CDC8D12439FBF500A905D5 /* NJKWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CDC8D02439FBF500A905D5 /* NJKWebViewProgressView.m */; };
+		60CDC8D22439FBF500A905D5 /* NJKWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CDC8D02439FBF500A905D5 /* NJKWebViewProgressView.m */; };
 		60D03C90240FF99600E7D7D1 /* launch_image@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60D03C8F240FF99600E7D7D1 /* launch_image@2x.png */; };
 		60D03C93240FF9F100E7D7D1 /* JTLoginHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D03C92240FF9F100E7D7D1 /* JTLoginHomeController.m */; };
 		60D03C96240FFA9900E7D7D1 /* JTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D03C95240FFA9900E7D7D1 /* JTUser.m */; };
@@ -878,6 +880,8 @@
 		60CDC75B2438D5C900A905D5 /* JTLoginAuthUserCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTLoginAuthUserCell.h; sourceTree = "<group>"; };
 		60CDC75C2438D5C900A905D5 /* JTLoginAuthUserCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTLoginAuthUserCell.m; sourceTree = "<group>"; };
 		60CDC75F2438D63E00A905D5 /* login_auth_face@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_auth_face@2x.png"; sourceTree = "<group>"; };
+		60CDC8CF2439FBF500A905D5 /* NJKWebViewProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgressView.h; sourceTree = "<group>"; };
+		60CDC8D02439FBF500A905D5 /* NJKWebViewProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgressView.m; sourceTree = "<group>"; };
 		60D03C8F240FF99600E7D7D1 /* launch_image@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch_image@2x.png"; sourceTree = "<group>"; };
 		60D03C91240FF9F100E7D7D1 /* JTLoginHomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTLoginHomeController.h; sourceTree = "<group>"; };
 		60D03C92240FF9F100E7D7D1 /* JTLoginHomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTLoginHomeController.m; sourceTree = "<group>"; };
@@ -1498,6 +1502,8 @@
 				6065F04A2427C99A0066B84B /* WCWebBackBarView.m */,
 				601E073524325285002840D8 /* WCCookieManager.h */,
 				601E073624325285002840D8 /* WCCookieManager.m */,
+				60CDC8CF2439FBF500A905D5 /* NJKWebViewProgressView.h */,
+				60CDC8D02439FBF500A905D5 /* NJKWebViewProgressView.m */,
 			);
 			path = WebKit;
 			sourceTree = "<group>";
@@ -2662,6 +2668,7 @@
 				60D767C12427A66900E2B317 /* JTRequest.m in Sources */,
 				60D767C22427A66900E2B317 /* WCBarItemUtil.m in Sources */,
 				60D767C32427A66900E2B317 /* JTUserCenterModel.m in Sources */,
+				60CDC8D22439FBF500A905D5 /* NJKWebViewProgressView.m in Sources */,
 				60D767C42427A66900E2B317 /* JTLoginForgetCell.m in Sources */,
 				60D767C52427A66900E2B317 /* JTHomeListModel.m in Sources */,
 				60D767C62427A66900E2B317 /* DTTableButtonCell.m in Sources */,
@@ -2839,6 +2846,7 @@
 				606FE72624113DE600522B96 /* JTRequest.m in Sources */,
 				60E2B12A240ED5D800E4EA52 /* WCBarItemUtil.m in Sources */,
 				60D76759242775F000E2B317 /* JTUserCenterModel.m in Sources */,
+				60CDC8D12439FBF500A905D5 /* NJKWebViewProgressView.m in Sources */,
 				606FE7852411730300522B96 /* JTLoginForgetCell.m in Sources */,
 				60DF0F112423C75C00BB0F88 /* JTHomeListModel.m in Sources */,
 				60E2B100240ED5D800E4EA52 /* DTTableButtonCell.m in Sources */,

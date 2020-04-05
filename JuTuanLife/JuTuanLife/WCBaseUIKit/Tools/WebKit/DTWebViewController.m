@@ -8,11 +8,14 @@
 
 #import "DTWebViewController.h"
 #import "WCWebBackBarView.h"
+#import "NJKWebViewProgressView.h"
 
 @interface DTWebViewController () <WCWKWebViewDelegate> {
     WCWKWebView *_webView;
     WCWebBackBarView *_backBarView;
     NSString *_rightItemUrl;
+    
+    NJKWebViewProgressView *_progressView;
 }
 
 @property (nonatomic, assign) BOOL hasStartLoad;
@@ -63,6 +66,24 @@
     _webView = [[WCWKWebView alloc] initWithFrame:self.view.bounds withDelegate:self];
     _webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [self.view addSubview:_webView];
+    
+    [self setupProgressView];
+}
+
+- (void)setupProgressView
+{
+    if (!_progressView) {
+        CGFloat progressBarHeight = 3.f;
+        CGRect barFrame = CGRectMake(0, 0, self.view.width, progressBarHeight);
+        _progressView = [[NJKWebViewProgressView alloc] initWithFrame:barFrame];
+        _progressView.barAnimationDuration = 0.2;
+        _progressView.fadeAnimationDuration = 0.3;
+        _progressView.fadeOutDelay = 0.1;
+        _progressView.progressBarColor = [UIColor colorWithHexString:@"35cb6d"];
+        _progressView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
+        _progressView.progress = 0.0f;
+        [self.webView addSubview:_progressView];
+    }
 }
 
 - (void)setUrlStr:(NSString *)urlStr
@@ -198,11 +219,13 @@
 - (void)webViewDidStartLoad:(WCWKWebView *)webView
 {
     NSLog(@"%s", __func__);
+    [_progressView startProgress];
 }
 
 - (void)webViewDidFinishLoad:(WCWKWebView *)webView
 {
     NSLog(@"%s", __func__);
+    [_progressView completeProgress];
 }
 
 - (void)webViewDidUpdateTitle:(NSString *)title
@@ -216,11 +239,13 @@
 - (void)webView:(WCWKWebView *)webView didFailLoadWithError:(NSError *)error
 {
     NSLog(@"%s, %@", __func__, error);
+    [_progressView completeProgress];
 }
 
 - (void)webView:(WCWKWebView *)webView didLoadingProgress:(double)progress
 {
     NSLog(@"%s", __func__);
+    [_progressView setProgress:progress animated:YES];
 }
 
 @end

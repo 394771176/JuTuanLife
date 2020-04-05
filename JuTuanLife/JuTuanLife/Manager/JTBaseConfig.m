@@ -44,20 +44,22 @@
     self.version_desc = [dic stringForKey:@"ios_jutuan_version.version_desc"];
     self.size = [dic stringForKey:@"ios_jutuan_version.size"];
     
-    if (self.latest_version) {
+    if (self.latest_version.length) {
         self.latest_version = [self.latest_version.lowercaseString stringByReplacingOccurrencesOfString:@"v" withString:@""];
     }
     
-    if (self.force_update_version) {
+    if (self.force_update_version.length) {
         self.force_update_version = [self.force_update_version.lowercaseString stringByReplacingOccurrencesOfString:@"v" withString:@""];
     }
     
-    if (!_download_url) {
-        _download_url = APP_DOWNLOAD_URL;
+    if (self.version_desc.length) {
+        self.version_desc = [self.version_desc stringByReplacingOccurrencesOfString:@"#" withString:@"\n"];
     }
-#ifdef DEBUG
-    _latest_version = @"1.1.1";
-#endif
+    
+    if (!self.download_url.length) {
+        self.download_url = APP_DOWNLOAD_URL;
+    }
+    
     return YES;
 }
 
