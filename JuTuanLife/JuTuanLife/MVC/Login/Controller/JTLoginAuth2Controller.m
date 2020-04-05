@@ -77,6 +77,7 @@ DTTableButtonCellDelegate
                 if (result.success) {
                     [DTPubUtil stopHUDLoading];
                     [[JTUserManager sharedInstance] checkToNextForStatus:JTUserStatusNeedCertifie];
+                    [[JTUserManager sharedInstance] refreshUserInfo:nil];
                 } else {
                     [DTPubUtil showHUDErrorHintInWindow:result.msg];
                 }
