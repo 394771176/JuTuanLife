@@ -306,7 +306,9 @@ SHARED_INSTANCE_M
 
 - (void)refreshAcToken
 {
-    [JTService async:[JTUserRequest refreshUserToken:self.rf_token] config:^(WCDataResult *result) {
+    JTRequest *request = [JTUserRequest refreshUserToken:self.rf_token];
+    request.ignoreCheckToken = YES;
+    [JTService async:request config:^(WCDataResult *result) {
         if (result.success) {
             [self updateAcToken:result.data];
         }

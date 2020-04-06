@@ -112,7 +112,16 @@
     if (APP_DEBUG) {
         NSLog(@"\nData:\b%@", data);
     }
-    return [JTDataResult itemFromDict:data];
+    JTDataResult *result = [JTDataResult itemFromDict:data];
+    if (!_ignoreCheckToken) {
+        if (result.code == 40008201 || result.code == 40009201) {
+            [JTService addBlockOnMainThread:^{
+                [DTPubUtil showHUDErrorHintInWindow:@"登录信息已过期，请重新登录"];
+                [JTUserManager logoutAction:nil];
+            }];
+        }
+    }
+    return result;
 }
 
 + (id)requestWithApi:(NSString *)api params:(NSDictionary *)params

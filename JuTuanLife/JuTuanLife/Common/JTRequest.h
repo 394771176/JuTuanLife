@@ -18,6 +18,7 @@ typedef NS_ENUM(NSUInteger, JTServerType) {
 @interface JTRequest : WCDataRequest
 
 @property (nonatomic, assign) JTServerType serverType;
+@property (nonatomic, assign) BOOL ignoreCheckToken;
 
 + (id)requestWithApi:(NSString *)api params:(NSDictionary *)params;
 + (id)requestWithApi:(NSString *)api params:(NSDictionary *)params httpMethod:(NSString *)httpMethod;
