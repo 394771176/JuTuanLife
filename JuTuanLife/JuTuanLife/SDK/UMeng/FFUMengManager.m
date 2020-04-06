@@ -33,7 +33,6 @@
     
     [UMConfigure initWithAppkey:appKey channel:channel];
     [MobClick setCrashReportEnabled:YES];
-//    [MobClick startWithAppkey:appKey reportPolicy:SEND_INTERVAL channelId:channel];
 }
 
 + (void)event:(NSString *)event {

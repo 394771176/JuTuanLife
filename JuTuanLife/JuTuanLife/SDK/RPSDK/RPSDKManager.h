@@ -13,7 +13,6 @@
 #endif
 
 
-
 @interface RPSDKManager : NSObject
 
 SHARED_INSTANCE_H
@@ -21,14 +20,12 @@ SHARED_INSTANCE_H
 @property (nonatomic, strong) NSString *bizId;
 @property (nonatomic, strong) NSString *verifyToken;
 
-+ (void)setup;
-
 + (void)checkVerifyTokenWith:(DTSuccessBlock)block;
 
 + (void)getAndUploadVerifyResultWith:(DTCommonBlock)block;
 
 //实人认证
 + (void)startAuthWithCompletion:(DTSuccessBlock)completion;
-+ (void)startNativeWithCompletion:(DTSuccessBlock)completion;
+//+ (void)startNativeWithCompletion:(DTSuccessBlock)completion;
 
 @end

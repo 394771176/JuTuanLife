@@ -250,12 +250,7 @@
 - (void)startLoadingIndicator
 {
     if ([self canShowLoadingIndicator]) {
-//        if (!_loadingView) {
-//            _loadingView = [DTDrivingLoadingView loadingInView:self.view];
-//        }
-//        [_loadingView startAnimating];
-        
-        XLBallLoading *view = [XLBallLoading showInView:self.view minDuration:0.5f];
+        XLBallLoading *view = [XLBallLoading showInView:self.view minDuration:0.6f];
         view.offsetY = -20;
         _isShowLoadingIndicator = YES;
     } else {
@@ -265,11 +260,6 @@
 
 - (void)stopLoadingIndicator
 {
-//    if (_loadingView) {
-//        [_loadingView stopAnimating];
-//        [_loadingView removeFromSuperview];
-//        _loadingView = nil;
-//    }
     [XLBallLoading hideInView:self.view];
     _isShowLoadingIndicator = NO;
 }

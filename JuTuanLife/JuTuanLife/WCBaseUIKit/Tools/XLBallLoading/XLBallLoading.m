@@ -28,9 +28,9 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        _duration = 1.f;
-        _ballDistance = 32;
-        _ballScale = 1.5f;
+        _duration = 1.2f;
+        _ballDistance = 30;
+        _ballScale = 1.35f;
         _ballContainerSize = CGSizeMake(120, 120);
         [self initUI];
     }
