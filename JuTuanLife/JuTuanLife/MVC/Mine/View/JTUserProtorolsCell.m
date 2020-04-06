@@ -25,6 +25,10 @@
         UICREATELabelTo(_titleLabel, UILabel, 28, 0, self.contentView.width - 56, 64, AAW, nil, @"16", @"333333", self.contentView);
         _titleLabel.numberOfLines = 0;
         
+#if APP_CONST_DEBUG
+        [self setSelectionStyleNoneLine];
+#endif
+        
         [self setSelectionStyleNoneLine];
     }
     return self;
