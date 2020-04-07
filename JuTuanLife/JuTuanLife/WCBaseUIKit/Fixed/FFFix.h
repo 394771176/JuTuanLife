@@ -6,6 +6,8 @@
 //  Copyright © 2016年 Chelun. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "DTFix+iOS13.h"
 
 @interface UIView (Fix)
