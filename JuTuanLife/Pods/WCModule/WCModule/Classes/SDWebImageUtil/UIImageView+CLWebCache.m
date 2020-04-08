@@ -66,7 +66,7 @@ static char cacheUrlKey;
  */
 - (void)setImageWithURL:(NSURL *)url success:(void (^)(UIImage *image))success failure:(void (^)(NSError *error))failure
 {
-    WEAK_SELF
+    __weak UIImageView *weakSelf = self;
     self.sd_imageTransition = [SDWebImageTransition fadeTransition];
     self.sd_imageTransition.completion = ^(BOOL finished) {
         if (success) success(weakSelf.image);
@@ -84,7 +84,7 @@ static char cacheUrlKey;
 
 - (void)setImageWithURL:(NSURL *)url placeholderImage:(UIImage *)placeholder success:(void (^)(UIImage *image))success failure:(void (^)(NSError *error))failure
 {
-    WEAK_SELF
+    __weak UIImageView *weakSelf = self;
     self.sd_imageTransition = [SDWebImageTransition fadeTransition];
     self.sd_imageTransition.completion = ^(BOOL finished) {
         if (success) success(weakSelf.image);
@@ -123,8 +123,9 @@ static char cacheUrlKey;
 	NSString *cacheUrl = url.absoluteString;
     if (weakSelf.layer.cornerRadius>0) {
         //FIX: 如果图片初始化宽度和高度还为0的时候获取缓存图片会获取不到的问题
-		if (self.width>0 && self.height>0) {
-			cacheUrl = [[url absoluteString] stringByAppendingFormat:@"_%.0fx%.0f_o%.0f", weakSelf.width, weakSelf.height, weakSelf.cornerRadius];
+        CGSize size = self.frame.size;
+		if (size.width>0 && size.height>0) {
+			cacheUrl = [[url absoluteString] stringByAppendingFormat:@"_%.0fx%.0f_o%.0f", size.width, size.height, weakSelf.layer.cornerRadius];
 		}
         if ([[SDWebImageManager sharedManager] hasCacheForURLStr:cacheUrl]) {
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -182,7 +183,7 @@ static char cacheUrlKey;
     __block UIImageView *weakSelf = self;
     float cr = weakSelf.layer.cornerRadius;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        UIImage *result = [SDWebImageManager getImageFrom:image targetSize:self.size corner:cr];
+        UIImage *result = [SDWebImageManager getImageFrom:image targetSize:self.frame.size corner:cr];
         if (cacheUrl) {
             [[SDImageCache sharedImageCache] storeImage:result forKey:[[SDWebImageManager sharedManager] cacheKeyForURL:[NSURL URLWithString:cacheUrl]] completion:nil];
         }

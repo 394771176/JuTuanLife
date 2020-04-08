@@ -59,7 +59,7 @@
     NSString *url = [super requestUrl];
     NSMutableArray *pairs = [NSMutableArray array];
     if (self.needSystemParams) {
-        NSDictionary *system = [WCNetManager systemParams];
+        NSDictionary *system = [[JTNetManager sharedInstance] systemParams];
         [pairs safeAddObject:[self urlCodeValueForKey:@"_platform" params:system]];
         [pairs safeAddObject:[self urlCodeValueForKey:@"_os" params:system]];
         [pairs safeAddObject:[self urlCodeValueForKey:@"_sysVersion" params:system]];

@@ -6,8 +6,7 @@
 //  Copyright © 2020 cheng. All rights reserved.
 //
 
-#import "DTTabBarView.h"
-
+#import <UIKit/UIKit.h>
 
 @interface DTMainTabBarView : DTTabBarView
 

@@ -6,7 +6,7 @@
 //  Copyright © 2020 cheng. All rights reserved.
 //
 
-#import "DTTitleContentCell.h"
+#import <UIKit/UIKit.h>
 #import "JTFenRunOverItem.h"
 
 @interface JTUserFenrunCell : DTTitleContentCell

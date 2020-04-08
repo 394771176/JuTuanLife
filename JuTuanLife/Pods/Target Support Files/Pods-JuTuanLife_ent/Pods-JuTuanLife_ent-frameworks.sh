@@ -161,19 +161,11 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/WCCategory/WCCategory.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/WCEncrypt/WCEncrypt.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/WCModel/WCModel.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/WCModule/WCModule.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/WCNetKit/WCNetKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/WCPlugin/WCPlugin.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/WCCategory/WCCategory.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/WCEncrypt/WCEncrypt.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/WCModel/WCModel.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/WCModule/WCModule.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/WCNetKit/WCNetKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/WCPlugin/WCPlugin.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

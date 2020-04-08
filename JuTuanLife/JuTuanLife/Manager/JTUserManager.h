@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "WCBaseUIKit.h"
 #import "JTUser.h"
 
 KEY(JTUserManager_LAUNCH_REFRESH)

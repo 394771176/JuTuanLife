@@ -6,7 +6,7 @@
 //  Copyright © 2016年 eclicks. All rights reserved.
 //
 
-#import <WCModel/WCBaseEntity.h>
+#import <WCBaseKit/WCBaseKit.h>
 
 @interface CLWXAccess : WCBaseEntity
 

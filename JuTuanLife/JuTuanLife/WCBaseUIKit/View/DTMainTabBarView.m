@@ -7,7 +7,6 @@
 //
 
 #import "DTMainTabBarView.h"
-#import "DTButton.h"
 
 @implementation DTMainTabBarView
 

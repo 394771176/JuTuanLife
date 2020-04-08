@@ -50,10 +50,11 @@ static char cacheUrlKey;
 {
     self.cacheUrl = nil;
     [self sd_cancelImageLoadForState:UIControlStateNormal];
-    WEAK_SELF
+    __block UIButton *weakSelf = self;
     NSString *cacheUrl = nil;
     if (weakSelf.layer.cornerRadius>0) {
-        cacheUrl = [[url absoluteString] stringByAppendingFormat:@"_%.0fx%.0f_o%.0f", weakSelf.width, weakSelf.height, weakSelf.cornerRadius];
+        CGSize size = self.frame.size;
+        cacheUrl = [[url absoluteString] stringByAppendingFormat:@"_%.0fx%.0f_o%.0f", size.width, size.height, weakSelf.layer.cornerRadius];
         if (cacheUrl&&[[SDWebImageManager sharedManager] hasCacheForURLStr:cacheUrl]) {
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                 UIImage *image = [[SDWebImageManager sharedManager] cacheImageForURLStr:cacheUrl];
@@ -104,7 +105,7 @@ static char cacheUrlKey;
     __block UIButton *weakSelf = self;
     float cr = weakSelf.layer.cornerRadius;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        UIImage *result = [SDWebImageManager getImageFrom:image targetSize:self.size corner:cr];
+        UIImage *result = [SDWebImageManager getImageFrom:image targetSize:self.frame.size corner:cr];
         dispatch_async(dispatch_get_main_queue(), ^{
             __strong UIButton *strongSelf = weakSelf;
             if (!strongSelf) return;

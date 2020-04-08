@@ -6,7 +6,7 @@
 //  Copyright © 2017年 eclicks. All rights reserved.
 //
 
-#import <WCModel/WCBaseEntity.h>
+#import <WCBaseKit/WCBaseKit.h>
 
 @interface DTTabItem : WCBaseEntity
 

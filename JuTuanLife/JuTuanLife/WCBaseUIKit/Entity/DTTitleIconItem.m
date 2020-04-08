@@ -7,7 +7,6 @@
 //
 
 #import "DTTitleIconItem.h"
-#import <WCCategory/WCCategory.h>
 
 @implementation DTTitleIconItem
 

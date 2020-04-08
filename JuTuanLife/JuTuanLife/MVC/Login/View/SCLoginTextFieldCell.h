@@ -6,8 +6,7 @@
 //  Copyright © 2017年 Lin Feihong. All rights reserved.
 //
 
-#import "DTTableCustomCell.h"
-#import "DTButton.h"
+#import <UIKit/UIKit.h>
 
 typedef enum {
     SCLoginTextFieldTypeDefault = 0,

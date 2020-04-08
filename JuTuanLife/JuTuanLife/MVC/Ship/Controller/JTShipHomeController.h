@@ -6,7 +6,7 @@
 //  Copyright © 2020 cheng. All rights reserved.
 //
 
-#import "DTHttpRefreshLoadMoreTableController.h"
+#import <UIKit/UIKit.h>
 
 @interface JTShipHomeController : DTHttpRefreshLoadMoreTableController
 

@@ -95,7 +95,7 @@
 
 - (void)phoneAction
 {
-    [DTPubUtil callPhoneNumber:_item.mobile];
+    [JTCoreUtil callPhoneNumber:_item.mobile];
 }
 
 - (void)awakeFromNib {

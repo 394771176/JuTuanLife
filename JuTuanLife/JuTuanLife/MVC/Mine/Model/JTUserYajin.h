@@ -6,7 +6,7 @@
 //  Copyright © 2020 cheng. All rights reserved.
 //
 
-#import <WCModel/WCModel.h>
+#import <WCBaseKit/WCBaseKit.h>
 
 @interface JTUserYajin : WCBaseEntity
 

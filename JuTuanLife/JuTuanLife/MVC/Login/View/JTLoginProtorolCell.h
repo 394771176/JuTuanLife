@@ -6,7 +6,7 @@
 //  Copyright © 2020 cheng. All rights reserved.
 //
 
-#import "DTTableCustomCell.h"
+#import <UIKit/UIKit.h>
 #import "JTProtorolItem.h"
 
 NS_ASSUME_NONNULL_BEGIN

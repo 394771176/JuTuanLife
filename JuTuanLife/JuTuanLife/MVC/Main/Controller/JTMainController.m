@@ -11,6 +11,7 @@
 #import "JTShipHomeController.h"
 #import "JTTaskHomeController.h"
 #import "JTMineHomeController.h"
+#import "DTMainTabBarView.h"
 
 @interface JTMainController () <DTTabBarViewDelegate> {
     DTMainTabBarView *_mainTabBar;

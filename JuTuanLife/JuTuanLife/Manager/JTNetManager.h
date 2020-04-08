@@ -7,15 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <WCNetKit/WCNetManager.h>
 #import "JTService.h"
 #import "JTUserRequest.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JTNetManager : WCNetManager <WCNetManagerProtocol>
+@interface JTNetManager : WCNetManager
 
 + (void)setupNetManager;
+
+- (NSDictionary *)systemParams;
 
 @property (nonatomic, strong) NSString *deviceModel;
 @property (nonatomic, strong) NSString *osVersion;

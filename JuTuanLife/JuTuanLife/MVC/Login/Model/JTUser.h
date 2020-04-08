@@ -6,7 +6,7 @@
 //  Copyright © 2020 cheng. All rights reserved.
 //
 
-#import <WCModel/WCBaseEntity.h>
+#import <WCBaseKit/WCBaseKit.h>
 #import "JTProtorolItem.h"
 #import "JTUserBank.h"
 

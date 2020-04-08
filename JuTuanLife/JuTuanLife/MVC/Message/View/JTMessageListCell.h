@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "JTMessageItem.h"
-#import "DTTitleContentCell.h"
+#import <UIKit/UIKit.h>
 
 @interface JTMessageListCell : DTTitleContentCell
 

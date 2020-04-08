@@ -33,8 +33,8 @@
         
         //64 + 352 + 64 + 40 = 64 + 20 + 176
         UICREATETo(_tabBar, DTTabBarView, _bodyView.width / 2 - 260 / 2, 6 + 4, 260, 44, AALR, _bodyView);
-        [_tabBar setNormalColor:COLOR(333333)];
-        [_tabBar setSelectColor:COLOR(#FA3F3F)];
+        [_tabBar setNormalColor:[UIColor colorWithString:@"333333"]];
+        [_tabBar setSelectColor:[UIColor colorWithString:@"FA3F3F"]];
         _tabBar.selectedLine.hidden = YES;
         _tabBar.bottomLine.hidden = YES;
         _tabBar.delegate = self;

@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "WCControllerUtil.h"
-#import "DTWebViewController.h"
 
 @interface WCLinkUtil : NSObject
 

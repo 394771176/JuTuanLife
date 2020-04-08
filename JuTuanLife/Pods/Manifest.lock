@@ -1,59 +1,21 @@
 PODS:
-  - UMCAnalytics (6.0.5):
+  - UMCAnalytics (6.1.0):
     - UMCCommon
-  - UMCCommon (2.1.1)
+  - UMCCommon (2.1.4)
   - UMCCommonLog (1.0.0)
-  - WCCategory (0.1.5):
-    - WCCategory/Define (= 0.1.5)
-    - WCCategory/Foundation (= 0.1.5)
-    - WCCategory/UIKit (= 0.1.5)
-  - WCCategory/Define (0.1.5)
-  - WCCategory/Foundation (0.1.5):
-    - WCCategory/Define
-  - WCCategory/UIKit (0.1.5):
-    - WCCategory/Foundation
-  - WCEncrypt/MD5 (0.1.2)
-  - WCModel (0.1.2):
-    - WCModel/Cache (= 0.1.2)
-    - WCModel/Entity (= 0.1.2)
-    - WCModel/File (= 0.1.2)
-    - WCModel/Model (= 0.1.2)
-    - WCModel/Plist (= 0.1.2)
-  - WCModel/Cache (0.1.2):
-    - WCModel/File
-    - WCModule/FMDB
-  - WCModel/Entity (0.1.2):
-    - WCCategory
-  - WCModel/File (0.1.2):
-    - WCCategory
-    - WCModule/RegexKitLite
-  - WCModel/Model (0.1.2):
-    - WCCategory
-    - WCModel/Cache
-    - WCModel/Entity
-  - WCModel/Plist (0.1.2):
-    - WCCategory
-    - WCModel/File
-  - WCModule (0.1.6):
-    - WCModule/ASIHttpRequest (= 0.1.6)
-    - WCModule/FMDB (= 0.1.6)
-    - WCModule/SDWebImage (= 0.1.6)
-    - WCModule/SDWebImageUtil (= 0.1.6)
-  - WCModule/ASIHttpRequest (0.1.6):
+  - WCModule (0.1.7):
+    - WCModule/ASIHttpRequest (= 0.1.7)
+    - WCModule/FMDB (= 0.1.7)
+    - WCModule/SDWebImage (= 0.1.7)
+    - WCModule/SDWebImageUtil (= 0.1.7)
+  - WCModule/ASIHttpRequest (0.1.7):
     - WCModule/Reachability
-  - WCModule/FMDB (0.1.6)
-  - WCModule/Reachability (0.1.6)
-  - WCModule/RegexKitLite (0.1.6)
-  - WCModule/SDWebImage (0.1.6)
-  - WCModule/SDWebImageUtil (0.1.6):
-    - WCCategory
+  - WCModule/FMDB (0.1.7)
+  - WCModule/Reachability (0.1.7)
+  - WCModule/RegexKitLite (0.1.7)
+  - WCModule/SDWebImage (0.1.7)
+  - WCModule/SDWebImageUtil (0.1.7):
     - WCModule/SDWebImage
-  - WCNetKit (0.1.3):
-    - WCCategory
-    - WCEncrypt/MD5
-    - WCModel/Cache
-    - WCModel/Entity
-    - WCModule/ASIHttpRequest
   - WCPlugin (0.1.3):
     - WCPlugin/FLAnimatedImage (= 0.1.3)
     - WCPlugin/MBProgressHUD (= 0.1.3)
@@ -65,9 +27,8 @@ PODS:
 DEPENDENCIES:
   - UMCAnalytics
   - UMCCommonLog
-  - WCModel
   - WCModule
-  - WCNetKit
+  - WCModule/RegexKitLite
   - WCPlugin
   - WechatOpenSDK_NoPay
 
@@ -76,26 +37,18 @@ SPEC REPOS:
     - UMCAnalytics
     - UMCCommon
     - UMCCommonLog
-    - WCCategory
-    - WCEncrypt
-    - WCModel
     - WCModule
-    - WCNetKit
     - WCPlugin
     - WechatOpenSDK_NoPay
 
 SPEC CHECKSUMS:
-  UMCAnalytics: 045be2cd1ec05aa95ad62405a850757f932e2d59
-  UMCCommon: 971f324a5a99c9d662ae040a815e7e3d7ef8b2a8
+  UMCAnalytics: 3503f179f7af932b30af9ac161ac11fb48fa72b6
+  UMCCommon: b0703b0053323f598e01670ea702b8eb1e66e611
   UMCCommonLog: 05a2d5de21858e3d870551562cff405c1366d244
-  WCCategory: 9c97b0396f4e96f2bf8e8fa8b9cbef8bfd945f97
-  WCEncrypt: b86d93453f6a4bbf1a09dc922082b2d2d6699978
-  WCModel: c613e3ec9de9b6558589d80ca44ba678e940e77f
-  WCModule: 968b93fd10c2f545603c498a3a9113791d66ad12
-  WCNetKit: 6b3342af4199629e923efe823a614bd747912aa0
+  WCModule: 3d3973710ba356802162bc1f12bd431e6fc2c2db
   WCPlugin: 46a39341f494bcc8dccffd1a9749addfa62885c5
   WechatOpenSDK_NoPay: 27366a152202a6a7c8a15fad4d07261e87fb2389
 
-PODFILE CHECKSUM: 8aa9d2730ac9b4dcc74912eac934a40ae3b5d49d
+PODFILE CHECKSUM: 5872f1b003e5d03301c07b1ce32955bf6bff3739
 
 COCOAPODS: 1.7.5

@@ -6,7 +6,7 @@
 //  Copyright © 2020 cheng. All rights reserved.
 //
 
-#import "DTTableCustomCell.h"
+#import <UIKit/UIKit.h>
 #import "JTFenRunOverItem.h"
 
 typedef NS_ENUM(NSUInteger, JTFenrunCellType) {

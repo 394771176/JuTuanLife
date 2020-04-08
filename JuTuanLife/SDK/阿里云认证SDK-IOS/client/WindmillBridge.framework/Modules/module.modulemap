@@ -1,0 +1,6 @@
+framework module WindmillBridge {
+  umbrella header "WindmillBridge.h"
+
+  export *
+  module * { export * }
+}

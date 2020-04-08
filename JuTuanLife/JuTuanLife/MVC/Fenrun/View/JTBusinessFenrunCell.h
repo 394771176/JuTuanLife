@@ -6,8 +6,8 @@
 //  Copyright © 2020 cheng. All rights reserved.
 //
 
-#import "DTTableCustomCell.h"
-#import "DTTitleContentCell.h"
+#import <UIKit/UIKit.h>
+#import <UIKit/UIKit.h>
 #import "JTBusinessFenRunItem.h"
 
 @interface JTBusinessFenrunCell : DTTitleContentCell

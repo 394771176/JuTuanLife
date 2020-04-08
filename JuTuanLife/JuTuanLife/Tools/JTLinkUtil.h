@@ -6,7 +6,7 @@
 //  Copyright © 2020 cheng. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "WCLinkUtil.h"
 
 @interface JTLinkUtil : WCLinkUtil
 

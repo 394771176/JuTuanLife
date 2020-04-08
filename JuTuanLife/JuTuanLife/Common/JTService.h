@@ -6,7 +6,7 @@
 //  Copyright © 2020 cheng. All rights reserved.
 //
 
-#import <WCNetKit/WCDataService.h>
+#import <Foundation/Foundation.h>
 
 @interface JTService : WCDataService
 

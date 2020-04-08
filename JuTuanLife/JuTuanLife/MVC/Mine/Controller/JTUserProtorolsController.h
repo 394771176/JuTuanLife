@@ -6,8 +6,7 @@
 //  Copyright © 2020 cheng. All rights reserved.
 //
 
-#import "DTTableController.h"
-#import "DTHttpTableController.h"
+#import <UIKit/UIKit.h>
 
 @interface JTUserProtorolsController : DTHttpTableController
 

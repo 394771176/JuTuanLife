@@ -11,7 +11,7 @@
 #import "UIButton+WebCache.h"
 #import "UIImageView+CLWebCache.h"
 #import "UIButton+CLWebCache.h"
-#import <WCCategory/WCCategory.h>
+//#import <WCCategory/WCCategory.h>
 
 @interface SDWebImageManager (fix)
 

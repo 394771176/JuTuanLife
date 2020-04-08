@@ -11,21 +11,19 @@
 #import "JTShipListCell.h"
 #import "JTFenRunModel.h"
 #import "JTUserCenterController.h"
-#import "DTPickerView.h"
-#import "CLDatePickerView.h"
 #import "JTUserFenrunController.h"
 
 @interface JTFenrunQueryController ()
 <
 DTTabBarViewDelegate
-, CLDatePickerViewDelegate
+, DTDatePickerViewDelegate
 , DTPickerViewDelegate
 >
 {
     JTHomeFenrunCell *_fenrunCell;
     NSMutableDictionary *_modelDict;
     
-    CLDatePickerView *_datePicker;
+    DTDatePickerView *_datePicker;
     DTPickerView *_yeaderPicker;
     DTPickerView *_yearMonthPicker;
     
@@ -182,7 +180,7 @@ DTTabBarViewDelegate
 {
     if (_period == JTFenRunPeriodFixDay) {
         if (!_datePicker) {
-            CLDatePickerView *picker = [[CLDatePickerView alloc] initWithDelegate:self date:_today];
+            DTDatePickerView *picker = [[DTDatePickerView alloc] initWithDelegate:self date:_today];
             picker.tapDismiss = NO;
             picker.bgAlpha = 0;
             picker.minDate = [NSDate dateWithTimeIntervalSince1970:0];
@@ -292,14 +290,14 @@ DTTabBarViewDelegate
     [self showPickerView];
 }
 
-#pragma mark - , CLDatePickerViewDelegate
+#pragma mark - , DTDatePickerViewDelegate
 
-- (void)datePickerView:(CLDatePickerView *)pickerView selectedDate:(NSDate *)date
+- (void)datePickerView:(DTDatePickerView *)pickerView selectedDate:(NSDate *)date
 {
     [self didQueryAction:date.dayString];
 }
 
-- (void)datePickerViewDidCancelAction:(CLDatePickerView *)pickerView
+- (void)datePickerViewDidCancelAction:(DTDatePickerView *)pickerView
 {
     [self didCancelQuery];
 }

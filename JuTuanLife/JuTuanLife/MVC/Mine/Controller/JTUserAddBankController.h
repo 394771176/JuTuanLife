@@ -6,7 +6,7 @@
 //  Copyright © 2020 cheng. All rights reserved.
 //
 
-#import "DTTableController.h"
+#import <UIKit/UIKit.h>
 #import "JTUserBank.h"
 
 KEY(JTUserAddBankController_ADD_BANK)

@@ -13,6 +13,7 @@
 #import "JTUserProtorolsController.h"
 #import "JTAboutUsController.h"
 #import "JTUserCenterController.h"
+#import "DTTitleIconItem.h"
 
 @interface JTMineHomeController () {
     JTMineHeaderView *_headerView;

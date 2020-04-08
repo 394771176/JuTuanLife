@@ -6,7 +6,7 @@
 //  Copyright © 2020 cheng. All rights reserved.
 //
 
-#import "DTWebViewController.h"
+#import <UIKit/UIKit.h>
 
 @interface JTAboutUsController : DTWebViewController
 

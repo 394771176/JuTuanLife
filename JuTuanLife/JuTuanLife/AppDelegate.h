@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BPAppDelegate.h"
 
 @interface AppDelegate : BPAppDelegate <UIApplicationDelegate>
 

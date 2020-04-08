@@ -6,7 +6,7 @@
 //  Copyright © 2020 cheng. All rights reserved.
 //
 
-#import <WCModel/WCDataResult.h>
+#import <WCBaseKit/WCBaseKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

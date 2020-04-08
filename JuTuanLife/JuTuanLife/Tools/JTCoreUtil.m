@@ -65,6 +65,27 @@
     [[WCControllerUtil topContainerController] presentViewController:alert animated:YES completion:nil];
 }
 
++ (void)callPhoneNumber:(NSString *)phone
+{
+    if (phone.length<=0) {
+        [DTPubUtil showHUDErrorHintInWindow:@"电话号码不能为空"];
+        return;
+    }
+    //telprompt:
+    //NSURL *url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"telprompt:%@",phone]];
+    NSString *strDeviceType = [UIDevice currentDevice].model;
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"tel://%@", phone]];
+    BOOL canMakeCall = YES;
+    if ([strDeviceType isEqualToString:@"iPod touch"] || [strDeviceType isEqualToString:@"iPad"] || [strDeviceType isEqualToString:@"iPhone Simulator"]) {
+        canMakeCall = NO;
+    }
+    if (canMakeCall && [[UIApplication sharedApplication] canOpenURL:url]) {
+        [[UIApplication sharedApplication] openURL:url];
+    } else {
+        [DTPubUtil showHUDErrorHintInWindow:@"该设备不支持拨号服务"];
+    }
+}
+
 + (BOOL)isValidPassword:(NSString *)passwrod
 {
     if (!passwrod.length||![passwrod isMatchedByRegex:@"^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,12}$"]) {

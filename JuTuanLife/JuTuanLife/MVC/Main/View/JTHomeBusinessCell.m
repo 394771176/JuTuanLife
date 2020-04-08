@@ -7,6 +7,7 @@
 //
 
 #import "JTHomeBusinessCell.h"
+#import "DTTitleIconItem.h"
 
 @interface JTHomeBusinessCell () {
     UILabel *_fenrunLabel;
@@ -49,7 +50,7 @@
         }
         _fenrunLabel.text = [NSString stringWithFormat:@"%.2f", fenrun.myCommAmt];
     } else {
-        [super setItem:item];
+//        [super setItem:item];
     }
 }
 

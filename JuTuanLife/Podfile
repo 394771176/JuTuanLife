@@ -20,8 +20,9 @@ targetsArray.each do |t|
 
 #  pod 'WCBaseUIKit'
 pod 'WCModule'
-pod 'WCModel'
-pod 'WCNetKit'
+pod 'WCModule/RegexKitLite'
+#pod 'WCModel'
+#pod 'WCNetKit'
 pod 'WCPlugin'
 
 #微信分享

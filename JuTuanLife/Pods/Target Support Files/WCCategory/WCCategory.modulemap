@@ -1,6 +1,0 @@
-framework module WCCategory {
-  umbrella header "WCCategory-umbrella.h"
-
-  export *
-  module * { export * }
-}

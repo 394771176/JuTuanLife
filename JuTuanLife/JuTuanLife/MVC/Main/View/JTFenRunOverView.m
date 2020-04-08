@@ -7,7 +7,6 @@
 //
 
 #import "JTFenRunOverView.h"
-#import "DTTabBarView.h"
 
 @interface JTFenRunOverView () {
     

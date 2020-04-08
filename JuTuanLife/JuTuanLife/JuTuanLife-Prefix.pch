@@ -12,9 +12,11 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
-#import "WCBaseUIKit.h"
+#import <WCModule/WCModule.h>
+#import <WCPlugin/WCPlugin.h>
+#import <WCBaseKit/WCBaseKit.h>
 
-#import "WCDebugKit.h"
+#import "WCBaseUICategory.h"
 
 #import "FFUMengManager.h"
 

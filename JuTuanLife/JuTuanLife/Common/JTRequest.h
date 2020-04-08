@@ -6,7 +6,7 @@
 //  Copyright © 2020 cheng. All rights reserved.
 //
 
-#import <WCNetKit/WCNetManager.h>
+#import <Foundation/Foundation.h>
 #import "JTDataResult.h"
 
 typedef NS_ENUM(NSUInteger, JTServerType) {
@@ -18,6 +18,9 @@ typedef NS_ENUM(NSUInteger, JTServerType) {
 @interface JTRequest : WCDataRequest
 
 @property (nonatomic, assign) JTServerType serverType;
+
+@property (nonatomic, assign) BOOL needSystemParams;
+@property (nonatomic, assign) BOOL needToken;
 @property (nonatomic, assign) BOOL ignoreCheckToken;
 
 + (id)requestWithApi:(NSString *)api params:(NSDictionary *)params;

@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "JTBusinessFenRunItem.h"
-#import "DTTableCustomCell.h"
 
 @interface JTBusinessFenrunHeaderCell : DTTableCustomCell
 

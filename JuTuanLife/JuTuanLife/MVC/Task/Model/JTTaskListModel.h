@@ -6,11 +6,11 @@
 //  Copyright © 2020 cheng. All rights reserved.
 //
 
-#import <WCModel/DTListDataModel.h>
+#import "JTPosListDataModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JTTaskListModel : DTListDataModel
+@interface JTTaskListModel : JTPosListDataModel
 
 @end
 

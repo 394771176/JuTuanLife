@@ -18,6 +18,7 @@
 
 + (void)showAlertWithTitle:(NSString *)title message:(NSString *)message style:(UIAlertControllerStyle)style handler:(void (^)(UIAlertAction *action))handler cancel:(void (^)(UIAlertAction *action))cancelHandler cancelTitle:(NSString *)cancelTitle destructiveTitle:(NSString *)destructiveTitle confirmTitle:(NSString *)confirmTitle, ... NS_REQUIRES_NIL_TERMINATION;
 
++ (void)callPhoneNumber:(NSString *)phone;
 + (BOOL)isValidPassword:(NSString *)passwrod;
 
 @end

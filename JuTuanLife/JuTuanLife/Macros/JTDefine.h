@@ -19,27 +19,6 @@ if (!cell) { \
 #define CELL_H(_cellClass)  \
 [_cellClass cellHeightWithItem:nil tableView:tableView];
 
-#define PUSH_VC(_xxx_)  \
-{ \
-UIViewController *vc = [[_xxx_ alloc] init]; \
-[WCControllerUtil pushViewController:vc]; \
-}
-
-#define PUSH_VC_WITH(_xxx_, _block_)  \
-{ \
-_xxx_ *vc = [[_xxx_ alloc] init]; \
-{ \
-_block_; \
-} \
-[WCControllerUtil pushViewController:vc]; \
-}
-
-#define PRESENT_VC(_xxx_)  \
-{ \
-_xxx_ *vc = [[_xxx_ alloc] init]; \
-[WCControllerUtil presentViewController:vc]; \
-}
-
 #define CREATE_UI(c, x, y, w, h)     [[c alloc] initWithFrame:RECT(x, y, w, h)]
 #define CREATE_UI_V(c, x, y, w, h)    c *v = CREATE_UI(c, x, y, w, h)
 #define CREATE_UI_VV(v, c, x, y, w, h)  v = CREATE_UI(c, x, y, w, h)

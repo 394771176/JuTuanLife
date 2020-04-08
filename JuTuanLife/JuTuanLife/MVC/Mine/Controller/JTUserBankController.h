@@ -6,7 +6,7 @@
 //  Copyright © 2020 cheng. All rights reserved.
 //
 
-#import "DTHttpTableController.h"
+#import <UIKit/UIKit.h>
 
 
 @interface JTUserBankController : DTHttpTableController
