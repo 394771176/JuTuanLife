@@ -21,25 +21,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="launch_image.png" translatesAutoresizingMaskIntoConstraints="NO" id="jlh-pt-BdD">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="launch_bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="jlh-pt-BdD">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_content.png" translatesAutoresizingMaskIntoConstraints="NO" id="KQL-Z2-aTD">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="746"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="JE1-hB-H0p">
+                                <rect key="frame" x="0.0" y="765" width="414" height="131"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="jlh-pt-BdD" secondAttribute="trailing" id="2pD-O1-kOm"/>
-                            <constraint firstAttribute="bottom" secondItem="jlh-pt-BdD" secondAttribute="bottom" id="9HW-Cd-NNP"/>
-                            <constraint firstItem="jlh-pt-BdD" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="WIM-q9-E55"/>
-                            <constraint firstItem="jlh-pt-BdD" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="cXa-7h-JnV"/>
+                            <constraint firstAttribute="trailing" secondItem="JE1-hB-H0p" secondAttribute="trailing" id="IM5-oo-h9E"/>
+                            <constraint firstItem="KQL-Z2-aTD" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="NAZ-oY-JHg"/>
+                            <constraint firstItem="KQL-Z2-aTD" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="SiM-sA-FZN"/>
+                            <constraint firstAttribute="bottom" secondItem="jlh-pt-BdD" secondAttribute="bottom" id="TOk-L9-s3W"/>
+                            <constraint firstAttribute="bottom" secondItem="JE1-hB-H0p" secondAttribute="bottom" id="VR1-6E-NY5"/>
+                            <constraint firstAttribute="trailing" secondItem="KQL-Z2-aTD" secondAttribute="trailing" id="ZFY-2g-u6y"/>
+                            <constraint firstItem="JE1-hB-H0p" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="a2G-Mr-MCx"/>
+                            <constraint firstAttribute="trailing" secondItem="jlh-pt-BdD" secondAttribute="trailing" id="aME-Ot-MuN"/>
+                            <constraint firstItem="jlh-pt-BdD" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="bca-Ss-ym5"/>
+                            <constraint firstItem="jlh-pt-BdD" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="gOd-fQ-8GB"/>
+                            <constraint firstAttribute="bottom" secondItem="KQL-Z2-aTD" secondAttribute="bottom" constant="150" id="tB2-4O-8wG"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-180.77999999999997" y="576.42666666666673"/>
+            <point key="canvasLocation" x="-651" y="520"/>
         </scene>
     </scenes>
     <resources>
-        <image name="launch_image.png" width="750" height="1334"/>
+        <image name="launch_bg.jpg" width="36.5" height="667"/>
+        <image name="launch_content.png" width="375" height="437.5"/>
+        <image name="launch_logo.png" width="375" height="131"/>
     </resources>
 </document>
