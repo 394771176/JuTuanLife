@@ -16,10 +16,12 @@
 
 @implementation JTNetManager
 
+SHARED_INSTANCE_M
+
 + (void)setupNetManager
 {
-    JTNetManager *manager = [self sharedInstance];
-
+    [self sharedInstance];
+//    [WCNetManager sharedInstance].defaultTimeOut = 15;
 }
 
 - (instancetype)init
@@ -39,9 +41,9 @@
         [params safeSetObject:@"ios" forKey:@"_os"];
         [params safeSetObject:APP_PROJECT_NAME forKey:@"_caller"];
         [params safeSetObject:APP_VERSION_SHORT forKey:@"_appVersion"];
-        [params safeSetObject:[UIDevice currentDevice].systemVersion forKey:@"_sysVersion"];
-        [params safeSetObject:[self.class machineModel] forKey:@"_model"];
-        [params safeSetObject:[self.class openUDID] forKey:@"_openUDID"];
+        [params safeSetObject:[WCSystemUtil systemVersion] forKey:@"_sysVersion"];
+        [params safeSetObject:[WCSystemUtil deviceModel] forKey:@"_model"];
+        [params safeSetObject:[WCSystemUtil openUDID] forKey:@"_openUDID"];
         [params safeSetObject:@"AppStore" forKey:@"_appChannel"];
         //        [params safeSetObject:[self.class clientUDID] forKey:@"cUDID"];
         if (APP_DEBUG) {
@@ -68,18 +70,6 @@
 - (NSString *)openUDID
 {
     return [_systemParams stringForKey:@"_openUDID"];
-}
-
-#pragma mark - WCNetManagerProtocol
-
-- (NSString *)userToken
-{
-    return [JTUserManager sharedInstance].ac_token;
-}
-
-- (void)setUserTokenParams:(NSMutableDictionary *)params
-{
-    [params safeSetObject:[self userToken] forKey:@"_ac_token"];
 }
 
 - (NSDictionary *)systemParams

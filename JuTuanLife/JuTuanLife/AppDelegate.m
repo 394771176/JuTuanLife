@@ -32,9 +32,8 @@
 
 - (void)windowWillInit:(NSDictionary *)launchOptions
 {
-    [JTNetManager setupNetManager];
-    
     [JTDataManager setupManager];
+    [JTBaseManager setupManager];
     
     [FFUMengManager configWithAppKey:APP_UMENG_KEY channel:@"APP Store"];
     [[FFWechatManager sharedInstance] configWithAppKey:APP_WX_APPID appSecret:APP_WX_APPSECRET];

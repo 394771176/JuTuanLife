@@ -10,6 +10,16 @@
 
 @implementation JTRequest
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.needSystemParams = YES;
+        self.needToken = NO;
+    }
+    return self;
+}
+
 - (void)setServerType:(JTServerType)serverType
 {
     _serverType = serverType;
@@ -87,15 +97,7 @@
 
 - (NSMutableDictionary *)requestParams
 {
-    if ([self.params isKindOfClass:NSMutableDictionary.class]) {
-        return (id)self.params;
-    } else {
-        NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-        if (self.params.count) {
-            [dict addEntriesFromDictionary:self.params];
-        }
-        return dict;
-    }
+    return [super requestParams];
 }
 
 - (BPURLRequest *)makeRequest
@@ -138,6 +140,9 @@
 {
     JTRequest *request = [self requestWithUrl:nil api:api params:params httpMethod:httpMethod];
     request.serverType = serverType;
+#if __has_include(<WCModule/ASIFormDataRequest.h>)
+    request.timeOut = 15;
+#endif
     return request;
 }
 

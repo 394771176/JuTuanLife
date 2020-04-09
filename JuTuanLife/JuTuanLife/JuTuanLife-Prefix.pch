@@ -28,6 +28,7 @@
 
 #import "JTCommon.h"
 
+#import "JTBaseManager.h"
 #import "JTNetManager.h"
 #import "JTDataManager.h"
 #import "JTUserManager.h"

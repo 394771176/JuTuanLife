@@ -116,6 +116,10 @@
 		605A5CBF243E5216000FBBDE /* JTBaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 605A5CBD243E5216000FBBDE /* JTBaseEntity.m */; };
 		605A5CC2243E57FB000FBBDE /* DTMainTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 605A5CC0243E57FB000FBBDE /* DTMainTabBarView.m */; };
 		605A5CC3243E57FB000FBBDE /* DTMainTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 605A5CC0243E57FB000FBBDE /* DTMainTabBarView.m */; };
+		605A5CDA243F7790000FBBDE /* JTBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 605A5CD9243F7790000FBBDE /* JTBaseManager.m */; };
+		605A5CDB243F7790000FBBDE /* JTBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 605A5CD9243F7790000FBBDE /* JTBaseManager.m */; };
+		605A5CED243F7D97000FBBDE /* WCBaseUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 605A5CEC243F7D97000FBBDE /* WCBaseUI.bundle */; };
+		605A5CEE243F7D97000FBBDE /* WCBaseUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 605A5CEC243F7D97000FBBDE /* WCBaseUI.bundle */; };
 		605F835C24363F3400CFC7BD /* JTUserYajinModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 605F835B24363F3400CFC7BD /* JTUserYajinModel.m */; };
 		605F835D24363F3400CFC7BD /* JTUserYajinModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 605F835B24363F3400CFC7BD /* JTUserYajinModel.m */; };
 		605F836024363F4B00CFC7BD /* JTUserYajin.m in Sources */ = {isa = PBXBuildFile; fileRef = 605F835F24363F4B00CFC7BD /* JTUserYajin.m */; };
@@ -307,7 +311,6 @@
 		60D767C52427A66900E2B317 /* JTHomeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60DF0F102423C75C00BB0F88 /* JTHomeListModel.m */; };
 		60D767C82427A66900E2B317 /* CLWXAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 603F99DF241E2FDD00523CBD /* CLWXAccess.m */; };
 		60D767C92427A66900E2B317 /* JTFenRunOverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60DF0F132423D05B00BB0F88 /* JTFenRunOverView.m */; };
-		60D767CB2427A66900E2B317 /* DTTabItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0D5240ED5D800E4EA52 /* DTTabItem.m */; };
 		60D767CE2427A66900E2B317 /* JTShipItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ECA799241D1E9C0029C45A /* JTShipItem.m */; };
 		60D767D02427A66900E2B317 /* JTLoginProtorolCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 606FE781241172EA00522B96 /* JTLoginProtorolCell.m */; };
 		60D767D12427A66900E2B317 /* JTMessageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 60386C642426798B00B7C0BD /* JTMessageItem.m */; };
@@ -399,7 +402,6 @@
 		60DF0F112423C75C00BB0F88 /* JTHomeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 60DF0F102423C75C00BB0F88 /* JTHomeListModel.m */; };
 		60DF0F142423D05B00BB0F88 /* JTFenRunOverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60DF0F132423D05B00BB0F88 /* JTFenRunOverView.m */; };
 		60DF0F172423D0E500BB0F88 /* JTFenRunOverItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 60DF0F162423D0E500BB0F88 /* JTFenRunOverItem.m */; };
-		60E2B118240ED5D800E4EA52 /* DTTabItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0D5240ED5D800E4EA52 /* DTTabItem.m */; };
 		60E2B119240ED5D800E4EA52 /* DTTitleIconItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B0D6240ED5D800E4EA52 /* DTTitleIconItem.m */; };
 		60E2B147240ED6AF00E4EA52 /* JTMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E2B146240ED6AF00E4EA52 /* JTMainController.m */; };
 		60ECA61F241CEEE20029C45A /* JTHomeFenrunCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60ECA61E241CEEE20029C45A /* JTHomeFenrunCell.m */; };
@@ -528,6 +530,9 @@
 		605A5CBD243E5216000FBBDE /* JTBaseEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTBaseEntity.m; sourceTree = "<group>"; };
 		605A5CC0243E57FB000FBBDE /* DTMainTabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTMainTabBarView.m; path = JuTuanLife/WCBaseUIKit/View/DTMainTabBarView.m; sourceTree = SOURCE_ROOT; };
 		605A5CC1243E57FB000FBBDE /* DTMainTabBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTMainTabBarView.h; path = JuTuanLife/WCBaseUIKit/View/DTMainTabBarView.h; sourceTree = SOURCE_ROOT; };
+		605A5CD8243F7790000FBBDE /* JTBaseManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTBaseManager.h; sourceTree = "<group>"; };
+		605A5CD9243F7790000FBBDE /* JTBaseManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTBaseManager.m; sourceTree = "<group>"; };
+		605A5CEC243F7D97000FBBDE /* WCBaseUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = WCBaseUI.bundle; path = SDK/WCBaseKit.framework/WCBaseUI.bundle; sourceTree = SOURCE_ROOT; };
 		605F835A24363F3400CFC7BD /* JTUserYajinModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTUserYajinModel.h; sourceTree = "<group>"; };
 		605F835B24363F3400CFC7BD /* JTUserYajinModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTUserYajinModel.m; sourceTree = "<group>"; };
 		605F835E24363F4B00CFC7BD /* JTUserYajin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTUserYajin.h; sourceTree = "<group>"; };
@@ -716,9 +721,7 @@
 		60DF0F132423D05B00BB0F88 /* JTFenRunOverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTFenRunOverView.m; sourceTree = "<group>"; };
 		60DF0F152423D0E500BB0F88 /* JTFenRunOverItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTFenRunOverItem.h; sourceTree = "<group>"; };
 		60DF0F162423D0E500BB0F88 /* JTFenRunOverItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTFenRunOverItem.m; sourceTree = "<group>"; };
-		60E2B0D3240ED5D800E4EA52 /* DTTabItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTabItem.h; sourceTree = "<group>"; };
 		60E2B0D4240ED5D800E4EA52 /* DTTitleIconItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTTitleIconItem.h; sourceTree = "<group>"; };
-		60E2B0D5240ED5D800E4EA52 /* DTTabItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTabItem.m; sourceTree = "<group>"; };
 		60E2B0D6240ED5D800E4EA52 /* DTTitleIconItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTTitleIconItem.m; sourceTree = "<group>"; };
 		60E2B145240ED6AF00E4EA52 /* JTMainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTMainController.h; sourceTree = "<group>"; };
 		60E2B146240ED6AF00E4EA52 /* JTMainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JTMainController.m; sourceTree = "<group>"; };
@@ -880,6 +883,8 @@
 				606FE735241157ED00522B96 /* JTUserRequest.m */,
 				60D7675124274D6D00E2B317 /* JTBaseConfig.h */,
 				60D7675224274D6D00E2B317 /* JTBaseConfig.m */,
+				605A5CD8243F7790000FBBDE /* JTBaseManager.h */,
+				605A5CD9243F7790000FBBDE /* JTBaseManager.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -1089,6 +1094,7 @@
 		6001C79F240EB95E006092BB /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				605A5CEC243F7D97000FBBDE /* WCBaseUI.bundle */,
 				60ED7637240EB25B0013CB8C /* main.m */,
 				605A595A243E21E8000FBBDE /* launch_content@2x.png */,
 				605A5959243E21E8000FBBDE /* launch_bg@2x.jpg */,
@@ -1294,6 +1300,8 @@
 		606FE79924137A8800522B96 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				60E2B0D4240ED5D800E4EA52 /* DTTitleIconItem.h */,
+				60E2B0D6240ED5D800E4EA52 /* DTTitleIconItem.m */,
 				6071FF8B24169D77009B617E /* JTUserBank.h */,
 				6071FF8C24169D77009B617E /* JTUserBank.m */,
 				607100FE2417EB51009B617E /* JTUserProtorols.h */,
@@ -1551,30 +1559,10 @@
 			path = UMeng;
 			sourceTree = "<group>";
 		};
-		60E2B003240ED59900E4EA52 /* WCBaseUIKit */ = {
-			isa = PBXGroup;
-			children = (
-				6065F0362427B79B0066B84B /* Category */,
-				60E2B0D2240ED5D800E4EA52 /* Entity */,
-				60E2B0ED240ED5D800E4EA52 /* Util */,
-			);
-			path = WCBaseUIKit;
-			sourceTree = "<group>";
-		};
-		60E2B0D2240ED5D800E4EA52 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				60E2B0D3240ED5D800E4EA52 /* DTTabItem.h */,
-				60E2B0D5240ED5D800E4EA52 /* DTTabItem.m */,
-				60E2B0D4240ED5D800E4EA52 /* DTTitleIconItem.h */,
-				60E2B0D6240ED5D800E4EA52 /* DTTitleIconItem.m */,
-			);
-			path = Entity;
-			sourceTree = "<group>";
-		};
 		60E2B0ED240ED5D800E4EA52 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				6065F0362427B79B0066B84B /* Category */,
 				60386C5B2425E95C00B7C0BD /* WCLinkUtil.h */,
 				60386C5C2425E95C00B7C0BD /* WCLinkUtil.m */,
 			);
@@ -1603,8 +1591,8 @@
 		60ED7627240EB25A0013CB8C /* JuTuanLife */ = {
 			isa = PBXGroup;
 			children = (
+				60E2B0ED240ED5D800E4EA52 /* Util */,
 				601E071224306B9E002840D8 /* SDK */,
-				60E2B003240ED59900E4EA52 /* WCBaseUIKit */,
 				60ED7628240EB25A0013CB8C /* AppDelegate.h */,
 				60ED7629240EB25A0013CB8C /* AppDelegate.m */,
 				60ACA3A5241CCE1B0023ECB4 /* JTViewController.h */,
@@ -1714,6 +1702,7 @@
 				60FD8646242920360030E232 /* jt_ship_phone@2x.png in Resources */,
 				60D767F42427A66900E2B317 /* dt_share_wxpyq@2x.png in Resources */,
 				60D767F52427A66900E2B317 /* main_tab_task_sel@2x.png in Resources */,
+				605A5CEE243F7D97000FBBDE /* WCBaseUI.bundle in Resources */,
 				60D767F62427A66900E2B317 /* main_tab_task@2x.png in Resources */,
 				60D767F72427A66900E2B317 /* main_tab_ship_sel@2x.png in Resources */,
 				60D767F82427A66900E2B317 /* dt_share_wxpyq_c@2x.png in Resources */,
@@ -1802,6 +1791,7 @@
 				60FD8645242920360030E232 /* jt_ship_phone@2x.png in Resources */,
 				603F99FC241E646A00523CBD /* dt_share_wxpyq@2x.png in Resources */,
 				60B93B5D2414E0A3003147DC /* main_tab_task_sel@2x.png in Resources */,
+				605A5CED243F7D97000FBBDE /* WCBaseUI.bundle in Resources */,
 				60B93B582414E0A3003147DC /* main_tab_task@2x.png in Resources */,
 				60B93B5B2414E0A3003147DC /* main_tab_ship_sel@2x.png in Resources */,
 				603F99F7241E646A00523CBD /* dt_share_wxpyq_c@2x.png in Resources */,
@@ -2062,6 +2052,7 @@
 				60D767B92427A66900E2B317 /* FFWechatManager.m in Sources */,
 				60D767BA2427A66900E2B317 /* DTShareItem.m in Sources */,
 				60D767BB2427A66900E2B317 /* JTCoreUtil.m in Sources */,
+				605A5CDB243F7790000FBBDE /* JTBaseManager.m in Sources */,
 				6065F03A2427B7D20066B84B /* UIButton+WebImage.m in Sources */,
 				60D767BF2427A66900E2B317 /* JTLoginAgreementController.m in Sources */,
 				60D767C02427A66900E2B317 /* JTLoginAuthController.m in Sources */,
@@ -2071,7 +2062,6 @@
 				60D767C52427A66900E2B317 /* JTHomeListModel.m in Sources */,
 				60D767C82427A66900E2B317 /* CLWXAccess.m in Sources */,
 				60D767C92427A66900E2B317 /* JTFenRunOverView.m in Sources */,
-				60D767CB2427A66900E2B317 /* DTTabItem.m in Sources */,
 				601E074424363DCD002840D8 /* JTUserYajinListCell.m in Sources */,
 				605F835D24363F3400CFC7BD /* JTUserYajinModel.m in Sources */,
 				60D767CE2427A66900E2B317 /* JTShipItem.m in Sources */,
@@ -2175,6 +2165,7 @@
 				603F99DC241E2F4600523CBD /* FFWechatManager.m in Sources */,
 				603F9866241E18F300523CBD /* DTShareItem.m in Sources */,
 				6001C784240EB6FD006092BB /* JTCoreUtil.m in Sources */,
+				605A5CDA243F7790000FBBDE /* JTBaseManager.m in Sources */,
 				6065F0392427B7D20066B84B /* UIButton+WebImage.m in Sources */,
 				606FE6FB24101D2C00522B96 /* JTLoginAgreementController.m in Sources */,
 				606FE6F824101CFD00522B96 /* JTLoginAuthController.m in Sources */,
@@ -2184,7 +2175,6 @@
 				60DF0F112423C75C00BB0F88 /* JTHomeListModel.m in Sources */,
 				603F99E0241E2FDD00523CBD /* CLWXAccess.m in Sources */,
 				60DF0F142423D05B00BB0F88 /* JTFenRunOverView.m in Sources */,
-				60E2B118240ED5D800E4EA52 /* DTTabItem.m in Sources */,
 				601E074324363DCD002840D8 /* JTUserYajinListCell.m in Sources */,
 				605F835C24363F3400CFC7BD /* JTUserYajinModel.m in Sources */,
 				60ECA79A241D1E9C0029C45A /* JTShipItem.m in Sources */,
