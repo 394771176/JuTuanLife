@@ -12,7 +12,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JTNetManager : WCNetManager
+@interface JTNetManager : NSObject
+
+SHARED_INSTANCE_H
 
 + (void)setupNetManager;
 

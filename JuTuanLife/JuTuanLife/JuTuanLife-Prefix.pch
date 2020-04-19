@@ -12,15 +12,9 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
-#import <WCModule/WCModule.h>
-#import <WCPlugin/WCPlugin.h>
 #import <WCBaseKit/WCBaseKit.h>
 
-#import "WCBaseUICategory.h"
-
-#import "FFUMengManager.h"
-
-#import "DTShareUtil.h"
+#import "JTCategory.h"
 
 #import "JTAPPKey.h"
 #import "JTConstants.h"
@@ -35,5 +29,9 @@
 
 #import "JTCoreUtil.h"
 #import "JTLinkUtil.h"
+
+#import "FFUMengManager.h"
+
+#import "DTShareUtil.h"
 
 #endif /* JuTuanLife_Prefix_pch */

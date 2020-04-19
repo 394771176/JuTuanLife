@@ -75,6 +75,14 @@ SHARED_INSTANCE_M
         }
         [self checkAPPVersionForUpgrade];
     }];
+}
+
+- (void)updateShareInfo
+{
+    if (![JTUserManager sharedInstance].isLogined) {
+        self.shareDict = nil;
+        return;
+    }
     [JTService async:[JTUserRequest getShareInfo] cacheKey:@"JTUserRequest_getShareInfo" loadCache:^(WCDataResult *cache) {
         if (cache.success && [NSDictionary validDict:cache.data]) {
             self.shareDict = cache.data;

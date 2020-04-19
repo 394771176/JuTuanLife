@@ -50,6 +50,7 @@
     if (_cellType == JTShipCellTypeFenrun) {
         _headerView.relationType = item.relationType;
         [_fenrunLabel setText:[NSString stringWithFormat:@"%.2f", item.commAmt]];
+        [_headerView setNameMaxWidth:100];
     } else {
         _dateLabel.text = [NSDate dayHourMinStr:item.relatedTime];
         _shipNumLabel.left = _headerView.left + [_headerView getTeamsViewRight] + 12;
@@ -70,6 +71,8 @@
                 UICREATELabelTo(_shipNumLabel, UILabel, [_headerView getTeamsViewRight], _headerView.teamView.top + _headerView.top, 200, _headerView.teamView.height, AAL, nil, @"12", @"999999", _bodyView);
                 
                 UICREATEBtnImgTo(_phoneBtn, UIButton, _bodyView.width - 40 - 12, _shipNumLabel.top - 8 - 2, 40, 40, AAL, @"jt_ship_phone", self, @selector(phoneAction), _bodyView);
+                
+                [_headerView setNameRightGap:110];
             }
             _fenrunLabel.hidden = YES;
             _phoneBtn.hidden = NO;
@@ -80,6 +83,8 @@
         {
             if (!_fenrunLabel) {
                 UICREATELabel2To(_fenrunLabel, UILabel, _bodyView.width - 160, 0, 120, _bodyView.height, AAWH|AAL, TTRight, nil, @"16", @"333333", _bodyView);
+                
+                [_headerView setNameRightGap:100];
             }
             _fenrunLabel.hidden = NO;
             _phoneBtn.hidden = YES;

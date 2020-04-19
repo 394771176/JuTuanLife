@@ -23,6 +23,7 @@
     if (self) {
         self.titleLabel.frame = RECT(28, 0, 80, self.contentView.height);
         self.titleLabel.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+        self.titleLabel.adjustsFontSizeToFitWidth = YES;
         
         self.contentLabel.frame = RECT(self.titleLabel.right + 8, 0, self.contentView.width - self.titleLabel.right - 8 - 62, self.contentView.height);
         self.contentLabel.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;

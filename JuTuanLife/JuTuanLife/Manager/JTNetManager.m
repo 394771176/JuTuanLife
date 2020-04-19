@@ -7,6 +7,7 @@
 //
 
 #import "JTNetManager.h"
+#import <WCNetKit/WCSystemUtil.h>
 
 @interface JTNetManager () {
     NSMutableDictionary *_systemParams;
@@ -21,7 +22,7 @@ SHARED_INSTANCE_M
 + (void)setupNetManager
 {
     [self sharedInstance];
-//    [WCNetManager sharedInstance].defaultTimeOut = 15;
+    [WCNetManager sharedInstance].signName = @"_sign";
 }
 
 - (instancetype)init

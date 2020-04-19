@@ -19,11 +19,11 @@ targetsArray.each do |t|
   # Pods for JuTuanLife
 
 #  pod 'WCBaseUIKit'
-pod 'WCModule'
-pod 'WCModule/RegexKitLite'
+#pod 'WCModule'
+#pod 'WCModule/RegexKitLite'
 #pod 'WCModel'
 #pod 'WCNetKit'
-pod 'WCPlugin'
+#pod 'WCPlugin'
 
 #微信分享
 #pod 'WechatOpenSDK'

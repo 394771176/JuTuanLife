@@ -22,6 +22,7 @@ typedef NS_ENUM(NSUInteger, JTServerType) {
 @property (nonatomic, assign) BOOL needSystemParams;
 @property (nonatomic, assign) BOOL needToken;
 @property (nonatomic, assign) BOOL ignoreCheckToken;
+@property (nonatomic, strong) BPURLRequest *urlRequest;
 
 + (id)requestWithApi:(NSString *)api params:(NSDictionary *)params;
 + (id)requestWithApi:(NSString *)api params:(NSDictionary *)params httpMethod:(NSString *)httpMethod;

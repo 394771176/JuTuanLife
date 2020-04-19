@@ -44,6 +44,16 @@
     _nameLabel.font = font;
 }
 
+- (void)setNameMaxWidth:(CGFloat)width
+{
+    _nameLabel.width = width;
+}
+
+- (void)setNameRightGap:(CGFloat)gap
+{
+    [self setNameMaxWidth:self.width - _nameLabel.left - gap];
+}
+
 - (void)setItem:(JTUser *)item
 {
     _item = item;
@@ -90,7 +100,7 @@
             [_jobNoLabel addTarget:self longPressAction:@selector(longPressAction:)];
         }
         _jobNoLabel.hidden = NO;
-        [_jobNoLabel setLabelWidthWithString:[NSString stringWithFormat:@"工号：%@", _item.jobNo]];
+        [_jobNoLabel setLabelWidthWithString:[NSString stringWithFormat:@"聚推号：%@", _item.jobNo]];
         
         _teamView.left = _jobNoLabel.right + 12;
     } else {

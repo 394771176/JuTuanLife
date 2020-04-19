@@ -82,6 +82,14 @@ SHARED_INSTANCE_M
     return _ac_token.length > 0 && _rf_token.length > 0 && _user;
 }
 
+- (BOOL)isApplePhone
+{
+    if (_phone && [_phone isEqualToString:APP_CONST_PHONE]) {
+        return YES;
+    }
+    return NO;
+}
+
 - (BOOL)isHadFirstAuthFinish
 {
     return [self userAuthStatus] == JTUserStatusAuthPass;
@@ -278,6 +286,7 @@ SHARED_INSTANCE_M
         [self refreshMessageUnreadCount];
         if (isLaunch) {
             [self refreshProtorol:nil];
+            [[JTDataManager sharedInstance] updateShareInfo];
             [self checkRefreshAcToken];
         } else {
             [[JTDataManager sharedInstance] updateBaseConfig];
@@ -323,6 +332,8 @@ SHARED_INSTANCE_M
     [self updateUserInfo:userDict];
     [self updateProtorol:protorolDict];
     
+    [[JTDataManager sharedInstance] updateShareInfo];
+    
     [JTService addBlockOnMainThread:^{
         [[NSNotificationCenter defaultCenter] postNotificationName:JTUserManager_USER_SESSION object:nil];
         [[NSNotificationCenter defaultCenter] postNotificationName:JTUserManager_USERINFO_UPDATE object:nil];
@@ -334,6 +345,9 @@ SHARED_INSTANCE_M
     [self updateAcToken:nil];
     [self updateUserInfo:nil];
     [self updateProtorol:nil];
+    
+    [[JTDataManager sharedInstance] updateShareInfo];
+    
     self.unreadMsgCount = 0;
     [JTService addBlockOnMainThread:^{
 //        [[NSNotificationCenter defaultCenter] postNotificationName:JTUserManager_USER_SESSION object:nil];

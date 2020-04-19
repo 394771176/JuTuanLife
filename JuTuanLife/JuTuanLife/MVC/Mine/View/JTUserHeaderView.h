@@ -27,6 +27,9 @@
 
 - (void)setNameFont:(UIFont *)font;
 - (CGFloat)getTeamsViewRight;
+- (void)setNameMaxWidth:(CGFloat)width;
+
+- (void)setNameRightGap:(CGFloat)gap;
 
 @end
 

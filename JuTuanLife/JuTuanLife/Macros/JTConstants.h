@@ -14,6 +14,8 @@
 
 #define APP_PROJECT_NAME         @"JuTuiBang"
 
+#define APP_CONST_PHONE          @"15618590213"
+
 #define APP_DEBUG               ([JTCommon APPDebug])
 
 #pragma mark - server

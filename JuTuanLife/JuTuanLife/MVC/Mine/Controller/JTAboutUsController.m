@@ -67,11 +67,11 @@
         NSString *token = [JTUserManager sharedInstance].ac_token;
         NSString *content = [NSString stringWithFormat:@"\n"
                              "APPID：%@\n"
-                             "veersion：%@(%@)\n"
+                             "version：%@(%@)\n"
                              "packet：%@\n"
                              "debug：%@\n"
                              "server：%@\n"
-                             @"toekn：%@\n",
+                             "token：%@\n",
                              APP_BUNDLE_ID, APP_VERSION_SHORT, APP_VERSION_BUILD, packet, debug, server, token];
         
         [JTCoreUtil showAlertWithTitle:@"About Us" message:content cancelTitle:@"取消" confirmTitle:@"确定" destructiveTitle:nil handler:^(UIAlertAction *action) {

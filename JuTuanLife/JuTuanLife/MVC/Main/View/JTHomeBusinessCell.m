@@ -21,17 +21,17 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.height = self.contentView.height = 56 + 24;
+        self.height = self.contentView.height = 56 + 12;
         
-        self.iconView.frame = CGRectMake(12, 12, 56, 56);
-        self.iconView.autoresizingMask = UIViewAutoresizingFlexibleRightMargin;
+        self.iconView.frame = CGRectMake(12, self.contentView.height / 2 - 56 / 2, 56, 56);
+        self.iconView.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
         self.iconView.cornerRadius = 4;
         
-        self.titleLabel.frame = CGRectMake(self.iconView.right + 12, 18, self.contentView.width - self.iconView.right - 24, 25);
-        self.titleLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+        self.titleLabel.frame = CGRectMake(self.iconView.right + 12, self.iconView.top + 3, self.contentView.width - self.iconView.right - 24, 25);
+        self.titleLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
         
         self.contentLabel.frame = CGRectMake(self.titleLabel.left, self.titleLabel.bottom, self.titleLabel.width, self.titleLabel.height);
-        self.contentLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+        self.contentLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
         self.contentLabel.textAlignment = NSTextAlignmentLeft;
     }
     return self;
@@ -73,7 +73,7 @@
 
 + (CGFloat)cellHeightWithItem:(id)item tableView:(UITableView *)tableView
 {
-    return 80;
+    return 56 + 12;
 }
 
 @end

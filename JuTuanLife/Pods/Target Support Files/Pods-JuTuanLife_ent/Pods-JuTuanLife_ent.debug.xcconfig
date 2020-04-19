@@ -1,10 +1,10 @@
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/WCModule" "${PODS_CONFIGURATION_BUILD_DIR}/WCPlugin" "${PODS_ROOT}/UMCAnalytics" "${PODS_ROOT}/UMCCommon" "${PODS_ROOT}/UMCCommonLog/UMCommonLog"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/UMCAnalytics" "${PODS_ROOT}/UMCCommon" "${PODS_ROOT}/UMCCommonLog/UMCommonLog"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/WCModule/WCModule.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/WCPlugin/WCPlugin.framework/Headers" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/WechatOpenSDK_NoPay" $(SDKROOT)/usr/include/libxml2 $(SDKROOT)/usr/include/libz
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/WechatOpenSDK_NoPay"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
 LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/WechatOpenSDK_NoPay/OpenSDK1.8.0_NoPay"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_CONFIGURATION_BUILD_DIR}/WCModule/WCModule.framework/Headers" -isystem "${PODS_CONFIGURATION_BUILD_DIR}/WCPlugin/WCPlugin.framework/Headers" -isystem "${PODS_ROOT}/Headers/Public" -iframework "${PODS_ROOT}/UMCAnalytics" -iframework "${PODS_ROOT}/UMCCommon" -iframework "${PODS_ROOT}/UMCCommonLog/UMCommonLog" -iframework "${PODS_CONFIGURATION_BUILD_DIR}/WCModule" -iframework "${PODS_CONFIGURATION_BUILD_DIR}/WCPlugin"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"WeChatSDK" -l"c++" -l"icucore" -l"sqlite3" -l"sqlite3.0" -l"xml2" -l"z" -framework "CFNetwork" -framework "CoreGraphics" -framework "CoreTelephony" -framework "Foundation" -framework "ImageIO" -framework "MobileCoreServices" -framework "QuartzCore" -framework "Security" -framework "SystemConfiguration" -framework "UIKit" -framework "UMAnalytics" -framework "UMCommon" -framework "UMCommonLog" -framework "WCModule" -framework "WCPlugin"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -iframework "${PODS_ROOT}/UMCAnalytics" -iframework "${PODS_ROOT}/UMCCommon" -iframework "${PODS_ROOT}/UMCCommonLog/UMCommonLog"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"WeChatSDK" -l"c++" -l"sqlite3" -l"sqlite3.0" -l"z" -framework "CFNetwork" -framework "CoreTelephony" -framework "Security" -framework "SystemConfiguration" -framework "UIKit" -framework "UMAnalytics" -framework "UMCommon" -framework "UMCommonLog"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.

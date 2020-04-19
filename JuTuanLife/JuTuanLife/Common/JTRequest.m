@@ -102,17 +102,15 @@
 
 - (BPURLRequest *)makeRequest
 {
-    BPURLRequest *r = [super makeRequest];
-    if (APP_DEBUG) {
-        NSLog(@"\nURL(%@):\n%@\n%@", self.httpMethod, r.asiRequest.url.absoluteString, self.params);
-    }
-    return r;
+    _urlRequest = [super makeRequest];
+    return _urlRequest;
 }
 
 - (WCDataResult *)parseData:(id)data;
 {
     if (APP_DEBUG) {
-        NSLog(@"\nData:\b%@", data);
+        NSLog(@"===============\nURL(%@):\n%@\nParams:\n%@\nData:\n%@\n===============",
+              self.httpMethod, _urlRequest.asiRequest.url.absoluteString, self.params, data);
     }
     JTDataResult *result = [JTDataResult itemFromDict:data];
     if (!_ignoreCheckToken) {

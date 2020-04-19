@@ -14,6 +14,7 @@
 #import "JTAboutUsController.h"
 #import "JTUserCenterController.h"
 #import "DTTitleIconItem.h"
+#import "JTTableIconCell.h"
 
 @interface JTMineHomeController () {
     JTMineHeaderView *_headerView;
@@ -56,7 +57,7 @@
         [items addObject:[DTTitleIconItem itemWithTitle:@"身份信息" iconName:@"user_home_info" scheme:@"info"]];
         [items addObject:[DTTitleIconItem itemWithTitle:@"银行卡" iconName:@"user_home_bank" scheme:@"bank"]];
         [items addObject:[DTTitleIconItem itemWithTitle:@"协议合同" iconName:@"user_home_protorol" scheme:@"protorol"]];
-        [source addSectionWithItems:items cellClass:[DTTableIconCell class] height:55];
+        [source addSectionWithItems:items cellClass:[JTTableIconCell class] height:55];
         [source setLastSectionHeaderHeight:6 footerHeight:16];
     }
     
@@ -65,7 +66,7 @@
         [items addObject:[DTTitleIconItem itemWithTitle:@"分享APP" iconName:@"user_home_share" scheme:@"share"]];
         [items addObject:[DTTitleIconItem itemWithTitle:@"关于聚推帮" iconName:@"user_home_jutui" scheme:@"about"]];
         [items addObject:[DTTitleIconItem itemWithTitle:@"退出登录" iconName:@"user_home_logout" scheme:@"logout"]];
-        [source addSectionWithItems:items cellClass:[DTTableIconCell class] height:55];
+        [source addSectionWithItems:items cellClass:[JTTableIconCell class] height:55];
         [source setLastSectionHeaderHeight:0 footerHeight:16];
     }
     

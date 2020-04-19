@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JTTableIconCell.h"
 #import "JTBusinessItem.h"
 #import "JTFenRunOverItem.h"
 
-@interface JTHomeBusinessCell : DTTableIconCell
+@interface JTHomeBusinessCell : JTTableIconCell
 
 @end

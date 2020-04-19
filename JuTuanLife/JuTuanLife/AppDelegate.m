@@ -32,9 +32,7 @@
 
 - (void)windowWillInit:(NSDictionary *)launchOptions
 {
-    [JTDataManager setupManager];
     [JTBaseManager setupManager];
-    
     [FFUMengManager configWithAppKey:APP_UMENG_KEY channel:@"APP Store"];
     [[FFWechatManager sharedInstance] configWithAppKey:APP_WX_APPID appSecret:APP_WX_APPSECRET];
 }
@@ -46,6 +44,8 @@
 
 - (void)windowDidAppear:(NSDictionary *)launchOptions
 {
+    [JTDataManager setupManager];
+    
     UIViewController *root = [JTUserManager rootController];
     DTNavigationController *navC = [[DTNavigationController alloc] initWithRootViewController:root];
     self.window.rootViewController = navC;

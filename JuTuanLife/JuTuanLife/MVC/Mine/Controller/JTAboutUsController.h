@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JTWebViewController.h"
 
-@interface JTAboutUsController : DTWebViewController
+@interface JTAboutUsController : JTWebViewController
 
 @end

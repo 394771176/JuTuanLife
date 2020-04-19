@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "JTBaseConfig.h"
+#import "DTShareItem.h"
 
 #define JTIMAGEURL(url, type)   [[JTDataManager sharedInstance] imageUrl:url forType:type]
 
@@ -37,6 +38,9 @@ SHARED_INSTANCE_H
 
 //基础配置
 - (void)updateBaseConfig;
+
+//分享数据
+- (void)updateShareInfo;
 
 //APP版本升级
 - (void)checkAPPVersionForUpgrade;

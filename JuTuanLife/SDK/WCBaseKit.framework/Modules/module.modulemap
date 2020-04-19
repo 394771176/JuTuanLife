@@ -1,6 +1,0 @@
-framework module WCBaseKit {
-  umbrella header "WCBaseKit.h"
-
-  export *
-  module * { export * }
-}

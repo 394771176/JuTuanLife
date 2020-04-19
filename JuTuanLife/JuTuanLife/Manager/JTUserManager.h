@@ -45,6 +45,8 @@ SHARED_INSTANCE_H
 - (BOOL)isLogined;
 - (JTUserStatus)userAuthStatus;
 
+- (BOOL)isApplePhone;
+
 - (void)refreshUserInfo:(DTCommonBlock)block;
 - (void)refreshProtorol:(DTCommonBlock)block;
 - (void)refreshMessageUnreadCount;

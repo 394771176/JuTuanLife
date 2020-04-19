@@ -69,8 +69,10 @@ SCLoginTextFieldCellDelegate
             cell.delegate = self;
             cell.title = [array safeObjectAtIndex:3];
             cell.canEdit = YES;
+            cell.textView.userInteractionEnabled = NO;
             [cell.textView setReturnKeyType:UIReturnKeyDone];
             _userNameCell = cell;
+            _userNameCell.textView.text = [JTUserManager sharedInstance].user.name;
         }
         
         if (_bank) {
@@ -185,7 +187,7 @@ SCLoginTextFieldCellDelegate
     } else if (textField == (id)_kaihuCell) {
         [_cardNoCell.textView becomeFirstResponder];
     } else if (textField == (id)_cardNoCell) {
-        [_userNameCell.textView becomeFirstResponder];
+//        [_userNameCell.textView becomeFirstResponder];
     } else if (textField == (id)_userNameCell) {
         
     }

@@ -11,6 +11,7 @@
 @interface JTMessageListCell () {
     UIImageView *_bodyView;
     UILabel *_dateLabel;
+    DTBadgeView *_badgeView;
 }
 
 @end
@@ -37,6 +38,12 @@
         
         UICREATELabel2To(_dateLabel, UILabel, _bodyView.width / 2, 0, _bodyView.width /2 - 16 - 3, self.titleLabel.height, AAW, TTRight, nil, @"12", @"999999", _bodyView);
         
+        _badgeView = [[DTBadgeView alloc] initWithFrame:CGRectMake(0, 0, 8, 8)];
+        _badgeView.onlyDot = YES;
+        _badgeView.origin = CGPointMake(_dateLabel.right, _dateLabel.centerY - 8 - _badgeView.height+2);
+        _badgeView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
+        [_bodyView addSubview:_badgeView];
+        
         self.contentLabel.frame = RECT(self.titleLabel.left, 42, _bodyView.width - self.titleLabel.left * 2, _bodyView.height - 42 - 18);
         self.contentLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         self.contentLabel.numberOfLines = 0;
@@ -59,12 +66,14 @@
     _item = item;
     if (item.itemId > _lastReadMsgId && _lastReadMsgId >= 0) {
         //未读 红底
-        UIImage *image = [[UIImage imageNamed:@"message_center_bg"] resizableImageWithCapInsets:UIEdgeInsetsMake(13, 13, 13, 13)];
-        _bodyView.image = image;
+//        UIImage *image = [[UIImage imageNamed:@"message_center_bg"] resizableImageWithCapInsets:UIEdgeInsetsMake(13, 13, 13, 13)];
+//        _bodyView.image = image;
+        _badgeView.badge = 1;
     } else {
         //已读 白底
-        UIImage *image = [[UIImage imageNamed:@"login_protorol_bg"] resizableImageWithCapInsets:UIEdgeInsetsMake(13, 13, 13, 13)];
-        _bodyView.image = image;
+//        UIImage *image = [[UIImage imageNamed:@"login_protorol_bg"] resizableImageWithCapInsets:UIEdgeInsetsMake(13, 13, 13, 13)];
+//        _bodyView.image = image;
+        _badgeView.badge = 0;
     }
 //    self.textLabel.text = item.content;
 //    self.textLabel.numberOfLines = 0;
